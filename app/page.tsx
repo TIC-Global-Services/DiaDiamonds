@@ -6,6 +6,7 @@ import BrandValue from "@/components/Home/BrandValue";
 import Arrivals from "@/components/Home/Arrivals";
 import DiamondSpotlight from "@/components/Home/DiamondSpotlight";
 import TheArtOfRefinement from "@/components/Home/TheArtOfRefinement";
+import Craftsmanship from "@/components/Home/Craftmanship";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <DiamondSpotlight />
       <TheArtOfRefinement />
+      <Craftsmanship />
       <BrandValue />
       <Arrivals />
       <Footer />
