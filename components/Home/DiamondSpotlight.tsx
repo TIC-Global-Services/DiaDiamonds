@@ -9,11 +9,11 @@ export default function DiamondSpotlight() {
     const coloredImageRef = useRef(null);
     const borderRef = useRef(null);
 
-    const captureMousePosition = (e)=>{
+    const captureMousePosition = (e:MouseEvent)=>{
       const element = elementRef.current.getBoundingClientRect();
       const x = (e.clientX - element.left)-150;
       const y = (e.clientY - element.top)-150;
-      console.log(`position is x:${x} y:${y}`);
+
       coloredImageRef.current.style.setProperty('--position', `${x}px ${y}px`);
       borderRef.current.style.setProperty('--translate', '0% 0%');
       borderRef.current.style.setProperty('--top', `${y}px`);
@@ -28,7 +28,7 @@ export default function DiamondSpotlight() {
       borderRef.current.style.setProperty('--top', '50%');
       borderRef.current.style.setProperty('--left', '50%');
       }}
-       onMouseMove={(e)=>captureMousePosition(e)}>
+       onMouseMove={captureMousePosition}>
 
       <img src={DiamondSpotLightImage} alt="diamond spotlight" className="w-full h-full " />
       <img ref={coloredImageRef} style={{
