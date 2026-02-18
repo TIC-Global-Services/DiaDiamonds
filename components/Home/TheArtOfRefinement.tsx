@@ -3,20 +3,20 @@ export default function TheArtOfRefinement() {
   const DiamondCaseImg = '/assets/img/TheArtOfRefinement/DiamondCase.png';
 
   return (
-    <div className="w-full pt-[193px] pb-[137px] px-[47px] flex items-end justify-between  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
+    <div className="w-full pt-[193px] pb-[137px] px-[47px] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
       
       {/* First Div */}
-      <div className="w-[75%] flex items-center gap-[27px]">
+      <div className="w-full md:w-[75%] flex items-center flex-wrap xl:flex-nowrap md:gap-[27px]">
         <img 
           src={PantherImg} 
           alt="Panther" 
-          className="w-[470px] h-full border-0 rounded-[20px]" 
+          className="w-full md:w-[470px] h-full border-0 rounded-[20px]" 
         />
-        <div className="">
-          <h2 className="font-medium text-[40px] leading-[100%] uppercase text-[#FFFFFF] pb-[45px]">
+        <div className="text-center md:text-left">
+          <h2 className="font-medium text-[40px] leading-[100%] uppercase text-[#FFFFFF] pt-4 md:pt-0 pb-[45px]">
             The Art of Radiant Refinemnt
           </h2>
-          <p className="w-[90%] text-[20px] leading-[100%] tracking-[5%] text-[#FFFFFF]/70 pb-[54px]">
+          <p className="w-full md:w-[90%] text-[20px] leading-[100%] tracking-[5%] text-[#FFFFFF]/70 pb-[54px]">
           Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.
           </p>
           <button className="py-[12px] px-[30px] rounded-full border border-[#e7dfd7] text-[12px] font-medium uppercase text-[#e7dfd7]">
@@ -26,7 +26,7 @@ export default function TheArtOfRefinement() {
       </div>
 
       {/* Second Div */}
-      <div className="relative w-[23%]  aspect-[317/451] border border-[#FFFFFF]/10 rounded-[10px] ">
+      <div className="relative w-full md:w-[23%] mt-8 md:mt-0 aspect-[317/451] border border-[#FFFFFF]/10 rounded-[10px] ">
         <img 
           src={DiamondCaseImg} 
           alt="Diamond Case Ring" 
