@@ -7,6 +7,7 @@ import Arrivals from "@/components/Home/Arrivals";
 import DiamondSpotlight from "@/components/Home/DiamondSpotlight";
 import TheArtOfRefinement from "@/components/Home/TheArtOfRefinement";
 import Craftsmanship from "@/components/Home/Craftmanship";
+import DIAExperience from "@/components/Home/DIAExperience";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Craftsmanship />
       <BrandValue />
       <Arrivals />
+      <DIAExperience />
       <Footer />
     </div>
   );
