@@ -1,15 +1,19 @@
 'use client';
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 export default function DiamondSpotlight() {
     const DiamondSpotLightImage = '/assets/img/DiamondSpotlight/DiamondSpotlight.png';
     const DiamondSpotLightColoredImage = '/assets/img/DiamondSpotlight/DiamondSpotlightColored.png';
 
-    const elementRef = useRef(null);
-    const coloredImageRef = useRef(null);
-    const borderRef = useRef(null);
+    const elementRef = useRef<HTMLDivElement>(null);
+    const coloredImageRef = useRef<HTMLImageElement>(null);
+    const borderRef = useRef<HTMLDivElement>(null);
 
-    const captureMousePosition = (e:MouseEvent)=>{
+    const captureMousePosition = (e: React.MouseEvent<HTMLDivElement>)=>{
+      if(!elementRef.current) return;
+      if(!coloredImageRef.current) return;
+      if(!borderRef.current) return;
+
       const element = elementRef.current.getBoundingClientRect();
       const x = (e.clientX - element.left)-150;
       const y = (e.clientY - element.top)-150;
@@ -23,6 +27,9 @@ export default function DiamondSpotlight() {
   return (
     <div className="w-full h-[100dvh] relative overflow-hidden" ref={elementRef} 
     onMouseLeave={()=>{
+       if(!elementRef.current) return;
+      if(!coloredImageRef.current) return;
+      if(!borderRef.current) return;
       coloredImageRef.current.style.setProperty('--position', 'center');
       borderRef.current.style.setProperty('--translate', '-50% -50%');
       borderRef.current.style.setProperty('--top', '50%');
