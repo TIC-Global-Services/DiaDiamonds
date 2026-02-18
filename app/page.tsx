@@ -8,6 +8,7 @@ import DiamondSpotlight from "@/components/Home/DiamondSpotlight";
 import TheArtOfRefinement from "@/components/Home/TheArtOfRefinement";
 import Craftsmanship from "@/components/Home/Craftmanship";
 import DIAExperience from "@/components/Home/DIAExperience";
+import Testimonials from "@/components/Home/Testimonials";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <BrandValue />
       <Arrivals />
       <DIAExperience />
+      <Testimonials />
       <Footer />
     </div>
   );
