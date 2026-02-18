@@ -5,6 +5,7 @@ import Footer from "@/components/Reusable/Footer";
 import BrandValue from "@/components/Home/BrandValue";
 import Arrivals from "@/components/Home/Arrivals";
 import DiamondSpotlight from "@/components/Home/DiamondSpotlight";
+import TheArtOfRefinement from "@/components/Home/TheArtOfRefinement";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <DiamondSpotlight />
+      <TheArtOfRefinement />
       <BrandValue />
       <Arrivals />
       <Footer />
