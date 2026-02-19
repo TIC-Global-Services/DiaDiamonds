@@ -1,17 +1,48 @@
+"use client";
+
+import { useRef } from "react";
+
 export default function TheArtOfRefinement() {
-  const PantherImg = '/assets/img/TheArtOfRefinement/Panther.png'; 
+
+  const pantherSparkleRef = useRef<HTMLImageElement>(null);
+  const PantherImg = '/assets/img/TheArtOfRefinement/Panther.png';
+  const PantherSparkleImg = '/assets/img/TheArtOfRefinement/PantherSparkle.png'
   const DiamondCaseImg = '/assets/img/TheArtOfRefinement/DiamondCase.png';
+
+  const CaptureMousePosition = (e:React.MouseEvent<HTMLImageElement>)=>{
+    if(!pantherSparkleRef.current) return;
+
+    const rect = pantherSparkleRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    pantherSparkleRef.current.style.setProperty('--position', `${x}px ${y}px`)
+  }
 
   return (
     <div className="w-full pt-[193px] pb-[137px] px-[47px] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
       
       {/* First Div */}
-      <div className="w-full md:w-[75%] flex items-center flex-wrap xl:flex-nowrap md:gap-[27px]">
+      <div className="relative w-full md:w-[75%] flex items-center flex-wrap xl:flex-nowrap md:gap-[27px]">
         <img 
           src={PantherImg} 
           alt="Panther" 
-          className="w-full md:w-[470px] h-full border-0 rounded-[20px]" 
+          className="w-full md:w-[470px] h-full aspect-470/588 border-0 rounded-[20px]" 
         />
+
+        <img 
+        onMouseMove={CaptureMousePosition}
+        ref={pantherSparkleRef}
+        style={{
+          WebkitMaskImage:'radial-gradient(circle 100px at var(--position, 0px 0px), black 0%, transparent 50%)',
+          maskImage:'radial-gradient(circle 100px at var(--position, 0px 0px), black 0%, transparent 50%)',
+          maskRepeat:'no-repeat',
+        }}
+          src={PantherSparkleImg} 
+          alt="Panther Sparkle" 
+          className="absolute inset-0 w-full md:w-[470px] h-full aspect-470/588 border-0 rounded-[20px]" 
+        />
+
         <div className="text-center md:text-left">
           <h2 className="font-medium text-[40px] leading-[100%] uppercase text-[#FFFFFF] pt-4 md:pt-0 pb-[45px]">
             The Art of Radiant Refinemnt
