@@ -18,7 +18,6 @@ export default function Home() {
     <div>
       <Navbar />
       <Hero />
-      <Search />
       <OurCollection />
       <DiamondSpotlight />
       <Shop />
