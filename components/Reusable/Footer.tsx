@@ -6,9 +6,6 @@ export default function Footer() {
 
   const currentPath = usePathname();
 
-  const listInputStyle =
-    "font-medium text-[16px] leading-xl cursor-pointer hover:scale-110 active:scale-100";
-
   const logo = "/assets/img/DiaDiamondLogo.png";
   const diamond = "/assets/img/Diamond.png";
 
