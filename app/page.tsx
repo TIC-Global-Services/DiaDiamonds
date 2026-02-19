@@ -9,20 +9,26 @@ import Craftsmanship from "@/components/Home/Craftmanship";
 import DIAExperience from "@/components/Home/DIAExperience";
 import Testimonials from "@/components/Home/Testimonials";
 import OurCollection from "@/components/Home/OurCollections";
+import QandA from "@/components/Home/Q&A";
+import Shop from "@/components/Home/Shop";
+import Search from "@/components/Home/Search";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
       <Hero />
+      <Search />
       <OurCollection />
       <DiamondSpotlight />
+      <Shop />
       <TheArtOfRefinement />
       <Craftsmanship />
       <BrandValue />
       <Arrivals />
       <DIAExperience />
       <Testimonials />
+      <QandA />
       <Footer />
     </div>
   );
