@@ -4,12 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     qualities: [75, 90, 100],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "",
-      },
-    ],
+    remotePatterns: [],
   },
 };
 
