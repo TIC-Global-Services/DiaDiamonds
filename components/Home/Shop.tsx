@@ -38,8 +38,16 @@ export default function Shop() {
           <p className="text-[20px] leading-[120%] text-[#ffffff]/90 pb-5">
             Choose Category
           </p>
-          {/* Empty div below */}
-          <div></div>
+          {/*  Drop Down div below */}
+          <div className="relative w-[70%] " >
+            <h2 className="border-[1px] border-[#000000]/100 px-4 py-4 text-center rounded-full z-20">hello</h2>
+            <svg></svg>
+
+            <div className="absolute inset-0 w-full bg-white h-20 translate-y-1/2 z-5">
+
+            </div>
+          </div>
+
         </div>
       </div>
 

@@ -7,7 +7,7 @@ export default function TheArtOfRefinement() {
 
   const pantherSparkleRef = useRef<HTMLImageElement>(null);
   const PantherImg = '/assets/img/TheArtOfRefinement/Panther.png';
-  const PantherSparkleImg = '/assets/img/TheArtOfRefinement/PantherSparkle.png'
+  const PantherSparkleImg = '/assets/img/TheArtOfRefinement/SparklePanther.png'
   const DiamondCaseImg = '/assets/img/TheArtOfRefinement/DiamondCase.png';
 
   const CaptureMousePosition = (e:React.MouseEvent<HTMLImageElement>)=>{
@@ -63,7 +63,7 @@ export default function TheArtOfRefinement() {
           <p className="w-full md:w-[90%] text-[20px] leading-[100%] tracking-[5%] text-[#FFFFFF]/70 pb-[54px]">
           Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.
           </p>
-          <button className="py-[12px] px-[30px] rounded-full border border-[#e7dfd7] text-[12px] font-medium uppercase text-[#e7dfd7]">
+          <button className="py-[12px] px-[30px] rounded-full border border-[#e7dfd7] bg-[#000000]/10 backdrop-blur-md text-[12px] font-medium uppercase text-[#e7dfd7] hover:cursor-pointer">
             View More
           </button>
         </div>
