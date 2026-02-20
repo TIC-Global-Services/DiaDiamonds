@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useRef } from "react";
 
 export default function TheArtOfRefinement() {
@@ -30,7 +31,19 @@ export default function TheArtOfRefinement() {
           className="w-full md:w-[470px] h-full aspect-470/588 border-0 rounded-[20px]" 
         />
 
-        <img 
+        <motion.img 
+
+        initial={{
+          webkitMaskImage:"linear-gradient(to right, black 0%, transparent 0%)",
+          maskImage:"linear-gradient(to right, black 0%, transparent 0%)",
+        }}
+        whileInView={{
+          webkitMaskImage:"linear-gradient(to right, black 100%, transparent 100%)",
+          maskImage:"linear-gradient(to right, black 100%, transparent 100%)",
+        }}
+        transition={{duration:2.5, ease:"easeInOut", repeat:2, repeatType:"mirror", repeatDelay:0.3 }}
+        viewport={{once:true, amount:0.2}}
+
         onMouseMove={CaptureMousePosition}
         ref={pantherSparkleRef}
         style={{
