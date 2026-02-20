@@ -66,8 +66,8 @@ export default function Navbar() {
           </svg>
         </button>
 
-        <div className="flex items-center justify-center gap-2">
-          <img src={diamond} alt="diamond" className="w-10 aspect-square" />
+        <div className="flex items-center justify-center gap-2 hover:cursor-pointer">
+          <img src={diamond} alt="diamond" className="w-10 aspect-square hover:rotate-360 delay-100 duration-300" />
           <img src={logo} alt="logo" className="w-[59px] h-[37px]" />
         </div>
 
