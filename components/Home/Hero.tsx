@@ -23,8 +23,8 @@ const Hero = () => {
                   Iconic Brand Feel Designed to Shine Today And Endure Forever
                 </p>
 
-                <button className="w-[213px] h-[44px] border border-[1px] border-[#FFFFFF]/.1 text-[#e7dfd7] bg-[#FFFFFF]/.4 rounded-full hover:cursor-pointer hover:scale-110 active:scale-100 ">
-                  DISCOVER MORE
+                <button className="w-[213px] h-[44px] border border-[1px] backdrop-blur-md border-[#FFFFFF]/.1 text-[#e7dfd7] bg-[#000000]/10 rounded-full hover:cursor-pointer hover:scale-110 active:scale-100">
+                    DISCOVER MORE
                 </button>
 
             </div>
