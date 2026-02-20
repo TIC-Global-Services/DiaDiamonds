@@ -2,15 +2,18 @@ export default function BrandValue(){
 
     const BrandValueImg = '/assets/img/BrandValue/BrandValue.png';
     return(
-        <div className="w-full h-[100dvh] relative">
+        <div className="w-full h-[100vh] relative overflow-hidden">
 
-            <img 
+            <div className="w-[150%] h-full">
+                <img 
                 src={BrandValueImg} 
                 alt="Brand Value" 
-                className="w-full h-full object-cover relative"
+                className="w-full h-full relative -translate-x-1/4"
             />
+            </div>
+            
 
-            <div className="absolute right-0 bottom-0 mb-20  inline-block px-6 xl:px-[105px] lg:px-[50px]">
+            <div className="absolute right-0 bottom-0 mb-[10vw]  inline-block px-6 xl:px-[4.58vw] lg:px-[50px]">
                 <div className="">
                     <h2 className=" font-medium text-[40px] leading-[123%] uppercase text-[#000000]">
                     Thoughtfully curated for you 
