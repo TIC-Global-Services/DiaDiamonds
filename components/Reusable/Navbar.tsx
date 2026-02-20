@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Search from "../Home/Search";
 
 export default function Navbar() {
@@ -8,8 +8,20 @@ export default function Navbar() {
   const [collectionClick, setCollectionClick] = useState<boolean>(false);
   const [isSearch , setIsSearh] = useState<boolean>(false);
 
+  const sparkleImgRef = useRef<HTMLImageElement>(null);
+
   const logo = '/assets/img/DiaDiamondLogo.png';
   const diamond = '/assets/img/Diamond.png';
+
+  const CaptureMousePosition = (e:React.MouseEvent<HTMLImageElement>)=>{
+    if(!sparkleImgRef.current) return;
+
+    const rect = sparkleImgRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    sparkleImgRef.current.style.setProperty('--position', `${x}px ${y}px`);
+  }
 
   return (
     <div className="absolute inset-0 z-50">
@@ -24,7 +36,7 @@ export default function Navbar() {
 
         <ul className="w-full pt-[63px] pl-10 pr-10">
           <li className={`w-full flex justify-between items-center text-[32px] leading-[110%] text-[#000000] uppercase ${collectionClick ? '' : 'pb-10'}`}>
-            <p className={`${collectionClick ? 'underline' : ''} hover:cursor-pointer `} onClick={()=>setCollectionClick(!collectionClick)}>Collection</p>
+            <p className={`${collectionClick ? 'underline' : ''} hover:cursor-pointer hover:underline`} onClick={()=>setCollectionClick(!collectionClick)}>Collection</p>
             <div onClick={()=>setCollectionClick(false)} className={`${collectionClick ? 'block' : 'hidden'} hover:underline w-4 border-t-2 border-[#000000] hover:cursor-pointer hover:scale-110 active:scale-100`}></div>
           </li>
           <ul className={`pt-[30px] pb-10 ${collectionClick ? 'block' : 'hidden'}`}>
@@ -66,8 +78,31 @@ export default function Navbar() {
           </svg>
         </button>
 
-        <div className="flex items-center justify-center gap-2 hover:cursor-pointer">
+        <div className="relative flex items-center justify-center gap-2 hover:cursor-pointer">
           <img src={diamond} alt="diamond" className="w-10 aspect-square hover:rotate-360 delay-100 duration-300" />
+
+          {/* Absolute overlay for diamond sparkle */}
+          {/* <div className="absolute inset-0 w-full h-full flex items-center justify-center gap-2 hover:cursor-pointer">
+              <img 
+              ref={sparkleImgRef}
+              onMouseMove={CaptureMousePosition}
+              onMouseLeave={
+                ()=>{
+                  if(!sparkleImgRef.current) return;
+                  sparkleImgRef.current.style.setProperty('--size', '0px');
+                }
+              }
+              style={{
+                WebkitMaskImage:'radial-gradient(circle at var(--position, center) var(--size, 40px), black 0%, black 50%, transparent 100%)',
+                maskImage:'radial-gradient(circle at var(--position, center) var(--size, 40px), black 0%, transparent 50%)',
+                maskRepeat:'no-repeat',
+              }}
+
+              
+              src="/assets/img/SparkleDiamond.png" alt="sparkling diamond" className="w-10 aspect-square hover:rotate-0 delay-100 duration-300" />
+              <img src={logo} alt="logo" className="w-[59px] h-[37px]" />
+          </div> */}
+
           <img src={logo} alt="logo" className="w-[59px] h-[37px]" />
         </div>
 
