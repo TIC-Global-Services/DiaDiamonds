@@ -46,11 +46,11 @@ export default function Shop() {
       {/* Second decorative absolute background div */}
       <div className="w-full h-[120%] overflow-hidden bg-[#f7f6f4] absolute top-0 left-0 -translate-x-[50%] -translate-y-[10%] rounded-full z-20 flex flex-col">
         {/* First div */}
-        <button onClick={()=>setActiveDiv(1)} className={`w-full grow hover:cursor-pointer overflow-hidden ${activeDiv === 1 ? 'bg-[#FAC8AD]/30' : 'bg-[#F7F6F4]'} `}></button>
+        <button onClick={()=>setActiveDiv(1)} className={`w-full grow hover:cursor-pointer overflow-hidden  bg-[#FAC8AD]/30 ${activeDiv === 1 ? 'opacity-100' : 'opacity-20'} `}></button>
         {/* Second div */}
-        <button onClick={()=>setActiveDiv(2)} className={`w-full grow hover:cursor-pointer overflow-hidden ${activeDiv === 2 ? 'bg-[#F8CC96]' :'bg-[#F7F6F4]'}`}></button>
+        <button onClick={()=>setActiveDiv(2)} className={`w-full grow hover:cursor-pointer overflow-hidden bg-[#F8CC96] ${activeDiv === 2 ? 'opacity-100' :'opacity-20'}`}></button>
         {/* Third div */}
-        <button onClick={()=>setActiveDiv(3)} className={`w-full grow hover:cursor-pointer overflow-hidden ${activeDiv === 3 ? 'bg-[#D9D9D9]' : 'bg-[#F7F6F4]'} `}></button>
+        <button onClick={()=>setActiveDiv(3)} className={`w-full grow hover:cursor-pointer overflow-hidden  bg-[#D9D9D9] ${activeDiv === 3 ? 'opacity-100' : 'opacity-20'} `}></button>
       </div>
 
       {/* Inner div */}
