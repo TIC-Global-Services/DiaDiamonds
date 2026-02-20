@@ -1,17 +1,62 @@
+"use client";
+
+import { useState } from "react";
+
 export default function Testimonials() {
+
+  const [currentTestimony, setCurrentTestimony ]= useState<number>(0);
+
+  const testimonials = [
+  {
+    stars: 4,
+    comments: [
+      "Rose Gold Diamond Ring Looks Elegant and Classy",
+      "If You are Looking for Quality with a Touch of Elegance, Look no Further than Dia. Their pieces are not only stylish, but also durable."
+    ],
+    profileImage: "/assets/img/Testimonials/profile1.jpg",
+    name: "Asha",
+  },
+  {
+    stars: 4,
+    comments: [
+      "Beautiful design and quick delivery.",
+      "Will definitely order again."
+    ],
+    profileImage: "/assets/img/Testimonials/profile2.png",
+    name: "Liam Carter",
+  },
+  {
+    stars: 5,
+    comments: [
+      "The necklace looks even better in person.",
+      "Elegant and timeless."
+    ],
+    profileImage: "/assets/img/Testimonials/profile3.png",
+    name: "Sophia Martinez",
+  },
+  {
+    stars: 5,
+    comments: [
+      "Exceptional quality and attention to detail.",
+      "Highly recommended."
+    ],
+    profileImage: "/assets/img/Testimonials/profile4.png",
+    name: "Noah Williams",
+  },
+];
 
     const TestimonialLeftImage = '/assets/img/Testimonials/TestimonialLeftImage.jpg';
     const TestimonialProfile1 = '/assets/img/Testimonials/TestimonialProfile1.jpg';
 
   return (
-    <div className="w-full h-[100dvh] flex flex-wrap md:flex-nowrap">
+    <div className="w-full h-[100dvh] flex flex-wrap md:flex-nowrap ">
       
       {/* Left Side */}
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2 overflow-hidden">
         <img 
           src={TestimonialLeftImage}
           alt="testimonial visual"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover hover:scale-110 delay-75 duration-100 ease-in-out"
         />
       </div>
 
@@ -24,11 +69,11 @@ export default function Testimonials() {
 
 
           <p className="text-[24px] leading-[100%] text-[#000000] pb-[106px] pt-[35px]">
-            Rose Gold Diamond Ring Looks Elegant and Classy
+            {testimonials[currentTestimony].comments[0]}
           </p>
 
           <p className="text-[24px] leading-[100%] text-[#000000] pb-20">
-            If You are Looking for Quality with a Touch of Elegance, Look no Further than Dia. Their pieces are not only stylish, but also durable.
+            {testimonials[currentTestimony].comments[1]}
           </p>
 
           <div className="flex justify-between items-center pt-[14px]">
@@ -36,23 +81,31 @@ export default function Testimonials() {
             {/* Identity Block */}
             <div className="flex items-center gap-4">
               <img 
-                src={TestimonialProfile1} 
+                src={testimonials[currentTestimony].profileImage} 
                 alt="Testimonial profile picture"
                 className="w-12 md:w-[100px] aspect-square rounded-full object-cover"
               />
               <h2 className="text-[18px] font-semibold text-[#000000]">
-                Asha
+                {testimonials[currentTestimony].name}
               </h2>
               <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.3904 27.1849L8.0948 23.3186L3.74525 22.3521L4.16812 17.8817L1.20801 14.4987L4.16812 11.1157L3.74525 6.64534L8.0948 5.67877L10.3904 1.8125L14.4983 3.5644L18.6062 1.8125L20.9018 5.67877L25.2514 6.64534L24.8285 11.1157L27.7886 14.4987L24.8285 17.8817L25.2514 22.3521L20.9018 23.3186L18.6062 27.1849L14.4983 25.433L10.3904 27.1849ZM13.2297 18.7879L20.0561 11.9615L18.3646 10.2096L13.2297 15.3445L10.632 12.8072L8.94055 14.4987L13.2297 18.7879Z" fill="black"/></svg>
             </div>
 
             {/* Control Buttons */}
             <div className="flex gap-2">
-              <button className="w-[35px] aspect-square rounded-full border-[5.29px] border-[#FFFFFF]/10 flex justify-center">
-                  <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6H12.6667M1 6L6 1M1 6L6 11" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <button onClick={()=>{
+                if(currentTestimony == 0) return;
 
+                setCurrentTestimony(currentTestimony - 1);
+              }} className="w-[35px] aspect-square rounded-full border-[5.29px] border-[#FFFFFF]/10 flex justify-center items-center hover:cursor-pointer active:bg-[#FFFFFF]">
+                  <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 6H12.6667M1 6L6 1M1 6L6 11" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </button>
-              <button className="w-[35px] aspect-square rounded-full border-[5.29px] border-[#FFFFFF]/10 flex justify-center">
+              <button onClick={()=>{
+                if(currentTestimony == (testimonials.length-1)) return;
+
+                setCurrentTestimony(currentTestimony + 1);
+              }}
+               className="w-[35px] aspect-square rounded-full border-[5.29px] border-[#FFFFFF]/10 flex justify-center items-center hover:cursor-pointer active:bg-[#FFFFFF]">
                   <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.667 6H1.00032M12.667 6L7.66699 11M12.667 6L7.66699 1" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
