@@ -26,15 +26,8 @@ export default function DiamondSpotlight() {
 
   return (
     <div className="w-full h-[100dvh] relative overflow-hidden" ref={elementRef} 
-    onMouseLeave={()=>{
-       if(!elementRef.current) return;
-      if(!coloredImageRef.current) return;
-      if(!borderRef.current) return;
-      coloredImageRef.current.style.setProperty('--position', 'center');
-      borderRef.current.style.setProperty('--translate', '-50% -50%');
-      borderRef.current.style.setProperty('--top', '50%');
-      borderRef.current.style.setProperty('--left', '50%');
-      }}
+       
+       onMouseOver={captureMousePosition}
        onMouseMove={captureMousePosition}>
 
       <img src={DiamondSpotLightImage} alt="diamond spotlight" className="w-full h-full " />
