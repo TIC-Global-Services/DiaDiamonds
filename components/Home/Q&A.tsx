@@ -10,12 +10,15 @@ export default function QandA() {
 
       {/* Non-absolute content container */}
       <div className="relative z-20 w-full py-20 px-10 flex justify-end items-start gap-[60px] flex-wrap md:flex-nowrap">
-        
-        <img
+
+        <div className="w-[30%] overflow-hidden delay-100 duration-300 ease-in-out">
+          <img
           src={QAImageLeft}
           alt="Q&A visual"
-          className="w-[30%] aspect-[448/673] object-contain"
+          className="w-full aspect-[448/673] object-contain hover:scale-110"
         />
+        </div>
+        
 
         <div className="flex flex-col justify-center items-center w-[55%]">
           <h2 className="font-medium text-[40px] leading-[100%] text-[#000000] uppercase pb-10">
