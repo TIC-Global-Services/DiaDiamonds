@@ -79,7 +79,7 @@ export default function Navbar() {
         </button>
 
         <div className="relative flex items-center justify-center gap-2 hover:cursor-pointer">
-          <img src={diamond} alt="diamond" className="w-10 aspect-square hover:rotate-360 delay-100 duration-300" />
+          <img src={diamond} alt="diamond" className="w-10 aspect-square " />
 
           {/* Absolute overlay for diamond sparkle */}
           {/* <div className="absolute inset-0 w-full h-full flex items-center justify-center gap-2 hover:cursor-pointer">
