@@ -57,7 +57,7 @@ export default function Navbar() {
               </li>
             </ul>
           <li className="text-[32px] leading-[110%] pb-10 text-[#000000] uppercase hover:cursor-pointer hover:underline">
-            About Us
+            <a href="/about">About Us</a>
           </li>
           <li className="text-[32px] leading-[110%] pb-10 text-[#000000] uppercase hover:cursor-pointer hover:underline">
             Precision

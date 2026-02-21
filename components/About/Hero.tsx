@@ -29,7 +29,7 @@ export default function Hero() {
             <img
               src={ImageLeft}
               alt="Hero Image 1"
-              className="w-full aspect-square -translate-y-[10%] translate-x-[50%]  z-20 hover:scale-110 transition delay-100 duration-300 ease-in-out"
+              className="w-full aspect-square -translate-y-[10%] translate-x-[50%]  z-20  "
             />
           </div>
 
@@ -38,7 +38,7 @@ export default function Hero() {
             <img
               src={ImageRight}
               alt="Hero Image 2"
-              className="w-full aspect-[422/633]  rounded-t-full z-10 hover:scale-110 transition delay-100 duration-300 ease-in-out"
+              className="w-full aspect-[422/633]  rounded-t-full z-10 "
             />
           </div>
         </div>
