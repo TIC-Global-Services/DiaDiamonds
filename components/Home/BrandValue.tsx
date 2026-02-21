@@ -23,13 +23,13 @@ export default function BrandValue(){
         })
       },[])
     return(
-        <div className="w-full h-[100vh] relative overflow-hidden">
+        <div className="w-full h-[150vh]  relative overflow-hidden">
 
-            <div ref={containerRef} className="w-[150%] h-full">
+            <div ref={containerRef} className="w-[150%] h-full ">
                 <img 
                 src={BrandValueImg} 
                 alt="Brand Value" 
-                className="w-full h-full relative -translate-x-1/4 scale-130"
+                className="w-full  object-cover object-center -translate-y-1/6 -translate-x-1/5 relative  "
             />
             </div>
             
