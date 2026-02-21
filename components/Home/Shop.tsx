@@ -115,7 +115,6 @@ export default function Shop() {
         <p className="pt-[30px] text-[24px] leading-[19.5px] text-[#000000] pb-[38px]">
           {shopItems[currentCategory][activeDiv-1].name}
         </p>
-xcv
         {/* Button */}
         <button className=" bg-white/40 bg-[#ffffff]/40   border rounded-full backdrop-blur-sm px-8 py-[12px] uppercase text-[#000000]">
           View More
