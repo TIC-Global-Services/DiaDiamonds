@@ -60,7 +60,7 @@ export default function Testimonials() {
         <img 
           src={TestimonialLeftImage}
           alt="testimonial visual"
-          className="w-full h-full object-cover md:object-cover  hover:scale-110 delay-75 duration-100 ease-in-out"
+          className="w-full  object-cover -translate-y-1/6  hover:scale-110 delay-75 duration-100 ease-in-out"
         />
       </div>
 

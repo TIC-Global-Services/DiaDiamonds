@@ -14,7 +14,7 @@ export default function Craftsmanship() {
         />
 
         <div className="absolute inset-0 flex justify-center items-end mb-8 md:mb-28">
-          <button className="  tracking-[0.166rem] border-[5.3px] rounded-full px-[18px] py-[7.6px] border-[#FFFFFF]/10 bg-[#FFFFFF]/40 uppercase">
+          <button className="BtnAnimation tracking-[0.166rem] border-[5.3px] rounded-full px-[18px] py-[7.6px] border-[#FFFFFF]/10 bg-[#FFFFFF]/40 uppercase">
             View Bracelet Collection
           </button>
         </div>

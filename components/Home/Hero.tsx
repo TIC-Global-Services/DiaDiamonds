@@ -30,7 +30,7 @@ const Hero = () => {
                   Iconic Brand Feel Designed to Shine Today And Endure Forever
                 </p>
 
-                <button className="cursor-pointer w-[213px] h-[44px] border border-[1px] backdrop-blur-md border-[#FFFFFF]/.1 text-[#e7dfd7] bg-[#000000]/10 rounded-full  hover:scale-110 active:scale-100">
+                <button className="BtnAnimation cursor-pointer w-[213px] h-[44px] border border-[1px] tracking-[0.166rem] backdrop-blur-md border-[#FFFFFF]/.1 text-[#e7dfd7] bg-[#000000]/10 rounded-full  hover:scale-110 active:scale-100">
                     DISCOVER MORE
                 </button>
 

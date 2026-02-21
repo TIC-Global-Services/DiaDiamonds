@@ -3,22 +3,22 @@ export default function DIAExperience() {
     <div className="w-full bg-[#000000] flex flex-col px-8 md:px-[192px] py-8 md:py-[96px]">
       
       {/* Header Section */}
-      <div className="flex flex-col mx-auto w-full md:w-[50%] text-center pb-[70px]">
-        <h2 className="font-medium text-[40px] leading-[123%] uppercase text-[#FFFF] pb-[20px] ">
+      <div className="flex flex-col justify-center items-center mx-auto w-full md:w-full text-center pb-[70px]">
+        <h2 className="font-medium text-[40px] leading-[123%] uppercase text-[#FFFFFF] pb-[20px] ">
           The DIA Diamonds Experience
         </h2>
 
-        <p className=" text-[14px] leading-[150%] text-[#FFFFFF]">
+        <p className=" text-[14px] leading-[150%] md:w-[65%] text-[#FFFFFF]">
          From selection to setting, every service is thoughtfully designed around you.
 We combine expert craftsmanship, personalized care, and lasting trust to make every moment extraordinary.
         </p>
       </div>
 
       {/* Direct Child Content Section */}
-      <div className="w-full flex flex-col gap-[40px]">
+      <div className="w-full flex flex-col gap-10">
         
         {/* First Row - Three Items */}
-        <div className="flex justify-center items-center gap-8 md:justify-between md:items-start flex-wrap md:flex-nowrap">
+        <div className="w-full flex justify-center items-center gap-8 md:justify-between md:items-start flex-wrap md:flex-nowrap">
           
           <div className="flex flex-col justify-center items-center gap-[21px]">
 

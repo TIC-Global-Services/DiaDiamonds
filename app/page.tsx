@@ -12,10 +12,12 @@ import OurCollection from "@/components/Home/OurCollections";
 import QandA from "@/components/Home/Q&A";
 import Shop from "@/components/Home/Shop";
 import Search from "@/components/Home/Search";
+import ChatBtn from "@/components/Reusable/ChatBtn";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
+      <ChatBtn/>
       <Navbar />
       <Hero />
       <OurCollection />

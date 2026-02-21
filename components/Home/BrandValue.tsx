@@ -44,7 +44,7 @@ export default function BrandValue(){
                     Your diamond journey starts here.  Where brilliance meets craftsmanship,<br /> and every sparkle tells your story.
                 </p>
 
-                <button className="mt-[22px] cursor-pointer bg-[#FFFFFFFF]/50 w-[138px] h-[39px] rounded-full px-[30px] py-[12px] font-medium text-[12px] leading-[100%] text-[#000000] uppercase">
+                <button className="BtnAnimation mt-[22px] cursor-pointer bg-[#FFFFFFFF]/50 w-[138px] h-[39px] rounded-full px-[30px] py-[12px] font-medium text-[12px] leading-[100%] text-[#000000] uppercase">
                     Learn More
                 </button>
                 </div>

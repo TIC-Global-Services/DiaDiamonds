@@ -101,7 +101,7 @@ export default function OurCollection() {
       </div>
 
       {/* Large sibling div */}
-      <div className="w-full justify-center items-center pt-4 relative gap-2 flex-wrap md:flex-nowrap hidden md:flex">
+      <div className="w-[98%] mx-auto justify-center items-center pt-4 relative gap-2 flex-wrap md:flex-nowrap hidden md:flex">
         {/* First inner div with top border */}
         <div className="w-full border-b-2 border-[#000000]/20 relative shrink">
           {/* Absolute border div inside first inner div */}

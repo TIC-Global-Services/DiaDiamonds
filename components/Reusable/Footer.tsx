@@ -57,6 +57,13 @@ export default function Footer() {
         </li>
       </ul>
 
+      <div className="flex flex-col ml-auto py-3 flex-end items-end">
+        <h3 className='text-[20px] text-[#FFFFFF] leading-[140%] '>CUSTOMER SERVICE</h3>
+        <a className='text-[16px] text-[#737373] underline cursor-pointer'>Return Policy</a>
+        <a className='text-[16px] text-[#737373] underline cursor-pointer'>Shipping Policy</a>
+        <a className='text-[16px] text-[#737373] underline cursor-pointer'>Privacy Policy</a>
+      </div>
+
       <div className="flex flex-col mx-auto pt-17 pb-3 items-center justify-center gap-1">
         <img
           className="w-[60px] aspect-square"
@@ -85,10 +92,10 @@ export default function Footer() {
 
         <div className="flex mx-auto md:mx-0 md:block pt-4 md:pt-0">
           <div>
-            <h2 className="uppercase font-medium lg:text-xl md:text-base leading-[100%] text-[#FFFFFF] pb-[6px] text-center md:text-left">
+            <h2 className="uppercase font-medium lg:text-xl md:text-base leading-[100%] text-[#FFFFFF] pb-[6px] text-center md:text-right">
               Contacts
             </h2>
-            <p className="md:text-sm lg:text-[18px] leading-[100%] text-[#737373] cursor-pointer hover:scale-110 active:scale-100 text-center md:text-left">
+            <p className="md:text-sm lg:text-[18px] leading-[100%] text-[#737373] cursor-pointer  text-center md:text-right hover:underline">
               <a
               href="tel:987654321"
               target="_blank"
@@ -97,7 +104,7 @@ export default function Footer() {
             </a>
             </p>
 
-            <p  className="md:text-sm lg:text-[18px] leading-[100%] text-[#737373] cursor-pointer hover:scale-110 active:scale-100 text-center md:text-left">
+            <p  className="md:text-sm lg:text-[18px] leading-[100%] text-[#737373] cursor-pointer hover:underline text-center md:text-right">
               <a
               href="http://hello@diadiamonds.com"
               target="_blank"
@@ -116,13 +123,13 @@ export default function Footer() {
         <p className="font-medium text-xs md:text-sm lg:text-[18px] leading-5 text-[#FFFFFF]">
           © 2026 Dia Diamonds . All Rights Reserved.
         </p>
-        <a
-          href="https://www.theinternetcompany.one/"
-          target="_blank"
-          className="font-medium text-xs md:text-sm lg:text-[18px] leading-5 text-[#FFFFFF] cursor-pointer hover:scale-110 active:scale-100 text-right"
+        <span
+          
+          
+          className="font-medium text-xs md:text-sm lg:text-[18px] leading-5 text-[#FFFFFF]   text-right"
         >
-          Designed & Developed By TIC Global Services
-        </a>
+          Designed & Developed By <a href="https://www.theinternetcompany.one/" target="_blank" className="cursor-pointer hover:underline">TIC Global Services</a>
+        </span>
       </div>
     </footer>
   );

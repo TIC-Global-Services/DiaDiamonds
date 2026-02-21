@@ -53,7 +53,7 @@ export default function DiamondSpotlight() {
           <h2 className="font-medium text-[40px] leading-[100%] uppercase text-[#EFFFFF] text-center">
             Designed for you. <br /> Crafted for a lifetime.
           </h2>
-          <button className="mt-5 w-[213px] h-[44px] border border-[1px] backdrop-blur-md border-[#FFFFFF]/.1 text-[#e7dfd7] bg-[#000000]/10 rounded-full hover:cursor-pointer ">
+          <button className="BtnAnimation mt-5 w-[213px] h-[44px] border border-[1px] tracking-[0.166rem] backdrop-blur-md border-[#FFFFFF]/.1 text-[#e7dfd7] bg-[#000000]/10 rounded-full hover:cursor-pointer ">
                     DISCOVER MORE
                 </button>
         </div>

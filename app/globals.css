@@ -17,3 +17,41 @@ body {
   color: var(--foreground);
   font-family: var(--font-clash-display), Helvetica, sans-serif;
 }
+
+.BtnAnimation {
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-transform: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BtnAnimation::before {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: #f8f8f8;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.BtnAnimation:hover::before {
+  width: 250%;
+  height: 250%;
+  bottom: -75%;
+}
+
+.BtnAnimation:hover {
+  color: black;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(35, 91, 90, 0.3);
+}

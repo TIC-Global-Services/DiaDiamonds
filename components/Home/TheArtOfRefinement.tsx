@@ -63,7 +63,7 @@ export default function TheArtOfRefinement() {
           <p className="w-full md:w-[90%] text-[20px] leading-[140%] tracking-[5%] text-[#FFFFFF]/70 pb-[54px]">
           Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.
           </p>
-          <button className="py-[12px] px-[30px] rounded-full border border-[#e7dfd7] bg-[#87888A]/20 backdrop-blur-md text-[12px] font-medium uppercase text-[#e7dfd7] hover:cursor-pointer">
+          <button className="BtnAnimation py-[12px] px-[30px] rounded-full border border-[#e7dfd7] bg-[#87888A]/20 backdrop-blur-md text-[12px] font-medium uppercase text-[#e7dfd7] hover:cursor-pointer">
             View More
           </button>
         </div>
