@@ -1,16 +1,37 @@
+"use client";
+
 import ContainerLayout from '@/layout/ContainerLayout'
-import React from 'react'
+import { useEffect, useRef } from "react";
+import { gsap } from 'gsap/gsap-core';
+
 
 const Hero = () => {
 
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
   const heroImage = '/assets/img/Hero/HeroImage.jpg';
 
+  useEffect(()=>{
+    if(!containerRef.current) return;
+
+    gsap.to(containerRef.current, {
+      y:'-100',
+      ease:"none",
+      scrollTrigger:{
+        trigger:containerRef.current,
+        start:"top bottom",
+        end:"bottom top",
+        scrub:1,
+      }
+    })
+  },[])
+
   return (
-        <div className="w-full h-dvh relative ">
+        <div ref={containerRef} className="w-full h-dvh relative overflow-hidden">
             <img 
               src={heroImage}
               alt="heroImage" 
-              className="w-full h-full object-fill"
+              className="w-full h-full object-fill scale-130"
             />
             
             <div className="absolute bottom-[60px]  px-6 xl:px-[105px] lg:px-[50px]">

@@ -1,14 +1,35 @@
+"use client";
+
+import {useEffect, useRef} from "react";
+import { gsap } from "gsap"
+
 export default function BrandValue(){
 
     const BrandValueImg = '/assets/img/BrandValue/BrandValue.png';
+    const containerRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(()=>{
+        if(!containerRef.current) return;
+    
+        gsap.to(containerRef.current, {
+          y:'-50',
+          ease:"none",
+          scrollTrigger:{
+            trigger:containerRef.current,
+            start:"top bottom",
+            end:"bottom top",
+            scrub:1,
+          }
+        })
+      },[])
     return(
         <div className="w-full h-[100vh] relative overflow-hidden">
 
-            <div className="w-[150%] h-full">
+            <div ref={containerRef} className="w-[150%] h-full">
                 <img 
                 src={BrandValueImg} 
                 alt="Brand Value" 
-                className="w-full h-full relative -translate-x-1/4"
+                className="w-full h-full relative -translate-x-1/4 scale-130"
             />
             </div>
             
