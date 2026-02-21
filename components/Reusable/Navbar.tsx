@@ -70,7 +70,7 @@ export default function Navbar() {
       </div>
 
       {/* NAVBAR */}
-      <nav className="w-full h-[94px] bg-transparent flex justify-between items-center px-10 border rounded-br-xl rounded-bl-xl">
+      <nav className="w-full h-[94px] bg-transparent flex justify-between items-center px-10 border-0 rounded-br-xl rounded-bl-xl">
         
         <button className="w-[37px] aspect-square hover:cursor-pointer " onClick={()=>setIsSearh(true)}>
           <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
