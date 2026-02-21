@@ -44,7 +44,7 @@ export default function Footer() {
               : "text-[#717580]"
           }`}
         >
-          About Us
+          <a href="/about">About Us</a>
         </li>
         <li
           className={`font-medium text-xs md:text-[16px] leading-xl cursor-pointer hover:scale-110 active:scale-100 ${
