@@ -16,7 +16,7 @@ export default function QA({ question, answer }:QAProps) {
       
       {/* Question Row */}
       <div className="w-[90%] flex justify-between flex-nowrap">
-        <p className="text-[20px] leading-[100%] text-[#000000] shrink-0 pl-4 hover:cursor-pointer" onClick={()=>setIsAnswer(!isAnswer)} >
+        <p className="text-[20px] leading-[100%] text-[#000000] md:shrink-0 pl-4 hover:cursor-pointer" onClick={()=>setIsAnswer(!isAnswer)} >
           {question}
         </p>
 

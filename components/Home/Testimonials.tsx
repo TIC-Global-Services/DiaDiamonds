@@ -24,7 +24,7 @@ export default function Testimonials() {
       "Beautiful design and quick delivery.",
       "Will definitely order again."
     ],
-    profileImage: "/assets/img/Testimonials/profile2.png",
+    profileImage: "/assets/img/Testimonials/profile1.png",
     name: "Liam Carter",
   },
   {
@@ -34,7 +34,7 @@ export default function Testimonials() {
       "The necklace looks even better in person.",
       "Elegant and timeless."
     ],
-    profileImage: "/assets/img/Testimonials/profile3.png",
+    profileImage: "/assets/img/Testimonials/profile1.png",
     name: "Sophia Martinez",
   },
   {
@@ -44,7 +44,7 @@ export default function Testimonials() {
       "Exceptional quality and attention to detail.",
       "Highly recommended."
     ],
-    profileImage: "/assets/img/Testimonials/profile4.png",
+    profileImage: "/assets/img/Testimonials/profile1.png",
     name: "Noah Williams",
   },
 ];
@@ -53,19 +53,19 @@ export default function Testimonials() {
     const TestimonialProfile1 = '/assets/img/Testimonials/TestimonialProfile1.jpg';
 
   return (
-    <div className="w-full h-[100dvh] flex flex-wrap md:flex-nowrap ">
+    <div className="w-full h-[100vh] flex flex-wrap md:flex-nowrap ">
       
       {/* Left Side */}
-      <div className="w-full md:w-1/2 overflow-hidden">
+      <div className="w-full h-2/5 md:h-auto md:w-1/2 overflow-hidden">
         <img 
           src={TestimonialLeftImage}
           alt="testimonial visual"
-          className="w-full h-full object-cover hover:scale-110 delay-75 duration-100 ease-in-out"
+          className="w-full h-full object-cover md:object-cover  hover:scale-110 delay-75 duration-100 ease-in-out"
         />
       </div>
 
       {/* Right Side */}
-      <div className="w-full md:w-1/2 px-[66px] flex items-center bg-[#f8f3ef]">
+      <div className="w-full md:w-1/2 h-3/5 px-[66px] flex items-center bg-[#f8f3ef]">
         
         <div className="w-full">
           

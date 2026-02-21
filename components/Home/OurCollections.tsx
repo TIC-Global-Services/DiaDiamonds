@@ -2,6 +2,7 @@
 
 import {useState} from "react";
 import CollectionItem from "./Reusable/CollectionItem";
+import { Parallax } from "react-scroll-parallax";
 
 export default function OurCollection() {
 
@@ -71,6 +72,7 @@ export default function OurCollection() {
   ]
 
   return (
+    <Parallax speed={10}>
     <div className="w-full py-21 px-5 overflow-hidden">
       
       {/* Inner flex container */}
@@ -99,7 +101,7 @@ export default function OurCollection() {
       </div>
 
       {/* Large sibling div */}
-      <div className="w-full flex justify-center items-center pt-4 relative gap-2 flex-wrap md:flex-nowrap">
+      <div className="w-full flex justify-center items-center pt-4 relative gap-2 flex-wrap md:flex-nowrap hidden md:block">
         {/* First inner div with top border */}
         <div className="w-full border-b-2 border-[#000000]/20 relative shrink">
           {/* Absolute border div inside first inner div */}
@@ -134,5 +136,6 @@ export default function OurCollection() {
       </div>
 
     </div>
+    </Parallax>
   );
 }

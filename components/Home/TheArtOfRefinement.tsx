@@ -41,7 +41,7 @@ export default function TheArtOfRefinement() {
           webkitMaskImage:"linear-gradient(to right, black 100%, transparent 100%)",
           maskImage:"linear-gradient(to right, black 100%, transparent 100%)",
         }}
-        transition={{duration:2.5, ease:"easeInOut", repeat:2, repeatType:"mirror", repeatDelay:0.3 }}
+        transition={{duration:2.5, ease:"easeInOut", repeat:0, repeatType:"reverse", repeatDelay:0.3 }}
         viewport={{once:true, amount:0.2}}
 
         onMouseMove={CaptureMousePosition}

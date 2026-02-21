@@ -20,7 +20,7 @@ export default function QandA() {
         </div>
         
 
-        <div className="flex flex-col justify-center items-center w-[55%]">
+        <div className="flex flex-col justify-center items-center w-full md:w-[55%]">
           <h2 className="font-medium text-[40px] leading-[100%] text-[#000000] uppercase pb-10">
             Popular Questions
           </h2>
