@@ -135,7 +135,7 @@ export default function Shop() {
         </p>
         {/* Button */}
         <button className="BtnAnimation bg-white/40 bg-[#ffffff]/40 px-[18px] py-[7.6px]  border-[#FFFFFF]/10  tracking-[0.166rem] border-[5.3px]    border rounded-full backdrop-blur-sm px-8 py-[12px] uppercase text-[#000000]">
-          View More
+          VIEW MORE
         </button>
       </div>
     </div>

@@ -103,9 +103,9 @@ export default function OurCollection() {
       {/* Large sibling div */}
       <div className="w-[98%] mx-auto justify-center items-center pt-4 relative gap-2 flex-wrap md:flex-nowrap hidden md:flex">
         {/* First inner div with top border */}
-        <div className="w-full border-b-2 border-[#000000]/20 relative shrink">
+        <div className="w-full border-b-3 border-[#000000]/20 relative shrink">
           {/* Absolute border div inside first inner div */}
-          <div className={`absolute  w-full top-0 left-0 flex ${scrollState == 1 ? 'justify-start' : ''} ${scrollState ==2 ? 'justify-center': ''} ${scrollState ==3 ? 'justify-end': ''}`}>
+          <div className={`absolute -translate-y-1/4  w-full top-0 left-0 flex ${scrollState == 1 ? 'justify-start' : ''} ${scrollState ==2 ? 'justify-center': ''} ${scrollState ==3 ? 'justify-end': ''}`}>
             <div className=" border-t-5 border-[#7C3C3C] w-[34%]"></div>
           </div>
         </div>
