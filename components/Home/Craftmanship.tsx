@@ -14,7 +14,7 @@ export default function Craftsmanship() {
         />
 
         <div className="absolute inset-0 flex justify-center items-end mb-8 md:mb-28">
-          <button className="lg:w-[60%] xl:w-[55%] aspect-[256/44] border-[5.3px] rounded-full px-[35px] py-[12px] border-[#FFFFFF]/10 bg-[#FFFFFF]/40 uppercase">
+          <button className="  tracking-[0.166rem] border-[5.3px] rounded-full px-[18px] py-[7.6px] border-[#FFFFFF]/10 bg-[#FFFFFF]/40 uppercase">
             View Bracelet Collection
           </button>
         </div>
@@ -29,7 +29,7 @@ export default function Craftsmanship() {
             Elegant and Premium
           </h3>
 
-          <p className="md:text-base lg:text-[20px] leading-[100%] text-[#000000]/60 md:pb-[30px] lg:pb-[62px]">
+          <p className="md:text-base lg:text-[20px] leading-[140%] text-[#000000]/60 md:pb-[30px] lg:pb-[62px]">
             Every diamond is meticulously selected and expertly set by skilled artisans. From precision cutting to flawless finishing, each piece reflects timeless beauty and uncompromising quality.
           </p>
 

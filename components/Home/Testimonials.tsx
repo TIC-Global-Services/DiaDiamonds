@@ -65,7 +65,7 @@ export default function Testimonials() {
       </div>
 
       {/* Right Side */}
-      <div className="w-full md:w-1/2 h-3/5 px-[66px] flex items-center bg-[#f8f3ef]">
+      <div className="w-full md:w-1/2 h-3/5 md:h-full px-[66px] flex items-center bg-[#f8f3ef]">
         
         <div className="w-full">
           

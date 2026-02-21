@@ -6,6 +6,7 @@ export default function Shop() {
   const [activeDiv, setActiveDiv] = useState(1); 
   const [isDropDownClicked, setIsDropDownClicked] = useState<boolean>(false);
   const [currentCategory, setCurrentCategory] = useState<number>(0);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
  const shopItems = [
   // Rings
@@ -83,18 +84,35 @@ export default function Shop() {
       {/* Second decorative absolute background div */}
       <div className="w-full h-[120%] overflow-hidden bg-[#f7f6f4] absolute top-0 left-0 -translate-x-[50%] -translate-y-[10%] rounded-full z-20 flex flex-col">
         {/* First div */}
-        <button onMouseEnter={()=>setActiveDiv(1)} className={`w-full grow hover:cursor-pointer overflow-hidden  bg-[#FAC8AD]/30 ${activeDiv === 1 ? 'opacity-100' : 'opacity-20'} `}></button>
+        <button onMouseEnter={()=>{
+          setActiveDiv(1);
+          setIsHovered(true);}
+          }
+          onMouseLeave={()=>setIsHovered(false)}
+          className={`w-full grow hover:cursor-pointer overflow-hidden  bg-[#FAC8AD]/30 ${activeDiv === 1 ? 'opacity-100' : 'opacity-20'} `}></button>
         {/* Second div */}
-        <button onMouseEnter={()=>setActiveDiv(2)} className={`w-full grow hover:cursor-pointer overflow-hidden bg-[#F8CC96] ${activeDiv === 2 ? 'opacity-100' :'opacity-20'}`}></button>
+        <button onMouseEnter={()=>{
+          setActiveDiv(2);
+          setIsHovered(true);
+          }}
+          onMouseLeave={()=>setIsHovered(false)}
+          className={`w-full grow hover:cursor-pointer overflow-hidden bg-[#F8CC96] ${activeDiv === 2 ? 'opacity-100' :'opacity-20'}`}></button>
         {/* Third div */}
-        <button onMouseEnter={()=>setActiveDiv(3)} className={`w-full grow hover:cursor-pointer overflow-hidden  bg-[#D9D9D9] ${activeDiv === 3 ? 'opacity-100' : 'opacity-20'} `}></button>
+        <button onMouseEnter={
+          ()=>{
+            setActiveDiv(3);
+            setIsHovered(true);
+          }
+          }
+          onMouseLeave={()=>{setIsHovered(false)}}
+          className={`w-full grow hover:cursor-pointer overflow-hidden  bg-[#D9D9D9] ${activeDiv === 3 ? 'opacity-100' : 'opacity-20'} `}></button>
       </div>
 
       {/* Inner div */}
       <div className="w-[50%] flex flex-col justify-center items-center relative z-30">
         {/* Heading */}
         <h2
-          className="font-medium text-[35px] leading-[100%] tracking-[10%] uppercase pb-[38px]"
+          className={`font-medium text-[35px] leading-[100%] tracking-[10%] uppercase pb-[38px]`}
           style={{
             background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
             WebkitBackgroundClip: "text",
@@ -108,7 +126,7 @@ export default function Shop() {
         <img
           src={shopItems[currentCategory][activeDiv-1].image}
           alt={shopItems[currentCategory][activeDiv-1].name}
-          className="object-contain aspect-[480/177]"
+          className={`object-contain aspect-[480/177] ${isHovered ? 'scale-110 delay-100 duration-200 ease-in-out' : 'scale-100'}`}
         />
 
         {/* Paragraph */}
@@ -116,7 +134,7 @@ export default function Shop() {
           {shopItems[currentCategory][activeDiv-1].name}
         </p>
         {/* Button */}
-        <button className=" bg-white/40 bg-[#ffffff]/40   border rounded-full backdrop-blur-sm px-8 py-[12px] uppercase text-[#000000]">
+        <button className=" bg-white/40 bg-[#ffffff]/40 px-[18px] py-[7.6px]  border-[#FFFFFF]/10  tracking-[0.166rem] border-[5.3px]    border rounded-full backdrop-blur-sm px-8 py-[12px] uppercase text-[#000000]">
           View More
         </button>
       </div>

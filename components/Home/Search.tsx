@@ -58,14 +58,14 @@ export default function Search({isSearch, setIsSearch}:SearchPanelProps) {
           </h2>
 
           <div className="flex w-[50%] gap-[30px] ">
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col gap-4 items-center justify-center">
               <img src={searchImage1} alt="search image 1"className='w-[288px] h-[153px] ' />
               <p className="text-[16px] leading-[100%] text-[#000000]">
                 Brand New
               </p>
             </div>
 
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col gap-4 items-center justify-center">
               <img src={searchImage2} alt="search image 2" className='w-[288px] h-[153px] ]'/>
               <p className="text-[16px] leading-[100%] text-[#000000]">
                 View Collections
