@@ -1,12 +1,14 @@
 "use client";
 import { useState, useRef } from "react";
 import Search from "../Home/Search";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
 
   const [navMenuClick, setNavMenuClick ] = useState<boolean>(false); 
   const [collectionClick, setCollectionClick] = useState<boolean>(false);
   const [isSearch , setIsSearh] = useState<boolean>(false);
+  const path = usePathname();
 
   const sparkleImgRef = useRef<HTMLImageElement>(null);
 
@@ -74,40 +76,18 @@ export default function Navbar() {
         
         <button className="w-[37px] aspect-square hover:cursor-pointer " onClick={()=>setIsSearh(true)}>
           <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M27.4031 26.4575L21.5294 20.425C23.2638 18.2637 24.3506 15.5325 24.3506 12.5163C24.3506 5.62875 18.8931 0 12.1638 0C5.43438 0 0 5.58125 0 12.4925C0 15.812 1.28397 18.9956 3.56945 21.3428C5.85494 23.6901 8.95471 25.0087 12.1869 25.0087C15.1237 25.0087 17.7831 23.8925 19.8875 22.1112L25.7613 28.1437C25.8659 28.2558 25.9916 28.345 26.1307 28.4059C26.2698 28.4668 26.4194 28.4982 26.5706 28.4982C26.7218 28.4982 26.8715 28.4668 27.0106 28.4059C27.1497 28.345 27.2753 28.2558 27.38 28.1437C27.8425 27.6687 27.8425 26.9325 27.38 26.4575H27.4031ZM2.3125 12.4925C2.3125 6.91125 6.72938 2.35125 12.1869 2.35125C17.6444 2.35125 22.0613 6.8875 22.0613 12.4925C22.0613 18.0975 17.6444 22.6337 12.1869 22.6337C6.72938 22.6337 2.3125 18.0975 2.3125 12.4925Z" fill="white"/>
+            <path fill={`${path == '/about' ? 'black' : 'white'}`} d="M27.4031 26.4575L21.5294 20.425C23.2638 18.2637 24.3506 15.5325 24.3506 12.5163C24.3506 5.62875 18.8931 0 12.1638 0C5.43438 0 0 5.58125 0 12.4925C0 15.812 1.28397 18.9956 3.56945 21.3428C5.85494 23.6901 8.95471 25.0087 12.1869 25.0087C15.1237 25.0087 17.7831 23.8925 19.8875 22.1112L25.7613 28.1437C25.8659 28.2558 25.9916 28.345 26.1307 28.4059C26.2698 28.4668 26.4194 28.4982 26.5706 28.4982C26.7218 28.4982 26.8715 28.4668 27.0106 28.4059C27.1497 28.345 27.2753 28.2558 27.38 28.1437C27.8425 27.6687 27.8425 26.9325 27.38 26.4575H27.4031ZM2.3125 12.4925C2.3125 6.91125 6.72938 2.35125 12.1869 2.35125C17.6444 2.35125 22.0613 6.8875 22.0613 12.4925C22.0613 18.0975 17.6444 22.6337 12.1869 22.6337C6.72938 22.6337 2.3125 18.0975 2.3125 12.4925Z" />
           </svg>
         </button>
 
         <div className="relative flex items-center justify-center gap-2 hover:cursor-pointer">
           <img src={diamond} alt="diamond" className="w-10 aspect-square " />
 
-          {/* Absolute overlay for diamond sparkle */}
-          {/* <div className="absolute inset-0 w-full h-full flex items-center justify-center gap-2 hover:cursor-pointer">
-              <img 
-              ref={sparkleImgRef}
-              onMouseMove={CaptureMousePosition}
-              onMouseLeave={
-                ()=>{
-                  if(!sparkleImgRef.current) return;
-                  sparkleImgRef.current.style.setProperty('--size', '0px');
-                }
-              }
-              style={{
-                WebkitMaskImage:'radial-gradient(circle at var(--position, center) var(--size, 40px), black 0%, black 50%, transparent 100%)',
-                maskImage:'radial-gradient(circle at var(--position, center) var(--size, 40px), black 0%, transparent 50%)',
-                maskRepeat:'no-repeat',
-              }}
-
-              
-              src="/assets/img/SparkleDiamond.png" alt="sparkling diamond" className="w-10 aspect-square hover:rotate-0 delay-100 duration-300" />
-              <img src={logo} alt="logo" className="w-[59px] h-[37px]" />
-          </div> */}
-
           <img src={logo} alt="logo" className="w-[59px] h-[37px]" />
         </div>
 
-        <div onClick={()=>setNavMenuClick(true)} className={`w-5 h-[13px] border-t-2 border-b-2 border-[#ffffff] hover:cursor-pointer   `}>
-          <div className="flex mx-auto w-4 h-[6px] border-b-2 border-[#ffffff]"></div>
+        <div onClick={()=>setNavMenuClick(true)} className={`w-5 h-[13px] border-t-2 border-b-2 ${path == '/about' ? 'border-[#000000]' : 'border-[#ffffff]' } hover:cursor-pointer   `}>
+          <div className={`flex mx-auto w-4 h-[6px] border-b-2 ${path === '/about' ? 'border-[#000000]' : 'border-[#ffffff]'}`}></div>
         </div>
 
       </nav>
