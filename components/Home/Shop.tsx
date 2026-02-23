@@ -5,7 +5,7 @@ export default function Shop() {
 
   const [activeDiv, setActiveDiv] = useState(1); 
   const [isDropDownClicked, setIsDropDownClicked] = useState<boolean>(false);
-  const [currentCategory, setCurrentCategory] = useState<number>(0);
+  const [currentCategory, setCurrentCategory] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
  const shopItems = [
@@ -61,18 +61,19 @@ export default function Shop() {
             Choose Category
           </p>
           {/*  Drop Down div below */}
-          <div onClick={()=>setIsDropDownClicked(!isDropDownClicked)} className="relative w-[70%]">
-            <div  className="flex justify-between items-center gap-[10px] relative w-full border bg-[#431A1A] border-[#000000]/10 backdrop-blur-xs px-6 py-[7px] text-center rounded-full z-20 cursor-pointer " >
-            <h2 onClick={()=>{setCurrentCategory(0)}} className="text-[16px] leading-[142%] text-[#FFFFFF]/50">Rings</h2>
+          <div  className="relative w-[70%]">
+            <div onClick={()=>setIsDropDownClicked(!isDropDownClicked)} className="flex justify-between items-center gap-[10px] relative w-full border bg-[#431A1A] border-[#000000]/10 backdrop-blur-xs px-6 py-[7px] text-center rounded-full z-20 cursor-pointer " >
+            <h2 className="text-[16px] leading-[142%] text-[#FFFFFF]/50">Select</h2>
             <svg  className={`${isDropDownClicked ? 'rotate-180 delay-100 duration-300' : ''}`}  width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.327681 1.71L3.19027 4.3C3.62132 4.69 4.31763 4.69 4.74867 4.3L7.61127 1.71C8.30757 1.08 7.81021 0 6.82654 0H1.10135C0.117684 0 -0.368625 1.08 0.327681 1.71Z" fill="white" fill-opacity="0.5"/></svg>
 
 
             </div>
             <div className={`${isDropDownClicked ? '' : 'hidden'} absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%]  flex flex-col bg-white  py-[15px] border-b border-t-0 rounded-[10px] z-10`}>
-                <button onClick={()=>{setCurrentCategory(1)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 1 ? 'text-[#000000/80] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Bracelets</button>
-                <button onClick={()=>{setCurrentCategory(2)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 2 ? 'text-[#000000/80] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Necklaces</button>
-                <button onClick={()=>{setCurrentCategory(3)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 3 ? 'text-[#000000/80] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Pendants</button>
-                <button onClick={()=>{setCurrentCategory(4)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 4 ? 'text-[#000000/80] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Earrings</button>
+              <button onClick={()=>{setCurrentCategory(0)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 0 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Rings</button>
+                <button onClick={()=>{setCurrentCategory(1)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 1 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Bracelets</button>
+                <button onClick={()=>{setCurrentCategory(2)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 2 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Necklaces</button>
+                <button onClick={()=>{setCurrentCategory(3)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 3 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Pendants</button>
+                <button onClick={()=>{setCurrentCategory(4)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 4 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Earrings</button>
                 
             </div>
 
@@ -119,19 +120,19 @@ export default function Shop() {
             WebkitTextFillColor: "transparent"
           }}
         >
-          {shopItems[currentCategory][activeDiv-1].color}
+          {currentCategory != null ? shopItems[currentCategory][activeDiv-1].color : shopItems[0][activeDiv-1].color}
         </h2>
 
         {/* Image */}
         <img
-          src={shopItems[currentCategory][activeDiv-1].image}
-          alt={shopItems[currentCategory][activeDiv-1].name}
+          src={currentCategory != null ? shopItems[currentCategory][activeDiv-1].image : shopItems[0][activeDiv-1].image}
+          alt={currentCategory != null ? shopItems[currentCategory][activeDiv-1].name : shopItems[0][activeDiv-1].name}
           className={`object-contain aspect-[480/177] ${isHovered ? 'scale-110 delay-100 duration-200 ease-in-out' : 'scale-100'}`}
         />
 
         {/* Paragraph */}
         <p className="pt-[30px] text-[24px] leading-[19.5px] text-[#000000] pb-[38px]">
-          {shopItems[currentCategory][activeDiv-1].name}
+          {currentCategory != null ? shopItems[currentCategory][activeDiv-1].name : shopItems[0][activeDiv-1].name}
         </p>
         {/* Button */}
         <button className="BtnAnimation bg-white/40 bg-[#ffffff]/40 px-[18px] py-[7.6px]  border-[#FFFFFF]/10  tracking-[0.166rem] border-[5.3px]    border rounded-full backdrop-blur-sm px-8 py-[12px] uppercase text-[#000000]">
