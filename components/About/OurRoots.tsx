@@ -24,7 +24,7 @@ export default function OurRoots() {
             <img
               src={ProfileImage}
               alt="Profile Image"
-              className="w-[60%] aspect-[190/175] border-0 rounded-[30px] object-cover"
+              className="w-[40%] aspect-[190/174] border-0 rounded-[30px] object-cover"
             />
 
             {/* Heading */}
