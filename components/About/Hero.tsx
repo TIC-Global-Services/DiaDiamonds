@@ -25,7 +25,7 @@ export default function Hero() {
         {/* Second inner div */}
         <div className="w-full md:w-3/5 h-full flex items-end relative gap-4">
           {/* First image wrapper */}
-          <div className="w-full ">
+          <div className="w-[35%] md:shrink-0 md:grow-0">
             <img
               src={ImageLeft}
               alt="Hero Image 1"
@@ -34,7 +34,7 @@ export default function Hero() {
           </div>
 
           {/* Second image wrapper */}
-          <div className="overflow-hidden">
+          <div className="overflow-hidden w-[60%] h-[95%] md:shrink md:grow-0">
             <img
               src={ImageRight}
               alt="Hero Image 2"
