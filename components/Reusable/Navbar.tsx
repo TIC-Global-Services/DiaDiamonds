@@ -39,7 +39,7 @@ export default function Navbar() {
 
         <ul className="w-full pt-[63px] pl-10 pr-10">
           <li className={`w-full flex justify-between items-center text-[32px] leading-[110%] text-[#000000] uppercase ${collectionClick ? '' : 'pb-10'}`}>
-            <p className={`${collectionClick ? 'underline' : ''} hover:cursor-pointer hover:underline text-2xl`} onClick={()=>setCollectionClick(!collectionClick)}>Collection</p>
+            <p className={`${collectionClick ? 'underline' : ''} hover:cursor-pointer hover:underline text-[32px]`} onClick={()=>setCollectionClick(!collectionClick)}>Collection</p>
             <div onClick={()=>setCollectionClick(false)} className={`${collectionClick ? 'block' : 'hidden'} hover:underline w-4 border-t-2 border-[#000000] hover:cursor-pointer hover:scale-110 active:scale-100`}></div>
           </li>
           <ul className={`pt-[30px] pb-10 ${collectionClick ? 'block' : 'hidden'}`}>
