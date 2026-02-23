@@ -13,6 +13,7 @@ export default function Navbar() {
   const sparkleImgRef = useRef<HTMLImageElement>(null);
 
   const logo = '/assets/img/DiaDiamondLogo.png';
+  const logoBlack = '/assets/img/DiaDiamondLogoBlack.png';
   const diamond = '/assets/img/Diamond.png';
 
   const CaptureMousePosition = (e:React.MouseEvent<HTMLImageElement>)=>{
@@ -83,7 +84,7 @@ export default function Navbar() {
         <div className="relative flex items-center justify-center gap-2 hover:cursor-pointer">
           <img src={diamond} alt="diamond" className="w-10 aspect-square " />
 
-          <img src={logo} alt="logo" className="w-[59px] h-[37px]" />
+          <img src={path == '/about' ? logoBlack : logo} alt="logo" className="w-[59px] h-[37px]" />
         </div>
 
         <div onClick={()=>setNavMenuClick(true)} className={`w-5 h-[13px] border-t-2 border-b-2 ${path == '/about' ? 'border-[#000000]' : 'border-[#ffffff]' } hover:cursor-pointer   `}>

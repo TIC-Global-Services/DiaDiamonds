@@ -1,5 +1,5 @@
 "use client";
-import { Parallax } from "react-scroll-parallax";
+
 
 const Hero = () => {
 
@@ -9,7 +9,7 @@ const Hero = () => {
   return (
    
 
-        <div className="w-full h-dvh relative overflow-hidden ">
+        <div className="w-full h-screen relative overflow-hidden pointer-events-">
 
           
             <img 
@@ -20,7 +20,7 @@ const Hero = () => {
           
             
             
-            <div className="absolute bottom-[60px]  px-6 xl:px-[105px] lg:px-[50px]">
+            <div className="absolute bottom-[60px] left-0  px-6 xl:px-[105px] lg:px-[50px]">
                 
                 <h1 className="font-medium text-[44px] leading-[46px] uppercase pb-[14px] text-[#FFFFFF]">
                   Crafted to last forever
