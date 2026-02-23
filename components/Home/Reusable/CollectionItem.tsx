@@ -41,9 +41,9 @@ export default function CollectionItem({name, color, bgImage}:CollectionItemProp
         <p className="text-[13px] leading-[19.6px] text-[#606060] pb-[6px]">
             {color}
         </p>
-        <h2 className="text-[24px] font-[Baskerville] leading-[19.5px] text-[#000000]">
+        <h3 className="text-[24px] font-[Baskerville] leading-[19.5px] text-[#000000]">
             {name}
-        </h2>
+        </h3>
       </div>
 
     </div>

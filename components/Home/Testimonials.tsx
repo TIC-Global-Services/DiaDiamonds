@@ -99,9 +99,9 @@ export default function Testimonials() {
                 alt="Testimonial profile picture"
                 className="w-12 md:w-[100px] aspect-square rounded-full object-cover"
               />
-              <h2 className="text-[18px] font-semibold text-[#000000]">
+              <h3 className="text-[18px] font-semibold text-[#000000]">
                 {testimonials[currentTestimony].name}
-              </h2>
+              </h3>
               <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.3904 27.1849L8.0948 23.3186L3.74525 22.3521L4.16812 17.8817L1.20801 14.4987L4.16812 11.1157L3.74525 6.64534L8.0948 5.67877L10.3904 1.8125L14.4983 3.5644L18.6062 1.8125L20.9018 5.67877L25.2514 6.64534L24.8285 11.1157L27.7886 14.4987L24.8285 17.8817L25.2514 22.3521L20.9018 23.3186L18.6062 27.1849L14.4983 25.433L10.3904 27.1849ZM13.2297 18.7879L20.0561 11.9615L18.3646 10.2096L13.2297 15.3445L10.632 12.8072L8.94055 14.4987L13.2297 18.7879Z" fill="black"/></svg>
             </div>
 
