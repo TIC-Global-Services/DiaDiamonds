@@ -29,7 +29,7 @@ export default function WhyUs() {
           </div>
 
           {/* Paragraph */}
-          <p className="text-[20px] leading-[100%] text-[#000000]/50 w-[40%]">
+          <p className="text-[20px] leading-[140%] text-[#000000]/50 w-[40%]">
           Because true brilliance is more than sparkle. At Dia Diamonds, every creation is guided by ethics, certified authenticity, and timeless craftsmanship — ensuring jewellery that feels as meaningful as it looks.
           </p>
         </ContainerLayout>
