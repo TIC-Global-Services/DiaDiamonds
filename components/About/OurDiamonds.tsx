@@ -8,7 +8,7 @@ export default function OurDiamonds() {
   return (
     <div className="w-full h-[100vh] overflow-hidden flex flex-wrap md:flex-nowrap">
       {/* Image container */}
-      <div className="w-[40%] h-full overflow-hidden">
+      <div className="w-full md:w-[40%] h-full overflow-hidden">
         <img
           src={ImageLeft}
           alt="Our Diamonds"
@@ -17,7 +17,7 @@ export default function OurDiamonds() {
       </div>
 
       {/* Content container */}
-      <div className="w-full flex justify-center items-center bg-[#EAE3D9]">
+      <div className="w-full md:w-[60%] flex justify-center items-center bg-[#EAE3D9]">
         <ContainerLayout>
           <div className="w-full flex flex-col justify-start items-start gap-9">
             <h2 className="font-medium text-[40px] leading-[100%] uppercase text-[#000000]">
