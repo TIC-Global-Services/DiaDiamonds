@@ -6,7 +6,7 @@ import WhyUs from "@/components/About/WhyUs";
 import OurRoots from "@/components/About/OurRoots";
 import Emotions from "@/components/About/Emotions";
 import OurDiamonds from "@/components/About/OurDiamonds";
-import VisitStore from "@/components/About/VisitStore";
+import VisitStore from "@/components/Reusable/VisitStore";
 import ChatBtn from "@/components/Reusable/ChatBtn";
 
 export default function About(){

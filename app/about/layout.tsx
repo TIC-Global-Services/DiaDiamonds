@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { ClashDisplay } from "@/fonts";
 import { ScrollProvider } from "@/providers/ScrollProvider";
+import { Providers } from "../providers";
 
 export const metadata: Metadata = {
   title: "Dia Diamonds",
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ClashDisplay.variable} antialiased`}>
-        <ScrollProvider>{children}</ScrollProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

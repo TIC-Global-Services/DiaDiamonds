@@ -18,6 +18,25 @@ body {
   font-family: var(--font-clash-display), Helvetica, sans-serif;
 }
 
+/* H2 styling */
+h2 {
+  font-family: var(--font-clash-display), Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 140%;   /* Equivalent to 1.4 */
+  text-transform: uppercase;
+  
+}
+
+/* Paragraph styling */
+p {
+  font-family: var(--font-clash-display), Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;   /* Equivalent to 1.4 */
+  letter-spacing: 5%;  /* 5% of font-size */
+}
+
 .BtnAnimation {
   cursor: pointer;
   transition: all 0.4s ease;
