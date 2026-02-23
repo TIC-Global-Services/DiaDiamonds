@@ -7,19 +7,19 @@ export default function VisitStore() {
   return (
     <div className="w-full">
       <ContainerLayout>
-        <div className="w-full flex justify-center items-center flex-wrap md:flex-nowrap gap-0">
+        <div className=" w-full flex justify-center items-center flex-wrap md:flex-nowrap gap-0">
           {/* First div */}
-          <div className="flex flex-col w-full">
-            <h2 className="font-medium text-[40px] leading-[100%] uppercase text-[#000000] pb-4">
+          <div className="flex flex-col w-full gap-5">
+            <h2 className="font-medium text-[40px] leading-[100%] uppercase text-[#000000]">
               Visit Our Store
             </h2>
 
-            <p className="text-[20px] leading-[100%] text-[#000000] pb-4">
+            <p className="text-[20px] leading-[100%] text-[#000000] ">
               {/* Placeholder content */}
               Step into our boutique to experience Dia Diamonds as it’s meant to be.
             </p>
 
-            <label className="font-medium text-[16px] leading-[100%] text-[#000000] pb-2">
+            <label className="font-medium text-[16px] leading-[100%] text-[#000000] ">
               Enter email
             </label>
 
@@ -41,7 +41,7 @@ export default function VisitStore() {
             <img
               src={ImageRight}
               alt="Visit Store"
-              className="w-full object-cover hover:scale-110 transition-transform duration-300 ease-in-out delay-100"
+              className="w-full h-80 object-contain hover:scale-110 transition-transform duration-300 ease-in-out delay-100"
             />
           </div>
         </div>
