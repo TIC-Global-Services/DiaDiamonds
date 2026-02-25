@@ -1,7 +1,7 @@
 import ContainerLayout from "@/layout/ContainerLayout";
 
 export default function Brilliance() {
-  const bgImage = "/assets/img/precision/Brilliance/bgImage.png";
+  const bgImage = "/assets/img/Precision/Brilliance/bgImage.png";
 
   return (
     <div className="w-full ">
