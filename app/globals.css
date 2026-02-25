@@ -18,6 +18,7 @@ body {
   font-family: var(--font-clash-display), Helvetica, sans-serif;
 }
 
+@layer base {
 /* H2 styling */
 h2 {
   font-family: var(--font-clash-display), Helvetica, sans-serif;
@@ -35,6 +36,8 @@ p {
   font-size: 20px;
   line-height: 140%;   /* Equivalent to 1.4 */
   letter-spacing: 5%;  /* 5% of font-size */
+}
+
 }
 
 .BtnAnimation {
