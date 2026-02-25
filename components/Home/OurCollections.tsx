@@ -8,7 +8,7 @@ import { useSwipeable } from "react-swipeable";
 export default function OurCollection() {
 
   const [scrollState, setScrollState] = useState<number>(1); 
-  
+  const [mobileScrollState, setMobileScrollState] = useState<number>(0);
 
     const collections = [
     {
@@ -75,16 +75,34 @@ export default function OurCollection() {
   
   const handlers = useSwipeable({
     onSwipedLeft: () => {
-      if(scrollState!=3){
-              setScrollState(scrollState+1);
+      if(mobileScrollState!=(100*(collections.length))){
+              setMobileScrollState(mobileScrollState+100);
             }
     },
     onSwipedRight: () => {
-      if(scrollState!=1){
-              setScrollState(scrollState-1);
+      if(mobileScrollState!=0){
+              setMobileScrollState(mobileScrollState-100);
             }
     },
   });
+
+  const mobileScrollMap = {
+    0: 'translate-x-0',
+    100: 'translate-x-[-100%]',
+    200: 'translate-x-[-200%]',
+    300: 'translate-x-[-300%]',
+    400: 'translate-x-[-400%]',
+    500: 'translate-x-[-500%]',
+    600: 'translate-x-[-600%]',
+    700: 'translate-x-[-700%]',
+    800: 'translate-x-[-800%]',
+    900: 'translate-x-[-900%]',
+    1000: 'translate-x-[-1000%]',
+    1100: 'translate-x-[-1100%]',
+  } as const;
+
+  const mobileTranslateClass = mobileScrollMap[mobileScrollState as keyof typeof mobileScrollMap] || 'translate-x-0';
+
 
   return (
     
@@ -104,7 +122,7 @@ export default function OurCollection() {
       </div>
 
       {/* Collection items grid */}
-      <div {...handlers} className={`w-full flex flex-nowrap gap-2 md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'translate-x-0' : ''} ${scrollState ==2 ? '-translate-x-[100%]' : ''} ${scrollState ==3 ? '-translate-x-[200%]':''}`}>
+      <div {...handlers} className={`w-full flex flex-nowrap gap-0 md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'md:translate-x-0' : ''} ${scrollState ==2 ? 'md:-translate-x-[100%]' : ''} ${scrollState ==3 ? 'md:-translate-x-[200%]':''} ${mobileTranslateClass}`}>
         {collections.map((collection, id) => (
           <CollectionItem 
             key={id} 
