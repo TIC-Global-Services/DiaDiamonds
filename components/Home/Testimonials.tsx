@@ -57,7 +57,7 @@ export default function Testimonials() {
     <div className="w-full h-[100vh] flex flex-wrap md:flex-nowrap ">
       
       {/* Left Side */}
-      <div className="w-full h-2/5 md:h-auto md:w-1/2 overflow-hidden">
+      <div className="w-full h-[40%] md:h-auto md:w-1/2 overflow-hidden">
       <Parallax speed={-10}>
         <img 
           src={TestimonialLeftImage}
@@ -68,39 +68,40 @@ export default function Testimonials() {
       </div>
 
       {/* Right Side */}
-      <div className="w-full md:w-1/2 h-3/5 md:h-full px-[66px] flex items-center bg-[#f8f3ef]">
+      <div className="w-full md:w-1/2 h-[60%] md:h-full px-[66px] flex items-center bg-[#f8f3ef] ">
         
-        <div className="w-full">
-          
-          <div className="flex gap-1">
+        <div className="w-full h-full py-[20%] md:py-6">
+
+          <div className="mx-auto w-[80%] md:w-auto">
+          <div className=" flex gap-1 ">
             
               {testimonials[currentTestimony].stars.map((data, id)=>(
-                <svg key={id} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.4675 1.03738C15.0158 -0.345795 16.883 -0.345793 17.4313 1.03738L20.6671 9.20114C20.8983 9.78425 21.4209 10.1827 22.0208 10.2331L30.4198 10.9397C31.8428 11.0594 32.4198 12.9229 31.3356 13.8975L24.9365 19.6495C24.4795 20.0604 24.2798 20.7051 24.4194 21.3193L26.3745 29.9198C26.7057 31.3769 25.1951 32.5287 23.9767 31.7479L16.786 27.139C16.2724 26.8098 15.6264 26.8098 15.1128 27.139L7.92205 31.7479C6.70371 32.5287 5.19306 31.3769 5.52429 29.9198L7.47935 21.3193C7.619 20.7051 7.41938 20.0604 6.96232 19.6495L0.563113 13.8975C-0.521095 12.9229 0.0559312 11.0594 1.47897 10.9397L9.87803 10.2331C10.478 10.1827 11.0006 9.78425 11.2317 9.20114L14.4675 1.03738Z" fill="#F8CC96"/></svg>
+                <svg className="grow md:grow-0" key={id} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.4675 1.03738C15.0158 -0.345795 16.883 -0.345793 17.4313 1.03738L20.6671 9.20114C20.8983 9.78425 21.4209 10.1827 22.0208 10.2331L30.4198 10.9397C31.8428 11.0594 32.4198 12.9229 31.3356 13.8975L24.9365 19.6495C24.4795 20.0604 24.2798 20.7051 24.4194 21.3193L26.3745 29.9198C26.7057 31.3769 25.1951 32.5287 23.9767 31.7479L16.786 27.139C16.2724 26.8098 15.6264 26.8098 15.1128 27.139L7.92205 31.7479C6.70371 32.5287 5.19306 31.3769 5.52429 29.9198L7.47935 21.3193C7.619 20.7051 7.41938 20.0604 6.96232 19.6495L0.563113 13.8975C-0.521095 12.9229 0.0559312 11.0594 1.47897 10.9397L9.87803 10.2331C10.478 10.1827 11.0006 9.78425 11.2317 9.20114L14.4675 1.03738Z" fill="#F8CC96"/></svg>
               ))}
 
               {testimonials[currentTestimony].noStars.map((data, id)=>(
-                <svg key={id} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.4675 1.03738C15.0158 -0.345795 16.883 -0.345793 17.4313 1.03738L20.6671 9.20114C20.8983 9.78425 21.4209 10.1827 22.0208 10.2331L30.4198 10.9397C31.8428 11.0594 32.4198 12.9229 31.3356 13.8975L24.9365 19.6495C24.4795 20.0604 24.2798 20.7051 24.4194 21.3193L26.3745 29.9198C26.7057 31.3769 25.1951 32.5287 23.9767 31.7479L16.786 27.139C16.2724 26.8098 15.6264 26.8098 15.1128 27.139L7.92205 31.7479C6.70371 32.5287 5.19306 31.3769 5.52429 29.9198L7.47935 21.3193C7.619 20.7051 7.41938 20.0604 6.96232 19.6495L0.563113 13.8975C-0.521096 12.9229 0.0559311 11.0594 1.47897 10.9397L9.87803 10.2331C10.478 10.1827 11.0006 9.78425 11.2317 9.20114L14.4675 1.03738Z" fill="#717580" fillOpacity="0.23"/></svg>
+                <svg className="grow md:grow-0" key={id} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.4675 1.03738C15.0158 -0.345795 16.883 -0.345793 17.4313 1.03738L20.6671 9.20114C20.8983 9.78425 21.4209 10.1827 22.0208 10.2331L30.4198 10.9397C31.8428 11.0594 32.4198 12.9229 31.3356 13.8975L24.9365 19.6495C24.4795 20.0604 24.2798 20.7051 24.4194 21.3193L26.3745 29.9198C26.7057 31.3769 25.1951 32.5287 23.9767 31.7479L16.786 27.139C16.2724 26.8098 15.6264 26.8098 15.1128 27.139L7.92205 31.7479C6.70371 32.5287 5.19306 31.3769 5.52429 29.9198L7.47935 21.3193C7.619 20.7051 7.41938 20.0604 6.96232 19.6495L0.563113 13.8975C-0.521096 12.9229 0.0559311 11.0594 1.47897 10.9397L9.87803 10.2331C10.478 10.1827 11.0006 9.78425 11.2317 9.20114L14.4675 1.03738Z" fill="#717580" fillOpacity="0.23"/></svg>
               ))}
             
           </div>
+          </div>
 
-
-          <p className="text-[24px] leading-[100%] text-[#000000] pb-[106px] pt-[35px]">
+          <p className="text-[24px] leading-[100%] text-[#000000] pb-8 md:pb-[106px] pt-4 md:pt-[35px] text-center md:text-left">
             {testimonials[currentTestimony].comments[0]}
           </p>
 
-          <p className="text-[24px] leading-[100%] text-[#000000] pb-20">
+          <p className="text-[24px] leading-[100%] text-[#000000] pb-8 md:pb-20 text-center md:text-left">
             {testimonials[currentTestimony].comments[1]}
           </p>
 
-          <div className="flex justify-between items-center pt-[14px]">
+          <div className="flex justify-between items-center flex-wrap md:flex-nowrap pt-0 md:pt-[14px]">
             
             {/* Identity Block */}
-            <div className="flex items-center gap-4">
+            <div className="w-full flex flex-nowrap justify-center md:justify-start items-center gap-4">
               <img 
                 src={testimonials[currentTestimony].profileImage} 
                 alt="Testimonial profile picture"
-                className="w-12 md:w-[100px] aspect-square rounded-full object-cover"
+                className="w-12 md:w-[100px] aspect-square rounded-full object-cover "
               />
               <h3 className="text-[18px] font-semibold text-[#000000]">
                 {testimonials[currentTestimony].name}
@@ -109,7 +110,7 @@ export default function Testimonials() {
             </div>
 
             {/* Control Buttons */}
-            <div className="flex gap-2">
+            <div className="w-full md:w-auto flex justify-center items-center  gap-2 pt-8 md:pt-0">
               <button onClick={()=>{
                 if(currentTestimony == 0) return;
 
