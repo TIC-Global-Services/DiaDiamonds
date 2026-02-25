@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 export default function TheArtOfRefinement() {
 
   const pantherSparkleRef = useRef<HTMLImageElement>(null);
-  const PantherImg = '/assets/img/TheArtOfRefinement/Panther.png';
-  const PantherSparkleImg = '/assets/img/TheArtOfRefinement/SparklePanther.png'
+  const PantherImg = '/assets/img/TheArtOfRefinement/PantherOriginal.png';
   const DiamondCaseImg = '/assets/img/TheArtOfRefinement/DiamondCase.png';
 
   const CaptureMousePosition = (e:React.MouseEvent<HTMLImageElement>)=>{
@@ -28,33 +28,50 @@ export default function TheArtOfRefinement() {
         <img 
           src={PantherImg} 
           alt="Panther" 
-          className="w-full md:w-[470px] h-full aspect-470/588 border-0 rounded-[20px]" 
+          className="mx-auto w-[65%] md:w-[45%] h-full aspect-470/588 border-0 rounded-[20px]" 
         />
+        <svg className="hidden md:absolute w-20 aspect-square md:-top-10 md:left-10" width="231" height="232" viewBox="0 0 231 232" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dddddd_505_3867)">
+<path d="M108.415 115.916C113.29 115.916 115.415 113.718 115.415 108.416C115.415 113.718 117.525 115.916 122.415 115.916C117.525 115.916 115.415 118.176 115.415 123.416C115.415 118.176 113.29 115.916 108.415 115.916Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_dddddd_505_3867" x="-0.000480652" y="7.62939e-06" width="230.831" height="231.831" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1.29066"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_505_3867"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="2.58132"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_505_3867" result="effect2_dropShadow_505_3867"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="9.03463"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect2_dropShadow_505_3867" result="effect3_dropShadow_505_3867"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="18.0693"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect3_dropShadow_505_3867" result="effect4_dropShadow_505_3867"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="30.9759"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect4_dropShadow_505_3867" result="effect5_dropShadow_505_3867"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="54.2078"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect5_dropShadow_505_3867" result="effect6_dropShadow_505_3867"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect6_dropShadow_505_3867" result="shape"/>
+</filter>
+</defs>
+</svg>
 
-        <motion.img 
-
-        initial={{
-          webkitMaskImage:"linear-gradient(to right, black 0%, transparent 0%)",
-          maskImage:"linear-gradient(to right, black 0%, transparent 0%)",
-        }}
-        whileInView={{
-          webkitMaskImage:"linear-gradient(to right, black 100%, transparent 100%)",
-          maskImage:"linear-gradient(to right, black 100%, transparent 100%)",
-        }}
-        transition={{duration:2.5, ease:"easeInOut", repeat:0, repeatType:"reverse", repeatDelay:0.3 }}
-        viewport={{once:true, amount:0.2}}
-
-        onMouseMove={CaptureMousePosition}
-        ref={pantherSparkleRef}
-        style={{
-          WebkitMaskImage:'radial-gradient(circle 100px at var(--position, 0px 0px), black 0%, transparent 50%)',
-          maskImage:'radial-gradient(circle 100px at var(--position, 0px 0px), black 0%, transparent 50%)',
-          maskRepeat:'no-repeat',
-        }}
-          src={PantherSparkleImg} 
-          alt="Panther Sparkle" 
-          className="absolute inset-0 w-full md:w-[470px] h-full aspect-470/588 border-0 rounded-[20px]" 
-        />
 
         <div className="text-center md:text-left">
           <h2 className="font-medium text-[40px] leading-[140%] uppercase text-[#FFFFFF] pt-4 md:pt-0 pb-[45px]">
@@ -63,22 +80,23 @@ export default function TheArtOfRefinement() {
           <p className="w-full md:w-[90%] text-[20px] leading-[140%] tracking-[5%] text-[#FFFFFF]/70 pb-[54px]">
           Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.
           </p>
-          <button className="BtnAnimation py-[12px] px-[30px] rounded-full border border-[#e7dfd7] bg-[#87888A]/20 backdrop-blur-md text-[12px] font-medium uppercase text-[#e7dfd7] hover:cursor-pointer">
+          <button className="mx-auto md:mx-0 BtnAnimation py-[12px] px-[30px] rounded-full border border-[#e7dfd7] bg-[#87888A]/20 backdrop-blur-md text-[12px] font-medium uppercase text-[#e7dfd7] hover:cursor-pointer">
               VIEW MORE
           </button>
         </div>
       </div>
 
       {/* Second Div */}
-      <div className="relative w-full md:w-[23%] mt-8 md:mt-0 aspect-[317/451] border border-[#FFFFFF]/10 rounded-[10px] ">
+      <div className="relative mx-auto w-[65%] md:w-[23%] mt-8 md:mt-0 aspect-[317/451] border border-[#FFFFFF]/10 rounded-[10px] overflow-hidden">
+        <Parallax speed={-10}>
         <img 
           src={DiamondCaseImg} 
           alt="Diamond Case Ring" 
-          className="w-full mt-[33px] object-contain border-t-0 rounded-[10px]"
+          className="w-full md:mt-[33px] object-contain border-t-0 rounded-[10px]"
         />
-        
+        </Parallax>
         {/* Absolute div inside second div */}
-        <div className="absolute top-[15px] left-[15px] w-[135px] h-[42px]  border-[1px] rounded-[20px] bg-[#87888a] px-[15px] py-[12px] flex items-center justify-center gap-2">
+        <div className="absolute top-[15px] left-[15px] w-[135px] h-[35px] md:h-[42px]  border-[1px] rounded-[20px] bg-[#87888a] px-[15px] py-[12px] flex items-center justify-center gap-2">
             <svg width="69" height="12" viewBox="0 0 69 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clipPath="url(#clip0_161_1951)">
 <path d="M4.75361 0.389018C4.93375 -0.129673 5.54729 -0.129672 5.72743 0.389019L6.79061 3.45043C6.86659 3.66909 7.03831 3.8185 7.23541 3.83743L9.99507 4.10239C10.4626 4.14729 10.6522 4.8461 10.296 5.21157L8.19343 7.36856C8.04326 7.52265 7.97764 7.76441 8.02353 7.99474L8.6659 11.2199C8.77472 11.7663 8.27839 12.1983 7.87807 11.9055L5.5154 10.1771C5.34664 10.0537 5.1344 10.0537 4.96564 10.1771L2.60296 11.9055C2.20265 12.1983 1.70629 11.7663 1.81512 11.2199L2.4575 7.99474C2.50338 7.76441 2.4378 7.52265 2.28762 7.36856L0.185023 5.21157C-0.171217 4.8461 0.0183774 4.14729 0.485949 4.10239L3.24564 3.83743C3.44276 3.8185 3.61447 3.66909 3.69041 3.45043L4.75361 0.389018Z" fill="#F8CC96"/>

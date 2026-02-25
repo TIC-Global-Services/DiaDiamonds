@@ -1,4 +1,7 @@
+"use client";
+
 import QA from "./Reusable/QA";
+import { Parallax } from "react-scroll-parallax";
 
 export default function QandA() {
 
@@ -12,11 +15,13 @@ export default function QandA() {
       <div className="relative z-20 w-full py-20 px-10 flex justify-end items-start gap-[60px] flex-wrap md:flex-nowrap">
 
         <div className="w-[30%] overflow-hidden delay-100 duration-300 ease-in-out">
+          <Parallax speed={-10}>
           <img
           src={QAImageLeft}
           alt="Q&A visual"
           className="w-full aspect-[448/673] object-contain hover:scale-110"
         />
+        </Parallax>
         </div>
         
 

@@ -1,18 +1,23 @@
+"use client";
+
+import { Parallax } from "react-scroll-parallax";
+
 export default function Craftsmanship() {
   const imageSrc = "/assets/img/Craftsmanship/CraftManShipImage1.png";
   const bottomImageSrc = "/assets/img/Craftsmanship/CraftManShipImage2.png";
 
   return (
-    <div className="relative w-full md:aspect-[1440/1058] flex gap-0 flex-grow flex-wrap md:flex-nowrap">
+    <div className="relative w-full md:aspect-[1440/1058] flex gap-0 flex-grow flex-wrap md:flex-nowrap overflow-hidden">
       
       {/* First Div */}
       <div className="w-full md:w-1/2 md:h-full relative">
+      <Parallax speed={-10}>
         <img
           src={imageSrc}
           alt="Craftsmanship"
           className="w-full h-full object-cover"
         />
-
+        </Parallax>
         <div className="absolute inset-0 flex justify-center items-end mb-8 md:mb-28">
           <button className="BtnAnimation tracking-[0.166rem] border-[5.3px] rounded-full px-[18px] py-[7.6px] border-[#FFFFFF]/10 bg-[#FFFFFF]/40 uppercase">
             VIEW BRACELET COLLECTION
@@ -42,11 +47,14 @@ export default function Craftsmanship() {
 
         {/* Bottom Half */}
         <div className="w-full h-3/4 md:h-1/2">
+        
+          <Parallax speed={-10}>
           <img
             src={bottomImageSrc}
             alt="Craftsmanship"
             className="w-full h-full object-cover"
           />
+          </Parallax>
         </div>
 
       </div>

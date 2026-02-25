@@ -1,6 +1,7 @@
 'use client';
 import { useRef, useEffect } from "react";
 
+
 export default function DiamondSpotlight() {
     const DiamondSpotLightImage = '/assets/img/DiamondSpotlight/DiamondSpotlight.png';
     const DiamondSpotLightColoredImage = '/assets/img/DiamondSpotlight/DiamondSpotlightColored.png';
@@ -29,6 +30,7 @@ export default function DiamondSpotlight() {
        
        onMouseOver={captureMousePosition}
        onMouseMove={captureMousePosition}>
+      
 
       <img src={DiamondSpotLightImage} alt="diamond spotlight" className="w-full h-full " />
       <img ref={coloredImageRef} style={{

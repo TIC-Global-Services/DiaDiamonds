@@ -2,6 +2,7 @@
 
 import {useEffect, useRef} from "react";
 import { gsap } from "gsap"
+import { Parallax } from "react-scroll-parallax";
 
 export default function BrandValue(){
 
@@ -23,14 +24,16 @@ export default function BrandValue(){
         })
       },[])
     return(
-        <div className="w-full h-[150vh]  relative overflow-hidden">
+        <div className="w-full h-[100vh] md:h-[150vh]  relative overflow-hidden">
 
             <div ref={containerRef} className="w-[150%] h-full ">
+                <Parallax speed={-10}>
                 <img 
                 src={BrandValueImg} 
                 alt="Brand Value" 
-                className="w-full  object-cover object-center -translate-y-1/6 -translate-x-1/5 relative  "
+                className="w-full h-full  object-cover object-center md:-translate-y-1/6 md:-translate-x-1/5 relative  "
             />
+            </Parallax>
             </div>
             
 

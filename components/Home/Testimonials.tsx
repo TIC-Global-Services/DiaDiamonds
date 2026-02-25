@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 export default function Testimonials() {
 
@@ -57,11 +58,13 @@ export default function Testimonials() {
       
       {/* Left Side */}
       <div className="w-full h-2/5 md:h-auto md:w-1/2 overflow-hidden">
+      <Parallax speed={-10}>
         <img 
           src={TestimonialLeftImage}
           alt="testimonial visual"
           className="w-full  object-cover -translate-y-1/6  hover:scale-110 delay-75 duration-100 ease-in-out"
         />
+        </Parallax>
       </div>
 
       {/* Right Side */}

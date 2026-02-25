@@ -3,10 +3,12 @@
 import {useState} from "react";
 import CollectionItem from "./Reusable/CollectionItem";
 import { Parallax } from "react-scroll-parallax";
+import { useSwipeable } from "react-swipeable";
 
 export default function OurCollection() {
 
   const [scrollState, setScrollState] = useState<number>(1); 
+  
 
     const collections = [
     {
@@ -70,6 +72,19 @@ export default function OurCollection() {
         img:'/assets/img/CollectionItems/collectionItem12.png',
     },
   ]
+  
+  const handlers = useSwipeable({
+    onSwipedLeft: () => {
+      if(scrollState!=3){
+              setScrollState(scrollState+1);
+            }
+    },
+    onSwipedRight: () => {
+      if(scrollState!=1){
+              setScrollState(scrollState-1);
+            }
+    },
+  });
 
   return (
     
@@ -89,7 +104,7 @@ export default function OurCollection() {
       </div>
 
       {/* Collection items grid */}
-      <div className={`w-full flex flex-wrap md:flex-nowrap gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'translate-x-0' : ''} ${scrollState ==2 ? '-translate-x-[100%]' : ''} ${scrollState ==3 ? '-translate-x-[200%]':''}`}>
+      <div {...handlers} className={`w-full flex flex-nowrap gap-2 md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'translate-x-0' : ''} ${scrollState ==2 ? '-translate-x-[100%]' : ''} ${scrollState ==3 ? '-translate-x-[200%]':''}`}>
         {collections.map((collection, id) => (
           <CollectionItem 
             key={id} 
@@ -101,7 +116,7 @@ export default function OurCollection() {
       </div>
 
       {/* Large sibling div */}
-      <div className="w-[98%] mx-auto justify-center items-center pt-4 relative gap-2 flex-wrap md:flex-nowrap hidden md:flex">
+      <div className="w-[98%] mx-auto justify-center items-center pt-4 relative gap-2 flex-wrap md:flex-nowrap flex">
         {/* First inner div with top border */}
         <div className="w-full border-b-3 border-[#000000]/20 relative shrink">
           {/* Absolute border div inside first inner div */}
@@ -111,7 +126,7 @@ export default function OurCollection() {
         </div>
 
         {/* Second inner div with buttons */}
-        <div className=" flex items-center gap-2 ">
+        <div className=" hidden md:flex items-center gap-2 ">
           {/* First button */}
           <button onClick={()=>{
             if(scrollState!=1){
@@ -126,7 +141,6 @@ export default function OurCollection() {
           <button onClick={()=>{
             if(scrollState!=3){
               setScrollState(scrollState+1);
-              console.log(scrollState);
             }
           }} className="w-10 h-10 bg-[#F9F9F9] hover:cursor-pointer active:bg-[#7C3C3C] stroke-black active:stroke-white rounded-[10px] flex justify-center items-center">
             <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.581227 10.4997L5.54053 5.45931L0.500164 0.500004"  strokeLinecap="round" strokeLinejoin="round"/></svg>

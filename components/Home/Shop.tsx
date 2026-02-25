@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 export default function Shop() {
 
@@ -49,7 +50,7 @@ export default function Shop() {
   return (
     <div className="w-full overflow-hidden py-[200px] px-[110px] flex justify-end items-center relative bg-[#EFFFFSFF]">
       {/* First decorative absolute background div */}
-      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 -translate-x-[70%] rounded-full z-50 flex justify-end items-center px-20">
+      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 -translate-x-[70%] rounded-full z-50 flex justify-end items-center px-15">
         {/* Inner content div */}
         <div>
           {/* H3 tag */}
@@ -69,11 +70,11 @@ export default function Shop() {
 
             </div>
             <div className={`${isDropDownClicked ? '' : 'hidden'} absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%]  flex flex-col bg-white  py-[15px] border-b border-t-0 rounded-[10px] z-10`}>
-              <button onClick={()=>{setCurrentCategory(0)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 0 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Rings</button>
-                <button onClick={()=>{setCurrentCategory(1)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 1 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Bracelets</button>
-                <button onClick={()=>{setCurrentCategory(2)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 2 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Necklaces</button>
-                <button onClick={()=>{setCurrentCategory(3)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 3 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Pendants</button>
-                <button onClick={()=>{setCurrentCategory(4)}} className={`px-[17px] py-[9px] text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 4 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Earrings</button>
+              <button onClick={()=>{setCurrentCategory(0)}} className={`px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 0 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Rings</button>
+                <button onClick={()=>{setCurrentCategory(1)}} className={`px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 1 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Bracelets</button>
+                <button onClick={()=>{setCurrentCategory(2)}} className={`px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 2 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Necklaces</button>
+                <button onClick={()=>{setCurrentCategory(3)}} className={`px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 3 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Pendants</button>
+                <button onClick={()=>{setCurrentCategory(4)}} className={`px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 4 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Earrings</button>
                 
             </div>
 
@@ -127,7 +128,7 @@ export default function Shop() {
         <img
           src={currentCategory != null ? shopItems[currentCategory][activeDiv-1].image : shopItems[0][activeDiv-1].image}
           alt={currentCategory != null ? shopItems[currentCategory][activeDiv-1].name : shopItems[0][activeDiv-1].name}
-          className={`object-contain aspect-[480/177] ${isHovered ? 'scale-110 delay-100 duration-200 ease-in-out' : 'scale-100'}`}
+          className={`w-[90%] object-cover overflow-auto aspect-[480/177] ${isHovered ? 'scale-110 delay-100 duration-200 ease-in-out' : 'scale-100'}`}
         />
 
         {/* Paragraph */}
