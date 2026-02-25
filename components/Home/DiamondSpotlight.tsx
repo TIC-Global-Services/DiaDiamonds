@@ -26,37 +26,38 @@ export default function DiamondSpotlight() {
     }
 
   return (
-    <div className="w-full h-[100dvh] relative overflow-hidden" ref={elementRef} 
+    <div className="w-full relative h-[100vh] md:h-auto" ref={elementRef} 
        
        onMouseOver={captureMousePosition}
        onMouseMove={captureMousePosition}>
       
 
-      <img src={DiamondSpotLightImage} alt="diamond spotlight" className="w-full h-full " />
+      <img src={DiamondSpotLightImage} alt="diamond spotlight" className="w-full h-full object-cover md:object-fill " />
       <img ref={coloredImageRef} style={{
         WebkitMaskImage:'linear-gradient(to right, black, black)',
         maskImage:'linear-gradient(to right, black, black)',
         maskRepeat:'no-repeat',
-        maskSize:'357px 330px',
+        maskSize:'26% 37%',
         maskPosition:'var(--position, center)',
         maskBorder:'1px',
-      }} src={DiamondSpotLightColoredImage} alt="diamond spotlight colored" className="absolute inset-0 w-full h-full " />
+      }} src={DiamondSpotLightColoredImage} alt="diamond spotlight colored" className="absolute inset-0 w-full h-full object-cover md:object-fill " />
 
       
       <div style={{
         top:'var(--top, 50%)',
         left:'var(--left, 50%)',
         translate:'var(--translate, -50% -50%)'
-      }} ref={borderRef} className="absolute w-[357px] h-[330px] border-[1px]  border-[#FFFFFF] rounded-sm"></div>
+      }} ref={borderRef} className="absolute w-[26%] h-[37%] border-[1px]  border-[#FFFFFF] rounded-sm"></div>
       
 
-      <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center mt-36">
+      <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center mt-[20%]">
         <div className="flex flex-col justify-between items-center w-[40%]">
           <h2 className="font-medium text-[40px] leading-[100%] uppercase text-[#EFFFFF] text-center">
             Designed for you. <br /> Crafted for a lifetime.
           </h2>
-          <button className="BtnAnimation mt-5 w-[213px] h-[44px] border border-[1px] tracking-[0.166rem] backdrop-blur-md border-[#FFFFFF]/.1 text-[#e7dfd7] bg-[#000000]/10 rounded-full hover:cursor-pointer ">
-                    DISCOVER MORE
+          <button className="BtnAnimation mt-5 w-[213px] h-[44px] border border-[1px] tracking-[0.166rem]  border-[#FFFFFF]/10 text-[#e7dfd7] bg-[#FFFFFF]/4 rounded-full hover:cursor-pointer shadow-[0_4_4px_0_0_#0000000/10]">
+                    
+                    <a href="https://www.chopard.com/en-in/jewellery-happy-hearts" target="_blank">DISCOVER MORE</a>
                 </button>
         </div>
       </div>
