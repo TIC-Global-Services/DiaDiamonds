@@ -101,7 +101,23 @@ export default function OurCollection() {
     1100: 'translate-x-[-1210%]',
   } as const;
 
+  const mobileWidthMap = {
+    0: 'w-0',
+    100: 'w-[10%]',
+    200: 'w-[20%]',
+    300: 'w-[30%]',
+    400: 'w-[40%]',
+    500: 'w-[50%]',
+    600: 'w-[60%]',
+    700: 'w-[70%]',
+    800: 'w-[80%]',
+    900: 'w-[90%]',
+    1000: 'w-[95%]', 
+    1100: 'w-[100%]',
+  }
+
   const mobileTranslateClass = mobileScrollMap[mobileScrollState as keyof typeof mobileScrollMap] || 'translate-x-0';
+  const mobileWidthClass = mobileWidthMap[mobileScrollState as keyof typeof mobileWidthMap] || 'w-0';
 
 
   return (
@@ -139,7 +155,7 @@ export default function OurCollection() {
         <div className="w-full border-b-3 border-[#000000]/20 relative shrink">
           {/* Absolute border div inside first inner div */}
           <div className={`absolute -translate-y-1/4  w-full top-0 left-0 flex ${scrollState == 1 ? 'justify-start' : ''} ${scrollState ==2 ? 'justify-center': ''} ${scrollState ==3 ? 'justify-end': ''}`}>
-            <div className=" border-t-5 border-[#7C3C3C] w-[34%]"></div>
+            <div className={` border-t-5 border-[#7C3C3C] ${mobileWidthClass}  md:w-[34%]`}></div>
           </div>
         </div>
 
