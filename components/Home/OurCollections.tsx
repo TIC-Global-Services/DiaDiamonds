@@ -88,17 +88,17 @@ export default function OurCollection() {
 
   const mobileScrollMap = {
     0: 'translate-x-0',
-    100: 'translate-x-[-100%]',
-    200: 'translate-x-[-200%]',
-    300: 'translate-x-[-300%]',
-    400: 'translate-x-[-400%]',
-    500: 'translate-x-[-500%]',
-    600: 'translate-x-[-600%]',
-    700: 'translate-x-[-700%]',
-    800: 'translate-x-[-800%]',
-    900: 'translate-x-[-900%]',
-    1000: 'translate-x-[-1000%]',
-    1100: 'translate-x-[-1100%]',
+    100: 'translate-x-[-110%]',
+    200: 'translate-x-[-220%]',
+    300: 'translate-x-[-330%]',
+    400: 'translate-x-[-440%]',
+    500: 'translate-x-[-550%]',
+    600: 'translate-x-[-660%]',
+    700: 'translate-x-[-770%]',
+    800: 'translate-x-[-880%]',
+    900: 'translate-x-[-990%]',
+    1000: 'translate-x-[-1100%]',
+    1100: 'translate-x-[-1200%]',
   } as const;
 
   const mobileTranslateClass = mobileScrollMap[mobileScrollState as keyof typeof mobileScrollMap] || 'translate-x-0';
@@ -122,7 +122,7 @@ export default function OurCollection() {
       </div>
 
       {/* Collection items grid */}
-      <div {...handlers} className={`w-full flex flex-nowrap gap-2 md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'md:translate-x-0' : ''} ${scrollState ==2 ? 'md:-translate-x-[100%]' : ''} ${scrollState ==3 ? 'md:-translate-x-[200%]':''} ${mobileTranslateClass}`}>
+      <div {...handlers} className={`w-full flex flex-nowrap gap-[10%] md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'md:translate-x-0' : ''} ${scrollState ==2 ? 'md:-translate-x-[100%]' : ''} ${scrollState ==3 ? 'md:-translate-x-[200%]':''} ${mobileTranslateClass}`}>
         {collections.map((collection, id) => (
           <CollectionItem 
             key={id} 
