@@ -2,6 +2,7 @@
 
 import { JSX } from "react";
 import { useState } from "react";
+import { Parallax } from "react-scroll-parallax";
 
 interface CollectionItemProp{
   name:string,
@@ -14,15 +15,17 @@ export default function CollectionItem({name, color, bgImage}:CollectionItemProp
   const [isFavourite, setIsFavourite] = useState<boolean>(false);
 
   return (
-    <div className="w-[45%] md:w-[24%] md:grow shrink-0" >
+    <div className="w-full md:w-[24%] md:grow shrink-0" >
       
       {/* First inner div */}
       <div className="w-full aspect-square bg-[#f9f9f9] pb-[13px] relative rounded-[20px] overflow-hidden">
+        <Parallax speed={-10}>
         <img 
           src={bgImage} 
           alt={name} 
           className="w-full aspect-square object-contain hover:scale-110 delay-75 duration-100 ease-in-out"
         />
+        </Parallax>
 
         {/* Absolute overlay */}
         <div className="absolute  top-0 right-0 px-7 py-7 ">
