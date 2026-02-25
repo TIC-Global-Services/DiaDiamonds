@@ -3,63 +3,65 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-clash-display: 'Helvetica', sans-serif; /* Fallback included */
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-clash-display: var(--font-clash-display);
-}
-
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-clash-display), Helvetica, sans-serif;
+  font-family: var(--font-clash-display);
 }
 
+/* Base styles */
 @layer base {
-/* H2 styling */
-h2 {
-  font-family: var(--font-clash-display), Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 120%; 
-  letter-spacing: -1%;
-  text-transform: uppercase;
-  
-}
-
-/* Paragraph styling */
-p {
-  font-family: var(--font-clash-display), Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;   /* Equivalent to 1.4 */
-  letter-spacing: 0%;
-}
-
-@media (min-width: 1024px) {
-  h2{
-      font-family: var(--font-clash-display), Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 140%;   /* Equivalent to 1.4 */
-  letter-spacing: auto;
-  text-transform: uppercase;
+  h2 {
+    font-family: var(--font-clash-display);
+    font-weight: 500;
+    font-size: 24px;       /* Small screens default */
+    line-height: 1.2;
+    letter-spacing: 0;     
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
   }
 
-  p{
-      font-family: var(--font-clash-display), Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 140%;   /* Equivalent to 1.4 */
-  letter-spacing: 5%;  /* 5% of font-size */
+  p {
+    font-family: var(--font-clash-display);
+    font-weight: 400;
+    font-size: 14px;       /* Small screens default */
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin: 0 0 1rem 0;
+  }
+
+  /* Medium screens (tablets) */
+  @media (min-width: 640px) and (max-width: 1023px) {
+    h2 {
+      font-size: 28px;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+
+  /* Large screens (desktops) */
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 40px;
+      line-height: 1.4;
+      letter-spacing: 0.05em;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: 0.05em;
+    }
   }
 }
 
-}
-
+/* Button animation */
 .BtnAnimation {
   cursor: pointer;
   transition: all 0.4s ease;
