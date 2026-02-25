@@ -1,74 +1,98 @@
 import ContainerLayout from "@/layout/ContainerLayout";
 
-
 export default function Certified() {
-  // Variables for images
-  const bgImage1 = '/assets/img/precision/Certified/bgimage1.jpg';
-  const bgImage2 = '/assets/img/precision/Certified/bgimage2.jpg';
-  const logo = '/assets/img/precision/Certified/logo1.png';
-  const logo2 = '/assets/img/precision/Certified/logo2.png';
+  const bgImage1 = "/assets/img/Precision/Certified/bgImage1.jpg";
+  const logo1 = "/assets/img/Precision/Certified/logo1.png";
+  const bgImage2 = "/assets/img/Precision/Certified/bgImage2.jpg";
+  const logo2 = "/assets/img/Precision/Certified/logo2.png";
 
   return (
-    <div className="w-full bg-[linear-gradient(180deg,#f7f6f4_0%,#f7edee0_99.97%)]">
-      <ContainerLayout>
-        {/* First Row */}
-        <div className="flex justify-center pt-19 pb-20">
-          <h2>SBL certified diamonds.</h2>
-        </div>
+    <div className="w-full relative pb-[10%]">
+      
+      {/* First Div */}
+      <div className="w-full flex justify-center items-center py-[4%]">
+        <h2>IGI & SGL Certified Diamonds</h2>
+      </div>
 
-        <div className="w-full flex relative pb-[120px]">
-          {/* First container with image */}
-          <ContainerLayout className="h-full z-10">
+      <ContainerLayout>
+        
+        {/* Second Div */}
+        <div className="w-full flex relative ">
+          
+          {/* Image Div */}
+          <div className="w-[55%] relative z-10 shrink-0">
             <img
               src={bgImage1}
-              alt="Certified Diamond 1"
-              className="border border-[#FFFFFF]/25 rounded-20"
+              alt="Certified Background 1"
+              className="w-full aspect-574/355 object-cover border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]"
             />
-          </ContainerLayout>
+          </div>
 
-          {/* Second container with content */}
-          <ContainerLayout
-            className="h-full z-20 bg-[#000000]/25 backdrop-blur-[5px] px-[38px] py-[60px] translate-y-1/5 -translate-x-1/5"
-          >
-            <div className="flex mx-auto w-full">
-              <img src={logo} alt="Logo 1" className="w-full" />
-            </div>
+          {/* Content Div */}
+          <div className="w-[55%] relative z-20 shrink-0 -translate-x-[18.8%] translate-y-[15%] flex flex-col py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]">
+        
+            <img
+              src={logo1}
+              alt="IGI Logo"
+              className="w-[116px] h-[48px] mx-auto object-contain"
+            />
 
-            <div className="flex flex-col items-start gap-4 mt-6">
-              <h2>Your Heading Here</h2>
-              <p>First paragraph placeholder content.</p>
-              <p>Second paragraph placeholder content.</p>
-            </div>
-          </ContainerLayout>
+            <h3 className="text-[20px] mt-[20px] ">
+              IGI Certified Diamonds
+            </h3>
+
+            <p className="text-[14px] text-[#505050] mt-[16px] ">
+              Every Dia Diamond is certified by the International Gemological Institute (IGI), one of the world’s most trusted diamond grading authorities. This certification ensures your diamond’s authenticity and provides accurate details about its cut, color, clarity, and carat weight. 
+            </p>
+
+            <p className="font-medium text-[16px] leading-[140%] text-[#5e5e5e] mt-[20px] ">
+              100% IGI Certified Authenticity
+            </p>
+
+          </div>
+
         </div>
 
-        {/* Second Row (Mirrored) */}
-        <div className="w-full flex relative pb-[120px]">
-          {/* Second container comes first (new bgImage2 and logo2) */}
-          <ContainerLayout
-            className="h-full z-20 bg-[#000000]/25 backdrop-blur-[5px] px-[38px] py-[60px] translate-y-1/5 -translate-x-1/5"
-          >
-            <div className="flex mx-auto w-full">
-              <img src={logo2} alt="Logo 2" className="w-full" />
-            </div>
+        {/* Third Div (Reversed Layout) */}
+        <div className="w-full flex relative mt-[194px]">
+          
+          {/* Content Div First */}
+          <div className="w-[55%] shrink-0 relative z-20 flex flex-col  py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]">
+            
+            <img
+              src={logo2}
+              alt="IGI Logo"
+              className="w-[116px] h-[48px] mx-auto object-contain"
+            />
 
-            <div className="flex flex-col items-start gap-4 mt-6">
-              <h2>Your Heading Here</h2>
-              <p>First paragraph placeholder content.</p>
-              <p>Second paragraph placeholder content.</p>
-            </div>
-          </ContainerLayout>
+            <h3 className="text-[20px] mt-[20px] ">
+              SGL Certified Diamonds
+            </h3>
 
-          {/* First container comes second */}
-          <ContainerLayout className="h-full z-10">
+            <p className="text-[14px] text-[#505050] mt-[16px] ">
+              Every Dia Diamond is certified by Solitaire Gemological Laboratories (SGL), one of India’s most trusted diamond certification authorities. This certification verifies the authenticity and accurately evaluates the diamond’s cut, colour, clarity, and carat weight.  <br />
+
+            </p>
+
+            <p className=" text-[14px] leading-[140%] text-[#505050] mt-[20px] ">
+              Certified by SGL, Crafted for Trust. Our diamonds are certified by SGL, assuring exceptional quality, authenticity, and timeless brilliance.
+            </p>
+
+          </div>
+
+          {/* Image Div Second (With Translate) */}
+          <div className="w-[55%] shrink-0 relative z-10 -translate-x-[18.8%] translate-y-[15%]">
             <img
               src={bgImage2}
-              alt="Certified Diamond 2"
-              className="border border-[#FFFFFF]/25 rounded-20"
+              alt="Certified Background 2"
+              className="w-full aspect-574/355 object-cover border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]"
             />
-          </ContainerLayout>
+          </div>
+
         </div>
+
       </ContainerLayout>
+
     </div>
   );
 }
