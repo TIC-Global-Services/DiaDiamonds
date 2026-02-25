@@ -75,7 +75,7 @@ export default function OurCollection() {
   
   const handlers = useSwipeable({
     onSwipedLeft: () => {
-      if(mobileScrollState!=(100*(collections.length))){
+      if(mobileScrollState!=1100){
               setMobileScrollState(mobileScrollState+100);
             }
     },
@@ -122,7 +122,7 @@ export default function OurCollection() {
       </div>
 
       {/* Collection items grid */}
-      <div {...handlers} className={`w-full flex flex-nowrap gap-0 md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'md:translate-x-0' : ''} ${scrollState ==2 ? 'md:-translate-x-[100%]' : ''} ${scrollState ==3 ? 'md:-translate-x-[200%]':''} ${mobileTranslateClass}`}>
+      <div {...handlers} className={`w-full flex flex-nowrap gap-2 md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'md:translate-x-0' : ''} ${scrollState ==2 ? 'md:-translate-x-[100%]' : ''} ${scrollState ==3 ? 'md:-translate-x-[200%]':''} ${mobileTranslateClass}`}>
         {collections.map((collection, id) => (
           <CollectionItem 
             key={id} 
