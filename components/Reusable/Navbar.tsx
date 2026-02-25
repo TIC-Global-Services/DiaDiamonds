@@ -1,7 +1,8 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Search from "../Home/Search";
 import { usePathname } from "next/navigation";
+import {motion} from 'framer-motion';
 
 export default function Navbar() {
 
@@ -9,6 +10,14 @@ export default function Navbar() {
   const [collectionClick, setCollectionClick] = useState<boolean>(false);
   const [isSearch , setIsSearh] = useState<boolean>(false);
   const path = usePathname();
+
+  useEffect(()=>{
+    if(navMenuClick || isSearch){
+      document.body.style.overflowY = 'hidden';
+    } else {
+      document.body.style.overflowY = 'auto';
+    }
+  },[navMenuClick, isSearch])
 
   const sparkleImgRef = useRef<HTMLImageElement>(null);
 
@@ -30,14 +39,16 @@ export default function Navbar() {
     <div className="absolute inset-0 z-40">
       
       {/* NAV MENU */}
-      <div className={`w-full lg:w-[595px] h-[100svh] bg-[#ffffff] absolute right-0 top-0 z-50 ${navMenuClick ? 'fixed block' : 'hidden'}`}>
-        
+      <div className={`w-full lg:w-[595px] h-[100svh] bg-[#ffffff] absolute right-0 top-0 z-50 ${navMenuClick ? 'fixed block overflow-y-scroll' : 'hidden'}`} style={{scrollbarWidth:'none'}}>
+     
         <div className="flex items-center justify-end ml-auto pt-8 pr-10 " onClick={()=>setNavMenuClick(false)}>
-          <svg className="hover:cursor-pointer hover:rotate-360 delay-100 duration-300"   width="37" height="35" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.63369 2.36958C5.00606 1.6552 5.56715 1.05657 6.25597 0.638796C6.94479 0.221018 7.73496 7.8517e-05 8.54056 0H27.4992C28.3048 7.8517e-05 29.095 0.221018 29.7838 0.638796C30.4726 1.05657 31.0337 1.6552 31.4061 2.36958L35.5401 10.291C35.9468 11.0699 36.1113 11.9526 36.0126 12.8257C35.9138 13.6988 35.5563 14.5224 34.9859 15.1908L19.1371 33.7558C18.9992 33.917 18.828 34.0465 18.6353 34.1352C18.4426 34.224 18.233 34.27 18.0209 34.27C17.8087 34.27 17.5991 34.224 17.4064 34.1352C17.2137 34.0465 17.0425 33.917 16.9046 33.7558L1.05581 15.1908C0.485115 14.5226 0.127223 13.6991 0.0281178 12.826C-0.0709872 11.9529 0.0932212 11.0701 0.499647 10.291L4.63369 2.36958ZM8.11952 2.99821L12.2085 9.80733L16.3347 2.9375H8.54056C8.39811 2.9385 8.25646 2.95892 8.11952 2.99821ZM14.8053 11.188H21.2345L18.0189 5.83583L14.8053 11.188ZM24.9299 14.1255L21.1366 26.8899L32.0327 14.1255H24.9299ZM14.9032 26.8899L11.1119 14.1255H4.00702L14.9032 26.8899ZM14.1747 14.1255L18.0209 27.0642L21.8651 14.1255H14.1747ZM29.7826 5.60671L26.4299 11.188H32.6946L29.7826 5.60671ZM27.4972 2.9375H19.7031L23.8293 9.80733L27.9202 2.99821C27.7827 2.95875 27.6403 2.93832 27.4972 2.9375ZM9.60981 11.188L6.25715 5.60671L3.3451 11.188H9.60981Z" fill="#431A1A"/></svg>
+          <svg className="hover:cursor-pointer hover:rotate-360 delay-100 duration-300 "   width="37" height="35" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.63369 2.36958C5.00606 1.6552 5.56715 1.05657 6.25597 0.638796C6.94479 0.221018 7.73496 7.8517e-05 8.54056 0H27.4992C28.3048 7.8517e-05 29.095 0.221018 29.7838 0.638796C30.4726 1.05657 31.0337 1.6552 31.4061 2.36958L35.5401 10.291C35.9468 11.0699 36.1113 11.9526 36.0126 12.8257C35.9138 13.6988 35.5563 14.5224 34.9859 15.1908L19.1371 33.7558C18.9992 33.917 18.828 34.0465 18.6353 34.1352C18.4426 34.224 18.233 34.27 18.0209 34.27C17.8087 34.27 17.5991 34.224 17.4064 34.1352C17.2137 34.0465 17.0425 33.917 16.9046 33.7558L1.05581 15.1908C0.485115 14.5226 0.127223 13.6991 0.0281178 12.826C-0.0709872 11.9529 0.0932212 11.0701 0.499647 10.291L4.63369 2.36958ZM8.11952 2.99821L12.2085 9.80733L16.3347 2.9375H8.54056C8.39811 2.9385 8.25646 2.95892 8.11952 2.99821ZM14.8053 11.188H21.2345L18.0189 5.83583L14.8053 11.188ZM24.9299 14.1255L21.1366 26.8899L32.0327 14.1255H24.9299ZM14.9032 26.8899L11.1119 14.1255H4.00702L14.9032 26.8899ZM14.1747 14.1255L18.0209 27.0642L21.8651 14.1255H14.1747ZM29.7826 5.60671L26.4299 11.188H32.6946L29.7826 5.60671ZM27.4972 2.9375H19.7031L23.8293 9.80733L27.9202 2.99821C27.7827 2.95875 27.6403 2.93832 27.4972 2.9375ZM9.60981 11.188L6.25715 5.60671L3.3451 11.188H9.60981Z" fill="#431A1A"/></svg>
           <p className='text-[11px] text-[#000000] uppercase hover:cursor-pointer '>[CLOSE]</p>
         </div>
+        
 
-        <ul className="w-full pt-[63px] pl-10 pr-10">
+        
+        <ul className="w-full pt-[63px] pl-10 pr-10 overflow-y-scroll">
           <li className={`w-full flex justify-between items-center text-[32px] leading-[110%] text-[#000000] uppercase ${collectionClick ? '' : 'pb-10'}`}>
             <p className={`${collectionClick ? 'underline' : ''} hover:cursor-pointer hover:underline text-[32px]`} onClick={()=>setCollectionClick(!collectionClick)}>Collection</p>
             <div onClick={()=>setCollectionClick(false)} className={`${collectionClick ? 'block' : 'hidden'} hover:underline w-4 border-t-2 border-[#000000] hover:cursor-pointer hover:scale-110 active:scale-100`}></div>
@@ -69,7 +80,7 @@ export default function Navbar() {
             Contact Us
           </li>
         </ul>
-
+        
       </div>
 
       {/* NAVBAR */}
@@ -81,8 +92,37 @@ export default function Navbar() {
           </svg>
         </button>
 
+        {/* LOGOS */}
         <div className="relative flex items-center justify-center gap-2 hover:cursor-pointer">
           <img src={diamond} alt="diamond" className="w-10 aspect-square " />
+          <motion.svg
+          initial={{opacity:0, scale:0.5}}
+          animate={{opacity:1, scale:1}}
+          transition={{duration:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:true}}
+
+          className="absolute top-[-15px] left-[-25px]" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
+          <motion.svg
+          initial={{opacity:0, scale:0.5}}
+          animate={{opacity:1, scale:1}}
+          transition={{duration:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:true}}
+          className="absolute top-[-25px] left-[-20px]" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
+          <motion.svg
+          initial={{opacity:0, scale:0.5}}
+          animate={{opacity:1, scale:1}}
+          transition={{duration:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:true}}
+          className="absolute top-0 left-0" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
+          <motion.svg
+          initial={{opacity:0, scale:0.5}}
+          animate={{opacity:1, scale:1}}transition={{duration:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}} viewport={{once:true}} className="absolute top-[10px] left-[20px]" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
+         <motion.img
+         initial={{opacity:0, scale:0.5}}
+          animate={{opacity:1, scale:1}}
+          transition={{duration:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:true}}
+         className="absolute top-0 left-3 w-[30px] aspect-square" src='/assets/img/Sparkle.png' alt="" />
 
           <img src={path == '/about' ? logoBlack : logo} alt="logo" className="w-[59px] h-[37px]" />
         </div>
