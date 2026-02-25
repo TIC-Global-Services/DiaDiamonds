@@ -98,7 +98,7 @@ export default function OurCollection() {
     800: 'translate-x-[-880%]',
     900: 'translate-x-[-990%]',
     1000: 'translate-x-[-1100%]',
-    1100: 'translate-x-[-1110%]',
+    1100: 'translate-x-[-1210%]',
   } as const;
 
   const mobileTranslateClass = mobileScrollMap[mobileScrollState as keyof typeof mobileScrollMap] || 'translate-x-0';
