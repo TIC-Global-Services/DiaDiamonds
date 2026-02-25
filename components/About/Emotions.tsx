@@ -7,13 +7,13 @@ export default function Emotions() {
     const logo = '/assets/img/DiaDiamondLogo.png';
 
 return (
-    <div className="w-full h-[100vh] overflow-hidden relative">
+    <div className="w-full  relative">
   
       {/* Background image */}
       <img
         src={BgImage}
         alt="Emotions"
-        className="w-full"
+        className="w-full object-fill"
       />
 
       {/* First absolute overlay */}
