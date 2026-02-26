@@ -24,7 +24,7 @@ export default function BrandValue(){
         })
       },[])
     return(
-        <div className="w-full h-[100vh] md:h-[150vh]  relative overflow-hidden">
+        <div className="w-full h-[100vh] md:h-[150vh]  relative overflow-hidden ">
 
             <div ref={containerRef} className="w-[150%] h-full ">
                 <Parallax speed={-10}>

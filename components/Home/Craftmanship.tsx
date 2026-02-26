@@ -7,10 +7,11 @@ export default function Craftsmanship() {
   const bottomImageSrc = "/assets/img/Craftsmanship/CraftManShipImage2.png";
 
   return (
-    <div className="relative w-full md:aspect-[1440/1058] flex gap-0 flex-grow flex-wrap md:flex-nowrap overflow-hidden">
+    <div className="relative h-auto md:h-[150vh] w-full flex gap-0 flex-grow flex-wrap md:flex-nowrap overflow-hidden ">
       
       {/* First Div */}
-      <div className="w-full md:w-1/2 md:h-full relative">
+      <div className="w-full md:w-1/2 md:h-full relative overflow-hidden">
+      
       <Parallax speed={-10}>
         <img
           src={imageSrc}
@@ -26,38 +27,35 @@ export default function Craftsmanship() {
       </div>
 
       {/* Second Div */}
-      <div className="w-full h-full md:w-1/2   md:h-full flex flex-col ">
-        
-        {/* Top Half */}
-        <div className="w-full h-1/4 md:h-1/2 pl-[13.5px] flex flex-col justify-center md:mt-20 lg:mt-40 py-10 md:py-0">
-          <h3 className="font-medium  text-xl lg:text-[24px] leading-[100%] tracking-[0.03em] text-[#000000] pb-[23px]">
-            Elegant and Premium
-          </h3>
+      <div className="w-full h-auto md:w-1/2 flex flex-col ">
 
-          <p className="md:text-base lg:text-[20px] leading-[140%] text-[#000000]/60 md:pb-[30px] lg:pb-[62px]">
-            Every diamond is meticulously selected and expertly set by skilled artisans. From precision cutting to flawless finishing, each piece reflects timeless beauty and uncompromising quality.
-          </p>
+  {/* Top Half */}
+  <div className="w-full  flex flex-col justify-center md:h-1/2 pl-[13.5px] flex flex-col justify-center md:mt-20 lg:mt-40 py-10 md:py-0 order-2 md:order-1">
+    <h3 className="font-medium text-xl lg:text-[24px] leading-[100%] tracking-[0.03em] text-[#000000] pb-[23px]">
+      Elegant and Premium
+    </h3>
+    <p className="md:text-base lg:text-[20px] leading-[140%] text-[#000000]/60 md:pb-[30px] lg:pb-[62px]">
+      Every diamond is meticulously selected and expertly set by skilled artisans. From precision cutting to flawless finishing, each piece reflects timeless beauty and uncompromising quality.
+    </p>
+    <div className="flex gap-2 mx-auto pt-4 md:pt-0">
+      <div className="w-3 h-2 bg-[#000000]/10 rounded-full"></div>
+      <div className="w-5 h-2 bg-[#431A1A] rounded-full"></div>
+      <div className="w-3 h-2 bg-[#000000]/10 rounded-full"></div>
+    </div>
+  </div>
 
-          <div className="flex gap-2 mx-auto pt-4 md:pt-0">
-            <div className="w-3 h-2 bg-[#000000]/10 rounded-full"></div>
-            <div className="w-5 h-2 bg-[#431A1A] rounded-full"></div>
-            <div className='w-3 h-2 bg-[#000000]/10 rounded-full'></div>
-          </div>
-        </div>
+  {/* Bottom Half */}
+  <div className="w-full h-[30vh] md:h-1/2 overflow-hidden order-1 md:order-2">
+    <Parallax speed={-10}>
+      <img
+        src={bottomImageSrc}
+        alt="Craftsmanship"
+        className="w-full h-full md:h-full object-cover -translate-y-1/6"
+      />
+    </Parallax>
+  </div>
 
-        {/* Bottom Half */}
-        <div className="w-full h-3/4 md:h-1/2">
-        
-          <Parallax speed={-10}>
-          <img
-            src={bottomImageSrc}
-            alt="Craftsmanship"
-            className="w-full h-full object-cover"
-          />
-          </Parallax>
-        </div>
-
-      </div>
+</div>
 
       {/* Absolute Overlay Div */}
       <div className="absolute w-full h-full flex justify-center pt-[60px] lg:pt-[100px] xl:pt-[133px]">
