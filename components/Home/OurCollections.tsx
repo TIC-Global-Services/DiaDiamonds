@@ -122,7 +122,7 @@ export default function OurCollection() {
 
   return (
     
-    <div className="w-full py-21 px-5   overflow-hidden z-20">
+    <div className="w-full py-21 px-5   overflow-hidden z-30">
       
       {/* Inner flex container */}
       <div className="w-full flex flex-col justify-center items-center pb-20">
@@ -150,7 +150,7 @@ export default function OurCollection() {
       </div>
 
       {/* Large sibling div */}
-      <div className="w-[98%] mx-auto justify-center items-center pt-16 md:pt-4 relative gap-2 flex-wrap md:flex-nowrap flex">
+      <div className="w-[98%] mx-auto md:justify-center items-center pt-16 md:pt-4 relative gap-2 flex-wrap md:flex-nowrap flex">
         {/* First inner div with top border */}
         <div className="w-full border-b-3 border-[#000000]/20 relative shrink">
           {/* Absolute border div inside first inner div */}
