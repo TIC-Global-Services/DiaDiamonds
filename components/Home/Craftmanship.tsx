@@ -51,7 +51,7 @@ export default function Craftsmanship() {
           <img
             src={imageSrc}
             alt="Craftsmanship"
-            className="w-full h-full object-cover"
+            className="w-full h-[150vh]  object-cover"
           />
         </Parallax>
         <div className="absolute inset-0 flex justify-center items-end mb-8 md:mb-28">

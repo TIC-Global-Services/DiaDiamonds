@@ -24,7 +24,7 @@ export default function BrandValue() {
   }, []);
 
   return (
-    <div className="w-full h-[150vh] md:h-[150vh] relative overflow-hidden bg-black">
+    <div className="w-full h-[150vh] md:h-[150vh] relative overflow-hidden">
       {/* Image Container */}
       <div
         ref={containerRef}
