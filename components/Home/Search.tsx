@@ -37,19 +37,19 @@ export default function Search({isSearch, setIsSearch}:SearchPanelProps) {
 
         <div className="flex gap-[10px] w-[40%] pb-[57px]">
           <div onClick={()=>{setSearchState('Necklace')}} className={`flex justify-center items-center ${searchState === 'Necklace' ? 'bg-[#F8CC96]/24' : 'bg-[#FBF9F7]'} p-3 hover:cursor-pointer`}>
-            <p className="text-[16px] leading-[100%] text-[#000000]">
+            <p className="m-0 text-[#000000]">
               Heart Necklace
             </p>
           </div>
 
           <div onClick={()=>{setSearchState('Bracelets')}} className={`flex justify-center items-center ${searchState === 'Bracelets' ? 'bg-[#F8CC96]/24' : 'bg-[#FBF9F7]'} p-3 hover:cursor-pointer`}>
-            <p>
+            <p className='m-0'>
               Bracelets 
             </p>
           </div>
 
           <div onClick={()=>{setSearchState('Rings')}} className={`flex justify-center items-center ${searchState === 'Rings' ? 'bg-[#F8CC96]/24' : 'bg-[#FBF9F7]'} p-3 hover:cursor-pointer`}>
-            <p className="text-[16px] leading-[100%] text-[#000000]">
+            <p className="m-0 text-[#000000]">
               Rings
             </p>
           </div>
@@ -60,14 +60,14 @@ export default function Search({isSearch, setIsSearch}:SearchPanelProps) {
           </h2>
 
           <div className="flex w-[50%] gap-[30px] ">
-            <div className="flex flex-col gap-4 items-center justify-center">
-              <img src={searchImage1} alt="search image 1"className='w-[288px] h-[153px] ' />
+            <div className="flex flex-col gap-4 items-center justify-center w-[40%] aspect-288/153 ">
+              <img src={searchImage1} alt="search image 1"className=' object-cover w-full' />
               <p className="text-[16px] leading-[100%] text-[#000000]">
                 Brand New
               </p>
             </div>
 
-            <div className="flex flex-col gap-4 items-center justify-center">
+            <div className="flex flex-col gap-4 items-center justify-center ">
               <img src={searchImage2} alt="search image 2" className='w-[288px] h-[153px] ]'/>
               <p className="text-[16px] leading-[100%] text-[#000000]">
                 View Collections
