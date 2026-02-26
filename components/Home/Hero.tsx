@@ -25,18 +25,19 @@ const Hero = () => {
 
                 <div className="w-full h-full flex flex-col gap-[14px] justify-center items-center  md:items-start md:justify-end px-6 sm:px-[34px] md:px-10 lg:px-[56px] xl:px-[64px] 2xl:px-20 py-8 md:py-22">
 
-                  <h1 className="text-center md:text-left font-medium text-[44px] leading-[46px] uppercase pb-[14px] text-[#FFFFFF]">
+                  <h1 className="text-center md:text-left font-medium text-[30px] md:text-[44px] md:leading-[46px] uppercase pb-[14px] text-[#FFFFFF] w-[90%] md:w-full">
                   Crafted to last forever
                 </h1>
 
-                <p className="w-full text-center md:w-[40%] md:text-left text-[22px] leading-[24px] text-[#FFFFFF] pb-[12px] " >
+                <p className="w-full text-center font-sans w-[75%] md:w-[40%] md:text-left md:text-[22px] md:leading-[24px] text-[#FFFFFF] pb-[12px] " >
                   Iconic Brand Feel Designed to Shine Today And Endure Forever
                 </p>
 
                 <button className="
-                BtnAnimation cursor-pointer w-[213px] h-[44px]
-                border border-[1px] tracking-[0.166rem backdrop-blur-[4px] border-[#FFFFFF]/20 shadow-[0_4_4px_0_#000000]
-                text-[#e7dfd7] text-[10px] md:text-base tracking-[6px] md:tracking-[3px] 
+                 py-[9px] px-3 text-[10px] md:text-base
+                BtnAnimation cursor-pointer md:w-[213px] md:h-[44px]
+                border border-[1px] tracking-[4px] md:tracking-[0.166rem] backdrop-blur-[4px] border-[#FFFFFF]/20 shadow-[0_4_4px_0_#000000]
+                text-[#e7dfd7] text-[10px] md:text-base md:tracking-[3px] 
                 bg-transparent rounded-full  hover:scale-110 active:scale-100 ">
                    <a href="https://www.chopard.com/en-in/jewellery-happy-hearts">DISCOVER MORE</a> 
                 </button>
