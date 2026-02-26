@@ -15,16 +15,19 @@ export default function Craftsmanship() {
         "Every diamond is meticulously selected and expertly set by skilled artisans. From precision cutting to flawless finishing, each piece reflects timeless beauty and uncompromising quality.",
     },
     {
-      title: "Lorem Ipsum Dolor",
+      title: "Precision in Every Cut",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque euismod orci ut et lobortis. Vivamus at sapien vitae nisi tristique efficitur. Integer vel risus in metus pulvinar congue. Sed ultricies, metus id fermentum luctus, justo lacus convallis sapien, ut cursus leo nulla sed sapien.",
+        "Every diamond is cut with absolute precision to unlock its maximum brilliance and fire. Our expert craftsmen carefully calculate each angle and facet to ensure perfect symmetry, allowing light to reflect beautifully through the stone.",
     },
     {
-      title: "Consectetur Adipiscing",
+      title: "Consectetur Crafted to Perfection",
       content:
-        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla facilisi. Curabitur tempor orci non turpis consequat, at ultricies metus scelerisque. Aenean vehicula tincidunt lacus, vel luctus sapien fermentum nec. Suspendisse potenti.",
+        "From selection to final polish, each diamond undergoes a meticulous crafting process guided by skilled artisans. Only the finest stones are chosen and refined to meet exceptional quality standards",
     },
   ];
+
+  
+
 
   const [activeIndex, setActiveIndex] = useState(0);
 
