@@ -59,6 +59,7 @@ body {
       letter-spacing: 0.05em;
     }
   }
+  
 }
 
 /* Button animation */
@@ -98,4 +99,16 @@ body {
   color: black;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(35, 91, 90, 0.3);
+}
+
+.step-carousel {
+  display: flex;
+  animation: step-slide 9s steps(3) infinite; /* 3 = number of cards */
+}
+
+@keyframes step-slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
 }
