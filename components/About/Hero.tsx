@@ -2,6 +2,7 @@
 
 import ContainerLayout from "@/layout/ContainerLayout";
 import { motion } from "framer-motion";
+import { Parallax } from "react-scroll-parallax";
 
 export default function Hero() {
 
@@ -11,7 +12,8 @@ export default function Hero() {
   return (
     <ContainerLayout>
       {/* Outer flex container */}
-      <div className="w-full flex flex-wrap md:flex-nowrap justify-center items-center md:h-[100vh] pt-[35%] md:pt-0 pb-[24%] md:pb-0">
+      <Parallax speed={-20}>
+      <div className="w-full flex flex-wrap md:flex-nowrap justify-center items-center md:items-start md:h-[100vh] pt-[35%] md:pt-0 md:mt-10 pb-[24%] md:pb-0 md:-translate-y-[10%]">
         
         {/* Text content */}
         <div className="flex flex-col justify-center items-center mx-auto w-full md:w-2/5 gap-6 order-2 md:order-1 pt-[20%]">
@@ -71,7 +73,9 @@ export default function Hero() {
           </div>
         </motion.div>
 
+       
       </div>
+       </Parallax>
     </ContainerLayout>
   );
 }

@@ -1,4 +1,7 @@
+"use client";
+
 import ContainerLayout from "@/layout/ContainerLayout";
+import { motion } from "framer-motion";
 
 export default function VisitStore() {
 
@@ -7,23 +10,44 @@ export default function VisitStore() {
   return (
     <div className="w-full">
       <ContainerLayout>
-        <div className=" w-full flex justify-center items-center flex-wrap md:flex-nowrap gap-0">
+        <div className=" w-full flex justify-center items-center flex-wrap md:flex-nowrap gap-0 pb-[10%] md:pb-0">
           {/* First div */}
-          <div className="flex flex-col w-full gap-5">
-            <h2 className="font-medium text-[40px] leading-[100%] uppercase text-[#000000]">
+          <div className="flex flex-col w-full gap-3 md:gap-5 order-2 md:order-1">
+            <motion.h2
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+              viewport={{once:false}}
+              className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#000000]">
               Visit Our Store
-            </h2>
+            </motion.h2>
 
-            <p className="text-[20px] leading-[100%] text-[#000000] ">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+              viewport={{once:false}}
+              className="text-[13px] md:text-[20px] md:leading-[100%] text-[#000000] ">
               {/* Placeholder content */}
               Step into our boutique to experience Dia Diamonds as it’s meant to be.
-            </p>
+            </motion.p>
 
-            <label className="font-medium text-[16px] leading-[100%] text-[#000000] ">
+            <motion.label
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+              viewport={{once:false}}
+               className="font-medium text-[13px] md:text-[16px] leading-[100%] text-[#000000] ">
               Enter email
-            </label>
+            </motion.label>
 
-            <div className="flex gap-[30px] items-center">
+            <motion.div
+            
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+            viewport={{once:false}}
+            className="flex gap-[30px] items-center">
               <input
                 type="email"
                 placeholder="abc@gmail.com"
@@ -33,11 +57,11 @@ export default function VisitStore() {
               <button className=" BtnAnimation border-0 rounded-[50px] border border-[#000000] bg-[#000000] text-[#FFFFFF] px-[40px] py-[14px]">
                 Book
               </button>
-            </div>
+            </motion.div>
           </div>
 
           {/* Second div */}
-          <div className="w-full overflow-hidden">
+          <div className="w-full overflow-hidden order-1 md:order-2">
             <img
               src={ImageRight}
               alt="Visit Store"
