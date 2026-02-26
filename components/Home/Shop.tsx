@@ -48,7 +48,7 @@ export default function Shop() {
   
 
   return (
-    <div className="w-full h-[100dvh] md:h-auto overflow-hidden md:py-[200px] md:px-[110px] flex justify-end items-center relative bg-[#EFFFFSFF]">
+    <div className="w-full h-screen md:min-h-screen overflow-hidden md:px-[110px] flex justify-end items-center relative bg-[#EFFFFSFF]">
       {/* First decorative absolute background div */}
       <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 -translate-y-[75%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-50 flex flex-col md:flex-row justify-end items-center px-10">
         {/* Inner content div */}
@@ -111,7 +111,7 @@ export default function Shop() {
       </div>
 
       {/* Inner div */}
-      <div className="w-full h-1/2 mt-auto pb-20 md:w-[50%] mt-20 flex flex-col justify-end items-center relative z-30">
+      <div className="w-full mt-auto pb-20 md:w-[50%]  flex flex-col justify-end items-center relative z-30">
         {/* Heading */}
         <h2
           className={`font-medium text-[24px]  md:text-[35px] md:leading-[100%] tracking-[10%] uppercase md:pb-[38px]`}
@@ -125,11 +125,13 @@ export default function Shop() {
         </h2>
 
         {/* Image */}
+        <div className="w-[50%] md:w-[40%] aspect-[480/177] ">
         <img
           src={currentCategory != null ? shopItems[currentCategory][activeDiv-1].image : shopItems[0][activeDiv-1].image}
           alt={currentCategory != null ? shopItems[currentCategory][activeDiv-1].name : shopItems[0][activeDiv-1].name}
-          className={`w-[70%] md:w-[90%] object-cover overflow-auto aspect-[480/177] ${isHovered ? 'scale-110 delay-100 duration-200 ease-in-out' : 'scale-100'}`}
+          className={`w-full object-cover md:object-contain overflow-auto  ${isHovered ? 'scale-110 delay-100 duration-200 ease-in-out' : 'scale-100'}`}
         />
+        </div>
 
         {/* Paragraph */}
         <p className="pt-[30px] text-[20px] md:text-[24px] leading-[19.5px] text-[#000000] pb-[38px] font-baskerville">
