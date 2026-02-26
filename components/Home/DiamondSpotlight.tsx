@@ -42,7 +42,7 @@ export default function DiamondSpotlight() {
 
   return (
     <div
-      className="w-full relative h-[100vh] md:h-auto"
+      className="w-full relative h-[100vh] md:h-auto overflow-hidden"
       ref={elementRef}
       onMouseMove={captureMousePosition}
     >
