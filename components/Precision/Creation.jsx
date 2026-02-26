@@ -88,7 +88,7 @@ export default function Creation() {
                   transition={{ duration: 1, ease: "easeInOut" }}
                 >
                   {/* Border only around text */}
-                  <div className="border-l border-l-[#FAFAFK] pl-6 md:pl-8 inline-block">
+                  <div className="border-0 border-l-[3px] border-l-[#5a5a5a] pl-6 md:pl-8 inline-block">
                     <p>{contentJSON[currentContent].contentText}</p>
                   </div>
                 </motion.div>
