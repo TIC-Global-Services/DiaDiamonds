@@ -51,7 +51,7 @@ export default function VisitStore() {
               <input
                 type="email"
                 placeholder="abc@gmail.com"
-                className="w-[80%] px-[25px] py-[14px] rounded-full border border-[#000000]/20 backdrop-blur-sm bg-[#000000]/10"
+                className="w-[80%] px-[25px] py-[14px] rounded-full border border-[#000000]/20 bg-[#000000]/1 shadow-[0px_4px_4px_rgba(0,0,0,0.1)] focus:outline-none focus:ring-2 focus:ring-[#000000]/50 focus:border-transparent"
               />
 
               <button className=" BtnAnimation border-0 rounded-[50px] border border-[#000000] bg-[#000000] text-[#FFFFFF] px-[40px] py-[14px]">
