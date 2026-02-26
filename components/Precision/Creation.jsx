@@ -53,8 +53,8 @@ export default function Creation() {
         <ContainerLayout>
           {/* Heading */}
           <div className="flex justify-center items-center mb-10 md:mb-20">
-            <h2 className="text-center md:text-left">
-              designed for you,<br />
+            <h2 className="text-center md:text-left w-full md:w-[50%]">
+              designed for you
               cherished forever.
             </h2>
           </div>
@@ -77,7 +77,7 @@ export default function Creation() {
             </AnimatePresence>
 
             {/* Text Wrapper */}
-            <div className="relative w-full md:w-[45%] flex items-center justify-center h-[450px] -translate-y-[15%] md:translate-y-0">
+            <div className="relative w-full md:w-[45%] flex items-center justify-center h-[450px] -translate-y-[20%] md:translate-y-0">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentContent + "-text"}
