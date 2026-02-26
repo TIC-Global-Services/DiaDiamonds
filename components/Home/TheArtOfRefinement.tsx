@@ -9,6 +9,7 @@ export default function TheArtOfRefinement() {
   const pantherSparkleRef = useRef<HTMLImageElement>(null);
   const PantherImg = '/assets/img/TheArtOfRefinement/PantherOriginal.png';
   const DiamondCaseImg = '/assets/img/TheArtOfRefinement/DiamondCase.png';
+  const singleSparkleImg = '/assets/img/singleSparkle.png';
 
   const CaptureMousePosition = (e:React.MouseEvent<HTMLImageElement>)=>{
     if(!pantherSparkleRef.current) return;
@@ -25,11 +26,106 @@ export default function TheArtOfRefinement() {
       
       {/* First Div */}
       <div className="relative w-full md:w-[75%] flex items-center flex-wrap xl:flex-nowrap md:gap-[27px]">
+        
         <img 
           src={PantherImg} 
           alt="Panther" 
           className="mx-auto w-[65%] md:w-[45%] h-full aspect-470/588 border-0 rounded-[20px]" 
         />
+
+          <motion.img 
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:1, delay:0.2, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:false}}
+
+          src={singleSparkleImg}
+          alt="Sparkle"
+          className="absolute top-80 left-90 w-10 aspect-square"
+          />
+
+          <motion.img 
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:1, delay:0.4, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:false}}
+
+          src={singleSparkleImg}
+          alt="Sparkle"
+          className="absolute top-10 left-40 w-10 aspect-square"
+          />
+
+          <motion.img 
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:1, delay:0.6, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:false}}
+          src={singleSparkleImg}
+          alt="Sparkle"
+          className="absolute top-90 left-60 w-10 aspect-square"
+          />
+
+          <motion.img 
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:1, delay:0.8, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:false}}
+          src={singleSparkleImg}
+          alt="Sparkle"
+          className="absolute top-83 left-70 w-10 aspect-square"
+          />
+
+          <motion.img 
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:1, delay:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:false}}
+          src={singleSparkleImg}
+          alt="Sparkle"
+          className="absolute top-90 left-50 w-10 aspect-square"
+          />
+
+          <motion.img 
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:1, delay:1.2, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:false}}
+          src={singleSparkleImg}
+          alt="Sparkle"
+          className="absolute top-80 left-80 w-10 aspect-square"
+          />
+
+          <motion.img 
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:1, delay:1.2, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:false}}
+          src={singleSparkleImg}
+          alt="Sparkle"
+          className="absolute top-90 left-70 w-10 aspect-square"
+          />
+
+          <motion.img 
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:1, delay:1.2, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:false}}
+          src={singleSparkleImg}
+          alt="Sparkle"
+          className="absolute top-90 left-60 w-10 aspect-square"
+          />
+
+          <motion.img 
+          initial={{opacity:0}}
+          whileInView={{opacity:1}}
+          transition={{duration:1, delay:1.2, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:false}}
+          src={singleSparkleImg}
+          alt="Sparkle"
+          className="absolute top-90 left-50 w-10 aspect-square"
+          />
+
+          
 
 
         <div className="text-center md:text-left">
