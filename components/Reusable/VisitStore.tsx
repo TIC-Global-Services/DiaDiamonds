@@ -16,7 +16,7 @@ export default function VisitStore() {
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
               viewport={{once:false}}
               className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#000000]">
               Visit Our Store
@@ -25,7 +25,7 @@ export default function VisitStore() {
             <motion.p
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
               viewport={{once:false}}
               className="text-[13px] md:text-[20px] md:leading-[100%] text-[#000000] ">
               {/* Placeholder content */}
@@ -35,7 +35,7 @@ export default function VisitStore() {
             <motion.label
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+              transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
               viewport={{once:false}}
                className="font-medium text-[13px] md:text-[16px] leading-[100%] text-[#000000] ">
               Enter email
@@ -45,7 +45,7 @@ export default function VisitStore() {
             
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
             viewport={{once:false}}
             className="flex gap-[30px] items-center">
               <input

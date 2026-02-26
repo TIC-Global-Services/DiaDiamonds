@@ -6,12 +6,12 @@ export default function Hero() {
 
   return (
     // Main hero container (relative for absolute overlay positioning)
-    <div className="w-full h-[100dvh] relative">
+    <div className="w-full h-[100svh] relative">
       {/* Background Image */}
       <img
         src={bgImage}
         alt="Hero Background"
-        className="w-full h-full object-cover"
+        className="w-full h-[100svh] md:h-full object-cover"
       />
 
       {/* Bottom overlay content */}
