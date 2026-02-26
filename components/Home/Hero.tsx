@@ -11,7 +11,7 @@ const Hero = () => {
 
     
 
-        <div className="w-full h-[120vh] relative overflow-hidden z-10" style={{scrollbarWidth:'none'}}>
+        <div className="w-full h-[120vh]  overflow-hidden z-10" style={{scrollbarWidth:'none'}}>
           <Parallax speed={-100} className="-translate-y-[40%]">
           
             <img 

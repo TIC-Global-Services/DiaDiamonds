@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
+import { motion } from "framer-motion";
 
 export default function Craftsmanship() {
   const imageSrc = "/assets/img/Craftsmanship/CraftManShipImage1.png";
@@ -37,7 +38,12 @@ export default function Craftsmanship() {
   return (
     <div className="relative h-auto md:h-[150vh] w-full flex flex-wrap md:flex-nowrap overflow-hidden">
       {/* Left Side Image */}
-      <div className="w-full md:w-1/2 md:h-full relative overflow-hidden">
+      <motion.div
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, delay:0.2, ease:"easeInOut" }}
+      viewport={{once:false}}
+      className="w-full md:w-1/2 md:h-full relative overflow-hidden">
         <Parallax speed={-10}>
           <img
             src={imageSrc}
@@ -50,7 +56,7 @@ export default function Craftsmanship() {
             VIEW BRACELET COLLECTION
           </button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Right Side */}
       <div className="w-full md:w-1/2 flex flex-col h-auto md:h-full">
@@ -87,7 +93,13 @@ export default function Craftsmanship() {
         </div>
 
         {/* Bottom Half Image */}
-        <div className="w-full md:h-1/2 overflow-hidden order-1 md:order-2">
+        <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay:0.2, ease:"easeInOut" }}
+        viewport={{once:false}}
+
+        className="w-full md:h-1/2 overflow-hidden order-1 md:order-2">
           <Parallax speed={-10}>
             <img
               src={bottomImageSrc}
@@ -95,7 +107,7 @@ export default function Craftsmanship() {
               className="w-full h-full object-cover -translate-y-1/6"
             />
           </Parallax>
-        </div>
+        </motion.div>
       </div>
 
       {/* Absolute Overlay Title */}

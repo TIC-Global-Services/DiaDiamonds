@@ -16,7 +16,7 @@ import ChatBtn from "@/components/Reusable/ChatBtn";
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="">
       <ChatBtn/>
       <Navbar />
       <Hero />

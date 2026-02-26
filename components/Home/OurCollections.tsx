@@ -122,7 +122,6 @@ export default function OurCollection() {
 
   return (
 
-    <Parallax speed={10}>
     <div className="w-full py-21 px-5 overflow-hidden z-30 relative">
       
       {/* Inner flex container */}
@@ -185,7 +184,6 @@ export default function OurCollection() {
       </div>
 
     </div>
-    </Parallax>
     
   );
 }
