@@ -52,7 +52,7 @@ export default function Craftsmanship() {
           />
         </Parallax>
         <div className="absolute inset-0 flex justify-center items-end mb-8 md:mb-28">
-          <button className="BtnAnimation tracking-[0.166rem] border-[5.3px] rounded-full px-[18px] py-[7.6px] border-[#FFFFFF]/10 bg-[#FFFFFF]/40 uppercase">
+          <button className="BtnAnimation tracking-[0.166rem] border-[5.3px] rounded-full px-[18px] py-[7.6px] border-[#FFFFFF]/1 bg-[#FFFFFF]/4 shadow-[0_4px_4px_0_rgba(0,0,0,0.1)] uppercase">
             VIEW BRACELET COLLECTION
           </button>
         </div>

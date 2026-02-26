@@ -30,14 +30,14 @@ const Hero = () => {
                   Crafted to last forever
                 </h1>
 
-                <p className="w-full text-center font-sans w-[75%] md:w-[40%] md:text-left md:text-[22px] md:leading-[24px] text-[#FFFFFF] pb-[12px] " >
+                <p className="w-full text-center w-[75%] md:w-[40%] md:text-left md:text-[22px] md:leading-[24px] text-[#FFFFFF] pb-[12px] tracking-[0%] " >
                   Iconic Brand Feel Designed to Shine Today And Endure Forever
                 </p>
 
                 <button className="
                  py-[9px] px-3 text-[10px] md:text-base
                 BtnAnimation cursor-pointer md:w-[213px] md:h-[44px]
-                border border-[1px] tracking-[4px] md:tracking-[0.166rem] backdrop-blur-[4px] border-[#FFFFFF]/20 shadow-[0_4_4px_0_#000000]
+                border border-[1px] tracking-[4px] md:tracking-[0.166rem] backdrop-blur-[1px] border-[#FFFFFF]/1 shadow-[0_4px_4px_0_rgba(0,0,0,0.1)]
                 text-[#e7dfd7] text-[10px] md:text-base md:tracking-[3px] 
                 bg-transparent rounded-full  hover:scale-110 active:scale-100 ">
                    <a href="https://www.chopard.com/en-in/jewellery-happy-hearts">DISCOVER MORE</a> 

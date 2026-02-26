@@ -135,8 +135,8 @@ export default function TheArtOfRefinement() {
           <p className="w-[100%] mx-auto md:w-[90%] text-[12px] md:text-[20px] leading[100%] md:leading-[140%] tracking-[5%] text-[#FFFFFF]/70 pb-[24px] md:pb-[54px]">
           Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.
           </p>
-          <button className="mx-auto md:mx-0 BtnAnimation py-[12px] px-[30px] rounded-full border border-[#e7dfd7] bg-[#87888A]/20 backdrop-blur-md text-[12px] font-medium uppercase text-[#e7dfd7] hover:cursor-pointer mb-[54px] md:mb-0">
-              VIEW MORE
+          <button className="mx-auto md:mx-0 BtnAnimation py-[12px] px-[30px] rounded-full border border-[#000000]/0 bg-[#87888A]/20 backdrop-blur-md text-[12px] font-medium uppercase text-[#e7dfd7] hover:cursor-pointer mb-[54px] md:mb-0">
+               <a href="https://www.chopard.com/en-in/jewellery-happy-hearts" target="_blank">VIEW MORE</a>
           </button>
         </div>
       </div>

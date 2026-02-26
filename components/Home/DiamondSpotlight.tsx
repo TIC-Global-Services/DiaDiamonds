@@ -78,11 +78,11 @@ export default function DiamondSpotlight() {
       ></div>
 
       <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center mt-[50%] md:mt-[20%]">
-        <div className="flex flex-col justify-between items-center w-full md:w-[40%]">
+        <div className="flex flex-col justify-between items-center w-full md:w-[45%]">
           <h2 className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#EFFFFF] text-center">
-            Designed for you. <br /> Crafted for a lifetime.
+            Designed for you. Crafted for a lifetime.
           </h2>
-          <button className="BtnAnimation mt-5 w-[213px] h-[44px] border tracking-[0.166rem] border-[#FFFFFF]/10 text-[#e7dfd7] bg-[#FFFFFF]/4 rounded-full hover:cursor-pointer">
+          <button className="BtnAnimation mt-5 w-[213px] h-[44px] border tracking-[0.166rem] border-[#FFFFFF]/10 text-[#e7dfd7] bg-[#FFFFFF]/4 rounded-full hover:cursor-pointer shadow-[0_4px_4px_0_rgba(0,0,0,0.1)]">
             <a href="https://www.chopard.com/en-in/jewellery-happy-hearts" target="_blank">
               DISCOVER MORE
             </a>
