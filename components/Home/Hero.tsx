@@ -1,6 +1,6 @@
 "use client";
 
-
+import { Parallax } from "react-scroll-parallax";
 
 const Hero = () => {
 
@@ -8,10 +8,11 @@ const Hero = () => {
 
 
   return (
-   
 
-        <div className="w-full h-screen relative overflow-scroll " style={{scrollbarWidth:'none'}}>
+    
 
+        <div className="w-full h-[120vh] relative overflow-hidden z-10" style={{scrollbarWidth:'none'}}>
+          <Parallax speed={-100} className="-translate-y-[40%]">
           
             <img 
               src={heroImage}
@@ -45,6 +46,7 @@ const Hero = () => {
                 </div>
             </div>
 
+            </Parallax>
             
         </div>
      
