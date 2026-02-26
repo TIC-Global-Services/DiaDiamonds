@@ -51,8 +51,8 @@ export default function DiamondSpotlight() {
       
 
       <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center mt-[20%]">
-        <div className="flex flex-col justify-between items-center w-[40%]">
-          <h2 className="font-medium text-[40px] leading-[100%] uppercase text-[#EFFFFF] text-center">
+        <div className="flex flex-col justify-between items-center w-full md:w-[40%]">
+          <h2 className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#EFFFFF] text-center">
             Designed for you. <br /> Crafted for a lifetime.
           </h2>
           <button className="BtnAnimation mt-5 w-[213px] h-[44px] border border-[1px] tracking-[0.166rem]  border-[#FFFFFF]/10 text-[#e7dfd7] bg-[#FFFFFF]/4 rounded-full hover:cursor-pointer shadow-[0_4_4px_0_0_#0000000/10]">

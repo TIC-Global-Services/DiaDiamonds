@@ -127,7 +127,7 @@ export default function OurCollection() {
       {/* Inner flex container */}
       <div className="w-full flex flex-col justify-center items-center pb-20">
         {/* Section heading */}
-        <h2 className="text-xl md:text-[40px] font-medium leading-[91%] tracking-[-3%] uppercase text-[#000000]">
+        <h2 className=" md:text-[40px] font-medium md:leading-[91%] tracking-[-3%] uppercase text-[#000000]">
           Our Collections
         </h2>
 
@@ -150,7 +150,7 @@ export default function OurCollection() {
       </div>
 
       {/* Large sibling div */}
-      <div className="w-[98%] mx-auto justify-center items-center pt-4 relative gap-2 flex-wrap md:flex-nowrap flex">
+      <div className="w-[98%] mx-auto justify-center items-center pt-16 md:pt-4 relative gap-2 flex-wrap md:flex-nowrap flex">
         {/* First inner div with top border */}
         <div className="w-full border-b-3 border-[#000000]/20 relative shrink">
           {/* Absolute border div inside first inner div */}
