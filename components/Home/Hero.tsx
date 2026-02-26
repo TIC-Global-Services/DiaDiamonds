@@ -24,7 +24,7 @@ const Hero = () => {
             
             <div className="absolute w-full h-full bottom-0 left-0 ">
 
-                <div className="w-full h-full flex flex-col gap-[14px] justify-center items-center  md:items-start md:justify-end px-6 sm:px-[34px] md:px-10 lg:px-[56px] xl:px-[64px] 2xl:px-20 py-8 md:py-22 pt-[50%] md:pt-0">
+                <div className="w-full h-full flex flex-col gap-[14px] justify-center items-center  md:items-start md:justify-end px-6 sm:px-[34px] md:px-10 lg:px-[56px] xl:px-[64px] 2xl:px-20 py-8 md:py-22 pt-[70%] md:pt-0">
 
                   <h1 className="text-center md:text-left font-medium text-[30px] md:text-[44px] md:leading-[46px] uppercase pb-[14px] text-[#FFFFFF] w-[90%] md:w-full">
                   Crafted to last forever
