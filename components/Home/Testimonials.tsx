@@ -54,10 +54,10 @@ export default function Testimonials() {
     const TestimonialProfile1 = '/assets/img/Testimonials/TestimonialProfile1.jpg';
 
   return (
-    <div className="w-full h-[100vh] flex flex-wrap md:flex-nowrap ">
+    <div className="w-full md:h-[100vh] flex flex-wrap md:flex-nowrap bg-black">
       
       {/* Left Side */}
-      <div className="w-full h-[40%] md:h-auto md:w-1/2 overflow-hidden">
+      <div className="w-full aspect-[415/276] md:h-auto md:w-1/2 overflow-hidden ">
       <Parallax speed={-10}>
         <img 
           src={TestimonialLeftImage}
@@ -68,9 +68,9 @@ export default function Testimonials() {
       </div>
 
       {/* Right Side */}
-      <div className="w-full md:w-1/2 h-[60%] md:h-full px-[66px] flex items-center bg-[#f8f3ef] ">
+      <div className="w-full md:w-1/2 h-auto  md:h-full px-[66px] flex items-center bg-[#f8f3ef] ">
         
-        <div className="w-full h-full py-[20%] md:py-6">
+        <div className="w-full h-full py-[20%]">
 
           <div className="mx-auto w-[80%] md:w-auto">
           <div className=" flex gap-1 ">
@@ -86,11 +86,11 @@ export default function Testimonials() {
           </div>
           </div>
 
-          <p className="text-[24px] leading-[100%] text-[#000000] pb-8 md:pb-[106px] pt-4 md:pt-[35px] text-center md:text-left">
+          <p className="md:text-[24px] leading-[100%] text-[#000000] pb-8 md:pb-[15%] pt-8 md:pt-[35px] text-center md:text-left">
             {testimonials[currentTestimony].comments[0]}
           </p>
 
-          <p className="text-[24px] leading-[100%] text-[#000000] pb-8 md:pb-20 text-center md:text-left">
+          <p className="md:text-[24px] leading-[100%] text-[#000000] pb-8 md:pb-1 text-center md:text-left">
             {testimonials[currentTestimony].comments[1]}
           </p>
 
