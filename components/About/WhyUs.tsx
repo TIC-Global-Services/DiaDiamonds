@@ -25,7 +25,7 @@ export default function WhyUs() {
           <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{opacity:1, x:0}}
-          transition={{duration:1, delay:0.8, ease:'easeInOut'}}
+          transition={{duration:0.5, delay:0.2, ease:'easeInOut'}}
           viewport={{once:false}}
           className="flex items-start pt-[10%] md:pt-0">
             <h2 className="md:text-[40px] md:font-medium md:leading-[100%] tracking-[5%] uppercase text-[#000000] pb-[14px] md:pb-8">
@@ -42,7 +42,7 @@ export default function WhyUs() {
           
           initial={{ opacity: 0, x: -50 }}
           whileInView={{opacity:1, x:0}}
-          transition={{duration:1, delay:1, ease:'easeInOut'}}
+          transition={{duration:0.5, delay:0.2, ease:'easeInOut'}}
           viewport={{once:false}}
           className="md:text-[20px] md:leading-[140%] text-[#000000]/50  w-[90%] md:w-[40%]">
           Because true brilliance is more than sparkle. At Dia Diamonds, every creation is guided by ethics, certified authenticity, and timeless craftsmanship — ensuring jewellery that feels as meaningful as it looks.

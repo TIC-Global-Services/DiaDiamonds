@@ -14,7 +14,7 @@ export default function OurDiamonds() {
         <motion.img
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
           viewport={{once:false}}
 
           src={ImageLeft}
@@ -31,7 +31,7 @@ export default function OurDiamonds() {
             
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
             viewport={{once:false}}
             className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#000000]">
               Our Diamonds
@@ -41,7 +41,7 @@ export default function OurDiamonds() {
             
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
             viewport={{once:false}}
             className="font-light md:text-[20px] md:leading-[140%] text-[#000000]">
                 Each Dia Diamonds creation is shaped by responsible sourcing, global certification, and masterful craftsmanship — resulting in jewellery that reflects integrity as much as brilliance. Each Dia Diamonds creation is shaped by responsible sourcing, global certification, and masterful craftsmanship — resulting in jewellery that reflects integrity as much as brilliance.
@@ -51,7 +51,7 @@ export default function OurDiamonds() {
             
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
             viewport={{once:false}}
             className="BtnAnimation px-7 md:px-12 py-3 md:py-4 border-5 rounded-full border-[#FFFFFF]/1 shadow-[0_4px_4px_0_rgba(0,0,0,0.1)]  bg-[#FFFFFF]/4 text-[13px] md:text-[16px] font-medium leading-[100%] text-[#000000]">
               Discover Our Craft
