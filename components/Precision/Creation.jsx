@@ -15,28 +15,29 @@ export default function Creation() {
     },
     {
       imageLeft: "/assets/img/Precision/Creation/bgImage1.jpg",
-      contentText: "Lab Grown Diamonds are grown using advanced scientific methods that recreate nature with precision.Through either High Pressure High Temperature (HPHT) or Chemical Vapor Deposition (CVD), carbon atoms crystallize around the seed under extreme heat and controlled energy."
+      contentText:
+        "Lab Grown Diamonds are grown using advanced scientific methods that recreate nature with precision.Through either High Pressure High Temperature (HPHT) or Chemical Vapor Deposition (CVD), carbon atoms crystallize around the seed under extreme heat and controlled energy."
     },
     {
       imageLeft: "/assets/img/Precision/Creation/bgImage2.jpg",
-      contentText: "Over several weeks, the diamond grows steadily into a rough crystal. Every stage is monitored to ensure clarity, color balance, and structural perfection.At this stage, the diamond is complete in composition and real gemstone in its raw form, ready for refinement."
+      contentText:
+        "Over several weeks, the diamond grows steadily into a rough crystal. Every stage is monitored to ensure clarity, color balance, and structural perfection.At this stage, the diamond is complete in composition and real gemstone in its raw form, ready for refinement."
     },
     {
       imageLeft: "/assets/img/Precision/Creation/bgImage3.jpg",
-      contentText: "Expert cutters shape and polish the rough crystal to unlock its brilliance. Advanced mapping technology ensures maximum light reflection, sparkle, and symmetry.The finished diamond is graded, certified, and laser-inscribed which is transforming a scientific creation into a timeless piece of fine jewelry."
+      contentText:
+        "Expert cutters shape and polish the rough crystal to unlock its brilliance. Advanced mapping technology ensures maximum light reflection, sparkle, and symmetry.The finished diamond is graded, certified, and laser-inscribed which is transforming a scientific creation into a timeless piece of fine jewelry."
     }
   ];
 
-  // Auto-change logic
+  // Auto-change logic every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentContent((prev) => (prev + 1) % contentJSON.length);
-    }, 3000);
-
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
-  // Manual click handler
   const handleNext = () => {
     setCurrentContent((prev) => (prev + 1) % contentJSON.length);
   };
@@ -59,33 +60,40 @@ export default function Creation() {
           </div>
 
           {/* Content with animation */}
-          <div className="flex justify-between items-center flex-wrap md:flex-nowrap gap-10 md:gap-20 relative">
+          <div className="flex justify-between items-center flex-wrap md:flex-nowrap gap-10 md:gap-20 relative ">
+            {/* Image */}
             <AnimatePresence mode="wait">
               <motion.img
-                key={currentContent} // triggers re-render for animation
+                key={currentContent}
                 src={contentJSON[currentContent].imageLeft}
                 alt="Image Left"
                 className="w-full md:w-[45%] aspect-[600/450] rounded-[20px] object-cover cursor-pointer"
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -40 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 50 }}
-                transition={{ duration: 1.2 }}
-                onClick={handleNext} // clicking image changes content
+                exit={{ opacity: 0, x: 40 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                onClick={handleNext}
               />
             </AnimatePresence>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentContent + "-text"}
-                className="border-l border-l-[#FAFAFK] pl-6 md:pl-8"
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
-                <p>{contentJSON[currentContent].contentText}</p>
-              </motion.div>
-            </AnimatePresence>
+            {/* Text Wrapper */}
+            <div className="relative w-full md:w-[45%] flex items-center justify-center h-[450px] -translate-y-[15%] md:translate-y-0">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentContent + "-text"}
+                  className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -40 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                >
+                  {/* Border only around text */}
+                  <div className="border-l border-l-[#FAFAFK] pl-6 md:pl-8 inline-block">
+                    <p>{contentJSON[currentContent].contentText}</p>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
           </div>
         </ContainerLayout>
       </div>

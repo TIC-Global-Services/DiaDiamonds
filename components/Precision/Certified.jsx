@@ -14,20 +14,20 @@ export default function Certified() {
       
       {/* First Div */}
       <div className="w-full flex justify-center items-center py-[4%]">
-        <h2>IGI & SGL Certified Diamonds</h2>
+        <h2 className="text-center md:text-left">IGI & SGL Certified Diamonds</h2>
       </div>
 
       <ContainerLayout>
         
         {/* Second Div */}
-        <div className="w-full flex relative ">
+        <div className="w-full flex relative pb-[50%] md:pb-[10%]">
           
           {/* Image Div */}
-          <div className="w-[55%] relative z-10 shrink-0">
+          <div className="w-[70%] md:w-[55%] relative z-10 shrink-0 ">
             <img
               src={bgImage1}
               alt="Certified Background 1"
-              className="w-full aspect-574/355 object-cover border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]"
+              className="w-full aspect-[280/180]  md:aspect-574/355 object-cover border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]"
             />
           </div>
 
@@ -38,7 +38,7 @@ export default function Certified() {
           viewport={{ once: false, amount:0.5 }}
           transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
 
-          className="w-[55%] relative z-20 shrink-0 -translate-x-[18.8%] translate-y-[15%] flex flex-col py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]">
+          className="w-[80%] md:w-[55%] relative z-20 shrink-0 -translate-x-[60%] translate-y-[35%] md:-translate-x-[18.8%] md:translate-y-[15%] flex flex-col py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]">
         
             <img
               src={logo1}
@@ -63,7 +63,7 @@ export default function Certified() {
         </div>
 
         {/* Third Div (Reversed Layout) */}
-        <div className="w-full flex relative mt-[194px]">
+        <div className="w-full flex relative md:mt-[194px] pb-[40%]">
           
           {/* Content Div First */}
           <motion.div
@@ -72,8 +72,8 @@ export default function Certified() {
           viewport={{ once: false, amount:0.5 }}
           transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
           
-          className="w-[55%] shrink-0 relative z-20 flex flex-col  py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]">
-            
+          className=" w-[80%] md:w-[55%] shrink-0 relative z-20 flex flex-col -translate-x-[60%] translate-y-[30%] md:translate-x-0 md:translate-y-0  py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] order-2 md:order-1">
+          
             <img
               src={logo2}
               alt="IGI Logo"
@@ -96,11 +96,11 @@ export default function Certified() {
           </motion.div>
 
           {/* Image Div Second (With Translate) */}
-          <div className="w-[55%] shrink-0 relative z-10 -translate-x-[18.8%] translate-y-[15%]">
+          <div className="w-[70%] md:w-[55%] shrink-0 relative z-10 md:-translate-x-[18.8%] md:translate-y-[15%] order-1 md:order-2">
             <img
               src={bgImage2}
               alt="Certified Background 2"
-              className="w-full aspect-574/355 object-cover border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]"
+              className=" w-full aspect-[280/180]  md:aspect-574/355 object-cover border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]"
             />
           </div>
 

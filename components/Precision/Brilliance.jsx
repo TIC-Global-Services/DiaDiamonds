@@ -20,7 +20,7 @@ export default function Brilliance() {
         {/* Original Rows */}
         <ContainerLayout>
 
-          <div className="w-full">
+          <div className="w-full pb-[140%] md:pb-0">
             <div className="w-[35%] opacity-0 aspect-[350/165] rounded-[20px] flex flex-col backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px]">
               <h3 className="text-[20px] leading-[140%] text-[#000000] pb-[10px]">
                 
