@@ -66,7 +66,7 @@ export default function Craftsmanship() {
                 <h3 className="font-medium text-xl lg:text-[24px] leading-[100%] tracking-[0.03em] text-[#000000] pb-[23px]">
                   {card.title}
                 </h3>
-                <p className="md:text-base lg:text-[20px] leading-[140%] text-[#000000]/60">
+                <p className="md:text-base lg:text-[20px] leading-[140%] text-[#000000]/60 w-[97%] ">
                   {card.content}
                 </p>
               </div>

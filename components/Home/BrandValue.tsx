@@ -24,25 +24,25 @@ export default function BrandValue() {
   }, []);
 
   return (
-    <div className="w-full h-[150vh] md:h-[150vh] relative overflow-hidden">
+    <div className="w-full h-[150vh] md:h-[150vh] relative overflow-hidden bg-black">
       {/* Image Container */}
       <div
         ref={containerRef}
-        className="w-[150%] h-full md:h-full relative"
+        className="w-[150%] h-full md:h-[150vh] relative"
       >
         <Parallax speed={-10}>
           <img
             src={BrandValueImg}
             alt="Brand Value"
-            className="w-full h-[150vh] object-cover object-center md:-translate-y-1/6 md:-translate-x-1/5 relative
+            className="w-full h-[150vh] md:h-full  object-cover object-center md:-translate-y-1/6 md:-translate-x-1/5 relative
                        absolute top-0 left-0 md:relative"
           />
         </Parallax>
       </div>
 
       {/* Text Overlay */}
-      <div className="absolute right-0 bottom-0 mb-[40vw] inline-block px-6 xl:px-[4.58vw] lg:px-[50px]">
-        <div className="w-[65%] ml-auto ">
+      <div className="absolute right-0 bottom-0 mb-[40vw] md:mb-[15vw] inline-block px-6 xl:px-[4.58vw] lg:px-[50px]">
+        <div className="w-[65%] md:w-full ml-auto ">
           <h2 className="md:font-medium md:text-[40px] md:leading-[123%] uppercase text-[#000000]">
             Thoughtfully curated for you 
           </h2>
