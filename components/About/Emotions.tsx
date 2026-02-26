@@ -8,7 +8,7 @@ export default function Emotions() {
     const BgImage = '/assets/img/About/Emotions/BgImage.png';
     const diamond = '/assets/img/Diamond.png';
     const logo = '/assets/img/DiaDiamondLogo.png';
-    const singleSparkle = '/assets/img/SingleSparkle.png';
+    const singleSparkle = '/assets/img/singleSparkle.png';
 
 return (
     <div className="w-full h-[100vh] md:h-auto  relative">
