@@ -20,7 +20,7 @@ export default function Certified() {
       <ContainerLayout>
         
         {/* Second Div */}
-        <div className="w-full flex relative pb-[50%] md:pb-[10%]">
+        <div className="w-full flex relative pb-[50%] md:pb-0">
           
           {/* Image Div */}
           <div className="w-[70%] md:w-[55%] relative z-10 shrink-0 ">
@@ -63,7 +63,7 @@ export default function Certified() {
         </div>
 
         {/* Third Div (Reversed Layout) */}
-        <div className="w-full flex relative md:mt-[194px] pb-[40%]">
+        <div className="w-full flex relative md:mt-[194px] pb-[40%] md:pb-0">
           
           {/* Content Div First */}
           <motion.div
