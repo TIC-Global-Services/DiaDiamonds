@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import ContainerLayout from "@/layout/ContainerLayout";
 
 export default function Certified() {
@@ -29,7 +32,13 @@ export default function Certified() {
           </div>
 
           {/* Content Div */}
-          <div className="w-[55%] relative z-20 shrink-0 -translate-x-[18.8%] translate-y-[15%] flex flex-col py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]">
+          <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount:0.5 }}
+          transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
+
+          className="w-[55%] relative z-20 shrink-0 -translate-x-[18.8%] translate-y-[15%] flex flex-col py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]">
         
             <img
               src={logo1}
@@ -49,7 +58,7 @@ export default function Certified() {
               100% IGI Certified Authenticity
             </p>
 
-          </div>
+          </motion.div>
 
         </div>
 
@@ -57,7 +66,13 @@ export default function Certified() {
         <div className="w-full flex relative mt-[194px]">
           
           {/* Content Div First */}
-          <div className="w-[55%] shrink-0 relative z-20 flex flex-col  py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]">
+          <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false, amount:0.5 }}
+          transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
+          
+          className="w-[55%] shrink-0 relative z-20 flex flex-col  py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]">
             
             <img
               src={logo2}
@@ -78,7 +93,7 @@ export default function Certified() {
               Certified by SGL, Crafted for Trust. Our diamonds are certified by SGL, assuring exceptional quality, authenticity, and timeless brilliance.
             </p>
 
-          </div>
+          </motion.div>
 
           {/* Image Div Second (With Translate) */}
           <div className="w-[55%] shrink-0 relative z-10 -translate-x-[18.8%] translate-y-[15%]">
