@@ -17,7 +17,7 @@ const Hero = () => {
             <img 
               src={heroImage}
               alt="heroImage" 
-              className="w-full h-full object-cover object-center scale-110 md:scale-100 md:object-fill"
+              className="w-full md:h-full h-[120vh] object-cover object-center scale-110 md:scale-100 md:object-fill"
             />
           
             
