@@ -43,7 +43,7 @@ export default function Showcase() {
             transition={{ duration: 0.5, delay:0.2, ease: "easeIn" }}
             className="text-[#FFFFFF] text-[24px] md:text-[40px] leading-[26px] md:leading-[48px] tracking-[2%] text-center md:text-left mt-4 md:mt-0"
           >
-            DIA diamond
+            DIA diamonds
           </motion.h2>
         </ContainerLayout>
       </div>
