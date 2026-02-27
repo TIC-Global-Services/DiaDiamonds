@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Parallax } from "react-scroll-parallax";
+import { motion, scale } from "framer-motion";
 
 export default function Shop() {
 
@@ -8,6 +9,7 @@ export default function Shop() {
   const [isDropDownClicked, setIsDropDownClicked] = useState<boolean>(false);
   const [currentCategory, setCurrentCategory] = useState<number | null>(null);
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [productChanged, setProductChanged] = useState<boolean>(false);
 
  const shopItems = [
   // Rings
@@ -88,7 +90,9 @@ export default function Shop() {
         {/* First div */}
         <button onMouseEnter={()=>{
           setActiveDiv(1);
-          setIsHovered(true);}
+          setIsHovered(true);
+          setProductChanged(true);
+        }
           }
           onMouseLeave={()=>setIsHovered(false)}
           className={`w-full grow hover:cursor-pointer overflow-hidden  bg-[#FAC8AD]/30 ${activeDiv === 1 ? 'opacity-100' : 'opacity-20'} `}></button>
@@ -96,6 +100,7 @@ export default function Shop() {
         <button onMouseEnter={()=>{
           setActiveDiv(2);
           setIsHovered(true);
+          setProductChanged(true);
           }}
           onMouseLeave={()=>setIsHovered(false)}
           className={`w-full grow hover:cursor-pointer overflow-hidden bg-[#F8CC96] ${activeDiv === 2 ? 'opacity-100' :'opacity-20'}`}></button>
@@ -104,6 +109,7 @@ export default function Shop() {
           ()=>{
             setActiveDiv(3);
             setIsHovered(true);
+            setProductChanged(true);
           }
           }
           onMouseLeave={()=>{setIsHovered(false)}}
@@ -111,7 +117,7 @@ export default function Shop() {
       </div>
 
       {/* Inner div */}
-      <div className="w-full mt-auto pb-20 md:w-[50%]  flex flex-col justify-end items-center relative z-30">
+      <div className="w-full mt-auto pb-20 md:w-[50%]  flex flex-col justify-end items-center relative z-30 my-auto">
         {/* Heading */}
         <h2
           className={`font-medium text-[24px]  md:text-[35px] md:leading-[100%] tracking-[10%] uppercase md:pb-[38px]`}
@@ -126,10 +132,16 @@ export default function Shop() {
 
         {/* Image */}
         <div className="w-[50%] md:w-[40%] aspect-[480/177] ">
-        <img
+        <motion.img
+
+        initial={{opacity:0, scale:1}}
+        animate={{opacity:1, scale: productChanged ? 1.2 : 1}}
+        transition={{duration:0.4}}
+        onAnimationComplete={()=>setProductChanged(false)}
+
           src={currentCategory != null ? shopItems[currentCategory][activeDiv-1].image : shopItems[0][activeDiv-1].image}
           alt={currentCategory != null ? shopItems[currentCategory][activeDiv-1].name : shopItems[0][activeDiv-1].name}
-          className={`w-full object-cover md:object-contain overflow-auto  ${isHovered ? 'scale-110 delay-100 duration-200 ease-in-out' : 'scale-100'}`}
+          className={`w-full object-cover md:object-contain overflow-auto }`}
         />
         </div>
 
