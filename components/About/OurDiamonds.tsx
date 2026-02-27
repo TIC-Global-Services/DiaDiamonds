@@ -11,7 +11,7 @@ export default function OurDiamonds() {
   return (
     <div className="w-full h-[100vh] overflow-hidden flex flex-wrap md:flex-nowrap">
       {/* Image container */}
-      <div className="w-full h-[50vh] md:w-[40%] md:h-full overflow-hidden">
+      <div className="w-full h-[50vh] md:w-[45%] md:h-full overflow-hidden">
         <Parallax speed={-20} className="w-full h-full">
         <motion.img
           initial={{ opacity: 0 }}

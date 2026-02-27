@@ -120,7 +120,7 @@ export default function Shop() {
       <div className="w-full mt-auto pb-20 md:w-[50%]  flex flex-col justify-end items-center relative z-30 mt-auto md:my-auto">
         {/* Heading */}
         <h2
-          className={`font-medium text-[24px]  md:text-[35px] md:leading-[100%] tracking-[10%] uppercase md:pb-[38px]`}
+          className={`font-medium text-[24px]  md:text-[35px] md:leading-[100%] tracking-[10%] uppercase md:pb-0`}
           style={{
             background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
             WebkitBackgroundClip: "text",
@@ -141,12 +141,12 @@ export default function Shop() {
 
           src={currentCategory != null ? shopItems[currentCategory][activeDiv-1].image : shopItems[0][activeDiv-1].image}
           alt={currentCategory != null ? shopItems[currentCategory][activeDiv-1].name : shopItems[0][activeDiv-1].name}
-          className={`w-full object-cover md:object-contain overflow-auto }`}
+          className={`w-full object-cover md:object-contain overflow-auto`}
         />
         </div>
 
         {/* Paragraph */}
-        <p className="pt-[30px] text-[20px] md:text-[24px] leading-[19.5px] text-[#000000] pb-[38px] font-baskerville">
+        <p className="pt-[30px] text-[20px] md:text-[24px] leading-[19.5px] text-[#000000] pb-[38px] font-baskerville m-0">
           {currentCategory != null ? shopItems[currentCategory][activeDiv-1].name : shopItems[0][activeDiv-1].name}
         </p>
         {/* Button */}
