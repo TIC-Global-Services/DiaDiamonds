@@ -24,6 +24,7 @@ export default function Navbar() {
   const logo = '/assets/img/DiaDiamondLogo.png';
   const logoBlack = '/assets/img/DiaDiamondLogoBlack.png';
   const diamond = '/assets/img/Diamond.png';
+  const singleSparkle = '/assets/img/singleSparkle.png';
 
   const CaptureMousePosition = (e:React.MouseEvent<HTMLImageElement>)=>{
     if(!sparkleImgRef.current) return;
@@ -106,27 +107,12 @@ export default function Navbar() {
           className="absolute top-[-15px] left-[-25px]" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
           </a>
           
-          <motion.svg
+          <motion.img
           initial={{opacity:0, scale:0.5}}
-          animate={{opacity:1, scale:1}}
-          transition={{duration:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          whileInView={{opacity:2, scale:1}}
+          transition={{duration:0.5, delay:0.2, repeat:2, repeatType:'reverse', ease:"easeInOut"}}
           viewport={{once:true}}
-          className="absolute top-[-25px] left-[-20px]" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
-          <motion.svg
-          initial={{opacity:0, scale:0.5}}
-          animate={{opacity:1, scale:1}}
-          transition={{duration:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:true}}
-          className="absolute top-0 left-0" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
-          <motion.svg
-          initial={{opacity:0, scale:0.5}}
-          animate={{opacity:1, scale:1}}transition={{duration:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}} viewport={{once:true}} className="absolute top-[10px] left-[20px]" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
-         <motion.img
-         initial={{opacity:0, scale:0.5}}
-          animate={{opacity:1, scale:1}}
-          transition={{duration:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:true}}
-         className="absolute top-0 left-3 w-[30px] aspect-square" src='/assets/img/Sparkle.png' alt="" />
+          className="absolute top-[-40%] left-[-10%] w-15 aspect-square" src={singleSparkle} alt="" />
 
          <a href="/">
           <img src={path == '/about' ? logoBlack : logo} alt="logo" className="w-[59px] h-[37px]" />
