@@ -2,6 +2,7 @@
 
 import ContainerLayout from "@/layout/ContainerLayout";
 import { motion } from "framer-motion";
+import { Parallax } from "react-scroll-parallax";
 
 export default function OurDiamonds() {
 
@@ -11,6 +12,7 @@ export default function OurDiamonds() {
     <div className="w-full h-[100vh] overflow-hidden flex flex-wrap md:flex-nowrap">
       {/* Image container */}
       <div className="w-full h-[50vh] md:w-[40%] md:h-full overflow-hidden">
+        <Parallax speed={-20} className="w-full h-full">
         <motion.img
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -21,6 +23,7 @@ export default function OurDiamonds() {
           alt="Our Diamonds"
           className="w-full h-full object-cover hover:scale-110 transition-transform delay-100 duration-300 ease-in-out"
         />
+        </Parallax>
       </div>
 
       {/* Content container */}

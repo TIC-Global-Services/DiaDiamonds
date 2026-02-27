@@ -1,6 +1,7 @@
 "use client";
 
 import ContainerLayout from "@/layout/ContainerLayout";
+import { Parallax } from "react-scroll-parallax";
 
 export default function OurRoots() {
 
@@ -14,11 +15,14 @@ export default function OurRoots() {
         <div className="w-full md:w-1/2 md:h-auto 
                         h-screen md:h-auto 
                         md:relative absolute top-0 left-0 md:static z-0 overflow-hidden">
+
+          <Parallax speed={-20} className="w-full h-full">
           <img
             src={ImageLeft}
             alt="Our Roots"
-            className="w-full h-full object-cover md:object-cover"
+            className="w-full h-full object-cover md:object-cover hover:scale-105 transition-transform duration-500"
           />
+          </Parallax>
         </div>
 
         {/* Right content */}

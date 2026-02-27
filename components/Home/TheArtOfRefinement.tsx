@@ -33,100 +33,6 @@ export default function TheArtOfRefinement() {
           className="mx-auto w-[65%] md:w-[45%] h-full aspect-470/588 border-0 rounded-[20px]" 
         />
 
-          <motion.img 
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1, delay:0.2, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:false}}
-
-          src={singleSparkleImg}
-          alt="Sparkle"
-          className="absolute top-80 left-90 w-10 aspect-square"
-          />
-
-          <motion.img 
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1, delay:0.4, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:false}}
-
-          src={singleSparkleImg}
-          alt="Sparkle"
-          className="absolute top-10 left-40 w-10 aspect-square"
-          />
-
-          <motion.img 
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1, delay:0.6, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:false}}
-          src={singleSparkleImg}
-          alt="Sparkle"
-          className="absolute top-90 left-60 w-10 aspect-square"
-          />
-
-          <motion.img 
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1, delay:0.8, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:false}}
-          src={singleSparkleImg}
-          alt="Sparkle"
-          className="absolute top-83 left-70 w-10 aspect-square"
-          />
-
-          <motion.img 
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1, delay:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:false}}
-          src={singleSparkleImg}
-          alt="Sparkle"
-          className="absolute top-90 left-50 w-10 aspect-square"
-          />
-
-          <motion.img 
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1, delay:1.2, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:false}}
-          src={singleSparkleImg}
-          alt="Sparkle"
-          className="absolute top-80 left-80 w-10 aspect-square"
-          />
-
-          <motion.img 
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1, delay:1.2, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:false}}
-          src={singleSparkleImg}
-          alt="Sparkle"
-          className="absolute top-90 left-70 w-10 aspect-square"
-          />
-
-          <motion.img 
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1, delay:1.2, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:false}}
-          src={singleSparkleImg}
-          alt="Sparkle"
-          className="absolute top-90 left-60 w-10 aspect-square"
-          />
-
-          <motion.img 
-          initial={{opacity:0}}
-          whileInView={{opacity:1}}
-          transition={{duration:1, delay:1.2, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
-          viewport={{once:false}}
-          src={singleSparkleImg}
-          alt="Sparkle"
-          className="absolute top-90 left-50 w-10 aspect-square"
-          />
-
-          
-
 
         <div className="text-center md:text-left">
           <h2 className="font-medium md:text-[40px] leading-[140%] uppercase text-[#FFFFFF] pt-12 md:pt-0 pb-[20px] md:pb-[45px]">
@@ -154,7 +60,7 @@ export default function TheArtOfRefinement() {
 
         {/* Absolute div inside second div */}
         <div className="absolute top-[15px] left-[15px] w-[135px] h-[35px] md:h-[42px]  border-[1px] rounded-[20px] bg-[#87888a] px-[15px] py-[12px] flex justify-center items-center">
-          <div className="flex justify-start items-center gap-2">
+          <div className="flex justify-center items-center gap-2">
             <svg width="69" height="12" viewBox="0 0 69 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clipPath="url(#clip0_161_1951)">
 <path d="M4.75361 0.389018C4.93375 -0.129673 5.54729 -0.129672 5.72743 0.389019L6.79061 3.45043C6.86659 3.66909 7.03831 3.8185 7.23541 3.83743L9.99507 4.10239C10.4626 4.14729 10.6522 4.8461 10.296 5.21157L8.19343 7.36856C8.04326 7.52265 7.97764 7.76441 8.02353 7.99474L8.6659 11.2199C8.77472 11.7663 8.27839 12.1983 7.87807 11.9055L5.5154 10.1771C5.34664 10.0537 5.1344 10.0537 4.96564 10.1771L2.60296 11.9055C2.20265 12.1983 1.70629 11.7663 1.81512 11.2199L2.4575 7.99474C2.50338 7.76441 2.4378 7.52265 2.28762 7.36856L0.185023 5.21157C-0.171217 4.8461 0.0183774 4.14729 0.485949 4.10239L3.24564 3.83743C3.44276 3.8185 3.61447 3.66909 3.69041 3.45043L4.75361 0.389018Z" fill="#F8CC96"/>
@@ -165,7 +71,7 @@ export default function TheArtOfRefinement() {
 </g>
 </svg>
 
-          <p className="font-[Baskerville] font-semibold text-[12px] leading-[17.6px] tracking-[1.6px] uppercase text-[#F8CC96] ">
+          <p className="font-[Baskerville] m-0 font-semibold text-[12px] leading-[17.6px] tracking-[1.6px] uppercase text-[#F8CC96] ">
             (5/5)
           </p>
           </div>

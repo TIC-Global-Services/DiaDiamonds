@@ -77,8 +77,8 @@ export default function DiamondSpotlight() {
         className={`absolute ${maskSize === "207px 199px" ? "w-[207px] h-[199px]" : "w-[26%] h-[37%]"} border border-[#FFFFFF] rounded-sm`}
       ></div>
 
-      <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center mt-[50%] md:mt-[20%]">
-        <div className="flex flex-col justify-between items-center w-full md:w-[45%]">
+      <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center mt-[55%] md:mt-[20%]">
+        <div className="flex flex-col justify-between items-center w-[80%] md:w-[45%]">
           <h2 className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#EFFFFF] text-center">
             Designed for you. Crafted for a lifetime.
           </h2>

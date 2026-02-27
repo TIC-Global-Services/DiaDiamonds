@@ -12,7 +12,7 @@ export default function QandA() {
       {/* Non-absolute content container */}
       <div className="relative z-20 w-full py-20 px-10 flex justify-end items-center gap-[60px] flex-wrap md:flex-nowrap">
 
-        <div className="w-[40%] mx-auto md:mx-0 overflow-hidden delay-100 duration-300 ease-in-out">
+        <div className="w-[50%] md:w-[30%] mx-auto md:mx-0 overflow-hidden delay-100 duration-300 ease-in-out">
           <Parallax speed={-10}>
             <img
               src={QAImageLeft}

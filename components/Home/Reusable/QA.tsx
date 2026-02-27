@@ -14,10 +14,10 @@ export default function QA({ question, answer }: QAProps) {
     <div className="w-full pt-[30px]">
       
       {/* Question Row */}
-      <div className="w-full md:w-[90%] flex justify-between items-center flex-nowrap">
+      <div className="w-full md:w-[90%] flex justify-between items-center md:flex-nowrap cursor-pointer" onClick={() => setIsAnswer(!isAnswer)}>
         
         <p
-          className="text-[14px] md:text-[20px] leading-none text-[#000000] shrink md:shrink-0 pl-4 cursor-pointer"
+          className="text-[14px] m-0 md:text-[20px] leading-none text-[#000000] shrink md:shrink-0 pl-4 cursor-pointer w-[80%] md:w-auto"
           onClick={() => setIsAnswer(!isAnswer)}
         >
           {question}

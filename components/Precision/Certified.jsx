@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import ContainerLayout from "@/layout/ContainerLayout";
+import { Parallax } from "react-scroll-parallax";
 
 export default function Certified() {
   const bgImage1 = "/assets/img/Precision/Certified/bgImage1.jpg";
@@ -23,12 +24,14 @@ export default function Certified() {
         <div className="w-full flex relative pb-[50%] md:pb-0">
           
           {/* Image Div */}
-          <div className="w-[70%] md:w-[55%] relative z-10 shrink-0 ">
+          <div className="w-[70%] md:w-[55%] relative z-10 shrink-0 overflow-hidden">
+              <Parallax speed={-20}>
             <img
               src={bgImage1}
               alt="Certified Background 1"
               className="w-full aspect-[280/180]  md:aspect-574/355 object-cover border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]"
             />
+            </Parallax>
           </div>
 
           {/* Content Div */}
@@ -96,12 +99,14 @@ export default function Certified() {
           </motion.div>
 
           {/* Image Div Second (With Translate) */}
-          <div className="w-[70%] md:w-[55%] shrink-0 relative z-10 md:-translate-x-[18.8%] md:translate-y-[15%] order-1 md:order-2">
+          <div className="w-[70%] md:w-[55%] shrink-0 relative z-10 md:-translate-x-[18.8%] md:translate-y-[15%] order-1 md:order-2 overflow-hidden">
+            <Parallax speed={-20}>
             <img
               src={bgImage2}
               alt="Certified Background 2"
               className=" w-full aspect-[280/180]  md:aspect-574/355 object-cover border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]"
             />
+            </Parallax>
           </div>
 
         </div>

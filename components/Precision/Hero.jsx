@@ -1,4 +1,7 @@
+"use client";
+
 import ContainerLayout from "@/layout/ContainerLayout";
+import { Parallax } from "react-scroll-parallax";
 
 export default function Hero() {
   // Background image path for the Hero section
@@ -6,13 +9,15 @@ export default function Hero() {
 
   return (
     // Main hero container (relative for absolute overlay positioning)
-    <div className="w-full h-[100svh] relative">
+    <div className="w-full h-[100svh] relative overflow-hidden">
       {/* Background Image */}
+      <Parallax speed={-20}>
       <img
         src={bgImage}
         alt="Hero Background"
         className="w-full h-[100svh] md:h-full object-cover"
       />
+      </Parallax>
 
       {/* Bottom overlay content */}
       <div className="absolute w-full h-2/5 bottom-0 left-0 flex justify-center items-center">

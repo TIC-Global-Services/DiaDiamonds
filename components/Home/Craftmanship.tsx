@@ -51,11 +51,11 @@ export default function Craftsmanship() {
           <img
             src={imageSrc}
             alt="Craftsmanship"
-            className="w-full h-[150vh]  object-cover"
+            className="w-full md:h-[150vh]  object-cover"
           />
         </Parallax>
-        <div className="absolute inset-0 flex justify-center items-end mb-8 md:mb-28">
-          <button className="BtnAnimation tracking-[0.166rem] border-[5.3px] rounded-full px-[18px] py-[7.6px] border-[#FFFFFF]/1 bg-[#FFFFFF]/4 shadow-[0_4px_4px_0_rgba(0,0,0,0.1)] uppercase">
+        <div className="absolute inset-0 flex justify-center items-end pb-10 md:mb-28">
+          <button className="BtnAnimation text-[10px] md:text-[12px] tracking-[0.166rem] border-[5.3px] rounded-full px-[16px] py-[3px] md:px-[18px] md:py-[7.6px] border-[#FFFFFF]/1 bg-[#FFFFFF]/4 shadow-[0_4px_4px_0_rgba(0,0,0,0.1)] uppercase ">
             VIEW BRACELET COLLECTION
           </button>
         </div>
@@ -102,12 +102,12 @@ export default function Craftsmanship() {
         transition={{ duration: 1, delay:0.2, ease:"easeInOut" }}
         viewport={{once:false}}
 
-        className="w-full md:h-1/2 overflow-hidden order-1 md:order-2">
+        className="w-full h-[40vh] md:h-1/2 overflow-hidden order-1 md:order-2">
           <Parallax speed={-10}>
             <img
               src={bottomImageSrc}
               alt="Craftsmanship"
-              className="w-full h-full object-cover -translate-y-1/6"
+              className="w-full h-[40vh] md:h-full object-cover -translate-y-1/6 scale-110"
             />
           </Parallax>
         </motion.div>

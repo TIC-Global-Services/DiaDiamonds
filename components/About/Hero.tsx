@@ -50,7 +50,7 @@ export default function Hero() {
 
           {/* Left image wrapper (mobile overlap) */}
           <motion.div
-            className="h-full md:h-auto mt-auto w-2/5 md:w-[35%] shrink-0 md:grow-0 relative -right-8 md:right-0"
+            className="h-full md:h-auto mt-auto w-2/5 md:w-[35%] shrink-0 md:grow-0 relative -right-8 md:right-0 "
             initial={{ x: 20 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}

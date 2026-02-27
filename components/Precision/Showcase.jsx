@@ -2,13 +2,15 @@
 
 import { motion } from "framer-motion";
 import ContainerLayout from "@/layout/ContainerLayout";
+import { Parallax } from "react-scroll-parallax";
 
 export default function Showcase() {
   const BGImage = "/assets/img/Precision/Showcase/bgImage.png";
 
   return (
-    <div className="w-full h-[100vh] md:h-[90svh] relative">
+    <div className="w-full h-[100vh] md:h-[90svh] relative overflow-hidden" >
       {/* Background Image */}
+      <Parallax speed={-20}>
       <motion.img
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -17,7 +19,7 @@ export default function Showcase() {
         alt="Background Image"
         className="w-full h-[100vh] md:h-full object-cover"
       />
-
+      </Parallax>
       {/* Top Overlay */}
       <div className="absolute inset-0 w-full h-full flex flex-col justify-center items-center md:justify-start md:items-start">
         <ContainerLayout className="w-full h-full flex flex-col justify-center items-center md:flex-row md:justify-start md:items-start">

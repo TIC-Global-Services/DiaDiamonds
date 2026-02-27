@@ -36,7 +36,7 @@ export default function Navbar() {
   }
 
   return (
-    <div className="absolute inset-0 z-40">
+    <div className="absolute top-0 right-0 left-0 z-40">
       
       {/* NAV MENU */}
       <div className={`w-full lg:w-[595px] h-[100svh] bg-[#ffffff] absolute right-0 top-0 z-50 ${navMenuClick ? 'fixed block overflow-y-scroll' : 'hidden'}`} style={{scrollbarWidth:'none'}}>
@@ -50,7 +50,7 @@ export default function Navbar() {
         
         <ul className="w-full pt-[63px] pl-10 pr-10 overflow-y-scroll">
           <li className={`w-full flex justify-between items-center text-[32px] leading-[110%] text-[#000000] uppercase ${collectionClick ? '' : 'pb-10'}`}>
-            <p className={`${collectionClick ? 'underline' : ''} hover:cursor-pointer hover:underline text-[32px]`} onClick={()=>setCollectionClick(!collectionClick)}>Collection</p>
+            <p className={`${collectionClick ? 'underline' : ''} hover:cursor-pointer m-0 hover:underline text-[32px]`} onClick={()=>setCollectionClick(!collectionClick)}>Collection</p>
             <div onClick={()=>setCollectionClick(false)} className={`${collectionClick ? 'block' : 'hidden'} hover:underline w-4 border-t-2 border-[#000000] hover:cursor-pointer hover:scale-110 active:scale-100`}></div>
           </li>
           <ul className={`pt-[30px] pb-10 ${collectionClick ? 'block' : 'hidden'}`}>
@@ -94,6 +94,8 @@ export default function Navbar() {
 
         {/* LOGOS */}
         <div className="relative flex items-center justify-center gap-2 hover:cursor-pointer">
+
+          <a href="/">
           <img src={diamond} alt="diamond" className="w-10 aspect-square " />
           <motion.svg
           initial={{opacity:0, scale:0.5}}
@@ -102,6 +104,8 @@ export default function Navbar() {
           viewport={{once:true}}
 
           className="absolute top-[-15px] left-[-25px]" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
+          </a>
+          
           <motion.svg
           initial={{opacity:0, scale:0.5}}
           animate={{opacity:1, scale:1}}
@@ -124,7 +128,9 @@ export default function Navbar() {
           viewport={{once:true}}
          className="absolute top-0 left-3 w-[30px] aspect-square" src='/assets/img/Sparkle.png' alt="" />
 
+         <a href="/">
           <img src={path == '/about' ? logoBlack : logo} alt="logo" className="w-[59px] h-[37px]" />
+          </a>
         </div>
 
         <div onClick={()=>setNavMenuClick(true)} className={`w-5 h-[13px] border-t-2 border-b-2 ${path == '/about' ? 'border-[#000000]' : 'border-[#ffffff]' } hover:cursor-pointer   `}>

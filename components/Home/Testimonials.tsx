@@ -54,7 +54,7 @@ export default function Testimonials() {
     const TestimonialProfile1 = '/assets/img/Testimonials/TestimonialProfile1.jpg';
 
   return (
-    <div className="w-full md:h-[100vh] flex flex-wrap md:flex-nowrap bg-black">
+    <div className="w-full md:h-[80vh] flex flex-wrap md:flex-nowrap bg-black">
       
       {/* Left Side */}
       <div className="w-full aspect-[415/276] md:h-auto md:w-1/2 overflow-hidden ">
@@ -70,7 +70,7 @@ export default function Testimonials() {
       {/* Right Side */}
       <div className="w-full md:w-1/2 h-auto  md:h-full px-[66px] flex items-center bg-[#f8f3ef] ">
         
-        <div className="w-full h-full py-[20%]">
+        <div className="w-full h-full py-[10%]">
 
           <div className="mx-auto w-[80%] md:w-auto">
           <div className=" flex gap-1 ">
@@ -86,7 +86,7 @@ export default function Testimonials() {
           </div>
           </div>
 
-          <p className="md:text-[24px] leading-[100%] text-[#000000] pb-8 md:pb-[15%] pt-8 md:pt-[35px] text-center md:text-left">
+          <p className="md:text-[24px] leading-[100%] text-[#000000] pb-8 md:pb-[5%] pt-8 md:pt-[35px] text-center md:text-left">
             {testimonials[currentTestimony].comments[0]}
           </p>
 

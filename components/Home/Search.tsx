@@ -59,21 +59,36 @@ export default function Search({isSearch, setIsSearch}:SearchPanelProps) {
             Spotlight
           </h2>
 
-          <div className="flex w-[50%] gap-[30px] ">
-            <div className="flex flex-col gap-4 items-center justify-center w-[40%] aspect-288/153 ">
-              <img src={searchImage1} alt="search image 1"className=' object-cover w-full' />
-              <p className="text-[16px] leading-[100%] text-[#000000]">
-                Brand New
+          <div className="max-w-[600px] mr-auto flex gap-4 flex-wrap">
+            {/* First Item */}
+              <div className="flex-1 flex flex-col items-center cursor-pointer">
+                  <div className="w-full aspect-[288/153] overflow-hidden">
+                    <img
+                   src={searchImage1}
+                  alt="search image 1"
+                  className="w-full h-full object-cover"
+                   />
+               </div>
+                <p className="mt-2 text-[16px] leading-[100%] text-[#000000] m-0">
+               Brand New
               </p>
-            </div>
+             </div>
 
-            <div className="flex flex-col gap-4 items-center justify-center ">
-              <img src={searchImage2} alt="search image 2" className='w-[288px] h-[153px] ]'/>
-              <p className="text-[16px] leading-[100%] text-[#000000]">
-                View Collections
+           {/* Second Item */}
+              <div className="flex-1 flex flex-col items-center cursor-pointer">
+                 <div className="w-full aspect-[288/153] overflow-hidden">
+             <img
+                src={searchImage2}
+                alt="search image 2"
+                className="w-full h-full object-cover"
+             />
+             </div>
+             <p className="mt-2 text-[16px] leading-[100%] text-[#000000] m-0">
+              View Collections
               </p>
             </div>
           </div>
+       
         </div>
     </div>
   );
