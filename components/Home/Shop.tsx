@@ -64,7 +64,7 @@ export default function Shop() {
           {/*  Drop Down div below */}
           <div  className="relative w-[45%] md:w-[70%] mx-auto md:mx-0">
             <div onClick={()=>setIsDropDownClicked(!isDropDownClicked)} className="flex justify-between items-center gap-[10px] relative w-full bg-[#FFFFFF]/4 border bg-[#431A1A] border-[#FFFFFF]/1 shadow-[0_4px_4px_0_rgba(0,0,0,0,.10)] md:border-[#000000]/10 backdrop-blur-xs px-6 py-[7px] text-center rounded-full z-20 cursor-pointer " >
-            <h3 className="text-[12px] md:text-[16px] leading-[142%] text-[#FFFFFF]/50 bg-transparent backdrop-blur-[4px]">Select</h3>
+            <h3 className="text-[12px] md:text-[16px] leading-[142%] text-[#FFFFFF]/50 bg-transparent ">Select</h3>
             <svg  className={`${isDropDownClicked ? 'rotate-180 delay-100 duration-300' : ''}`}  width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.327681 1.71L3.19027 4.3C3.62132 4.69 4.31763 4.69 4.74867 4.3L7.61127 1.71C8.30757 1.08 7.81021 0 6.82654 0H1.10135C0.117684 0 -0.368625 1.08 0.327681 1.71Z" fill="white" fill-opacity="0.5"/></svg>
 
 
