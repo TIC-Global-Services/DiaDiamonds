@@ -2,12 +2,12 @@ export default function Value() {
 
     const BgImage = '/assets/img/About/Value/BgImage.png';
   return (
-    <div className="w-full h-[100vh] md:h-[100svh]  relative overflow-hidden">
+    <div className="w-full   relative overflow-hidden">
       {/* Background image */}
       <img
         src={BgImage}
         alt="Value Background"
-        className="object-cover h-[100vh] md:h-auto  md:object-contain md:-translate-y-[20%] "
+        className="object-fill w-full "
       />
 
       {/* Overlay content */}
