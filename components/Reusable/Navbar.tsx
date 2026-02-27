@@ -12,9 +12,10 @@ export default function Navbar() {
   const path = usePathname();
   const [navHideStyle, setNavHideStyle] = useState<string>('');
 
-  let lastScrollY = window.scrollY;
+ 
 
   useEffect(()=>{
+     let lastScrollY = window.scrollY;
       window.addEventListener('scroll', ()=>{
     const currentScrollY = window.scrollY;
 
