@@ -19,7 +19,8 @@ export default function Footer() {
             currentPath === "/" ? "text-[#FFFFFF]" : "text-[#717580]"
           }`}
         >
-          Home
+          <a href="/">Home</a>
+          
         </li>
         <li
           className={`font-medium text-xs md:text-[16px] leading-xl cursor-pointer hover:scale-110 active:scale-100 ${
@@ -37,7 +38,7 @@ export default function Footer() {
               : "text-[#717580]"
           }`}
         >
-          Precision
+          <a href="/precision">Precision</a>
         </li>
         <li
           className={`font-medium text-xs md:text-[16px] leading-xl cursor-pointer hover:scale-110 active:scale-100 ${
