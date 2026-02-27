@@ -1,6 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
 
@@ -8,6 +9,7 @@ export default function Footer() {
 
   const logo = "/assets/img/DiaDiamondLogo.png";
   const diamond = "/assets/img/Diamond.png";
+  const singleSparkle = '/assets/img/singleSparkle.png';
 
   return (
     <footer className="w-full min-h-[50dvh] bg-[#0b0b0b] px-10 pt-10 pb-[27px]">
@@ -61,8 +63,7 @@ export default function Footer() {
       </ul>
 
       {/* ================= CUSTOMER SERVICE ================= */}
-      {/* Mobile: left aligned + slightly pulled upward */}
-      {/* Desktop: unchanged */}
+      
       <div className="flex flex-col py-10 justify-start items-start md:justify-end md:items-end -mt-6 md:mt-0">
         <h3 className='text-[13px] md:text-[20px] text-[#FFFFFF] leading-[140%] '>CUSTOMER SERVICE</h3>
         <a className='text-[10px] md:text-[16px] text-[#737373] underline cursor-pointer'>Return Policy</a>
@@ -71,12 +72,22 @@ export default function Footer() {
       </div>
 
       {/* ================= LOGO ================= */}
-      <div className="flex flex-col mx-auto pt-17 pb-3 items-center justify-center gap-1">
+      <div className="relative flex flex-col mx-auto pt-17 pb-3 items-center justify-center gap-1">
         <img
           className="w-[60px] aspect-square"
           src={diamond}
           alt="diamond"
         />
+
+        <motion.img
+        initial={{opacity:0, scale:0.5}}
+        whileInView={{opacity:1, scale:1.2}}
+        transition={{duration:0.5, delay:0.2, ease:'easeInOut', repeat:2, repeatType:'reverse'}}
+        viewport={{once:false}}
+
+        className="absolute top-[25%] left-[48%] w-14 aspect-square"
+        src={singleSparkle} alt=""/>
+
         <img
           className="w-[146.38px] h-[94.72px]"
           src={logo}
@@ -122,8 +133,7 @@ export default function Footer() {
       <div className="w-full border-t-[0.5px] border-[#FFFFFF]"></div>
 
       {/* ================= BOTTOM BAR ================= */}
-      {/* Mobile: column + centered */}
-      {/* Desktop: unchanged */}
+
       <div className="w-full flex flex-col items-center justify-center gap-0 md:flex-row md:items-center md:justify-between pt-5">
         <p className="font-medium text-[15px] md:text-sm lg:text-[18px] leading-none text-[#FFFFFF] text-center md:text-left">
           © 2026 Dia Diamonds . All Rights Reserved.
