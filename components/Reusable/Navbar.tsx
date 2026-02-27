@@ -62,12 +62,10 @@ export default function Navbar() {
     <div className={`absolute  fixed top-0 right-0 left-0 z-40 ${navHideStyle}`}>
       
       {/* NAV MENU */}
-      <motion.div
-  initial={{ clipPath: "inset(0 100% 0 0)" }}
+     <motion.div
+  initial={{ clipPath: navMenuClick ? "inset(0 0% 0 100%)" : "inset(0 0 0 100%)" }}
   animate={{
-    clipPath: navMenuClick
-      ? "inset(0 0% 0 0)"
-      : "inset(0 0 0 100%)"
+    clipPath: navMenuClick ? "inset(0 0% 0 0)" : "inset(0 0 0 100%)"
   }}
   transition={{ duration: 0.6, ease: "easeInOut" }}
   className="w-full lg:w-[595px] h-[100vh] bg-white fixed right-0 top-0 z-50 overflow-y-scroll"
