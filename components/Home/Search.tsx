@@ -1,6 +1,7 @@
 "use client";
 import React, { Dispatch } from 'react';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 type SearchPanelProps = {
     isSearch: boolean,
@@ -18,7 +19,13 @@ export default function Search({isSearch, setIsSearch}:SearchPanelProps) {
 
 
   return (
-    <div className={`absolute inset-0 w-full h-[100dvh] overflow-y-scroll px-6 md:px-10 py-[26px] bg-[#ffffff] z-50 ${isSearch ? 'fixed block' : 'hidden'}`} style={{scrollbarWidth:'none'}}>
+    <motion.div
+
+    initial={{clipPath: "circle(0% at 0% 0%)"}}
+    animate={{clipPath: isSearch ? "circle(150% at 0% 0%)" : "circle(0% at 0% 0%)"}}
+    transition={{duration:0.6}}
+    
+    className={`absolute inset-0 w-full h-[100dvh] overflow-y-scroll px-6 md:px-10 py-[26px] bg-[#ffffff] z-50 ${isSearch ? 'fixed block' : ''}`} style={{scrollbarWidth:'none'}}>
       <button className="pb-[30px] hover:cursor-pointer" onClick={()=>{setIsSearch(false)}}>
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.75 0C6.975 0 0 6.975 0 15.75C0 24.525 6.975 31.5 15.75 31.5C24.525 31.5 31.5 24.525 31.5 15.75C31.5 6.975 24.525 0 15.75 0ZM21.825 23.625L15.75 17.55L9.675 23.625L7.875 21.825L13.95 15.75L7.875 9.675L9.675 7.875L15.75 13.95L21.825 7.875L23.625 9.675L17.55 15.75L23.625 21.825L21.825 23.625Z" fill="black" fillOpacity="0.2"/></svg>
 
@@ -90,6 +97,6 @@ export default function Search({isSearch, setIsSearch}:SearchPanelProps) {
           </div>
        
         </div>
-    </div>
+    </motion.div>
   );
 }
