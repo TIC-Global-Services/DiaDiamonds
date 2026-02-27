@@ -34,7 +34,7 @@ export default function BrandValue() {
           <img
             src={BrandValueImg}
             alt="Brand Value"
-            className="w-full h-[150vh] md:h-full  object-cover object-center md:-translate-y-1/6 md:-translate-x-1/5 relative
+            className="w-full h-[150vh] md:h-full 2xl:h-[150vh]  object-cover object-center md:-translate-y-1/6 2xl:translate-y-0  md:-translate-x-1/5 relative
                        absolute top-0 left-0 md:relative"
           />
         </Parallax>
