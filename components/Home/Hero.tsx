@@ -34,14 +34,12 @@ const Hero = () => {
                   Iconic Brand Feel Designed to Shine Today And Endure Forever
                 </p>
 
-                <button className="
-                 py-[9px] px-3 text-[10px] md:text-base
-                BtnAnimation cursor-pointer md:w-[213px] md:h-[44px]
-                border border-[1px] tracking-[4px] md:tracking-[0.166rem] backdrop-blur-sm md:backdrop-blur-[1px] border-[#000000]/0 md:border-[#FFFFFF]/1 shadow-[0_4px_4px_0_rgba(0,0,0,0.1)]
-                text-[#e7dfd7] text-[10px] md:text-base md:tracking-[3px] 
-                bg-[#87888A]/20 md:bg-transparent rounded-full  hover:scale-110 active:scale-100 ">
-                   <a href="https://www.chopard.com/en-in/jewellery-happy-hearts">DISCOVER MORE</a> 
-                </button>
+
+                <button className="w-[20%] BtnAnimation glass-btn backdrop-blur-[2px] text-[#E7D7EF] text-[16px] font-medium uppercase ">
+  <span>DISCOVER MORE</span>
+</button>
+                   
+
 
                 </div>
             </div>

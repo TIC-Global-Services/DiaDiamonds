@@ -25,7 +25,7 @@ export default function Testimonials() {
       "Beautiful design and quick delivery.",
       "Will definitely order again."
     ],
-    profileImage: "/assets/img/Testimonials/profile1.png",
+    profileImage: "/assets/img/Testimonials/profile2.jpg",
     name: "Liam Carter",
   },
   {
@@ -35,7 +35,7 @@ export default function Testimonials() {
       "The necklace looks even better in person.",
       "Elegant and timeless."
     ],
-    profileImage: "/assets/img/Testimonials/profile1.png",
+    profileImage: "/assets/img/Testimonials/profile3.jpg",
     name: "Sophia Martinez",
   },
   {
@@ -45,7 +45,7 @@ export default function Testimonials() {
       "Exceptional quality and attention to detail.",
       "Highly recommended."
     ],
-    profileImage: "/assets/img/Testimonials/profile1.png",
+    profileImage: "/assets/img/Testimonials/profile4.jpg",
     name: "Noah Williams",
   },
 ];
@@ -57,20 +57,20 @@ export default function Testimonials() {
     <div className="w-full md:h-[80vh] flex flex-wrap md:flex-nowrap bg-black">
       
       {/* Left Side */}
-      <div className="w-full aspect-[415/276] md:h-auto md:w-1/2 overflow-hidden ">
+      <div className="w-full aspect-[415/276] md:h-auto 2xl:h-screen md:w-1/2 overflow-hidden ">
       <Parallax speed={-10}>
         <img 
           src={TestimonialLeftImage}
           alt="testimonial visual"
-          className="w-full  object-cover -translate-y-1/6  hover:scale-110 delay-75 duration-100 ease-in-out"
+          className="w-full 2xl:h-screen  object-cover -translate-y-1/6  hover:scale-110 delay-75 duration-100 ease-in-out"
         />
         </Parallax>
       </div>
 
       {/* Right Side */}
-      <div className="w-full md:w-1/2 h-auto  md:h-full px-[66px] flex items-center bg-[#f8f3ef] ">
+      <div className="w-full md:w-1/2 h-auto  md:h-full px-[66px] my-auto flex items-center bg-[#f8f3ef] ">
         
-        <div className="w-full h-full py-[10%]">
+        <div className="w-full  py-[10%]">
 
           <div className="mx-auto w-[80%] md:w-auto">
           <div className=" flex gap-1 ">

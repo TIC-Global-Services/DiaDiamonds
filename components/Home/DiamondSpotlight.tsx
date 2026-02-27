@@ -82,7 +82,7 @@ export default function DiamondSpotlight() {
           <h2 className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#EFFFFF] text-center">
             Designed for you. Crafted for a lifetime.
           </h2>
-          <button className="BtnAnimation mt-5 w-[213px] h-[44px] border tracking-[0.166rem] border-[#FFFFFF]/10 text-[#e7dfd7] bg-[#FFFFFF]/4 rounded-full hover:cursor-pointer shadow-[0_4px_4px_0_rgba(0,0,0,0.1)]">
+          <button className="BtnAnimation glass-btn text-[#E7DFD7] mt-5 w-[213px] h-[44px] ">
             <a href="https://www.chopard.com/en-in/jewellery-happy-hearts" target="_blank">
               DISCOVER MORE
             </a>

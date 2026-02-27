@@ -39,12 +39,12 @@ export default function Craftsmanship() {
   }, [cards.length]);
 
   return (
-    <div className="relative h-auto md:h-[150vh] w-full flex flex-wrap md:flex-nowrap overflow-hidden">
+    <div className="relative h-auto md:h-[150vh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
       {/* Left Side Image */}
       <motion.div
-      initial={{ opacity: 0, x: -100 }}
+      initial={{ opacity: 0, x: -10 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1, delay:0.2, ease:"easeInOut" }}
+      transition={{ duration: 0.5, delay:0.2, ease:"easeInOut" }}
       viewport={{once:false}}
       className="w-full md:w-1/2 md:h-full relative overflow-hidden">
         <Parallax speed={-10}>
@@ -62,9 +62,9 @@ export default function Craftsmanship() {
       </motion.div>
 
       {/* Right Side */}
-      <div className="w-full md:w-1/2 flex flex-col h-auto md:h-full">
+      <div className="w-full md:w-1/2 flex flex-col h-auto md:h-full 2xl:h-[150vh]">
         {/* Top Half Cards + Pagination */}
-        <div className="w-full md:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-20 lg:mt-40 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
+        <div className="w-full md:h-1/2 2xl:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-20 lg:mt-40 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
           <div className="flex flex-col gap-10 justify-center w-full">
             {/* Cards */}
             {cards.map((card, index) => (
@@ -97,17 +97,17 @@ export default function Craftsmanship() {
 
         {/* Bottom Half Image */}
         <motion.div
-        initial={{ opacity: 0, y: 100 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay:0.2, ease:"easeInOut" }}
+        transition={{ duration: 0.5, delay:0.2, ease:"easeInOut" }}
         viewport={{once:false}}
 
-        className="w-full h-[40vh] md:h-1/2 overflow-hidden order-1 md:order-2">
+        className="w-full h-[40vh] md:h-1/2 2xl:h-[75vh] bg-black overflow-hidden order-1 md:order-2">
           <Parallax speed={-10}>
             <img
               src={bottomImageSrc}
               alt="Craftsmanship"
-              className="w-full h-[40vh] md:h-full object-cover -translate-y-1/6 scale-110"
+              className="w-full h-[40vh] md:h-full 2xl:h-[75vh] object-cover -translate-y-1/6 2xl:translate-y-0 scale-110"
             />
           </Parallax>
         </motion.div>

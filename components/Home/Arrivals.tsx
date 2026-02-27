@@ -27,12 +27,12 @@ export default function Arrivals() {
         transition={{ duration: 1.2, ease: "easeInOut" }}
         className="w-full md:w-1/2 h-1/2 md:h-full overflow-hidden"
       >
-        <div className="relative w-full h-full overflow-hidden">
+        <div className="relative w-full h-full  overflow-hidden">
           <Parallax speed={-10}>
             <img
               src={firstImage}
               alt="First Arrival"
-              className="w-full h-full object-cover"
+              className="w-full h-full 2xl:h-screen object-cover "
             />
           </Parallax>
 
@@ -58,7 +58,7 @@ export default function Arrivals() {
             <img
               src={secondImage}
               alt="Second Arrival"
-              className="w-full h-full object-cover"
+              className="w-full h-full 2xl:h-screen object-cover"
             />
           </Parallax>
 
