@@ -10,6 +10,27 @@ export default function Navbar() {
   const [collectionClick, setCollectionClick] = useState<boolean>(false);
   const [isSearch , setIsSearh] = useState<boolean>(false);
   const path = usePathname();
+  const [navHideStyle, setNavHideStyle] = useState<string>('');
+
+  let lastScrollY = window.scrollY;
+
+  useEffect(()=>{
+      window.addEventListener('scroll', ()=>{
+    const currentScrollY = window.scrollY;
+
+    if(currentScrollY > lastScrollY ){
+      setNavHideStyle('-translate-y-[100%]');
+    } 
+
+    if(currentScrollY < lastScrollY){
+      setNavHideStyle('translate-y-0 ')
+    }
+
+    lastScrollY = currentScrollY;
+
+  })
+  })
+
 
   useEffect(()=>{
     if(navMenuClick || isSearch){
@@ -37,7 +58,7 @@ export default function Navbar() {
   }
 
   return (
-    <div className="absolute top-0 right-0 left-0 z-40">
+    <div className={`absolute  fixed top-0 right-0 left-0 z-40 ${navHideStyle}`}>
       
       {/* NAV MENU */}
       <div className={`w-full lg:w-[595px] h-[100svh] bg-[#ffffff] absolute right-0 top-0 z-50 ${navMenuClick ? 'fixed block overflow-y-scroll' : 'hidden'}`} style={{scrollbarWidth:'none'}}>
