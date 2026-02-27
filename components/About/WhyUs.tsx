@@ -49,51 +49,7 @@ export default function WhyUs() {
           </motion.p>
         </ContainerLayout>
       </div>
-      <motion.div
-      
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{opacity:0.7, scale:1}}
-      transition={{duration:4, delay:1.2, repeat:2, repeatType:'loop', ease:'easeInOut'}}
-      viewport={{once:false}}
-      className="absolute bottom-[33%] right-[44%] z-40">
-        <img src={singleSparkle} alt="single sparkle" className="w-40 aspect-square" />
-      </motion.div>
-      <motion.div
-      
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{opacity:0.7, scale:1}}
-      transition={{duration:4, delay:1.4, repeat:2, repeatType:'loop', ease:'easeInOut'}}
-      viewport={{once:false}}
-      className="absolute bottom-[31%] right-[38%] z-40">
-        <img src={singleSparkle} alt="single sparkle" className="w-30 aspect-square" />
-      </motion.div>
-      <motion.div
-      
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{opacity:0.7, scale:1}}
-      transition={{duration:4, delay:1.6, repeat:2, repeatType:'loop', ease:'easeInOut'}}
-      viewport={{once:false}}
-      className="absolute bottom-[29%] right-[34%] z-40">
-        <img src={singleSparkle} alt="single sparkle" className="w-30 aspect-square" />
-      </motion.div>
-      <motion.div
-      
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{opacity:0.7, scale:1}}
-      transition={{duration:4, delay:1.8, repeat:2, repeatType:'loop', ease:'easeInOut'}}
-      viewport={{once:false}}
-      className="absolute bottom-[31%] right-[50%] z-40">
-        <img src={singleSparkle} alt="single sparkle" className="w-30 aspect-square" />
-      </motion.div>
-      <motion.div
-      
-      initial={{ opacity: 0, scale: 0 }}
-      whileInView={{opacity:0.7, scale:1}}
-      transition={{duration:4, delay:2.0, repeat:2, repeatType:'loop', ease:'easeInOut'}}
-      viewport={{once:false}}
-      className="absolute bottom-[30%] right-[54%] z-40">
-        <img src={singleSparkle} alt="single sparkle" className="w-30 aspect-square" />
-      </motion.div>
+     
     </div>
   );
 }
