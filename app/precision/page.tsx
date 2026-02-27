@@ -16,10 +16,8 @@ export default function Precision(){
            <Hero />
            <Creation />
            <Showcase />
-           <div className="w-full bg-[linear-gradient(180deg,#f8cc96_0%,#f8d8b1_0.01%,#f7e7d3_0.02%,#f7ead9_0.03%,#f7f6f4_100%)]">
             <Brilliance />
            <Certified />
-           </div>
            <VisitStore />
            <Footer />
         </div>

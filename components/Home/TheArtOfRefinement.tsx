@@ -35,6 +35,11 @@ export default function TheArtOfRefinement() {
 
       {/* Panther animation */}
 
+
+
+        
+
+
         <div className="text-center md:text-left">
           <h2 className="font-medium md:text-[40px] leading-[140%] uppercase text-[#FFFFFF] pt-12 md:pt-0 pb-[20px] md:pb-[45px]">
             The Art of Radiant Refinemnt
