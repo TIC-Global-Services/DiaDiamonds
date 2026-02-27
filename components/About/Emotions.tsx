@@ -34,8 +34,8 @@ return (
 
         <div className="flex flex-col items-end gap-2">
           <div className="flex gap-2">
-            <img src={diamond} alt="diamond" className="w-20 aspect-square"/>
-            <img src={logo} alt="logo" className="w-20 aspect-square"/>
+            <img src={diamond} alt="diamond" className="w-[42px] aspect-square"/>
+            <img src={logo} alt="logo" className="w-[60px] aspect-[60/37]"/>
           </div>
           <p className="text-[20px] leading-[100%] text-[#FFFFFF]">
             Where Brilliance Meets Beauty
