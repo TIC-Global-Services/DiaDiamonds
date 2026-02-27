@@ -103,10 +103,10 @@ export default function TheArtOfRefinement() {
           <h2 className="font-medium md:text-[40px] leading-[140%] uppercase text-[#FFFFFF] pt-12 md:pt-0 pb-[20px] md:pb-[45px]">
             The Art of Radiant Refinemnt
           </h2>
-          <p className="w-[100%] mx-auto md:w-[90%] text-[12px] md:text-[20px] leading[100%] md:leading-[140%] tracking-[5%] text-[#FFFFFF]/70 pb-[24px] md:pb-[54px]">
+          <p className="w-[100%] mx-auto md:mx-0 backdrop-blur-[2px] md:w-[90%] text-[12px] md:text-[20px] leading[100%] md:leading-[140%] tracking-[5%] text-[#FFFFFF]/70 pb-[24px] md:pb-[54px]">
           Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.
           </p>
-          <button className="mx-auto md:mx-0 BtnAnimation py-[12px] px-[30px] rounded-full border border-[#000000]/0 bg-[#87888A]/20 backdrop-blur-md text-[12px] font-medium uppercase text-[#e7dfd7] hover:cursor-pointer mb-[54px] md:mb-0">
+          <button className=" glass-btn mx-auto md:mx-0 BtnAnimation  text-[12px] font-medium uppercase text-[#e7dfd7] hover:cursor-pointer mb-[54px] md:mb-0 backdrop-blur-[0.9px] bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100 text-[#E7D7EF] text-[16px] font-medium uppercase ">
                <a href="https://www.chopard.com/en-in/jewellery-happy-hearts" target="_blank">VIEW MORE</a>
           </button>
         </div>

@@ -30,12 +30,12 @@ return (
       </div>
 
       {/* Second absolute overlay */}
-      <div className="w-full h-full absolute inset-0 flex justify-end items-end px-6 xl:px-[105px] lg:px-[50px] py-8 md:py-10">
+      <div className="w-full h-full absolute  flex right-0 bottom-0 justify-end items-end px-6 sm:px-[34px] md:px-10 lg:px-[56px] xl:px-[64px] 2xl:px-20 py-8 md:py-10">
 
         <div className="flex flex-col items-end gap-2">
           <div className="flex gap-2">
-            <img src={diamond} alt="diamond" className="w-13 aspect-square"/>
-            <img src={logo} alt="logo" className="w-13 aspect-square"/>
+            <img src={diamond} alt="diamond" className="w-20 aspect-square"/>
+            <img src={logo} alt="logo" className="w-20 aspect-square"/>
           </div>
           <p className="text-[20px] leading-[100%] text-[#FFFFFF]">
             Where Brilliance Meets Beauty

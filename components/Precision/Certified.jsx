@@ -25,7 +25,7 @@ export default function Certified() {
           
           {/* Image Div */}
           <div className="w-[70%] md:w-[55%] relative z-10 shrink-0 overflow-hidden">
-              <Parallax speed={-20}>
+              <Parallax speed={5}>
             <img
               src={bgImage1}
               alt="Certified Background 1"
@@ -36,12 +36,12 @@ export default function Certified() {
 
           {/* Content Div */}
           <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount:0.5 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: false }}
           transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
 
-          className="w-[80%] md:w-[55%] relative z-20 shrink-0 -translate-x-[60%] translate-y-[35%] md:-translate-x-[18.8%] md:translate-y-[15%] flex flex-col py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040]">
+          className="w-[80%] md:w-[55%] relative z-20 shrink-0 -translate-x-[60%] translate-y-[35%] md:-translate-x-[18.8%] md:translate-y-[15%] flex flex-col py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px]  bg-transparent shadow-[1px_1px_5px_0px_#00000040] bg-clip-padding backdrop-filter  backdrop-blur-lg bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
         
             <img
               src={logo1}
@@ -70,12 +70,12 @@ export default function Certified() {
           
           {/* Content Div First */}
           <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount:0.5 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1}}
+          viewport={{ once: false}}
           transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
           
-          className=" w-[80%] md:w-[55%] shrink-0 relative z-20 flex flex-col -translate-x-[60%] translate-y-[30%] md:translate-x-0 md:translate-y-0  py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] order-2 md:order-1">
+          className=" w-[80%] md:w-[55%] shrink-0 relative z-20 flex flex-col -translate-x-[60%] translate-y-[30%] md:translate-x-0 md:translate-y-0  py-[5%] px-[3%]  border border-[#FFFFFF]/4 backdrop-blur-[4px] rounded-[20px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] order-2 md:order-1  bg-clip-padding backdrop-filter  backdrop-blur-lg bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
           
             <img
               src={logo2}
@@ -100,7 +100,7 @@ export default function Certified() {
 
           {/* Image Div Second (With Translate) */}
           <div className="w-[70%] md:w-[55%] shrink-0 relative z-10 md:-translate-x-[18.8%] md:translate-y-[15%] order-1 md:order-2 overflow-hidden">
-            <Parallax speed={-20}>
+            <Parallax speed={5}>
             <img
               src={bgImage2}
               alt="Certified Background 2"

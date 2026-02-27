@@ -35,7 +35,7 @@ const Hero = () => {
                 </p>
 
 
-                <button className="w-[20%] BtnAnimation glass-btn backdrop-blur-[2px] text-[#E7D7EF] text-[16px] font-medium uppercase ">
+                <button className="w-[20%] BtnAnimation glass-btn  bg-clip-padding backdrop-filter tracking-[0.16rem]  backdrop-blur-[0.9px] bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100 text-[#E7D7EF] text-[16px] font-medium uppercase ">
   <span>DISCOVER MORE</span>
 </button>
                    

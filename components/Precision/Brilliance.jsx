@@ -2,7 +2,6 @@
 
 import ContainerLayout from "@/layout/ContainerLayout";
 import { motion } from "framer-motion";
-import { Parallax } from "react-scroll-parallax";
 
 export default function Brilliance() {
   const bgImage = "/assets/img/Precision/Brilliance/bgImage.png";
@@ -76,7 +75,7 @@ export default function Brilliance() {
               transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
             
             className="w-full">
-              <div className="w-[75%] md:w-[30%]  rounded-[20px] flex flex-col backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px]">
+              <div className="w-[75%] md:w-[30%]  rounded-[20px] flex flex-col backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px] backdrop-blur-sm bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
                 <h3 className="text-[20px] leading-[140%] text-[#000000] pb-[10px]">
                   Luxury That Makes Sense
                 </h3>
@@ -93,7 +92,7 @@ export default function Brilliance() {
               transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
             
             className="w-full mt-[50%] md:mt-0">
-              <div className="w-[75%] md:w-[30%] h-auto rounded-[20px] flex flex-col ml-auto backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px]">
+              <div className="w-[75%] md:w-[30%] h-auto rounded-[20px] flex flex-col ml-auto backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px] backdrop-blur-sm bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
                 <h3 className="text-[20px] leading-[140%] text-[#000000] pb-[10px]">
                   Greater Diamond, <br /> Greater Value
                 </h3>
@@ -110,7 +109,7 @@ export default function Brilliance() {
               transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
             
             className="w-full hidden md:block">
-              <div className="w-[30%] rounded-[20px] flex flex-col ml-[15%] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px]">
+              <div className="w-[30%] rounded-[20px] flex flex-col ml-[15%] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px] backdrop-blur-sm bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
                 <h3 className="text-[20px] leading-[140%] text-[#000000] pb-[10px]">
                   Beauty Without Compromise
                 </h3>

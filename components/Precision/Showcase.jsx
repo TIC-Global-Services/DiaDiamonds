@@ -8,7 +8,7 @@ export default function Showcase() {
   const BGImage = "/assets/img/Precision/Showcase/bgImage.png";
 
   return (
-    <div className="w-full h-[100vh] md:h-[90svh] relative overflow-hidden" >
+    <div className="w-full h-[100vh] md:h-[100svh] relative overflow-hidden" >
       {/* Background Image */}
       <Parallax speed={-20}>
       <motion.img
@@ -17,7 +17,7 @@ export default function Showcase() {
         transition={{ duration: 0.5,delay:0.2, ease: "easeIn" }}
         src={BGImage}
         alt="Background Image"
-        className="w-full h-[100vh] md:h-full object-cover"
+        className="w-full h-[100vh] md:h-[100svh] object-cover"
       />
       </Parallax>
       {/* Top Overlay */}

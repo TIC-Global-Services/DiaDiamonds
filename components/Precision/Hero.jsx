@@ -10,17 +10,18 @@ export default function Hero() {
   return (
     // Main hero container (relative for absolute overlay positioning)
     <div className="w-full h-[100svh] relative overflow-hidden">
-      {/* Background Image */}
       <Parallax speed={-20}>
+      {/* Background Image */}
+      
       <img
         src={bgImage}
         alt="Hero Background"
         className="w-full h-[100svh] md:h-full object-cover"
       />
-      </Parallax>
+      
 
       {/* Bottom overlay content */}
-      <div className="absolute w-full h-2/5 bottom-0 left-0 flex justify-center items-center">
+      <div className="absolute w-full h-2/5 bottom-20 left-0 flex justify-center items-center">
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-[#FFFFFF]">
             Lab Grown Diamonds
@@ -30,6 +31,8 @@ export default function Hero() {
           </p>
         </div>
       </div>
+
+      </Parallax>
     </div>
   );
 }

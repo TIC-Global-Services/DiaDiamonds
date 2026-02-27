@@ -8,11 +8,11 @@ export default function VisitStore() {
     const ImageRight = '/assets/img/About/VisitStore/ImageRight.jpg';
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <ContainerLayout>
-        <div className=" w-full flex justify-center items-center flex-wrap md:flex-nowrap gap-0 pb-[10%] md:pb-0">
+        <div className=" w-full flex justify-center md:justify-between items-center flex-wrap md:flex-nowrap  pb-[10%] md:pb-0">
           {/* First div */}
-          <div className="flex flex-col w-full gap-3 md:gap-5 order-2 md:order-1">
+          <div className="flex flex-col w-full gap-3 md:gap-5 order-2 md:order-1 ">
             <motion.h2
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ export default function VisitStore() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
               viewport={{once:false}}
-              className="text-[13px] md:text-[20px] md:leading-[100%] text-[#000000] ">
+              className="text-[13px] md:text-[20px] md:leading-[100%] text-[#000000] w-full ">
               {/* Placeholder content */}
               Step into our boutique to experience Dia Diamonds as it’s meant to be.
             </motion.p>
@@ -65,7 +65,7 @@ export default function VisitStore() {
             <img
               src={ImageRight}
               alt="Visit Store"
-              className="w-full h-80 object-contain hover:scale-110 transition-transform duration-300 ease-in-out delay-100"
+              className="ml-0 md:ml-auto w-[80%] aspect-square object-contain hover:scale-110 transition-transform duration-300 ease-in-out delay-100"
             />
           </div>
         </div>
