@@ -45,7 +45,7 @@ return (
       </div>
 
 
-      <div className="w-full absolute inset-0 h-full">
+      {/* <div className="w-full absolute inset-0 h-full">
 
         <motion.img
         initial={{ opacity: 0, scale: 0.5 }}
@@ -68,7 +68,7 @@ return (
         viewport={{once:false}}
         src={singleSparkle} alt="sparkle" className="w-24 aspect-square object-cover absolute top-[58%] left-[10%] md:top-[59%] md:left-[40%] " />
 
-      </div>
+      </div> */}
 
     </div>
   );
