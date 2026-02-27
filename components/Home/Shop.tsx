@@ -117,7 +117,7 @@ export default function Shop() {
       </div>
 
       {/* Inner div */}
-      <div className="w-full mt-auto pb-20 md:w-[50%]  flex flex-col justify-end items-center relative z-30 my-auto">
+      <div className="w-full mt-auto pb-20 md:w-[50%]  flex flex-col justify-end items-center relative z-30 mt-auto md:my-auto">
         {/* Heading */}
         <h2
           className={`font-medium text-[24px]  md:text-[35px] md:leading-[100%] tracking-[10%] uppercase md:pb-[38px]`}
