@@ -13,7 +13,7 @@ export default function Hero() {
     <ContainerLayout>
       {/* Outer flex container */}
       <Parallax speed={-20}>
-      <div className="w-full flex flex-wrap md:flex-nowrap justify-center items-center md:items-start md:h-[100vh] pt-[35%] md:pt-0 md:mt-10 pb-[24%] md:pb-0 md:-translate-y-[10%]">
+      <section data-theme='dark' className="w-full flex flex-wrap md:flex-nowrap justify-center items-center md:items-start md:h-[100vh] pt-[35%] md:pt-0 md:mt-10 pb-[24%] md:pb-0 md:-translate-y-[10%]">
         
         {/* Text content */}
         <div className="flex flex-col justify-center items-center mx-auto w-full md:w-2/5 gap-6 order-2 md:order-1 pt-[20%]">
@@ -74,7 +74,7 @@ export default function Hero() {
         </motion.div>
 
        
-      </div>
+      </section>
        </Parallax>
     </ContainerLayout>
   );

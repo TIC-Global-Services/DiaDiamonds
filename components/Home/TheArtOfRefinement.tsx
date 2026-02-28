@@ -68,7 +68,7 @@ export default function TheArtOfRefinement() {
   }
 
   return (
-    <div className="w-full md:px-[2.5%] md:pt-[13.4%] md:pb-[9.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
+    <section data-theme="light" className="w-full md:px-[2.5%] md:pt-[13.4%] md:pb-[9.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
       
       {/* First Div */}
       
@@ -143,6 +143,6 @@ export default function TheArtOfRefinement() {
           </div>
 
         </div>
-    </div>
+    </section>
   );
 }

@@ -4,6 +4,7 @@ import {useState} from "react";
 import CollectionItem from "./Reusable/CollectionItem";
 import { Parallax } from "react-scroll-parallax";
 import { useSwipeable } from "react-swipeable";
+import { section } from "framer-motion/client";
 
 export default function OurCollection() {
 
@@ -122,7 +123,7 @@ export default function OurCollection() {
 
   return (
 
-    <div className="w-full py-21 px-5 overflow-hidden z-30 relative">
+    <section className="w-full py-21 px-5 overflow-hidden z-30 relative" data-theme='dark'>
       
       {/* Inner flex container */}
       <div className="w-full flex flex-col justify-center items-center pb-9 md:pb-20">
@@ -183,7 +184,7 @@ export default function OurCollection() {
         </div>
       </div>
 
-    </div>
+    </section>
     
   );
 }

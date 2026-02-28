@@ -50,7 +50,7 @@ export default function Shop() {
   
 
   return (
-    <div className="w-full h-screen md:min-h-screen overflow-hidden md:px-[110px] flex justify-end items-center relative bg-[#EFFFFSFF]">
+    <section data-theme="dark" className="w-full h-screen md:min-h-screen overflow-hidden md:px-[110px] flex justify-end items-center relative bg-[#EFFFFSFF]">
       {/* First decorative absolute background div */}
       <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 -translate-y-[75%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-50 flex flex-col md:flex-row justify-end items-center px-10">
         {/* Inner content div */}
@@ -154,6 +154,6 @@ export default function Shop() {
           VIEW MORE
         </button>
       </div>
-    </div>
+    </section>
   );
 }

@@ -8,7 +8,7 @@ export default function Showcase() {
   const BGImage = "/assets/img/Precision/Showcase/bgImage.png";
 
   return (
-    <div className="w-full h-[100vh] md:h-[100svh] relative overflow-hidden" >
+    <section data-theme="light" className="w-full h-[100vh] md:h-[100svh] relative overflow-hidden" >
       {/* Background Image */}
       <Parallax speed={-20}>
       <motion.img
@@ -47,6 +47,6 @@ export default function Showcase() {
           </motion.h2>
         </ContainerLayout>
       </div>
-    </div>
+    </section>
   );
 }

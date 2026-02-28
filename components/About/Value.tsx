@@ -2,7 +2,7 @@ export default function Value() {
 
     const BgImage = '/assets/img/About/Value/BgImage.png';
   return (
-    <div className="w-full   relative overflow-hidden">
+    <section data-theme="light" className="w-full   relative overflow-hidden">
       {/* Background image */}
       <img
         src={BgImage}
@@ -16,6 +16,6 @@ export default function Value() {
           Designed to capture light, crafted to capture hearts — Dia Diamonds brings brilliance to every chapter of your story.
         </p>
       </div>
-    </div>
+    </section>
   );
 }

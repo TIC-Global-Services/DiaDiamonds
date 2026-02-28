@@ -9,7 +9,7 @@ export default function OurDiamonds() {
     const ImageLeft = '/assets/img/About/OurDiamonds/ImageLeft.png';
 
   return (
-    <div className="w-full h-[100vh] overflow-hidden flex flex-wrap md:flex-nowrap">
+    <section data-theme="dark" className="w-full h-[100vh] overflow-hidden flex flex-wrap md:flex-nowrap">
       {/* Image container */}
       <div className="w-full h-[50vh] md:w-[45%] md:h-full overflow-hidden">
         <Parallax speed={-20} className="w-full h-full">
@@ -62,6 +62,6 @@ export default function OurDiamonds() {
           </div>
         </ContainerLayout>
       </div>
-    </div>
+    </section>
   );
 }

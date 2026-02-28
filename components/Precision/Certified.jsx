@@ -11,7 +11,7 @@ export default function Certified() {
   const logo2 = "/assets/img/Precision/Certified/logo2.png";
 
   return (
-    <div className="w-full relative py-[5.56%] bg-[linear-gradient(180deg,#F7F6F4_0%,#F7EDE0_99.97%)]">
+    <section data-theme="dark" className="w-full relative py-[5.56%] bg-[linear-gradient(180deg,#F7F6F4_0%,#F7EDE0_99.97%)]">
       
       {/* First Div */}
       <div className="w-full flex justify-center items-center ">
@@ -113,6 +113,6 @@ export default function Certified() {
 
       </ContainerLayout>
 
-    </div>
+    </section>
   );
 }

@@ -41,10 +41,11 @@ export default function DiamondSpotlight() {
   };
 
   return (
-    <div
+    <section
       className="w-full relative h-[100vh] md:h-auto overflow-hidden"
       ref={elementRef}
       onMouseMove={captureMousePosition}
+      data-theme="light"
     >
 
       <img
@@ -89,6 +90,6 @@ export default function DiamondSpotlight() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

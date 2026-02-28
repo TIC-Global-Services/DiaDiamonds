@@ -58,7 +58,7 @@ export default function Creation() {
   if (!contentJSON[currentCard]) return null;
 
   return (
-    <div className="relative w-full h-auto bg-white overflow-hidden">
+    <section data-theme="dark" className="relative w-full h-auto bg-white overflow-hidden">
       
       {/* Background Shapes */}
       <div className="absolute top-[62.65%] left-[69.17%] md:left-[59.38%] md:top-0  w-[62.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#7C3C3C]/13 rounded-full z-10" />
@@ -134,6 +134,6 @@ export default function Creation() {
         </div>
 
       </div>
-    </div>
+    </section>
   );
 }

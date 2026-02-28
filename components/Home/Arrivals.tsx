@@ -12,7 +12,7 @@ export default function Arrivals() {
   const secondImage = "/assets/img/Arrivals/ArrivalsImg2.png";
 
   return (
-    <div
+    <section data-theme="light"
       ref={containerRef}
       className="relative w-full h-screen flex flex-col md:flex-row overflow-hidden"
     >
@@ -67,6 +67,6 @@ export default function Arrivals() {
           </h2>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }

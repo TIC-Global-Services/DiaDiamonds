@@ -8,7 +8,7 @@ export default function VisitStore() {
     const ImageRight = '/assets/img/About/VisitStore/ImageRight.jpg';
 
   return (
-    <div className="w-full pb-[5%] px-[6px] sm:px-[3px]">
+    <section data-theme="dark" className="w-full pb-[5%] px-[6px] sm:px-[3px]">
       {/* <ContainerLayout> */}
         <div className=" w-full flex justify-normal  items-center flex-wrap md:flex-nowrap px-[9%]  pb-[10%] md:pb-0">
 
@@ -71,6 +71,6 @@ export default function VisitStore() {
           </div>
         </div>
       {/* </ContainerLayout> */}
-    </div>
+    </section>
   );
 }

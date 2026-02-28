@@ -9,7 +9,7 @@ export default function OurRoots() {
     const ProfileImage = '/assets/img/About/OurRoots/ProfileImage.jpg';
 
     return (
-      <div className="w-full h-[100vh] md:h-auto flex flex-col md:flex-row relative">
+      <section data-theme="dark" className="w-full h-[100vh] md:h-auto flex flex-col md:flex-row relative">
 
         {/* Left image */}
         <div className="w-full md:w-1/2 md:h-auto 
@@ -51,6 +51,6 @@ export default function OurRoots() {
           </ContainerLayout>
         </div>
 
-      </div>
+      </section>
     );
 }

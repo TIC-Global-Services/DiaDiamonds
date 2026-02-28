@@ -7,7 +7,7 @@ export default function Brilliance() {
   const bgImage = "/assets/img/Precision/Brilliance/bgImage.png";
 
   return (
-    <div className="w-full bg-[linear-gradient(180deg,#F8CC96_0%,#F8D8B1_0.01%,#F7E7D3_0.02%,#F7EAD9_0.03%,#F7F6F4_100%)]">
+    <section data-theme="dark" className="w-full bg-[linear-gradient(180deg,#F8CC96_0%,#F8D8B1_0.01%,#F7E7D3_0.02%,#F7EAD9_0.03%,#F7F6F4_100%)]">
       
       {/* First Section */}
       <div className="w-full flex justify-center items-center text-center md:text-left pt-[72px] pb-[2%]">
@@ -119,6 +119,6 @@ export default function Brilliance() {
         </div>
 
       </div>
-    </div>
+    </section>
   );
 }

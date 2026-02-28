@@ -3,6 +3,8 @@ import { useState, useRef, useEffect } from "react";
 import Search from "../Home/Search";
 import { usePathname } from "next/navigation";
 import {motion} from 'framer-motion';
+import { section } from "framer-motion/client";
+import { nav } from "framer-motion/m";
 
 export default function Navbar() {
 
@@ -11,8 +13,32 @@ export default function Navbar() {
   const [isSearch , setIsSearh] = useState<boolean>(false);
   const path = usePathname();
   const [navHideStyle, setNavHideStyle] = useState<string>('');
+  const [navBarTheme , setNavBarTheme] = useState<string>("light")
 
  
+  useEffect(()=>{
+    const sections = document.querySelectorAll<HTMLElement>("section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry)=>{
+          if(entry.isIntersecting){
+            const theme = (entry.target as HTMLElement).dataset.theme;
+            if(theme){
+              setNavBarTheme(theme);
+            }
+          }
+        });
+      },
+      {
+        threshold: [0.3, 0.6, 0.9],
+      }
+    )
+
+    sections.forEach((section)=>observer.observe(section));
+
+    return () =>  observer.disconnect()
+  }, [])
 
   useEffect(()=>{
      let lastScrollY = window.scrollY;
@@ -59,7 +85,7 @@ export default function Navbar() {
   }
 
   return (
-    <div className={`absolute  fixed top-0 right-0 left-0 z-40 ${navHideStyle}`}>
+    <div className={`absolute  fixed top-0 right-0 left-0 z-40  ${navHideStyle}`}>
       
       {/* NAV MENU */}
      <motion.div
@@ -119,7 +145,7 @@ export default function Navbar() {
         
         <button className="w-[37px] aspect-square hover:cursor-pointer " onClick={()=>setIsSearh(true)}>
           <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill={`${path == '/about' ? 'black' : 'white'}`} d="M27.4031 26.4575L21.5294 20.425C23.2638 18.2637 24.3506 15.5325 24.3506 12.5163C24.3506 5.62875 18.8931 0 12.1638 0C5.43438 0 0 5.58125 0 12.4925C0 15.812 1.28397 18.9956 3.56945 21.3428C5.85494 23.6901 8.95471 25.0087 12.1869 25.0087C15.1237 25.0087 17.7831 23.8925 19.8875 22.1112L25.7613 28.1437C25.8659 28.2558 25.9916 28.345 26.1307 28.4059C26.2698 28.4668 26.4194 28.4982 26.5706 28.4982C26.7218 28.4982 26.8715 28.4668 27.0106 28.4059C27.1497 28.345 27.2753 28.2558 27.38 28.1437C27.8425 27.6687 27.8425 26.9325 27.38 26.4575H27.4031ZM2.3125 12.4925C2.3125 6.91125 6.72938 2.35125 12.1869 2.35125C17.6444 2.35125 22.0613 6.8875 22.0613 12.4925C22.0613 18.0975 17.6444 22.6337 12.1869 22.6337C6.72938 22.6337 2.3125 18.0975 2.3125 12.4925Z" />
+            <path fill={`${navBarTheme == 'light' ? 'white' : 'black'}`} d="M27.4031 26.4575L21.5294 20.425C23.2638 18.2637 24.3506 15.5325 24.3506 12.5163C24.3506 5.62875 18.8931 0 12.1638 0C5.43438 0 0 5.58125 0 12.4925C0 15.812 1.28397 18.9956 3.56945 21.3428C5.85494 23.6901 8.95471 25.0087 12.1869 25.0087C15.1237 25.0087 17.7831 23.8925 19.8875 22.1112L25.7613 28.1437C25.8659 28.2558 25.9916 28.345 26.1307 28.4059C26.2698 28.4668 26.4194 28.4982 26.5706 28.4982C26.7218 28.4982 26.8715 28.4668 27.0106 28.4059C27.1497 28.345 27.2753 28.2558 27.38 28.1437C27.8425 27.6687 27.8425 26.9325 27.38 26.4575H27.4031ZM2.3125 12.4925C2.3125 6.91125 6.72938 2.35125 12.1869 2.35125C17.6444 2.35125 22.0613 6.8875 22.0613 12.4925C22.0613 18.0975 17.6444 22.6337 12.1869 22.6337C6.72938 22.6337 2.3125 18.0975 2.3125 12.4925Z" />
           </svg>
         </button>
 
@@ -135,22 +161,32 @@ export default function Navbar() {
           viewport={{once:true}}
 
           className="absolute top-[-15px] left-[-25px]" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
-          </a>
           
-          <motion.img
+          <motion.svg
           initial={{opacity:0, scale:0.5}}
+          animate={{opacity:1, scale:1}}
+          transition={{duration:1, repeat:2, repeatType:'reverse', ease:'easeInOut'}}
+          viewport={{once:true}}
+
+          className="absolute top-[-15px] left-[px]" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/></filter></defs></motion.svg>
+          
+          
+          </a>
+
+          <motion.svg
+           initial={{opacity:0, scale:0.5}}
           whileInView={{opacity:2, scale:1}}
           transition={{duration:0.5, delay:0.2, repeat:2, repeatType:'reverse', ease:"easeInOut"}}
           viewport={{once:true}}
-          className="absolute top-[-40%] left-[-10%] w-15 aspect-square" src={singleSparkle} alt="" />
+          className="absolute top-[-50%] left-[-20%] " width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3863)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3863" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="0.3"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_505_3863"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="0.6"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="effect1_dropShadow_505_3863" result="effect2_dropShadow_505_3863"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="2.1"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="effect2_dropShadow_505_3863" result="effect3_dropShadow_505_3863"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="4.2"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="effect3_dropShadow_505_3863" result="effect4_dropShadow_505_3863"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="7.2"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="effect4_dropShadow_505_3863" result="effect5_dropShadow_505_3863"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="12.6"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="effect5_dropShadow_505_3863" result="effect6_dropShadow_505_3863"/><feBlend mode="normal" in="SourceGraphic" in2="effect6_dropShadow_505_3863" result="shape"/></filter></defs></motion.svg>
 
          <a href="/">
-          <img src={path == '/about' ? logoBlack : logo} alt="logo" className="w-[59px] h-[37px]" />
+          <img src={navBarTheme == 'light' ? logo : logoBlack} alt="logo" className="w-[59px] h-[37px]" />
           </a>
         </div>
 
-        <div onClick={()=>setNavMenuClick(true)} className={`w-5 h-[13px] border-t-2 border-b-2 ${path == '/about' ? 'border-[#000000]' : 'border-[#ffffff]' } hover:cursor-pointer   `}>
-          <div className={`flex mx-auto w-4 h-[6px] border-b-2 ${path === '/about' ? 'border-[#000000]' : 'border-[#ffffff]'}`}></div>
+        <div onClick={()=>setNavMenuClick(true)} className={`w-5 h-[13px] border-t-2 border-b-2 ${navBarTheme == "light" ? 'border-[#FFFFFF]': 'border-[#000000]'} ${navBarTheme == 'light' ? 'border-[#FFFFFF]' : 'border-[#000000]'} hover:cursor-pointer   `}>
+          <div className={`flex mx-auto w-4 h-[6px] border-b-2 ${navBarTheme == "light" ? 'border-[#FFFFFF]': 'border-[#000000]'}`}></div>
         </div>
 
       </nav>

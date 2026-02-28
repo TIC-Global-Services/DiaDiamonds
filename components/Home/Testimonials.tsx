@@ -54,7 +54,7 @@ export default function Testimonials() {
     const TestimonialProfile1 = '/assets/img/Testimonials/TestimonialProfile1.jpg';
 
   return (
-    <div className="w-full md:h-[80vh] flex flex-wrap md:flex-nowrap bg-black">
+    <section data-theme="black" className="w-full md:h-[80vh] flex flex-wrap md:flex-nowrap bg-black">
       
       {/* Left Side */}
       <div className="w-full aspect-[415/276] md:h-auto 2xl:h-screen md:w-1/2 overflow-hidden ">
@@ -136,6 +136,6 @@ export default function Testimonials() {
 
       </div>
 
-    </div>
+    </section>
   );
 }

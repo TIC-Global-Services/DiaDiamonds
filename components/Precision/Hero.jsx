@@ -9,7 +9,7 @@ export default function Hero() {
 
   return (
     // Main hero container (relative for absolute overlay positioning)
-    <div className="w-full h-[100svh] relative overflow-hidden">
+    <section data-theme="light" className="w-full h-[100svh] relative overflow-hidden">
       <Parallax speed={-20}>
       {/* Background Image */}
       
@@ -33,6 +33,6 @@ export default function Hero() {
       </div>
 
       </Parallax>
-    </div>
+    </section>
   );
 }

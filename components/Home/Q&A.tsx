@@ -7,7 +7,7 @@ export default function QandA() {
   const QAImageLeft = "/assets/img/Q&A/QAImage.png";
 
   return (
-    <div className="w-full relative">
+    <section data-theme="dark" className="w-full relative">
 
       {/* Non-absolute content container */}
       <div className="relative z-20 w-full py-[10%] px-10 flex justify-end items-center gap-[60px] flex-wrap md:flex-nowrap">
@@ -43,6 +43,6 @@ export default function QandA() {
         <div className="bg-[#EAE3D9] md:w-[42%] w-full aspect-[412/240] md:aspect-auto"></div>
         <div className="bg-[#F9F9F9] w-full"></div>
       </div>
-    </div>
+    </section>
   );
 }
