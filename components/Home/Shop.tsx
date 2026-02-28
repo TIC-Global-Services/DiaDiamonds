@@ -72,11 +72,11 @@ export default function Shop() {
 
             </button>
             <div className={`${isDropDownClicked ? '' : 'hidden'} absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%]  flex flex-col bg-white  py-[15px] border-b border-t-0 rounded-[10px] z-10`}>
-              <button onClick={()=>{setCurrentCategory(0)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 0 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Rings</button>
-                <button onClick={()=>{setCurrentCategory(1)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 1 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Bracelets</button>
-                <button onClick={()=>{setCurrentCategory(2)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 2 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Necklaces</button>
-                <button onClick={()=>{setCurrentCategory(3)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 3 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Pendants</button>
-                <button onClick={()=>{setCurrentCategory(4)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 4 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Earrings</button>
+              <button onClick={()=>{setCurrentCategory(0), setIsDropDownClicked(false)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 0 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Rings</button>
+                <button onClick={()=>{setCurrentCategory(1), setIsDropDownClicked(false)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 1 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Bracelets</button>
+                <button onClick={()=>{setCurrentCategory(2), setIsDropDownClicked(false)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 2 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Necklaces</button>
+                <button onClick={()=>{setCurrentCategory(3), setIsDropDownClicked(false)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 3 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Pendants</button>
+                <button onClick={()=>{setCurrentCategory(4), setIsDropDownClicked(false)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 4 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Earrings</button>
                 
             </div>
 
