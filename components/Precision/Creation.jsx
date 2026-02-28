@@ -61,8 +61,8 @@ export default function Creation() {
     <section data-theme="dark" className="relative w-full h-auto bg-white overflow-hidden">
       
       {/* Background Shapes */}
-      <div className="absolute top-[62.65%] left-[69.17%] md:left-[59.38%] md:top-0  w-[62.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#7C3C3C]/13 rounded-full z-10" />
-      <div className="absolute top-[64%] left-[81.93%] md:left-[75.14%] md:top-0 w-[62.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#F2F2F2]  rounded-full z-0" />
+      <div className="absolute top-[62.65%] left-[69.17%] md:left-[61%] md:top-0  w-[62.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#f2f2f2] rounded-full z-0" />
+      <div className="absolute top-[64%] left-[81.93%] md:left-[77.14%] md:top-0 w-[62.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#7c3c3c]/13  rounded-full z-10" />
 
 
        
