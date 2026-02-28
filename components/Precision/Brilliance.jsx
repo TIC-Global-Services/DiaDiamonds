@@ -10,15 +10,14 @@ export default function Brilliance() {
     <div className="w-full bg-[linear-gradient(180deg,#F8CC96_0%,#F8D8B1_0.01%,#F7E7D3_0.02%,#F7EAD9_0.03%,#F7F6F4_100%)]">
       
       {/* First Section */}
-      <div className="w-full flex justify-center items-center text-center md:text-left pt-[72px]">
+      <div className="w-full flex justify-center items-center text-center md:text-left pt-[72px] pb-[2%]">
         <h2>The Art of Choosing Brilliance</h2>
       </div>
 
       {/* Second Section */}
-      <div className="w-full relative ">
+      <div className="w-full relative px-6 sm:px-[34px] md:px-10 lg:px-[56px] xl:px-[64px] 2xl:px-20">
 
         {/* Original Rows */}
-        <ContainerLayout>
 
           <div className="w-full pb-[140%] md:pb-0">
             <div className="w-[35%] opacity-0 aspect-[350/165] rounded-[20px] flex flex-col backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px]">
@@ -53,7 +52,6 @@ export default function Brilliance() {
             </div>
           </div>
 
-        </ContainerLayout>
 
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full z-10">
@@ -65,8 +63,7 @@ export default function Brilliance() {
         </div>
 
         {/* Duplicate Rows */}
-        <div className="absolute inset-0 w-full h-full z-20">
-          <ContainerLayout>
+        <div className="absolute inset-0 w-full h-full z-20 px-6 sm:px-[34px] md:px-10 lg:px-[56px] xl:px-[64px] 2xl:px-20">
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -75,7 +72,7 @@ export default function Brilliance() {
               transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
             
             className="w-full">
-              <div className="w-[75%] md:w-[30%]  rounded-[20px] flex flex-col backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px] backdrop-blur-sm bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
+              <div className="w-[75%] md:w-[30%] md:ml-[6%] md:mt-[2%]  rounded-[20px] flex flex-col backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px] backdrop-blur-sm bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
                 <h3 className="text-[20px] leading-[140%] text-[#000000] pb-[10px]">
                   Luxury That Makes Sense
                 </h3>
@@ -92,7 +89,7 @@ export default function Brilliance() {
               transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
             
             className="w-full mt-[50%] md:mt-0">
-              <div className="w-[75%] md:w-[30%] h-auto rounded-[20px] flex flex-col ml-auto backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px] backdrop-blur-sm bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
+              <div className="w-[75%] md:w-[30%] md:mr-[5%] md:mt-[-2%] h-auto rounded-[20px] flex flex-col ml-auto backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px] backdrop-blur-sm bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
                 <h3 className="text-[20px] leading-[140%] text-[#000000] pb-[10px]">
                   Greater Diamond, <br /> Greater Value
                 </h3>
@@ -109,7 +106,7 @@ export default function Brilliance() {
               transition={{ duration: 0.5, delay:0.2, ease:"easeIn" }}
             
             className="w-full hidden md:block">
-              <div className="w-[30%] rounded-[20px] flex flex-col ml-[15%] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px] backdrop-blur-sm bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
+              <div className="w-[30%] rounded-[20px] flex flex-col ml-[15%] md:mt-[-6%] md:ml-[17%] backdrop-blur-[5px] bg-transparent shadow-[1px_1px_5px_0px_#00000040] px-[20px] py-[20px] backdrop-blur-sm bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100">
                 <h3 className="text-[20px] leading-[140%] text-[#000000] pb-[10px]">
                   Beauty Without Compromise
                 </h3>
@@ -119,7 +116,6 @@ export default function Brilliance() {
               </div>
             </motion.div>
 
-          </ContainerLayout>
         </div>
 
       </div>
