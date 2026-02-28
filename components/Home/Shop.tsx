@@ -117,11 +117,11 @@ export default function Shop() {
       </div>
 
       {/* Inner div */}
-      <div className="w-full mt-auto pb-20 md:w-[50%]  flex flex-col justify-end items-center relative z-30 mt-auto md:my-auto">
+      <div className="w-full mt-auto pb-20 md:pb-0 md:w-[50%]  flex flex-col justify-end  md:justify-center items-center relative z-30 mt-auto md:my-auto ">
         {/* Heading */}
         <h2
-          className={`font-medium text-[24px]  md:text-[35px] md:leading-[100%] tracking-[10%] uppercase md:pb-0`}
-          style={{
+          className={`font-medium text-[24px]  md:text-[35px] md:leading-[100%] tracking-[10%] uppercase md:pb-[5.28%] `}
+          style={{ 
             background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent"
@@ -131,26 +131,26 @@ export default function Shop() {
         </h2>
 
         {/* Image */}
-        <div className="w-[50%] md:w-[40%] aspect-[480/177] ">
+        <div className="w-[50%] md:w-[66.67%] aspect-[480/177]  ">
         <motion.img
 
         initial={{opacity:0, scale:1}}
-        animate={{opacity:1, scale: productChanged ? 1.2 : 1}}
+        animate={{opacity:1, scale: productChanged ? 1.1 : 1}}
         transition={{duration:0.4}}
         onAnimationComplete={()=>setProductChanged(false)}
 
           src={currentCategory != null ? shopItems[currentCategory][activeDiv-1].image : shopItems[0][activeDiv-1].image}
           alt={currentCategory != null ? shopItems[currentCategory][activeDiv-1].name : shopItems[0][activeDiv-1].name}
-          className={`w-full object-cover md:object-contain overflow-auto`}
+          className={`w-full object-cover md:object-contain `}
         />
         </div>
 
         {/* Paragraph */}
-        <p className="pt-[30px] text-[20px] md:text-[24px] leading-[19.5px] text-[#000000] pb-[38px] font-baskerville m-0">
+        <p className="pt-[30px] text-[20px] md:text-[24px] leading-[19.5px] text-[#000000] pb-[38px] font-baskerville m-0 ">
           {currentCategory != null ? shopItems[currentCategory][activeDiv-1].name : shopItems[0][activeDiv-1].name}
         </p>
         {/* Button */}
-        <button className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-[10px] px-[18px] py-[7.6px]  border-[#FFFFFF]/1  tracking-[0.166rem] border-[5.3px]    border rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] px-8 py-[12px] uppercase text-[#000000]">
+        <button className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-[10px] px-[18px] py-[7.6px]  border-[#FFFFFF]/1  tracking-[0.166rem] border-[5.3px]    border rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] px-8 py-[12px] md:px-[4.72%] md:py-[1.666%] uppercase text-[#000000]">
           VIEW MORE
         </button>
       </div>
