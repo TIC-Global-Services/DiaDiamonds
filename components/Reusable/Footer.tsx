@@ -72,7 +72,7 @@ export default function Footer() {
       </div>
 
       {/* ================= LOGO ================= */}
-      <div className="relative flex flex-col mx-auto pt-17 pb-3 items-center justify-center gap-1">
+      <div className="relative flex flex-col mx-auto pt-17 pb-3 items-center justify-center gap-1  mt-[-14%]">
         <img
           className="w-[60px] aspect-square"
           src={diamond}
