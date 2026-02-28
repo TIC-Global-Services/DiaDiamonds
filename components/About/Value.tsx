@@ -2,12 +2,12 @@ export default function Value() {
 
     const BgImage = '/assets/img/About/Value/BgImage.png';
   return (
-    <section data-theme="light" className="w-full   relative overflow-hidden">
+    <section data-theme="light" className="w-full h-[100vh] md:h-auto  relative overflow-hidden">
       {/* Background image */}
       <img
         src={BgImage}
         alt="Value Background"
-        className="object-fill w-full "
+        className="object-cover md:object-fill w-full h-[100vh] md:h-auto"
       />
 
       {/* Overlay content */}
