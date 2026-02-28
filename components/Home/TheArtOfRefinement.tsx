@@ -68,7 +68,7 @@ export default function TheArtOfRefinement() {
   }
 
   return (
-    <section data-theme="light" className="w-full md:px-[2.5%] md:pt-[13.4%] md:pb-[9.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
+    <section data-theme="light" className="w-full py-[21.43%] md:py-0 md:px-[2.5%] md:pt-[13.4%] md:pb-[9.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
       
       {/* First Div */}
       
@@ -80,11 +80,11 @@ export default function TheArtOfRefinement() {
         animate={controls}
 
         
-        className="relative md:w-[34.61%] aspect-[470/588] border-0 rounded-[20px] bg-white overflow-hidden shrink-0">
+        className="relative w-[45.83%] mx-auto md:mx-0 md:w-[34.61%] aspect-[470/588] border-0 rounded-[20px] bg-white overflow-hidden shrink-0">
            <img 
           src={PantherImg} 
           alt="Panther" 
-          className=" md:w-full h-auto object-cover mt-[-10%]" 
+          className="w-full md:w-full h-auto w-full object-cover mt-[-10%]" 
         />
 
         <motion.svg variants={item} className="absolute top-[9.79%] left-[18.95%] w-[2.44%] aspect-[11.45/12.6]"  viewBox="0 0 229 230" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3877)"><path d="M108.415 115.624C112.339 114.924 113.726 112.802 112.943 108.416C113.726 112.802 115.748 114.316 119.685 113.614C115.748 114.316 114.383 116.489 115.156 120.823C114.383 116.489 112.339 114.924 108.415 115.624Z" fill="white"/></g><defs><filter id="filter0_dddddd_505_3877" x="-0.000480652" y="7.62939e-06" width="228.101" height="229.239" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="1.29066"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_505_3877"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="2.58132"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="effect1_dropShadow_505_3877" result="effect2_dropShadow_505_3877"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="9.03463"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="effect2_dropShadow_505_3877" result="effect3_dropShadow_505_3877"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="18.0693"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="effect3_dropShadow_505_3877" result="effect4_dropShadow_505_3877"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="30.9759"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="effect4_dropShadow_505_3877" result="effect5_dropShadow_505_3877"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="54.2078"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/><feBlend mode="normal" in2="effect5_dropShadow_505_3877" result="effect6_dropShadow_505_3877"/><feBlend mode="normal" in="SourceGraphic" in2="effect6_dropShadow_505_3877" result="shape"/></filter></defs></motion.svg>
@@ -106,18 +106,18 @@ export default function TheArtOfRefinement() {
       
         </motion.div>
 
-        <div className="w-full flex items-start gap-[7.29%] ">
+        <div className="w-full flex items-start flex-wrap md:flex-nowrap gap-[7.29%] pt-[11.17%] md:pt-0">
 
 
-          <div className="md:w-[51.7%] my-auto md:ml-[1.875%] pb-[9.4%]">
-            <h2 className="text-[#FFFFFF] text-[40px] leading-[100%] pb-[10.27%]">The Art of Radiant Refinemnt</h2>
-            <p className="text-[#FFFFFF]/70 pb-[12.33%]">Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.</p>
-            <button className="glass-btn text-[#FFFFFF]">VIEW MORE</button>
+          <div className="w-full md:w-[51.7%] my-auto md:ml-[1.875%] pb-[13.11%] md:pb-[9.4%] text-center md:text-left">
+            <h2 className="w-[74.9%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF] text-[40px] leading-[100%] pb-[4.85%] md:pb-[10.27%] text-center md:text-left">The Art of Radiant Refinement</h2>
+            <p className="w-[74.9%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF]/70 pb-[5.83%] md:pb-[12.33%] text-center md:text-left">Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.</p>
+            <button className="w-[24.76%] md:w-auto mx-auto block md:mx-0 glass-btn text-[#FFFFFF] ">VIEW MORE</button>
           </div>
 
-          <div className="relative md:w-[36.82%] aspect-317/451 border-[1px] border-[#FFFFFF]/10 rounded-[10px] overflow-hidden shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+          <div className="relative w-[51.94%] mx-auto md:mx- md:w-[36.82%] aspect-317/451 border-[1px] border-[#FFFFFF]/10 rounded-[10px] overflow-hidden shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
 
-              <img src={DiamondCaseImg} alt="diamond case" className="w-full h-auto object-cover md:mt-[10.41%]" />
+              <img src={DiamondCaseImg} alt="diamond case" className="w-full h-auto object-cover mt-[10.41%]" />
 
               <div className="absolute top-[6.63%] left-[5.68%] w-[42.59%] aspect-[135/42] border-[1px] rounded-full border-[#000000]/0 bg-[#87888A] flex justify-center items-center">
 
