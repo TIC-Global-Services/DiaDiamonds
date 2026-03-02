@@ -114,7 +114,7 @@ export default function TheArtOfRefinement() {
             <h2 className="w-[74.9%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF] text-[40px] leading-[100%] pb-[4.85%] md:pb-[10.27%] text-center md:text-left">The Art of Radiant Refinement</h2>
             <p className="w-[74.9%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF]/70 pb-[5.83%] md:pb-[12.33%] text-center md:text-left">Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.</p>
             <div className="w-[24.76%] md:w-auto mx-auto block md:mx-0">
-              <PrimaryBtn text="VIEW MORE" color="white"/>
+              <PrimaryBtn text="VIEW MORE" textColor="text-white"/>
             </div>
           </div>
 

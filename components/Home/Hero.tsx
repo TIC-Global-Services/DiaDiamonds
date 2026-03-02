@@ -36,7 +36,7 @@ const Hero = () => {
                 </p>
 
 
-                <PrimaryBtn text="DISCOVER MORE" color="white" />
+                <PrimaryBtn text="DISCOVER MORE" textColor="text-white" />
                    
 
 

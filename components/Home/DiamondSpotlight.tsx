@@ -85,7 +85,7 @@ export default function DiamondSpotlight() {
           <h2 className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#EFFFFF] text-center">
             Designed for you. Crafted for a lifetime.
           </h2>
-          <PrimaryBtn text="DISCOVER MORE" color="white"/>
+          <PrimaryBtn text="DISCOVER MORE" textColor="text-white"/>
         </div>
       </div>
     </section>

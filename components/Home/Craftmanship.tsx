@@ -59,7 +59,7 @@ export default function Craftsmanship() {
           {/* <button className="glass-btn BtnAnimation text-[10px] md:text-[12px] tracking-[0.166rem] border-[5.3px] rounded-full px-[16px] py-[3px] md:px-[18px] md:py-[7.6px]  uppercase ">
             VIEW BRACELET COLLECTION
           </button> */}
-          <PrimaryBtn text="VIEW BRACELET COLLECTION" color="black" />
+          <PrimaryBtn text="VIEW BRACELET COLLECTION" textColor="text-black" animated={false} />
         </div>
       </motion.div>
 
