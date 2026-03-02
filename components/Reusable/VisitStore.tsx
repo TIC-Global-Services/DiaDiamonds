@@ -62,11 +62,11 @@ export default function VisitStore() {
           </div>
 
           {/* Second div */}
-          <div className="w-full md:w-[34.86%] h-auto overflow-hidden relative order-1 md:order-2 shrink-0">
+          <div className="w-full md:w-[34.86%] h-auto overflow-hidden relative order-1 md:order-2 shrink-0 ">
             <img
               src={ImageRight}
               alt="Visit Store"
-              className="w-absolute top-0 left-0 w-full h-full object-cover"
+              className="w-absolute top-0 left-0 w-full h-full object-cover hover:scale-110 duration-100 ease"
             />
           </div>
         </div>
