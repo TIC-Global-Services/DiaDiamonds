@@ -19,7 +19,9 @@ export default function Search({isSearch, setIsSearch}:SearchPanelProps) {
 
 
   return (
-    <motion.div
+    <motion.section
+
+    data-theme="dark"
 
     initial={{clipPath: "circle(0% at 0% 0%)"}}
     animate={{clipPath: isSearch ? "circle(150% at 0% 0%)" : "circle(0% at 0% 0%)"}}
@@ -97,6 +99,6 @@ export default function Search({isSearch, setIsSearch}:SearchPanelProps) {
           </div>
        
         </div>
-    </motion.div>
+    </motion.section>
   );
 }
