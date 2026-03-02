@@ -1,6 +1,7 @@
 "use client";
 
 import { Parallax } from "react-scroll-parallax";
+import PrimaryBtn from "../Reusable/PrimaryBtn";
 
 const Hero = () => {
 
@@ -35,9 +36,7 @@ const Hero = () => {
                 </p>
 
 
-                <button className="glass-btn BtnAnimation  text-[#E7D7EF] text-[16px] font-medium uppercase ">
-  <span>DISCOVER MORE</span>
-</button>
+                <PrimaryBtn text="DISCOVER MORE" color="white" />
                    
 
 

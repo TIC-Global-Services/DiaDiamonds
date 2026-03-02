@@ -1,6 +1,8 @@
 'use client';
 import { useRef, useEffect, useState } from "react";
 
+import PrimaryBtn from "../Reusable/PrimaryBtn";
+
 export default function DiamondSpotlight() {
 
   const [maskSize, setMaskSize] = useState("26% 37%");
@@ -83,11 +85,7 @@ export default function DiamondSpotlight() {
           <h2 className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#EFFFFF] text-center">
             Designed for you. Crafted for a lifetime.
           </h2>
-          <button className="BtnAnimation glass-btn text-[#E7DFD7] mt-5 w-[213px] h-[44px] backdrop-blur-[0.9px] bg-opacity-0 backdrop-saturate-100 backdrop-contrast-100 text-[#E7D7EF] text-[16px] font-medium uppercase ">
-            <a href="https://www.chopard.com/en-in/jewellery-happy-hearts" target="_blank">
-              DISCOVER MORE
-            </a>
-          </button>
+          <PrimaryBtn text="DISCOVER MORE" color="white"/>
         </div>
       </div>
     </section>

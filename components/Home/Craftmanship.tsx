@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
+import PrimaryBtn from "../Reusable/PrimaryBtn";
 
 export default function Craftsmanship() {
   const imageSrc = "/assets/img/Craftsmanship/CraftManShipImage1.png";
@@ -55,9 +56,10 @@ export default function Craftsmanship() {
           />
         </Parallax>
         <div className="absolute inset-0 flex justify-center items-end pb-10 md:mb-28">
-          <button className="glass-btn BtnAnimation text-[10px] md:text-[12px] tracking-[0.166rem] border-[5.3px] rounded-full px-[16px] py-[3px] md:px-[18px] md:py-[7.6px]  uppercase ">
+          {/* <button className="glass-btn BtnAnimation text-[10px] md:text-[12px] tracking-[0.166rem] border-[5.3px] rounded-full px-[16px] py-[3px] md:px-[18px] md:py-[7.6px]  uppercase ">
             VIEW BRACELET COLLECTION
-          </button>
+          </button> */}
+          <PrimaryBtn text="VIEW BRACELET COLLECTION" color="black" />
         </div>
       </motion.div>
 

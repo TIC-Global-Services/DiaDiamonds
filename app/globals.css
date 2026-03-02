@@ -75,7 +75,7 @@ body {
   justify-content: center;
 }
 
-.BtnAnimation::before {
+.BtnAnimation::after {
   content: '';
   position: absolute;
   bottom: -50%;
@@ -86,10 +86,10 @@ body {
   border-radius: 50%;
   transform: translateX(-50%);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: -1;
+  z-index: 0; /* sits under text but above background */
 }
 
-.BtnAnimation:hover::before {
+.BtnAnimation:hover::after {
   width: 250%;
   height: 250%;
   bottom: -75%;
@@ -115,47 +115,35 @@ body {
 
 
 
-.glass-btn {
-
-  /* Sizing */
-  padding: 10px 24px;
-  min-width: 148px;
 
 
+.btn-glass-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  padding: 1px;
 
-  /* Shape */
-  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.6),
+    rgba(255, 255, 255, 0.1),
+    rgba(255,255,255,0.6)
+  );
 
-  /* Glass background — transparent frosted look */
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px) saturate(140%);
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  /* CUT OUT center to make it a border */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0),
+    
+    /* remove top-right */
+    radial-gradient(circle at 100% 0%, transparent 0px, black 0px),
+    
+    /* remove bottom-left */
+    radial-gradient(circle at 0% 100%, transparent 5px, black 0px);
 
-  /* Border — subtle light rim */
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 
-  /* Soft outer glow matching the bokeh bg */
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.35) inset,
-    0 2px 12px rgba(0, 0, 0, 0.45),
-    0 0 24px rgba(255, 255, 255, 0.04);
-
-  /* Interaction */
-  cursor: pointer;
-  user-select: none;
-  outline: none;
-  transition:
-    background 0.25s ease,
-    box-shadow 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
-}
-
-
-
-
-/* ── Focus-visible (keyboard nav) ── */
-.glass-btn:focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.45);
-  outline-offset: 3px;
+  pointer-events: none;
 }
