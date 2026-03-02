@@ -62,44 +62,6 @@ body {
   
 }
 
-/* Button animation */
-.BtnAnimation {
-  cursor: pointer;
-  transition: all 0.4s ease;
-  text-transform: none;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.BtnAnimation::after {
-  content: '';
-  position: absolute;
-  bottom: -50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background-color: #f8f8f8;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 0; /* sits under text but above background */
-}
-
-.BtnAnimation:hover::after {
-  width: 250%;
-  height: 250%;
-  bottom: -75%;
-}
-
-.BtnAnimation:hover {
-  color: black;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(35, 91, 90, 0.3);
-}
 
 .step-carousel {
   display: flex;
@@ -112,6 +74,81 @@ body {
   66% { transform: translateX(-200%); }
   100% { transform: translateX(0); }
 }
+
+/* PrimaryBtn.css */
+
+/* Button animation container */
+.BtnAnimation {
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Ripple effect */
+.BtnAnimation::after {
+  content: '';
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: var(--ripple-color, white);
+  border-radius: 50%;
+  transform: translateX(-50%) scale(0);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+}
+
+.BtnAnimation:hover::after {
+  transform: translateX(-50%) scale(5);
+  bottom: -75%;
+}
+
+.BtnAnimation:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(35, 91, 90, 0.3);
+}
+
+/* Glass border with corner cutouts */
+.btn-glass-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  padding: 1px;
+
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.1),
+    rgba(255,255,255,0.6)
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0),
+    radial-gradient(circle at 100% 0%, transparent 5px, black 0px),
+    radial-gradient(circle at 0% 100%, transparent 5px, black 0px);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* Text with blend mode for automatic inversion */
+.BtnAnimation span {
+  position: relative;
+  z-index: 2;
+  mix-blend-mode: difference;
+}
+
+
 
 
 
