@@ -112,7 +112,7 @@ export default function TheArtOfRefinement() {
           <div className="w-full md:w-[51.7%] my-auto md:ml-[1.875%] pb-[13.11%] md:pb-[9.4%] text-center md:text-left">
             <h2 className="w-[74.9%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF] text-[40px] leading-[100%] pb-[4.85%] md:pb-[10.27%] text-center md:text-left">The Art of Radiant Refinement</h2>
             <p className="w-[74.9%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF]/70 pb-[5.83%] md:pb-[12.33%] text-center md:text-left">Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.</p>
-            <button className="w-[24.76%] md:w-auto mx-auto block md:mx-0 glass-btn text-[#FFFFFF] ">VIEW MORE</button>
+            <button className="BtnAnimation w-[24.76%] md:w-auto mx-auto block md:mx-0 glass-btn text-[#FFFFFF] ">VIEW MORE</button>
           </div>
 
           <div className="relative w-[51.94%] mx-auto md:mx- md:w-[36.82%] aspect-317/451 border-[1px] border-[#FFFFFF]/10 rounded-[10px] overflow-hidden shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">

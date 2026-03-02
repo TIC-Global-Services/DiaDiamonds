@@ -35,7 +35,7 @@ const Hero = () => {
                 </p>
 
 
-                <button className="glass-btn  text-[#E7D7EF] text-[16px] font-medium uppercase ">
+                <button className="glass-btn BtnAnimation  text-[#E7D7EF] text-[16px] font-medium uppercase ">
   <span>DISCOVER MORE</span>
 </button>
                    
