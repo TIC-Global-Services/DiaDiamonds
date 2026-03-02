@@ -116,9 +116,6 @@ body {
 
 
 .glass-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 
   /* Sizing */
   padding: 10px 24px;
@@ -154,25 +151,8 @@ body {
     border-color 0.25s ease;
 }
 
-/* ── Hover state ── */
-.glass-btn:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.30);
-  color: rgba(255, 255, 255, 1);
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.35) inset,
-    0 4px 20px rgba(0, 0, 0, 0.55),
-    0 0 32px rgba(255, 255, 255, 0.07);
-}
 
-/* ── Active / pressed state ── */
-.glass-btn:active {
-  background: rgba(255, 255, 255, 0.04);
-  transform: scale(0.975);
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.5) inset,
-    0 2px 8px rgba(0, 0, 0, 0.5);
-}
+
 
 /* ── Focus-visible (keyboard nav) ── */
 .glass-btn:focus-visible {
