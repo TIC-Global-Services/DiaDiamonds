@@ -62,7 +62,7 @@ export default function Testimonials() {
         <img 
           src={TestimonialLeftImage}
           alt="testimonial visual"
-          className="w-full 2xl:h-screen  object-cover object-top -translate-y-1/6  hover:scale-110 delay-75 duration-100 ease-in-out"
+          className="w-full 2xl:h-screen  object-cover object-top -translate-[8%]  scale-120 hover:scale-130 delay-75 duration-100 ease-in-out"
         />
         </Parallax>
       </div>
