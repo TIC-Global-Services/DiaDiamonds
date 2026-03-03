@@ -36,3 +36,15 @@ export const ClashDisplay = localFont({
   variable: "--font-clash-display",
   display: "swap",
 });
+
+export const BaskerVilleSC = localFont({
+  src: [
+    {
+      path:'./BaskerVille/BaskervvilleSC-Regular.ttf',
+      weight:"400",
+      style:"normal",
+    },
+  ],
+  variable:"--font-basker-ville",
+  display:"swap",
+})

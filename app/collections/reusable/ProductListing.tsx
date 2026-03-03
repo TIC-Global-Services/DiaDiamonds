@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import ProductItems from "./ProductItems";
+import { ParamValue } from "next/dist/server/request/params";
 
 
 type BaseItem = {
@@ -21,10 +22,12 @@ type CategoryData = {
 };
 
 type ProductListingProps = {
-  data: CategoryData;
+  data: CategoryData,
+  item: ParamValue;
+  setItem: React.Dispatch<React.SetStateAction<ParamValue>>;
 };
 
-export default function ProductListing({data}:ProductListingProps){
+export default function ProductListing({data, item, setItem}:ProductListingProps){
 
     const [isLeftDropDownClicked, setIsLeftDropDownClicked] = useState<boolean>(false);
     const [isRightDropDownClicked, setIsRightDropDownClicked] = useState<boolean>(false);
@@ -35,7 +38,7 @@ export default function ProductListing({data}:ProductListingProps){
         <section className="w-full">
 
             {/* Top Menu of Product Listing */}
-            <div className="hidden md:flex w-full md:mt-[8.33%] md:px-[2.71%] flex justify-between items-start">
+            <div className="hidden md:flex w-full md:mt-[8.33%]  px-[3.88%] md:px-[3.19%] flex justify-between items-start">
 
                 {/* Left Button */}
                 <button onClick={()=>setIsLeftDropDownClicked(!isLeftDropDownClicked)} className="relative md:px-[2.72%] md:py-[1.76%] flex items-center bg-[#431A1A] border-0 rounded-[14px] shrink-0 md:gap-[9px] cursor-pointer">
@@ -55,16 +58,16 @@ export default function ProductListing({data}:ProductListingProps){
 
                         <div onClick={()=>setSortBy("new arrival")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "new arrival" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>New Arrival</div>
 
-                        <div onClick={()=>setSortBy("new collection")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "new collection" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer border-b-[14px]`}>New Collections</div>
+                        <div onClick={()=>setSortBy("new collection")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "new collection" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer rounded-b-[14px]`}>New Collections</div>
 
 
                     </motion.div>
                 </button>
 
                 {/* Main Title */}
-                <div className="flex flex-col justify-center items-center md:gap-[14px]">
+                <div className="flex flex-col justify-center items-center md:gap-[14px] ">
 
-                    <h3 className="font-medium md:text-[36px] md:leading-[16px] md:tracking-[0.88px] uppercase text-[#000000] md:pb-[1.03%]">RINGS</h3>
+                    <h3 className="font-medium md:text-[36px] md:leading-[16px] md:tracking-[0.88px] uppercase text-[#000000] md:pb-[1.03%]">{item}</h3>
 
                     <p className="font-normal m-0 md:text-[13px] md:leading-[16px] md:tracking-[-0.24px] text-[#000000]">Scroll to discover</p>
 
@@ -73,7 +76,7 @@ export default function ProductListing({data}:ProductListingProps){
                 </div>
 
                 {/* Right Button */}
-                <button onClick={()=>{setIsRightDropDownClicked(!isRightDropDownClicked)}} className="relative md:px-[2.72%]  md:py-[1.76%] flex md:gap-[9px] items-center bg-[#431A1A] border-0 rounded-[14px] shrink-0 cursor-pointer">
+                <button onClick={()=>{setIsRightDropDownClicked(!isRightDropDownClicked)}} className={`${item != 'rings' ? 'opacity-0 pointer-events-none' : 'opacity-[100%]'} relative md:px-[2.72%]  md:py-[1.76%] flex md:gap-[9px] items-center bg-[#431A1A] border-0 rounded-[14px] shrink-0 cursor-pointer`}>
 
                     <h3 className="font-semibold md:text-[13px] md:leading-[16px] md:tracking-[0.88px] uppercase text-[#FFFFFF] shrink-0">SOLITAIRE VARIETY</h3>
 
@@ -95,7 +98,7 @@ export default function ProductListing({data}:ProductListingProps){
 
                         <div onClick={()=>setSortBy("princess cut")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "princess cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Princess cut</div>
 
-                        <div onClick={()=>setSortBy("marquise cut")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "marquise cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer border-b-[14px]`}>Marquise cut</div>
+                        <div onClick={()=>setSortBy("marquise cut")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "marquise cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer rounded-b-[14px]`}>Marquise cut</div>
 
 
                     </motion.div>
@@ -106,27 +109,12 @@ export default function ProductListing({data}:ProductListingProps){
 
             {/* THE PRODUCTS GRID */}
 
-            <div className="w-full md:px-[2.78%] md:py-[2.15%] grid grid-cols-2 md:grid-cols-3 md:gap-[1.32%] ">
+            <div className="w-full px-[3.64%] md:px-[2.78%] py-[16.02%] md:py-[2.15%] md:pb- grid grid-cols-2 md:grid-cols-3 md:gap-[1.32%] ">
 
 
                 {data.normal.map((data, id)=>(
 
-                <div key={id} className="flex flex-col justify-center items-center md:gap-[18.37%] ">
-
-
-                    <img className="w-full md:aspect-square overflow-hidden" src={data.img} alt={data.name} />
-
-                    <div className="flex flex-col justify-center items-center md:gap-[9px]">
-
-                        <p className="md:text-[13px] md:leading-[19.6px] md:tracking-[0%] text-[#6E6E6E]">{data.color}</p>
-
-                        <h3 className="font-baskerville md:text-[24px] md:leading-[19.52px] md:tracking-[0%] text-[#000000] uppercase text-center">{data.name}</h3>
-
-                        <p className="font-baskerville md:text-[16px] md:leading-[20px] md:tracking-[0%] text-[#000000]">{data.type}</p>
-
-                    </div>
-
-                </div>
+                <ProductItems id={id} data={data} />
 
                 ))}
 
