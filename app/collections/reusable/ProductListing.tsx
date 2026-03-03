@@ -111,7 +111,7 @@ export default function ProductListing({data}:ProductListingProps){
 
                 {data.normal.map((data, id)=>(
 
-                <div className="flex flex-col justify-center items-center md:gap-[18.37%] ">
+                <div key={id} className="flex flex-col justify-center items-center md:gap-[18.37%] ">
 
 
                     <img className="w-full md:aspect-square overflow-hidden" src={data.img} alt={data.name} />
