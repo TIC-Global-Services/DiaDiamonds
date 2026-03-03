@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import ProductItems from "./ProductItems";
+
+
 import { ParamValue } from "next/dist/server/request/params";
 
 
@@ -11,6 +13,7 @@ type BaseItem = {
   color: string;
   name: string;
   type: string;
+  id:number;
 };
 
 type RingItem = BaseItem & {
@@ -24,8 +27,10 @@ type CategoryData = {
 type ProductListingProps = {
   data: CategoryData,
   item: ParamValue;
-  setItem: React.Dispatch<React.SetStateAction<ParamValue>>;
+  setItem: React.Dispatch<React.SetStateAction<string>>;
 };
+
+
 
 export default function ProductListing({data, item, setItem}:ProductListingProps){
 
@@ -33,6 +38,37 @@ export default function ProductListing({data, item, setItem}:ProductListingProps
     const [isRightDropDownClicked, setIsRightDropDownClicked] = useState<boolean>(false);
     const [sortBy, setSortBy] = useState<string>('recommended');
     const [solitaireVariety, setSolitaireVariety] = useState<string>('default');
+    const [ItemData, setItemData] = useState<string>('normal');
+    let dataItem;
+
+    if(item == "rings"){
+        switch(ItemData){
+            case "normal":
+                dataItem = data.normal;
+                break;
+            case "roundBrilliant":
+                dataItem = data.roundBrilliant;
+                break;
+            case "cushionCut":
+                dataItem = data.cushionCut;
+                break;
+            case "emeraldRound":
+                dataItem = data.emeraldRound;
+                break;
+            case "princessCut":
+                dataItem = data.princessCut;
+                break;
+            case "marquiseCut":
+                dataItem = data.marquiseCut;
+                break;
+            default:
+                dataItem = data.normal;
+        }
+    } else {
+        dataItem = data.normal;
+    }
+   
+    
 
     return(
         <section className="w-full">
@@ -90,15 +126,26 @@ export default function ProductListing({data, item, setItem}:ProductListingProps
                     
                     className="w-full absolute top-[95%] left-0 flex flex-col justify-center items-center">
 
-                        <div onClick={()=>setSortBy("round brilliant")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "round brilliant" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Round Brilliant</div>
+                        <div onClick={()=>{
+                            setSolitaireVariety("round brilliant"),
+                            setItemData('roundBrilliant')
+                            }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${solitaireVariety == "round brilliant" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Round Brilliant</div>
 
-                        <div onClick={()=>setSortBy("cushion cut")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "cushion cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Cushion Cut</div>
+                        <div onClick={()=>{setSolitaireVariety("cushion cut"), 
+                            setItemData('cushionCut')
+                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${solitaireVariety == "cushion cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Cushion Cut</div>
 
-                        <div onClick={()=>setSortBy("emerald & round cut")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "emerald & round cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Emerald & Round cut</div>
+                        <div onClick={()=>{setSolitaireVariety("emerald & round cut"),
+                            setItemData('emeraldRound')
+                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${solitaireVariety == "emerald & round cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Emerald & Round cut</div>
 
-                        <div onClick={()=>setSortBy("princess cut")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "princess cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Princess cut</div>
+                        <div onClick={()=>{setSolitaireVariety("princess cut"),
+                        setItemData('princessCut')
+                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${solitaireVariety == "princess cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Princess cut</div>
 
-                        <div onClick={()=>setSortBy("marquise cut")} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${sortBy == "marquise cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer rounded-b-[14px]`}>Marquise cut</div>
+                        <div onClick={()=>{setSolitaireVariety("marquise cut"),
+                        setItemData('marquiseCut')
+                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${solitaireVariety == "marquise cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer rounded-b-[14px]`}>Marquise cut</div>
 
 
                     </motion.div>
@@ -112,11 +159,12 @@ export default function ProductListing({data, item, setItem}:ProductListingProps
             <div className="w-full px-[3.64%] md:px-[2.78%] py-[16.02%] md:py-[2.15%] md:pb- grid grid-cols-2 md:grid-cols-3 md:gap-[1.32%] ">
 
 
-                {data.normal.map((data, id)=>(
-
-                <ProductItems id={id} data={data} />
+                {dataItem.map((data, _)=>(
+                    
+                <ProductItems id={data.id}  data={data} />
 
                 ))}
+                
 
                 
 
