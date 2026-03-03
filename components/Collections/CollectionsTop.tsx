@@ -5,7 +5,7 @@ import { useState } from "react";
 
 type CollectionsTopProps = {
   item: ParamValue;
-  setItem: React.Dispatch<React.SetStateAction<ParamValue>>;
+  setItem: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export default function CollectionsTop({item, setItem}:CollectionsTopProps){
