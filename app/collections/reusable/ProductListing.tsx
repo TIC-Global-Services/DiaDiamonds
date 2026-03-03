@@ -161,7 +161,7 @@ export default function ProductListing({data, item, setItem}:ProductListingProps
 
                 {dataItem.map((data, _)=>(
                     
-                <ProductItems id={data.id}  data={data} />
+                <ProductItems key={data.id} id={data.id}  data={data} />
 
                 ))}
                 

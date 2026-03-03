@@ -63,7 +63,7 @@ export default function CollectionsTop({item, setItem}:CollectionsTopProps){
 
                 {
                     pictureMenuItems.map((data, id)=>(
-                        <div className="flex flex-col justify-center items-center w-[28.88%] md:w-[17.7%] shrink-0">
+                        <div key={id} className="flex flex-col justify-center items-center w-[28.88%] md:w-[17.7%] shrink-0">
 
                             <img onClick={()=>setItem(data.title)} src={data.img} alt={data.title} className={`${item == data.title ? 'border-[0.5px] border-[#431A1A]/30': ''} w-full md:aspect-119/150 md:aspect-240/224 overflow-hidden cursor-pointer`}/>
 
