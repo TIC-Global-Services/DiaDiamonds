@@ -7,10 +7,11 @@ type DataProps = {
     name:string,
     color:string,
     type:string,
+    id:number,
 }
 
 type ProductItemsPropsType = {
-    id:Number,
+    id:Number
     data: DataProps,
 }
 
@@ -31,12 +32,12 @@ export default function ProductItems({id, data}:ProductItemsPropsType){
 
                     <div className="flex flex-col justify-center items-center md:gap-[9px]">
 
-                        <p className="md:text-[13px] md:leading-[19.6px] md:tracking-[0%] text-[#6E6E6E] m-0">{data.color}</p>
+                        <p className="text-[10px] md:text-[13px] leading-[19.6px] tracking-[0%] text-[#6E6E6E] m-0">{data.color}</p>
 
-                        <h3 className="font-baskerville md:text-[24px] md:leading-[19.52px] md:tracking-[0%] text-[#000000] uppercase text-center">{data.name}</h3>
+                        <h3 className="font-baskerville text-[13px] md:text-[24px] leading-[14px] md:leading-[19.52px] tracking-[0%] text-[#000000] uppercase text-center">{data.name}</h3>
 
                         {
-                            data.type == "none" ? "" : <p className="font-baskerville md:text-[16px] md:leading-[20px] md:tracking-[0%] text-[#000000] m-0">{data.type}</p> 
+                            data.type == "none" ? "" : <p className="font-baskerville text-[10px] md:text-[16px] leading-[20px] tracking-[0%] text-[#000000] m-0">{data.type}</p> 
                         }
                         
 
