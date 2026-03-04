@@ -12,9 +12,9 @@ export default function TheArtOfCrafting({img, text}:ArtOfCraftingProps){
     return(
         <section className="w-full flex flex-wrap md:flex-nowrap md:items-stretch">
 
-            <div className="w-full md:w-[65.28%] aspect-412/529 md:aspect-940/847 overflow-hidden">
+            <div className="w-full md:w-[65.28%] aspect-412/529 md:aspect-940/847 overflow-hidden flex stretch">
 
-                <img src={img} alt={'bgImage'} className="w-full h-auto md:mt-[-15%]"/>
+                <img src={img} alt={'bgImage'} className="w-full  aspect-412/529 md:aspect-940/847 h-auto  object-cover"/>
 
             </div>
 

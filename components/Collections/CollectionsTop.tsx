@@ -1,14 +1,15 @@
 "use client";
-import { ParamValue } from "next/dist/server/request/params";
 
-import { useState } from "react";
+import { ParamValue } from "next/dist/server/request/params";
+import { useRouter } from "next/navigation";
 
 type CollectionsTopProps = {
-  item: ParamValue;
-  setItem: React.Dispatch<React.SetStateAction<string>>;
+  item: ParamValue
 };
 
-export default function CollectionsTop({item, setItem}:CollectionsTopProps){
+export default function CollectionsTop({item}:CollectionsTopProps){
+
+    const router = useRouter();
 
 
     const textStyle = "text-[10px] md:text-[12px] leading-[16px] tracking-[-0.26px] uppercase text-[#000000]";
@@ -41,7 +42,7 @@ export default function CollectionsTop({item, setItem}:CollectionsTopProps){
     ]
 
     return(
-        <section data-theme="dark" className="w-full mt-[25.49%] md:mt-[6.53%]"> 
+        <section data-theme="dark" className="w-full mt-[25.49%] mb-[6.82%] md:mb-0 md:mt-[6.53%]"> 
             
             {/* Title Menu */}
             <div className="w-full py-[3.64%] md:py-[2.5%] flex justify-center items-center gap-[3.1%] md:gap-[0.56%] border-y border-[#000000]/10">
@@ -54,7 +55,7 @@ export default function CollectionsTop({item, setItem}:CollectionsTopProps){
 
                 <span className={`${textStyle} text-[#6C757D]`}>/</span>
 
-                <a href="" className={textStyle}>RINGS</a>
+                <a href="" className={textStyle}>{item}</a>
 
             </div>
 
@@ -63,11 +64,11 @@ export default function CollectionsTop({item, setItem}:CollectionsTopProps){
 
                 {
                     pictureMenuItems.map((data, id)=>(
-                        <div key={id} className="flex flex-col justify-center items-center w-[28.88%] md:w-[17.7%] shrink-0">
+                        <div onClick={()=>router.push(`/collections/${data.title}`)} key={id} className="flex flex-col justify-center items-center w-[28.88%] md:w-[17.7%] shrink-0">
 
-                            <img onClick={()=>setItem(data.title)} src={data.img} alt={data.title} className={`${item == data.title ? 'border-[0.5px] border-[#431A1A]/30': ''} w-full md:aspect-119/150 md:aspect-240/224 overflow-hidden cursor-pointer`}/>
+                            <img  src={data.img} alt={data.title} className={`${item == data.title ? 'border-[0.5px] border-[#431A1A]/30': ''} w-full md:aspect-119/150 md:aspect-240/224 overflow-hidden cursor-pointer`}/>
 
-                            <p onClick={()=>setItem(data.title)} className={` ${item == data.title ? 'text-[#431A1A] underline' : 'text-[#000000]'} font-semibold mt-[3.79%] md:mt-[14.17%] text-[11px] md:text-[13px] leading-[16px] tracking-[1.2px] uppercase cursor-pointer` }>{data.title}</p>
+                            <p  className={` ${item == data.title ? 'text-[#431A1A] underline' : 'text-[#000000]'} font-semibold mt-[3.79%] mt-[12.61%] md:mt-[14.17%] text-[11px] md:text-[13px] leading-[16px] tracking-[1.2px] uppercase cursor-pointer` }>{data.title}</p>
                         </div>
                     ))
                 }
