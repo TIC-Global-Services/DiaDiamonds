@@ -1,10 +1,9 @@
 "use client";
 
-import { ParamValue } from "next/dist/server/request/params";
 import { useRouter } from "next/navigation";
 
 type CollectionsTopProps = {
-  item: ParamValue
+  item: string
 };
 
 export default function CollectionsTop({item}:CollectionsTopProps){

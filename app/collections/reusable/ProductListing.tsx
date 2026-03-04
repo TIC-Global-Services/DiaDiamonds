@@ -5,9 +5,6 @@ import { motion } from "framer-motion";
 import ProductItems from "./ProductItems";
 
 
-import { ParamValue } from "next/dist/server/request/params";
-
-
 type BaseItem = {
   img: string;
   color: string;
@@ -23,7 +20,7 @@ type CategoryData = {
 
 type ProductListingProps = {
   data: CategoryData,
-  item: ParamValue;
+  item: string;
 };
 
 
