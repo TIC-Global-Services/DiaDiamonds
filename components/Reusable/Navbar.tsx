@@ -112,19 +112,19 @@ export default function Navbar() {
           </li>
           <ul className={`pt-[30px] pb-10 ${collectionClick ? 'block' : 'hidden'}`}>
               <li className="pb-[14px] text-2xl leading-[100%] ">
-                <p className="hover:cursor-pointer hover:underline">Rings</p>
+                <a href="/collections/rings" className="hover:cursor-pointer hover:underline">Rings</a>
               </li>
               <li className="pb-[14px] text-2xl leading-[100%]">
-                <p className="hover:cursor-pointer hover:underline">Pendants</p>
+                <a href="/collections/pendants" className="hover:cursor-pointer hover:underline">Pendants</a>
               </li>
               <li className="pb-[14px] text-2xl leading-[100%]">
-                <p className="hover:cursor-pointer hover:underline">Necklaces</p>
+                <a href="/collections/necklaces" className="hover:cursor-pointer hover:underline">Necklaces</a>
               </li>
               <li className="pb-[14px] text-2xl leading-[100%]">
-                <p className="hover:cursor-pointer hover:underline">Bracelets</p>
+                <a href="/collections/bracelets" className="hover:cursor-pointer hover:underline">Bracelets</a>
               </li>
               <li className="pb-[14px] text-2xl leading-[100%]">
-                <p className="hover:cursor-pointer hover:underline">Earrings</p>
+                <a href="/collections/earrings" className="hover:cursor-pointer hover:underline">Earrings</a>
               </li>
             </ul>
           <li className="text-[32px] leading-[110%] pb-10 text-[#000000] uppercase hover:cursor-pointer hover:underline">
