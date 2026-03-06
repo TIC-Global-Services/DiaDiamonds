@@ -45,6 +45,6 @@ export const BaskerVilleSC = localFont({
       style:"normal",
     },
   ],
-  variable:"--font-basker-ville",
+  variable:"--font-baskerVille",
   display:"swap",
 })

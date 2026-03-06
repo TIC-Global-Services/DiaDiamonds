@@ -13,7 +13,7 @@ body {
 }
 
 .font-baskerville{
-  font-family: var(--font-basker-ville);
+  font-family: var(--font-baskerVille), "sans-serif";
 }
 
 /* Base styles */

@@ -1,4 +1,5 @@
 
+import Image from "next/image";
 
 type ArtOfCraftingProps = {
     img:string,
@@ -14,7 +15,7 @@ export default function TheArtOfCrafting({img, text}:ArtOfCraftingProps){
 
             <div className="w-full md:w-[65.28%] aspect-412/529 md:aspect-940/847 overflow-hidden flex stretch">
 
-                <img src={img} alt={'bgImage'} className="w-full  aspect-412/529 md:aspect-940/847 h-auto  object-cover"/>
+                <Image src={img} alt={'bgImage'} className="w-full  h-auto  object-cover" width={940} height={847} />
 
             </div>
 

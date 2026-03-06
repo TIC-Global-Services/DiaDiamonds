@@ -16,15 +16,15 @@ const CollectionsItems = {
 
   rings: {
     normal: [
-      { img: "/assets/img/collections/collectionItem/rings/normal/img1.png", color: "Yellow Gold", name: "Engagement Ring", type: "Round Brilliant", tagType: "new arrival", id: 0 },
-      { img: "/assets/img/collections/collectionItem/rings/normal/img2.jpg", color: "Rose Gold", name: "Engagement Ring", type: "Cushion Cut", tagType: "none", id: 1 },
-      { img: "/assets/img/collections/collectionItem/rings/normal/img3.png", color: "Yellow Gold", name: "Floral Diamond rings", type: "Marquise Cut", tagType: "none", id: 2 },
-      { img: "/assets/img/collections/collectionItem/rings/normal/img4.jpg", color: "Rose Gold", name: "Floral Engagement ring", type: "Round Brilliant", tagType: "none", id: 3 },
-      { img: "/assets/img/collections/collectionItem/rings/normal/img5.png", color: "Rose Gold", name: "Chevron Rings", type: "Round Brilliant", tagType: "none", id: 4 },
-      { img: "/assets/img/collections/collectionItem/rings/normal/img6.png", color: "Silver", name: "Starlight Silver", type: "Round Brilliant", tagType: "recommended", id: 5 },
-      { img: "/assets/img/collections/collectionItem/rings/normal/img7.png", color: "Rose Gold", name: "Twilight Twist Solitaire", type: "Princess Cut", tagType: "none", id: 6 },
-      { img: "/assets/img/collections/collectionItem/rings/normal/img8.png", color: "Yellow Gold", name: "Harmony Two-Stone Ring", type: "Emerald + Round", tagType: "none", id: 7 },
-      { img: "/assets/img/collections/collectionItem/rings/normal/img9.png", color: "Yellow Gold", name: "Aurora Curve Ring", type: "Round Brilliant", tagType: "new collection", id: 8 }
+      { img: "/assets/img/Collections/collectionItem/rings/normal/img1.png", color: "Yellow Gold", name: "Engagement Ring", type: "Round Brilliant", tagType: "new arrival", id: 0 },
+      { img: "/assets/img/Collections/collectionItem/rings/normal/img2.jpg", color: "Rose Gold", name: "Engagement Ring", type: "Cushion Cut", tagType: "none", id: 1 },
+      { img: "/assets/img/Collections/collectionItem/rings/normal/img3.png", color: "Yellow Gold", name: "Floral Diamond rings", type: "Marquise Cut", tagType: "none", id: 2 },
+      { img: "/assets/img/Collections/collectionItem/rings/normal/img4.jpg", color: "Rose Gold", name: "Floral Engagement ring", type: "Round Brilliant", tagType: "none", id: 3 },
+      { img: "/assets/img/Collections/collectionItem/rings/normal/img5.png", color: "Rose Gold", name: "Chevron Rings", type: "Round Brilliant", tagType: "none", id: 4 },
+      { img: "/assets/img/Collections/collectionItem/rings/normal/img6.png", color: "Silver", name: "Starlight Silver", type: "Round Brilliant", tagType: "recommended", id: 5 },
+      { img: "/assets/img/Collections/collectionItem/rings/normal/img7.png", color: "Rose Gold", name: "Twilight Twist Solitaire", type: "Princess Cut", tagType: "none", id: 6 },
+      { img: "/assets/img/Collections/collectionItem/rings/normal/img8.png", color: "Yellow Gold", name: "Harmony Two-Stone Ring", type: "Emerald + Round", tagType: "none", id: 7 },
+      { img: "/assets/img/Collections/collectionItem/rings/normal/img9.png", color: "Yellow Gold", name: "Aurora Curve Ring", type: "Round Brilliant", tagType: "new collection", id: 8 }
     ],
 
     roundBrilliant: [
