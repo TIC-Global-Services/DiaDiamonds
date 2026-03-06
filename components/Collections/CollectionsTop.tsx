@@ -59,11 +59,11 @@ export default function CollectionsTop({item}:CollectionsTopProps){
             </div>
 
             {/* Picture Menu */}
-            <div className="w-full flex gap-[3.88%] md:gap-[2.6%] px-[3.88%] md:px-[3.19%] overflow-scroll md:overflow-hidden" style={{scrollbarWidth:'none'}}>
+            <div className="w-full flex gap-[3.88%] md:gap-[2.6%] px-[3.88%] md:px-[3.19%] overflow-scroll md:overflow-hidden md:mt-[1.33%]" style={{scrollbarWidth:'none'}}>
 
                 {
                     pictureMenuItems.map((data, id)=>(
-                        <div onClick={()=>router.push(`/collections/${data.title}`)} key={id} className="flex flex-col justify-center items-center w-[28.88%] md:w-[17.7%] shrink-0">
+                        <div onClick={()=>router.push(`/collections/${data.title}`)} key={id} className="flex flex-col justify-center items-center w-[28.88%] md:w-[17.7%] shrink-0" >
 
                             <img  src={data.img} alt={data.title} className={`${item == data.title ? 'border-[0.5px] border-[#431A1A]/30': ''} w-full md:aspect-119/150 md:aspect-240/224 overflow-hidden cursor-pointer`}/>
 
