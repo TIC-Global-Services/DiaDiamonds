@@ -56,7 +56,7 @@ export default function TheArtOfRefinement() {
   const pantherSparkleRef = useRef<HTMLImageElement>(null);
   const PantherImg = '/assets/img/TheArtOfRefinement/PantherOriginal.png';
   const DiamondCaseImg = '/assets/img/TheArtOfRefinement/DiamondCase.png';
-  const singleSparkleImg = '/assets/img/singleSparkle.png';
+  const singleSparkleImg = '/assets/img/singleSparkleAlpha.png';
 
   const CaptureMousePosition = (e:React.MouseEvent<HTMLImageElement>)=>{
     if(!pantherSparkleRef.current) return;
