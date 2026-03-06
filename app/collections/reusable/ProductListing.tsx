@@ -152,7 +152,7 @@ export default function ProductListing({data, item}:ProductListingProps){
             <div className="hidden relative md:flex w-full md:mt-[8.33%]  px-[3.88%] md:px-[3.19%] flex justify-between items-start ">
 
                 {/* Left Button */}
-                <button onClick={()=>setIsLeftDropDownClicked(!isLeftDropDownClicked)} className="relative md:px-[2.72%] md:py-[1.76%] flex items-center bg-[#431A1A] border-0 rounded-[14px] shrink-0 md:gap-[9px] cursor-pointer">
+                <button onClick={()=>setIsLeftDropDownClicked(!isLeftDropDownClicked)} className="relative md:px-[2.57%] md:py-[1.67%] flex items-center bg-[#431A1A] border-0 rounded-[14px] shrink-0 md:gap-[20px] cursor-pointer ">
 
                     <h3 className="font-semibold md:text-[13px] md:leading-[16px] md:tracking-[0.88px] uppercase text-[#FFFFFF] shrink-0">SORT BY</h3>
 
@@ -187,7 +187,7 @@ export default function ProductListing({data, item}:ProductListingProps){
                 </div>
 
                 {/* Right Button */}
-                <button onClick={()=>{setIsRightDropDownClicked(!isRightDropDownClicked)}} className={`${item != 'rings' ? 'opacity-0 pointer-events-none' : 'opacity-[100%]'} relative md:px-[2.72%]  md:py-[1.76%] flex md:gap-[9px] items-center bg-[#431A1A] border-0 rounded-[14px] shrink-0 cursor-pointer`}>
+                <button onClick={()=>{setIsRightDropDownClicked(!isRightDropDownClicked)}} className={`${item != 'rings' ? 'opacity-0 pointer-events-none' : 'opacity-[100%]'} relative md:px-[2.57%] md:py-[1.67%] flex md:gap-[20px] items-center bg-[#431A1A] border-0 rounded-[14px] shrink-0 cursor-pointer`}>
 
                     <h3 className="font-semibold md:text-[13px] md:leading-[16px] md:tracking-[0.88px] uppercase text-[#FFFFFF] shrink-0">SOLITAIRE VARIETY</h3>
 
