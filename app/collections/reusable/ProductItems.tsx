@@ -53,7 +53,7 @@ export default function ProductItems({id, data, sortTag}:ProductItemsPropsType){
 
                         <p className="text-[10px] md:text-[13px] leading-[19.6px] tracking-[0%] text-[#6E6E6E] m-0">{data.color}</p>
 
-                        <h3 className="font-baskerville text-[13px] md:text-[24px] leading-[14px] md:leading-[19.52px] tracking-[0%] text-[#000000] uppercase text-center">{data.name}</h3>
+                        <h3 className="md:w-[70.28%] font-baskerville text-[13px] md:text-[24px] leading-[14px] md:leading-[19.52px] tracking-[0%] text-[#000000]  text-center">{data.name}</h3>
 
                         {
                             data.type == "none" ? "" : <p className="font-baskerville text-[10px] md:text-[16px] leading-[20px] tracking-[0%] text-[#000000] m-0">{data.type}</p> 
