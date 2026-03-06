@@ -66,7 +66,7 @@ export default function VisitStore() {
             <img
               src={ImageRight}
               alt="Visit Store"
-              className="w-absolute top-0 left-0 w-full h-full object-cover hover:scale-110 duration-100 ease"
+              className="w-absolute top-0 left-0 w-full h-full object-cover  duration-100 ease"
             />
           </div>
         </div>
