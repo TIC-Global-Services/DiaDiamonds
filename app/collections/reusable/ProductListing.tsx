@@ -149,7 +149,7 @@ export default function ProductListing({data, item}:ProductListingProps){
             </div>
 
             {/* Desktop Version */}
-            <div className="hidden md:flex w-full md:mt-[8.33%]  px-[3.88%] md:px-[3.19%] flex justify-between items-start">
+            <div className="hidden relative md:flex w-full md:mt-[8.33%]  px-[3.88%] md:px-[3.19%] flex justify-between items-start ">
 
                 {/* Left Button */}
                 <button onClick={()=>setIsLeftDropDownClicked(!isLeftDropDownClicked)} className="relative md:px-[2.72%] md:py-[1.76%] flex items-center bg-[#431A1A] border-0 rounded-[14px] shrink-0 md:gap-[9px] cursor-pointer">
@@ -176,7 +176,7 @@ export default function ProductListing({data, item}:ProductListingProps){
                 </button>
 
                 {/* Main Title */}
-                <div className="flex flex-col justify-center items-center md:gap-[14px] ">
+                <div className="flex flex-col justify-center items-center md:gap-[14px] absolute left-1/2 -translate-x-1/2  ">
 
                     <h3 className="font-medium md:text-[36px] md:leading-[16px] md:tracking-[0.88px] uppercase text-[#000000] md:pb-[1.03%]">{item}</h3>
 
@@ -204,23 +204,23 @@ export default function ProductListing({data, item}:ProductListingProps){
                         <div onClick={()=>{
                             setSolitaireVariety("round brilliant"),
                             setItemData('roundBrilliant')
-                            }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${solitaireVariety == "round brilliant" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Round Brilliant</div>
+                            }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] text-left md:pl-[12.39%] ${solitaireVariety == "round brilliant" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Round Brilliant</div>
 
                         <div onClick={()=>{setSolitaireVariety("cushion cut"), 
                             setItemData('cushionCut')
-                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${solitaireVariety == "cushion cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Cushion Cut</div>
+                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] text-left md:pl-[12.39%] ${solitaireVariety == "cushion cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Cushion Cut</div>
 
                         <div onClick={()=>{setSolitaireVariety("emerald & round cut"),
                             setItemData('emeraldRound')
-                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${solitaireVariety == "emerald & round cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Emerald & Round cut</div>
+                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] text-left md:pl-[12.39%] ${solitaireVariety == "emerald & round cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Emerald & Round cut</div>
 
                         <div onClick={()=>{setSolitaireVariety("princess cut"),
                         setItemData('princessCut')
-                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${solitaireVariety == "princess cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Princess cut</div>
+                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] text-left md:pl-[12.39%] ${solitaireVariety == "princess cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer`}>Princess cut</div>
 
                         <div onClick={()=>{setSolitaireVariety("marquise cut"),
                         setItemData('marquiseCut')
-                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] ${solitaireVariety == "marquise cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer rounded-b-[14px]`}>Marquise cut</div>
+                        }} className={`w-full md:py-[6.37%] text-center  md:text-[16px] md:leading-[100%] text-left md:pl-[12.39%] ${solitaireVariety == "marquise cut" ? 'text-[#000000] bg-[#F7F6F4]' : 'text-[#000000]/40 bg-[#FFFFFF] border-[0.5px] border-[#F5F5F5]'}  cursor-pointer rounded-b-[14px]`}>Marquise cut</div>
 
 
                     </motion.div>
