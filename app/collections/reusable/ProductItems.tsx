@@ -31,10 +31,14 @@ export default function ProductItems({id, data, sortTag}:ProductItemsPropsType){
     return(
         <div onMouseEnter={()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}  className={`${validItem == false ? 'hidden' : ''} flex flex-col justify-center items-center aspect-[441/603] md:gap-[18.37%] md:pt-[8.62%] md:pb-[10%] hover:border-0 hover:rounded-[10px] hover:bg-[#F7F6F4] hover:shadow-[0_4px_10px_0_rgba(0, 0, 0, 0.1)]`}>
 
-                    <div className="w-full flex">
+                    <div className="w-full flex items-center">
 
-                        <div className={`min-w-[6.43%] md:min-w-[25.85%] px-0  md:px-[2%] aspect-69/18 md:aspect-114/30 md:ml-[6.36%] bg-[#431A1A]/25 flex justify-center items-center rounded-[20px] ${sortTag == 'default' ? 'hidden' : '' }`}>
-                            <h3 className={``}>
+                        <div className={`hidden md:flex md:min-w-[25.85%] px-0 md:px-[2%] aspect-69/18 md:aspect-114/30 md:ml-[6.36%] bg-[#431A1A]/25 justify-center items-center rounded-[20px] ${sortTag === "default" ? "md:hidden" : ""}`}>
+                            <h3>{data.tagType}</h3>
+                        </div>
+
+                        <div className={`md:hidden flex justify-center items-center bg-[#431A1A]/25 rounded-[20px] px-[5.5px] py-[3px] ${sortTag == 'default' ? 'hidden' : '' }`}>
+                            <h3>
                                 {sortTag != 'default' ? data.tagType : ''}
                             </h3>
                         </div>

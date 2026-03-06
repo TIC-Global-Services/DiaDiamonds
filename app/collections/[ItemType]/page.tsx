@@ -61,7 +61,7 @@ const CollectionsItems = {
     marquiseCut: [
       { img: "/assets/img/Collections/collectionItem/rings/Marquise Cut/img1.png", color: "Rose Gold", name: "Floral Diamond Rings", type: "Marquise Cut", tagType: "none", id: 28 },
       { img: "/assets/img/Collections/collectionItem/rings/Marquise Cut/img2.png", color: "Silver", name: "Floral Diamond Rings", type: "Marquise Cut", tagType: "none", id: 29 },
-      { img: "/assets/img/Collections/collectionItem/rings/Marquise Cut/img3.png", color: "Ywllow Gold", name: "Floral Diamond Rings", type: "Marquise Cut", tagType: "none", id: 30 }
+      { img: "/assets/img/Collections/collectionItem/rings/Marquise Cut/img3.png", color: "Yellow Gold", name: "Floral Diamond Rings", type: "Marquise Cut", tagType: "none", id: 30 }
     ]
   },
 
