@@ -13,9 +13,9 @@ export default function TheArtOfCrafting({img, text}:ArtOfCraftingProps){
     return(
         <section className="w-full flex flex-wrap md:flex-nowrap md:items-stretch">
 
-            <div className="w-full md:w-[65.28%] aspect-412/529 md:aspect-940/847 overflow-hidden flex stretch">
+            <div className="w-full md:w-[65.28%] aspect-412/529 md:aspect-940/847 overflow-hidden stretch">
 
-                <Image src={img} alt={'bgImage'} className="w-full  h-auto  object-cover" width={940} height={847} />
+                <Image src={img} alt={'bgImage'} className={`w-full  object-cover ${img === '/assets/img/Collections/TheArtOfCrafting/bgImage1.png' ? 'h-auto -translate-y-[10%]' : ' h-full'} `} width={940} height={847} />
 
             </div>
 
