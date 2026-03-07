@@ -65,20 +65,26 @@ export default function Shop() {
           </p>
           {/*  Drop Down div below */}
           <div  className="relative w-[45%] md:w-[70%] mx-auto md:mx-0">
-            <button onClick={()=>setIsDropDownClicked(!isDropDownClicked)} className={`rounded-full border border-[#FFFFFF]/1 py-[10px] px-[24px] flex justify-between items-center gap-[10px] w-full md:text-left text-center rounded-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`} >
+            <button onClick={()=>setIsDropDownClicked(!isDropDownClicked)} className={`absolute top-0 z-20 bg-[#431A1A] rounded-full border border-[#FFFFFF]/1 py-[10px] px-[24px] flex justify-between items-center gap-[10px] w-full md:text-left text-center rounded-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`} >
             <h3 className="text-[12px] md:text-[16px] leading-[142%] text-[#FFFFFF]/50 bg-transparent w-full">Select</h3>
             <svg  className={`${isDropDownClicked ? 'rotate-180 delay-100 duration-300' : ''}`}  width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.327681 1.71L3.19027 4.3C3.62132 4.69 4.31763 4.69 4.74867 4.3L7.61127 1.71C8.30757 1.08 7.81021 0 6.82654 0H1.10135C0.117684 0 -0.368625 1.08 0.327681 1.71Z" fill="white" fill-opacity="0.5"/></svg>
 
 
             </button>
-            <div className={`${isDropDownClicked ? '' : 'hidden'} absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%]  flex flex-col bg-white  py-[15px] border-b border-t-0 rounded-[10px] z-10`}>
+            <motion.div
+            
+            initial={{clipPath: isDropDownClicked ? 'inset(0 0 0 0)' : "inset(0 0 100% 0)"}}
+            animate={{clipPath: isDropDownClicked ? "inset(0 0 0 0)" : 'inset(0 0 100% 0)'} }
+            transition={{duration:0.7, delay:0.1, ease:"easeInOut"}}
+
+            className={`absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%]  flex flex-col bg-white  py-[15px] border-b border-t-0 rounded-[10px] z-10`}>
               <button onClick={()=>{setCurrentCategory(0), setIsDropDownClicked(false)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 0 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Rings</button>
                 <button onClick={()=>{setCurrentCategory(1), setIsDropDownClicked(false)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 1 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Bracelets</button>
                 <button onClick={()=>{setCurrentCategory(2), setIsDropDownClicked(false)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 2 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Necklaces</button>
                 <button onClick={()=>{setCurrentCategory(3), setIsDropDownClicked(false)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 3 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Pendants</button>
                 <button onClick={()=>{setCurrentCategory(4), setIsDropDownClicked(false)}} className={`text-sm px-[27px] py-[9px] text-left text-[#000000]/40 bg-[#FFFFFF] hover:cursor-pointer border-0 ${currentCategory == 4 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]' } `}>Earrings</button>
                 
-            </div>
+            </motion.div>
 
           </div>
 
