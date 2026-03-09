@@ -48,3 +48,16 @@ export const BaskerVilleSC = localFont({
   variable:"--font-baskerVille",
   display:"swap",
 })
+
+
+export const ClashGrotesk = localFont({
+  src:[
+    {
+      path:'./ClashGrotesk/ClashGrotesk-Regular.otf',
+      weight:'400',
+      style:'normal',
+    },
+  ],
+  variable:"--font-grotesk",
+  display:'swap',
+})

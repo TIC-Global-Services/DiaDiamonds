@@ -16,6 +16,10 @@ body {
   font-family: var(--font-baskerVille), "sans-serif";
 }
 
+.font-grotesk{
+  font-family: var(--font-grotesk), 'sans-serif';
+}
+
 /* Base styles */
 @layer base {
   h2 {
