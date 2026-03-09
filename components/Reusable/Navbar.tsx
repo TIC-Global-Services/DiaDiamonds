@@ -134,7 +134,7 @@ export default function Navbar() {
              <a href="/precision">Precision</a>
           </li>
           <li className="text-[32px] leading-[110%] pb-10 text-[#000000] uppercase hover:cursor-pointer hover:underline ">
-            Contact Us
+             <a href="/contact">Contact Us</a>
           </li>
         </ul>
         
