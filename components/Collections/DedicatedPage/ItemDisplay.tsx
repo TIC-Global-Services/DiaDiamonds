@@ -6,7 +6,7 @@ export default function ItemDisplay(){
         <section className="w-full md:px-[6.67%] flex justify-between">
 
             {/* Left Info & Options */}
-            <div className="w-full md:w-[39.74%] pl-[4.37%] md:pl-0">
+            <div className="w-full md:w-[39.74%] pl-[4.37%] md:pl-0 md:pb-[18.96%]">
 
                     <h3 className="md:pt-[7.47%] text-[24px] leading-[32px] tracking-[-0.72px] uppercase text-[#000000">Engagement Ring </h3>
                 <p className="md:pt-[1.61%] md:pb-[3.23%] text-[13px] leading-[20px] tracking-[-0.26px] text-[#000000]">Ring in Yellow Gold with Diamonds</p>

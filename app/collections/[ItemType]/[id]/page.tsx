@@ -3,6 +3,7 @@ import TopMiniMenu from "@/components/Collections/DedicatedPage/TopMiniMenu"
 import Navbar from "@/components/Reusable/Navbar";
 import Footer from "@/components/Reusable/Footer";
 import ItemDisplay from "@/components/Collections/DedicatedPage/ItemDisplay";
+import ItemContent from "@/components/Collections/DedicatedPage/ItemContent";
 
 export default function DedicatedPage(){
 
@@ -11,6 +12,7 @@ export default function DedicatedPage(){
             <Navbar />
             <TopMiniMenu item="rings" />
             <ItemDisplay />
+            <ItemContent />
             <Footer />
         </div>
     )
