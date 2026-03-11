@@ -9,6 +9,7 @@ import Footer from "@/components/Reusable/Footer";
 import ItemDisplay from "@/components/Collections/DedicatedPage/ItemDisplay";
 import { ItemData } from "@/app/collections/[ItemType]/[id]/data"
 import ItemContent from "@/components/Collections/DedicatedPage/ItemContent";
+import YouMayLike from "@/components/Collections/DedicatedPage/YouMayLike";
 
 import { useParams } from "next/navigation";
 
@@ -32,6 +33,7 @@ export default function DedicatedPage(){
             <TopMiniMenu item={titleText} />
             <ItemDisplay id={Number(id)} currentVariant={currentVariant} setCurrentVariant={setCurrentVariant} currentSize={currentSize} setCurrentSize={setCurrentSize}/>
             <ItemContent id={Number(id)} currentVariant={currentVariant} setCurrentVariant={setCurrentVariant} currentSize={currentSize} setCurrentSize={setCurrentSize}/>
+            <YouMayLike />
             <Footer />
         </div>
     )
