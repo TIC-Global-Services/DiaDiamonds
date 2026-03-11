@@ -236,7 +236,7 @@ export default function ProductListing({data, item}:ProductListingProps){
 
                 {dataItem.map((data, _)=>(
                     
-                <ProductItems key={data.id} id={data.id}  data={data} sortTag={sortBy} />
+                <ProductItems key={data.id} id={data.id}  data={data} item={item} sortTag={sortBy} />
 
                 ))}
                 

@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 
 type TopMiniMenu = {
-    item:string,
+    item:string | undefined,
 }
 
 export default function TopMiniMenu({item}:TopMiniMenu){

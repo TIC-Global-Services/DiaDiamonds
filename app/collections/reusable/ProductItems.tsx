@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 type DataProps = {
@@ -15,9 +16,12 @@ type ProductItemsPropsType = {
     id:Number
     data: DataProps,
     sortTag:string,
+    item:string
 }
 
-export default function ProductItems({id, data, sortTag}:ProductItemsPropsType){
+export default function ProductItems({id, data, sortTag, item}:ProductItemsPropsType){
+
+    const router = useRouter();
 
     const [isFavourite, setIsFavourite] = useState<boolean>(false);
     const [isHovered, setIsHovered] = useState<boolean>(false);
@@ -29,7 +33,7 @@ export default function ProductItems({id, data, sortTag}:ProductItemsPropsType){
     }
 
     return(
-        <div onMouseEnter={()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}  className={`${validItem == false ? 'hidden' : ''} flex flex-col justify-center items-center aspect-[441/603] md:gap-[18.37%] md:pt-[8.62%] md:pb-[10%] hover:border-0 hover:rounded-[10px] hover:bg-[#F7F6F4] hover:shadow-[0_4px_10px_0_rgba(0, 0, 0, 0.1)]`}>
+        <div onClick={()=>router.push(`/collections/${item}/${data.id}`)} onMouseEnter={()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}  className={`${validItem == false ? 'hidden' : ''} cursor-pointer flex flex-col justify-center items-center aspect-[441/603] md:gap-[18.37%] md:pt-[8.62%] md:pb-[10%] hover:border-0 hover:rounded-[10px] hover:bg-[#F7F6F4] hover:shadow-[0_4px_10px_0_rgba(0, 0, 0, 0.1)]`}>
 
                     <div className="w-full flex items-center">
 
