@@ -48,9 +48,9 @@ export default function ItemDisplay({id, currentVariant, setCurrentVariant, curr
                 <div className=" md:hidden w-full border-t-[1px] border-l-0 border-r-0 border-b-0 border-[#0000001F] py-[4.37%] md:py-[3.57%] flex gap-[2.67%] md:gap-[2.27%] md:mb-[6.81%]">
 
                     <h3 className="md:text-[13px] md:leading-[20px] md:tracking-[-0.26px] text-[#000000]/40 md:pt-[3.91%]">Size:</h3>
-                    <button className="w-[6.07%] md:w-[5.06%] aspect-square border-[0.5px] flex justify-center items-center rounded-full text-[13px] leading-[20px] tracking-[-0.26px] text-[#000000] bg-[#D9D9D900] border-[#0000001A] md:mt-[3.91%]">{currentItem.size[0]}</button>
-                    <button className="w-[6.07%] md:w-[5.06%] aspect-square border-[0.5px] flex justify-center items-center rounded-full text-[13px] leading-[20px] tracking-[-0.26px] text-[#000000] bg-[#D9D9D900] border-[#0000001A] md:mt-[3.91%]">{currentItem.size[1]}</button>
-                    <button className="w-[6.07%] md:w-[5.06%] aspect-square border-[0.5px] flex justify-center items-center rounded-full text-[13px] leading-[20px] tracking-[-0.26px] text-[#000000] bg-[#D9D9D900] border-[#0000001A] md:mt-[3.91%]">{currentItem.size[2]}</button>
+                    <button className= {  `w-[6.07%] md:w-[5.06%] aspect-square  flex justify-center items-center rounded-full text-[13px] leading-[20px] tracking-[-0.26px] text-[#000000] bg-[#D9D9D900] md:mt-[3.91%] ${currentSize == "XS" ? 'border-[#0000001A] border-[0.5px]' : ''} `}>{currentItem.size[0]}</button>
+                    <button className={`w-[6.07%] md:w-[5.06%] aspect-square  flex justify-center items-center rounded-full text-[13px] leading-[20px] tracking-[-0.26px] text-[#000000] bg-[#D9D9D900] md:mt-[3.91%] ${currentSize == "XS" ? 'border-[#0000001A] border-[0.5px]' : ''}`}>{currentItem.size[1]}</button>
+                    <button className={`w-[6.07%] md:w-[5.06%] aspect-square  flex justify-center items-center rounded-full text-[13px] leading-[20px] tracking-[-0.26px] text-[#000000] bg-[#D9D9D900]  md:mt-[3.91%] ${currentSize == "XS" ? 'border-[#0000001A] border-[0.5px]' : ''}`}>{currentItem.size[2]}</button>
 
                 </div>
 
