@@ -26,8 +26,14 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
       const searchString = `${product.productName} ${product.category} ${product.description} ${product.diamondType || ''} ${product.tags?.join(' ') || ''}`.toLowerCase();
       
       return searchTerms.every(term => searchString.includes(term));
-    }).slice(0, 12); // Limit to 12 results to keep the UI clean
+    }).slice(0, 12);
   }, [query]);
+
+  const categoryProducts = useMemo(() => {
+    return productsData.filter(
+      (product) => product.category.toLowerCase() === searchState.toLowerCase()
+    ).slice(0, 12);
+  }, [searchState]);
 
   const searchImage1 = '/assets/img/Search/SearchImg1.jpg';
   const searchImage2 = '/assets/img/Search/SearchImg2.jpg';
@@ -85,6 +91,49 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
             </p>
           </div>
         </div>
+
+        {/* Category Products Grid */}
+        {!query.trim() && categoryProducts.length > 0 && (
+          <div className="mb-[50px]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {categoryProducts.slice(0, 4).map((product) => (
+                <div 
+                  key={product.id} 
+                  className="cursor-pointer group flex flex-col"
+                  onClick={() => {
+                    setIsSearch(false);
+                    router.push(`/collections?category=${product.category}&product=${product.id}`);
+                  }}
+                >
+                  <div className="w-full aspect-square bg-[#F7F6F4] relative overflow-hidden mb-3">
+                    <img 
+                      src={product.colors[0]?.image} 
+                      alt={product.productName} 
+                      className="absolute inset-0 w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-110" 
+                    />
+                  </div>
+                  <h3 className="font-baskerville text-sm md:text-base text-center line-clamp-2">
+                    {product.productName}
+                  </h3>
+                </div>
+              ))}
+            </div>
+
+            {categoryProducts.length > 4 && (
+              <div className="flex justify-center mt-6">
+                <button 
+                  onClick={() => {
+                    setIsSearch(false);
+                    router.push(`/collections?category=${searchState.toLowerCase()}`);
+                  }}
+                  className="px-8 py-3 border border-[#000000] text-[#000000] text-sm tracking-[1px] uppercase hover:bg-[#000000] hover:text-white transition-colors duration-300 cursor-pointer"
+                >
+                  View More
+                </button>
+              </div>
+            )}
+          </div>
+        )}
 
         {filteredProducts.length > 0 ? (
           <div>
