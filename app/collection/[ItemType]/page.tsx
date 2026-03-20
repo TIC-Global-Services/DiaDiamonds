@@ -124,30 +124,30 @@ const CollectionsItems = {
 };
 
 type DataProps = {
-    img:string,
-    color:string,
-    name:string,
-    type:string,
-    id:number,
-    tagType:string,
-} 
+  img: string,
+  color: string,
+  name: string,
+  type: string,
+  id: number,
+  tagType: string,
+}
 
 type RingItemsType = {
-    normal: DataProps[],
+  normal: DataProps[],
 }
 
 type ItemsType = {
-    normal: DataProps[],
-    roundBrilliant: DataProps[],
-    cushionCut: DataProps[],
-    emeraldRound: DataProps[],
-    princessCut: DataProps[],
-    marquiseCut: DataProps[],
+  normal: DataProps[],
+  roundBrilliant: DataProps[],
+  cushionCut: DataProps[],
+  emeraldRound: DataProps[],
+  princessCut: DataProps[],
+  marquiseCut: DataProps[],
 
 }
 
 type Item = {
-    data: RingItemsType | ItemsType
+  data: RingItemsType | ItemsType
 }
 
 type CollectionKey = keyof typeof CollectionsItems;
@@ -158,55 +158,55 @@ const status = ["rings", "pendants", "necklaces", "bracelets", "earrings"] as co
 type Status = typeof status[number];
 
 
-function isStatus(value:string): value is Status{
-    return status.includes(value as Status)
+function isStatus(value: string): value is Status {
+  return status.includes(value as Status)
 }
 
 const TheArtOfCraftingContent = {
-    "rings":{
-        bgImage:'/assets/img/Collections/TheArtOfCrafting/bgImage1.png',
-        text:'Where Every Sparkle Tells a Story, Moments Shine Brighter Together',
-    },
-    "earrings":{
-        bgImage:'/assets/img/Collections/TheArtOfCrafting/bgImage2.png',
-        text:'Stories That Dangle, Sparkles That Stay',
-    },
-    "bracelets":{
-        bgImage:'/assets/img/Collections/TheArtOfCrafting/bgImage3.png',
-        text:'Where Every Sparkle Whispers a Story, Elegance Shines with Every Turn',
-    },
-    "necklaces":{
-        bgImage:'/assets/img/Collections/TheArtOfCrafting/bgImage4.png',
-        text:'Where Every Glimmer Speaks, and Every Moment Shines Brighter',
-    },
-    "pendants":{
-        bgImage:'/assets/img/Collections/TheArtOfCrafting/bgImage5.png',
-        text:'Where Every Drop of Light Tells Your Story',
-    },
+  "rings": {
+    bgImage: '/assets/img/Collections/TheArtOfCrafting/bgImage1.png',
+    text: 'Where Every Sparkle Tells a Story, Moments Shine Brighter Together',
+  },
+  "earrings": {
+    bgImage: '/assets/img/Collections/TheArtOfCrafting/bgImage2.png',
+    text: 'Stories That Dangle, Sparkles That Stay',
+  },
+  "bracelets": {
+    bgImage: '/assets/img/Collections/TheArtOfCrafting/bgImage3.png',
+    text: 'Where Every Sparkle Whispers a Story, Elegance Shines with Every Turn',
+  },
+  "necklaces": {
+    bgImage: '/assets/img/Collections/TheArtOfCrafting/bgImage4.png',
+    text: 'Where Every Glimmer Speaks, and Every Moment Shines Brighter',
+  },
+  "pendants": {
+    bgImage: '/assets/img/Collections/TheArtOfCrafting/bgImage5.png',
+    text: 'Where Every Drop of Light Tells Your Story',
+  },
 } as const;
 
-export default function Collections(){
+export default function Collections() {
 
-    const params = useParams()
-    let paramValue = params.ItemType as string;
-    const initialStatus:Status = isStatus(paramValue) ? paramValue : 'rings';
+  const params = useParams()
+  let paramValue = params.ItemType as string;
+  const initialStatus: Status = isStatus(paramValue) ? paramValue : 'rings';
 
-    const [item, setItem] = useState<Status>(initialStatus);
+  const [item, setItem] = useState<Status>(initialStatus);
 
-    const currentItemType =
+  const currentItemType =
     CollectionsItems[item as keyof typeof CollectionsItems] ?? CollectionsItems.rings;
 
-    const currentContentType = TheArtOfCraftingContent[item] 
+  const currentContentType = TheArtOfCraftingContent[item]
 
 
-    return(
-        <div className="w-full overflow-hidden">
-            <ChatBtn />
-            <Navbar />
-            <CollectionsTop item={item}  /> 
-            <ProductListing data={currentItemType} item={item}  />
-            <TheArtOfCrafting img={currentContentType.bgImage} text={currentContentType.text} />
-            <Footer/>
-        </div>
-    )
+  return (
+    <div className="w-full overflow-hidden">
+      <ChatBtn />
+      <Navbar />
+      <CollectionsTop item={item} />
+      <ProductListing data={currentItemType} item={item} />
+      <TheArtOfCrafting img={currentContentType.bgImage} text={currentContentType.text} />
+      <Footer />
+    </div>
+  )
 }

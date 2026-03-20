@@ -19,13 +19,13 @@ export default function CollectionItem({name, color, bgImage}:CollectionItemProp
       
       {/* First inner div */}
       <div className="w-full aspect-square bg-[#f9f9f9] pb-[13px] relative rounded-[20px] overflow-hidden">
-        <Parallax speed={-10}>
+        {/* <Parallax speed={-10}> */}
         <img 
           src={bgImage} 
           alt={name} 
           className="w-full aspect-square object-contain hover:scale-110 delay-75 duration-100 ease-in-out"
         />
-        </Parallax>
+        {/* </Parallax> */}
 
         {/* Absolute overlay */}
         <div className="absolute  top-0 right-0 px-7 py-7 ">

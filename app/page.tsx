@@ -17,8 +17,7 @@ import ChatBtn from "@/components/Reusable/ChatBtn";
 export default function Home() {
   return (
     <div className="w-full overflow-hidden ">
-      <ChatBtn/>
-      <Navbar />
+      <ChatBtn />
       <Hero />
       <OurCollection />
       <DiamondSpotlight />
@@ -30,7 +29,7 @@ export default function Home() {
       <DIAExperience />
       <Testimonials />
       <QandA />
-      <Footer />
+
     </div>
   );
 }

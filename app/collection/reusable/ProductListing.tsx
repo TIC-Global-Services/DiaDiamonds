@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ProductItems from "./ProductItems";
 
@@ -60,6 +60,15 @@ export default function ProductListing({data, item}:ProductListingProps){
     } else {
         dataItem = data.normal;
     }
+
+    const [displayCount, setDisplayCount] = useState<number>(10);
+
+    // Reset display count when category or filter changes
+    useEffect(() => {
+        setDisplayCount(10);
+    }, [sortBy, solitaireVariety, ItemData]);
+
+    const displayedData = dataItem ? dataItem.slice(0, displayCount) : [];
    
     
     
@@ -231,20 +240,26 @@ export default function ProductListing({data, item}:ProductListingProps){
 
             {/* THE PRODUCTS GRID */}
 
-            <div className="w-full px-[3.64%] md:px-[2.78%] py-[16.02%] md:py-[2.15%] md:pb- grid grid-cols-2 md:grid-cols-3 md:gap-[1.32%] ">
+            <div className="w-full px-[3.64%] md:px-[2.78%] py-[16.02%] md:py-[2.15%] pb-10 grid grid-cols-2 md:grid-cols-3 md:gap-y-[6.11%] md:gap-[1.32%] ">
 
-
-                {dataItem.map((data, _)=>(
+                {displayedData.map((data, _)=>(
                     
                 <ProductItems key={data.id} id={data.id}  data={data} item={item} sortTag={sortBy} />
 
                 ))}
-                
-
-                
 
             </div>
 
+            {dataItem && dataItem.length > displayCount && (
+              <div className="w-full flex justify-center pb-20">
+                <button
+                  onClick={() => setDisplayCount(prev => prev + 10)}
+                  className="md:px-[3%] md:py-[1%] py-[14px] px-[8%] border-[0.5px] border-[#E5E5E5] rounded-full text-[10px] md:text-[13px] leading-[16px] tracking-[0.88px] uppercase text-[#000000] hover:bg-[#F7F6F4] transition-colors duration-300"
+                >
+                  VIEW MORE
+                </button>
+              </div>
+            )}
 
         </section>
     )

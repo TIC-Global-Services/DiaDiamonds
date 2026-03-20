@@ -1,104 +1,175 @@
 "use client";
 import React, { Dispatch } from 'react';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import productsData from '../../products.json';
 
 type SearchPanelProps = {
-    isSearch: boolean,
-    setIsSearch: Dispatch<React.SetStateAction<boolean>>,
+  isSearch: boolean,
+  setIsSearch: Dispatch<React.SetStateAction<boolean>>,
 };
 
 
-export default function Search({isSearch, setIsSearch}:SearchPanelProps) {
+export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
 
-    const [searchState, setSearchState] = useState('Necklace');
+  const router = useRouter();
+  const [searchState, setSearchState] = useState('Necklaces');
+  const [query, setQuery] = useState('');
 
-    const searchImage1 = '/assets/img/Search/SearchImg1.jpg';
-    const searchImage2 = '/assets/img/Search/SearchImg2.jpg';
+  const filteredProducts = useMemo(() => {
+    if (!query.trim()) return [];
+    
+    const searchTerms = query.toLowerCase().split(' ').filter(Boolean);
+    
+    return productsData.filter((product) => {
+      const searchString = `${product.productName} ${product.category} ${product.description} ${product.diamondType || ''} ${product.tags?.join(' ') || ''}`.toLowerCase();
+      
+      return searchTerms.every(term => searchString.includes(term));
+    }).slice(0, 12); // Limit to 12 results to keep the UI clean
+  }, [query]);
+
+  const searchImage1 = '/assets/img/Search/SearchImg1.jpg';
+  const searchImage2 = '/assets/img/Search/SearchImg2.jpg';
 
 
 
   return (
     <motion.section
 
-    data-theme="dark"
+      data-theme="dark"
 
-    initial={{clipPath: "circle(0% at 0% 0%)"}}
-    animate={{clipPath: isSearch ? "circle(150% at 0% 0%)" : "circle(0% at 0% 0%)"}}
-    transition={{duration:0.6}}
-    
-    className={`absolute inset-0 w-full h-[100dvh] overflow-y-scroll px-6 md:px-10 py-[26px] bg-[#ffffff] z-50 ${isSearch ? 'fixed block' : ''}`} style={{scrollbarWidth:'none'}}>
-      <button className="pb-[30px] hover:cursor-pointer" onClick={()=>{setIsSearch(false)}}>
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.75 0C6.975 0 0 6.975 0 15.75C0 24.525 6.975 31.5 15.75 31.5C24.525 31.5 31.5 24.525 31.5 15.75C31.5 6.975 24.525 0 15.75 0ZM21.825 23.625L15.75 17.55L9.675 23.625L7.875 21.825L13.95 15.75L7.875 9.675L9.675 7.875L15.75 13.95L21.825 7.875L23.625 9.675L17.55 15.75L23.625 21.825L21.825 23.625Z" fill="black" fillOpacity="0.2"/></svg>
+      initial={{ clipPath: "circle(0% at 0% 0%)" }}
+      animate={{ clipPath: isSearch ? "circle(150% at 0% 0%)" : "circle(0% at 0% 0%)" }}
+      transition={{ duration: 0.6 }}
+
+      className={`absolute inset-0 w-full h-[100dvh] overflow-y-scroll px-6 md:px-10 py-[26px] bg-[#ffffff] z-50 ${isSearch ? 'fixed block' : ''}`} style={{ scrollbarWidth: 'none' }}>
+      <button className="pb-[30px] hover:cursor-pointer" onClick={() => { setIsSearch(false) }}>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.75 0C6.975 0 0 6.975 0 15.75C0 24.525 6.975 31.5 15.75 31.5C24.525 31.5 31.5 24.525 31.5 15.75C31.5 6.975 24.525 0 15.75 0ZM21.825 23.625L15.75 17.55L9.675 23.625L7.875 21.825L13.95 15.75L7.875 9.675L9.675 7.875L15.75 13.95L21.825 7.875L23.625 9.675L17.55 15.75L23.625 21.825L21.825 23.625Z" fill="black" fillOpacity="0.2" /></svg>
 
       </button>
-      
+
       <div className="md:pl-[70px]">
         <h2 className="text-[24px] leading-[100%] tracking-[0%] text-[#000000] pb-[11px]">
           Search
         </h2>
 
-        <input className="w-full border-b border-[#000000] border-t-0 border-x-0 px-4 py-2" />
+        <input 
+          autoFocus 
+          value={query} 
+          onChange={(e) => setQuery(e.target.value)} 
+          placeholder="Search products..." 
+          className="w-full border-b border-[#000000] border-t-0 border-x-0 px-4 py-3 outline-none focus:border-black transition-colors" 
+        />
 
         <h2 className="text-[24px] leading-[100%] tracking-[0%] text-[#000000] pt-6 pb-5">
           Popular
         </h2>
 
         <div className="flex gap-[10px] w-[40%] pb-[57px]">
-          <div onClick={()=>{setSearchState('Necklace')}} className={`flex justify-center items-center ${searchState === 'Necklace' ? 'bg-[#F8CC96]/24' : 'bg-[#FBF9F7]'} p-3 hover:cursor-pointer`}>
+          <div onClick={() => { setSearchState('Necklaces') }} className={`flex justify-center items-center ${searchState === 'Necklaces' ? 'bg-[#F8CC96]/24' : 'bg-[#FBF9F7]'} p-3 hover:cursor-pointer transition-colors duration-200`}>
             <p className="m-0 text-[#000000]">
-              Heart Necklace
+              Necklaces
             </p>
           </div>
 
-          <div onClick={()=>{setSearchState('Bracelets')}} className={`flex justify-center items-center ${searchState === 'Bracelets' ? 'bg-[#F8CC96]/24' : 'bg-[#FBF9F7]'} p-3 hover:cursor-pointer`}>
+          <div onClick={() => { setSearchState('Bracelets') }} className={`flex justify-center items-center ${searchState === 'Bracelets' ? 'bg-[#F8CC96]/24' : 'bg-[#FBF9F7]'} p-3 hover:cursor-pointer transition-colors duration-200`}>
             <p className='m-0'>
-              Bracelets 
+              Bracelets
             </p>
           </div>
 
-          <div onClick={()=>{setSearchState('Rings')}} className={`flex justify-center items-center ${searchState === 'Rings' ? 'bg-[#F8CC96]/24' : 'bg-[#FBF9F7]'} p-3 hover:cursor-pointer`}>
+          <div onClick={() => { setSearchState('Rings') }} className={`flex justify-center items-center ${searchState === 'Rings' ? 'bg-[#F8CC96]/24' : 'bg-[#FBF9F7]'} p-3 hover:cursor-pointer transition-colors duration-200`}>
             <p className="m-0 text-[#000000]">
               Rings
             </p>
           </div>
         </div>
 
-          <h2 className="text-[24px] leading-[100%] tracking-[0%] text-[#000000]">
-            Spotlight
-          </h2>
-
-          <div className="max-w-[600px] mr-auto flex gap-4 flex-wrap">
-            {/* First Item */}
-              <div className="flex-1 flex flex-col items-center cursor-pointer">
-                  <div className="w-full aspect-[288/153] overflow-hidden">
-                    <img
-                   src={searchImage1}
-                  alt="search image 1"
-                  className="w-full h-full object-cover"
-                   />
-               </div>
-                <p className="mt-2 text-[16px] leading-[100%] text-[#000000] m-0">
-               Brand New
-              </p>
-             </div>
-
-           {/* Second Item */}
-              <div className="flex-1 flex flex-col items-center cursor-pointer">
-                 <div className="w-full aspect-[288/153] overflow-hidden">
-             <img
-                src={searchImage2}
-                alt="search image 2"
-                className="w-full h-full object-cover"
-             />
-             </div>
-             <p className="mt-2 text-[16px] leading-[100%] text-[#000000] m-0">
-              View Collections
-              </p>
+        {filteredProducts.length > 0 ? (
+          <div>
+            <h2 className="text-[24px] leading-[100%] tracking-[0%] text-[#000000] mb-6">
+              Search Results
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-[50px]">
+              {filteredProducts.map((product) => (
+                <div 
+                  key={product.id} 
+                  className="cursor-pointer group flex flex-col"
+                  onClick={() => {
+                    setIsSearch(false);
+                    router.push(`/collections?category=${product.category}&product=${product.id}`);
+                  }}
+                >
+                  <div className="w-full aspect-square bg-[#F7F6F4] relative overflow-hidden mb-3">
+                    <img 
+                      src={product.colors[0]?.image} 
+                      alt={product.productName} 
+                      className="absolute inset-0 w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-110" 
+                    />
+                  </div>
+                  <h3 className="font-baskerville text-sm md:text-base text-center line-clamp-2">
+                    {product.productName}
+                  </h3>
+                </div>
+              ))}
             </div>
           </div>
-       
-        </div>
+        ) : query.length > 0 ? (
+          <div className="py-10 text-center">
+            <p className="text-gray-500 text-lg">No products found matching "{query}"</p>
+          </div>
+        ) : (
+          <>
+            <h2 className="text-[24px] leading-[100%] tracking-[0%] text-[#000000] mb-6">
+              Spotlight
+            </h2>
+
+            <div className="max-w-[600px] flex gap-4 flex-wrap">
+              {/* First Item */}
+              <div 
+                className="flex-1 flex flex-col items-center cursor-pointer group"
+                onClick={() => {
+                  setIsSearch(false);
+                  router.push('/collections?category=rings');
+                }}
+              >
+                <div className="w-full aspect-[288/153] overflow-hidden">
+                  <img
+                    src={searchImage1}
+                    alt="search image 1"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <p className="mt-3 text-[16px] leading-[100%] text-[#000000] m-0 group-hover:underline">
+                  Brand New
+                </p>
+              </div>
+
+              {/* Second Item */}
+              <div 
+                className="flex-1 flex flex-col items-center cursor-pointer group"
+                onClick={() => {
+                  setIsSearch(false);
+                  router.push('/collections');
+                }}
+              >
+                <div className="w-full aspect-[288/153] overflow-hidden">
+                  <img
+                    src={searchImage2}
+                    alt="search image 2"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <p className="mt-3 text-[16px] leading-[100%] text-[#000000] m-0 group-hover:underline">
+                  View Collections
+                </p>
+              </div>
+            </div>
+          </>
+        )}
+
+      </div>
     </motion.section>
   );
 }

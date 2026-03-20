@@ -4,6 +4,8 @@ import "./globals.css";
 import { ClashDisplay, BaskerVilleSC, ClashGrotesk } from "@/fonts";
 import { ScrollProvider } from "@/providers/ScrollProvider";
 import { Providers } from "./providers";
+import Navbar from "@/components/Reusable/Navbar";
+import Footer from "@/components/Reusable/Footer";
 
 
 export const metadata: Metadata = {
@@ -19,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ClashDisplay.variable} ${BaskerVilleSC.variable} ${ClashGrotesk.variable} antialiased`}>
+        <Navbar />  
         <Providers>{children}</Providers>
+        <Footer />
       </body>
     </html>
   );
