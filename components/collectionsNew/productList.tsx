@@ -34,7 +34,7 @@ const ProductList: React.FC<ProductListProps> = ({ category = "rings", onProduct
   const [displayCount, setDisplayCount] = useState<number>(10);
 
   const filteredProducts = useMemo(() => {
-    let result = productsData.filter((p: any) => p.slug === category) as Product[];
+    let result = productsData.filter((p: any) => p.category === category) as Product[];
 
     if (category === 'rings' && solitaireVariety !== 'all') {
       result = result.filter(p => p.diamondType?.toLowerCase() === solitaireVariety.toLowerCase());
@@ -98,7 +98,7 @@ const ProductList: React.FC<ProductListProps> = ({ category = "rings", onProduct
       </div>
 
       {/* Desktop Version */}
-      <div className="hidden relative md:flex w-full md:mt-[8.33%] px-[3.88%] md:px-[3.19%] justify-between items-start z-10">
+      <div className="hidden relative md:flex w-full py-[5%] px-[3.88%] md:px-[3.19%] justify-between items-start z-10">
 
           {/* Left Button */}
           <button onClick={()=>setIsLeftDropDownClicked(!isLeftDropDownClicked)} className="relative md:px-[2.57%] md:py-[1.67%] flex items-center bg-[#431A1A] border-0 rounded-[14px] shrink-0 md:gap-[20px] cursor-pointer">

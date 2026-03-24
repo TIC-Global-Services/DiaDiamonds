@@ -11,6 +11,8 @@ export default function Shop() {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [productChanged, setProductChanged] = useState<boolean>(false);
 
+  const categories = ["Rings", "Bracelets", "Necklaces", "Pendants", "Earrings"];
+
  const shopItems = [
   // Rings
   [
@@ -65,8 +67,8 @@ export default function Shop() {
           </p>
           {/*  Drop Down div below */}
           <div  className="relative w-[45%] md:w-[70%] mx-auto md:mx-0">
-            <button onClick={()=>setIsDropDownClicked(!isDropDownClicked)} className={`absolute top-0 z-20 bg-[#431A1A] rounded-full border border-[#FFFFFF]/1 py-[10px] px-[24px] flex justify-between items-center gap-[10px] w-full md:text-left text-center rounded-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`} >
-            <h3 className="text-[12px] md:text-[16px] leading-[142%] text-[#FFFFFF]/50 bg-transparent w-full">Select</h3>
+            <button onClick={()=>setIsDropDownClicked(!isDropDownClicked)} className={`absolute top-0 z-20 bg-[#431A1A] rounded-2xl border border-gray-100 py-[10px] px-[24px] flex justify-between items-center gap-[10px] w-full md:text-left text-center cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`} >
+            <h3 className="text-[12px] md:text-[16px] leading-[142%] text-[#FFFFFF]/50 bg-transparent w-full">{currentCategory !== null ? categories[currentCategory] : "Select"}</h3>
             <svg  className={`${isDropDownClicked ? 'rotate-180 delay-100 duration-300' : ''}`}  width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.327681 1.71L3.19027 4.3C3.62132 4.69 4.31763 4.69 4.74867 4.3L7.61127 1.71C8.30757 1.08 7.81021 0 6.82654 0H1.10135C0.117684 0 -0.368625 1.08 0.327681 1.71Z" fill="white" fill-opacity="0.5"/></svg>
 
 
@@ -123,7 +125,7 @@ export default function Shop() {
       </div>
 
       {/* Inner div */}
-      <div className="w-full mt-auto pb-20 md:pb-0 md:w-[50%]  flex flex-col justify-end  md:justify-center items-center relative z-30 mt-auto md:my-auto ">
+      <div className="w-full mt-auto pb-20 md:pb-0 md:w-[50%]  flex flex-col justify-end  md:justify-center items-center relative z-30 md:my-auto ">
         {/* Heading */}
         <h2
           className={`font-medium text-[24px]  md:text-[35px] md:leading-[100%] tracking-[10%] uppercase md:pb-[5.28%] `}
@@ -156,7 +158,7 @@ export default function Shop() {
           {currentCategory != null ? shopItems[currentCategory][activeDiv-1].name : shopItems[0][activeDiv-1].name}
         </p>
         {/* Button */}
-        <button className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-[10px] px-[18px] py-[7.6px]  border-[#FFFFFF]/1  tracking-[0.166rem] border-[5.3px]    border rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] px-8 py-[12px] md:px-[4.72%] md:py-[1.666%] uppercase text-[#000000]">
+        <button className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-[10px] px-[18px] py-[7.6px]  border-[#FFFFFF]/1  tracking-[0.166rem] border-[5.3px]    rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] md:px-[4.72%] md:py-[1.666%] uppercase ">
           VIEW MORE
         </button>
       </div>

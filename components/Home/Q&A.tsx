@@ -7,7 +7,7 @@ export default function QandA() {
   const QAImageLeft = "/assets/img/Q&A/QAImage.png";
 
   return (
-    <section data-theme="dark" className="w-full relative">
+    <section data-theme="light" className="w-full relative">
 
       {/* Non-absolute content container */}
       <div className="relative z-20 w-full py-[10%] px-10 flex justify-end items-center gap-[60px] flex-wrap md:flex-nowrap">

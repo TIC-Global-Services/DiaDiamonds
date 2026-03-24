@@ -1,23 +1,33 @@
 "use client";
 
+import { generateSlug } from '@/utils/slug';
+import { motion } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
 import productsData from '../../products.json';
 import { Parallax } from "react-scroll-parallax";
 import SimpleParallax from 'simple-parallax-js';
+import { useRouter } from 'next/navigation';
+import Breadcrumbs from '@/components/Reusable/Breadcrumbs';
 
 interface ProductViewProps {
   productId: number;
   onBack: () => void;
+  onProductClick: (id: number) => void;
 }
 
 export default function ProductView({ productId, onBack }: ProductViewProps) {
+  const router = useRouter();
   const [product, setProduct] = useState<any>(null);
   const [currentVariantIndex, setCurrentVariantIndex] = useState(0);
   const [currentSize, setCurrentSize] = useState<string>('');
   const [scrollLevel, setScrollLevel] = useState<number>(0);
 
-  useEffect(() => {
-    const found = productsData.find(p => p.id === productId);
+useEffect(() => {
+  window.scrollTo(0, 0);  // Window Scroll from 0,0
+}, []);
+
+ useEffect(() => {
+  const found = productsData.find(p => p.id === productId);
     if (found) {
       setProduct(found);
       setCurrentSize(found.sizes?.[0] || '');
@@ -44,7 +54,26 @@ export default function ProductView({ productId, onBack }: ProductViewProps) {
     3:"justify-end"
   }
 
-  const recommendedProducts = productsData.filter((p: any) => p.recommended && p.id !== productId).slice(0, 7);
+    let recommendedProducts = productsData.filter(
+    (p: any) =>
+      p.recommended &&
+      p.category === product.category &&
+      p.id !== productId
+  );
+
+  // if less than 7 fill from other categories
+  if (recommendedProducts.length < 7) {
+    const extra = productsData.filter(
+      (p: any) =>
+        p.recommended &&
+        p.category !== product.category &&
+        p.id !== productId
+    );
+
+    recommendedProducts = [...recommendedProducts, ...extra];
+  }
+
+recommendedProducts = recommendedProducts.slice(0, 7);
 
   const hasLayoutImages = Array.isArray(product.layoutImages) && product.layoutImages.length > 0;
   const topImage = hasLayoutImages ? product.layoutImages.find((img: any) => img.position === "top")?.image : null;
@@ -53,22 +82,19 @@ export default function ProductView({ productId, onBack }: ProductViewProps) {
   const bottomImage = hasLayoutImages ? product.layoutImages.find((img: any) => img.position === "bottom")?.image : null;
 
   return (
-    <div className="w-full bg-[#FFFFFF] overflow-hidden">
-      
-      {/* TopMiniMenu Section */}
-      <section data-theme="dark" className="w-full mt-[5.49%] mb-[6.82%] md:mb-0 md:mt-[0%]">
-        <div className="relative w-full py-[3.64%] md:py-[1.5%] flex justify-center items-center gap-[4%] md:gap-[1%]">
-            <a href="#" onClick={(e) => { e.preventDefault(); }} className={textStyle}>HOME</a>
-            <span className={`${textStyle} text-[#6C757D]`}>/</span>
-            <a href="#" onClick={(e) => { e.preventDefault(); onBack(); }} className={textStyle}>COLLECTION</a>
-            <span className={`${textStyle} text-[#6C757D]`}>/</span>
-            <span className={textStyle}>{product.category}</span>
+    <div className="w-full bg-[#FFFFFF] overflow-hidden pt-[94px]">
 
-            <button onClick={onBack} className="absolute top-[18.75%] md:top-[25%] left-[3.64%] md:left-[2.11%] w-[8%] md:w-[25px] aspect-square rounded-full bg-[#F9F9F9] flex justify-center items-center cursor-pointer hover:bg-gray-200 transition-colors border border-black/5">
-                <svg className="w-[5px] md:w-[6px] h-[8px] md:h-[10px]" width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.04375 7.11628L7.55625 12.6288C7.74375 12.8163 7.8345 13.035 7.8285 13.285C7.8225 13.535 7.7255 13.7538 7.5375 13.9413C7.3495 14.1288 7.13075 14.2225 6.88125 14.2225C6.63175 14.2225 6.413 14.1288 6.225 13.9413L0.45 8.18503C0.3 8.03503 0.1875 7.86628 0.1125 7.67878C0.0375 7.49128 0 7.30378 0 7.11628C0 6.92878 0.0375 6.74128 0.1125 6.55378C0.1875 6.36628 0.3 6.19753 0.45 6.04753L6.225 0.272529C6.4125 0.085029 6.6345 -0.00572093 6.891 0.00027907C7.1475 0.00627907 7.36925 0.103279 7.55625 0.291279C7.74325 0.479279 7.837 0.698029 7.8375 0.947529C7.838 1.19703 7.74425 1.41578 7.55625 1.60378L2.04375 7.11628Z" fill="black"/></svg>
-            </button>
-        </div>
-      </section>
+      {/* Breadcrumbs Section */}
+      <Breadcrumbs
+        className="mt-4"
+        items={[
+          { label: "HOME", href: "/" },
+          { label: "COLLECTION", href: `/collections/${product.category.toLowerCase()}` },
+          { label: product.category.toUpperCase(), href: `/collections/${product.category.toLowerCase()}` },
+          { label: product.productName.toUpperCase() },
+        ]}
+      />
+
       {/* ItemDisplay Section */}
       <section className="w-full md:px-[6.67%] flex justify-between flex-col md:flex-row mt-[2%]">
         {/* Left Info & Options */}
@@ -119,7 +145,10 @@ export default function ProductView({ productId, onBack }: ProductViewProps) {
 
         {/* Desktop Image */}
         <div className="hidden md:flex flex-col md:w-[50%] md:mr-[2%] items-center justify-center">
-            <img src={product.colors[currentVariantIndex]?.image} alt={product.productName} className="w-[85%] h-auto object-contain" />
+            <motion.img src={product.colors[currentVariantIndex]?.image} alt={product.productName} className="w-[85%] h-auto object-contai cursor-pointer"
+              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.05 }}
+            />
             {/* <p className="md:pt-[2%] tFext-sm md:text-base leading-[1.4] tracking-tight text-[#000000] capitalize">{product.description || `${product.category.endsWith('s') ? product.category.slice(0, -1) : product.category} in ${product.colors[currentVariantIndex]?.color} with Diamonds`}</p> */}
         </div>
         
@@ -185,7 +214,9 @@ export default function ProductView({ productId, onBack }: ProductViewProps) {
         <div className="w-full md:w-[94.44%] mx-auto overflow-hidden">
             <div className={`flex md:gap-[5.81%] ${scrollPercentage[scrollLevel]}`}>
                 {recommendedProducts.map((data: { id: number, productName: string, colors: { image: string }[] }) => (
-                    <div key={data.id} className="w-full md:w-[24.19%] shrink-0 group">
+                    <div key={data.id} onClick={() => {
+                      router.push(`/collections/${product.category}/${generateSlug(data.productName)}`); window.scroll(0,0)}}
+                        className="w-full md:w-[24.19%] shrink-0 group">
                         <div className="md:w-full aspect-square overflow-hidden md:mb-[12.77%] bg-[#F7F6F4] flex items-center justify-center p-4">
                             <img src={data.colors[0]?.image} alt={data.productName} className="w-[80%] h-[80%] object-contain transition-transform duration-300 group-hover:scale-110"/>
                         </div>

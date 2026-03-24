@@ -1,5 +1,6 @@
 "use client";
 
+import productsData from '@/products.json'
 import {useState} from "react";
 import CollectionItem from "./Reusable/CollectionItem";
 import { Parallax } from "react-scroll-parallax";
@@ -11,68 +12,18 @@ export default function OurCollection() {
   const [scrollState, setScrollState] = useState<number>(1); 
   const [mobileScrollState, setMobileScrollState] = useState<number>(0);
 
-    const collections = [
-    {
-        name:'Celestial Swirl Studs',
-        color:'Yellow gold',
-        img:'/assets/img/CollectionItems/collectionItem1.png',
-    },
-    {
-        name:'Fine Diamond Ring',
-        color:'Rose gold',
-        img:'/assets/img/CollectionItems/collectionItem2.png',
-    },
-    {
-        name:'Celeste Halo Bracelet',
-        color:'Yellow',
-        img:'/assets/img/CollectionItems/collectionItem3.png',
-    },
-    {
-        name:'Crescent Aurelia ',
-        color:'Rose gold',
-        img:'/assets/img/CollectionItems/collectionItem4.png',
-    },
-    {
-        name:'Celestia Solitaire Pendant',
-        color:'Rose Gold',
-        img:'/assets/img/CollectionItems/collectionItem5.png',
-    },
-    {
-        name:'Daisy Crown Bracelet',
-        color:'Rose Gold',
-        img:'/assets/img/CollectionItems/collectionItem6.png',
-    },
-    {
-        name:'Chevron Ring',
-        color:'Yellow Gold',
-        img:'/assets/img/CollectionItems/collectionItem7.png',
-    },
-    {
-        name:'Multi-layer Diamond Necklace',
-        color:'Yellow Gold',
-        img:'/assets/img/CollectionItems/collectionItem8.png',
-    },
-    {
-        name:'Frost Bloom Bracelet',
-        color:'Silver',
-        img:'/assets/img/CollectionItems/collectionItem9.png',
-    },
-    {
-        name:'Sunbeam Earring',
-        color:'Yellow Gold',
-        img:'/assets/img/CollectionItems/collectionItem10.png',
-    },
-    {
-        name:'Floral Crown Ring',
-        color:'Rose Gold',
-        img:'/assets/img/CollectionItems/collectionItem11.png',
-    },
-    {
-        name:'Infinity Diamond Bracelet',
-        color:'Rose Gold',
-        img:'/assets/img/CollectionItems/collectionItem12.png',
-    },
-  ]
+  const groupedProducts = productsData.reduce((acc, product) => {
+  if (!acc[product.category]) {
+    acc[product.category] = [];
+  }
+  acc[product.category].push(product);
+  return acc;
+}, {} as Record<string, typeof productsData>);
+
+  const collections = Object.values(groupedProducts)
+  .flatMap(categoryProducts => categoryProducts.slice(0, 2))
+  .slice(0, 12); 
+
   
   const handlers = useSwipeable({
     onSwipedLeft: () => {
@@ -140,12 +91,12 @@ export default function OurCollection() {
 
       {/* Collection items grid */}
       <div {...handlers} className={`w-full flex flex-nowrap gap-[10%] md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'md:translate-x-0' : ''} ${scrollState ==2 ? 'md:-translate-x-[100%]' : ''} ${scrollState ==3 ? 'md:-translate-x-[200%]':''} ${mobileTranslateClass}`}>
-        {collections.map((collection, id) => (
+        {collections.map((product, id) => (
           <CollectionItem 
-            key={id} 
-            bgImage={collection.img} 
-            color={collection.color} 
-            name={collection.name} 
+            key={product.id || id}
+            name={product.productName}
+            color={product.colors?.[0]?.color || "Default"}
+            image={product.colors?.[0]?.image || "/fallback.png"}
           />
         ))}
       </div>

@@ -180,10 +180,10 @@ body {
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0),
-    
+
     /* remove top-right */
     radial-gradient(circle at 100% 0%, transparent 0px, black 0px),
-    
+
     /* remove bottom-left */
     radial-gradient(circle at 0% 100%, transparent 5px, black 0px);
 
@@ -191,4 +191,13 @@ body {
   mask-composite: exclude;
 
   pointer-events: none;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

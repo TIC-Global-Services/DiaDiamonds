@@ -1,5 +1,6 @@
 "use client";
 
+import { generateSlug } from '@/utils/slug';
 import React, { useState } from 'react';
 import { useRouter } from "next/navigation";
 
@@ -51,7 +52,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick, sortTag }) 
 
   return (
     <div 
-      onClick={() => onClick(product.id)} 
+      onClick={() => {router.push(`/collections/${product.category}/${generateSlug(product.productName)}`);}} 
       onMouseEnter={() => setIsHovered(true)} 
       onMouseLeave={() => setIsHovered(false)}  
       className={`cursor-pointer flex flex-col justify-between items-center w-full aspect-[441/603] pt-4 pb-6 md:pt-[8%] md:pb-[10%] px-[2%] md:px-[4%] hover:border-0 hover:rounded-[10px] hover:bg-[#F7F6F4] hover:shadow-[0_4px_10px_0_rgba(0,0,0,0.1)]`}

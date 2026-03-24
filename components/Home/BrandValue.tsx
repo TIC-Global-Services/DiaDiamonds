@@ -10,7 +10,7 @@ export default function BrandValue() {
 
 
   return(
-    <section data-theme="light" className="relative w-full h-[100vh] md:h-auto ">
+    <section data-theme="dark" className="relative w-full h-[100vh] md:h-auto ">
       <img src={BrandValueImg} alt="Rings Image" className=" w-full h-[100vh] object-cover md:object-auto md:h-auto " />
 
       <div className="w-[59%] md:w-[48%] h-auto absolute bottom-0 right-0 mb-[55.34%] md:mb-[16.25%] mr-[1.18%] md:mr-0 flex flex-col justify-center md:justify-normal items-start">

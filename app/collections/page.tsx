@@ -1,10 +1,6 @@
 import { Suspense } from 'react';
-import CollectionsClient from './CollectionsClient';
+import { redirect } from "next/navigation";
 
 export default function CollectionsNewPage() {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-white" />}>
-      <CollectionsClient />
-    </Suspense>
-  );
+  redirect("/collections/rings");
 }
