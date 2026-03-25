@@ -2,6 +2,7 @@
 
 import ContainerLayout from "@/layout/ContainerLayout";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function VisitStore() {
 
@@ -55,18 +56,19 @@ export default function VisitStore() {
                 className="w-[80%] md:w-[75%] px-[25px] py-[14px] rounded-full border border-[#000000]/20 bg-[#000000]/1 shadow-[0px_4px_4px_rgba(0,0,0,0.1)] focus:outline-none focus:ring-2 focus:ring-[#000000]/50 focus:border-transparent"
               />
 
-              <button className=" BtnAnimation border-0 rounded-[50px] border border-[#000000] bg-[#000000] text-[#FFFFFF] px-[40px] py-[14px]">
+              <button className=" BtnAnimation border-0 rounded-[50px] border-[#000000] bg-[#000000] text-[#FFFFFF] px-[40px] py-[14px]">
                 Book
               </button>
             </motion.div>
           </div>
 
           {/* Second div */}
-          <div className="w-full md:w-[34.86%] h-auto overflow-hidden relative order-1 md:order-2 shrink-0 ">
-            <img
+          <div className="w-full md:w-[34.86%] aspect-[4/5] overflow-hidden relative order-1 md:order-2 shrink-0">
+            <Image
               src={ImageRight}
               alt="Visit Store"
-              className="w-absolute top-0 left-0 w-full h-full object-cover  duration-100 ease"
+              fill
+              className="object-cover"
             />
           </div>
         </div>

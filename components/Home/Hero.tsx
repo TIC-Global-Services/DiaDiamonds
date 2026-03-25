@@ -10,8 +10,6 @@ const Hero = () => {
 
   return (
 
-    
-
         <section className="w-full h-[120vh]  overflow-hidden z-10" style={{scrollbarWidth:'none'}} data-theme="dark">
           <Parallax speed={-100} className="-translate-y-[40%]">
           

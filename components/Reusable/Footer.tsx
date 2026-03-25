@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="w-full min-h-[50dvh] bg-[#0b0b0b] px-10 pt-10 pb-[27px]">
       
       {/* ================= NAV ================= */}
-      <ul className="flex items-center gap-[13px] ">
+      <ul className="flex items-center md:justify-normal justify-around gap-[13px] ">
         <li
           className={`font-medium text-xs md:text-[16px] leading-xl cursor-pointer hover:scale-110 active:scale-100 ${
             currentPath === "/" ? "text-[#FFFFFF]" : "text-[#717580]"
