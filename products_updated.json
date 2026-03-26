@@ -1804,7 +1804,7 @@
   },
   {
     "category": "earrings",
-    "productName": "Emerald Pear Drop",
+    "productName": "Emerald + Pear Drop",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
     "newCollection": true,
@@ -1830,7 +1830,7 @@
       }
     ],
     "layoutImages": [],
-    "slug": "emerald-pear-drop",
+    "slug": "emerald--pear-drop",
     "id": 59
   },
   {
@@ -2888,7 +2888,7 @@
   },
   {
     "category": "earrings",
-    "productName": "CrownArc Solitaire Studs",
+    "productName": "CrownArc Solitaire Studs ",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": false,
     "newCollection": true,
@@ -6019,7 +6019,7 @@
       }
     ],
     "layoutImages": [],
-    "slug": "boundles-spark-pendant",
+    "slug": "boundless-spark-pendant",
     "id": 183
   },
   {
@@ -6437,23 +6437,23 @@
       }
     ],
     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "slug": "timeless-diamond-necklace",
     "id": 208
   },
@@ -6481,24 +6481,24 @@
         "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/rings/4f3dbde0c81157ce04054981c5faa67df3c743cd__1__wIENnokE9.png"
       }
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "slug": "engagement-ring",
     "id": 209
   },
@@ -6523,24 +6523,24 @@
         "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/bracelets/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__6__Vbrkd5UKb.png"
       }
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "slug": "regal-radiance-bracelet",
     "id": 210
   },
@@ -6565,24 +6565,24 @@
         "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/bracelets/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__7__yQpCKCvGw.png"
       }
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "slug": "noble-luxe-bracelet",
     "id": 211
   },
@@ -6608,33 +6608,33 @@
         "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/bracelets/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__8__QA4rJ33TY.png"
       }
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "slug": "bloom-luxe-bracelet",
     "id": 212
   },
   {
     "category": "rings",
-    "productName": "Cushion Engagement Ring",
+    "productName": "Engagement Ring",
     "diamondType": "Cushion Cut",
     "description": "Dia Diamonds is the modern expression of a legacy built on trust, integrity, and exceptional craftsmanship. We create timeless diamond jewellery that blends heritage values with contemporary design, ensuring every piece reflects elegance, authenticity, and superior quality. With a strong commitment to ethical sourcing and meticulous attention to detail.",
-    "newArrival": true,
+    "newArrival": false,
     "newCollection": false,
     "recommended": false,
     "sizes": [
@@ -6651,25 +6651,25 @@
         "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/rings/1ebab2fd080eacecdf7c86c929c6229cf4c11fb3_TV_63lnEL.jpg"
       }
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
-    "slug": "cushion-engagement-ring",
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
+    "slug": "engagement-ring",
     "id": 213
   },
   {
@@ -6684,24 +6684,24 @@
       "S",
       "M"
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "tags": [
       "Comfortable wear"
     ],
@@ -6735,24 +6735,24 @@
         "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/bracelets/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__10__ci57_DQzy.png"
       }
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "slug": "sovereign-diamond-bracelet",
     "id": 215
   },
@@ -6777,24 +6777,24 @@
         "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/rings/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__11__yT0EHAMfb.png"
       }
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "slug": "petal-crown-bracelet",
     "id": 216
   },
@@ -6821,24 +6821,24 @@
         "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/bracelets/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__12__dtBbso3VR.png"
       }
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "slug": "linear-glow-bracelet",
     "id": 217
   },
@@ -6865,24 +6865,24 @@
         "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/bracelets/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__13__JrkYJgq9e.png"
       }
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "slug": "charm-diamond-bracelet",
     "id": 218
   },
@@ -6909,24 +6909,24 @@
         "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/bracelets/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__14__ue3JEkyO2.png"
       }
     ],
-     "layoutImages": [
-    {
-      "position": "top",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
-    },
-    {
-      "position": "left",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
-    },
-    {
-      "position": "right",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
-    },
-    {
-      "position": "bottom",
-      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
-    }
-  ],
+    "layoutImages": [
+      {
+        "position": "top",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+      },
+      {
+        "position": "left",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+      },
+      {
+        "position": "right",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+      },
+      {
+        "position": "bottom",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+      }
+    ],
     "slug": "infinity-diamond-bracelet",
     "id": 219
   }
