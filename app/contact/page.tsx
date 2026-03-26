@@ -10,11 +10,11 @@ export default function Contact(){
     return(
         <div className="w-full">
             <ChatBtn />
-            <Navbar />
+            {/*<Navbar />*/}
             <Hero />
             <ContactForm />
             <ContactInfo />
-            <Footer />
+            {/*<Footer />*/}
         </div>
     )
 }

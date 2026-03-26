@@ -4,8 +4,8 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import productsData from '../../products.json';
-import { generateSlug } from '@/utils/slug';
 import Link from 'next/link';
+import { Product } from '@/types/product';
 
 type Category = "necklaces" | "bracelets" | "rings";
 
@@ -13,16 +13,6 @@ type SearchPanelProps = {
   isSearch: boolean,
   setIsSearch: Dispatch<React.SetStateAction<boolean>>,
 };
-interface Product {
-  id: number;
-  productName: string;
-  category: string;
-  description?: string;
-  diamondType?: string;
-  tags?: string[];
-  colors: { image: string }[];
-}
-
 
 const CATEGORIES: { label: string; value: Category }[] = [
   { label: "Necklaces", value: "necklaces" },
@@ -67,10 +57,7 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
 
   const isSearching = query !== debouncedQuery;
 
-  const handleProductClick = (product: Product) => {
-    setIsSearch(false);
-    router.push(`/collections/${product.category}/${generateSlug(product.productName)}`);
-  };
+
   return (
     <motion.section
 
@@ -197,7 +184,7 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
                   className="cursor-pointer group flex flex-col"
                   onClick={() => {
                     setIsSearch(false);
-                    router.push(`/collections/${product.category}/${generateSlug(product.productName)}`);
+                    router.push(`/collections/${product.category}/${product.slug}`);
                   }}
                 >
                   <div className="w-full aspect-square bg-[#F7F6F4] relative overflow-hidden mb-3">

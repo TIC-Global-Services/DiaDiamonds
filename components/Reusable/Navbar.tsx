@@ -1,6 +1,6 @@
 "use client";
-import { useState, useRef, useEffect } from "react";
-import Search from "../Home/Search";
+import { useState, useRef, useEffect, useLayoutEffect } from "react";
+import Search from "../Products/Search";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import Link from "next/link";
@@ -85,6 +85,14 @@ export default function Navbar() {
   const [navHideStyle, setNavHideStyle] = useState<string>('');
   const [navBarTheme, setNavBarTheme] = useState<string>("light");
   const [isVisible, setIsVisible] = useState(true);
+
+  // Immediate theme (before paint)
+        useLayoutEffect(() => {
+          const section = document.querySelector<HTMLElement>("section[data-theme]");
+          if (section?.dataset.theme) {
+            setNavBarTheme(section.dataset.theme);
+          }
+        }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll<HTMLElement>("section[data-theme]");

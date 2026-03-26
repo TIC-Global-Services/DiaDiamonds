@@ -4,8 +4,8 @@
     "productName": "Princess Cut Diamond Stud Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Your Everyday Luxury",
@@ -40,7 +40,7 @@
     "productName": "Round CrystalCore Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -71,8 +71,8 @@
     "productName": "Luna Cascade Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "A Flow of Timeless Brilliance",
@@ -102,7 +102,7 @@
     "productName": "Round Brilliant Eterna Crown Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -133,8 +133,8 @@
     "productName": "Classic Princess Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Precision Cut. Perfect Brilliance",
@@ -164,7 +164,7 @@
     "productName": "Emerald Cut Regal Frame Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -196,7 +196,7 @@
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
     "newCollection": false,
-    "recommended": true,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "A Little Heart, A Lot of Sparkle",
@@ -226,8 +226,8 @@
     "productName": "Brilliant Cut EdgeCircle Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "A Circle of Endless Shine",
@@ -257,8 +257,8 @@
     "productName": "Round Orbit Luxe Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Center of Attention, Naturally",
@@ -288,7 +288,7 @@
     "productName": "Round Vault Spark Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -319,8 +319,8 @@
     "productName": "Princess Cut Vertex Shine Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Sharp Corners. Sharper Presence",
@@ -381,8 +381,8 @@
     "productName": "PetalGlow Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Nature, Reimagined in Light",
@@ -443,8 +443,8 @@
     "productName": "Multi-Stone Band Core Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Many Lights. One Glow",
@@ -474,7 +474,7 @@
     "productName": "Monarch Halo Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -505,7 +505,7 @@
     "productName": "SoftEdge Halo Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -536,7 +536,7 @@
     "productName": "Ovaluxe Glow Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -568,7 +568,7 @@
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
     "newCollection": false,
-    "recommended": true,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "A Drop of Pure Brilliance",
@@ -598,7 +598,7 @@
     "productName": "SquareAura Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -629,7 +629,7 @@
     "productName": "CircleFlare Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -660,8 +660,8 @@
     "productName": "Petaline Spark Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Where Diamonds Bloom",
@@ -691,8 +691,8 @@
     "productName": "Sunflare Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Like the Sun, But Brighter",
@@ -723,7 +723,7 @@
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
     "newCollection": false,
-    "recommended": true,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Classic Meets Contemporary",
@@ -753,8 +753,8 @@
     "productName": "Prestige Hold Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Held Like a Treasure",
@@ -784,8 +784,8 @@
     "productName": "Amora Crown Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "A Secret Heart in Every Spark",
@@ -816,7 +816,7 @@
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
     "newCollection": false,
-    "recommended": true,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Clean Lines. Bold Shine",
@@ -846,8 +846,8 @@
     "productName": "Marquise Bloom Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "A Flower That Never Fades",
@@ -877,8 +877,8 @@
     "productName": "Cascade Petal Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Elegance That Moves With You",
@@ -908,7 +908,7 @@
     "productName": "Petite Bloom Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -940,7 +940,7 @@
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
     "newCollection": false,
-    "recommended": true,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Inspired by Nature’s Flow",
@@ -1032,8 +1032,8 @@
     "productName": "Majestic Bloom Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Fit for a Modern Queen",
@@ -1063,7 +1063,7 @@
     "productName": "Hexagon Halo Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1094,8 +1094,8 @@
     "productName": "Starburst Drop Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": false,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Like a Star, But Closer",
@@ -1125,7 +1125,7 @@
     "productName": "DuoBloom Drops Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1156,8 +1156,8 @@
     "productName": "Bezel Drop Minimal",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Less Design. More Shine",
@@ -1187,8 +1187,8 @@
     "productName": "Heritage Crown Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "A Classic That Never Ages",
@@ -1218,8 +1218,8 @@
     "productName": "Diamond Spark Hoop",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Circle of Endless Shine",
@@ -1249,7 +1249,7 @@
     "productName": "Regal Bloom Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1280,7 +1280,7 @@
     "productName": "Bow CharmKnot Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1311,8 +1311,8 @@
     "productName": "Flux Bow Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "A Twist of Pure Brilliance",
@@ -1343,7 +1343,7 @@
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
     "newCollection": false,
-    "recommended": true,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Soft Glow, Strong Elegance",
@@ -1373,7 +1373,7 @@
     "productName": "Vintage Clover Cluster",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1404,7 +1404,7 @@
     "productName": "Chain Link Drop",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1435,8 +1435,8 @@
     "productName": "Oval Grace Drops",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Elegance That Falls Perfectly",
@@ -1466,8 +1466,8 @@
     "productName": "NovaPetal Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "A Celebration in Every Spark",
@@ -1497,7 +1497,7 @@
     "productName": "BubbleTrail Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1528,8 +1528,8 @@
     "productName": "Pearl Crown Drop",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Crowned in Elegance",
@@ -1559,8 +1559,8 @@
     "productName": "Emera Trio Drops",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Three Times the Shine",
@@ -1590,8 +1590,8 @@
     "productName": "Twisted Sun Cluster",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "A Twist of Radiance",
@@ -1621,8 +1621,8 @@
     "productName": "Half Hoop Baguette Curve",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Curved to Catch Light",
@@ -1652,8 +1652,8 @@
     "productName": "PearlStack Drops",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Stacked for Statement",
@@ -1683,7 +1683,7 @@
     "productName": "Luxe Butterfly Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1714,8 +1714,8 @@
     "productName": "Serpent Curve Drop",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Flow Like Light",
@@ -1745,7 +1745,7 @@
     "productName": "Asymmetric Fan Cluster",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1776,8 +1776,8 @@
     "productName": "Paperclip Chain Statement",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Bold Links. Soft Sparkle",
@@ -1807,8 +1807,8 @@
     "productName": "Emerald Pear Drop",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Structured Above, Soft Below",
@@ -1838,7 +1838,7 @@
     "productName": "Classic Halo Solitaire",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1869,8 +1869,8 @@
     "productName": "Cushion Halo Cluster",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Crafted for Grand Moments",
@@ -1900,7 +1900,7 @@
     "productName": "Interlocked Orbit Cluster",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1931,8 +1931,8 @@
     "productName": "Double Curve Hoop",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Double the Curve, Double the Charm",
@@ -1962,7 +1962,7 @@
     "productName": "Spiral Duo Diamond",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -1993,8 +1993,8 @@
     "productName": "LeafLuxe Hoops",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Inspired by Nature, Crafted in Light",
@@ -2024,7 +2024,7 @@
     "productName": "Circular Spiral Cluster",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -2055,8 +2055,8 @@
     "productName": "Heart Illusion Diamond Stud",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Love, Set in Light",
@@ -2095,7 +2095,7 @@
     "productName": "Open Oval Floating Diamond",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -2136,7 +2136,7 @@
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
     "newCollection": false,
-    "recommended": true,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Bloom in Brilliance",
@@ -2171,7 +2171,7 @@
     "productName": "PulseHeart Hoops",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -2207,7 +2207,7 @@
     "productName": "Cross Curve Drop",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -2243,8 +2243,8 @@
     "productName": "Triangle Frame Stud",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Sharp Shape. Soft Sparkle",
@@ -2279,8 +2279,8 @@
     "productName": "Solara Luxe Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Shine Like the Sun",
@@ -2315,7 +2315,7 @@
     "productName": "WingSpark Diamonds",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -2351,7 +2351,7 @@
     "productName": "ChainOrbit Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -2387,8 +2387,8 @@
     "productName": "Gold Twisted Infinity Floral",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Endless Curves. Endless Shine",
@@ -2423,7 +2423,7 @@
     "productName": "Ribbon Bow Diamond Drop",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -2459,7 +2459,7 @@
     "productName": "Metallic Flower Disc Stud",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -2495,7 +2495,7 @@
     "productName": "Open Petal Diamond Flower",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -2531,7 +2531,7 @@
     "productName": "Circular Snowflake Cluster",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -2603,7 +2603,7 @@
     "productName": "Ovalis Bloom Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -2639,8 +2639,8 @@
     "productName": "Modern LinkGlow Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
-    "recommended": true,
+    "newCollection": false,
+    "recommended": false,
     "sizes": [],
     "tags": [
       "Let Your Style Flow",
@@ -2675,7 +2675,7 @@
     "productName": "Evil Eye Diamond Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -2711,7 +2711,7 @@
     "productName": "ArcBloom Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -2747,7 +2747,7 @@
     "productName": "Half Moon Cluster Drop",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -2819,7 +2819,7 @@
     "productName": "Classic Solitaire Stud",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -2855,7 +2855,7 @@
     "productName": "CrownFrame Diamonds Earrings",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -2891,7 +2891,7 @@
     "productName": "CrownArc Solitaire Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -2927,7 +2927,7 @@
     "productName": "PureNova Studs",
     "description": "Dia Earrings is the modern expression of elegance, crafted to complement every moment with timeless beauty. We design exquisite earrings that blend classic sophistication with contemporary style, ensuring each piece enhances individuality and grace. Every design reflects refined craftsmanship, premium materials, and a dedication to detail, creating jewellery that feels both meaningful and luxurious. With a strong commitment to quality and authenticity, our earrings are made to celebrate confidence, style, and lasting brilliance.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -2994,7 +2994,7 @@
     "productName": "Double Layer Diamond Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3025,7 +3025,7 @@
     "productName": "Aeris Drop Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3056,7 +3056,7 @@
     "productName": "Charm Hanging Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3087,7 +3087,7 @@
     "productName": "Emerald Cut Bar Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3118,7 +3118,7 @@
     "productName": "Halo Lock Chain",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3149,7 +3149,7 @@
     "productName": "Thick Chain Plate Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3180,7 +3180,7 @@
     "productName": "Ribbon Shine Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3211,7 +3211,7 @@
     "productName": "Ring Pendant Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3242,7 +3242,7 @@
     "productName": "Triple Layer Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3273,7 +3273,7 @@
     "productName": "Triangle Charm Chain",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3304,7 +3304,7 @@
     "productName": "Circle Drop Layer Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3335,7 +3335,7 @@
     "productName": "Pear Diamond Double Layer",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3366,7 +3366,7 @@
     "productName": "V Shape Pendant Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3397,7 +3397,7 @@
     "productName": "Square Diamond Layer Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3428,7 +3428,7 @@
     "productName": "Vertical Drop Bar Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3459,7 +3459,7 @@
     "productName": "Triple Layer Bar Drop",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3490,7 +3490,7 @@
     "productName": "Multi Stone Designer Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3521,7 +3521,7 @@
     "productName": "Infinity Curve Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -3552,7 +3552,7 @@
     "productName": "Layered Bar Design Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -3583,7 +3583,7 @@
     "productName": "Wavy Diamond Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [],
     "tags": [
@@ -3676,7 +3676,7 @@
     "productName": "Luxe Knot Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3707,7 +3707,7 @@
     "productName": "Midnight Prism Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3738,7 +3738,7 @@
     "productName": "Golden Dew Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3800,7 +3800,7 @@
     "productName": "Secure Shine Chain",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3831,7 +3831,7 @@
     "productName": "Diamond Line Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3862,7 +3862,7 @@
     "productName": "Classic Diamond Tennis Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3924,7 +3924,7 @@
     "productName": "Teardrop Diamond Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -3955,7 +3955,7 @@
     "productName": "Minimal Square Drop Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -4017,7 +4017,7 @@
     "productName": "Baguette Diamond Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -4048,7 +4048,7 @@
     "productName": "Oval Diamond Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -4110,7 +4110,7 @@
     "productName": "Royal Drop Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -4141,7 +4141,7 @@
     "productName": "Premium Bridal Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -4172,7 +4172,7 @@
     "productName": "Emerald Cut Bezel Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4207,7 +4207,7 @@
     "productName": "Round Bezel Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4242,7 +4242,7 @@
     "productName": "Classic Round Bezel Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4277,7 +4277,7 @@
     "productName": "Marquise Eye Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4312,7 +4312,7 @@
     "productName": "Round Solitaire Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4347,7 +4347,7 @@
     "productName": "Light Orbit Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4382,7 +4382,7 @@
     "productName": "Pear Cut Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4417,7 +4417,7 @@
     "productName": "Radiant Cut Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4452,7 +4452,7 @@
     "productName": "Cushion Cut Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4487,7 +4487,7 @@
     "productName": "Princess Cut Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4522,7 +4522,7 @@
     "productName": "Tilted Luxe Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4557,7 +4557,7 @@
     "productName": "Frost Luxe Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4592,7 +4592,7 @@
     "productName": "Diamond Shape Frame Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4627,7 +4627,7 @@
     "productName": "Princess Cut Solitaire Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4662,7 +4662,7 @@
     "productName": "Classic Round Solitaire Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -4697,7 +4697,7 @@
     "productName": "Eclipse Shine Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -4732,7 +4732,7 @@
     "productName": "Crystal Bloom Pendants",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -4767,7 +4767,7 @@
     "productName": "Majestic Spark Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4802,7 +4802,7 @@
     "productName": "Oval Cut Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -4837,7 +4837,7 @@
     "productName": "Crystal Frame Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -4872,7 +4872,7 @@
     "productName": "Titan Glow Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -4942,7 +4942,7 @@
     "productName": "Clean Spark Minimal Prong",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -4977,7 +4977,7 @@
     "productName": "Trio Luxe Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5012,7 +5012,7 @@
     "productName": "Five Stone Bar Necklace",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5047,7 +5047,7 @@
     "productName": "Endless Spark Pendants",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5082,7 +5082,7 @@
     "productName": "Heart Shine Pendants",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5117,7 +5117,7 @@
     "productName": "Halo Glow Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5152,7 +5152,7 @@
     "productName": "Prism Drop Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5222,7 +5222,7 @@
     "productName": "Leaf Whisper Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5257,7 +5257,7 @@
     "productName": "HeartGlow Diamond Charm",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5292,7 +5292,7 @@
     "productName": "Eternal Halo Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "S",
@@ -5327,7 +5327,7 @@
     "productName": "Round Cluster Diamond Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5362,7 +5362,7 @@
     "productName": "OneStone Elegance Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5397,7 +5397,7 @@
     "productName": "Full Diamond Heart Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5432,7 +5432,7 @@
     "productName": "Geo Edge Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5467,7 +5467,7 @@
     "productName": "Classic Halo Charm Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5502,7 +5502,7 @@
     "productName": "Prestige Halo Charm",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5572,7 +5572,7 @@
     "productName": "Multi Diamond Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5607,7 +5607,7 @@
     "productName": "Fortune Bloom Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5642,7 +5642,7 @@
     "productName": "Eternal Twin Glow Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5677,7 +5677,7 @@
     "productName": "Royal Eye Spark Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5712,7 +5712,7 @@
     "productName": "Circular Cluster Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5747,7 +5747,7 @@
     "productName": "Triple Shine Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5782,7 +5782,7 @@
     "productName": "Clover Luxe Charm Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5817,7 +5817,7 @@
     "productName": "Regal Square Halo Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5852,7 +5852,7 @@
     "productName": "Modern Circular Drop Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -5887,7 +5887,7 @@
     "productName": "Spiral Shine Trio Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5922,7 +5922,7 @@
     "productName": "LumiLove Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -5957,7 +5957,7 @@
     "productName": "Celestial Blossom Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "S",
@@ -5992,7 +5992,7 @@
     "productName": "Boundless Spark Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -6062,7 +6062,7 @@
     "productName": "Pure Drop Elegance Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": false,
     "sizes": [
       "XS",
@@ -6097,7 +6097,7 @@
     "productName": "Trinity Spark Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -6132,7 +6132,7 @@
     "productName": "Dual Charm Drops Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -6167,7 +6167,7 @@
     "productName": "Golden Spark Trail Pendant",
     "description": "Dia Pendants embody timeless beauty and refined craftsmanship. Each pendant is thoughtfully designed to combine classic elegance with modern style, creating jewellery that complements every look. Crafted with high-quality materials and sparkling diamonds, every piece reflects precision, authenticity, and superior artistry. Whether worn daily or for special occasions, our pendants add a graceful touch of brilliance and sophistication to every moment",
     "newArrival": false,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [
       "XS",
@@ -6419,7 +6419,7 @@
     "productName": "Timeless Diamond Necklace",
     "description": "Dia Necklaces represent timeless elegance crafted with precision and artistry. Each necklace is thoughtfully designed to blend classic heritage with modern sophistication, creating jewellery that enhances every occasion. Made with premium materials and detailed craftsmanship, every piece reflects beauty, authenticity, and lasting quality. From delicate everyday designs to statement pieces, our necklaces are created to celebrate individuality, grace, and the brilliance of fine jewellery.",
     "newArrival": true,
-    "newCollection": true,
+    "newCollection": false,
     "recommended": true,
     "sizes": [],
     "tags": [
@@ -6464,7 +6464,7 @@
     "description": "Dia Diamonds is the modern expression of a legacy built on trust, integrity, and exceptional craftsmanship. We create timeless diamond jewellery that blends heritage values with contemporary design, ensuring every piece reflects elegance, authenticity, and superior quality. With a strong commitment to ethical sourcing and meticulous attention to detail.",
     "newArrival": false,
     "newCollection": false,
-    "recommended": false,
+    "recommended": true,
     "sizes": [
       "XS",
       "S",

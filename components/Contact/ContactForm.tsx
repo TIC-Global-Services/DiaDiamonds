@@ -1,3 +1,4 @@
+import GlassCard from "../Reusable/GlassCard";
 
 
 export default function ContactForm(){
@@ -8,24 +9,23 @@ export default function ContactForm(){
 
                 
                     <h2 className="text-center py-[11.84%] md:py-0 md:pt-[7.32%] md:pb-[5.49%] md:text-[24px]">Inquiry Form</h2>
-
                     <form className="px-[6.32%] md:px-[3.38%] md:py-[1.69%]">
 
                         <label htmlFor="" className="pb-[2.63%] md:pb-[1.70%]">Full Name</label>
-                        <input type="text" className="w-full rounded-[20px] aspect-332/40 md:aspect-542/54 mb-[8.96%] md:mb-[3.39%] bg-[#FFFFFF]/40 border-[#FFFFFF]/70" />
+                        <input required type="text" className="w-full aspect-332/40 md:aspect-542/54 mb-[8.96%] p-4 md:mb-[3.39%] bg-[#FFFFFF]/40 backdrop-blur-md border border-white/30 rounded-3xl shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]" />
 
                         <label htmlFor="" className="pb-[2.63%] md:pb-[1.70%]">Email</label>
-                        <input type="text" className="w-full rounded-[20px] aspect-332/40 md:aspect-542/54 mb-[8.96%] md:mb-[3.39%] bg-[#FFFFFF]/40 border-[#FFFFFF]/70" />
+                        <input required type="text" className="w-full aspect-332/40 md:aspect-542/54 mb-[8.96%] p-4 md:mb-[3.39%] bg-[#FFFFFF]/40 backdrop-blur-md border border-white/30 rounded-3xl shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)] " />
 
                         <label htmlFor="" className="pb-[2.63%] md:pb-[1.70%]">Subject</label>
-                        <input type="text" className="w-full rounded-[20px] aspect-332/40 md:aspect-542/54 mb-[8.96%] md:mb-[3.39%] bg-[#FFFFFF]/40 border-[#FFFFFF]/70" />
+                        <input required type="text" className="w-full aspect-332/40 md:aspect-542/54 mb-[8.96%] p-4 md:mb-[3.39%] bg-[#FFFFFF]/40 backdrop-blur-md border border-white/30 rounded-3xl shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]" />
 
                         <label htmlFor="" className="pb-[2.63%] md:pb-[1.70%]">Message</label>
-                        <textarea className="w-full rounded-[20px] aspect-332/180 md:aspect-542/180 mb-[8.96%] md:mb-[3.39%] bg-[#FFFFFF]/40 border-[#FFFFFF]/70" />
+                        <textarea className="w-full aspect-332/180 md:aspect-542/180 mb-[8.96%] md:mb-[3.39%] p-4 bg-[#FFFFFF]/40 backdrop-blur-md border border-white/30 rounded-3xl shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]" />
 
                         <div className="hidden md:block relative w-full ">
-                            <input type="file" name="" id="" className=" w-full  z-20 opacity-0 md:py-[2.03%] md:mb-[1.70%]" />
-                            <input type="file" name="" id="" className="absolute top-0 left-0 w-full  z-20 opacity-0 md:py-[2.03%] md:mb-[1.70%]" />
+                            <input type="text" name="" id="" className=" w-full  z-20 opacity-0 md:py-[2.03%] md:mb-[1.70%]" />
+                            <input type="file" className="absolute top-0 left-0 w-full opacity-0 md:py-[2.03%]" />
                             <button className="absolute top-0 left-0 w-full  bg-[#7C3C3C] text-white rounded-[20px] md:py-[2.03%] md:mb-[1.70%]">Attach Files</button>
                             <p className="m-0 text-[13px] text-[#585858F7]">Attach up to 10 files. The maximum allowed size per file is 10 MB.</p>
                         </div>

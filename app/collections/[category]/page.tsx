@@ -1,16 +1,27 @@
 "use client";
 
 import { useParams } from "next/navigation";
-import CollectionsClient from "@/components/List/CollectionsClient";
-
+import CategoryCore from "@/components/Products/Category/CategoryCore";
+import productsData from "@/products.json";
+import { Product } from "@/types/product";
 
 export default function CategoryPage() {
   const params = useParams();
-  const category = params.category as string;
+
+  if (!params?.category) return null;
+
+  const category = (params.category as string).toLowerCase();
+
+  const products: Product[] = productsData;
+
+  const productLists = products.filter(
+    (p) => p.category.toLowerCase() === category
+  );
 
   return (
-    <CollectionsClient
+    <CategoryCore
       category={category}
+      productLists={productLists}
     />
   );
 }

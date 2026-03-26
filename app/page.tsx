@@ -11,7 +11,7 @@ import Testimonials from "@/components/Home/Testimonials";
 import OurCollection from "@/components/Home/OurCollections";
 import QandA from "@/components/Home/Q&A";
 import Shop from "@/components/Home/Shop";
-import Search from "@/components/Home/Search";
+import Search from "@/components/Products/Search";
 import ChatBtn from "@/components/Reusable/ChatBtn";
 
 export default function Home() {
@@ -29,7 +29,6 @@ export default function Home() {
       <DIAExperience />
       <Testimonials />
       <QandA />
-
     </div>
   );
 }

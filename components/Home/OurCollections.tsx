@@ -2,7 +2,7 @@
 
 import productsData from '@/products.json'
 import { useState } from "react";
-import CollectionItem from "./Reusable/CollectionItem";
+import CollectionItem from "../Products/Cards/HomeProductCard";
 import { useSwipeable } from "react-swipeable";
 import { Product } from '@/types/product';
 
@@ -74,7 +74,7 @@ export default function OurCollection() {
 
   return (
 
-    <section className="w-full py-21 px-5 overflow-hidden z-30 relative" data-theme='dark'>
+    <section className="w-full py-21 px-5 overflow-hidden z-30 relative" data-theme='light'>
 
       {/* Inner flex container */}
       <div className="w-full flex flex-col justify-center items-center pb-9 md:pb-20">

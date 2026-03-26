@@ -25,7 +25,7 @@ interface Product {
   sizes: string[];
   tags: string[];
   colors: ColorOption[];
-  layoutImages: LayoutImage[];
+  layoutImages?: LayoutImage[];
   slug: string;
 }
 
@@ -35,10 +35,10 @@ interface CollectionItemProp {
 
 export default function CollectionItem({ product }: CollectionItemProp): JSX.Element {
   const router = useRouter();
-  const [isFavourite, setIsFavourite] = useState<boolean>(false);
+  //const [isFavourite, setIsFavourite] = useState<boolean>(false);
 
   const handleRedirection = () => {
-    router.push(`/collections/${product.category}/${product.slug}`);
+    router.push(`/collections/${product.category.toLowerCase()}/${product.slug}`);;
   };
 
   return (
@@ -53,7 +53,7 @@ export default function CollectionItem({ product }: CollectionItemProp): JSX.Ele
         />
 
         {/* Absolute overlay */}
-        <div className="absolute top-0 right-0 px-7 py-7">
+        {/* <div className="absolute top-0 right-0 px-7 py-7">
           <button
             onClick={(e) => { e.stopPropagation(); setIsFavourite(!isFavourite); }}
             className="w-10 h-10 rounded-full flex justify-center items-center bg-[#FFFFFF] ml-auto hover:cursor-pointer hover:scale-110 active:scale-100"
@@ -68,7 +68,7 @@ export default function CollectionItem({ product }: CollectionItemProp): JSX.Ele
               </svg>
             )}
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Second inner div */}
