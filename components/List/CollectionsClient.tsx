@@ -7,6 +7,12 @@ import ProductList from '@/components/CollectionsNew/productList';
 import TheArtOfCrafting from '../TheArtOfCrafting';
 import Image from "next/image";
 import Breadcrumbs from "@/components/Reusable/Breadcrumbs";
+import ring from '@/public/assets/img/Collections/type/ring.png'
+import Earrings from '@/public/assets/img/Collections/type/earring.png'
+import bracelets from '@/public/assets/img/Collections/type/bracelet.png'
+import necklaces from '@/public/assets/img/Collections/type/necklace.png'
+import pendants from '@/public/assets/img/Collections/type/pendant.png'
+
 import productsData from '@/products.json';
 
 interface CollectionsClientProps {
@@ -40,27 +46,27 @@ const categoryMenu = [
   {
     title: "Rings",
     slug: "rings",
-    image: "/assets/img/Collections/type/ring.png"
+    image: ring
   },
   {
     title: "Earrings",
     slug: "earrings",
-    image: "/assets/img/Collections/type/earring.png"
+    image: Earrings
   },
   {
     title: "Bracelets",
     slug: "bracelets",
-    image: "/assets/img/Collections/type/bracelet.png"
+    image: bracelets
   },
   {
     title: "Necklaces",
     slug: "necklaces",
-    image: "/assets/img/Collections/type/necklace.png"
+    image: necklaces
   },
   {
     title: "Pendants",
     slug: "pendants",
-    image: "/assets/img/Collections/type/pendant.png"
+    image: pendants
   },
 ]
 
@@ -76,7 +82,7 @@ export default function CollectionsClient({ category }: CollectionsClientProps) 
   };
 
   return (
-    <div className="min-h-screen bg-white pt-[94px]">
+    <div className="min-h-screen bg-white pt-[8%]">
 
       {/* BREADCRUMBS */}
       <Breadcrumbs
@@ -99,20 +105,20 @@ export default function CollectionsClient({ category }: CollectionsClientProps) 
                 onClick={() => router.push(`/collections/${cat.slug}`)}
                 className={`
                   relative group cursor-pointer flex-shrink-0
-                  transition-all duration-300 ease-out
+                  transition-all duration-300 ease-out 
                 `}
               >
                 <div className={`
-                  relative overflow-hidden rounded-xl md:rounded-2xl
-                  w-[100px] md:w-[140px] lg:w-[170px] my-2
+                  relative overflow-hidden rounded-xl md:rounded-sm
+                  md:w-[18vw]  my-2
                   transition-all duration-300
                   ${isActive
-                    ? 'ring-2 ring-[#431A1A] ring-offset-2 shadow-lg'
-                    : ' hover:ring-[#431A1A]/30 hover:shadow-md'
+                    ? 'ring-2 ring-[#431A1A4D] ring-offset-1 shadow-lg'
+                    : ' hover:ring-[#431A1A4D]/30 '
                   }
                 `}>
                   {/* Image Container */}
-                  <div className="relative aspect-square overflow-hidden bg-[#F7F6F4]">
+                  <div className="relative aspect-square overflow-hidden ">
                     <Image
                       src={cat.image}
                       alt={cat.title}
@@ -123,11 +129,11 @@ export default function CollectionsClient({ category }: CollectionsClientProps) 
                       `}
                     />
                     {/* Overlay gradient */}
-                    <div className={`
+                    {/* <div className={`
                       absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent
                       transition-opacity duration-300
                       ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-60'}
-                    `} />
+                    `} /> */}
                   </div>
 
                  
@@ -135,11 +141,11 @@ export default function CollectionsClient({ category }: CollectionsClientProps) 
 
                 {/* Title below card - visible when not active */}
                 <p className={`
-                  text-center mt-2 md:mt-3 text-[11px] md:text-[12px] font-medium tracking-wider uppercase
+                  text-center mt-2 md:mt-3 text-xs md:text-sm font-bold tracking-wider uppercase
                   transition-all duration-300
                   ${isActive
-                    ? 'text-[#431A1A]'
-                    : 'text-[#666666] group-hover:text-[#431A1A]'
+                    ? 'text-[#431A1A] underline'
+                    : 'group-hover:text-[#431A1A]'
                   }
                 `}>
                   {cat.title}
