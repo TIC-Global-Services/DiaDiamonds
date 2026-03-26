@@ -1,40 +1,40 @@
 "use client";
 
 import productsData from '@/products.json'
-import {useState} from "react";
+import { useState } from "react";
 import CollectionItem from "./Reusable/CollectionItem";
-import { Parallax } from "react-scroll-parallax";
 import { useSwipeable } from "react-swipeable";
-import { section } from "framer-motion/client";
+import { Product } from '@/types/product';
+
 
 export default function OurCollection() {
 
-  const [scrollState, setScrollState] = useState<number>(1); 
+  const [scrollState, setScrollState] = useState<number>(1);
   const [mobileScrollState, setMobileScrollState] = useState<number>(0);
 
-  const groupedProducts = productsData.reduce((acc, product) => {
-  if (!acc[product.category]) {
-    acc[product.category] = [];
-  }
-  acc[product.category].push(product);
-  return acc;
-}, {} as Record<string, typeof productsData>);
+  const groupedProducts = (productsData as Product[]).reduce((acc, product) => {
+    if (!acc[product.category]) {
+      acc[product.category] = [];
+    }
+    acc[product.category].push(product);
+    return acc;
+  }, {} as Record<string, Product[]>);
 
   const collections = Object.values(groupedProducts)
-  .flatMap(categoryProducts => categoryProducts.slice(0, 2))
-  .slice(0, 12); 
+    .flatMap(categoryProducts => categoryProducts.slice(0, 2))
+    .slice(0, 12);
 
-  
+
   const handlers = useSwipeable({
     onSwipedLeft: () => {
-      if(mobileScrollState!=1100){
-              setMobileScrollState(mobileScrollState+100);
-            }
+      if (mobileScrollState != 1100) {
+        setMobileScrollState(mobileScrollState + 100);
+      }
     },
     onSwipedRight: () => {
-      if(mobileScrollState!=0){
-              setMobileScrollState(mobileScrollState-100);
-            }
+      if (mobileScrollState != 0) {
+        setMobileScrollState(mobileScrollState - 100);
+      }
     },
   });
 
@@ -64,7 +64,7 @@ export default function OurCollection() {
     700: 'w-[70%]',
     800: 'w-[80%]',
     900: 'w-[90%]',
-    1000: 'w-[95%]', 
+    1000: 'w-[95%]',
     1100: 'w-[100%]',
   }
 
@@ -75,7 +75,7 @@ export default function OurCollection() {
   return (
 
     <section className="w-full py-21 px-5 overflow-hidden z-30 relative" data-theme='dark'>
-      
+
       {/* Inner flex container */}
       <div className="w-full flex flex-col justify-center items-center pb-9 md:pb-20">
         {/* Section heading */}
@@ -90,13 +90,11 @@ export default function OurCollection() {
       </div>
 
       {/* Collection items grid */}
-      <div {...handlers} className={`w-full flex flex-nowrap gap-[10%] md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'md:translate-x-0' : ''} ${scrollState ==2 ? 'md:-translate-x-[100%]' : ''} ${scrollState ==3 ? 'md:-translate-x-[200%]':''} ${mobileTranslateClass}`}>
+      <div {...handlers} className={`w-full flex flex-nowrap gap-[10%] md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'md:translate-x-0' : ''} ${scrollState == 2 ? 'md:-translate-x-[100%]' : ''} ${scrollState == 3 ? 'md:-translate-x-[200%]' : ''} ${mobileTranslateClass}`}>
         {collections.map((product, id) => (
-          <CollectionItem 
+          <CollectionItem
             key={product.id || id}
-            name={product.productName}
-            color={product.colors?.[0]?.color || "Default"}
-            image={product.colors?.[0]?.image || "/fallback.png"}
+            product={product}
           />
         ))}
       </div>
@@ -106,7 +104,7 @@ export default function OurCollection() {
         {/* First inner div with top border */}
         <div className="w-full border-b-3 border-[#000000]/20 relative shrink">
           {/* Absolute border div inside first inner div */}
-          <div className={`absolute -translate-y-1/4  w-full top-0 left-0 flex ${scrollState == 1 ? 'justify-start' : ''} ${scrollState ==2 ? 'justify-center': ''} ${scrollState ==3 ? 'justify-end': ''}`}>
+          <div className={`absolute -translate-y-1/4  w-full top-0 left-0 flex ${scrollState == 1 ? 'justify-start' : ''} ${scrollState == 2 ? 'justify-center' : ''} ${scrollState == 3 ? 'justify-end' : ''}`}>
             <div className={` border-t-5 border-[#7C3C3C] ${mobileWidthClass}  md:w-[34%]`}></div>
           </div>
         </div>
@@ -114,28 +112,28 @@ export default function OurCollection() {
         {/* Second inner div with buttons */}
         <div className=" hidden md:flex items-center gap-2 ">
           {/* First button */}
-          <button onClick={()=>{
-            if(scrollState!=1){
-              setScrollState(scrollState-1);
+          <button onClick={() => {
+            if (scrollState != 1) {
+              setScrollState(scrollState - 1);
             }
           }} className="w-10 h-10 rounded-[10px] bg-[#F9F9F9] hover:cursor-pointer stroke-black active:stroke-white active:bg-[#7C3C3C] flex justify-center items-center">
-            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.0502 7.07071L9.0857 12.106L14.121 17.0705" strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.0502 7.07071L9.0857 12.106L14.121 17.0705" strokeLinecap="round" strokeLinejoin="round" /></svg>
 
           </button>
 
           {/* Second button */}
-          <button onClick={()=>{
-            if(scrollState!=3){
-              setScrollState(scrollState+1);
+          <button onClick={() => {
+            if (scrollState != 3) {
+              setScrollState(scrollState + 1);
             }
           }} className="w-10 h-10 bg-[#F9F9F9] hover:cursor-pointer active:bg-[#7C3C3C] stroke-black active:stroke-white rounded-[10px] flex justify-center items-center">
-            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.581227 10.4997L5.54053 5.45931L0.500164 0.500004"  strokeLinecap="round" strokeLinejoin="round"/></svg>
+            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.581227 10.4997L5.54053 5.45931L0.500164 0.500004" strokeLinecap="round" strokeLinejoin="round" /></svg>
 
           </button>
         </div>
       </div>
 
     </section>
-    
+
   );
 }

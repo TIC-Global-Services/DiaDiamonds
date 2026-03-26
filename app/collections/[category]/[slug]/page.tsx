@@ -4,6 +4,7 @@ import { generateSlug } from "@/utils/slug";
 import { useParams, useRouter } from "next/navigation";
 import productsData from "@/products.json";
 import ProductView from "@/components/CollectionsNew/productview";
+import ProductNotFound from "@/components/Reusable/ProductNotFound";
 
 export default function ProductPage() {
   const params = useParams();
@@ -18,7 +19,7 @@ export default function ProductPage() {
       p.category.toLowerCase() === category
   );
 
-  if (!product) return <div>Product not found</div>;
+  if (!product) return <ProductNotFound/>;
 
   return (
     <ProductView

@@ -321,8 +321,7 @@ export default function Navbar() {
                             >
                               <Link
                                 href={{
-                                  pathname: "/collections",
-                                  query: { category }
+                                  pathname: `/collections/${category}`,
                                 }}
                                 className="hover:underline text-2xl capitalize block py-1 transition-all duration-200 hover:translate-x-2"
                               >

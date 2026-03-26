@@ -14,7 +14,7 @@ export default function About(){
     return(
         <div>
         <ChatBtn />
-        <Navbar />
+        {/* <Navbar /> */}
         <Hero />
         <Value />
         <WhyUs />
@@ -22,7 +22,7 @@ export default function About(){
         <Emotions />
         <OurDiamonds />
         <VisitStore />
-        <Footer/>
+        {/* <Footer/> */}
         </div>
     )
 }

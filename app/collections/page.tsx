@@ -1,6 +1,8 @@
-import { Suspense } from 'react';
 import { redirect } from "next/navigation";
+import productsData from "@/products.json";
 
-export default function CollectionsNewPage() {
-  redirect("/collections/rings");
+// fallback
+export default function CollectionsPage() {
+  const firstCategory = productsData[0]?.category;
+  redirect(`/collections/${firstCategory}`);
 }
