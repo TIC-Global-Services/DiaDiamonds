@@ -61,13 +61,13 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
   return (
     <motion.section
 
-      data-theme="dark"
+      data-theme="light"
 
       initial={{ clipPath: "circle(0% at 0% 0%)" }}
       animate={{ clipPath: isSearch ? "circle(150% at 0% 0%)" : "circle(0% at 0% 0%)" }}
       transition={{ duration: 0.6 }}
 
-      className={`absolute inset-0 w-full h-[100dvh] overflow-y-scroll px-6 md:px-10 py-[26px] bg-[#ffffff] z-50 ${isSearch ? 'fixed block' : ''}`} style={{ scrollbarWidth: 'none' }}>
+      className={`absolute inset-0 w-full h-[100dvh] overflow-y-scroll px-6 md:px-10 py-[26px] bg-[#ffffff] z-9999 ${isSearch ? 'fixed block' : ''}`} style={{ scrollbarWidth: 'none' }}>
       <motion.button
         className="pb-[30px] hover:cursor-pointer group"
         onClick={() => { setIsSearch(false) }}

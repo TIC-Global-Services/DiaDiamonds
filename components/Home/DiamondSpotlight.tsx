@@ -2,8 +2,10 @@
 import { useRef, useEffect, useState } from "react";
 
 import PrimaryBtn from "../Reusable/PrimaryBtn";
+import { useRouter } from "next/navigation";
 
 export default function DiamondSpotlight() {
+  const router = useRouter();
 
   const [maskSize, setMaskSize] = useState("26% 37%");
 
@@ -47,7 +49,7 @@ export default function DiamondSpotlight() {
       className="w-full relative h-[100vh] md:h-auto overflow-hidden"
       ref={elementRef}
       onMouseMove={captureMousePosition}
-      data-theme="light"
+      data-theme="dark"
     >
 
       <img
@@ -85,7 +87,9 @@ export default function DiamondSpotlight() {
           <h2 className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#EFFFFF] text-center">
             Designed for you. Crafted for a lifetime.
           </h2>
-          <PrimaryBtn text="DISCOVER MORE" textColor="text-white"/>
+          <div onClick={() => router.push("/collections/rings")}>
+            <PrimaryBtn text="DISCOVER MORE" textColor="text-white" />
+          </div>
         </div>
       </div>
     </section>

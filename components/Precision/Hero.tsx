@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   return (
     // Main hero container (relative for absolute overlay positioning)
     <section
-      data-theme="light"
+      data-theme="dark"
       className="w-full h-[100svh] relative overflow-hidden"
     >
       <Parallax speed={-20}>

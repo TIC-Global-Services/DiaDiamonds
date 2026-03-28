@@ -20,7 +20,7 @@ const ProductList: React.FC<ProductListProps> = ({
   const [isRightOpen, setIsRightOpen] = useState(false);
 
   const [sortBy, setSortBy] = useState<SortType>("default");
-  const [solitaireVariety, setSolitaireVariety] = useState<VarietyType>("solitaire variety");
+  const [solitaireVariety, setSolitaireVariety] = useState<VarietyType>("default");
 
   const [visibleCount, setVisibleCount] = useState(6);
 
@@ -56,11 +56,9 @@ const ProductList: React.FC<ProductListProps> = ({
     let result = [...products];
 
     // Filter by variety (only for rings)
-    if (category === "rings" && solitaireVariety !== "solitaire variety") {
+    if (category.toLowerCase() === "rings" && solitaireVariety !== "default") {
       result = result.filter((p) =>
-        p.tags?.some(tag =>
-          tag.toLowerCase().includes(solitaireVariety.toLowerCase())
-        )
+        p.diamondType?.toLowerCase() === solitaireVariety.toLowerCase()
       );
     }
 
@@ -78,6 +76,9 @@ const ProductList: React.FC<ProductListProps> = ({
 
     return result;
   }, [products, sortBy, solitaireVariety, category]);
+  console.log("category:", category);
+  console.log("solitaireVariety:", solitaireVariety);
+  console.log("sample tags:", products[0]?.tags);
 
   // Pagination
   const displayedProducts = filteredProducts.slice(0, visibleCount);
@@ -86,7 +87,7 @@ const ProductList: React.FC<ProductListProps> = ({
   const loadMore = () => setVisibleCount(prev => prev + 6);
 
   return (
-    <section className="w-full">
+    <section data-theme='light' className="w-full">
 
       {/* FILTER BAR */}
       <div className="hidden md:flex relative w-full py-[5%] px-[3%] justify-between items-start z-10">
@@ -95,11 +96,10 @@ const ProductList: React.FC<ProductListProps> = ({
         <div ref={leftDropdownRef}>
           <DropdownButton
             label="Sort By"
-            width="w-[180px] h-[58px]"
             options={SORT_OPTIONS}
             selected={sortBy}
             isOpen={isLeftOpen}
-            showSelectedLabel  
+            showSelectedLabel={sortBy !== "default"}   //only show selected when not default
             onToggle={() => {
               setIsLeftOpen(p => !p);
               setIsRightOpen(false);
@@ -121,11 +121,11 @@ const ProductList: React.FC<ProductListProps> = ({
         >
           <DropdownButton
             label="Solitaire Variety"
-            width="w-[220px] h-[58px]"
+            width="w-[226px]"
             options={VARIETIES}
             selected={solitaireVariety}
             isOpen={isRightOpen}
-            showSelectedLabel
+            showSelectedLabel={solitaireVariety !== "default"}  //only show selected when chosen
             onToggle={() => {
               setIsRightOpen(p => !p);
               setIsLeftOpen(false);

@@ -201,3 +201,24 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+
+/* Smooth transitions */
+.hero-bg,
+.hero-blur-overlay {
+  transition: all 0.5s ease;
+}
+
+/* Default state */
+.hero-blur-overlay {
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+/* WHEN MENU OPENS */
+.menu-open .hero-blur-overlay {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+}
+

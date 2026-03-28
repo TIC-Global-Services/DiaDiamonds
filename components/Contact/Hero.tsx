@@ -1,13 +1,21 @@
+import Image from "next/image";
 import PrimaryBtn from "../Reusable/PrimaryBtn";
+import bgImage from '@/public/assets/img/Contact/bgImage.png'
 
-export default function Hero(){
+export default function Hero() {
 
-    const bgImage = '/assets/img/Contact/bgImage.png';
+    return (
+        <section data-theme="dark" className="relative w-full h-screen md:h-auto md:aspect-1440/960 overflow-hidden flex">
 
-    return(
-        <section data-theme="light" className="relative w-full h-screen md:h-auto md:aspect-1440/960 overflow-hidden flex">
-
-            <img src={bgImage} alt="bgImage" className="object-cover md:object-fill object-[30%_50%]" />
+            <div className="relative w-full h-full">
+                <Image
+                    src={bgImage}
+                    alt="bgImage"
+                    fill
+                    priority
+                    className="object-cover md:object-fill object-[30%_50%]"
+                />
+            </div>
 
 
             <div className="absolute top-[65.6%] md:top-[38.75%] md:left-[23.82%] w-full md:w-[52.36%] flex flex-col justify-center items-center">

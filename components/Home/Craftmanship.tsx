@@ -4,32 +4,31 @@ import { useState, useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import PrimaryBtn from "../Reusable/PrimaryBtn";
+import { useRouter } from "next/navigation";
+import imageSrc from '@/public/assets/img/Craftsmanship/CraftManShipImage1.png'
+import bottomImageSrc from '@/public/assets/img/Craftsmanship/CraftManShipImage2.png'
+import Image from "next/image";
+
+const cards = [
+  {
+    title: "Elegant and Premium",
+    content:
+      "Every diamond is meticulously selected and expertly set by skilled artisans. From precision cutting to flawless finishing, each piece reflects timeless beauty and uncompromising quality.",
+  },
+  {
+    title: "Precision in Every Cut",
+    content:
+      "Every diamond is cut with absolute precision to unlock its maximum brilliance and fire. Our expert craftsmen carefully calculate each angle and facet to ensure perfect symmetry, allowing light to reflect beautifully through the stone.",
+  },
+  {
+    title: "Consectetur Crafted to Perfection",
+    content:
+      "From selection to final polish, each diamond undergoes a meticulous crafting process guided by skilled artisans. Only the finest stones are chosen and refined to meet exceptional quality standards",
+  },
+];
 
 export default function Craftsmanship() {
-  const imageSrc = "/assets/img/Craftsmanship/CraftManShipImage1.png";
-  const bottomImageSrc = "/assets/img/Craftsmanship/CraftManShipImage2.png";
-
-  const cards = [
-    {
-      title: "Elegant and Premium",
-      content:
-        "Every diamond is meticulously selected and expertly set by skilled artisans. From precision cutting to flawless finishing, each piece reflects timeless beauty and uncompromising quality.",
-    },
-    {
-      title: "Precision in Every Cut",
-      content:
-        "Every diamond is cut with absolute precision to unlock its maximum brilliance and fire. Our expert craftsmen carefully calculate each angle and facet to ensure perfect symmetry, allowing light to reflect beautifully through the stone.",
-    },
-    {
-      title: "Consectetur Crafted to Perfection",
-      content:
-        "From selection to final polish, each diamond undergoes a meticulous crafting process guided by skilled artisans. Only the finest stones are chosen and refined to meet exceptional quality standards",
-    },
-  ];
-
-  
-
-
+  const router = useRouter();
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -40,22 +39,26 @@ export default function Craftsmanship() {
   }, [cards.length]);
 
   return (
-    <section data-theme="dark" className="relative h-auto md:h-[150vh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
+    <section data-theme="light" className="relative h-auto md:h-[150vh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
       {/* Left Side Image */}
       <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5, delay:0.2, ease:"easeInOut" }}
-      viewport={{once:false}}
-      className="w-full md:w-1/2 md:h-full relative overflow-hidden">
+        initial={{ opacity: 0, x: -10 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+        viewport={{ once: false }}
+        className="w-full md:w-1/2 md:h-full relative overflow-hidden">
         <Parallax speed={-10}>
-          <img
-            src={imageSrc}
-            alt="Craftsmanship"
-            className="w-full md:h-[150vh]  object-cover"
-          />
+          <div className="relative w-full md:h-[150vh]">
+            <Image
+              src={imageSrc}
+              alt="Craftsmanship"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
         </Parallax>
-        <div className="absolute inset-0 flex justify-center items-end pb-10 md:mb-28">
+        <div onClick={() => router.push("/collections/bracelets")} className="absolute inset-0 z-20 flex justify-center items-end pb-10 md:mb-28">
           {/* <button className="glass-btn BtnAnimation text-[10px] md:text-[12px] tracking-[0.166rem] border-[5.3px] rounded-full px-[16px] py-[3px] md:px-[18px] md:py-[7.6px]  uppercase ">
             VIEW BRACELET COLLECTION
           </button> */}
@@ -88,9 +91,8 @@ export default function Craftsmanship() {
               {cards.map((_, idx) => (
                 <div
                   key={idx}
-                  className={`rounded-full transition-all w-3 h-2 ${
-                    idx === activeIndex ? "w-5 bg-[#431A1A]" : "bg-[#000000]/10"
-                  }`}
+                  className={`rounded-full transition-all w-3 h-2 ${idx === activeIndex ? "w-5 bg-[#431A1A]" : "bg-[#000000]/10"
+                    }`}
                 ></div>
               ))}
             </div>
@@ -99,17 +101,19 @@ export default function Craftsmanship() {
 
         {/* Bottom Half Image */}
         <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay:0.2, ease:"easeInOut" }}
-        viewport={{once:false}}
-
-        className="w-full h-[40vh] md:h-1/2 2xl:h-[75vh] bg-black overflow-hidden order-1 md:order-2">
-          <Parallax speed={-10}>
-            <img
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
+          viewport={{ once: false }}
+          className="relative w-full h-[40vh] md:h-1/2 2xl:h-[75vh] overflow-hidden order-1 md:order-2"
+        >
+          <Parallax speed={-10} className="h-full">
+            <Image
               src={bottomImageSrc}
               alt="Craftsmanship"
-              className="w-full h-[40vh] md:h-full 2xl:h-[75vh] object-cover -translate-y-1/6 2xl:translate-y-0 scale-110"
+              fill
+              className="object-cover -translate-y-1/6 2xl:translate-y-0 scale-110"
+              quality={100}
             />
           </Parallax>
         </motion.div>

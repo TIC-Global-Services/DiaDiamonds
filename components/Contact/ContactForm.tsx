@@ -3,7 +3,7 @@ import GlassCard from "../Reusable/GlassCard";
 
 export default function ContactForm(){
     return(
-        <section className="relative px-[3.64%] py-[8.25%] md:px-0 md:py-0  w-full md:aspect-1440/753 bg-[#F5ECE0]">
+        <section className="relative px-[3.64%] py-[8.25%] md:px-0 md:py-0  w-full md:aspect-1440/753 bg-[#F5ECE0]" data-theme="light">
 
             <div className="w-full md:absolute md:top-[-44.82%] md:left-[25.35%] md:w-[49.31%] rounded-[25px] md:rounded-[0px]  md:mx-auto bg-[#FCF9F4] p-[1.88%]">
 

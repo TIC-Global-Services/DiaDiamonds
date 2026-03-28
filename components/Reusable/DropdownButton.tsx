@@ -17,8 +17,6 @@ interface DropdownButtonProps {
   onSelect: (value: string) => void;
   animationDelay?: number;
   width?: string;
-
-  // NEW (optional)
   showSelectedLabel?: boolean;
 }
 
@@ -30,7 +28,7 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
   onToggle,
   onSelect,
   animationDelay = 0.1,
-  width = "min-w-[100%]",
+  width = "w-[157px]",   // ← default width: 157px
   showSelectedLabel = false,
 }) => {
 
@@ -40,10 +38,8 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
     onSelect(value);
   };
 
-  // Find selected option
   const selectedOption = options.find(opt => opt.value === selected);
 
-  // Decide label to show
   const displayLabel =
     showSelectedLabel && selectedOption
       ? selectedOption.label
@@ -53,10 +49,11 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
     <button
       type="button"
       onClick={onToggle}
-      className={`relative h-[40px] px-4 flex items-center justify-between bg-[#431A1A] rounded-lg cursor-pointer border-0 ${width}`}
+      className={`relative h-[58px] px-4 flex items-center justify-between bg-[#431A1A] rounded-[14px] cursor-pointer border-0 ${width}`}
+      //                ↑ height: 58px                                              ↑ border-radius: 14px
     >
       {/* LABEL */}
-      <h3 className="font-semibold text-[13px] leading-[16px] tracking-[0.88px] uppercase text-white shrink-0">
+      <h3 className="font-semibold text-[12px] leading-[16px] tracking-[0.88px] uppercase text-white shrink-0">
         {displayLabel}
       </h3>
 
@@ -95,7 +92,6 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
   );
 };
 
-// Chevron Icon
 const ChevronIcon: React.FC<{ isOpen: boolean }> = ({ isOpen }) => (
   <svg
     className={`transition-transform ${isOpen ? "rotate-180" : "rotate-0"}`}

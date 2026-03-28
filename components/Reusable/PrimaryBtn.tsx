@@ -23,9 +23,10 @@ export default function PrimaryBtn({
         rounded-full
         text-[16px]
         uppercase
-        bg-[rgba(255,255,255,0)]
-        backdrop-blur-[2.5px]
-        shadow-[0_8px_32px_rgba(0,0,0,0.25)]
+        bg-transparent
+        backdrop-blur-md
+        border-t border-b border-white/90
+        shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]
         overflow-hidden
         btn-glass-border
         ${animated ? "BtnAnimation" : ""}

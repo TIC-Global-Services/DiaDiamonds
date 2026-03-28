@@ -7,7 +7,7 @@ export default function ContactInfo(){
     const subStyle = "text-[13px] md:text-[16px] leading-[100%] tracking-[0%] text-[#000000] text-center"
 
     return(
-        <section data-theme="dark" className="w-full bg-white px-[5.81%] md:px-[8.23%] py-[25.93%] md:py-[6.53%]">
+        <section data-theme="light" className="w-full bg-white px-[5.81%] md:px-[8.23%] py-[25.93%] md:py-[6.53%]">
 
             <div className="w-full flex flex-col md:flex-row px-0 md:px-[4.48%] md:mb-[2.99%]">
 

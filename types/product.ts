@@ -40,7 +40,7 @@ export interface GroupedProducts {
 export const SORT_OPTIONS = [
   { label: "Recommended", value: "recommended" },
   { label: "New Arrival", value: "newArrival" },
-  { label: "All", value: "default" },
+  { label: "All", value: "all" },
 ] as const;
 
 export const VARIETIES = [
@@ -49,8 +49,7 @@ export const VARIETIES = [
   { label: "Emerald & Round Cut", value: "emerald round cut" },
   { label: "Princess Cut", value: "princess cut" },
   { label: "Marquise Cut", value: "marquise cut" },
-  { label: "Solitaire variety", value: "solitaire variety" },
 ] as const;
 
-export type SortType = typeof SORT_OPTIONS[number]["value"];
-export type VarietyType = typeof VARIETIES[number]["value"];
+export type SortType = typeof SORT_OPTIONS[number]["value"] | "default";
+export type VarietyType = typeof VARIETIES[number]["value"] | "default";

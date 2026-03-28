@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import TheArtOfCrafting from './TheArtOfCrafting';
 import Image from "next/image";
 import Breadcrumbs from "@/components/Reusable/Breadcrumbs";
+import leftOnBack from '@/public/assets/img/leftOnBack.png'
 
 import ring from '@/public/assets/img/Collections/type/ring.png';
 import Earrings from '@/public/assets/img/Collections/type/earring.png';
@@ -18,7 +19,7 @@ interface CategoryCoreProps {
   productLists: Product[];
 }
 
-const TheArtOfCraftingContent: Record<string, { bgImage: string; text: string }> = {
+const TheArtOfCraftingContent: Record<string, { bgImage: string; text: string; }> = {
   rings: {
     bgImage: '/assets/img/Collections/TheArtOfCrafting/bgImage1.png',
     text: 'Where Every Sparkle Tells a Story, Moments Shine Brighter Together',
@@ -62,17 +63,17 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
   };
 
   return (
-    <div className="min-h-screen bg-white pt-[8%]">
+    <div data-theme='light' className="min-h-screen bg-white pt-[8%]">
 
       {/* BREADCRUMBS */}
-      <Breadcrumbs
-        className="mt-4"
-        items={[
-          { label: "HOME", href: "/" },
-          { label: "COLLECTION", href: "/collections" },
-          { label: category.toUpperCase() },
-        ]}
-      />
+        <Breadcrumbs
+          className="mt-4"
+          items={[
+            { label: "HOME", href: "/" },
+            { label: "COLLECTION", href: "/collections" },
+            { label: category.toUpperCase() },
+          ]}
+        />
 
       {/* CATEGORY MENU */}
       <section className="w-full mx-auto pt-8">

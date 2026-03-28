@@ -3,9 +3,10 @@
 import { motion, useAnimation } from "framer-motion";
 import { useRef, useEffect } from "react";
 import PrimaryBtn from "../Reusable/PrimaryBtn";
+import { useRouter } from "next/navigation";
 
 export default function TheArtOfRefinement() {
-
+  const router = useRouter();
   const controls = useAnimation();
 
 
@@ -68,18 +69,13 @@ export default function TheArtOfRefinement() {
   }
 
   return (
-    <section data-theme="light" className="w-full py-[21.43%] md:py-0 md:px-[2.5%] md:pt-[13.4%] md:pb-[9.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
+    <section data-theme="dark" className="w-full py-[21.43%] md:py-0 md:px-[2.5%] md:pt-[13.4%] md:pb-[9.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
 
       {/* First Div */}
-
-
       <motion.div
-
         variants={container}
         initial="hidden"
         animate={controls}
-
-
         className="relative w-[45.83%] mx-auto md:mx-0 md:w-[34.61%] aspect-[470/588] border-0 rounded-[20px] bg-white overflow-hidden shrink-0">
         <img
           src={PantherImg}
@@ -112,7 +108,7 @@ export default function TheArtOfRefinement() {
         <div className="w-full md:w-[51.7%] my-auto md:ml-[1.875%] pb-[13.11%] md:pb-[9.4%] text-center md:text-left">
           <h2 className="w-[74.9%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF] text-[40px] leading-[100%] pb-[4.85%] md:pb-[10.27%] text-center md:text-left">The Art of Radiant Refinement</h2>
           <p className="w-[74.9%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF]/70 pb-[5.83%] md:pb-[12.33%] text-center md:text-left">Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.</p>
-          <div className="w-[24.76%] md:w-auto mx-auto block md:mx-0">
+          <div onClick={() => router.push("/about")}  className="w-[24.76%] md:w-auto mx-auto block md:mx-0">
             <PrimaryBtn text="VIEW MORE" textColor="text-white" />
           </div>
         </div>

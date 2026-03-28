@@ -9,6 +9,8 @@ import Image from 'next/image';
 import RecommendedProductCard from '../Cards/RecommendedProductCard';
 import { Product } from '@/types/product';
 import { LAYOUT_IMAGES } from '@/constants/LayoutImages';
+import leftOnBack from '@/public/assets/img/leftOnBack.png'
+
 
 
 interface ProductViewProps {
@@ -95,21 +97,20 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
   const hasLayoutImages = !!(topImage || leftImage || rightImage || bottomImage);
 
   return (
-    <div className="w-full bg-[#FFFFFF] overflow-hidden pt-[94px]">
+    <div data-theme='light' className="w-full bg-[#FFFFFF] overflow-hidden pt-[94px]">
 
       {/* Breadcrumbs */}
-      <Breadcrumbs
-        className="mt-4"
-        items={[
-          { label: "HOME", href: "/" },
-          { label: "COLLECTION", href: `/collections/${product.category.toLowerCase()}` },
-          { label: product.category.toUpperCase(), href: `/collections/${product.category.toLowerCase()}` },
-          { label: product.productName.toUpperCase() },
-        ]}
-      />
+        <Breadcrumbs
+          items={[
+            { label: "HOME", href: "/" },
+            { label: "COLLECTION", href: `/collections/${product.category.toLowerCase()}` },
+            { label: product.category.toUpperCase(), href: `/collections/${product.category.toLowerCase()}` },
+            { label: product.productName.toUpperCase() },
+          ]}
+        />
 
       {/* Item Display */}
-      <section className="w-full md:px-[6.67%] flex justify-between flex-col md:flex-row mt-[2%]">
+      <section data-theme='light' className="w-full md:px-[6.67%] flex justify-between flex-col md:flex-row mt-[2%]">
 
         {/* Left Info & Options */}
         <div className="w-full md:w-[35%] px-[4.37%] md:px-0 md:ml-[5%] md:pb-[18.96%]">
@@ -167,8 +168,8 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                   key={size}
                   onClick={() => setCurrentSize(size)}
                   className={`text-xs md:text-sm ${currentSize === size
-                      ? 'text-black font-bold border border-black rounded-full px-2 py-[2px]'
-                      : 'text-[#000000]/70'
+                    ? 'text-black font-bold border border-black rounded-full px-2 py-[2px]'
+                    : 'text-[#000000]/70'
                     } hover:text-black transition-colors`}
                 >
                   {size}
@@ -202,7 +203,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
       {/* Layout Images Section */}
       {hasLayoutImages && (
-        <section className="w-full px-[3.64%] md:px-0 md:pr-[4.5%] md:pl-[6.67%]">
+        <section data-theme = 'light' className="w-full px-[3.64%] md:px-0 md:pr-[4.5%] md:pl-[6.67%]">
 
           {/* Description + Bullet Points */}
           <div className="md:w-[50%] md:ml-auto md:pb-[9%]">
@@ -284,7 +285,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
       )}
 
       {/* You May Also Like */}
-      <section data-theme="dark" className="w-full md:pb-[4.51%] mt-[10%]">
+      <section data-theme="light" className="w-full md:pb-[4.51%] mt-[10%]">
         <h2 className="text-center font-baskerville text-2xl md:text-3xl mb-8 border-t border-gray-100 pt-12">
           You May Also Like
         </h2>

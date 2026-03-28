@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClashDisplay, BaskerVilleSC, ClashGrotesk } from "@/fonts";
-import { ScrollProvider } from "@/providers/ScrollProvider";
 import { Providers } from "./providers";
 import Navbar from "@/components/Reusable/Navbar";
 import Footer from "@/components/Reusable/Footer";

@@ -1,10 +1,11 @@
 "use client";
 
-import QA from "./Reusable/QA";
+import QA from "../Reusable/QA";
 import { Parallax } from "react-scroll-parallax";
+import QAImageLeft from '@/public/assets/img/Q&A/QAImage.png'
+import Image from "next/image";
 
 export default function QandA() {
-  const QAImageLeft = "/assets/img/Q&A/QAImage.png";
 
   return (
     <section data-theme="light" className="w-full relative">
@@ -12,12 +13,14 @@ export default function QandA() {
       {/* Non-absolute content container */}
       <div className="relative z-20 w-full py-[10%] px-10 flex justify-end items-center gap-[60px] flex-wrap md:flex-nowrap">
 
-        <div className="w-[50%] md:w-[30%] mx-auto md:mx-0 overflow-hidden delay-100 duration-300 ease-in-out">
-          <Parallax speed={-10}>
-            <img
+        <div className="relative w-[50%] md:w-[30%] mx-auto md:mx-0 aspect-[157/234] md:aspect-[448/673] overflow-hidden">
+          <Parallax speed={-10} className="h-full">
+            <Image
               src={QAImageLeft}
               alt="Q&A visual"
-              className="w-full aspect-[157/234] scale-110 md:scale-100 md:aspect-[448/673] object-contain hover:scale-110"
+              fill
+              className="object-contain scale-110 md:scale-100 hover:scale-110 transition duration-300"
+              quality={100}
             />
           </Parallax>
         </div>

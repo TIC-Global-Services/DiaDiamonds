@@ -10,7 +10,7 @@ const Brilliance: React.FC = () => {
 
   return (
     <section
-      data-theme="dark"
+      data-theme="light"
       className="w-full relative bg-[linear-gradient(180deg,#F8CC96_0%,#F8D8B1_0.01%,#F7E7D3_0.02%,#F7EAD9_0.03%,#F7F6F4_100%)] py-12 md:py-[5%] px-4 sm:px-6 lg:px-[10.56%]"
     >
       {/* TITLE */}
@@ -25,7 +25,7 @@ const Brilliance: React.FC = () => {
       </motion.h2>
 
       {/* ── MOBILE LAYOUT (hidden on md+) ── */}
-      <div className="flex flex-col justify-between gap-6 md:hidden">
+      <div className="flex flex-col justify-between md:hidden">
 
         {/* Top LEFT card */}
         <motion.div
@@ -33,9 +33,12 @@ const Brilliance: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="w-full flex"
+          className="w-full justify-start p-2 flex"
         >
-          <GlassCard className="w-[75%] self-start p-4 border-0 rounded-[16px] shadow-[1px_1px_5px_0px_#00000040] bg-white/40 backdrop-blur-sm z-50">
+          <GlassCard className="w-[75%] bottom-0 self-start p-2 bg-transparent
+              backdrop-blur-md
+              border-t border-b border-white/90
+              shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)] z-50">
             <h3 className="text-[16px] text-[#000000] pb-2">
               Luxury That Makes Sense
             </h3>
@@ -54,7 +57,7 @@ const Brilliance: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full aspect-[669/650] relative h-[70dvh]"
+          className="w-full aspect-[669/650] justify-center relative h-[50dvh]"
         >
           <Image
             src={bgImage}
@@ -71,9 +74,12 @@ const Brilliance: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-          className="w-full flex justify-end"
+          className="w-full flex pb-4 justify-end"
         >
-          <GlassCard className="w-[75%] self-end p-4 border-0 rounded-[16px] shadow-[1px_1px_5px_0px_#00000040] bg-white/40 backdrop-blur-sm">
+          <GlassCard className="w-[75%] self-end p-4 bg-transparent
+            backdrop-blur-md
+            border-t border-b border-white/90
+            shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]">
             <h3 className="text-[16px] text-[#000000] pb-2">
               Greater Diamond, Greater Value
             </h3>
@@ -126,7 +132,10 @@ const Brilliance: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
             className="absolute top-[15%] left-0 lg:top-[20.1%] lg:left-[0%] w-[45%] lg:w-[35%]"
           >
-            <GlassCard className="w-full p-5 lg:p-6 border-0 rounded-[16px] lg:rounded-[20px] shadow-[1px_1px_5px_0px_#00000040] bg-white/40 backdrop-blur-sm">
+            <GlassCard className="w-full p-5 lg:p-6 border-0 rounded-[16px] lg:rounded-[20px] bg-transparent
+              backdrop-blur-md
+              border-t border-b border-white/90
+              shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]">
               <h3 className="text-[18px] lg:text-[20px] text-[#000000] pb-2 lg:pb-[3.43%]">
                 Luxury That Makes Sense
               </h3>
@@ -147,7 +156,10 @@ const Brilliance: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             className="absolute top-[40%] right-0 lg:top-[45.92%] lg:right-[0%] w-[45%] lg:w-[35%]"
           >
-            <GlassCard className="w-full p-5 lg:p-6 border-0 rounded-[16px] lg:rounded-[20px] shadow-[1px_1px_5px_0px_#00000040] bg-white/40 backdrop-blur-sm">
+            <GlassCard className="w-full p-5 lg:p-6 border-0 rounded-[16px] lg:rounded-[20px] bg-transparent
+              backdrop-blur-md
+              border-t border-b border-white/90
+              shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]">
               <h3 className="text-[18px] lg:text-[20px] text-[#000000] pb-2 lg:pb-[3.43%]">
                 Greater Diamond,<br /> Greater Value
               </h3>
@@ -168,7 +180,10 @@ const Brilliance: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
             className="hidden lg:block absolute top-[67%] left-[12%] w-[35%]"
           >
-            <GlassCard className="w-full p-6 border-0 rounded-[20px] shadow-[1px_1px_5px_0px_#00000040] bg-white/40 backdrop-blur-sm">
+            <GlassCard className="w-full p-6 border-0 rounded-[20px] bg-transparent
+              backdrop-blur-md
+              border-t border-b border-white/90
+              shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]">
               <h3 className="text-[20px] text-[#000000] pb-[3.43%]">
                 Beauty Without Compromise
               </h3>

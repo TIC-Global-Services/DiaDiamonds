@@ -9,12 +9,12 @@ export default function OurRoots() {
     const ProfileImage = '/assets/img/About/OurRoots/ProfileImage.jpg';
 
     return (
-      <section data-theme="dark" className="w-full h-[100vh] md:h-auto flex flex-col md:flex-row relative">
+      <section data-theme="light" className="w-full h-[100vh] md:h-auto flex flex-col md:flex-row relative">
 
         {/* Left image */}
-        <div className="w-full md:w-1/2 md:h-auto 
+        <div className="w-full md:w-1/2  
                         h-screen md:h-auto 
-                        md:relative absolute top-0 left-0 md:static z-0 overflow-hidden">
+                        md:relative absolute top-0 left-0 z-0 overflow-hidden">
 
           <Parallax speed={-20} className="w-full h-full">
           <img

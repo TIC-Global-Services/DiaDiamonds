@@ -3,13 +3,15 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Parallax } from "react-scroll-parallax";
+import firstImage from '@/public/assets/img/Arrivals/ArrivalsImg1.png'
+import secondImage from '@/public/assets/img/Arrivals/ArrivalsImg2.png'
+import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Arrivals() {
+  const router = useRouter();
   const containerRef = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(containerRef, { amount: 0.2, once: false });
-
-  const firstImage = "/assets/img/Arrivals/ArrivalsImg1.png";
-  const secondImage = "/assets/img/Arrivals/ArrivalsImg2.png";
 
   return (
     <section data-theme="light"
@@ -27,9 +29,9 @@ export default function Arrivals() {
         transition={{ duration: 1.2, ease: "easeInOut" }}
         className="w-full md:w-1/2 h-1/2 md:h-full overflow-hidden"
       >
-        <div className="relative w-full h-full  overflow-hidden">
+        <div onClick={() => router.push("/collections/rings")} className="relative w-full h-full cursor-pointer overflow-hidden">
           <Parallax speed={-10}>
-            <img
+            <Image
               src={firstImage}
               alt="First Arrival"
               className="w-full h-full 2xl:h-screen object-cover "
@@ -53,9 +55,9 @@ export default function Arrivals() {
         transition={{ duration: 1.2, ease: "easeInOut" }}
         className="w-full md:w-1/2 h-1/2 md:h-full overflow-hidden"
       >
-        <div className="relative w-full h-full overflow-hidden">
+        <div onClick={() => router.push("/collections/rings")} className="relative cursor-pointer w-full h-full overflow-hidden">
           <Parallax speed={-10}>
-            <img
+            <Image
               src={secondImage}
               alt="Second Arrival"
               className="w-full h-full 2xl:h-screen object-cover"
@@ -63,7 +65,7 @@ export default function Arrivals() {
           </Parallax>
 
           <h2 className="absolute inset-0 font-medium text-base tracking-[0%] md:tracking-auto md:text-[40px] md:leading-[100%] text-white flex justify-center items-center uppercase">
-            NEW COLLECTIONS
+            COLLECTIONS
           </h2>
         </div>
       </motion.div>

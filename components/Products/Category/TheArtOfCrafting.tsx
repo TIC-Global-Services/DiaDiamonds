@@ -11,7 +11,7 @@ export default function TheArtOfCrafting({img, text}:ArtOfCraftingProps){
 
 
     return(
-        <section className="w-full flex relative flex-wrap md:flex-nowrap md:items-stretch mt-[10%]">
+        <section data-theme="light" className="w-full flex relative flex-wrap md:flex-nowrap md:items-stretch mt-[10%]">
 
             <div className="w-full md:w-[65.28%] aspect-412/529 md:aspect-940/847 overflow-hidden stretch">
 

@@ -1,6 +1,4 @@
 import Hero from "@/components/Home/Hero";
-import Navbar from "@/components/Reusable/Navbar";
-import Footer from "@/components/Reusable/Footer";
 import BrandValue from "@/components/Home/BrandValue";
 import Arrivals from "@/components/Home/Arrivals";
 import DiamondSpotlight from "@/components/Home/DiamondSpotlight";
@@ -11,7 +9,6 @@ import Testimonials from "@/components/Home/Testimonials";
 import OurCollection from "@/components/Home/OurCollections";
 import QandA from "@/components/Home/Q&A";
 import Shop from "@/components/Home/Shop";
-import Search from "@/components/Products/Search";
 import ChatBtn from "@/components/Reusable/ChatBtn";
 
 export default function Home() {
