@@ -6,6 +6,7 @@
   --font-clash-display: 'Helvetica', sans-serif; /* Fallback included */
 }
 
+
 body {
   background: var(--background);
   color: var(--foreground);

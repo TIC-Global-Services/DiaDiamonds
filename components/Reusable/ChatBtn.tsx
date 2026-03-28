@@ -12,7 +12,7 @@ export default function ChatBtn() {
   return (
     <div className="fixed z-50
     bottom-4 right-4
-    md:bottom-0 md:right-4 md:-translate-y-1/2
+    md:bottom-1 md:right-4
     flex flex-col items-end gap-3
   ">
       {/* Action Buttons inside whatsApp, email */}
@@ -20,7 +20,7 @@ export default function ChatBtn() {
         ${isClicked ? 'flex' : 'hidden'}
         flex-col md:flex-col
         items-center gap-3
-        p-4 md:p-2
+        p-4 md:p-5
         rounded-full
         bg-transparent
         backdrop-blur-md

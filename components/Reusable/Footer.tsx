@@ -2,7 +2,6 @@
 
 
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -14,8 +13,14 @@ export default function Footer() {
   const diamond = "/assets/img/Diamond.png";
   const singleSparkle = '/assets/img/singleSparkle.png';
 
+  const customerLinks = [
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Return Policy", href: "/return-policy" },
+    { name: "Shipping Policy", href: "/shipping-policy" },
+  ];
+
   return (
-    <footer className="w-full min-h-[50dvh] bg-[#0b0b0b] px-10 pt-10 pb-[27px] data-theme='dark' ">
+    <footer className="w-full z-[9999] min-h-[50dvh] bg-[#0b0b0b] px-10 pt-10 pb-[27px] data-theme='dark' ">
 
       {/* ================= NAV ================= */}
       <ul className="flex items-center justify-around md:justify-start  gap-[13px]">
@@ -44,13 +49,20 @@ export default function Footer() {
 
       <div className="flex flex-col py-10 justify-start items-start md:justify-end md:items-end -mt-6 md:mt-0">
         <h3 className='text-[13px] md:text-[20px] text-[#FFFFFF] leading-[140%] '>CUSTOMER SERVICE</h3>
-        <a className='text-[10px] md:text-[16px] text-[#737373] underline cursor-pointer'>Return Policy</a>
-        <a className='text-[10px] md:text-[16px] text-[#737373] underline cursor-pointer'>Shipping Policy</a>
-        <a className='text-[10px] md:text-[16px] text-[#737373] underline cursor-pointer'>Privacy Policy</a>
+        {customerLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            scroll={true}
+            className="text-[10px] md:text-[16px] text-[#737373] hover:underline cursor-pointer hover:text-white"
+          >
+            {link.name}
+          </Link>
+        ))}
       </div>
 
       {/* ================= LOGO ================= */}
-      <div className="relative flex flex-col mx-auto pt-17 pb-3 items-center justify-center gap-1  mt-[-14%]">
+      <div className="relative flex flex-col mx-auto pt-17 pb-3 items-center justify-center gap-1 pointer-events-none  mt-[-12%]">
         <img
           className="w-[60px] aspect-square"
           src={diamond}
@@ -111,7 +123,7 @@ export default function Footer() {
           </p>
 
           <p className="text-[10px] m-0 md:text-sm lg:text-[18px] leading-[120%] text-[#737373] cursor-pointer hover:underline text-center md:text-right">
-            <a href="http://hello@diadiamonds.com" target="_blank">
+            <a href="mailto:hello@diadiamonds.com" target="_blank">
               hello@diadiamonds.com
             </a>
           </p>
