@@ -6,7 +6,7 @@ import { Product, SortType, VarietyType } from "@/types/product";
 const PAGE_SIZE = 12;
 
 export function useProductFilter(category: string) {
-  const [sortBy, setSortBy] = useState<SortType>();
+  const [sortBy, setSortBy] = useState<SortType>("all");
   const [solitaireVariety, setSolitaireVariety] = useState<VarietyType>("all");
   const [page, setPage] = useState(1);
 
