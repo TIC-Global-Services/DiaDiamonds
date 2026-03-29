@@ -1,11 +1,17 @@
 "use client";
 
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { COLLECTION_CATEGORIES } from "@/types/product";
+import { useState } from "react";
+import { NAV_ITEMS } from "@/constants/Collections";
 
 export default function Footer() {
+  const router = useRouter();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const currentPath = usePathname();
 
@@ -19,30 +25,76 @@ export default function Footer() {
     { name: "Shipping Policy", href: "/shipping-policy" },
   ];
 
+
   return (
     <footer className="w-full z-[9999] min-h-[50dvh] bg-[#0b0b0b] px-10 pt-10 pb-[27px] data-theme='dark' ">
 
       {/* ================= NAV ================= */}
-      <ul className="flex items-center justify-around md:justify-start  gap-[13px]">
-        <li className={`cursor-pointer ${currentPath === "/" ? "text-white" : "text-[#717580]"}`}>
-          <Link href="/">Home</Link>
-        </li>
+      <ul className="flex items-center gap-[20px]">
+        {NAV_ITEMS.map((item) => {
+          if (item.label === "Collections") {
+            return (
+              <li
+                key={item.label}
+                className="relative flex items-center gap-[6px] cursor-pointer"
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                {/* TEXT */}
+                <span className="text-[#717580] hover:text-white transition">
+                  Collections
+                </span>
 
-        <li className={`cursor-pointer ${currentPath === "/collections" ? "text-white" : "text-[#717580]"}`}>
-          <Link href="/collections">Collections</Link>
-        </li>
+                {/* CHEVRON */}
+                <svg
+                  className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                    }`}
+                  width="10"
+                  height="6"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke="white"
+                    strokeOpacity="0.5"
+                    strokeWidth="1.5"
+                    fill="none"
+                  />
+                </svg>
 
-        <li className={`cursor-pointer ${currentPath === "/precision" ? "text-white" : "text-[#717580]"}`}>
-          <Link href="/precision">Precision</Link>
-        </li>
+                {/* DROPDOWN */}
+                {isOpen && (
+                  <div className="absolute top-[140%] left-0 min-w-[160px] bg-black border border-[#222] rounded-md shadow-lg z-[999]">
+                    {COLLECTION_CATEGORIES.map((cat) => (
+                      <div
+                        key={cat.value}
+                        onClick={(e) => {
+                          e.stopPropagation(); // 🔥 VERY IMPORTANT
+                          setIsOpen(false);
+                          router.push(`/collections/${cat.value}`);
+                        }}
+                        className="px-4 py-2 text-[14px] text-white/60 hover:text-white hover:bg-[#111] cursor-pointer capitalize"
+                      >
+                        {cat.label}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </li>
+            );
+          }
 
-        <li className={`cursor-pointer ${currentPath === "/about" ? "text-white" : "text-[#717580]"}`}>
-          <Link href="/about">About Us</Link>
-        </li>
-
-        <li className={`cursor-pointer ${currentPath === "/contact" ? "text-white" : "text-[#717580]"}`}>
-          <Link href="/contact">Contact Us</Link>
-        </li>
+          return (
+            <li key={item.label}>
+              <Link
+                href={item.href}
+                className={`${currentPath === item.href ? "text-white" : "text-[#717580]"
+                  } hover:text-white transition`}
+              >
+                {item.label}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
 
       {/* ================= CUSTOMER SERVICE ================= */}

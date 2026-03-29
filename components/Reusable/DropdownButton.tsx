@@ -50,7 +50,7 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
       type="button"
       onClick={onToggle}
       className={`relative h-[58px] px-4 flex items-center justify-between bg-[#431A1A] rounded-[14px] cursor-pointer border-0 ${width}`}
-      //                ↑ height: 58px                                              ↑ border-radius: 14px
+    //                ↑ height: 58px                                              ↑ border-radius: 14px
     >
       {/* LABEL */}
       <h3 className="font-semibold text-[12px] leading-[16px] tracking-[0.88px] uppercase text-white shrink-0">
@@ -75,10 +75,9 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({
               aria-selected={selected === option.value}
               onMouseDown={(e) => handleOptionClick(e, option.value)}
               className={`w-full py-[6.37%] text-center text-[16px] leading-[100%] cursor-pointer select-none
-                ${
-                  selected === option.value
-                    ? "text-black bg-[#F7F6F4]"
-                    : "text-black/40 bg-white border-[0.5px] border-[#F5F5F5] hover:bg-gray-50"
+                ${selected === option.value
+                  ? "text-black bg-[#F7F6F4]"
+                  : "text-black/40 bg-white border-[0.5px] border-[#F5F5F5] hover:bg-gray-50"
                 }
                 ${index === options.length - 1 ? "rounded-b-[14px]" : ""}
               `}

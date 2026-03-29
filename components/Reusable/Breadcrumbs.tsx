@@ -28,7 +28,7 @@ export default function Breadcrumbs({ items, className = "" }: BreadcrumbsProps)
 
   return (
     <section className={`w-full ${className} border-y py-4 border-gray-200`}>
-      <div className="relative w-full py-[3.64%] md:py-[1.5%] flex justify-center items-center gap-[4%] md:gap-[1%]">
+      <div className="relative w-full py-[1.64%] md:py-[1.5%] flex justify-center items-center gap-[4%] md:gap-[1%]">
         <button
           onClick={() => {
             if (category && slug) {
@@ -39,7 +39,7 @@ export default function Breadcrumbs({ items, className = "" }: BreadcrumbsProps)
               router.push("/");
             }
           }}
-          className="absolute left-15 p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
+          className="hidden md:block absolute left-15 p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
         >
           <Image src={leftOnBack} alt="back" width={20} height={20} />
         </button>

@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import TheArtOfCrafting from './TheArtOfCrafting';
 import Image from "next/image";
 import Breadcrumbs from "@/components/Reusable/Breadcrumbs";
-import leftOnBack from '@/public/assets/img/leftOnBack.png'
 
 import ring from '@/public/assets/img/Collections/type/ring.png';
 import Earrings from '@/public/assets/img/Collections/type/earring.png';
@@ -67,7 +66,7 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
 
       {/* BREADCRUMBS */}
         <Breadcrumbs
-          className="mt-4"
+          className="mt-14 md:mt-0"
           items={[
             { label: "HOME", href: "/" },
             { label: "COLLECTION", href: "/collections" },
@@ -77,7 +76,7 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
 
       {/* CATEGORY MENU */}
       <section className="w-full mx-auto pt-8">
-        <div className="flex items-center justify-center gap-3 md:gap-6 px-4 md:px-8 overflow-x-auto scrollbar-hide">
+        <div className="flex items-center justify-start md:justify-center gap-4 md:gap-6 px-4 md:px-8">
           {categoryMenu.map((cat, idx) => {
             const isActive = category === cat.slug;
 
@@ -87,7 +86,7 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
                 onClick={() => router.push(`/collections/${cat.slug}`)}
                 className="relative group cursor-pointer flex-shrink-0"
               >
-                <div className={`relative overflow-hidden rounded-xl md:rounded-sm md:w-[18vw] my-2
+                <div className={`relative overflow-hidden rounded-lg md:rounded-sm w-[80px] md:w-[18vw] my-2
                   ${isActive ? 'ring-2 ring-[#431A1A4D] ring-offset-1 shadow-lg' : ''}
                 `}>
                   <div className="relative aspect-square overflow-hidden">
@@ -100,8 +99,8 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
                   </div>
                 </div>
 
-                <p className={`text-center mt-2 text-xs md:text-sm font-bold uppercase
-                  ${isActive ? 'text-[#431A1A] underline' : ''}
+                <p className={`text-center mt-2 text-xs md:text-sm font-semibold uppercase
+                  ${isActive ? 'text-[#431A1A]  underline' : ''}
                 `}>
                   {cat.title}
                 </p>

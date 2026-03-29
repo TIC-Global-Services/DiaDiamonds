@@ -9,7 +9,7 @@ import Image from 'next/image';
 import RecommendedProductCard from '../Cards/RecommendedProductCard';
 import { Product } from '@/types/product';
 import { LAYOUT_IMAGES } from '@/constants/LayoutImages';
-import leftOnBack from '@/public/assets/img/leftOnBack.png'
+
 
 
 
@@ -96,18 +96,21 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
   const hasLayoutImages = !!(topImage || leftImage || rightImage || bottomImage);
 
+  const hasSizes = ["rings", "bracelets", "pendants"].includes(
+    product.category.toLowerCase()
+  );
+
   return (
     <div data-theme='light' className="w-full bg-[#FFFFFF] overflow-hidden pt-[94px]">
 
       {/* Breadcrumbs */}
-        <Breadcrumbs
-          items={[
-            { label: "HOME", href: "/" },
-            { label: "COLLECTION", href: `/collections/${product.category.toLowerCase()}` },
-            { label: product.category.toUpperCase(), href: `/collections/${product.category.toLowerCase()}` },
-            { label: product.productName.toUpperCase() },
-          ]}
-        />
+      <Breadcrumbs
+        items={[
+          { label: "HOME", href: "/" },
+          { label: "COLLECTION", href: `/collections/${product.category.toLowerCase()}` },
+          { label: product.category.toUpperCase(), href: `/collections/${product.category.toLowerCase()}` },
+        ]}
+      />
 
       {/* Item Display */}
       <section data-theme='light' className="w-full md:px-[6.67%] flex justify-between flex-col md:flex-row mt-[2%]">
@@ -160,7 +163,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           </div>
 
           {/* Size Options */}
-          <div className="flex w-full py-[4.37%] md:py-[6%] gap-[4%] items-center px-4 md:px-0 mt-4 md:mt-0">
+          {hasSizes && (<div className="flex w-full py-[4.37%] md:py-[6%] gap-[4%] items-center px-4 md:px-0 mt-4 md:mt-0">
             <h3 className="text-sm leading-[20px] text-[#000000]/50 mr-2 md:mr-4">Size:</h3>
             {product.sizes?.length ? (
               product.sizes.map((size: string) => (
@@ -183,8 +186,9 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               </div>
             )}
           </div>
+          )}
 
-          <button onClick={() => router.push("/contact")} className="block w-[90%] md:w-[95%] mx-auto md:mx-0 mt-[8%] md:mt-[4%] py-[4.5%] bg-white border border-[#F0F0F0] rounded-[25px] font-bold text-[9px] leading-[16px] tracking-[1px] uppercase text-[#000000] cursor-pointer hover:bg-black hover:text-white transition-colors shadow-[0_4px_14px_0_rgba(0,0,0,0.03)]">
+          <button onClick={() => router.push("/contact")} className="block w-[90%] md:w-[95%] mx-auto md:mx-0 mt-[8%] md:mt-[4%] py-[4.5%] bg-white border-0 border-[#F0F0F0] rounded-[25px] font-bold text-[9px] leading-[16px] tracking-[1px] uppercase text-[#000000] cursor-pointer hover:bg-black hover:text-white transition-colors shadow-[inset_0px_0px_2px_0_rgba(0,0,0,0.25)]">
             CONTACT STORE
           </button>
         </div>
@@ -203,7 +207,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
       {/* Layout Images Section */}
       {hasLayoutImages && (
-        <section data-theme = 'light' className="w-full px-[3.64%] md:px-0 md:pr-[4.5%] md:pl-[6.67%]">
+        <section data-theme='light' className="w-full px-[3.64%] md:px-0 md:pr-[4.5%] md:pl-[6.67%]">
 
           {/* Description + Bullet Points */}
           <div className="md:w-[50%] md:ml-auto md:pb-[9%]">

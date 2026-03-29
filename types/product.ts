@@ -51,5 +51,15 @@ export const VARIETIES = [
   { label: "Marquise Cut", value: "marquise cut" },
 ] as const;
 
-export type SortType = typeof SORT_OPTIONS[number]["value"] | "default";
-export type VarietyType = typeof VARIETIES[number]["value"] | "default";
+export const COLLECTION_CATEGORIES = [
+  { label: "Rings", value: "rings" },
+  { label: "Earrings", value: "earrings" },
+  { label: "Necklaces", value: "necklaces" },
+  { label: "Bracelets", value: "bracelets" },
+  { label: "Pendants", value: "pendants" },
+] as const;
+
+export type CollectionCategory = typeof COLLECTION_CATEGORIES[number]["value"];
+
+export type SortType = typeof SORT_OPTIONS[number]["value"];
+export type VarietyType = typeof VARIETIES[number]["value"] | "all";

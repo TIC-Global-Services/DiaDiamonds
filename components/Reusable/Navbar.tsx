@@ -315,7 +315,7 @@ export default function Navbar() {
         </AnimatePresence>
 
         {/* NAVBAR */}
-        <nav className="w-full h-[94px] bg-transparent flex justify-between items-center px-10 border-0 rounded-br-xl rounded-bl-xl transition-all duration-500">
+        <nav className="w-full h-[40%] mt-4 md:mt-0 md:h-[94px] bg-transparent flex justify-between items-center px-10 border-0 rounded-br-xl rounded-bl-xl transition-all duration-500">
 
           {/* Search Button */}
           <motion.button
