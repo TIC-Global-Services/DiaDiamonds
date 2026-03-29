@@ -10,7 +10,7 @@ export default function WhyUs() {
     const singleSparkle = '/assets/img/singleSparkle.png';
 
   return (
-    <section data-theme="light" className="w-full h-[100vh] relative overflow-hidden">
+    <section data-theme="light" className="w-full h-[100dvh] relative overflow-hidden">
       {/* Background image */}
       <img
         src={BgImage}

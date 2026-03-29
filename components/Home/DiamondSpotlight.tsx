@@ -46,7 +46,7 @@ export default function DiamondSpotlight() {
 
   return (
     <section
-      className="w-full relative h-[100vh] md:h-auto overflow-hidden"
+      className="w-full relative h-[100dvh] md:h-auto overflow-hidden"
       ref={elementRef}
       onMouseMove={captureMousePosition}
       data-theme="dark"

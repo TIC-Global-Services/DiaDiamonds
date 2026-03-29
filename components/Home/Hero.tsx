@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section
-      className="hero-section relative w-full h-screen overflow-hidden"
+      className="hero-section relative w-full h-[100dvh] overflow-hidden"
       data-theme="dark"
     >
       {/* Background Image with Parallax */}

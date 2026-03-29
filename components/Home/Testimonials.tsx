@@ -53,7 +53,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section data-theme="light" className="w-full md:h-[80vh] flex flex-wrap md:flex-nowrap bg-black">
+    <section data-theme="light" className="w-full md:h-[80dvh] flex flex-wrap md:flex-nowrap bg-black">
 
       {/* Left Side */}
       <div className="w-full aspect-[415/276] md:h-auto 2xl:h-screen md:w-1/2 overflow-hidden ">

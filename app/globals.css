@@ -4,6 +4,12 @@
   --background: #ffffff;
   --foreground: #171717;
   --font-clash-display: 'Helvetica', sans-serif; /* Fallback included */
+  --font-baskerVille: 'Baskerville', serif;
+  --font-grotesk: 'Grotesk', sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
@@ -219,6 +225,7 @@ body {
 .menu-open .hero-blur-overlay {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  overflow: hidden;
 
 }
 

@@ -2,7 +2,7 @@ export default function Value() {
 
     const BgImage = '/assets/img/About/Value/BgImage.png';
   return (
-    <section data-theme="dark" className="w-full h-[100vh] md:h-auto  relative overflow-hidden">
+    <section data-theme="dark" className="w-full h-[100dvh] md:h-auto  relative overflow-hidden">
       {/* Background image */}
       <img
         src={BgImage}

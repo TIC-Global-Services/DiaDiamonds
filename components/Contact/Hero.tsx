@@ -5,7 +5,7 @@ import bgImage from '@/public/assets/img/Contact/bgImage.png'
 export default function Hero() {
 
     return (
-        <section data-theme="dark" className="relative w-full h-screen md:h-auto md:aspect-1440/960 overflow-hidden flex">
+        <section data-theme="dark" className="relative w-full h-[100dvh] md:h-auto md:aspect-1440/960 overflow-hidden flex">
 
             <div className="relative w-full h-full">
                 <Image

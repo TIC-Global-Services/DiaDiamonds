@@ -39,7 +39,7 @@ export default function Craftsmanship() {
   }, [cards.length]);
 
   return (
-    <section data-theme="light" className="relative h-auto md:h-[150vh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
+    <section data-theme="light" className="relative h-[100dvh] md:h-[150dvh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
       {/* Left Side Image */}
       <motion.div
         initial={{ opacity: 0, x: -10 }}
