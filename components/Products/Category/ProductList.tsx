@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useMemo } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import DropdownButton from '../../Reusable/DropdownButton';
 import ProductCard from '../Cards/ProductCard';
 import { Product, SORT_OPTIONS, SortType, VARIETIES, VarietyType } from '@/types/product';
 import { ArrowDown } from 'lucide-react';
+import { useProductFilter } from "@/hooks/useProductFilter";
 
 interface ProductListProps {
   products: Product[];
@@ -19,13 +20,16 @@ const ProductList: React.FC<ProductListProps> = ({
 }) => {
   const [isLeftOpen, setIsLeftOpen] = useState(false);
   const [isRightOpen, setIsRightOpen] = useState(false);
-
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
-
-  const [sortBy, setSortBy] = useState<SortType>("default");
-  const [solitaireVariety, setSolitaireVariety] = useState<VarietyType>("default");
-
-  const [visibleCount, setVisibleCount] = useState(6);
+  const {
+    sortBy,
+    setSortBy,
+    solitaireVariety,
+    setSolitaireVariety,
+    displayedProducts,
+    hasMore,
+    loadMore,
+  } = useProductFilter(products, category);
 
   const leftDropdownRef = useRef<HTMLDivElement>(null);
   const rightDropdownRef = useRef<HTMLDivElement>(null);
@@ -51,43 +55,8 @@ const ProductList: React.FC<ProductListProps> = ({
   useEffect(() => {
     setIsLeftOpen(false);
     setIsRightOpen(false);
-    setVisibleCount(6);
   }, [category]);
 
-  // FILTER + SORT LOGIC
-  const filteredProducts = useMemo(() => {
-    let result = [...products];
-
-    // Filter by variety (only for rings)
-    if (category.toLowerCase() === "rings" && solitaireVariety !== "default") {
-      result = result.filter((p) =>
-        p.diamondType?.toLowerCase() === solitaireVariety.toLowerCase()
-      );
-    }
-
-    // Sorting
-    switch (sortBy) {
-      case "newArrival":
-        result = result.filter(p => p.newArrival);
-        break;
-      case "recommended":
-        result = result.filter(p => p.recommended);
-        break;
-      default:
-        break;
-    }
-
-    return result;
-  }, [products, sortBy, solitaireVariety, category]);
-  console.log("category:", category);
-  console.log("solitaireVariety:", solitaireVariety);
-  console.log("sample tags:", products[0]?.tags);
-
-  // Pagination
-  const displayedProducts = filteredProducts.slice(0, visibleCount);
-  const hasMore = visibleCount < filteredProducts.length;
-
-  const loadMore = () => setVisibleCount(prev => prev + 6);
 
   return (
     <section data-theme='light' className="w-full">
@@ -102,7 +71,7 @@ const ProductList: React.FC<ProductListProps> = ({
             options={SORT_OPTIONS}
             selected={sortBy}
             isOpen={isLeftOpen}
-            showSelectedLabel={sortBy !== "default"}   //only show selected when not default
+            showSelectedLabel={true}  //only show selected when not default
             onToggle={() => {
               setIsLeftOpen(p => !p);
               setIsRightOpen(false);
@@ -115,7 +84,7 @@ const ProductList: React.FC<ProductListProps> = ({
         </div>
 
         {/* HEADING */}
-          <CategoryHeading category={category} />
+        <CategoryHeading category={category} />
 
         {/* VARIETY */}
         <div
@@ -128,7 +97,7 @@ const ProductList: React.FC<ProductListProps> = ({
             options={VARIETIES}
             selected={solitaireVariety}
             isOpen={isRightOpen}
-            showSelectedLabel={solitaireVariety !== "default"}  //only show selected when chosen
+            showSelectedLabel={true}  //only show selected when chosen
             onToggle={() => {
               setIsRightOpen(p => !p);
               setIsLeftOpen(false);
@@ -208,7 +177,7 @@ const ProductList: React.FC<ProductListProps> = ({
         )}
 
         {/* HEADING - Mobile */}
-         <CategoryHeading category={category} />
+        <CategoryHeading category={category} />
 
       </div>
 
@@ -244,7 +213,7 @@ const CategoryHeading: React.FC<{ category: string }> = ({ category }) => (
   <div className="flex flex-col items-center absolute left-1/2 -translate-x-1/2">
     <h3 className="text-sm md:text-[36px] uppercase">{category}</h3>
     <p className="hidden md:block text-xs md:text-[13px]">Scroll to discover</p>
-    <ArrowDown className='w-4 md:w-5'/>
+    <ArrowDown className='w-4 md:w-5' />
   </div>
 );
 

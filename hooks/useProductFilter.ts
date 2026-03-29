@@ -1,50 +1,52 @@
-// Full corrected hook
 import { useState, useMemo, useEffect } from "react";
-import productsData from "../products.json";
 import { Product, SortType, VarietyType } from "@/types/product";
 
-const PAGE_SIZE = 12;
+const PAGE_SIZE = 6;
 
-export function useProductFilter(category: string) {
+export function useProductFilter(products: Product[], category: string) {
   const [sortBy, setSortBy] = useState<SortType>("all");
   const [solitaireVariety, setSolitaireVariety] = useState<VarietyType>("all");
-  const [page, setPage] = useState(1);
+
+  //use visibleCount instead of page
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
-    setPage(1);
+    // reset when filters/category change
+    setVisibleCount(PAGE_SIZE);
   }, [category, sortBy, solitaireVariety]);
 
   const filteredProducts = useMemo(() => {
-    let data = (productsData as Product[]).filter(
-      (p) => p.category.toLowerCase() === category.toLowerCase(),
-    );
+    let result = [...products];
 
     // VARIETY FILTER
-    if (category === "rings" && solitaireVariety !== "all") {
-      const normalized = solitaireVariety.toLowerCase().replace(/\s/g, "");
-      data = data.filter(
-        (p) => p.diamondType?.toLowerCase().replace(/\s/g, "") === normalized,
+    if (category.toLowerCase() === "rings" && solitaireVariety !== "all") {
+      result = result.filter(
+        (p) =>
+          p.diamondType?.toLowerCase().replace(/\s/g, "") ===
+          solitaireVariety.toLowerCase().replace(/\s/g, ""),
       );
     }
 
-    // SORTING
-    if (sortBy === "recommended") {
-      data = data.sort((a, b) => Number(b.recommended) - Number(a.recommended));
-    } else if (sortBy === "newArrival") {
-      data = data.sort((a, b) => Number(b.newArrival) - Number(a.newArrival));
-    } else {
-      data = data.sort((a, b) => a.id - b.id);
+    // SORTING (filter type)
+    switch (sortBy) {
+      case "newArrival":
+        result = result.filter((p) => p.newArrival);
+        break;
+      case "recommended":
+        result = result.filter((p) => p.recommended);
+        break;
+      default:
+        break;
     }
 
-    return data;
-  }, [category, solitaireVariety, sortBy]);
-
+    return result;
+  }, [products, sortBy, solitaireVariety, category]);
 
   const displayedProducts = useMemo(() => {
-    return filteredProducts.slice(0, page * PAGE_SIZE);
-  }, [filteredProducts, page]);
+    return filteredProducts.slice(0, visibleCount);
+  }, [filteredProducts, visibleCount]);
 
-  const hasMore = filteredProducts.length > page * PAGE_SIZE;
+  const hasMore = visibleCount < filteredProducts.length;
 
   return {
     sortBy,
@@ -53,6 +55,6 @@ export function useProductFilter(category: string) {
     setSolitaireVariety,
     displayedProducts,
     hasMore,
-    loadMore: () => setPage((p) => p + 1),
+    loadMore: () => setVisibleCount((prev) => prev + PAGE_SIZE),
   };
 }
