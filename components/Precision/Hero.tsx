@@ -13,28 +13,31 @@ const Hero: React.FC = () => {
     // Main hero container (relative for absolute overlay positioning)
     <section
       data-theme="dark"
-      className="w-full h-[100svh] relative overflow-hidden"
+      className="w-full h-[100dvh] relative overflow-hidden"
     >
-      <Parallax speed={-20}>
-        {/* Background Image with fade-in */}
-        <motion.div
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="w-full h-[100svh]"
-        >
+
+      {/* Background Image with fade-in */}
+      <motion.div
+        initial={{ opacity: 0, scale: 1.1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="w-full h-[100dvh]"
+      >
+        <Parallax speed={-20}>
           <Image
             src={bgImage}
             alt="Hero Background"
             width={1920}
             height={1080}
             sizes="100vw"
-            className="w-full h-[100svh] object-cover"
+            className="w-full h-[100dvh] object-[20%] object-cover md:object-center"
           />
-        </motion.div>
+        </Parallax>
+      </motion.div>
 
-        {/* Bottom overlay content */}
-        <div className="absolute w-full h-2/5 bottom-20 left-0 flex justify-center items-center">
+      {/* Bottom overlay content */}
+      <Parallax>
+        <div className="absolute w-full h-2/5 bottom-40 left-0 flex justify-center items-center">
           <div className="flex flex-col items-center gap-4 mt-25">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}

@@ -13,6 +13,6 @@
       ],
     },
     { label: "Precision", href: "/precision" },
-    { label: "AboutUs", href: "/about" },
-    { label: "ContactUs", href: "/contact" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ];

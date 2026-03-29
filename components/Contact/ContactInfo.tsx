@@ -15,7 +15,7 @@ export default function ContactInfo(){
 
 
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 36H12V44.162L22.202 36H32C34.206 36 36 34.206 36 32V16C36 13.794 34.206 12 32 12H8C5.794 12 4 13.794 4 16V32C4 34.206 5.794 36 8 36Z" fill="#7C3C3C"/><path d="M40 4H16C13.794 4 12 5.794 12 8H36C38.206 8 40 9.794 40 12V28C42.206 28 44 26.206 44 24V8C44 5.794 42.206 4 40 4Z" fill="#7C3C3C"/></svg>
-                    <a href="www.whatsapp.com"><h3 className={titleStyle}>Chat with Us</h3>
+                    <a href="https://wa.me/919876543021" target="blank"><h3 className={titleStyle}>Chat with Us</h3>
                     <p className={subStyle}>on WhatsApp</p></a>
 
                 </div>

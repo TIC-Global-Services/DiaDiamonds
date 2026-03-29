@@ -6,11 +6,15 @@
   --font-clash-display: 'Helvetica', sans-serif; /* Fallback included */
 }
 
+html {
+  overflow-x: hidden;
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-clash-display);
+  overflow-x: hidden;
 }
 
 .font-baskerville{

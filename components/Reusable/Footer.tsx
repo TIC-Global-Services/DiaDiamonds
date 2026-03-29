@@ -7,6 +7,9 @@ import Link from "next/link";
 import { COLLECTION_CATEGORIES } from "@/types/product";
 import { useState } from "react";
 import { NAV_ITEMS } from "@/constants/Collections";
+import Image from "next/image";
+import logo from '@/public/assets/img/DiaDiamondLogo.png'
+import diamond from '@/public/assets/img/Diamond.png'
 
 export default function Footer() {
   const router = useRouter();
@@ -14,10 +17,6 @@ export default function Footer() {
   const [isOpen, setIsOpen] = useState(false);
 
   const currentPath = usePathname();
-
-  const logo = "/assets/img/DiaDiamondLogo.png";
-  const diamond = "/assets/img/Diamond.png";
-  const singleSparkle = '/assets/img/singleSparkle.png';
 
   const customerLinks = [
     { name: "Privacy Policy", href: "/privacy-policy" },
@@ -27,20 +26,20 @@ export default function Footer() {
 
 
   return (
-    <footer className="w-full z-[9999] min-h-[50dvh] bg-[#0b0b0b] px-10 pt-10 pb-[27px] data-theme='dark' ">
+    <footer className="w-full min-h-[50dvh] bg-[#0b0b0b] px-2 md:px-6 pt-4 pb-[27px] data-theme='dark' ">
 
       {/* ================= NAV ================= */}
-      <ul className="flex items-center gap-[20px]">
+      <ul className="flex flex-wrap items-center md:justify-start justify-start gap-2 md:gap-8 w-full">
         {NAV_ITEMS.map((item) => {
           if (item.label === "Collections") {
             return (
               <li
                 key={item.label}
-                className="relative flex items-center gap-[6px] cursor-pointer"
+                className="relative flex items-center gap-1 cursor-pointer whitespace-nowrap"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 {/* TEXT */}
-                <span className="text-[#717580] hover:text-white transition">
+                <span className="text-[#717580] hover:text-white transition text-sm md:text-base">
                   Collections
                 </span>
 
@@ -63,16 +62,16 @@ export default function Footer() {
 
                 {/* DROPDOWN */}
                 {isOpen && (
-                  <div className="absolute top-[140%] left-0 min-w-[160px] bg-black border border-[#222] rounded-md shadow-lg z-[999]">
+                  <div className="absolute top-[120%] left-0 md:left-auto md:right-0 min-w-[150px] bg-black border border-[#222] rounded-md shadow-lg z-[999]">
                     {COLLECTION_CATEGORIES.map((cat) => (
                       <div
                         key={cat.value}
                         onClick={(e) => {
-                          e.stopPropagation(); // 🔥 VERY IMPORTANT
+                          e.stopPropagation();
                           setIsOpen(false);
                           router.push(`/collections/${cat.value}`);
                         }}
-                        className="px-4 py-2 text-[14px] text-white/60 hover:text-white hover:bg-[#111] cursor-pointer capitalize"
+                        className="px-4 py-2 text-sm text-white/60 hover:text-white hover:bg-[#111] cursor-pointer capitalize"
                       >
                         {cat.label}
                       </div>
@@ -84,11 +83,11 @@ export default function Footer() {
           }
 
           return (
-            <li key={item.label}>
+            <li key={item.label} className="whitespace-nowrap">
               <Link
                 href={item.href}
                 className={`${currentPath === item.href ? "text-white" : "text-[#717580]"
-                  } hover:text-white transition`}
+                  } hover:text-white transition text-sm md:text-base`}
               >
                 {item.label}
               </Link>
@@ -115,7 +114,7 @@ export default function Footer() {
 
       {/* ================= LOGO ================= */}
       <div className="relative flex flex-col mx-auto pt-17 pb-3 items-center justify-center gap-1 pointer-events-none  mt-[-12%]">
-        <img
+        <Image
           className="w-[60px] aspect-square"
           src={diamond}
           alt="diamond"
@@ -141,7 +140,7 @@ export default function Footer() {
 
           width="239" height="239" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3861)"><path d="M108.415 119.416C116.076 119.416 119.415 116.193 119.415 108.416C119.415 116.193 122.731 119.416 130.415 119.416C122.731 119.416 119.415 122.731 119.415 130.416C119.415 122.731 116.076 119.416 108.415 119.416Z" fill="white" /></g><defs><filter id="filter0_dddddd_505_3861" x="-0.000480652" y="7.62939e-06" width="238.831" height="238.831" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="1.29066" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="2.58132" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect1_dropShadow_505_3861" result="effect2_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="9.03463" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect2_dropShadow_505_3861" result="effect3_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="18.0693" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect3_dropShadow_505_3861" result="effect4_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="30.9759" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect4_dropShadow_505_3861" result="effect5_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="54.2078" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect5_dropShadow_505_3861" result="effect6_dropShadow_505_3861" /><feBlend mode="normal" in="SourceGraphic" in2="effect6_dropShadow_505_3861" result="shape" /></filter></defs></motion.svg>
 
-        <img
+        <Image
           className="w-[146.38px] h-[94.72px]"
           src={logo}
           alt="logo"
@@ -175,7 +174,7 @@ export default function Footer() {
           </p>
 
           <p className="text-[10px] m-0 md:text-sm lg:text-[18px] leading-[120%] text-[#737373] cursor-pointer hover:underline text-center md:text-right">
-            <a href="mailto:hello@diadiamonds.com" target="_blank">
+            <a href="mailto:hello@diadiamonds.com">
               hello@diadiamonds.com
             </a>
           </p>
