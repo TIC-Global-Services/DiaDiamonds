@@ -340,14 +340,14 @@ export default function Navbar() {
               <motion.img
                 src={diamond}
                 alt="diamond"
-                className="w-4 md:w-10 aspect-square"
+                className="w-8 md:w-10 aspect-square"
               />
               <motion.svg
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: [0, 0.4, 0.1, 0.8, 0], scale: [0.7, 1.1, 0.8, 1.2, 0.7] }}
                 transition={{ duration: 5.5, delay: 0, repeat: Infinity, times: [0, 0.2, 0.35, 0.6, 1], ease: 'linear' }}
 
-                className="absolute top-[-15px] left-[-25px] pointer-events-none" width="26" height="26" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white" /></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="1" /><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1" /><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" /></filter></defs></motion.svg>
+                className="absolute top-[-15px] left-[-25px] pointer-events-none" width="0" height="0" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white" /></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="1" /><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1" /><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" /></filter></defs></motion.svg>
 
               {/*<motion.svg
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -388,7 +388,7 @@ export default function Navbar() {
               <motion.img
                 src={getCurrentLogo()}
                 alt="logo"
-                className="w-6 md:w-[59px] h-auto transition-opacity duration-500"
+                className="w-10 md:w-[59px] h-auto transition-opacity duration-500"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               />

@@ -141,7 +141,7 @@ export default function Shop() {
         <button onClick={() => {const selectedCategory = categories[currentCategory].toLowerCase();
                 router.push(`/collections/${selectedCategory}`);
                 }}
-          className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-xs md:text-[10px] px-4 py-2 md:px-[18px] md:py-[7.6px] border-[#FFFFFF]/1 tracking-[0.1rem] md:tracking-[0.166rem] border-4 md:border-[5.3px] rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] md:px-[4.72%] md:py-[1.666%] uppercase">
+          className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-xs md:text-[10px] px-4 py-2 md:px-[4.72%] md:py-[7.67%] border-[#FFFFFF]/1 tracking-[0.1rem] md:tracking-[0.166rem] border-4 md:border-[5.3px] rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] uppercase">
           VIEW MORE
         </button>
       </div>
