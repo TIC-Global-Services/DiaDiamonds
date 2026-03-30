@@ -148,8 +148,8 @@ export default function Navbar() {
   };
 
   return (
-    <>
-      <div className={`fixed top-0 right-0 left-0 z-[9998] transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
+    <header className={`fixed top-0 right-0 left-0 z-[9998] transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
+      <div>
 
         {/* NAV MENU */}
         <AnimatePresence>
@@ -176,7 +176,7 @@ export default function Navbar() {
               >
                 {/* Close Button */}
                 <div
-                  className="flex items-center justify-end ml-auto pt-8 pr-10 cursor-pointer group"
+                  className="flex items-center justify-end ml-auto pt-6 md:pt-8 pr-6 md:pr-10 cursor-pointer group"
                   onClick={() => setNavMenuClick(false)}
 
                 >
@@ -222,7 +222,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Menu Items */}
-                <ul className="w-full pt-[63px] pl-10 pr-10">
+                <ul className="w-full pt-10 md:pt-[63px] px-6 md:pl-10 md:pr-10">
                   {/* Collection with dropdown */}
                   <motion.li
                     custom={0}
@@ -231,9 +231,9 @@ export default function Navbar() {
                     animate="open"
                     className="w-full"
                   >
-                    <div className={`w-full flex justify-between items-center text-[32px] leading-[110%] text-[#000000] uppercase pb-5`}>
+                    <div className={`w-full flex justify-between items-center text-2xl md:text-[32px] leading-[110%] text-[#000000] uppercase pb-5`}>
                       <motion.p
-                        className={`${collectionClick ? 'underline' : ''} hover:cursor-pointer m-0 hover:underline text-[32px] transition-all duration-300`}
+                        className={`${collectionClick ? 'underline' : ''} hover:cursor-pointer m-0 hover:underline text-2xl md:text-[32px] transition-all duration-300`}
                         onClick={() => setCollectionClick(!collectionClick)}
                         whileTap={{ scale: 0.98 }}
                       >
@@ -264,7 +264,7 @@ export default function Navbar() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.1, duration: 0.2 }}
-                            className=" pb-10"
+                            className="pb-6 md:pb-10"
                           >
                             {categories.map((category, index) => (
                               <motion.li
@@ -278,7 +278,7 @@ export default function Navbar() {
                                   href={{
                                     pathname: `/collections/${category}`,
                                   }}
-                                  className="hover:underline text-2xl capitalize block py-1 transition-all duration-200 hover:translate-x-2"
+                                  className="hover:underline text-xl md:text-2xl capitalize block py-1 transition-all duration-200 hover:translate-x-2"
                                 >
                                   {category}
                                 </Link>
@@ -298,7 +298,7 @@ export default function Navbar() {
                       variants={menuItemVariants}
                       initial="closed"
                       animate="open"
-                      className={`text-[32px] leading-[110%] text-[#000000] uppercase hover:cursor-pointer hover:underline pb-10 ${collectionClick ? 'pt-0' : 'pt-10'}`}
+                      className={`text-2xl md:text-[32px] leading-[110%] text-[#000000] uppercase hover:cursor-pointer hover:underline pb-6 md:pb-10 ${collectionClick ? 'pt-0' : 'pt-6 md:pt-10'}`}
                       whileHover={{ x: 10 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => setNavMenuClick(false)}
@@ -315,16 +315,16 @@ export default function Navbar() {
         </AnimatePresence>
 
         {/* NAVBAR */}
-        <nav className="w-full h-[40%] mt-4 md:mt-0 md:h-[94px] bg-transparent flex justify-between items-center px-10 border-0 rounded-br-xl rounded-bl-xl transition-all duration-500">
+        <nav className="w-full h-[60px] md:h-[94px] bg-transparent flex justify-between items-center px-4 md:px-10 border-0 rounded-br-xl rounded-bl-xl transition-all duration-500">
 
           {/* Search Button */}
           <motion.button
-            className="w-[37px] aspect-square hover:cursor-pointer transition-all duration-300"
+            className="w-4 md:w-[37px] aspect-square hover:cursor-pointer transition-all duration-300"
             onClick={() => setIsSearh(true)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-4 h-4 md:w-7 md:h-7" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 fill={getSearchIconColor()}
                 className="transition-colors duration-500"
@@ -334,15 +334,13 @@ export default function Navbar() {
           </motion.button>
 
           {/* LOGOS */}
-          <div className="relative flex items-center justify-center gap-2 hover:cursor-pointer">
+          <div className="relative flex items-center justify-center gap-0.5 md:gap-1 hover:cursor-pointer">
 
             <Link href="/">
               <motion.img
                 src={diamond}
                 alt="diamond"
-                className="w-10 aspect-square"
-                whileHover={{ rotate: 180, scale: 1.1 }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
+                className="w-4 md:w-10 aspect-square"
               />
               <motion.svg
                 initial={{ opacity: 0, scale: 0.5 }}
@@ -351,7 +349,7 @@ export default function Navbar() {
 
                 className="absolute top-[-15px] left-[-25px] pointer-events-none" width="26" height="26" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3862)"><path d="M25.2002 27.7C26.9413 27.7 27.7002 26.9675 27.7002 25.2C27.7002 26.9675 28.4538 27.7 30.2002 27.7C28.4538 27.7 27.7002 28.4536 27.7002 30.2C27.7002 28.4536 26.9413 27.7 25.2002 27.7Z" fill="white" /></g><defs><filter id="filter0_dddddd_505_3862" x="0.00019455" y="-4.95911e-05" width="55.4" height="55.4" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="1" /><feColorMatrix type="matrix" values="1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1" /><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" /></filter></defs></motion.svg>
 
-              <motion.svg
+              {/*<motion.svg
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: [0, 0.4, 0.1, 0.8, 0], scale: [0.7, 1.1, 0.8, 1, 0.7] }}
                 transition={{ duration: 6, delay: 0.4, repeat: Infinity, times: [0, 0.2, 0.25, 0.6, 1], ease: "linear" }}
@@ -359,7 +357,7 @@ export default function Navbar() {
                 className="absolute top-[-230%] left-[-90%] pointer-events-none"
 
                 width="209" height="209" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3861)"><path d="M108.415 119.416C116.076 119.416 119.415 116.193 119.415 108.416C119.415 116.193 122.731 119.416 130.415 119.416C122.731 119.416 119.415 122.731 119.415 130.416C119.415 122.731 116.076 119.416 108.415 119.416Z" fill="white" /></g><defs><filter id="filter0_dddddd_505_3861" x="-0.000480652" y="7.62939e-06" width="238.831" height="238.831" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="1.29066" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="2.58132" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect1_dropShadow_505_3861" result="effect2_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="9.03463" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect2_dropShadow_505_3861" result="effect3_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="18.0693" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect3_dropShadow_505_3861" result="effect4_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="30.9759" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect4_dropShadow_505_3861" result="effect5_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="54.2078" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect5_dropShadow_505_3861" result="effect6_dropShadow_505_3861" /><feBlend mode="normal" in="SourceGraphic" in2="effect6_dropShadow_505_3861" result="shape" /></filter></defs>
-              </motion.svg>
+              </motion.svg>*/}
 
             </Link>
 
@@ -369,7 +367,7 @@ export default function Navbar() {
               animate={{ opacity: [0, 0.4, 0.1, 0.8, 0], scale: [0.7, 1.1, 0.8, 1, 0.7] }}
               transition={{ duration: 6, delay: 0.4, repeat: Infinity, times: [0, 0.2, 0.25, 0.6, 1], ease: "linear" }}
 
-              className="absolute top-[-160%] left-[-40%] pointer-events-none"
+              className="absolute w-30 h-30 md:w-50 md:h-50 top-[-340%] left-[-120%] md:top-[-210%] md:left-[-80%] pointer-events-none"
 
               width="150" height="150" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3861)"><path d="M108.415 119.416C116.076 119.416 119.415 116.193 119.415 108.416C119.415 116.193 122.731 119.416 130.415 119.416C122.731 119.416 119.415 122.731 119.415 130.416C119.415 122.731 116.076 119.416 108.415 119.416Z" fill="white" /></g><defs><filter id="filter0_dddddd_505_3861" x="-0.000480652" y="7.62939e-06" width="238.831" height="238.831" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="1.29066" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="2.58132" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect1_dropShadow_505_3861" result="effect2_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="9.03463" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect2_dropShadow_505_3861" result="effect3_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="18.0693" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect3_dropShadow_505_3861" result="effect4_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="30.9759" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect4_dropShadow_505_3861" result="effect5_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="54.2078" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect5_dropShadow_505_3861" result="effect6_dropShadow_505_3861" /><feBlend mode="normal" in="SourceGraphic" in2="effect6_dropShadow_505_3861" result="shape" /></filter></defs>
             </motion.svg>
@@ -379,7 +377,7 @@ export default function Navbar() {
               animate={{ opacity: [0, 0.4, 0.1, 0.8, 0], scale: [0.7, 0.6, 0.8, 0.9, 0.7] }}
               transition={{ duration: 6, delay: 0.4, repeat: Infinity, times: [0, 0.2, 0.25, 0.6, 1], ease: "linear" }}
 
-              className="absolute top-[-120%] left-[-50%] pointer-events-none"
+              className="absolute w-30 h-30 md:w-50 md:h-50 top-[-330%] right-[-60%] md:top-[-190%] md:left-[-80%] pointer-events-none"
 
               width="150" height="150" viewBox="0 0 239 239" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3861)"><path d="M108.415 119.416C116.076 119.416 119.415 116.193 119.415 108.416C119.415 116.193 122.731 119.416 130.415 119.416C122.731 119.416 119.415 122.731 119.415 130.416C119.415 122.731 116.076 119.416 108.415 119.416Z" fill="white" /></g><defs><filter id="filter0_dddddd_505_3861" x="-0.000480652" y="7.62939e-06" width="238.831" height="238.831" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="1.29066" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="2.58132" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect1_dropShadow_505_3861" result="effect2_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="9.03463" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect2_dropShadow_505_3861" result="effect3_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="18.0693" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect3_dropShadow_505_3861" result="effect4_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="30.9759" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect4_dropShadow_505_3861" result="effect5_dropShadow_505_3861" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="54.2078" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect5_dropShadow_505_3861" result="effect6_dropShadow_505_3861" /><feBlend mode="normal" in="SourceGraphic" in2="effect6_dropShadow_505_3861" result="shape" /></filter></defs>
             </motion.svg>
@@ -390,7 +388,7 @@ export default function Navbar() {
               <motion.img
                 src={getCurrentLogo()}
                 alt="logo"
-                className="w-[59px] h-[37px] transition-opacity duration-500"
+                className="w-6 md:w-[59px] h-auto transition-opacity duration-500"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               />
@@ -400,16 +398,16 @@ export default function Navbar() {
           {/* Menu Toggle */}
           <motion.div
             onClick={() => setNavMenuClick(true)}
-            className={`w-5 h-[13px] border-t-2 border-b-2 hover:cursor-pointer transition-colors duration-500 ${navBarTheme === "light" && !navMenuClick ? 'border-[#000000]' : 'border-[#FFFFFF]'}`}
+            className={`w-[15px] md:w-5 h-2 md:h-[13px] border-t border-b md:border-t-2 md:border-b-2 hover:cursor-pointer transition-colors duration-500 ${navBarTheme === "light" && !navMenuClick ? 'border-[#000000]' : 'border-[#FFFFFF]'}`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className={`flex mx-auto w-4 h-[6px] border-b-2 transition-colors duration-500 ${navBarTheme === "light" && !navMenuClick ? 'border-[#000000]' : 'border-[#FFFFFF]'}`} />
+            <div className={`flex mx-auto w-3 md:w-4 h-[3px] md:h-[6px] border-b md:border-b-2 transition-colors duration-500 ${navBarTheme === "light" && !navMenuClick ? 'border-[#000000]' : 'border-[#FFFFFF]'}`} />
           </motion.div>
 
         </nav>
       </div>
       <Search isSearch={isSearch} setIsSearch={setIsSearh} />
-    </>
+    </header>
   );
 }

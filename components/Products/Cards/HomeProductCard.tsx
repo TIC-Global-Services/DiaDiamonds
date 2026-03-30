@@ -72,11 +72,11 @@ export default function CollectionItem({ product }: CollectionItemProp): JSX.Ele
       </div>
 
       {/* Second inner div */}
-      <div className="px-4 py-3.5">
-        <p className="text-[13px] leading-[19.6px] text-[#606060] pb-[6px]">
+      <div className="px-3 md:px-4 py-2.5 md:py-3.5">
+        <p className="text-xs md:text-[13px] leading-[140%] md:leading-[19.6px] text-[#606060] pb-1 md:pb-[6px]">
           {product.colors?.[0]?.color || "Default"}
         </p>
-        <h3 className="text-[24px] font-[Baskerville] line-clamp-1 uppercase leading-[19.5px] text-[#000000]">
+        <h3 className="text-base md:text-[24px] font-[Baskerville] line-clamp-1 uppercase leading-[120%] md:leading-[19.5px] text-[#000000]">
           {product.productName}
         </h3>
       </div>

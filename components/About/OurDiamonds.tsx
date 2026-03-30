@@ -9,7 +9,7 @@ export default function OurDiamonds() {
     const ImageLeft = '/assets/img/About/OurDiamonds/ImageLeft.png';
 
   return (
-    <section data-theme="dark" className="w-full h-[100dvh] overflow-hidden flex flex-wrap md:flex-nowrap">
+    <section data-theme="dark" className="w-full h-[100svh] overflow-hidden flex flex-wrap md:flex-nowrap">
       {/* Image container */}
       <div className="w-full h-[50vh] md:w-[45%] md:h-full overflow-hidden">
         <Parallax speed={-20} className="w-full h-full">
@@ -36,27 +36,27 @@ export default function OurDiamonds() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
             viewport={{once:false}}
-            className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#000000]">
+            className="font-medium text-2xl md:text-[40px] leading-[120%] md:leading-[100%] uppercase text-[#000000]">
               Our Diamonds
             </motion.h2>
 
             <motion.p
-            
+
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
             viewport={{once:false}}
-            className="font-light md:text-[20px] md:leading-[140%] text-[#000000]">
+            className="font-light text-sm md:text-[20px] leading-[140%] md:leading-[140%] text-[#000000]">
                 Each Dia Diamonds creation is shaped by responsible sourcing, global certification, and masterful craftsmanship — resulting in jewellery that reflects integrity as much as brilliance. Each Dia Diamonds creation is shaped by responsible sourcing, global certification, and masterful craftsmanship — resulting in jewellery that reflects integrity as much as brilliance.
             </motion.p>
 
             <motion.button
-            
+
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
             viewport={{once:false}}
-            className="BtnAnimation px-7 md:px-12 py-3 md:py-4 border-5 rounded-full border-[#FFFFFF]/1 shadow-[0_4px_4px_0_rgba(0,0,0,0.1)]  bg-[#FFFFFF]/4 text-[13px] md:text-[16px] font-medium leading-[100%] text-[#000000]">
+            className="BtnAnimation px-5 md:px-12 py-2.5 md:py-4 border-4 md:border-5 rounded-full border-[#FFFFFF]/1 shadow-[0_4px_4px_0_rgba(0,0,0,0.1)] bg-[#FFFFFF]/4 text-xs md:text-[16px] font-medium leading-[100%] text-[#000000]">
               Discover Our Craft
             </motion.button>
           </div>

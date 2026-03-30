@@ -11,19 +11,19 @@ export default function Emotions() {
     const singleSparkle = '/assets/img/singleSparkle.png';
 
 return (
-    <section data-theme="light" className="w-full h-[100dvh] md:h-auto  relative">
+    <section data-theme="light" className="w-full h-[100svh] md:h-auto  relative">
   
       {/* Background image */}
       <img
         src={BgImage}
         alt="Emotions"
-        className="w-full object-cover  md:translate-x-0 md:object-fill h-[100vh] md:h-auto"
+        className="w-full object-cover  md:translate-x-0 md:object-fill h-[100svh] md:h-auto"
       />
 
       {/* First absolute overlay */}
       <div className="w-full absolute inset-0 h-full">
         <ContainerLayout>
-          <h2 className="font-medium text-[40px] leading-[100%] text-[#FFFFFF] w-[25%] uppercase">
+          <h2 className="font-medium text-2xl md:text-[40px] leading-[120%] md:leading-[100%] text-[#FFFFFF] w-[60%] md:w-[25%] uppercase">
             Emotion Embraces Techniques
           </h2>
         </ContainerLayout>
@@ -34,10 +34,10 @@ return (
 
         <div className="flex flex-col items-end gap-2">
           <div className="flex gap-2">
-            <img src={diamond} alt="diamond" className="w-[42px] aspect-square"/>
-            <img src={logo} alt="logo" className="w-[60px] aspect-[60/37]"/>
+            <img src={diamond} alt="diamond" className="w-8 md:w-[42px] aspect-square"/>
+            <img src={logo} alt="logo" className="w-12 md:w-[60px] aspect-[60/37]"/>
           </div>
-          <p className="text-[20px] leading-[100%] text-[#FFFFFF]">
+          <p className="text-base md:text-[20px] leading-[120%] md:leading-[100%] text-[#FFFFFF]">
             Where Brilliance Meets Beauty
           </p>
         </div>

@@ -106,8 +106,8 @@ export default function TheArtOfRefinement() {
 
 
         <div className="w-full md:w-[51.7%] my-auto md:ml-[1.875%] pb-[13.11%] md:pb-[9.4%] text-center md:text-left">
-          <h2 className="w-[74.9%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF] text-[40px] leading-[100%] pb-[4.85%] md:pb-[10.27%] text-center md:text-left">The Art of Radiant Refinement</h2>
-          <p className="w-[74.9%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF]/70 pb-[5.83%] md:pb-[12.33%] text-center md:text-left">Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.</p>
+          <h2 className="w-[90%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF] text-2xl md:text-[40px] leading-[120%] md:leading-[100%] pb-6 md:pb-[10.27%] text-center md:text-left">The Art of Radiant Refinement</h2>
+          <p className="w-[90%] md:w-auto mx-auto md:mx-0 text-sm md:text-base text-[#FFFFFF]/70 pb-8 md:pb-[12.33%] text-center md:text-left">Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.</p>
           <div onClick={() => router.push("/about")}  className="w-[24.76%] md:w-auto mx-auto block md:mx-0">
             <PrimaryBtn text="VIEW MORE" textColor="text-white" />
           </div>

@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
     // Main hero container (relative for absolute overlay positioning)
     <section
       data-theme="dark"
-      className="w-full h-[100dvh] relative overflow-hidden"
+      className="w-full h-[100svh] relative overflow-hidden"
     >
 
       {/* Background Image with fade-in */}
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
             width={1920}
             height={1080}
             sizes="100vw"
-            className="w-full h-[100dvh] object-[20%] object-cover md:object-center"
+            className="w-full h-[100svh] object-[20%] object-cover md:object-center"
           />
         </Parallax>
       </motion.div>
@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="text-[#FFFFFF]"
+              className="text-[#FFFFFF] text-2xl md:text-4xl"
             >
               Lab Grown Diamonds
             </motion.h2>
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-              className="text-[#FFFFFF]"
+              className="text-[#FFFFFF] text-base md:text-lg"
             >
               A New Way To Shine
             </motion.p>

@@ -16,7 +16,7 @@ export default function Arrivals() {
   return (
     <section data-theme="light"
       ref={containerRef}
-      className="relative w-full h-[100dvh] flex flex-col md:flex-row overflow-hidden"
+      className="relative w-full h-[100svh] flex flex-col md:flex-row overflow-hidden"
     >
       {/* TOP / LEFT PANEL — Reveals from TOP */}
       <motion.div
@@ -38,7 +38,7 @@ export default function Arrivals() {
             />
           </Parallax>
 
-          <h2 className="absolute inset-0 md:font-medium text-base tracking-[0%] md:tracking-auto md:text-[40px] md:leading-[100%] text-white flex justify-center items-center uppercase">
+          <h2 className="absolute inset-0 font-medium text-xl tracking-[0%] md:tracking-auto md:text-[40px] leading-[110%] md:leading-[100%] text-white flex justify-center items-center uppercase">
             NEW ARRIVALS
           </h2>
         </div>
@@ -64,7 +64,7 @@ export default function Arrivals() {
             />
           </Parallax>
 
-          <h2 className="absolute inset-0 font-medium text-base tracking-[0%] md:tracking-auto md:text-[40px] md:leading-[100%] text-white flex justify-center items-center uppercase">
+          <h2 className="absolute inset-0 font-medium text-xl tracking-[0%] md:tracking-auto md:text-[40px] leading-[110%] md:leading-[100%] text-white flex justify-center items-center uppercase">
             COLLECTIONS
           </h2>
         </div>

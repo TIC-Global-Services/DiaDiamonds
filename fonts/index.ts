@@ -20,7 +20,7 @@ export const ClashDisplay = localFont({
     {
       path: "./ClashDisplay/ClashDisplay-Medium.otf",
       weight: "500",
-      style: "normal",
+      style: "medium",
     },
     {
       path: "./ClashDisplay/ClashDisplay-Semibold.otf",

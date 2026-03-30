@@ -46,7 +46,7 @@ export default function DiamondSpotlight() {
 
   return (
     <section
-      className="w-full relative h-[100dvh] md:h-auto overflow-hidden"
+      className="w-full relative h-[100svh] md:h-auto overflow-hidden"
       ref={elementRef}
       onMouseMove={captureMousePosition}
       data-theme="dark"
@@ -82,9 +82,9 @@ export default function DiamondSpotlight() {
         className={`absolute ${maskSize === "207px 199px" ? "w-[207px] h-[199px]" : "w-[26%] h-[37%]"} border border-[#FFFFFF] rounded-sm`}
       ></div>
 
-      <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center mt-[55%] md:mt-[20%]">
-        <div className="flex flex-col justify-between items-center w-[80%] md:w-[45%]">
-          <h2 className="md:font-medium md:text-[40px] md:leading-[100%] uppercase text-[#EFFFFF] text-center">
+      <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center mt-[40%] md:mt-[20%]">
+        <div className="flex flex-col justify-between items-center w-[90%] md:w-[45%] gap-4 md:gap-0">
+          <h2 className="font-medium text-xl md:text-[40px] leading-[120%] md:leading-[100%] uppercase text-[#EFFFFF] text-center">
             Designed for you. Crafted for a lifetime.
           </h2>
           <div onClick={() => router.push("/collections/rings")}>

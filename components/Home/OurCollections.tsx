@@ -79,12 +79,12 @@ export default function OurCollection() {
       {/* Inner flex container */}
       <div className="w-full flex flex-col justify-center items-center pb-9 md:pb-20">
         {/* Section heading */}
-        <h2 className=" md:text-[40px] font-medium md:leading-[91%] tracking-[-3%] uppercase text-[#000000]">
+        <h2 className="text-xl md:text-[40px] font-medium leading-[110%] md:leading-[91%] tracking-[-1%] md:tracking-[-3%] uppercase text-[#000000]">
           Our Collections
         </h2>
 
         {/* Section paragraph */}
-        <p className="pt-[30px] text-base md:text-[14px] leading-[142%] text-[#000000] text-center">
+        <p className="pt-4 md:pt-[30px] text-sm md:text-[14px] leading-[140%] md:leading-[142%] text-[#000000] text-center">
           Timeless rings for every moment, crafted to shine, made to last
         </p>
       </div>

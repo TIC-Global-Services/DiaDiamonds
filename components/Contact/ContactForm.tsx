@@ -8,7 +8,7 @@ export default function ContactForm(){
             <div className="w-full md:absolute md:top-[-44.82%] md:left-[25.35%] md:w-[49.31%] rounded-[25px] md:rounded-[0px]  md:mx-auto bg-[#FCF9F4] p-[1.88%]">
 
                 
-                    <h2 className="text-center py-[11.84%] md:py-0 md:pt-[7.32%] md:pb-[5.49%] md:text-[24px]">Inquiry Form</h2>
+                    <h2 className="text-center py-8 md:py-0 md:pt-[7.32%] md:pb-[5.49%] text-xl md:text-[24px]">Inquiry Form</h2>
                     <form className="px-[6.32%] md:px-[3.38%] md:py-[1.69%]">
 
                         <label htmlFor="" className="pb-[2.63%] md:pb-[1.70%]">Full Name</label>
@@ -37,11 +37,11 @@ export default function ContactForm(){
 
                                 <svg className="mb-[5.38%]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 15.75C18 17.4833 17.3917 18.9583 16.175 20.175C14.9583 21.3917 13.4833 22 11.75 22C10.0167 22 8.54167 21.3917 7.325 20.175C6.10833 18.9583 5.5 17.4833 5.5 15.75V6.5C5.5 5.25 5.93767 4.18767 6.813 3.313C7.68833 2.43833 8.75067 2.00067 10 2C11.2493 1.99933 12.312 2.437 13.188 3.313C14.064 4.189 14.5013 5.25133 14.5 6.5V15.25C14.5 16.0167 14.2333 16.6667 13.7 17.2C13.1667 17.7333 12.5167 18 11.75 18C10.9833 18 10.3333 17.7333 9.8 17.2C9.26667 16.6667 9 16.0167 9 15.25V6H11V15.25C11 15.4667 11.071 15.646 11.213 15.788C11.355 15.93 11.534 16.0007 11.75 16C11.966 15.9993 12.1453 15.9283 12.288 15.787C12.4307 15.6457 12.5013 15.4667 12.5 15.25V6.5C12.4833 5.8 12.2377 5.20833 11.763 4.725C11.2883 4.24167 10.7007 4 10 4C9.29933 4 8.70767 4.24167 8.225 4.725C7.74233 5.20833 7.50067 5.8 7.5 6.5V15.75C7.48333 16.9333 7.89167 17.9377 8.725 18.763C9.55833 19.5883 10.5667 20.0007 11.75 20C12.9167 20 13.9083 19.5877 14.725 18.763C15.5417 17.9383 15.9667 16.934 16 15.75V6H18V15.75Z" fill="black"/></svg>
 
-                                <h3 className="mb-[5.38%]">Tap to upload</h3>
+                                <h3 className="mb-[5.38%] text-sm md:text-base">Tap to upload</h3>
 
-                                <p className="text-center mb-[5.38%] text-[#B1B1B1]">Attach up to 10 files. The maximum allowed size per file is 10 MB.</p>
+                                <p className="text-center mb-[5.38%] text-[#B1B1B1] text-xs md:text-sm">Attach up to 10 files. The maximum allowed size per file is 10 MB.</p>
 
-                                <button className="py-[2.31%] px-[11.88%] bg-[#7C3C3C] rounded-[20px] border border-[#0000001A] text-white">Choose File</button>
+                                <button className="py-2 px-6 md:py-[2.31%] md:px-[11.88%] bg-[#7C3C3C] rounded-[20px] border border-[#0000001A] text-white text-sm md:text-base">Choose File</button>
 
                                 <input type="file" className="absolute w-full h-full inset-0 opacity-0" />
                             </div>

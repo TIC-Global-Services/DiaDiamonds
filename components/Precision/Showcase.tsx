@@ -11,7 +11,7 @@ const Showcase: React.FC = () => {
   return (
     <section
       data-theme="dark"
-      className="w-full h-[100vh] md:h-[100dvh] relative overflow-hidden"
+      className="w-full h-[100svh] relative overflow-hidden"
     >
       {/* Background Image */}
       <Parallax speed={-20}>
@@ -32,7 +32,7 @@ const Showcase: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeIn" }}
-            className="text-[#FFFFFF] text-[24px] md:text-[40px] leading-[26px] md:leading-[48px] tracking-[2%] text-center md:text-left"
+            className="text-[#FFFFFF] text-xl md:text-[40px] leading-[120%] md:leading-[48px] tracking-[2%] text-center md:text-left"
           >
             The Intelligent Luxury
           </motion.h3>
@@ -46,7 +46,7 @@ const Showcase: React.FC = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeIn" }}
-            className="text-[#FFFFFF] text-[24px] md:text-[40px] leading-[26px] md:leading-[48px] tracking-[2%] text-center md:text-left mt-4 md:mt-0"
+            className="text-[#FFFFFF] text-xl md:text-[40px] leading-[120%] md:leading-[48px] tracking-[2%] text-center md:text-left mt-4 md:mt-0"
           >
             DIA diamonds
           </motion.h2>

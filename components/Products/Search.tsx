@@ -67,7 +67,7 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
       animate={{ clipPath: isSearch ? "circle(150% at 0% 0%)" : "circle(0% at 0% 0%)" }}
       transition={{ duration: 0.6 }}
 
-      className={`absolute inset-0 w-full h-[100dvh] overflow-y-scroll px-6 md:px-10 py-[26px] bg-[#ffffff] z-9999 ${isSearch ? 'fixed block' : ''}`} style={{ scrollbarWidth: 'none' }}>
+      className={`absolute inset-0 w-full h-[100svh] overflow-y-scroll px-6 md:px-10 py-[26px] bg-[#ffffff] z-9999 ${isSearch ? 'fixed block' : ''}`} style={{ scrollbarWidth: 'none' }}>
       <motion.button
         className="pb-[30px] hover:cursor-pointer group"
         onClick={() => { setIsSearch(false) }}
@@ -115,7 +115,7 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
       </motion.button>
 
       <div className="md:pl-[70px]">
-        <h2 className="text-[24px] leading-[100%] tracking-[0%] text-[#000000] pb-[11px]">
+        <h2 className="text-xl md:text-[24px] leading-[120%] md:leading-[100%] tracking-[0%] text-[#000000] pb-3 md:pb-[11px]">
           Search
         </h2>
 
@@ -127,11 +127,11 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
           className="w-full border-b border-[#000000] border-t-0 border-x-0 px-4 py-3 outline-none focus:border-black transition-colors"
         />
 
-        <h2 className="text-[24px] leading-[100%] tracking-[0%] text-[#000000] pt-6 pb-5">
+        <h2 className="text-xl md:text-[24px] leading-[120%] md:leading-[100%] tracking-[0%] text-[#000000] pt-4 md:pt-6 pb-4 md:pb-5">
           Popular
         </h2>
 
-        <div className="flex gap-[10px] w-[40%] pb-[57px]">
+        <div className="flex gap-[10px] w-full md:w-[40%] pb-8 md:pb-[57px] overflow-x-auto">
           {CATEGORIES.map((item) => (
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -175,7 +175,7 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
       {debouncedQuery ? (
         filteredProducts.length > 0 ? (
           <div>
-            <h2 className="text-[24px] mb-6">Search Results</h2>
+            <h2 className="text-xl md:text-[24px] mb-4 md:mb-6">Search Results</h2>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-[50px]">
               {filteredProducts.map((product) => (
@@ -210,7 +210,7 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
         )
       ) : (
         <div className='translate-x-20'>
-          <h2 className="text-[24px] tracking-[0%] text-[#000000] mb-6">
+          <h2 className="text-xl md:text-[24px] tracking-[0%] text-[#000000] mb-4 md:mb-6">
             Spotlight
           </h2>
 

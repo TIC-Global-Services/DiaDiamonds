@@ -122,7 +122,7 @@ const Creation: React.FC = () => {
                 className="object-cover"
               />
 
-              <p className="absolute bottom-0 left-0 mb-[7.83%] ml-[9.5%] text-white text-[16px]">
+              <p className="absolute bottom-0 left-0 mb-[7.83%] ml-[9.5%] text-white text-sm md:text-[16px]">
                 {contentJSON[currentCard].overlayText}
               </p>
             </motion.div>
@@ -141,19 +141,19 @@ const Creation: React.FC = () => {
               {contentJSON[currentCard].contentText.map((data, id) => {
                 if (data.bold) {
                   return (
-                    <span key={id} className="font-semibold text-[#383838] text-[13px] md:text-[24px] leading-[140%]">
+                    <span key={id} className="font-semibold text-[#383838] text-xs md:text-[24px] leading-[140%]">
                       {data.text}
                     </span>
                   );
                 } else if (data.newline) {
                   return (
-                    <p key={id} className="text-[#383838] text-[13px] md:text-[24px] leading-[140%] pt-[4%]">
+                    <p key={id} className="text-[#383838] text-xs md:text-[24px] leading-[140%] pt-[4%]">
                       {data.text}
                     </p>
                   );
                 } else {
                   return (
-                    <span key={id} className="text-[#383838] text-[13px] md:text-[24px] leading-[140%]">
+                    <span key={id} className="text-[#383838] text-xs md:text-[24px] leading-[140%]">
                       {data.text}
                     </span>
                   );

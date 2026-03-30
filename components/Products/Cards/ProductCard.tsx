@@ -41,12 +41,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
       <div className="w-full flex items-center shrink-0">
         {tagLabel && (
           <div className={`hidden md:flex md:min-w-[25.85%] px-0 md:px-[2%] aspect-69/18 md:aspect-114/30 md:ml-[6.36%] bg-[#431A1A]/25 justify-center items-center rounded-[20px]`}>
-            <h3 className="uppercase text-[10px] md:text-[12px]">{tagLabel}</h3>
+            <h3 className="uppercase text-xs md:text-[12px]">{tagLabel}</h3>
           </div>
         )}
 
-        <div className={`md:hidden flex justify-center items-center bg-[#431A1A]/25 rounded-[20px] px-[5.5px] py-[3px]`}>
-          <h3 className="uppercase text-[8px] md:text-[10px]">
+        <div className={`md:hidden flex justify-center items-center bg-[#431A1A]/25 rounded-[20px] px-2 py-1`}>
+          <h3 className="uppercase text-[10px] md:text-[10px]">
             {tagLabel}
           </h3>
         </div>
@@ -56,11 +56,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
         <img className="max-w-full max-h-full object-contain" src={displayImage} alt={product.productName} />
       </div>
 
-      <div className="w-full flex flex-col justify-end items-center gap-[4px] md:gap-[9px] shrink-0 px-2 mt-auto">
-        <p className="text-[10px] md:text-sm text-[#6E6E6E] m-0">{displayColor}</p>
-        <h3 className="w-full font-baskerville text-[13px] md:text-2xl text-center line-clamp-2">{product.productName}</h3>
+      <div className="w-full flex flex-col justify-end items-center gap-1 md:gap-[9px] shrink-0 px-2 mt-auto">
+        <p className="text-xs md:text-sm text-[#6E6E6E] m-0">{displayColor}</p>
+        <h3 className="w-full font-baskerville text-sm md:text-2xl text-center line-clamp-2">{product.productName}</h3>
         {product.diamondType && (
-          <p className="font-baskerville text-xs md:text-base m-0">{product.diamondType}</p> 
+          <p className="font-baskerville text-xs md:text-base m-0">{product.diamondType}</p>
         )}
       </div>
     </div>

@@ -39,7 +39,7 @@ export default function Craftsmanship() {
   }, [cards.length]);
 
   return (
-    <section data-theme="light" className="relative h-[100dvh] md:h-[150dvh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
+    <section data-theme="light" className="relative h-[100svh] md:h-[150svh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
       {/* Left Side Image */}
       <motion.div
         initial={{ opacity: 0, x: -10 }}
@@ -77,10 +77,10 @@ export default function Craftsmanship() {
                 key={index}
                 className={`${index === activeIndex ? "block" : "hidden"}`}
               >
-                <h3 className="font-medium text-xl lg:text-[24px] leading-[100%] tracking-[0.03em] text-[#000000] pb-[23px]">
+                <h3 className="font-medium text-lg md:text-xl lg:text-[24px] leading-[120%] md:leading-[100%] tracking-[0.03em] text-[#000000] pb-4 md:pb-[23px]">
                   {card.title}
                 </h3>
-                <p className="md:text-base lg:text-[20px] leading-[140%] text-[#000000]/60 w-[97%] ">
+                <p className="text-sm md:text-base lg:text-[20px] leading-[140%] text-[#000000]/60 w-full md:w-[97%]">
                   {card.content}
                 </p>
               </div>
@@ -120,8 +120,8 @@ export default function Craftsmanship() {
       </div>
 
       {/* Absolute Overlay Title */}
-      <div className="absolute w-full h-full flex justify-center pt-[60px] lg:pt-[100px] xl:pt-[133px]">
-        <h2 className="font-medium text-[40px] leading-[100%] tracking-[0.02em] uppercase text-[#000000]">
+      <div className="absolute w-full h-full flex justify-center pt-8 md:pt-[60px] lg:pt-[100px] xl:pt-[133px]">
+        <h2 className="font-medium text-2xl md:text-[40px] leading-[110%] md:leading-[100%] tracking-[0.02em] uppercase text-[#000000]">
           Craftsmanship
         </h2>
       </div>

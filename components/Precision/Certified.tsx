@@ -112,11 +112,11 @@ const Certified: React.FC = () => {
                 height={48}
               />
 
-              <h3 className="text-[15px] md:text-[20px] mt-2 text-start md:text-left">
+              <h3 className="text-sm md:text-[20px] mt-2 text-start md:text-left">
                 SGL Certified Diamonds
               </h3>
 
-              <p className="text-[13px] md:text-[14px] text-[#505050] mt-3 md:mt-[16px] leading-[150%]">
+              <p className="text-xs md:text-[14px] text-[#505050] mt-3 md:mt-[16px] leading-[150%]">
                 Every Dia Diamond is certified by Solitaire Gemological
                 Laboratories (SGL), one of India’s most trusted diamond
                 certification authorities. This certification verifies the
@@ -124,7 +124,7 @@ const Certified: React.FC = () => {
                 clarity, and carat weight.
               </p>
 
-              <p className="text-[13px] md:text-[14px] leading-[150%] text-[#505050] mt-1">
+              <p className="text-xs md:text-[14px] leading-[150%] text-[#505050] mt-1">
                 Certified by SGL, Crafted for Trust. Our diamonds are certified
                 by SGL, assuring exceptional quality, authenticity, and timeless
                 brilliance.

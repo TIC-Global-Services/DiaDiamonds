@@ -53,7 +53,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section data-theme="light" className="w-full md:h-[80dvh] flex flex-wrap md:flex-nowrap bg-black">
+    <section data-theme="light" className="w-full md:h-[80svh] flex flex-wrap md:flex-nowrap bg-black">
 
       {/* Left Side */}
       <div className="w-full aspect-[415/276] md:h-auto 2xl:h-screen md:w-1/2 overflow-hidden ">
@@ -67,9 +67,9 @@ export default function Testimonials() {
       </div>
 
       {/* Right Side */}
-      <div className="w-full md:w-1/2 h-auto  md:h-full px-[66px] my-auto flex items-center bg-[#f8f3ef] ">
+      <div className="w-full md:w-1/2 h-auto md:h-full px-6 md:px-[66px] my-auto flex items-center bg-[#f8f3ef]">
 
-        <div className="w-full  py-[10%]">
+        <div className="w-full py-8 md:py-[10%]">
 
           <div className="mx-auto w-[80%] md:w-auto">
             <div className=" flex gap-1 ">
@@ -85,11 +85,11 @@ export default function Testimonials() {
             </div>
           </div>
 
-          <p className="md:text-[24px] leading-[100%] text-[#000000] pb-8 md:pb-[5%] pt-8 md:pt-[35px] text-center md:text-left">
+          <p className="text-base md:text-[24px] leading-[130%] md:leading-[100%] text-[#000000] pb-4 md:pb-[5%] pt-4 md:pt-[35px] text-center md:text-left">
             {testimonials[currentTestimony].comments[0]}
           </p>
 
-          <p className="md:text-[24px] leading-[100%] text-[#000000] pb-8 md:pb-1 text-center md:text-left">
+          <p className="text-base md:text-[24px] leading-[130%] md:leading-[100%] text-[#000000] pb-6 md:pb-1 text-center md:text-left">
             {testimonials[currentTestimony].comments[1]}
           </p>
 
@@ -102,7 +102,7 @@ export default function Testimonials() {
                 alt="Testimonial profile picture"
                 className="w-12 md:w-[100px] aspect-square rounded-full object-cover "
               />
-              <h3 className="text-[18px] font-semibold text-[#000000]">
+              <h3 className="text-base md:text-[18px] font-semibold text-[#000000]">
                 {testimonials[currentTestimony].name}
               </h3>
               <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.3904 27.1849L8.0948 23.3186L3.74525 22.3521L4.16812 17.8817L1.20801 14.4987L4.16812 11.1157L3.74525 6.64534L8.0948 5.67877L10.3904 1.8125L14.4983 3.5644L18.6062 1.8125L20.9018 5.67877L25.2514 6.64534L24.8285 11.1157L27.7886 14.4987L24.8285 17.8817L25.2514 22.3521L20.9018 23.3186L18.6062 27.1849L14.4983 25.433L10.3904 27.1849ZM13.2297 18.7879L20.0561 11.9615L18.3646 10.2096L13.2297 15.3445L10.632 12.8072L8.94055 14.4987L13.2297 18.7879Z" fill="black" /></svg>

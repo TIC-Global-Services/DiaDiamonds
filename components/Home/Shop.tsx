@@ -45,15 +45,15 @@ export default function Shop() {
   ];
 
   return (
-    <section data-theme="light" className="w-full h-[100dvh] md:min-h-screen overflow-hidden md:px-[110px] flex justify-end items-center relative bg-[#FFFFFF]">
+    <section data-theme="light" className="w-full h-[100svh] md:min-h-screen overflow-hidden md:px-[110px] flex justify-end items-center relative bg-[#FFFFFF]">
       
       {/* First decorative absolute background div */}
       <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 -translate-y-[75%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-50 flex flex-col md:flex-row justify-end items-center px-10">
         <div className="mb-14">
-          <h3 className="text-[30px] md:text-[40px] font-medium leading-[92%] uppercase text-[#ffffff] pb-[14px] md:pb-5 text-center md:text-left">
+          <h3 className="text-2xl md:text-[40px] font-medium leading-[110%] md:leading-[92%] uppercase text-[#ffffff] pb-3 md:pb-5 text-center md:text-left">
             Shop By Colors
           </h3>
-          <p className="text-center md:text-left text-[12px] md:text-[20px] leading-[120%] text-[#ffffff]/50 md:text-[#ffffff]/90 pb-[10px] md:pb-5">
+          <p className="text-center md:text-left text-sm md:text-[20px] leading-[120%] text-[#ffffff]/50 md:text-[#ffffff]/90 pb-3 md:pb-5">
             Choose Category
           </p>
 
@@ -63,7 +63,7 @@ export default function Shop() {
               onClick={() => setIsDropDownClicked(!isDropDownClicked)}
               className={`absolute top-0 bg-[#431A1A] rounded-full border shadow-[inset_0px_4px_4px_0_rgba(0,0,0,0.25)] py-[10px] px-[24px] flex justify-between items-center gap-[10px] w-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`}
             >
-              <h3 className="text-[12px] md:text-[16px] leading-[142%] text-[#FFFFFF]/50 bg-transparent w-full">
+              <h3 className="text-sm md:text-[16px] leading-[142%] text-[#FFFFFF]/50 bg-transparent w-full">
                 {categories[currentCategory]}
               </h3>
               <svg className={`${isDropDownClicked ? 'rotate-180 delay-100 duration-300' : ''}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,7 +112,7 @@ export default function Shop() {
       <div className="w-full mt-auto pb-20 md:pb-0 md:w-[50%] flex flex-col justify-end md:justify-center items-center relative z-30 md:my-auto">
         {/* Bug 4 fix: no more ternary fallbacks */}
         <h2
-          className="font-medium text-[24px] md:text-[35px] md:leading-[100%] tracking-[10%] uppercase md:pb-[5.28%]"
+          className="font-medium text-xl md:text-[35px] leading-[110%] md:leading-[100%] tracking-[5%] md:tracking-[10%] uppercase pb-4 md:pb-[5.28%]"
           style={{
             background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
             WebkitBackgroundClip: "text",
@@ -134,14 +134,14 @@ export default function Shop() {
           />
         </div>
 
-        <p className="pt-[30px] text-[20px] md:text-[24px] leading-[19.5px] text-[#000000] pb-[38px] font-baskerville m-0">
+        <p className="pt-5 md:pt-[30px] text-base md:text-[24px] leading-[140%] md:leading-[19.5px] text-[#000000] pb-6 md:pb-[38px] font-baskerville m-0">
           {shopItems[currentCategory][activeDiv].name}
         </p>
 
         <button onClick={() => {const selectedCategory = categories[currentCategory].toLowerCase();
                 router.push(`/collections/${selectedCategory}`);
                 }}
-          className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-[10px] px-[18px] py-[7.6px] border-[#FFFFFF]/1 tracking-[0.166rem] border-[5.3px] rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] md:px-[4.72%] md:py-[1.666%] uppercase">
+          className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-xs md:text-[10px] px-4 py-2 md:px-[18px] md:py-[7.6px] border-[#FFFFFF]/1 tracking-[0.1rem] md:tracking-[0.166rem] border-4 md:border-[5.3px] rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] md:px-[4.72%] md:py-[1.666%] uppercase">
           VIEW MORE
         </button>
       </div>

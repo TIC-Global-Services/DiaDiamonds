@@ -19,15 +19,17 @@ export default function PrimaryBtn({
       style={{ "--ripple-color": rippleColor } as React.CSSProperties}
       className={`
         relative
-        px-[30px] py-[12px]
-        rounded-full
-        text-[16px]
+        px-[20px] py-[12px]
+        tracking-widest
+        rounded-full text-[10px]
+        md:text-[16px]
         uppercase
         bg-transparent
         backdrop-blur-md
         border-t border-b border-white/90
         shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]
         overflow-hidden
+        hover:bg-white/90 hover:backdrop-blur-lg 
         btn-glass-border
         ${animated ? "BtnAnimation" : ""}
         isolate
