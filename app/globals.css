@@ -33,7 +33,7 @@ body {
     font-weight: 500;
     font-size: 30px;       /* Small screens default */
     line-height: 1.2;
-    letter-spacing: -1%;     
+    letter-spacing: 0.05em;     
     text-transform: uppercase;
    
   }
@@ -65,7 +65,7 @@ body {
     h2 {
       font-size: 40px;
       line-height: 1.5;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.02em;
     }
     p {
       font-size: 20px;

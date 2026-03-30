@@ -1,14 +1,14 @@
 export default function DIAExperience() {
   return (
-    <section data-theme="dark" className="w-full bg-[#000000] flex flex-col px-6 sm:px-[34px] md:px-10 lg:px-[56px] xl:px-[84px] 2xl:px-20 py-8 md:py-[96px] pb-[25%]">
+    <section data-theme="dark" className="w-full bg-[#000000] flex flex-col px-6 sm:px-[35px] md:px-10 lg:px-[56px] xl:px-[84px] 2xl:px-20 py-8 md:py-[96px] pb-[25%]">
 
       {/* Header Section */}
-      <div className="flex flex-col justify-center items-center mx-auto w-full md:w-full text-center pb-10 md:pb-[70px]">
+      <div className="flex flex-col justify-center items-center mx-auto w-[80%] md:w-full text-center pb-10 md:pb-[70px]">
         <h2 className="font-medium text-xl md:text-[40px] leading-[120%] md:leading-[123%] uppercase text-[#FFFFFF] pb-4 md:pb-[20px]">
           The DIA Diamonds Experience
         </h2>
 
-        <p className="text-sm md:text-[14px] leading-[150%] w-full md:w-[65%] text-[#FFFFFF]">
+        <p className="text-xs font-normal md:text-[14px] leading-[150%] w-full md:w-[65%] text-[#FFFFFF]">
           From selection to setting, every service is thoughtfully designed around you.
           We combine expert craftsmanship, personalized care, and lasting trust to make every moment extraordinary.
         </p>
@@ -27,7 +27,7 @@ export default function DIAExperience() {
             <h3 className="text-base md:text-[18px] leading-[130%] md:leading-[123%] text-[#FFFFFF] w-full text-center">
               Personal Diamond Consultation
             </h3>
-            <p className="text-xs md:text-[12px] leading-[160%] md:leading-[162%] text-[#FFFFFF]">
+            <p className="text-xs font-light md:text-[12px] leading-[160%] md:leading-[162%] text-[#FFFFFF]">
               Understanding your vision, style, and story
             </p>
           </div>

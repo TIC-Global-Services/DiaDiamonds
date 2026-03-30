@@ -4,6 +4,9 @@ import { motion, useAnimation } from "framer-motion";
 import { useRef, useEffect } from "react";
 import PrimaryBtn from "../Reusable/PrimaryBtn";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import PantherImg from '@/public/assets/img/TheArtOfRefinement/PantherOriginal.png'
+import DiamondCaseImg from '@/public/assets/img/TheArtOfRefinement/DiamondCase.png'
 
 export default function TheArtOfRefinement() {
   const router = useRouter();
@@ -54,9 +57,6 @@ export default function TheArtOfRefinement() {
   }, [controls])
 
   const pantherSparkleRef = useRef<HTMLImageElement>(null);
-  const PantherImg = '/assets/img/TheArtOfRefinement/PantherOriginal.png';
-  const DiamondCaseImg = '/assets/img/TheArtOfRefinement/DiamondCase.png';
-  const singleSparkleImg = '/assets/img/singleSparkleAlpha.png';
 
   const CaptureMousePosition = (e: React.MouseEvent<HTMLImageElement>) => {
     if (!pantherSparkleRef.current) return;
@@ -77,7 +77,7 @@ export default function TheArtOfRefinement() {
         initial="hidden"
         animate={controls}
         className="relative w-[45.83%] mx-auto md:mx-0 md:w-[34.61%] aspect-[470/588] border-0 rounded-[20px] bg-white overflow-hidden shrink-0">
-        <img
+        <Image
           src={PantherImg}
           alt="Panther"
           className="w-full md:w-full h-auto object-cover mt-[-10%]"
@@ -105,19 +105,19 @@ export default function TheArtOfRefinement() {
       <div className="w-full flex items-start flex-wrap md:flex-nowrap gap-[7.29%] pt-[11.17%] md:pt-0">
 
 
-        <div className="w-full md:w-[51.7%] my-auto md:ml-[1.875%] pb-[13.11%] md:pb-[9.4%] text-center md:text-left">
-          <h2 className="w-[90%] md:w-auto mx-auto md:mx-0 text-[#FFFFFF] text-2xl md:text-[40px] leading-[120%] md:leading-[100%] pb-6 md:pb-[10.27%] text-center md:text-left">The Art of Radiant Refinement</h2>
-          <p className="w-[90%] md:w-auto mx-auto md:mx-0 text-sm md:text-base text-[#FFFFFF]/70 pb-8 md:pb-[12.33%] text-center md:text-left">Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.</p>
-          <div onClick={() => router.push("/about")}  className="w-[24.76%] md:w-auto mx-auto block md:mx-0">
+        <div className="w-full md:w-[51.7%] my-auto md:ml-[1.875%] pb-[13.11%] md:pb-[9.4%] text-center items-center md:text-left">
+          <h2 className="w-[80%] md:w-[120%] mx-auto md:mx-0 text-[#FFFFFF] text-2xl md:text-[40px] leading-[120%] md:leading-[120%] pb-6 md:pb-[10.27%] text-center md:text-left">The Art of Radiant Refinement</h2>
+          <p className="w-[100%] px-5 md:px-0 md:w-[120%] mx-auto md:mx-0 text-sm md:text-base text-[#FFFFFF]/70 pb-8 md:pb-[12.33%] text-center md:text-left">Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.</p>
+          <div onClick={() => router.push("/about")}  className="w-full md:w-auto mx-auto flex justify-center md:justify-start md:mx-0">
             <PrimaryBtn text="VIEW MORE" textColor="text-white" />
           </div>
         </div>
 
         <div className="relative w-[51.94%] mx-auto md:mx- md:w-[36.82%] aspect-317/451 border-[1px] border-[#FFFFFF]/10 rounded-[10px] overflow-hidden shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
 
-          <img src={DiamondCaseImg} alt="diamond case" className="w-full h-auto object-cover mt-[10.41%]" />
+          <Image src={DiamondCaseImg} alt="diamond case" className="w-full h-auto object-center mt-[10.41%]" />
 
-          <div className="absolute top-[6.63%] left-[5.68%] w-[42.59%] aspect-[135/42] border-[1px] rounded-full border-[#000000]/0 bg-[#87888A] flex justify-center items-center">
+          <div className="absolute top-[7.63%] left-[5.68%] w-[42.59%] aspect-[135/42] border-[1px] rounded-full border-[#000000]/0 bg-[#87888A] flex justify-center items-center">
 
             <svg width="105" height="18" viewBox="0 0 105 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_505_3887)">

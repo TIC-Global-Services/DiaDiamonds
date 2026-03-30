@@ -53,7 +53,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section data-theme="light" className="w-full md:h-[80svh] flex flex-wrap md:flex-nowrap bg-black">
+    <section data-theme="light" className="w-full h-[120svh] md:h-[130svh] flex flex-wrap md:flex-nowrap bg-black">
 
       {/* Left Side */}
       <div className="w-full aspect-[415/276] md:h-auto 2xl:h-screen md:w-1/2 overflow-hidden ">
@@ -62,7 +62,7 @@ export default function Testimonials() {
             src={testimonialLeftImage}
             alt="testimonial visual"
             quality={100}
-            className="w-full 2xl:h-screen object-cover object-top -translate-[8%] scale-120 hover:scale-130 delay-75 duration-100 ease-in-out" />
+            className="w-full h-[120svh] md:h-[130svh] 2xl:h-screen object-cover object-top -translate-[8%] scale-120 hover:scale-130 delay-75 duration-100 ease-in-out" />
         </Parallax>
       </div>
 

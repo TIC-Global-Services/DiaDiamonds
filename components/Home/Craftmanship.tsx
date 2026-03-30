@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const cards = [
   {
-    title: "Elegant and Premium",
+    title: "Elegant & Premium",
     content:
       "Every diamond is meticulously selected and expertly set by skilled artisans. From precision cutting to flawless finishing, each piece reflects timeless beauty and uncompromising quality.",
   },
@@ -39,7 +39,7 @@ export default function Craftsmanship() {
   }, [cards.length]);
 
   return (
-    <section data-theme="light" className="relative h-[100svh] md:h-[150svh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
+    <section data-theme="light" className="relative h-[150svh] md:h-[150svh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
       {/* Left Side Image */}
       <motion.div
         initial={{ opacity: 0, x: -10 }}
@@ -48,7 +48,7 @@ export default function Craftsmanship() {
         viewport={{ once: false }}
         className="w-full md:w-1/2 md:h-full relative overflow-hidden">
         <Parallax speed={-10}>
-          <div className="relative w-full md:h-[150vh]">
+          <div className="relative w-full h-[80svh] md:h-[150vh]">
             <Image
               src={imageSrc}
               alt="Craftsmanship"
@@ -58,7 +58,7 @@ export default function Craftsmanship() {
             />
           </div>
         </Parallax>
-        <div onClick={() => router.push("/collections/bracelets")} className="absolute inset-0 z-20 flex justify-center items-end pb-10 md:mb-28">
+        <div onClick={() => router.push("/collections/bracelets")} className="absolute inset-0 z-20 flex justify-center items-end pb-30 md:pb-10 md:mb-28">
           {/* <button className="glass-btn BtnAnimation text-[10px] md:text-[12px] tracking-[0.166rem] border-[5.3px] rounded-full px-[16px] py-[3px] md:px-[18px] md:py-[7.6px]  uppercase ">
             VIEW BRACELET COLLECTION
           </button> */}

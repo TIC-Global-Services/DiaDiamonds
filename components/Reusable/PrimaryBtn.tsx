@@ -29,7 +29,7 @@ export default function PrimaryBtn({
         border-t border-b border-white/90
         shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]
         overflow-hidden
-        hover:bg-white/90 hover:backdrop-blur-lg 
+        hover:bg-black hover:text-white
         btn-glass-border
         ${animated ? "BtnAnimation" : ""}
         isolate

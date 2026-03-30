@@ -45,10 +45,10 @@ export default function Shop() {
   ];
 
   return (
-    <section data-theme="light" className="w-full h-[100svh] md:min-h-screen overflow-hidden md:px-[110px] flex justify-end items-center relative bg-[#FFFFFF]">
+    <section data-theme="light" className="w-full h-[100svh] md:h-[100svh] overflow-hidden md:px-[110px] flex justify-end items-center relative bg-[#FFFFFF]">
       
       {/* First decorative absolute background div */}
-      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 -translate-y-[75%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-50 flex flex-col md:flex-row justify-end items-center px-10">
+      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-4 -translate-y-[75%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-50 flex flex-col md:flex-row justify-end items-center px-10">
         <div className="mb-14">
           <h3 className="text-2xl md:text-[40px] font-medium leading-[110%] md:leading-[92%] uppercase text-[#ffffff] pb-3 md:pb-5 text-center md:text-left">
             Shop By Colors
@@ -58,10 +58,10 @@ export default function Shop() {
           </p>
 
           {/* Dropdown */}
-          <div className="relative w-[45%] md:w-[70%] mx-auto md:mx-0">
+          <div className="relative w-[70%] md:w-[70%] mx-auto md:mx-0">
             <button
               onClick={() => setIsDropDownClicked(!isDropDownClicked)}
-              className={`absolute top-0 bg-[#431A1A] rounded-full border shadow-[inset_0px_4px_4px_0_rgba(0,0,0,0.25)] py-[10px] px-[24px] flex justify-between items-center gap-[10px] w-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`}
+              className={`absolute top-0  bg-[#431A1A] rounded-full border shadow-[inset_0px_4px_4px_0_rgba(0,0,0,0.25)] py-[10px] px-[25px] flex justify-between items-center gap-[10px] w-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`}
             >
               <h3 className="text-sm md:text-[16px] leading-[142%] text-[#FFFFFF]/50 bg-transparent w-full">
                 {categories[currentCategory]}
@@ -109,7 +109,7 @@ export default function Shop() {
       </div>
 
       {/* Product display */}
-      <div className="w-full mt-auto pb-20 md:pb-0 md:w-[50%] flex flex-col justify-end md:justify-center items-center relative z-30 md:my-auto">
+      <div className="w-full mt-auto pb-40 md:pb-0 md:w-[50%] flex flex-col justify-center md:justify-center items-center relative z-30 md:my-auto">
         {/* Bug 4 fix: no more ternary fallbacks */}
         <h2
           className="font-medium text-xl md:text-[35px] leading-[110%] md:leading-[100%] tracking-[5%] md:tracking-[10%] uppercase pb-4 md:pb-[5.28%]"
@@ -130,7 +130,7 @@ export default function Shop() {
             onAnimationComplete={() => setProductChanged(false)}
             src={shopItems[currentCategory][activeDiv].image}
             alt={shopItems[currentCategory][activeDiv].name}
-            className="w-full object-cover md:object-contain"
+            className="w-full object-cover md:object-center"
           />
         </div>
 
@@ -141,7 +141,7 @@ export default function Shop() {
         <button onClick={() => {const selectedCategory = categories[currentCategory].toLowerCase();
                 router.push(`/collections/${selectedCategory}`);
                 }}
-          className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-xs md:text-[10px] px-4 py-2 md:px-[4.72%] md:py-[7.67%] border-[#FFFFFF]/1 tracking-[0.1rem] md:tracking-[0.166rem] border-4 md:border-[5.3px] rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] uppercase">
+          className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-xs md:text-[10px] px-4 py-2 md:px-[4.72%] md:py-[2.67%] border-[#FFFFFF]/1 tracking-[0.1rem] md:tracking-[0.166rem] border-4 md:border-[5.3px] rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] uppercase">
           VIEW MORE
         </button>
       </div>
