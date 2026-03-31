@@ -76,7 +76,7 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
 
       {/* CATEGORY MENU */}
       <section className="w-full mx-auto pt-8">
-        <div className="flex items-center justify-start md:justify-center gap-2 sm:gap-4 md:gap-4 px-4 md:px-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-2">
+        <div className="flex items-center justify-start md:justify-center gap-2 sm:gap-4 md:gap-4 px-2 md:px-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-2">
           {categoryMenu.map((cat, idx) => {
             const isActive = category === cat.slug;
 
@@ -84,7 +84,7 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
               <div
                 key={idx}
                 onClick={() => router.push(`/collections/${cat.slug}`)}
-                className="relative group cursor-pointer flex-shrink-0 snap-start w-[30vw] sm:w-[22vw] md:w-[18vw]"
+                className="relative group cursor-pointer flex-shrink-0 snap-start w-[32vw] sm:w-[22vw] md:w-[18vw]"
               >
                 <div className={`relative overflow-hidden my-2
                   ${isActive ? 'ring-1 ring-[#431A1A4D] shadow-lg' : ''}

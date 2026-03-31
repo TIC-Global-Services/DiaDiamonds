@@ -108,14 +108,14 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
       />
 
       {/* Item Display */}
-      <section data-theme='light' className="w-full md:px-[6.67%] flex justify-between flex-col md:flex-row mt-[2%]">
+      <section data-theme='light' className="w-full md:px-[6.67%] flex justify-between flex-col md:flex-row pt-[8%]">
 
         {/* Left Info & Options */}
         <div className="w-full md:w-[35%] px-[4.37%] md:px-0 md:pb-[18.96%]">
-          <h3 className="md:pt-[5.47%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
+          <h3 className="md:pt-[5.47%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-[clash-Display, Inter] font-normal">
             {product.productName}
           </h3>
-          <p className="md:pt-[2%] text-[#000000] text-base md:text-lg md:leading-[20px] md:tracking-[-0.26px] font-light font-[clash-Display, sans] align-middle">
+          <p className="md:pt-[2%] text-[#000000] text-base md:text-lg md:leading-[20px] md:tracking-[-0.26px] font-normal font-[clash-Display, sans] align-middle">
             {product.colors[currentVariantIndex]?.color} with diamonds
           </p>
           <p className="md:pt-[2%] md:pb-[10%] font-baskerville text-base md:text-xl leading-[1.2] tracking-tight text-[#000000]">
@@ -215,20 +215,20 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
           {/* Description + Bullet Points */}
           <div className="md:w-[60%] md:ml-auto md:pb-[10%] gap-2 justify-start text-start">
-            <p className="mt-[6%] md:pb-[6.44%] text-[10px] md:text-[16px] leading-[1.75] text-start tracking-[-0.32px] text-[#000000]">
+            <p className="mt-[6%] md:pb-[6.44%] font-light text-[10px] md:text-[16px] leading-[1.8] text-start tracking-[-0.32px] text-[#000000]">
               {layoutDescription}
             </p>
             <div className="flex flex-col items-start justify-between mb-[11.05%] md:mb-0 gap-4 md:gap-2 md:flex-row md:items-center">
-              <div className="flex items-center text-[12px] md:text-base leading-[28px] tracking-[-0.32px] text-[#000000]">
+              <div className="flex items-center font-light text-[10px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
                 <span className="mr-2">•</span>
                 {product.colors[currentVariantIndex]?.color} with diamonds
               </div>
-              <div className="flex items-center text-[12px] md:text-base leading-[28px] tracking-[-0.32px] text-[#000000]">
+              <div className="flex items-center font-light text-[10px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
                 <span className="mr-2">•</span>
                 Finger size: {currentSize || 'Small'}
               </div>
               {product.diamondType && (
-                <div className="flex items-center text-[12px] md:text-base leading-[28px] tracking-[-0.32px] text-[#000000]">
+                <div className="flex items-center font-light text-[10px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
                   <span className="mr-2">•</span>
                   {product.diamondType}
                 </div>

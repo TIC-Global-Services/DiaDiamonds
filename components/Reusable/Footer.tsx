@@ -29,13 +29,13 @@ export default function Footer() {
     <footer className="w-full min-h-[50dvh] bg-[#0b0b0b] px-2 md:px-6 pt-4 pb-[27px] data-theme='dark' ">
 
       {/* ================= NAV ================= */}
-      <ul className="flex flex-wrap items-center md:justify-start justify-start gap-2 md:gap-8 w-full">
+      <ul className="flex flex-wrap items-center md:justify-start gap-2 md:gap-6 w-full">
         {NAV_ITEMS.map((item) => {
           if (item.label === "Collections") {
             return (
               <li
                 key={item.label}
-                className="relative flex items-center gap-1 cursor-pointer whitespace-nowrap"
+                className="relative flex items-center md:gap-2 cursor-pointer whitespace-nowrap"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 {/* TEXT */}
@@ -71,7 +71,7 @@ export default function Footer() {
                           setIsOpen(false);
                           router.push(`/collections/${cat.value}`);
                         }}
-                        className="px-4 py-2 text-sm text-white/60 hover:text-white hover:bg-[#111] cursor-pointer capitalize"
+                        className="px-4 py-2 text-xs text-white/60 hover:text-white hover:bg-[#111] cursor-pointer capitalize"
                       >
                         {cat.label}
                       </div>
@@ -98,7 +98,7 @@ export default function Footer() {
 
       {/* ================= CUSTOMER SERVICE ================= */}
 
-      <div className="flex flex-col py-10 justify-start items-start md:justify-end md:items-end -mt-6 md:mt-0">
+      <div className="flex flex-col py-10 justify-start items-start md:justify-end md:items-end md:mt-0">
         <h3 className='text-[13px] md:text-[20px] text-[#FFFFFF] leading-[140%] '>CUSTOMER SERVICE</h3>
         {customerLinks.map((link) => (
           <Link
@@ -113,7 +113,7 @@ export default function Footer() {
       </div>
 
       {/* ================= LOGO ================= */}
-      <div className="relative flex flex-col mx-auto pt-17 pb-3 items-center justify-center gap-1 pointer-events-none  mt-[-12%]">
+      <div className="relative flex flex-col mx-auto pt-13 pb-6 items-center justify-center gap-1 pointer-events-none  mt-[-14%]">
         <Image
           className="w-[60px] aspect-square"
           src={diamond}
@@ -148,11 +148,11 @@ export default function Footer() {
       </div>
 
       {/* ================= INFO SECTION ================= */}
-      <div className="flex flex-row md:flex-row md:flex-nowrap justify-between items-stretch w-full pb-9">
+      <div className="flex flex-row md:flex-row md:flex-nowrap justify-between items-stretch w-full pb-8">
 
         {/* Head Office */}
         <div className="w-1/2 pr-3 pt-4 md:pt-0">
-          <h2 className="text-[13px] uppercase font-medium lg:text-xl md:text-base leading-[100%] text-[#FFFFFF] pb-[6px] text-left">
+          <h2 className="text-[13px] uppercase font-medium lg:text-xl md:text-base items-end leading-[100%] text-[#FFFFFF] pb-[6px] text-left">
             Head Office
           </h2>
           <p className="text-[10px] md:w-[55%] md:text-sm lg:text-[18px] leading-[120%] text-[#737373] text-left">
@@ -162,7 +162,7 @@ export default function Footer() {
         </div>
 
         {/* Contacts */}
-        <div className="w-1/2 pl-3 pt-4 md:pt-0">
+        <div className="w-1/2 pl-8 pt-4 md:pt-0 items-end justify-end">
           <h2 className="text-[13px] uppercase font-medium lg:text-xl md:text-base leading-[100%] text-[#FFFFFF] pb-[6px] text-center md:text-right">
             Contacts
           </h2>

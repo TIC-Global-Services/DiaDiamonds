@@ -6,6 +6,7 @@ import ProductCard from '../Cards/ProductCard';
 import { Product, SORT_OPTIONS, SortType, VARIETIES, VarietyType } from '@/types/product';
 import { ArrowDown } from 'lucide-react';
 import { useProductFilter } from "@/hooks/useProductFilter";
+import { motion } from 'framer-motion';
 
 interface ProductListProps {
   products: Product[];
@@ -124,58 +125,64 @@ const ProductList: React.FC<ProductListProps> = ({
 
         {/* DROPDOWN */}
         {isMobileFilterOpen && (
-          <div className="absolute top-[120%] left-0 w-[260px] bg-[#F7F6F4] rounded-[14px] shadow-lg p-3 z-[999]">
+          <motion.div
+            initial={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
+            animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
+            exit={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="absolute top-[82%] left-5 w-[40%] bg-[#431A1A] rounded-b-[14px] overflow-hidden z-[999]"
+          >
 
             {/* SORT BY */}
-            <div className="mb-4">
-              <h3 className="text-[14px] uppercase text-black/50 mb-2">
+            <div className="px-4 pt-3 pb-2">
+              <h3 className="text-[12px] uppercase text-white/50 tracking-[0.88px]">
                 Sort By
               </h3>
-
-              {SORT_OPTIONS.map((opt) => (
-                <div
-                  key={opt.value}
-                  onClick={() => {
-                    setSortBy(opt.value as SortType);
-                    setIsMobileFilterOpen(false);
-                  }}
-                  className={`p-3 mb-2 rounded-[10px] cursor-pointer ${sortBy === opt.value
-                    ? "bg-white text-black"
-                    : "bg-[#EDEDED] text-black/50"
-                    }`}
-                >
-                  {opt.label}
-                </div>
-              ))}
             </div>
+
+            {SORT_OPTIONS.map((opt, index) => (
+              <div
+                key={opt.value}
+                onClick={() => setSortBy(opt.value as SortType)}
+                className={`w-full py-[12px] text-center text-[16px] cursor-pointer
+          ${sortBy === opt.value
+                    ? "text-black bg-[#F7F6F4]"
+                    : "text-black/40 bg-white border-t border-[#F5F5F5]"
+                  }
+        `}
+              >
+                {opt.label}
+              </div>
+            ))}
 
             {/* VARIETY */}
             {category === "rings" && (
-              <div>
-                <h3 className="text-[14px] uppercase text-black/50 mb-2">
-                  Solitaire Variety
-                </h3>
+              <>
+                <div className="px-4 pt-4 pb-2">
+                  <h3 className="text-[12px] uppercase text-white/50 tracking-[0.88px]">
+                    Solitaire Variety
+                  </h3>
+                </div>
 
-                {VARIETIES.map((opt) => (
+                {VARIETIES.map((opt, index) => (
                   <div
                     key={opt.value}
-                    onClick={() => {
-                      setSolitaireVariety(opt.value as VarietyType);
-                      setIsMobileFilterOpen(false);
-                    }}
-                    className={`p-3 mb-2 rounded-[10px] cursor-pointer ${solitaireVariety === opt.value
-                      ? "bg-white text-black"
-                      : "bg-[#EDEDED] text-black/50"
-                      }`}
+                    onClick={() => setSolitaireVariety(opt.value as VarietyType)}
+                    className={`w-full py-[12px] text-center text-[16px] cursor-pointer
+              ${solitaireVariety === opt.value
+                        ? "text-black bg-[#F7F6F4]"
+                        : "text-black/40 bg-white border-t border-[#F5F5F5]"
+                      }
+              ${index === VARIETIES.length - 1 ? "rounded-b-[14px]" : ""}
+            `}
                   >
                     {opt.label}
                   </div>
                 ))}
-              </div>
+              </>
             )}
-          </div>
+          </motion.div>
         )}
-
         {/* HEADING - Mobile */}
         <CategoryHeading category={category} />
 
@@ -198,7 +205,8 @@ const ProductList: React.FC<ProductListProps> = ({
           <div className="w-full flex justify-center pb-20">
             <button
               onClick={loadMore}
-              className="py-[14px] px-[8%] md:px-[3%] md:py-[1%] border rounded-full text-[10px] md:text-[13px] uppercase hover:bg-[#F7F6F4] transition"
+              className="py-[14px] px-[8%] md:px-[3%] tracking-widest md:py-[1%] border rounded-full text-[10px] md:text-[13px] uppercase hover:bg-[#F7F6F4] transition
+               border-white shadow-[inset_0px_0px_4px_0px_rgba(0,0,0,0.4)]"
             >
               View More
             </button>
