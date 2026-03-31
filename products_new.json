@@ -6232,6 +6232,133 @@
     "slug": "teardrop-frame-pendants",
     "id": 189
   },
+   {
+    "category": "bracelets",
+    "productName": "Regal Radiance Bracelet",
+    "description": "Bracelets embody effortless elegance and refined craftsmanship. Each piece is thoughtfully designed to balance timeless style with modern sophistication, creating jewellery that enhances every look. Crafted with high-quality materials and carefully set diamonds, every bracelet reflects precision, authenticity, and exceptional artistry. Whether worn alone for subtle elegance or layered for a statement, our bracelets add a touch of brilliance and sophistication to every moment",
+    "newArrival": false,
+    "newCollection": false,
+    "recommended": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "tags": [
+      "Elegant bracelet design"
+    ],
+    "colors": [
+      {
+        "color": "Rose Gold",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/bracelets/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__6__Vbrkd5UKb.png"
+      }
+    ],
+     "layoutImages": [
+    {
+      "position": "top",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+    },
+    {
+      "position": "left",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+    },
+    {
+      "position": "right",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+    },
+    {
+      "position": "bottom",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+    }
+  ],
+    "slug": "regal-radiance-bracelet",
+    "id": 190
+  },
+  {
+    "category": "bracelets",
+    "productName": "Noble Luxe Bracelet",
+    "description": "Bracelets embody effortless elegance and refined craftsmanship. Each piece is thoughtfully designed to balance timeless style with modern sophistication, creating jewellery that enhances every look. Crafted with high-quality materials and carefully set diamonds, every bracelet reflects precision, authenticity, and exceptional artistry. Whether worn alone for subtle elegance or layered for a statement, our bracelets add a touch of brilliance and sophistication to every moment",
+    "newArrival": false,
+    "newCollection": false,
+    "recommended": false,
+    "sizes": [
+      "S",
+      "XS",
+      "M"
+    ],
+    "tags": [
+      "Fine jewellery piece"
+    ],
+    "colors": [
+      {
+        "color": "Yellow Gold",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/bracelets/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__7__yQpCKCvGw.png"
+      }
+    ],
+     "layoutImages": [
+    {
+      "position": "top",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+    },
+    {
+      "position": "left",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+    },
+    {
+      "position": "right",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+    },
+    {
+      "position": "bottom",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+    }
+  ],
+    "slug": "noble-luxe-bracelet",
+    "id": 191
+  },
+  {
+    "category": "bracelets",
+    "productName": "Bloom Luxe Bracelet",
+    "description": "Bracelets embody effortless elegance and refined craftsmanship. Each piece is thoughtfully designed to balance timeless style with modern sophistication, creating jewellery that enhances every look. Crafted with high-quality materials and carefully set diamonds, every bracelet reflects precision, authenticity, and exceptional artistry. Whether worn alone for subtle elegance or layered for a statement, our bracelets add a touch of brilliance and sophistication to every moment",
+    "newArrival": false,
+    "newCollection": false,
+    "recommended": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M"
+    ],
+    "tags": [
+      "Timeless bracelet style",
+      "Perfect for everyday wear"
+    ],
+    "colors": [
+      {
+        "color": "Rose Gold",
+        "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/bracelets/Region_â___Picture_â___Pendant_in_Yellow_Gold_with_Diamonds__8__QA4rJ33TY.png"
+      }
+    ],
+     "layoutImages": [
+    {
+      "position": "top",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/ec4502878f763c2654d8ea9b7a81e653c7973ecd.png"
+    },
+    {
+      "position": "left",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/3bd5202ce9c4f245d8fb43f264698aa63f38cb8b.png"
+    },
+    {
+      "position": "right",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/adc1118b374a5edbb6e716df41d7e4f3cdaf3235.png"
+    },
+    {
+      "position": "bottom",
+      "image": "https://ik.imagekit.io/99y1fc9mh/diadiamonds/product/cf5bdf69cf083f81aea8c6defce247497bd9e8a0.jpg"
+    }
+  ],
+    "slug": "bloom-luxe-bracelet",
+    "id": 192
+  },
   {
     "_id": "69ca54ac39700a5fd20d3828",
     "id": 220,

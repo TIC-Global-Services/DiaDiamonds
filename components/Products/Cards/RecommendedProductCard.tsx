@@ -16,7 +16,7 @@ const RecommendedProductCard: React.FC<RecommendedProductCardProps> = ({
   return (
     <div
       onClick={() => onClick(product.id)}
-      className="w-full md:w-[24.19%] shrink-0 group cursor-pointer"
+      className="w-full md:w-[24.19%] shrink-0 group hover:border cursor-pointer"
     >
       {/* Image */}
       <div className="md:w-full aspect-square overflow-hidden md:mb-[12.77%]  flex items-center justify-center p-4">
@@ -30,7 +30,7 @@ const RecommendedProductCard: React.FC<RecommendedProductCardProps> = ({
       </div>
 
       {/* Name */}
-      <p className="text-center font-baskerville text-[14px] md:text-[18px] mt-4">
+      <p className="text-center font-normal font-[baskerville, sans] tracking-tight text-[14px] md:text-[18px] mt-[2%] md:mt-[4%]">
         {product.productName}
       </p>
     </div>

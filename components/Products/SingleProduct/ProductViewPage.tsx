@@ -7,8 +7,9 @@ import { useRouter } from 'next/navigation';
 import Breadcrumbs from '@/components/Reusable/Breadcrumbs';
 import Image from 'next/image';
 import RecommendedProductCard from '../Cards/RecommendedProductCard';
-import { Product } from '@/types/product';
-import { LAYOUT_IMAGES } from '@/constants/LayoutImages';
+import { Product, ProductLayoutImage } from '@/types/product';
+import { FALLBACK_LAYOUT } from '@/constants/LayoutImages';
+
 
 
 
@@ -19,12 +20,14 @@ interface ProductViewProps {
   onProductClick: (id: number) => void;
 }
 
+
 export default function ProductView({ product, onBack }: ProductViewProps) {
   const router = useRouter();
 
   const [currentVariantIndex, setCurrentVariantIndex] = useState(0);
   const [currentSize, setCurrentSize] = useState<string>('');
   const [scrollLevel, setScrollLevel] = useState<number>(0);
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -58,50 +61,42 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
   recommendedProducts = recommendedProducts.slice(0, 6);
 
-  // Category-level layout images from constant
-  const categoryLayout = LAYOUT_IMAGES[product.category.toLowerCase()];
+  // Layout implement
+  const category = product.category.toLowerCase();
 
-  const categoryMap = categoryLayout
-    ? {
-      top: categoryLayout.top,
-      left: categoryLayout.left,
-      right: categoryLayout.right,
-      bottom: categoryLayout.bottom,
-    }
-    : {};
+  const fallback = FALLBACK_LAYOUT[category] ?? {
+    top: "/assets/img/Layout/bgImage1.png",
+    left: "/assets/img/Layout/bgImage2.png",
+    right: "/assets/img/Layout/bgImage3.png",
+    bottom: "/assets/img/Layout/bgImage4.jpg",
+  };
 
-  // Product-level layout images from products_new.json (per-product override)
-  // const productMap = Array.isArray(product.layoutImages) && product.layoutImages.length > 0
-  //   ? product.layoutImages.reduce((acc: any, img: any) => {
-  //       if (img.position && img.image) acc[img.position] = img.image;
-  //       return acc;
-  //     }, {})
-  //   : {};   //old func
+  const productLayoutMap = (product.layoutImages ?? []).reduce<Record<string, string>>(
+    (acc, img: ProductLayoutImage) => {
+      if (img.position && img.image) acc[img.position] = img.image;
+      return acc;
+    },
+    {}
+  );
 
-  // Product images win over category images per position
-  const layoutMap = categoryLayout
-    ? {
-      top: categoryLayout.top,
-      left: categoryLayout.left,
-      right: categoryLayout.right,
-      bottom: categoryLayout.bottom,
-    }
-    : {};
+  const topImage = productLayoutMap["top"] ?? fallback.top;
+  const leftImage = productLayoutMap["left"] ?? fallback.left;
+  const bottomImage = productLayoutMap["bottom"] ?? fallback.bottom;
 
-  const topImage = layoutMap.top || null;
-  const leftImage = layoutMap.left || null;
-  const rightImage = layoutMap.right || null;
-  const bottomImage = layoutMap.bottom || null;
-  const layoutDescription = categoryLayout?.description ?? product.description ?? "";
+  const rightImage =
+    productLayoutMap["right"] ??  // from JSON
+    product.colors[currentVariantIndex]?.image ??  // current variant
+    fallback.right;
 
-  const hasLayoutImages = !!(topImage || leftImage || rightImage || bottomImage);
+  const hasLayoutImages = true;
+  const layoutDescription = product.description ?? "";
 
   const hasSizes = ["rings", "bracelets", "pendants"].includes(
     product.category.toLowerCase()
   );
 
   return (
-    <div data-theme='light' className="w-full bg-[#FFFFFF] overflow-hidden pt-[94px]">
+    <div data-theme='light' className="w-full bg-[#FFFFFF] overflow-hidden pt-[60px] md:pt-[90px]">
 
       {/* Breadcrumbs */}
       <Breadcrumbs
@@ -116,29 +111,60 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
       <section data-theme='light' className="w-full md:px-[6.67%] flex justify-between flex-col md:flex-row mt-[2%]">
 
         {/* Left Info & Options */}
-        <div className="w-full md:w-[35%] px-[4.37%] md:px-0 md:ml-[5%] md:pb-[18.96%]">
-          <h3 className="md:pt-[7.47%]">
+        <div className="w-full md:w-[35%] px-[4.37%] md:px-0 md:pb-[18.96%]">
+          <h3 className="md:pt-[5.47%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
             {product.productName}
           </h3>
-          <p className="pt-2 text-[#000000]">
+          <p className="md:pt-[2%] text-[#000000] text-base md:text-lg md:leading-[20px] md:tracking-[-0.26px] font-light font-[clash-Display, sans] align-middle">
             {product.colors[currentVariantIndex]?.color} with diamonds
           </p>
-          <p className="md:pt-4 md:pb-8 font-baskerville text-small md:text-body text-[#000000]">
+          <p className="md:pt-[2%] md:pb-[10%] font-baskerville text-base md:text-xl leading-[1.2] tracking-tight text-[#000000]">
             {product.diamondType || ""}
           </p>
 
           {/* Mobile Image - moved below size and variants */}
-          <div className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mt-6 mb-4">
+          <div className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mb-[20px]">
             <Image
               width={400}
               height={400}
               src={product.colors[currentVariantIndex]?.image}
               alt={product.productName}
+              loading="lazy"
+              unoptimized
               className="w-full h-full object-contain"
             />
           </div>
-          
-          <hr className='w-full border-t border-gray-300'/>
+
+          {/* Color Variants */}
+          <div className="flex justify-around md:gap-[6%] md:pb-[6%] mt-4 md:mt-0 flex-wrap overflow-x-auto px-4 md:px-0 border-b border-[#000000]/10">
+            {product.colors?.map((colorObj: { color: string; image: string }, idx: number) => (
+              <div
+                key={idx}
+                onClick={() => setCurrentVariantIndex(idx)}
+                className="w-[60px] md:w-[22%] shrink-0 cursor-pointer flex flex-col justify-end items-center pb-2"
+              >
+                <div className="w-full aspect-[4/3] flex items-center justify-center p-1 mb-2">
+                  <Image
+                    width={100}
+                    height={100}
+                    src={colorObj.image}
+                    alt={colorObj.color}
+                    unoptimized
+                    loading="lazy"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="w-full border-t border-transparent relative">
+                  <div className={`absolute top-[-1px] left-0 w-full h-[1px] ${currentVariantIndex === idx ? 'bg-black' : 'bg-transparent'}`} />
+                  <h3 className="text-[10px] md:text-sm tracking-wide text-center text-[#000000] pt-2 capitalize">
+                    {colorObj.color}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <hr className='w-full border-t border-gray-300' />
 
           {/* Size Options */}
           {hasSizes && (<div className="flex w-full py-[6.37%] md:py-[6%] gap-[4%] items-center px-4 md:px-0 mt-2 md:mt-0">
@@ -149,7 +175,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                   key={size}
                   onClick={() => setCurrentSize(size)}
                   className={`text-xs md:text-sm ${currentSize === size
-                    ? 'text-black font-bold border border-gray-300 rounded-full px-2 py-[4px]'
+                    ? 'text-black font-bold border border-black rounded-full px-2 py-[4px]'
                     : 'text-[#000000]/70'
                     } hover:text-black transition-colors`}
                 >
@@ -166,40 +192,13 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           </div>
           )}
 
-          {/* Color Variants */}
-          <div className="flex gap-[12%] md:pb-[6%] mt-4 md:mt-0 flex-wrap overflow-x-auto px-4 md:px-0">
-            {product.colors?.map((colorObj: { color: string; image: string }, idx: number) => (
-              <div
-                key={idx}
-                onClick={() => setCurrentVariantIndex(idx)}
-                className="w-[60px] md:w-[22%] shrink-0 cursor-pointer flex flex-col justify-end items-center pb-2"
-              >
-                <div className="w-full aspect-[4/3] flex items-center justify-center p-1 mb-2">
-                  <Image
-                    width={100}
-                    height={100}
-                    src={colorObj.image}
-                    alt={colorObj.color}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="w-full border-t border-transparent relative">
-                  <div className={`absolute top-[-1px] left-0 w-full h-[1px] ${currentVariantIndex === idx ? 'bg-black' : 'bg-transparent'}`} />
-                  <h3 className="text-[10px] md:text-sm tracking-wide text-center text-[#000000] pt-2 capitalize">
-                    {colorObj.color}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <button onClick={() => router.push("/contact")} className="btn block w-[90%] md:w-[95%] mx-auto md:mx-0 mt-8 md:mt-6 py-4 bg-white border-0 border-[#F0F0F0] rounded-[25px] text-[#000000] cursor-pointer hover:bg-black hover:text-white transition-colors shadow-[inset_0px_0px_2px_0_rgba(0,0,0,0.25)]">
+          <button onClick={() => router.push("/contact")} className="block w-[100%] md:w-[95%] mx-auto md:mx-0 mt-4 md:mt-6 py-4 bg-white border-0 border-[#F0F0F0] rounded-[25px] text-[#000000] tracking-widest cursor-pointer font-semibold text-[12px] hover:bg-black hover:text-white transition-colors shadow-[inset_-1px_-1px_4px_0px_rgba(0,0,0,0.25)]">
             CONTACT STORE
           </button>
         </div>
 
         {/* Desktop Image */}
-        <div className="hidden md:flex flex-col md:w-[50%] md:mr-[2%] items-center justify-center">
+        <div className="hidden md:flex flex-col md:w-[50%] md:mr-[2%] items-center justify-start">
           <motion.img
             src={product.colors[currentVariantIndex]?.image}
             alt={product.productName}
@@ -215,8 +214,8 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
         <section data-theme='light' className="w-full px-[3.64%] md:px-0 md:pr-[4.5%] md:pl-[6.67%]">
 
           {/* Description + Bullet Points */}
-          <div className="md:w-[50%] md:ml-auto md:pb-[9%]">
-            <p className="md:pb-[6.44%] mt-4 text-[12px] md:text-xl leading-[1.75] text-start tracking-[-0.32px] text-[#000000]">
+          <div className="md:w-[60%] md:ml-auto md:pb-[10%] gap-2 justify-start text-start">
+            <p className="mt-[6%] md:pb-[6.44%] text-[10px] md:text-[16px] leading-[1.75] text-start tracking-[-0.32px] text-[#000000]">
               {layoutDescription}
             </p>
             <div className="flex flex-col items-start justify-between mb-[11.05%] md:mb-0 gap-4 md:gap-2 md:flex-row md:items-center">
@@ -245,13 +244,15 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                 alt="Product top"
                 width={800}
                 height={600}
+                unoptimized
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
           )}
 
           {/* Left + Right Images */}
-          {(leftImage || rightImage) && (
+          {leftImage && (
             <div className="w-[50%] ml-auto flex gap-[3%] mb-[1%] justify-between">
               {leftImage && (
                 <div className="w-[56%] aspect-[400/500] overflow-hidden flex items-center justify-center">
@@ -260,6 +261,8 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                     alt="Product left"
                     width={400}
                     height={500}
+                    unoptimized
+                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -286,6 +289,8 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                 alt="Product bottom"
                 width={800}
                 height={600}
+                unoptimized
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -295,10 +300,9 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
       {/* You May Also Like */}
       <section data-theme="light" className="w-full md:pb-[4.51%] mt-[10%]">
-        <h2 className="text-center font-baskerville font-normal text-2xl md:text-3xl mb-8 border-t border-gray-100 pt-12">
+        <h2 className="text-center font-[baskerville, sans] font-normal md:font-medium tracking-tight text-2xl md:text-3xl mb-8 border-t border-gray-100 pt-12">
           You May Also Like
         </h2>
-
         <div className="w-full md:w-[94.44%] mx-auto overflow-hidden">
           <div className={`flex md:gap-[5.81%] ${scrollPercentage[scrollLevel]}`}>
 
@@ -321,32 +325,38 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           </div>
         </div>
 
+
         {/* Scroll Controls */}
-        <div className="w-[80%] mx-auto justify-center items-end pt-[60px] md:pt-4 relative gap-2 flex-wrap flex-col md:flex-nowrap flex">
-          <div className="w-full border-b-[3px] border-[#000000]/20 relative shrink-0">
-            <div className={`absolute -translate-y-1/4 w-full top-0 left-0 flex ${scrollBarPosition[scrollLevel]}`}>
-              <div className="border-t-[5px] border-[#7C3C3C] w-[34%]" />
+        <div className="w-[90%] md:w-[90%] pb-[8%] mx-auto pt-[20px] md:pt-4 relative flex flex-col md:flex-row md:items-center md:justify-end gap-3">
+
+          {/* Scrollbar (RIGHT SIDE) */}
+          <div className="w-full md:w-[220px] border-b-[3px] border-[#000000]/20 relative shrink-0">
+            <div className={`absolute -translate-y-1/4 top-0 left-0 w-full flex ${scrollBarPosition[scrollLevel]}`}>
+              <div className="border-t-[5px] border-[#7C3C3C] w-[50%] md:w-[34%]" />
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          {/* Buttons */}
+          <div className="flex items-center justify-center mt-2 md:justify-end gap-2">
             <button
-              onClick={() => { if (scrollLevel != 1) setScrollLevel(scrollLevel - 1); }}
-              className="w-10 h-10 rounded-[10px] bg-[#F9F9F9] hover:cursor-pointer hover:bg-[#7C3C3C] stroke-black active:stroke-white active:bg-[#7C3C3C] flex justify-center items-center"
+              onClick={() => { if (scrollLevel != 0) setScrollLevel(scrollLevel - 1); }}
+              className="w-10 h-10 rounded-[10px] bg-gray-300 hover:bg-[#7C3C3C] stroke-black active:stroke-white active:bg-[#7C3C3C] flex justify-center items-center"
             >
-              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none">
                 <path d="M14.0502 7.07071L9.0857 12.106L14.121 17.0705" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
+
             <button
-              onClick={() => { if (scrollLevel !=3) setScrollLevel(scrollLevel + 1); }}
-              className="w-10 h-10 bg-[#F9F9F9] hover:cursor-pointer hover:bg-[#7C3C3C] active:bg-[#7C3C3C] stroke-black active:stroke-white rounded-[10px] flex justify-center items-center"
+              onClick={() => { if (scrollLevel != 3) setScrollLevel(scrollLevel + 1); }}
+              className="w-10 h-10 bg-gray-300 hover:bg-[#7C3C3C] active:bg-[#7C3C3C] stroke-black active:stroke-white rounded-[10px] flex justify-center items-center"
             >
-              <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="7" height="11" viewBox="0 0 7 11" fill="none">
                 <path d="M0.581227 10.4997L5.54053 5.45931L0.500164 0.500004" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
           </div>
+
         </div>
       </section>
     </div>

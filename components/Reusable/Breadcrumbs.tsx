@@ -39,7 +39,7 @@ export default function Breadcrumbs({ items, className = "" }: BreadcrumbsProps)
               router.push("/");
             }
           }}
-          className="hidden md:block absolute left-15 p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
+          className="hidden md:block absolute left-2 p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition"
         >
           <Image src={leftOnBack} alt="back" width={20} height={20} />
         </button>

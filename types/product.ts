@@ -1,3 +1,4 @@
+import { isExternal } from 'util/types';
 export interface ColorOption {
   color: string;
   image: string;
