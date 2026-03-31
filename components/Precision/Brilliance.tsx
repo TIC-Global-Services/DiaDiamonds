@@ -24,7 +24,7 @@ const Brilliance: React.FC = () => {
         THE ART OF CHOOSING BRILLIANCE
       </motion.h2>
 
-      {/* ── MOBILE LAYOUT (hidden on md+) ── */}
+      {/* MOBILE LAYOUT  */}
       <div className="flex flex-col justify-between md:hidden">
 
         {/* Top LEFT card */}
@@ -93,7 +93,7 @@ const Brilliance: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* ── TABLET / DESKTOP LAYOUT (hidden on mobile) ── */}
+      {/* TABLET / DESKTOP LAYOUT */}
       <div className="hidden md:block relative w-full max-w-[1200px] mx-auto">
 
         {/* BG IMAGE */}
@@ -130,7 +130,7 @@ const Brilliance: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            className="absolute top-[15%] left-0 lg:top-[20.1%] lg:left-[0%] w-[45%] lg:w-[35%]"
+            className="absolute top-[15%] left-0 lg:top-[15.1%] lg:left-[0%] w-[45%] lg:w-[35%]"
           >
             <GlassCard className="w-full p-5 lg:p-6 border-0 rounded-[16px] lg:rounded-[20px] bg-transparent
               backdrop-blur-md

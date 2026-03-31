@@ -1,6 +1,5 @@
 'use client';
 import { useRef, useEffect, useState } from "react";
-
 import PrimaryBtn from "../Reusable/PrimaryBtn";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -9,35 +8,46 @@ import DiamondSpotLightColoredImage from '@/public/assets/img/DiamondSpotlight/D
 
 export default function DiamondSpotlight() {
   const router = useRouter();
-
   const [maskSize, setMaskSize] = useState("26% 37%");
+  const [offsetX, setOffsetX] = useState(150);
+  const [offsetY, setOffsetY] = useState(150);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const updateMaskSize = () => {
       if (window.innerWidth < 640) {
-        setMaskSize("207px 199px");
+        setMaskSize("114px 104px");
+        setOffsetX(57);
+        setOffsetY(52);
+        setIsMobile(true);
+      } else if (window.innerWidth < 1024) {
+        setMaskSize("220px 220px");
+        setOffsetX(110);
+        setOffsetY(110);
+        setIsMobile(false);
       } else {
-        setMaskSize("26% 37%");
+        setMaskSize("300px 300px");
+        setOffsetX(150);
+        setOffsetY(150);
+        setIsMobile(false);
       }
     };
 
     updateMaskSize();
     window.addEventListener("resize", updateMaskSize);
-
     return () => window.removeEventListener("resize", updateMaskSize);
   }, []);
 
-
   const elementRef = useRef<HTMLDivElement>(null);
-  const coloredImageRef = useRef<HTMLImageElement>(null);
+  const coloredImageRef = useRef<HTMLDivElement>(null);
   const borderRef = useRef<HTMLDivElement>(null);
 
   const captureMousePosition = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!elementRef.current || !coloredImageRef.current || !borderRef.current) return;
 
     const element = elementRef.current.getBoundingClientRect();
-    const x = (e.clientX - element.left) - 150;
-    const y = (e.clientY - element.top) - 150;
+    const x = (e.clientX - element.left) - offsetX;
+    const y = (e.clientY - element.top) - offsetY;
 
     coloredImageRef.current.style.setProperty('--position', `${x}px ${y}px`);
     borderRef.current.style.setProperty('--translate', '0% 0%');
@@ -47,20 +57,24 @@ export default function DiamondSpotlight() {
 
   return (
     <section
-      className="w-full relative h-[100svh] md:h-auto overflow-hidden"
+      className="w-full relative min-h-screen overflow-hidden"
       ref={elementRef}
       onMouseMove={captureMousePosition}
       data-theme="dark"
     >
-
+      {/* Base Image */}
       <Image
         src={DiamondSpotLightImage}
         alt="diamond spotlight"
-        className="w-full h-full object-cover md:object-fill"
+        fill
+        priority
+        className="object-cover"
       />
 
-      <Image
+      {/* Colored Reveal Image */}
+      <div
         ref={coloredImageRef}
+        className="absolute inset-0"
         style={{
           WebkitMaskImage: 'linear-gradient(to right, black, black)',
           maskImage: 'linear-gradient(to right, black, black)',
@@ -68,25 +82,35 @@ export default function DiamondSpotlight() {
           maskSize: maskSize,
           maskPosition: 'var(--position, center)',
         }}
-        src={DiamondSpotLightColoredImage}
-        alt="diamond spotlight colored"
-        className="absolute inset-0 w-full h-full object-cover md:object-fill"
-      />
+      >
+        <Image
+          src={DiamondSpotLightColoredImage}
+          alt="diamond spotlight colored"
+          fill
+          className="object-cover w-full min-h-screen"
+        />
+      </div>
 
+      {/* Spotlight Border Box */}
       <div
         ref={borderRef}
         style={{
           top: 'var(--top, 50%)',
           left: 'var(--left, 50%)',
-          translate: 'var(--translate, -50% -50%)'
+          translate: 'var(--translate, -50% -50%)',
+          width: isMobile ? '114px' : maskSize.split(' ')[0],
+          height: isMobile ? '104px' : maskSize.split(' ')[1],
         }}
-        className={`absolute ${maskSize === "207px 199px" ? "w-[207px] h-[199px]" : "w-[26%] h-[37%]"} border border-[#FFFFFF] rounded-sm`}
-      ></div>
+        className="absolute border border-white rounded-sm z-10"
+      />
 
-      <div className="absolute inset-0 z-10 w-full h-full flex justify-center items-center mt-[50%] md:mt-[20%]">
-        <div className="flex flex-col justify-between items-center w-[50%] md:w-[45%] gap-6 md:gap-4 mt-4">
-          <h2 className="font-medium text-xl md:text-[40px] leading-[120%] md:leading-[100%] uppercase text-[#EFFFFF] text-center">
-            Designed for you. Crafted for a lifetime.
+      {/* Content */}
+      <div className="absolute inset-0 z-20 w-full h-full flex justify-center items-end pb-[10%] sm:pb-[8%] md:items-end md:pb-[6%]">
+        <div className="flex flex-col justify-between items-center w-[90%] sm:w-[65%] md:w-[45%] gap-4">
+          <h2 className="font-medium text-3xl sm:text-xl md:text-[40px] leading-[100%] tracking-tight md:leading-[100%] uppercase text-[#EFFFFF] text-center">
+            Designed for you.<br />
+            <span className="hidden md:inline">Crafted for a lifetime.</span>
+            <span className="md:hidden">Crafted for a<br />lifetime.</span>
           </h2>
           <div onClick={() => router.push("/collections/rings")}>
             <PrimaryBtn text="DISCOVER MORE" textColor="text-white" />

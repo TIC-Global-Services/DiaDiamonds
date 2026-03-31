@@ -11,40 +11,41 @@ const Hero = () => {
 
   return (
     <section
-      className="hero-section relative w-full h-[100svh] md:h-[150svh] overflow-hidden"
+      className="hero-section relative w-full h-[100dvh] overflow-hidden"
       data-theme="dark"
     >
       {/* Background Image with Parallax */}
-      <div className="hero-bg absolute inset-0">
-        <Parallax speed={-20} className="h-full w-full">
-          <div className="relative w-full h-[100svh] md:h-[120svh]">
-            <Image
-              src={heroImage}
-              alt="heroImage"
-              fill
-              priority
-              quality={100}
-              sizes="100vw"
-              className="object-cover object-[20%_70%] md:object-center"
-            />
-          </div>
+      <div className="hero-bg absolute inset-0 flex justify-center w-full h-full">
+        <Parallax
+          speed={-20}
+          style={{ height: "130%", width: "100%", top: "-20%" }}
+        >
+          <Image
+            src={heroImage}
+            alt="heroImage"
+            fill
+            priority
+            quality={100}
+            sizes="100vw"
+            className="object-cover object-[10%_70%] sm:object-center"
+          />
         </Parallax>
       </div>
 
-      <div className="hero-blur-overlay absolute  inset-0 pointer-events-none" />
+      {/* Blur overlay */}
+      <div className="hero-blur-overlay absolute inset-0 pointer-events-none" />
 
       {/* Content Layer */}
-      <div className="absolute inset-0 flex flex-col gap-4 md:gap-[12px] bottom-[15%] justify-center items-center md:items-start md:justify-end px-6 py-4 sm:px-[34px] md:px-[27px] lg:px-[64px] 2xl:px-20 md:py-15">
-
-        <h1 className="text-center md:text-left font-medium text-3xl md:text-[44px] leading-[140%] md:leading-[46px] uppercase md:pb-[0] text-white w-[100%] md:w-full">
+      <div className="absolute inset-0 flex flex-col gap-2 sm:gap-2 md:gap-2 justify-end items-center sm:items-start px-6 pb-[20dvh] sm:px-8 sm:pb-[15dvh] md:px-12 lg:px-16 xl:px-20 2xl:px-24">
+        <h2 className="text-center sm:text-left text-white px-4 sm:px-0 sm:w-full lg:w-[60%]">
           Crafted to last forever
-        </h1>
+        </h2>
 
-        <p className="w-[90%] text-center text-sm font-normal leading-[22px] md:w-[40%] md:text-left md:text-[22px] md:leading-[24px] text-white md:pb-[4px]">
+        <p className="text-center sm:text-left text-white/90 w-full sm:w-[70%] md:w-[60%] lg:w-[50%] max-w-xl">
           Iconic Brand Feel Designed to Shine Today And Endure Forever
         </p>
 
-        <div onClick={() => router.push("/collections/rings")} className="pb-2 md:mt-2">
+        <div onClick={() => router.push("/collections/rings")} className="mt-2">
           <PrimaryBtn text="DISCOVER MORE" textColor="text-white" />
         </div>
       </div>

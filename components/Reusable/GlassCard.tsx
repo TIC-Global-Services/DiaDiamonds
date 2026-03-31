@@ -25,7 +25,6 @@ const GlassCard: React.FC<GlassCardProps> = ({
         rounded-2xl
         shadow-[inset_-1px_-1px_4px_0_rgba(0,0,0,0.25)]
         p-4 sm:p-5 md:p-6
-        
         ${className}
       `}
     >

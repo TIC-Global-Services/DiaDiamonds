@@ -26,7 +26,7 @@ export default function Footer() {
 
 
   return (
-    <footer className="w-full min-h-[50svh] bg-[#0b0b0b] px-2 md:px-6 pt-4 pb-[27px] data-theme='dark' ">
+    <footer className="w-full min-h-[50dvh] bg-[#0b0b0b] px-2 md:px-6 pt-4 pb-[27px] data-theme='dark' ">
 
       {/* ================= NAV ================= */}
       <ul className="flex flex-wrap items-center md:justify-start justify-start gap-2 md:gap-8 w-full">

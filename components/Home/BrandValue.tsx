@@ -9,8 +9,8 @@ export default function BrandValue() {
   const router = useRouter();
 
   return (
-    <section data-theme="light" className="relative w-full h-[100svh] md:h-auto ">
-      <Image src={brandValueImg} alt="Rings Image" className=" w-full h-[100svh] object-cover object-[44%] md:object-auto md:h-auto " />
+    <section data-theme="light" className="relative w-full h-100dvh md:h-auto ">
+      <Image src={brandValueImg} alt="Rings Image" className=" w-full h-100dvh object-cover object-[44%] md:object-auto md:h-auto " />
 
       <div className="w-[55%] md:w-[48%] h-auto absolute top-120 left-45 md:top-125 md:left-160 mb-[45%] md:mb-[16.25%] mr-[1.18%] md:mr-0 flex flex-col justify-center md:justify-normal items-start">
         <h2 className="text-xl md:text-[30px] lg:text-[40px]">Thoughtfully curated for you </h2>

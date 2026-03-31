@@ -3,12 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-clash-display: 'Helvetica', sans-serif; /* Fallback included */
-  --font-baskerVille: 'Baskerville', serif;
-  --font-grotesk: 'Grotesk', sans-serif;
+  --font-clash-display: "Helvetica", sans-serif; /* Fallback included */
+  --font-baskerVille: "Baskerville", serif;
+  --font-grotesk: "Grotesk", sans-serif;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -18,12 +19,12 @@ body {
   font-family: var(--font-clash-display);
 }
 
-.font-baskerville{
+.font-baskerville {
   font-family: var(--font-baskerVille), "sans-serif";
 }
 
-.font-grotesk{
-  font-family: var(--font-grotesk), 'sans-serif';
+.font-grotesk {
+  font-family: var(--font-grotesk), "sans-serif";
 }
 
 /* Base styles */
@@ -31,17 +32,16 @@ body {
   h2 {
     font-family: var(--font-clash-display);
     font-weight: 500;
-    font-size: 30px;       /* Small screens default */
+    font-size: 30px; /* Small screens default */
     line-height: 1.2;
-    letter-spacing: 0.05em;     
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-   
   }
 
   p {
     font-family: var(--font-clash-display);
     font-weight: 400;
-    font-size: 14px;       /* Small screens default */
+    font-size: 14px; /* Small screens default */
     line-height: 1.5;
     letter-spacing: 0;
     margin: 0 0 1rem 0;
@@ -73,9 +73,19 @@ body {
       letter-spacing: 0.05em;
     }
   }
-  
 }
 
+.btn-text {
+  font-family: var(--font-clash-display), "sans";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 16px;
+  line-height: 17.6px;
+  letter-spacing: 1.6px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
 
 .step-carousel {
   display: flex;
@@ -83,10 +93,18 @@ body {
 }
 
 @keyframes step-slide {
-  0% { transform: translateX(0); }
-  33% { transform: translateX(-100%); }
-  66% { transform: translateX(-200%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-100%);
+  }
+  66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* PrimaryBtn.css */
@@ -94,7 +112,9 @@ body {
 /* Button animation container */
 .BtnAnimation {
   cursor: pointer;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -105,7 +125,7 @@ body {
 
 /* Ripple effect */
 .BtnAnimation::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -50%;
   left: 50%;
@@ -138,9 +158,9 @@ body {
 
   background: linear-gradient(
     to right,
-    rgba(255,255,255,0.6),
-    rgba(255,255,255,0.1),
-    rgba(255,255,255,0.6)
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.6)
   );
 
   -webkit-mask:
@@ -162,12 +182,6 @@ body {
   mix-blend-mode: difference;
 }
 
-
-
-
-
-
-
 .btn-glass-border::before {
   content: "";
   position: absolute;
@@ -177,19 +191,17 @@ body {
 
   background: linear-gradient(
     to right,
-    rgba(255,255,255,0.6),
+    rgba(255, 255, 255, 0.6),
     rgba(255, 255, 255, 0.1),
-    rgba(255,255,255,0.6)
+    rgba(255, 255, 255, 0.6)
   );
 
   /* CUT OUT center to make it a border */
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0),
-
     /* remove top-right */
     radial-gradient(circle at 100% 0%, transparent 0px, black 0px),
-
     /* remove bottom-left */
     radial-gradient(circle at 0% 100%, transparent 5px, black 0px);
 
@@ -208,7 +220,6 @@ body {
   display: none;
 }
 
-
 /* Smooth transitions */
 .hero-bg,
 .hero-blur-overlay {
@@ -226,6 +237,4 @@ body {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   overflow: hidden;
-
 }
-

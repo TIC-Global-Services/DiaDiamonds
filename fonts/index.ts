@@ -5,12 +5,12 @@ export const ClashDisplay = localFont({
     {
       path: "./ClashDisplay/ClashDisplay-Extralight.otf",
       weight: "200",
-      style: "normal",
+      style: "extralight",
     },
     {
       path: "./ClashDisplay/ClashDisplay-Light.otf",
       weight: "300",
-      style: "normal",
+      style: "light",
     },
     {
       path: "./ClashDisplay/ClashDisplay-Regular.otf",
@@ -25,12 +25,12 @@ export const ClashDisplay = localFont({
     {
       path: "./ClashDisplay/ClashDisplay-Semibold.otf",
       weight: "600",
-      style: "normal",
+      style: "semibold",
     },
     {
       path: "./ClashDisplay/ClashDisplay-Bold.otf",
       weight: "700",
-      style: "normal",
+      style: "bold",
     },
   ],
   variable: "--font-clash-display",

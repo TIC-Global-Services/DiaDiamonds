@@ -74,17 +74,17 @@ export default function OurCollection() {
 
   return (
 
-    <section className="w-full py-21 px-5 overflow-hidden z-30 relative" data-theme='light'>
+    <section className="w-full py-20 px-5 overflow-hidden z-30 relative" data-theme='light'>
 
       {/* Inner flex container */}
-      <div className="w-full flex flex-col justify-center items-center pb-9 md:pb-20">
+      <div className="w-full flex flex-col justify-center items-center gap-4 pb-9 md:pb-20">
         {/* Section heading */}
-        <h2 className="text-xl md:text-[40px] font-medium leading-[110%] md:leading-[91%] tracking-[-1%] md:tracking-[-3%] uppercase text-[#000000]">
+        <h2 className="text-[24px] md:text-[40px] font-medium leading-[110%] md:leading-[91%] tracking-[-1%] md:tracking-[-3%] uppercase text-[#000000]">
           Our Collections
         </h2>
 
         {/* Section paragraph */}
-        <p className="pt-4 md:pt-[30px] text-sm md:text-[14px] leading-[140%] md:leading-[142%] text-[#000000] text-center">
+        <p className="text-[13px] font-light md:font-normal md:text-[14px] leading-[142%] md:leading-[142%] text-[#000000] text-center">
           Timeless rings for every moment, crafted to shine, made to last
         </p>
       </div>
@@ -100,7 +100,7 @@ export default function OurCollection() {
       </div>
 
       {/* Large sibling div */}
-      <div className="w-[98%] mx-auto md:justify-center items-center pt-[60px] md:pt-4 relative gap-2 flex-wrap md:flex-nowrap flex">
+      <div className="w-[98%] mx-auto  justify-around md:justify-center items-center pt-[40px] md:pt-4 relative gap-4 flex-wrap md:flex-nowrap flex">
         {/* First inner div with top border */}
         <div className="w-full border-b-3 border-[#000000]/20 relative shrink">
           {/* Absolute border div inside first inner div */}
@@ -110,7 +110,7 @@ export default function OurCollection() {
         </div>
 
         {/* Second inner div with buttons */}
-        <div className=" hidden md:flex items-center gap-2 ">
+        <div className="flex md:flex items-center gap-2 ">
           {/* First button */}
           <button onClick={() => {
             if (scrollState != 1) {

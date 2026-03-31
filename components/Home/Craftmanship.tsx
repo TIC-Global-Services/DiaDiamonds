@@ -36,10 +36,10 @@ export default function Craftsmanship() {
       setActiveIndex((prev) => (prev + 1) % cards.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, [cards.length]);
+  }, []);
 
   return (
-    <section data-theme="light" className="relative h-[150svh] md:h-[150svh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
+    <section data-theme="light" className="relative h-[100%] md:h-[150dvh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
       {/* Left Side Image */}
       <motion.div
         initial={{ opacity: 0, x: -10 }}
@@ -48,7 +48,7 @@ export default function Craftsmanship() {
         viewport={{ once: false }}
         className="w-full md:w-1/2 md:h-full relative overflow-hidden">
         <Parallax speed={-10}>
-          <div className="relative w-full h-[80svh] md:h-[150vh]">
+          <div className="relative w-full h-[100vh] md:h-[150vh]">
             <Image
               src={imageSrc}
               alt="Craftsmanship"
@@ -58,11 +58,11 @@ export default function Craftsmanship() {
             />
           </div>
         </Parallax>
-        <div onClick={() => router.push("/collections/bracelets")} className="absolute inset-0 z-20 flex justify-center items-end pb-30 md:pb-10 md:mb-28">
+        <div onClick={() => router.push("/collections/bracelets")} className="absolute inset-0 z-20 flex justify-center items-end pb-15 md:pb-10 md:mb-28">
           {/* <button className="glass-btn BtnAnimation text-[10px] md:text-[12px] tracking-[0.166rem] border-[5.3px] rounded-full px-[16px] py-[3px] md:px-[18px] md:py-[7.6px]  uppercase ">
             VIEW BRACELET COLLECTION
           </button> */}
-          <PrimaryBtn text="VIEW BRACELET COLLECTION" textColor="text-black" animated={false} />
+          <PrimaryBtn text="VIEW BRACELET COLLECTION" hoverColor="rgba(32, 12, 12, 1)" hoverTextColor="#ffffff" textColor="text-black" animated={false} className="text-[10px]"/>
         </div>
       </motion.div>
 
@@ -112,7 +112,7 @@ export default function Craftsmanship() {
               src={bottomImageSrc}
               alt="Craftsmanship"
               fill
-              className="object-cover -translate-y-1/6 2xl:translate-y-0 scale-110"
+              className="w-full h-[100%] object-cover -translate-y-1/6 2xl:translate-y-0 scale-110"
               quality={100}
             />
           </Parallax>

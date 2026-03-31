@@ -11,7 +11,7 @@ const Showcase: React.FC = () => {
   return (
     <section
       data-theme="dark"
-      className="w-full h-[100svh] relative overflow-hidden"
+      className="w-full h-[100dvh] relative overflow-hidden"
     >
       {/* Background Image */}
       <Parallax speed={-20}>
@@ -21,7 +21,7 @@ const Showcase: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.2, ease: "easeIn" }}
           src={BGImage}
           alt="Background Image"
-          className="w-full h-[100vh] md:h-[100svh] object-cover"
+          className="w-full h-[100vh] md:h-[100dvh] object-cover"
         />
       </Parallax>
 

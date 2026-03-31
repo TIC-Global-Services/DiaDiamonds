@@ -148,9 +148,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className={`fixed top-0 right-0 left-0 z-[9998] transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
-      <div>
-
+    <>
+      <div className={`fixed top-0 right-0 left-0 z-[9998] transition-transform duration-500 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]`}>
         {/* NAV MENU */}
         <AnimatePresence>
           {navMenuClick && (
@@ -222,7 +221,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Menu Items */}
-                <ul className="w-full pt-10 md:pt-[63px] px-6 md:pl-10 md:pr-10">
+                <ul className="w-full pt-10 md:pt-[50px] px-6 md:pl-10 md:pr-10">
                   {/* Collection with dropdown */}
                   <motion.li
                     custom={0}
@@ -231,7 +230,7 @@ export default function Navbar() {
                     animate="open"
                     className="w-full"
                   >
-                    <div className={`w-full flex justify-between items-center text-2xl md:text-[32px] leading-[110%] text-[#000000] uppercase pb-5`}>
+                    <div className={`w-full flex justify-between items-center text-2xl md:text-[32px] leading-[100%] text-[#000000] uppercase pb-2`}>
                       <motion.p
                         className={`${collectionClick ? 'underline' : ''} hover:cursor-pointer m-0 hover:underline text-2xl md:text-[32px] transition-all duration-300`}
                         onClick={() => setCollectionClick(!collectionClick)}
@@ -263,15 +262,15 @@ export default function Navbar() {
                           <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.1, duration: 0.2 }}
+                            transition={{ delay: 0.3, duration: 0.2 }}
                             className="pb-6 md:pb-10"
                           >
                             {categories.map((category, index) => (
                               <motion.li
                                 key={category}
-                                initial={{ opacity: 0, x: -20 }}
+                                initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 0.1 + index * 0.05, duration: 0.3 }}
+                                transition={{ delay: 0.2 + index * 0.05, duration: 0.3 }}
                                 onClick={() => setNavMenuClick(false)}
                               >
                                 <Link
@@ -298,7 +297,7 @@ export default function Navbar() {
                       variants={menuItemVariants}
                       initial="closed"
                       animate="open"
-                      className={`text-2xl md:text-[32px] leading-[110%] text-[#000000] uppercase hover:cursor-pointer hover:underline pb-6 md:pb-10 ${collectionClick ? 'pt-0' : 'pt-6 md:pt-10'}`}
+                      className={`text-2xl md:text-[32px] leading-[100%] text-[#000000] uppercase hover:cursor-pointer hover:underline pb-6 md:pb-6 ${collectionClick ? 'pt-0' : 'pt-6 md:pt-10'}`}
                       whileHover={{ x: 10 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={() => setNavMenuClick(false)}
@@ -315,7 +314,7 @@ export default function Navbar() {
         </AnimatePresence>
 
         {/* NAVBAR */}
-        <nav className="w-full h-[60px] md:h-[94px] bg-transparent flex justify-between items-center px-4 md:px-10 border-0 rounded-br-xl rounded-bl-xl transition-all duration-500">
+        <nav className="w-full h-[60px] md:h-[90px] bg-transparent flex justify-between items-center px-4 md:px-10 border-0 rounded-br-xl rounded-bl-xl transition-all duration-500">
 
           {/* Search Button */}
           <motion.button
@@ -408,6 +407,6 @@ export default function Navbar() {
         </nav>
       </div>
       <Search isSearch={isSearch} setIsSearch={setIsSearh} />
-    </header>
+    </>
   );
 }

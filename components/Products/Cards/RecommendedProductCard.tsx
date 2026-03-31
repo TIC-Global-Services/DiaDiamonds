@@ -19,7 +19,7 @@ const RecommendedProductCard: React.FC<RecommendedProductCardProps> = ({
       className="w-full md:w-[24.19%] shrink-0 group cursor-pointer"
     >
       {/* Image */}
-      <div className="md:w-full aspect-square overflow-hidden md:mb-[12.77%] bg-[#F7F6F4] flex items-center justify-center p-4">
+      <div className="md:w-full aspect-square overflow-hidden md:mb-[12.77%]  flex items-center justify-center p-4">
         <Image
           width={300}
           height={300}

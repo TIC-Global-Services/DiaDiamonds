@@ -50,6 +50,7 @@ const Creation: React.FC = () => {
       imageLeft: "/assets/img/Precision/Creation/bgImage3.jpg",
       overlayText: "Crystal Creation",
       contentText: [
+        { text: "rough crystal", bold: true },
         {
           text: "Over several weeks, the diamond grows steadily into a rough crystal. Every stage is monitored to ensure clarity, color balance, and structural perfection.",
         },
@@ -63,6 +64,7 @@ const Creation: React.FC = () => {
       imageLeft: "/assets/img/Precision/Creation/bgImage.jpg",
       overlayText: "Final Creation",
       contentText: [
+        { text: "Final brilliance", bold: true },
         {
           text: "Expert cutters shape and polish the rough crystal to unlock its brilliance. Advanced mapping technology ensures maximum light reflection, sparkle, and symmetry",
         },
@@ -87,20 +89,17 @@ const Creation: React.FC = () => {
 
   return (
     <section data-theme="light" className="relative w-full h-auto bg-white overflow-hidden">
-      
+
       {/* Background Shapes */}
-      <div className="absolute top-[60%] left-[69.17%] md:left-[61%] md:top-0 w-[62.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#f2f2f2] rounded-full z-0" />
-      <div className="absolute top-[60%] left-[81.93%] md:left-[77.14%] md:top-0 w-[62.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#7c3c3c]/13 rounded-full z-10" />
+      <div className="absolute top-[58%] left-[65.17%] md:left-[61%] md:top-0 w-[62.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#f2f2f2] rounded-full z-0" />
+      <div className="absolute top-[58%] left-[78.93%] md:left-[77.14%] md:top-0 w-[62.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#7c3c3c]/13 rounded-full z-10" />
 
       <div className="relative z-20 w-full h-full flex flex-col py-[25%] md:py-[5.83%]">
 
         {/* Title */}
-        <div className="text-center shrink-0 w-[96.71%] md:w-[40%] mx-auto pb-[5.49%]">
-          <h2>
-            designed for you.
-            cherished forever.
-          </h2>
-        </div>
+        <h2 className="text-center fond-medium tracking-tight text-[24px] md:text-[44px] shrink-0 w-full md:w-[40%] pb-[5.49%]">
+          designed for you. cherished forever.
+        </h2>
 
         {/* Content */}
         <div className="w-full flex justify-between flex-wrap md:flex-nowrap md:gap-[8.54%] items-center px-[5.21%]">
@@ -113,7 +112,7 @@ const Creation: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
-              className="relative w-full md:w-[41.67%] grow aspect-[600/450] rounded-[20px] overflow-hidden mb-[18.20%] bg-black md:mb-0"
+              className="relative w-full md:w-[41.67%] grow aspect-[600/450] rounded-[20px] overflow-hidden mt-[4%] mb-[18.20%] bg-black md:mb-0"
             >
               <Image
                 src={contentJSON[currentCard].imageLeft}
@@ -136,26 +135,30 @@ const Creation: React.FC = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
-              className="w-full md:w-[41.67%] border-l-[3px] border-l-[#5A5A5A] px-[8.77%] mt-[4%] md:px-0 md:pl-[2.22%]"
+              className="w-full md:w-[41.67%] border-l-[3px] border-l-[#5A5A5A] px-[8.77%] mt-[2%] md:px-0 md:pl-[2.22%] leading-none tracking-normal md:block"
             >
               {contentJSON[currentCard].contentText.map((data, id) => {
                 if (data.bold) {
                   return (
-                    <span key={id} className="font-semibold text-[#383838] text-xs md:text-[24px] leading-[140%]">
+                    <p key={id} className="font-semibold text-[#383838] text-[13px] md:text-[24px]">
                       {data.text}
-                    </span>
+                    </p>
                   );
                 } else if (data.newline) {
                   return (
-                    <p key={id} className="text-[#383838] text-xs md:text-[24px] leading-[140%] pt-[4%]">
+                    <p key={id} className="text-[#383838] font-normal text-[13px] md:text-[24px] md:pt-[4%]">
                       {data.text}
                     </p>
                   );
                 } else {
                   return (
-                    <span key={id} className="text-[#383838] text-xs md:text-[24px] leading-[140%]">
-                      {data.text}
-                    </span>
+                    <>
+                      <span key={id} className="hidden md:block text-[#383838] text-xs md:text-[24px]">
+                        {data.text}
+                      </span>
+                      {/* Line break only on desktop */}
+                      <br key={id + "-br"} className="hidden md:block" />
+                    </>
                   );
                 }
               })}
@@ -169,11 +172,10 @@ const Creation: React.FC = () => {
             <button
               key={index}
               onClick={() => setCurrentCard(index)}
-              className={`${
-                currentCard === index
+              className={`${currentCard === index
                   ? "w-[37.93%] aspect-[22/6] bg-[#431A1A]"
                   : "w-[20.69%] aspect-[12/6] bg-[#000000]/10"
-              } rounded-[10px] cursor-pointer`}
+                } rounded-[10px] cursor-pointer`}
             />
           ))}
         </div>

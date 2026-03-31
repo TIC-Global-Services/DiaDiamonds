@@ -20,7 +20,7 @@ const Certified: React.FC = () => {
     >
       {/* First Div */}
       <div className="w-full flex justify-center items-center">
-        <h2 className="text-center md:text-left">
+        <h2 className="font-medium text-[24px] md:text-[40px] text-center md:text-left">
           “IGI & SGL Certified Diamonds”
         </h2>
       </div>
@@ -49,21 +49,15 @@ const Certified: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2, ease: "easeIn" }}
             className="w-[80%] md:w-[40%] aspect-[281/305] md:aspect-574/355 relative z-20 shrink-0 ml-[-43%] mt-[34%] md:ml-[-7.85%] md:mt-[5%]"
           >
-            <GlassCard className="w-[50%] h-[50%] md:w-full md:h-full flex flex-col px-5 py-8 md:px-[6.5%] md:py-[4.097%]">
-
-              <Image
-                src={logo1}
-                alt="IGI Logo"
-                className="w-[90px] h-[36px] mx-auto object-contain md:w-[116px] md:h-[48px] md:block"
-                width={116}
-                height={48}
+            <GlassCard className="w-full md:w-full h-full md:h-full flex flex-col gap-1 md:gap-4 md:px-[3.5%]">
+              <Image src={logo1} alt="IGI Logo" width={116} height={48}
+                className="w-[53px] h-[24px] mx-auto object-contain md:w-[116px] md:h-[46px]"
               />
-
-              <h3 className="text-[15px] md:text-[20px] mt-3 md:mt-[20px] text-start md:text-left">
+              <h3 className="text-[16px] font-normal text-gray-800 md:text-[20px] text-start md:text-left">
                 IGI Certified Diamonds
               </h3>
 
-              <p className="text-[13px] md:text-[14px] text-[#505050] mt-3 md:mt-[16px] leading-[150%]">
+              <p className="text-[12px] font-light text-gray-600 md:text-[14px] leading-[100%] text-start md:text-left">
                 Every Dia Diamond is certified by the International Gemological
                 Institute (IGI), one of the world’s most trusted diamond grading
                 authorities. This certification ensures your diamond’s
@@ -71,10 +65,9 @@ const Certified: React.FC = () => {
                 clarity, and carat weight.
               </p>
 
-              <p className="font-medium text-[13px] md:text-[16px] leading-[140%] text-[#5e5e5e] mt-4 md:mt-[20px]">
+              <p className="font-light text-gray-600 text-[12px] md:text-[16px] leading-[80%] text-start md:text-left">
                 100% IGI Certified Authenticity
               </p>
-
             </GlassCard>
           </motion.div>
         </div>
@@ -102,21 +95,21 @@ const Certified: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2, ease: "easeIn" }}
             className="w-[80%] md:w-[40%] aspect-[281/305] md:aspect-574/355 relative z-20 shrink-0 ml-[-43%] mt-[36.65%] md:ml-0 md:mt-0 order-2 md:order-1"
           >
-            <GlassCard className="w-full h-[60%] md:w-full md:h-full flex flex-col px-4 py-5 md:px-[6.5%] md:py-[2.097%]">
+            <GlassCard className="w-full md:w-full h-full md:h-full flex flex-col gap-2 md:gap-3 md:px-[3.5%] md:py-[2.097%]">
 
               <Image
                 src={logo2}
                 alt="SGL Logo"
-                className="w-[90px] h-[36px] mx-auto object-contain md:w-[116px] md:h-[48px] md:block"
+                className="w-[53px] h-[22px] mx-auto object-contain md:w-[116px] md:h-[48px]"
                 width={116}
                 height={48}
               />
 
-              <h3 className="text-sm md:text-[20px] mt-2 text-start md:text-left">
+              <h3 className="text-[16px] font-normal text-gray-800 md:text-[20px] text-left md:text-left">
                 SGL Certified Diamonds
               </h3>
 
-              <p className="text-xs md:text-[14px] text-[#505050] mt-3 md:mt-[16px] leading-[150%]">
+              <p className="text-[12px] font-light text-gray-600 md:text-[14px] leading-[100%] text-left md:text-left">
                 Every Dia Diamond is certified by Solitaire Gemological
                 Laboratories (SGL), one of India’s most trusted diamond
                 certification authorities. This certification verifies the
@@ -124,7 +117,7 @@ const Certified: React.FC = () => {
                 clarity, and carat weight.
               </p>
 
-              <p className="text-xs md:text-[14px] leading-[150%] text-[#505050] mt-1">
+              <p className="hidden md:block font-light text-gray-600 text-[12px] md:text-[14px] leading-[100%] text-start md:text-left">
                 Certified by SGL, Crafted for Trust. Our diamonds are certified
                 by SGL, assuring exceptional quality, authenticity, and timeless
                 brilliance.

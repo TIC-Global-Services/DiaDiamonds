@@ -49,14 +49,14 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
     (p: any) => p.recommended && p.category === product.category && p.id !== product.id
   );
 
-  if (recommendedProducts.length < 7) {
+  if (recommendedProducts.length < 6) {
     const extra = productsData.filter(
       (p: any) => p.recommended && p.category !== product.category && p.id !== product.id
     );
     recommendedProducts = [...recommendedProducts, ...extra];
   }
 
-  recommendedProducts = recommendedProducts.slice(0, 7);
+  recommendedProducts = recommendedProducts.slice(0, 6);
 
   // Category-level layout images from constant
   const categoryLayout = LAYOUT_IMAGES[product.category.toLowerCase()];
@@ -117,15 +117,18 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
         {/* Left Info & Options */}
         <div className="w-full md:w-[35%] px-[4.37%] md:px-0 md:ml-[5%] md:pb-[18.96%]">
-          <h3 className="md:pt-[7.47%] text-xl md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
+          <h3 className="md:pt-[7.47%]">
             {product.productName}
           </h3>
-          <p className="md:pt-[3%] md:pb-[10%] font-baskerville text-[10px] md:text-xl leading-[1.2] tracking-tight text-[#000000]">
+          <p className="pt-2 text-[#000000]">
+            {product.colors[currentVariantIndex]?.color} with diamonds
+          </p>
+          <p className="md:pt-4 md:pb-8 font-baskerville text-small md:text-body text-[#000000]">
             {product.diamondType || ""}
           </p>
 
-          {/* Mobile Image */}
-          <div className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mb-[20px]">
+          {/* Mobile Image - moved below size and variants */}
+          <div className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mt-6 mb-4">
             <Image
               width={400}
               height={400}
@@ -134,9 +137,37 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               className="w-full h-full object-contain"
             />
           </div>
+          
+          <hr className='w-full border-t border-gray-300'/>
+
+          {/* Size Options */}
+          {hasSizes && (<div className="flex w-full py-[6.37%] md:py-[6%] gap-[4%] items-center px-4 md:px-0 mt-2 md:mt-0">
+            <h3 className="text-sm leading-[20px] text-[#000000]/50 mr-2 md:mr-4">Size:</h3>
+            {product.sizes?.length ? (
+              product.sizes.map((size: string) => (
+                <button
+                  key={size}
+                  onClick={() => setCurrentSize(size)}
+                  className={`text-xs md:text-sm ${currentSize === size
+                    ? 'text-black font-bold border border-gray-300 rounded-full px-2 py-[4px]'
+                    : 'text-[#000000]/70'
+                    } hover:text-black transition-colors`}
+                >
+                  {size}
+                </button>
+              ))
+            ) : (
+              <div className="flex gap-4 items-center cursor-pointer">
+                <span className="text-xs md:text-sm font-bold text-black border border-black rounded-full px-2 py-[2px]">XS</span>
+                <span className="text-xs md:text-sm text-[#000000]/70">S</span>
+                <span className="text-xs md:text-sm text-[#000000]/70">M</span>
+              </div>
+            )}
+          </div>
+          )}
 
           {/* Color Variants */}
-          <div className="flex gap-[6%] md:pb-[6%] mt-4 md:mt-0 flex-wrap overflow-x-auto px-4 md:px-0 border-b border-[#000000]/10">
+          <div className="flex gap-[12%] md:pb-[6%] mt-4 md:mt-0 flex-wrap overflow-x-auto px-4 md:px-0">
             {product.colors?.map((colorObj: { color: string; image: string }, idx: number) => (
               <div
                 key={idx}
@@ -154,7 +185,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                 </div>
                 <div className="w-full border-t border-transparent relative">
                   <div className={`absolute top-[-1px] left-0 w-full h-[1px] ${currentVariantIndex === idx ? 'bg-black' : 'bg-transparent'}`} />
-                  <h3 className="text-xs md:text-sm tracking-wide text-center text-[#000000] pt-2 capitalize">
+                  <h3 className="text-[10px] md:text-sm tracking-wide text-center text-[#000000] pt-2 capitalize">
                     {colorObj.color}
                   </h3>
                 </div>
@@ -162,33 +193,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
             ))}
           </div>
 
-          {/* Size Options */}
-          {hasSizes && (<div className="flex w-full py-[4.37%] md:py-[6%] gap-[4%] items-center px-4 md:px-0 mt-4 md:mt-0">
-            <h3 className="text-sm leading-[20px] text-[#000000]/50 mr-2 md:mr-4">Size:</h3>
-            {product.sizes?.length ? (
-              product.sizes.map((size: string) => (
-                <button
-                  key={size}
-                  onClick={() => setCurrentSize(size)}
-                  className={`text-xs md:text-sm ${currentSize === size
-                    ? 'text-black font-bold border border-black rounded-full px-2 py-[2px]'
-                    : 'text-[#000000]/70'
-                    } hover:text-black transition-colors`}
-                >
-                  {size}
-                </button>
-              ))
-            ) : (
-              <div className="flex gap-4 items-center cursor-pointer">
-                <span className="text-xs md:text-sm font-bold text-black border border-black rounded-full px-2 py-[2px]">XS</span>
-                <span className="text-xs md:text-sm text-[#000000]/70">S</span>
-                <span className="text-xs md:text-sm text-[#000000]/70">M</span>
-              </div>
-            )}
-          </div>
-          )}
-
-          <button onClick={() => router.push("/contact")} className="block w-[90%] md:w-[95%] mx-auto md:mx-0 mt-[8%] md:mt-[4%] py-[4.5%] bg-white border-0 border-[#F0F0F0] rounded-[25px] font-bold text-[9px] leading-[16px] tracking-[1px] uppercase text-[#000000] cursor-pointer hover:bg-black hover:text-white transition-colors shadow-[inset_0px_0px_2px_0_rgba(0,0,0,0.25)]">
+          <button onClick={() => router.push("/contact")} className="btn block w-[90%] md:w-[95%] mx-auto md:mx-0 mt-8 md:mt-6 py-4 bg-white border-0 border-[#F0F0F0] rounded-[25px] text-[#000000] cursor-pointer hover:bg-black hover:text-white transition-colors shadow-[inset_0px_0px_2px_0_rgba(0,0,0,0.25)]">
             CONTACT STORE
           </button>
         </div>
@@ -211,10 +216,10 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
           {/* Description + Bullet Points */}
           <div className="md:w-[50%] md:ml-auto md:pb-[9%]">
-            <p className="md:pb-[6.44%] text-[12px] md:text-xl leading-[1.4] tracking-[-0.32px] text-[#000000]">
+            <p className="md:pb-[6.44%] mt-4 text-[12px] md:text-xl leading-[1.75] text-start tracking-[-0.32px] text-[#000000]">
               {layoutDescription}
             </p>
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-[11.05%] md:mb-0 gap-4 md:gap-2">
+            <div className="flex flex-col items-start justify-between mb-[11.05%] md:mb-0 gap-4 md:gap-2 md:flex-row md:items-center">
               <div className="flex items-center text-[12px] md:text-base leading-[28px] tracking-[-0.32px] text-[#000000]">
                 <span className="mr-2">•</span>
                 {product.colors[currentVariantIndex]?.color} with diamonds
@@ -234,7 +239,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
           {/* Top Image */}
           {topImage && (
-            <div className="w-full md:w-[50%] aspect-[4/3] md:aspect-[800/600] md:ml-auto overflow-hidden mb-[1%] flex items-center justify-center">
+            <div className="w-[50%] ml-auto aspect-[800/600] overflow-hidden mb-[1%] flex items-center justify-center">
               <Image
                 src={topImage}
                 alt="Product top"
@@ -247,9 +252,9 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
           {/* Left + Right Images */}
           {(leftImage || rightImage) && (
-            <div className="w-full flex flex-wrap md:flex-nowrap md:gap-[3%] md:mb-[1%] md:w-[50%] md:ml-auto justify-between">
+            <div className="w-[50%] ml-auto flex gap-[3%] mb-[1%] justify-between">
               {leftImage && (
-                <div className="w-full md:w-[56%] aspect-[3/4] md:aspect-[400/500] overflow-hidden mb-[1%] md:mb-auto flex items-center justify-center">
+                <div className="w-[56%] aspect-[400/500] overflow-hidden flex items-center justify-center">
                   <Image
                     src={leftImage}
                     alt="Product left"
@@ -260,7 +265,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                 </div>
               )}
               {rightImage && (
-                <div className="w-full md:w-[41%] aspect-[3/4] md:aspect-[288/500] overflow-hidden mb-[1%] md:mb-auto flex items-center justify-center">
+                <div className="w-[41%] aspect-[288/500] overflow-hidden flex items-center justify-center">
                   <Image
                     src={rightImage}
                     alt="Product right"
@@ -275,7 +280,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
           {/* Bottom Image */}
           {bottomImage && (
-            <div className="w-full md:w-[50%] md:ml-auto aspect-[4/3] md:aspect-[800/600] overflow-hidden mb-[2.63%] md:mb-[9.72%] flex items-center justify-center">
+            <div className="w-[50%] ml-auto aspect-[800/600] overflow-hidden mb-[9.72%] flex items-center justify-center">
               <Image
                 src={bottomImage}
                 alt="Product bottom"
@@ -290,7 +295,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
       {/* You May Also Like */}
       <section data-theme="light" className="w-full md:pb-[4.51%] mt-[10%]">
-        <h2 className="text-center font-baskerville text-2xl md:text-3xl mb-8 border-t border-gray-100 pt-12">
+        <h2 className="text-center font-baskerville font-normal text-2xl md:text-3xl mb-8 border-t border-gray-100 pt-12">
           You May Also Like
         </h2>
 
@@ -317,25 +322,25 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
         </div>
 
         {/* Scroll Controls */}
-        <div className="w-[98%] mx-auto md:justify-center items-end pt-[60px] md:pt-4 relative gap-2 flex-wrap flex-col md:flex-nowrap flex">
+        <div className="w-[80%] mx-auto justify-center items-end pt-[60px] md:pt-4 relative gap-2 flex-wrap flex-col md:flex-nowrap flex">
           <div className="w-full border-b-[3px] border-[#000000]/20 relative shrink-0">
             <div className={`absolute -translate-y-1/4 w-full top-0 left-0 flex ${scrollBarPosition[scrollLevel]}`}>
-              <div className="border-t-[5px] border-[#7C3C3C] md:w-[34%]" />
+              <div className="border-t-[5px] border-[#7C3C3C] w-[34%]" />
             </div>
           </div>
 
-          <div className="hidden md:flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <button
-              onClick={() => { if (scrollLevel !== 0) setScrollLevel(scrollLevel - 1); }}
-              className="w-10 h-10 rounded-[10px] bg-[#F9F9F9] hover:cursor-pointer stroke-black active:stroke-white active:bg-[#7C3C3C] flex justify-center items-center"
+              onClick={() => { if (scrollLevel != 1) setScrollLevel(scrollLevel - 1); }}
+              className="w-10 h-10 rounded-[10px] bg-[#F9F9F9] hover:cursor-pointer hover:bg-[#7C3C3C] stroke-black active:stroke-white active:bg-[#7C3C3C] flex justify-center items-center"
             >
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.0502 7.07071L9.0857 12.106L14.121 17.0705" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
             <button
-              onClick={() => { if (scrollLevel !== 3) setScrollLevel(scrollLevel + 1); }}
-              className="w-10 h-10 bg-[#F9F9F9] hover:cursor-pointer active:bg-[#7C3C3C] stroke-black active:stroke-white rounded-[10px] flex justify-center items-center"
+              onClick={() => { if (scrollLevel !=3) setScrollLevel(scrollLevel + 1); }}
+              className="w-10 h-10 bg-[#F9F9F9] hover:cursor-pointer hover:bg-[#7C3C3C] active:bg-[#7C3C3C] stroke-black active:stroke-white rounded-[10px] flex justify-center items-center"
             >
               <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.581227 10.4997L5.54053 5.45931L0.500164 0.500004" strokeLinecap="round" strokeLinejoin="round" />

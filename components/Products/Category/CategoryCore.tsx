@@ -76,7 +76,7 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
 
       {/* CATEGORY MENU */}
       <section className="w-full mx-auto pt-8">
-        <div className="flex items-center justify-start md:justify-center gap-4 md:gap-6 px-4 md:px-8">
+        <div className="flex items-center justify-start md:justify-center gap-2 sm:gap-4 md:gap-4 px-4 md:px-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-2">
           {categoryMenu.map((cat, idx) => {
             const isActive = category === cat.slug;
 
@@ -84,10 +84,10 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
               <div
                 key={idx}
                 onClick={() => router.push(`/collections/${cat.slug}`)}
-                className="relative group cursor-pointer flex-shrink-0"
+                className="relative group cursor-pointer flex-shrink-0 snap-start w-[30vw] sm:w-[22vw] md:w-[18vw]"
               >
-                <div className={`relative overflow-hidden rounded-lg md:rounded-sm w-[80px] md:w-[18vw] my-2
-                  ${isActive ? 'ring-2 ring-[#431A1A4D] ring-offset-1 shadow-lg' : ''}
+                <div className={`relative overflow-hidden my-2
+                  ${isActive ? 'ring-1 ring-[#431A1A4D] shadow-lg' : ''}
                 `}>
                   <div className="relative aspect-square overflow-hidden">
                     <Image
@@ -99,8 +99,8 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
                   </div>
                 </div>
 
-                <p className={`text-center mt-2 text-xs md:text-sm font-semibold uppercase
-                  ${isActive ? 'text-[#431A1A]  underline' : ''}
+                <p className={`text-center mt-2 text-caption font-semibold uppercase
+                  ${isActive ? 'text-[#431A1A] underline' : ''}
                 `}>
                   {cat.title}
                 </p>
