@@ -1,6 +1,6 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
-import productsData from "@/products.json";
+import productsData from "@/products_new.json";
 import ProductView from "@/components/Products/SingleProduct/ProductViewPage";
 import ProductNotFound from "@/components/Reusable/ProductNotFound";
 import { Product } from "@/types/product";
@@ -25,7 +25,7 @@ export default function ProductPage() {
       p.category.toLowerCase() === category
   );
 
-  console.log("Product Data:",product)
+  console.log("Product Data:", product)
 
   if (!product) return <ProductNotFound />;
 

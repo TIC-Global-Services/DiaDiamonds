@@ -1,6 +1,6 @@
 "use client";
 
-import productsData from '@/products.json'
+import productsData from '@/products_new.json'
 import { useState } from "react";
 import CollectionItem from "../Products/Cards/HomeProductCard";
 import { useSwipeable } from "react-swipeable";

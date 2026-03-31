@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import productsData from '../../../products.json';
+import productsData from '../../../products_new.json';
 import { useRouter } from 'next/navigation';
 import Breadcrumbs from '@/components/Reusable/Breadcrumbs';
 import Image from 'next/image';
@@ -70,7 +70,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
     }
     : {};
 
-  // Product-level layout images from products.json (per-product override)
+  // Product-level layout images from products_new.json (per-product override)
   // const productMap = Array.isArray(product.layoutImages) && product.layoutImages.length > 0
   //   ? product.layoutImages.reduce((acc: any, img: any) => {
   //       if (img.position && img.image) acc[img.position] = img.image;

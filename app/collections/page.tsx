@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import productsData from "@/products.json";
+import productsData from "@/products_new.json";
 
 // fallback
 export default function CollectionsPage() {

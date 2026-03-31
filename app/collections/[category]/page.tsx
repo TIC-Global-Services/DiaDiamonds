@@ -2,7 +2,7 @@
 
 import { useParams } from "next/navigation";
 import CategoryCore from "@/components/Products/Category/CategoryCore";
-import productsData from "@/products.json";
+import productsData from "@/products_new.json";
 import { Product } from "@/types/product";
 
 export default function CategoryPage() {

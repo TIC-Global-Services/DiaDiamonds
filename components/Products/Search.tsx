@@ -3,7 +3,7 @@ import React, { Dispatch, useEffect } from 'react';
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import productsData from '../../products.json';
+import productsData from '../../products_new.json';
 import Link from 'next/link';
 import { Product } from '@/types/product';
 
