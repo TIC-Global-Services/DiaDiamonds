@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import productsData from '../../../products_new.json';
+import productsData from '@/products_new.json';
 import { useRouter } from 'next/navigation';
 import Breadcrumbs from '@/components/Reusable/Breadcrumbs';
 import Image from 'next/image';
