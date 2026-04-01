@@ -39,7 +39,7 @@ export default function Craftsmanship() {
   }, []);
 
   return (
-    <section data-theme="light" className="relative h-[100%] md:h-[150dvh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
+    <section data-theme="light" className="relative h-screen md:h-[150dvh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
       {/* Left Side Image */}
       <motion.div
         initial={{ opacity: 0, x: -10 }}
@@ -53,7 +53,7 @@ export default function Craftsmanship() {
               src={imageSrc}
               alt="Craftsmanship"
               fill
-              className="object-cover"
+              className="w-full h-full object-cover"
               priority
             />
           </div>
@@ -105,7 +105,7 @@ export default function Craftsmanship() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
           viewport={{ once: false }}
-          className="relative w-full h-[40vh] md:h-1/2 2xl:h-[75vh] overflow-hidden order-1 md:order-2"
+          className="relative w-full h-[60vh] md:h-1/2 2xl:h-[75vh] overflow-hidden order-1 md:order-2"
         >
           <Parallax speed={-10} className="h-full">
             <Image

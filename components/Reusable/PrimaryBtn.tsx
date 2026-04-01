@@ -33,12 +33,12 @@ export default function PrimaryBtn({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={`
-        btn-text group relative
-        px-4 py-3 md:px-10 md:py-4 text-[10px] md:text-[13px]
-        rounded-full backdrop-blur-md
-        border border-white/20
-        shadow-[inset_0px_1px_1px_rgba(255,255,255,0.3),inset_0px_-1px_1px_rgba(0,0,0,0.3),0px_4px_24px_rgba(0,0,0,0.4)]
-        overflow-hidden hover:border-white/40
+         group relative
+        px-2 py-2 md:px-10 md:py-4 text-xs md:text-[13px] tracking-widest
+        rounded-full backdrop-blur-md bg-black/20
+        border border-black/20
+        shadow-[inset_1px_4px_4px_0pxrgba(0,0,0,0.5)]
+        overflow-hidden hover:border-white/40 hover:text-black
         ${animated ? "BtnAnimation" : ""}
         isolate cursor-pointer
       `}

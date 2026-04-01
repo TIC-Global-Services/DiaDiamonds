@@ -57,7 +57,7 @@ export default function DiamondSpotlight() {
 
   return (
     <section
-      className="w-full relative min-h-screen overflow-hidden"
+      className="w-full relative h-[100dvh] md:h-[150dvh] overflow-hidden"
       ref={elementRef}
       onMouseMove={captureMousePosition}
       data-theme="dark"
@@ -68,7 +68,7 @@ export default function DiamondSpotlight() {
         alt="diamond spotlight"
         fill
         priority
-        className="object-cover"
+        className="w-full h-full object-cover"
       />
 
       {/* Colored Reveal Image */}
@@ -87,7 +87,7 @@ export default function DiamondSpotlight() {
           src={DiamondSpotLightColoredImage}
           alt="diamond spotlight colored"
           fill
-          className="object-cover w-full min-h-screen"
+          className="object-cover w-full h-full" 
         />
       </div>
 
@@ -105,7 +105,7 @@ export default function DiamondSpotlight() {
       />
 
       {/* Content */}
-      <div className="absolute inset-0 z-20 w-full h-full flex justify-center items-end pb-[10%] sm:pb-[8%] md:items-end md:pb-[6%]">
+      <div className="absolute inset-0 z-20 w-full h-full flex justify-center items-end pb-[8%] md:pb-[5%]">
         <div className="flex flex-col justify-between items-center w-[90%] sm:w-[65%] md:w-[45%] gap-4">
           <h2 className="font-medium text-3xl sm:text-xl md:text-[40px] leading-[100%] tracking-tight md:leading-[100%] uppercase text-[#EFFFFF] text-center">
             Designed for you.<br />
@@ -113,7 +113,7 @@ export default function DiamondSpotlight() {
             <span className="md:hidden">Crafted for a<br />lifetime.</span>
           </h2>
           <div onClick={() => router.push("/collections/rings")}>
-            <PrimaryBtn text="DISCOVER MORE" textColor="text-white" />
+            <PrimaryBtn text="DISCOVER MORE" textColor="text-white" hoverColor="rgba(217, 217, 217, 1)" hoverTextColor="black"/>
           </div>
         </div>
       </div>

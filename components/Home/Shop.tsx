@@ -45,12 +45,12 @@ export default function Shop() {
   ];
 
   return (
-    <section data-theme="light" className="w-full h-[100%] overflow-hidden md:px-[110px] flex justify-end items-center relative bg-[#FFFFFF]">
+    <section data-theme="light" className="w-full h-[100dvh] md:h-[130dvh] overflow-hidden md:px-[110px] flex justify-center relative bg-[#FFFFFF]">
       
       {/* First decorative absolute background div */}
-      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-4 -translate-y-[75%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-50 flex flex-col md:flex-row justify-end items-center px-10">
-        <div className="mb-14">
-          <h3 className="text-2xl md:text-[40px] font-medium leading-[110%] md:leading-[92%] uppercase text-[#ffffff] pb-3 md:pb-5 text-center md:text-left">
+      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-4 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-30 flex flex-col md:flex-row justify-end items-center px-10">
+        <div className="mb-10">
+          <h3 className="text-2xl md:text-[40px] font-medium leading-[100%] md:leading-[92%] uppercase text-[#ffffff] pb-3 md:pb-5 text-center md:text-left">
             Shop By Colors
           </h3>
           <p className="text-center md:text-left text-sm md:text-[20px] leading-[120%] text-[#ffffff]/50 md:text-[#ffffff]/90 pb-3 md:pb-5">
@@ -61,7 +61,7 @@ export default function Shop() {
           <div className="relative w-[70%] md:w-[70%] mx-auto md:mx-0">
             <button
               onClick={() => setIsDropDownClicked(!isDropDownClicked)}
-              className={`absolute top-0  bg-[#431A1A] rounded-full border shadow-[inset_0px_4px_4px_0_rgba(0,0,0,0.25)] py-[10px] px-[25px] flex justify-between items-center gap-[10px] w-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`}
+              className={`absolute top-0  bg-[#431A1A] rounded-full border border-white/30 shadow-[inset_0px_4px_4px_0_rgba(0,0,0,0.25)] py-[10px] px-[25px] flex justify-between items-center gap-[10px] w-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`}
             >
               <h3 className="text-sm md:text-[16px] leading-[142%] text-[#FFFFFF]/50 bg-transparent w-full">
                 {categories[currentCategory]}
@@ -75,21 +75,21 @@ export default function Shop() {
               initial={{ clipPath: "inset(0 0 100% 0)" }}
               animate={{ clipPath: isDropDownClicked ? "inset(0 0 0 0)" : "inset(0 0 100% 0)" }}
               transition={{ duration: 0.7, delay: 0.1, ease: "easeInOut" }}
-              className="absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%] flex flex-col bg-white py-[15px] border-b border-t-0 rounded-[10px] z-10"
+              className="absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%] flex flex-col bg-white py-[15px] border-b border-t-0 rounded-[10px]"
             >
               {/* proper arrow fn bodies */}
-              <button onClick={() => { setCurrentCategory(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 0 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Rings</button>
-              <button onClick={() => { setCurrentCategory(1); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 1 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Bracelets</button>
-              <button onClick={() => { setCurrentCategory(2); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 2 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Necklaces</button>
-              <button onClick={() => { setCurrentCategory(3); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 3 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Pendants</button>
-              <button onClick={() => { setCurrentCategory(4); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 4 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Earrings</button>
+              <button onClick={() => { setCurrentCategory(1); setActiveDiv(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 1 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Bracelets</button>
+              <button onClick={() => { setCurrentCategory(2); setActiveDiv(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 2 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Necklaces</button>
+              <button onClick={() => { setCurrentCategory(3); setActiveDiv(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 3 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Pendants</button>
+              <button onClick={() => { setCurrentCategory(0); setActiveDiv(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 0 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Rings</button>
+              <button onClick={() => { setCurrentCategory(4); setActiveDiv(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 4 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Earrings</button>
             </motion.div>
           </div>
         </div>
       </div>
 
       {/* Second decorative background — color strips */}
-      <div className="w-[120%] md:w-full h-full md:h-[120%] overflow-hidden bg-[#f7f6f4] absolute top-0 left-0 -translate-y-[60%] -translate-x-[10%] md:-translate-x-[50%] md:-translate-y-[10%] rounded-full z-20 flex md:flex-col">
+      <div className="w-[120%] md:w-full h-full md:h-[120%] overflow-hidden bg-[#f7f6f4] absolute top-0 left-0 -translate-y-[50%] -translate-x-[10%] md:-translate-x-[50%] md:-translate-y-[10%] rounded-full z-20 flex md:flex-col">
         {/* 0-indexed activeDiv */}
         <button
           onMouseEnter={() => { setActiveDiv(0); setIsHovered(true); setProductChanged(true); }}
@@ -109,10 +109,9 @@ export default function Shop() {
       </div>
 
       {/* Product display */}
-      <div className="w-full mt-auto pb-40 md:pb-0 md:w-[50%] flex flex-col justify-center md:justify-center items-center relative z-30 md:my-auto">
-        {/* Bug 4 fix: no more ternary fallbacks */}
+      <div className="w-full md:w-[70%] mt-60 md:mt-0 md:ml-150 flex flex-col justify-center items-center relative">
         <h2
-          className="font-medium text-xl md:text-[35px] leading-[110%] md:leading-[100%] tracking-[5%] md:tracking-[10%] uppercase pb-4 md:pb-[5.28%]"
+          className="font-medium text-xl md:text-[35px] leading-[100%] md:leading-[100%] tracking-[5%] md:tracking-[10%] uppercase pb-4 md:pb-[5.28%]"
           style={{
             background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
             WebkitBackgroundClip: "text",
@@ -122,7 +121,7 @@ export default function Shop() {
           {shopItems[currentCategory][activeDiv].color}
         </h2>
 
-        <div className="w-[50%] md:w-[66.67%] aspect-[480/177]">
+        <div className="w-[50%] md:w-[80%] aspect-[480/177]">
           <motion.img
             initial={{ opacity: 0, scale: 1 }}
             animate={{ opacity: 1, scale: productChanged ? 1.1 : 1 }}
@@ -141,7 +140,7 @@ export default function Shop() {
         <button onClick={() => {const selectedCategory = categories[currentCategory].toLowerCase();
                 router.push(`/collections/${selectedCategory}`);
                 }}
-          className="BtnAnimation bg-[#87888A]/20 md:bg-white/40 text-[#431a1a] text-xs md:text-[10px] px-4 py-2 md:px-[4.72%] md:py-[2.67%] border-[#FFFFFF]/1 tracking-[0.1rem] md:tracking-[0.166rem] border-4 md:border-[5.3px] rounded-full shadow-[0_4px_4px_0_rgba(0,0,0,0.5)] uppercase">
+          className="BtnAnimation bg-white/30 md:bg-white/40 text-[#431a1a] text-xs md:text-[10px] px-2 py-2 md:px-[3.72%] md:py-[2%] border-[#FFFFFF]/1 tracking-[0.1rem] md:tracking-[0.166rem] rounded-full shadow-[inset_0px_0px_4px_0_rgba(0,0,0,0.5)] uppercase">
           VIEW MORE
         </button>
       </div>
