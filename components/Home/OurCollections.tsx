@@ -74,7 +74,7 @@ export default function OurCollection() {
 
   return (
 
-    <section className="w-full min-h-screen py-5 px-5 overflow-hidden z-30 relative" data-theme='light'>
+    <section className="w-full min-h-screen py-6 mt-4 px-5 overflow-hidden z-30 relative" data-theme='light'>
 
       {/* Inner flex container */}
       <div className="w-full flex flex-col justify-center items-center gap-4 pb-9 md:pb-20">

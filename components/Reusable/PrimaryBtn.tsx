@@ -36,7 +36,7 @@ export default function PrimaryBtn({
          group relative
         px-2 py-2 md:px-10 md:py-4 text-xs md:text-[13px] tracking-widest
         rounded-full backdrop-blur-md bg-black/20
-        border border-black/20
+        border border-white
         shadow-[inset_1px_4px_4px_0pxrgba(0,0,0,0.5)]
         overflow-hidden hover:border-white/40 hover:text-black
         ${animated ? "BtnAnimation" : ""}
