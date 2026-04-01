@@ -122,7 +122,8 @@ export default function Testimonials() {
 
                 setCurrentTestimony(currentTestimony + 1);
               }}
-                className="w-[35px] aspect-square rounded-full border-[5.29px] border-[#FFFFFF]/1 bg-[#FFFFFF]/1 shadow-[0_2px_20px_0_rgba(0,0,0,0.1)] flex justify-center items-center hover:cursor-pointer active:bg-[#FFFFFF]">
+                className="w-[35px] aspect-square rounded-full border-[5.29px]  backdrop-blur-md bg-black/20 border-white
+                shadow-[inset_1px_4px_4px_0pxrgba(0,0,0,0.5)] flex justify-center items-center hover:cursor-pointer active:bg-[#FFFFFF]">
                 <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12.667 6H1.00032M12.667 6L7.66699 11M12.667 6L7.66699 1" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

@@ -15,10 +15,10 @@ type PrimaryBtnProps = {
 export default function PrimaryBtn({
   text,
   textColor = "text-white",
-  hoverTextColor = "#ffffff",
-  rippleColor = "white",
+  hoverTextColor = "white",
+  rippleColor = "black",
   animated = true,
-  hoverColor = "rgba(255,255,255,0.15)",
+  hoverColor = "rgba(0,0,0,0.5)",
   className = "",
 }: PrimaryBtnProps) {
   const [isHovered, setIsHovered] = React.useState(false);
@@ -34,7 +34,7 @@ export default function PrimaryBtn({
       onMouseLeave={() => setIsHovered(false)}
       className={`
          group relative
-        px-2 py-2 md:px-10 md:py-4 text-xs md:text-[13px] tracking-widest
+        px-4 py-2 md:px-6 md:py-4 text-[8px] md:text-[13px] tracking-widest
         rounded-full backdrop-blur-md bg-black/20
         border border-white
         shadow-[inset_1px_4px_4px_0pxrgba(0,0,0,0.5)]

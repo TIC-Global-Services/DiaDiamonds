@@ -12,10 +12,10 @@ const Hero = () => {
   return (
     <section className="hero-section relative w-full min-h-screen overflow-hidden" data-theme="dark">
       {/* Background Image with Parallax */}
-      <div className="hero-bg absolute inset-0 flex justify-center w-full h-full">
+      <div className="hero-bg absolute inset-0 flex items-start md:items-center justify-center w-full h-full">
         <Parallax
           speed={-20}
-          style={{ height: "130%", width: "100%", top: "-20%" }}
+          className="w-full h-[155%] -top-[20%] relative"
         >
           <Image
             src={heroImage}
@@ -24,7 +24,7 @@ const Hero = () => {
             priority
             quality={100}
             sizes="100vw"
-            className="object-cover object-[10%_60%] md:object-[10%_210%]"
+            className="object-cover object-[25%_45%] md:object-[20%_65%]"
           />
         </Parallax>
       </div>
@@ -33,17 +33,19 @@ const Hero = () => {
       <div className="hero-blur-overlay absolute inset-0 pointer-events-none" />
 
       {/* Content Layer */}
-      <div className="absolute inset-0 flex flex-col gap-2 sm:gap-2 md:gap-2 justify-end items-center sm:items-start px-6 pb-[20dvh] sm:px-8 sm:pb-[15dvh] md:px-6 lg:px-16 xl:px-20 2xl:px-24">
-        <h2 className="text-center md:text-start text-3xl md:text-[44px] text-white px-0 w-full md:w-[100%] lg:w-[60%]">
+      <div className="absolute inset-0 flex flex-col justify-center md:justify-end items-center md:items-start
+          text-center md:text-left px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-[14vh] sm:pb-[12vh] md:pb-[8vh] lg:pb-[10vh]">
+
+        <h2 className="text-center md:text-start text-3xl md:text-[44px] tracking-normal text-white w-full md:w-[100%] lg:w-[60%]">
           Crafted to last forever
         </h2>
 
-        <p className="text-center md:text-start text-[12px] md:text-[18px] text-white/90 w-full sm:w-[70%] md:w-[60%] lg:w-[50%] max-w-xl">
+        <p className="text-center md:text-start text-[10px] md:text-[18px] leading-[100%] text-white/90 w-full sm:w-[70%] md:w-[60%] lg:w-[50%] max-w-xl">
           Iconic Brand Feel Designed to Shine Today And Endure Forever
         </p>
 
         <div onClick={() => router.push("/collections/rings")} >
-          <PrimaryBtn text="DISCOVER MORE" textColor="text-white"/>
+          <PrimaryBtn text="DISCOVER MORE" textColor="text-white" />
         </div>
       </div>
     </section>
