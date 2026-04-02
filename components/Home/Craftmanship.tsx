@@ -39,7 +39,7 @@ export default function Craftsmanship() {
   }, []);
 
   return (
-    <section data-theme="light" className="relative h-screen md:h-[150dvh] w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
+    <section data-theme="light" className="relative h-auto w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
       {/* Left Side Image */}
       <motion.div
         initial={{ opacity: 0, x: -10 }}
@@ -48,7 +48,7 @@ export default function Craftsmanship() {
         viewport={{ once: false }}
         className="w-full md:w-1/2 md:h-full relative overflow-hidden">
         <Parallax speed={-10}>
-          <div className="relative w-full h-[100vh] md:h-[150vh]">
+          <div className="relative w-full h-[100vh] md:h-[120dvh]">
             <Image
               src={imageSrc}
               alt="Craftsmanship"
@@ -58,18 +58,19 @@ export default function Craftsmanship() {
             />
           </div>
         </Parallax>
-        <div onClick={() => router.push("/collections/bracelets")} className="absolute inset-0 z-20 flex justify-center items-end pb-15 md:pb-10 md:mb-28">
+        <div onClick={() => router.push("/collections/bracelets")} className="absolute inset-0 z-20 flex justify-center items-end pb-15 md:pb-10 md:mb-8">
           {/* <button className="glass-btn BtnAnimation text-[10px] md:text-[12px] tracking-[0.166rem] border-[5.3px] rounded-full px-[16px] py-[3px] md:px-[18px] md:py-[7.6px]  uppercase ">
             VIEW BRACELET COLLECTION
           </button> */}
-          <PrimaryBtn text="VIEW BRACELET COLLECTION" hoverColor="rgba(32, 12, 12, 1)" hoverTextColor="#ffffff" textColor="text-black" animated={false} className="text-[10px]"/>
+          <PrimaryBtn text="VIEW BRACELET COLLECTION" hoverColor="rgba(32, 12, 12, 1)" hoverTextColor="text-white" textColor="text-black" 
+          className="text-[8px] md:text-[16px] font-normal tracking-widest bg-transparent"/>
         </div>
       </motion.div>
 
       {/* Right Side */}
-      <div className="w-full md:w-1/2 flex flex-col h-auto md:h-full 2xl:h-[150vh]">
+      <div className="w-full md:w-1/2 flex flex-col h-auto md:h-[120vh] 2xl:h-[150vh]">
         {/* Top Half Cards + Pagination */}
-        <div className="w-full md:h-1/2 2xl:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-20 lg:mt-40 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
+        <div className="w-full md:h-1/2 2xl:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-20 lg:mt-30 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
           <div className="flex flex-col gap-10 justify-center w-full">
             {/* Cards */}
             {cards.map((card, index) => (
@@ -77,10 +78,10 @@ export default function Craftsmanship() {
                 key={index}
                 className={`${index === activeIndex ? "block" : "hidden"}`}
               >
-                <h3 className="font-medium text-lg md:text-xl lg:text-[24px] leading-[120%] md:leading-[100%] tracking-[0.03em] text-[#000000] pb-4 md:pb-[23px]">
+                <h3 className="font-medium md:text-[24px]  leading-[120%] md:leading-[100%] tracking-[0.03em] text-[#000000] pb-4 md:pb-[20px]">
                   {card.title}
                 </h3>
-                <p className="text-sm md:text-base lg:text-[20px] leading-[140%] text-[#000000]/60 w-full md:w-[97%]">
+                <p className="text-[10px] md:text-[20px] lg:text-[20px] leading-[140%] tracking-tight text-[#000000]/60 w-full md:w-[97%]">
                   {card.content}
                 </p>
               </div>
@@ -105,7 +106,7 @@ export default function Craftsmanship() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
           viewport={{ once: false }}
-          className="relative w-full h-[60vh] md:h-1/2 2xl:h-[75vh] overflow-hidden order-1 md:order-2"
+          className="relative w-full h-[60vh] md:h-[70vh] 2xl:h-[75vh] overflow-hidden order-1 md:order-2"
         >
           <Parallax speed={-10} className="h-full">
             <Image
@@ -120,7 +121,7 @@ export default function Craftsmanship() {
       </div>
 
       {/* Absolute Overlay Title */}
-      <div className="absolute w-full h-full flex justify-center pt-8 md:pt-[60px] lg:pt-[100px] xl:pt-[133px]">
+      <div className="absolute w-full h-full flex justify-center pt-8 md:pt-[10] lg:pt-[24] xl:pt-[32]">
         <h2 className="font-medium text-2xl md:text-[40px] leading-[110%] md:leading-[100%] tracking-[0.02em] uppercase text-[#000000]">
           Craftsmanship
         </h2>

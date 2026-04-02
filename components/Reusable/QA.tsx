@@ -12,10 +12,10 @@ export default function QA({ question, answer }: QAProps) {
 
   return (
     <div className="w-full pt-[30px]">
-      
+
       {/* Question Row */}
       <div className="w-full md:w-[90%] flex justify-between items-center md:flex-nowrap cursor-pointer" onClick={() => setIsAnswer(!isAnswer)}>
-        
+
         <p
           className="text-[14px] m-0 md:text-[20px] leading-none text-[#000000] shrink md:shrink-0 pl-4 cursor-pointer w-[80%] md:w-auto"
           onClick={() => setIsAnswer(!isAnswer)}
@@ -25,7 +25,7 @@ export default function QA({ question, answer }: QAProps) {
 
         <button
           onClick={() => setIsAnswer(!isAnswer)}
-          className={`${isAnswer ? "rotate-180" : ""} flex items-center justify-center transition-transform duration-200`}
+          className={`${isAnswer ? "rotate-180" : ""} flex items-center mr-4 md:mr-0 justify-center transition-transform cursor-pointer duration-200`}
         >
           <svg
             className="block w-[10px] h-[5px]"
@@ -39,7 +39,10 @@ export default function QA({ question, answer }: QAProps) {
       </div>
 
       {/* Answer Section */}
-      <div className={`${isAnswer ? "block" : "hidden"} w-full pt-4`}>
+      <div
+        className={`overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
+         ${isAnswer ? "max-h-[200px] opacity-100 pt-4" : "max-h-0 opacity-0"}`}
+      >
         <p className="text-[12px] md:text-[16px] leading-[150%] text-[#000000] pl-4">
           {answer}
         </p>

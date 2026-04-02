@@ -29,14 +29,24 @@ body {
   font-family: var(--font-grotesk), "sans-serif";
 }
 
+.h2 {
+  @apply text-2xl md:text-3xl lg:text-[44px] xl:text-[44px] 2xl:text-[48px]
+         font-medium leading-[110%] tracking-[0em];
+}
+
+.p {
+  @apply text-[12px] md:text-[14px] lg:text-[14px] xl:text-2xl 2xl:text-xl font-normal leading-[100%] tracking-[0]
+}
+
+.h3 {
+  @apply font-medium uppercase tracking-normal leading-[0.92]
+    text-[24px] md:text-[30px] lg:text-[40px] xl:text-[40px] 2xl:text-[44px]; 
+}
+
 /* Base styles */
 @layer base {
   h2 {
     font-family: var(--font-clash-display);
-    font-weight: 500;
-    font-size: 30px; /* Small screens default */
-    line-height: 1.2;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
   }
 
@@ -45,19 +55,17 @@ body {
     font-weight: 400;
     font-size: 14px; /* Small screens default */
     line-height: 1.5;
-    letter-spacing: 0;
+    letter-spacing: 0em;
     margin: 0 0 1rem 0;
   }
 
   /* Medium screens (tablets) */
   @media (min-width: 640px) and (max-width: 1023px) {
     h2 {
-      font-size: 28px;
       line-height: 1.5;
       letter-spacing: -1px;
     }
     p {
-      font-size: 16px;
       line-height: 1.5;
     }
   }
@@ -65,12 +73,10 @@ body {
   /* Large screens (desktops) */
   @media (min-width: 1024px) {
     h2 {
-      font-size: 40px;
       line-height: 1.5;
       letter-spacing: 0.02em;
     }
     p {
-      font-size: 20px;
       line-height: 1.4;
       letter-spacing: 0.05em;
     }
@@ -109,109 +115,6 @@ body {
   }
 }
 
-/* PrimaryBtn.css */
-
-/* Button animation container */
-.BtnAnimation {
-  cursor: pointer;
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-/* Ripple effect */
-.BtnAnimation::after {
-  content: "";
-  position: absolute;
-  bottom: -50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  background-color: var(--ripple-color, white);
-  border-radius: 50%;
-  transform: translateX(-50%) scale(0);
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 0;
-}
-
-.BtnAnimation:hover::after {
-  transform: translateX(-50%) scale(5);
-  bottom: -75%;
-}
-
-.BtnAnimation:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(35, 91, 90, 0.3);
-}
-
-/* Glass border with corner cutouts */
-.btn-glass-border::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 9999px;
-  padding: 1px;
-
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.6)
-  );
-
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0),
-    radial-gradient(circle at 100% 0%, transparent 5px, black 0px),
-    radial-gradient(circle at 0% 100%, transparent 5px, black 0px);
-
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-
-  pointer-events: none;
-}
-
-/* Text with blend mode for automatic inversion */
-.BtnAnimation span {
-  position: relative;
-  z-index: 2;
-  mix-blend-mode: difference;
-}
-
-.btn-glass-border::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 9999px;
-  padding: 1px;
-
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.6),
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.6)
-  );
-
-  /* CUT OUT center to make it a border */
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0),
-    /* remove top-right */
-    radial-gradient(circle at 100% 0%, transparent 0px, black 0px),
-    /* remove bottom-left */
-    radial-gradient(circle at 0% 100%, transparent 5px, black 0px);
-
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-
-  pointer-events: none;
-}
 
 /* Hide scrollbar utility */
 .scrollbar-hide {

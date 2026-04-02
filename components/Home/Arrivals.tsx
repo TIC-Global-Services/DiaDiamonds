@@ -16,7 +16,7 @@ export default function Arrivals() {
   return (
     <section data-theme="light"
       ref={containerRef}
-      className="relative w-full min-h-screen flex flex-col md:flex-row overflow-hidden"
+      className="relative w-full h-screen flex flex-col md:flex-row overflow-hidden"
     >
       {/* TOP / LEFT PANEL — Reveals from TOP */}
       <motion.div
@@ -33,8 +33,8 @@ export default function Arrivals() {
           <Parallax speed={-10}>
             <Image
               src={firstImage}
-              alt="First Arrival"
-              className="w-full h-full 2xl:h-screen object-cover"
+              alt="New Arrival"
+              className="w-full h-full aspect-square object-cover"
             />
           </Parallax>
 
@@ -60,7 +60,7 @@ export default function Arrivals() {
             <Image
               src={secondImage}
               alt="Second Arrival"
-              className="w-full h-full 2xl:h-screen object-cover"
+              className="w-full h-full aspect-square 2xl:h-screen object-cover"
             />
           </Parallax>
 

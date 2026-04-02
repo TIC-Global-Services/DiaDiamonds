@@ -10,14 +10,14 @@ export default function ChatBtn() {
   const iconColor = theme === 'light' ? 'black' : 'white';
 
   return (
-    <div className="fixed z-50 py-2 flex flex-col items-end gap-3 bottom-4 right-4 max-w-[calc(100vw-18px)]">
+    <div className="fixed z-50 py-2 flex flex-col items-end gap-1 md:gap-3 bottom-4 right-4 max-w-[calc(100vw-18px)]">
 
       {/* Action Buttons inside whatsApp, email */}
       <div className={`
         ${isClicked ? 'flex' : 'hidden'}
         flex-col md:flex-col
-        items-center gap-3
-        p-4 md:p-5
+        items-center gap-2 md:gap-3
+        p-2 md:p-4
         rounded-full
         bg-transparent
         backdrop-blur-md
@@ -66,7 +66,7 @@ export default function ChatBtn() {
       </div>
 
       {/* Toggle button - diamond logo */}
-      <button onClick={() => { setIsClicked(!isClicked) }} className="w-13 h-13 aspect-circle rounded-full flex justify-center items-center bg-[rgba(255, 255, 255, 0.04)]
+      <button onClick={() => { setIsClicked(!isClicked) }} className="w-9 h-9 md:w-13 md:h-13 aspect-circle rounded-full flex justify-center items-center bg-[rgba(255, 255, 255, 0.04)]
         bg-transparent
         backdrop-blur-md
         border-t border-b border-white/90

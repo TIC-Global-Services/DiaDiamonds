@@ -21,7 +21,6 @@ const ProductList: React.FC<ProductListProps> = ({
 }) => {
   const [isLeftOpen, setIsLeftOpen] = useState(false);
   const [isRightOpen, setIsRightOpen] = useState(false);
-  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const {
     sortBy,
     setSortBy,
@@ -32,13 +31,18 @@ const ProductList: React.FC<ProductListProps> = ({
     loadMore,
   } = useProductFilter(products, category);
 
+
   const leftDropdownRef = useRef<HTMLDivElement>(null);
   const rightDropdownRef = useRef<HTMLDivElement>(null);
+
+  const drawerRef = useRef<HTMLDivElement>(null);
 
   // Close dropdowns on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node;
+
+      if (drawerRef.current && drawerRef.current.contains(target)) return;
 
       if (leftDropdownRef.current && !leftDropdownRef.current.contains(target)) {
         setIsLeftOpen(false);
@@ -56,14 +60,17 @@ const ProductList: React.FC<ProductListProps> = ({
   useEffect(() => {
     setIsLeftOpen(false);
     setIsRightOpen(false);
-  }, [category]);
+  }, []);
+
+
+  console.log(sortBy, solitaireVariety);
 
 
   return (
     <section data-theme='light' className="w-full">
 
       {/* FILTER BAR */}
-      <div className="hidden md:flex relative w-full py-[5%] px-[3%] justify-between items-start z-10">
+      <div className="hidden md:flex relative w-full py-[4%] px-[2%] justify-between items-start z-10">
 
         {/* SORT */}
         <div ref={leftDropdownRef}>
@@ -72,7 +79,7 @@ const ProductList: React.FC<ProductListProps> = ({
             options={SORT_OPTIONS}
             selected={sortBy}
             isOpen={isLeftOpen}
-            showSelectedLabel={true}  //only show selected when not default
+            showSelectedLabel={sortBy !== "all"}   //only show selected when not default
             onToggle={() => {
               setIsLeftOpen(p => !p);
               setIsRightOpen(false);
@@ -98,7 +105,7 @@ const ProductList: React.FC<ProductListProps> = ({
             options={VARIETIES}
             selected={solitaireVariety}
             isOpen={isRightOpen}
-            showSelectedLabel={true}  //only show selected when chosen
+            showSelectedLabel={solitaireVariety !== "all"}  //only show selected when chosen
             onToggle={() => {
               setIsRightOpen(p => !p);
               setIsLeftOpen(false);
@@ -112,84 +119,130 @@ const ProductList: React.FC<ProductListProps> = ({
       </div>
 
 
-      {/* MOBILE FILTER BUTTON */}
-      <div className="flex md:hidden w-full py-[4%] px-[3%] m-3 justify-between items-center z-10">
-        <button
-          onClick={() => setIsMobileFilterOpen((p) => !p)}
-          className="flex flex-col gap-[4px]"
-        >
-          <div className="w-6 h-[8px] bg-[#431A1A] rounded-xs"></div>
-          <div className="w-6 h-[8px]  border border-black rounded-xs"></div>
-        </button>
+      {/* MOBILE FILTER */}
+      <div className="md:hidden w-full px-[3%] mt-5">
 
+        {/* Pill */}
+        <div className="flex items-center border border-[#E5E5E5] rounded-full overflow-hidden bg-[#F8F6F3]">
 
-        {/* DROPDOWN */}
-        {isMobileFilterOpen && (
-          <motion.div
-            initial={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
-            animate={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)" }}
-            exit={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="absolute top-[82%] left-5 w-[40%] bg-[#431A1A] rounded-b-[14px] overflow-hidden z-[999]"
+          <button
+            onClick={() => setIsLeftOpen(true)}
+            className="w-1/2 py-3 text-[12px] tracking-wide"
           >
+            SORT BY
+          </button>
 
-            {/* SORT BY */}
-            <div className="px-4 pt-3 pb-2">
-              <h3 className="text-[12px] uppercase text-white/50 tracking-[0.88px]">
-                Sort By
-              </h3>
-            </div>
+          <div className="w-[1px] h-6 bg-[#E5E5E5]" />
 
-            {SORT_OPTIONS.map((opt, index) => (
-              <div
-                key={opt.value}
-                onClick={() => setSortBy(opt.value as SortType)}
-                className={`w-full py-[12px] text-center text-[16px] cursor-pointer
-          ${sortBy === opt.value
-                    ? "text-black bg-[#F7F6F4]"
-                    : "text-black/40 bg-white border-t border-[#F5F5F5]"
-                  }
-        `}
-              >
-                {opt.label}
-              </div>
-            ))}
+          <button
+            onClick={() => setIsRightOpen(true)}
+            className="w-1/2 py-3 text-[12px] tracking-wide"
+          >
+            SOLITAIRE VARIETY
+          </button>
+        </div>
+
+        {/* DRAWER OVERLAY */}
+        {(isLeftOpen || isRightOpen) && (
+          <div
+            onClick={() => {
+              setIsLeftOpen(false);
+              setIsRightOpen(false);
+            }}
+            className="fixed inset-0 bg-black/30 z-40"
+          />
+        )}
+
+        {/* DRAWER */}
+        <div ref={drawerRef}
+          className={`fixed top-0 right-0 h-full w-[100%] bg-white z-50 transform transition-transform duration-300 ease-in-out
+    ${isLeftOpen || isRightOpen ? "translate-x-0" : "translate-x-full"}`}
+        >
+          {/* Header */}
+          <div className="flex items-center justify-between px-5 py-4 border-b border-[#E5E5E5]">
+            <h2 className="text-[13px] tracking-wide">
+              {isLeftOpen ? "SORT BY" : "SOLITAIRE VARIETY"}
+            </h2>
+            <button
+              onClick={(e) => {
+                e.stopPropagation(); 
+                setIsLeftOpen(false);
+                setIsRightOpen(false);
+              }}
+              className="text-lg"
+            >
+              X
+            </button>
+          </div>
+
+          {/* OPTIONS */}
+          <div className="p-5 space-y-5">
+
+            {/* SORT */}
+            {isLeftOpen &&
+              SORT_OPTIONS.map((opt) => (
+                <div
+                  key={opt.value}
+                  onClick={() => {
+                    console.log("SET SORT:", opt.value); // debug
+                    setSortBy(opt.value as SortType);
+                    setIsLeftOpen(false);
+                  }}
+                  className="flex items-center gap-3 cursor-pointer"
+                >
+                  {/* Custom radio */}
+                  <div
+                    className={`w-4 h-4 rounded-full border flex items-center justify-center
+        ${sortBy === opt.value ? "border-[#431A1A]" : "border-gray-400"}`}
+                  >
+                    {sortBy === opt.value && (
+                      <div className="w-2 h-2 bg-[#431A1A] rounded-full" />
+                    )}
+                  </div>
+
+                  <span className="text-[12px] tracking-wide uppercase">
+                    {opt.label}
+                  </span>
+                </div>
+              ))}
 
             {/* VARIETY */}
-            {category === "rings" && (
-              <>
-                <div className="px-4 pt-4 pb-2">
-                  <h3 className="text-[12px] uppercase text-white/50 tracking-[0.88px]">
-                    Solitaire Variety
-                  </h3>
-                </div>
-
-                {VARIETIES.map((opt, index) => (
+            {isRightOpen &&
+              category === "rings" &&
+              VARIETIES.map((opt) => (
+                <div
+                  key={opt.value}
+                  onClick={() => {
+                    setSolitaireVariety(opt.value as VarietyType); // ✅ updates hook
+                    setIsRightOpen(false);
+                  }}
+                  className="flex items-center gap-3 cursor-pointer"
+                >
+                  {/* Radio UI */}
                   <div
-                    key={opt.value}
-                    onClick={() => setSolitaireVariety(opt.value as VarietyType)}
-                    className={`w-full py-[12px] text-center text-[16px] cursor-pointer
-              ${solitaireVariety === opt.value
-                        ? "text-black bg-[#F7F6F4]"
-                        : "text-black/40 bg-white border-t border-[#F5F5F5]"
-                      }
-              ${index === VARIETIES.length - 1 ? "rounded-b-[14px]" : ""}
-            `}
+                    className={`w-4 h-4 rounded-full border flex items-center justify-center
+        ${solitaireVariety === opt.value ? "border-[#431A1A]" : "border-gray-400"}`}
                   >
-                    {opt.label}
+                    {solitaireVariety === opt.value && (
+                      <div className="w-2 h-2 bg-[#431A1A] rounded-full" />
+                    )}
                   </div>
-                ))}
-              </>
-            )}
-          </motion.div>
-        )}
-        {/* HEADING - Mobile */}
-        <CategoryHeading category={category} />
 
+                  <span className="text-[12px] tracking-wide uppercase">
+                    {opt.label}
+                  </span>
+                </div>
+              ))}
+          </div>
+        </div>
+
+        {/* Heading */}
+        <CategoryHeading category={category} />
       </div>
 
+
       {/* PRODUCT GRID */}
-      <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-y-8 md:gap-y-12 pb-10 px-6">
+      <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-4 gap-y-2 md:gap-y-12 mt-7 pb-10 px-3">
         {displayedProducts.map((product) => (
           <ProductCard
             key={product.id}
@@ -202,11 +255,11 @@ const ProductList: React.FC<ProductListProps> = ({
       {/* LOAD MORE */}
       {
         hasMore && (
-          <div className="w-full flex justify-center pb-20">
+          <div className="w-full flex justify-center pb-5 items-center md:items-center">
             <button
               onClick={loadMore}
-              className="py-[14px] px-[8%] md:px-[3%] tracking-widest md:py-[1%] border rounded-full text-[10px] md:text-[13px] uppercase hover:bg-[#F7F6F4] transition
-               border-white shadow-[inset_0px_0px_4px_0px_rgba(0,0,0,0.4)]"
+              className="py-[12px] px-[8%] md:px-[3%] tracking-widest md:py-[1%] border rounded-2xl text-[10px] md:text-[13px] uppercase transition
+               border-white shadow-[0px_0px_10px_0px_rgba(0,0,0,0.1)]"
             >
               View More
             </button>
@@ -218,10 +271,10 @@ const ProductList: React.FC<ProductListProps> = ({
 };
 
 const CategoryHeading: React.FC<{ category: string }> = ({ category }) => (
-  <div className="flex flex-col items-center absolute left-1/2 -translate-x-1/2">
-    <h3 className="text-sm md:text-[36px] uppercase">{category}</h3>
+  <div className="flex flex-col items-center mt-5 md:mt-0 absolute left-1/2 -translate-x-1/2">
+    <h3 className="text-[12px] md:text-[38px] uppercase">{category}</h3>
     <p className="hidden md:block text-xs md:text-[13px]">Scroll to discover</p>
-    <ArrowDown className='w-4 md:w-5' />
+    <ArrowDown className='w-3 md:w-5' />
   </div>
 );
 

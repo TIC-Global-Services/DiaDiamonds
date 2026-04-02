@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import PrimaryBtn from "../Reusable/PrimaryBtn";
 
 
 export default function Shop() {
@@ -45,15 +46,15 @@ export default function Shop() {
   ];
 
   return (
-    <section data-theme="light" className="w-full h-[100dvh] md:h-[130dvh] overflow-hidden md:px-[110px] flex justify-center relative bg-[#FFFFFF]">
+    <section data-theme="light" className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[110px] flex justify-center relative bg-[#FFFFFF]">
       
       {/* First decorative absolute background div */}
       <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-4 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-30 flex flex-col md:flex-row justify-end items-center px-10">
         <div className="mb-10">
-          <h3 className="text-2xl md:text-[40px] font-medium leading-[100%] md:leading-[92%] uppercase text-[#ffffff] pb-3 md:pb-5 text-center md:text-left">
+          <h3 className="h3 leading-[100%] md:leading-[40%] uppercase text-[#ffffff] pb-3 md:pb-3 text-center md:text-left">
             Shop By Colors
           </h3>
-          <p className="text-center md:text-left text-sm md:text-[20px] leading-[120%] text-[#ffffff]/50 md:text-[#ffffff]/90 pb-3 md:pb-5">
+          <p className="p text-center md:text-start text-[#ffffff]/50 md:text-[#ffffff]/90 pb-3 md:pb-5">
             Choose Category
           </p>
 
@@ -61,9 +62,9 @@ export default function Shop() {
           <div className="relative w-[70%] md:w-[70%] mx-auto md:mx-0">
             <button
               onClick={() => setIsDropDownClicked(!isDropDownClicked)}
-              className={`absolute top-0  bg-[#431A1A] rounded-full border border-white/30 shadow-[inset_0px_4px_4px_0_rgba(0,0,0,0.25)] py-[10px] px-[25px] flex justify-between items-center gap-[10px] w-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`}
+              className={`absoulte top-0  bg-[#431A1A] rounded-full border border-white/30 shadow-[inset_0px_4px_4px_0_rgba(0,0,0,0.25)] py-[10px] px-[25px] flex justify-between items-center gap-[10px] w-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`}
             >
-              <h3 className="text-sm md:text-[16px] leading-[142%] text-[#FFFFFF]/50 bg-transparent w-full">
+              <h3 className="text-[12px] md:text-[16px] text-start leading-[142%] text-[#FFFFFF]/50 bg-transparent w-full">
                 {categories[currentCategory]}
               </h3>
               <svg className={`${isDropDownClicked ? 'rotate-180 delay-100 duration-300' : ''}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +112,7 @@ export default function Shop() {
       {/* Product display */}
       <div className="w-full md:w-[70%] mt-60 md:mt-0 md:ml-150 flex flex-col justify-center items-center relative">
         <h2
-          className="font-medium text-xl md:text-[35px] leading-[100%] md:leading-[100%] tracking-[5%] md:tracking-[10%] uppercase pb-4 md:pb-[5.28%]"
+          className="h2 uppercase pb-4 mt-10 md:mt-0 md:pb-[3.28%]"
           style={{
             background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
             WebkitBackgroundClip: "text",
@@ -137,12 +138,14 @@ export default function Shop() {
           {shopItems[currentCategory][activeDiv].name}
         </p>
 
-        <button onClick={() => {const selectedCategory = categories[currentCategory].toLowerCase();
+        <PrimaryBtn onClick={() => {const selectedCategory = categories[currentCategory].toLowerCase();
                 router.push(`/collections/${selectedCategory}`);
                 }}
-          className="BtnAnimation bg-white/30 md:bg-white/40 text-[#431a1a] text-xs md:text-[10px] px-2 py-2 md:px-[3.72%] md:py-[2%] border-[#FFFFFF]/1 tracking-[0.1rem] md:tracking-[0.166rem] rounded-full shadow-[inset_0px_0px_4px_0_rgba(0,0,0,0.5)] uppercase">
+          textColor="text-[#5e2e3d]"
+          hoverColor="#5e2e3d"
+          className="text-[8px] md:text-[16px] font-normal mb-4 tracking-widest bg-transparent">
           VIEW MORE
-        </button>
+        </PrimaryBtn>
       </div>
     </section>
   );

@@ -20,10 +20,8 @@ export function useProductFilter(products: Product[], category: string) {
 
     // VARIETY FILTER
     if (category.toLowerCase() === "rings" && solitaireVariety !== "all") {
-      result = result.filter(
-        (p) =>
-          p.diamondType?.toLowerCase().replace(/\s/g, "") ===
-          solitaireVariety.toLowerCase().replace(/\s/g, ""),
+      result = result.filter((p) =>
+        p.diamondType?.toLowerCase().includes(solitaireVariety.toLowerCase()),
       );
     }
 

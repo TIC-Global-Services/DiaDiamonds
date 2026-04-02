@@ -45,6 +45,7 @@ export const SORT_OPTIONS = [
 ] as const;
 
 export const VARIETIES = [
+  { label: "All", value: "all" },
   { label: "Round Brilliant", value: "round brilliant" },
   { label: "Cushion Cut", value: "cushion cut" },
   { label: "Emerald & Round Cut", value: "emerald round cut" },
@@ -63,4 +64,4 @@ export const COLLECTION_CATEGORIES = [
 export type CollectionCategory = typeof COLLECTION_CATEGORIES[number]["value"];
 
 export type SortType = typeof SORT_OPTIONS[number]["value"];
-export type VarietyType = typeof VARIETIES[number]["value"] | "all";
+export type VarietyType = typeof VARIETIES[number]["value"];

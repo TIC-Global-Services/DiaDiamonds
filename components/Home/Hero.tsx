@@ -5,6 +5,7 @@ import PrimaryBtn from "../Reusable/PrimaryBtn";
 import Image from "next/image";
 import heroImage from "@/public/assets/img/Hero/HeroImage.jpg";
 import { useRouter } from "next/navigation";
+import ContainerLayout from "@/layout/ContainerLayout";
 
 const Hero = () => {
   const router = useRouter();
@@ -33,22 +34,23 @@ const Hero = () => {
       <div className="hero-blur-overlay absolute inset-0 pointer-events-none" />
 
       {/* Content Layer */}
-      <div className="absolute inset-0 flex flex-col justify-center md:justify-end items-center md:items-start
-          text-center md:text-left px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-[14vh] sm:pb-[12vh] md:pb-[8vh] lg:pb-[10vh]">
+      <div className="absolute inset-0 flex flex-col gap-3 justify-center md:justify-end items-center md:items-start
+          text-center md:text-left px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-[16vh] sm:pb-[12vh] md:pb-[8vh] lg:pb-[10vh]">
 
-        <h2 className="text-center md:text-start text-3xl md:text-[44px] tracking-normal text-white w-full md:w-[100%] lg:w-[60%]">
+        <h2 className="h2 text-center md:text-start text-white w-full md:w-[100%] lg:w-[60%]">
           Crafted to last forever
         </h2>
 
-        <p className="text-center md:text-start text-[10px] md:text-[18px] leading-[100%] text-white/90 w-full sm:w-[70%] md:w-[60%] lg:w-[50%] max-w-xl">
+        <p className="p text-center md:text-start text-white/90 w-full sm:w-[70%] md:w-[60%] lg:w-[50%] max-w-xl">
           Iconic Brand Feel Designed to Shine Today And Endure Forever
         </p>
 
         <div onClick={() => router.push("/collections/rings")} >
-          <PrimaryBtn text="DISCOVER MORE" textColor="text-white" />
+          <PrimaryBtn text="DISCOVER MORE" textColor="text-white" className="text-[8px] font-normal md:text-[16px] tracking-widest"/>
         </div>
       </div>
     </section>
+
   );
 };
 

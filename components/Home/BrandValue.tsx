@@ -9,7 +9,7 @@ export default function BrandValue() {
   const router = useRouter();
 
   return (
-    <section className="relative w-full h-[100dvh] md:h-[120dvh] overflow-hidden">
+    <section className="relative w-full min-h-screen overflow-hidden">
 
       {/* Background Image */}
       <Image
@@ -17,19 +17,19 @@ export default function BrandValue() {
         alt="Rings Image"
         fill
         priority
-        className="object-cover object-[60%_10%] md:object-[60%_90%]"
+        className="w-full h-full object-cover object-[60%_10%] md:object-[70%_80%]"
       />
 
       {/* Content */}
-      <div className="absolute inset-0 flex items-center translate-y-14 translate-x-12 md:items-center justify-center md:justify-end px-7 md:px-[9%] pb-10 md:pt-0 md:-translate-x-[-10%]">
+      <div className="absolute inset-0 flex items-center translate-y-20 translate-x-10 md:translate-y-6 md:translate-x-20 md:items-center justify-center md:justify-end px-7 md:px-[9%] pb-10 md:pt-0">
         
-        <div className="w-full max-w-[100%] md:max-w-[70%] text-left">
+        <div className="w-[90%] max-w-[100%] md:max-w-[60%] text-left">
 
-          <h2 className="text-[24px] md:text-[30px] tracking-tight lg:text-[40px]">
+          <h2 className="text-[24px] md:text-[40px] font-medium tracking-tight leading-[100%]">
             Thoughtfully curated for you
           </h2>
 
-          <p className="text-[8px] font-light md:text-base mt-2 leading-[100%] md:leading-[100%]">
+          <p className="text-[8px] md:text-[18px] font-light md:font-normal md:text-base mt-2 leading-[100%] md:leading-[100%]">
             Your diamond journey starts here. Where brilliance meets craftsmanship, and every sparkle tells your story.
           </p>
 

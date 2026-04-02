@@ -69,7 +69,7 @@ export default function TheArtOfRefinement() {
   }
 
   return (
-    <section data-theme="dark" className="w-full gap-2 md:gap-3 py-[21.43%] md:py-0 md:px-[2.5%] md:pt-[13.4%] md:pb-[9.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
+    <section data-theme="dark" className="w-full h-auto gap-2 md:gap-3 py-[21.43%] md:py-0 md:px-[2.5%] md:pt-[3.4%] md:pb-[3.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
 
       {/* First Div */}
       <motion.div
@@ -103,23 +103,19 @@ export default function TheArtOfRefinement() {
       <div className="w-full flex items-start flex-wrap md:flex-nowrap gap-[7.29%] pt-[11.17%] md:pt-0">
 
 
-        <div className="w-full md:w-[51.7%] my-auto md:ml-[1.875%] pb-[13.11%] md:pb-[9.4%] text-center items-center md:text-left">
-          <h2 className="w-[100%] md:w-[120%] mx-auto md:mx-0 text-[#FFFFFF] text-2xl md:text-[40px] leading-[120%] md:leading-[120%] pb-6 md:pb-[10.27%] text-center md:text-left">The Art of Radiant Refinement</h2>
-          <p className="w-full px-4 md:px-0 mx-auto md:mx-0 
-              font-clash-display font-light
-              text-[12px] md:text-[20px]
-              leading-none
-              tracking-[0.05em]
-              text-center md:text-left
-              text-[#FFFFFF]/70 pb-4 md:pb-[12.33%]">
+        <div className="w-full md:w-[59.7%] lg:w-[60.7%] my-auto md:ml-[0.875%] pb-[13.11%] md:pb-[9.4%] text-center items-center md:text-left">
+          <h2 className="w-[100%] md:w-[120%] mx-auto text-[#FFFFFF] h2 pb-6 md:pb-[10.27%] text-center md:text-start">The Art of Radiant Refinement</h2>
+          <p className="w-full px-4 md:px-0 mx-auto font-light text-[12px] md:text-[20px] leading-none
+              tracking-[0.05em] text-center md:text-left text-[#FFFFFF]/70 pb-4 md:pb-[12.33%]">
             Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.
           </p>
           <div onClick={() => router.push("/about")} className="w-full md:w-auto flex justify-center md:justify-start md:mx-0">
-            <PrimaryBtn text="VIEW MORE" hoverColor="rgba(0, 0, 0, 1)" hoverTextColor="#ffffff" textColor="text-white"/>
+            <PrimaryBtn text="VIEW MORE" hoverColor="rgba(255, 255, 255, 1)" hoverTextColor="black" textColor="text-white"
+            className="text-[8px] md:text-[16px] font-normal tracking-widest bg-black/40"/>
           </div>
         </div>
 
-        <div className="relative w-[51.94%] mx-auto md:mx- md:w-[36.82%] aspect-317/451 border-[1px] border-[#FFFFFF]/10 rounded-[10px] overflow-hidden shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+        <div className="relative w-[51.94%] mx-auto md:w-[34.82%] aspect-317/451 border-[1px] border-[#FFFFFF]/10 rounded-[10px] overflow-hidden shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
 
           <Image src={DiamondCaseImg} alt="diamond case" className="w-full h-auto object-center mt-[10.41%]" />
 

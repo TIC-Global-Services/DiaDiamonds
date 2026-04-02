@@ -76,7 +76,7 @@ export default function CollectionItem({ product }: CollectionItemProp): JSX.Ele
         <p className="text-xs md:text-[13px] leading-[140%] md:leading-[19.6px] text-[#606060] pb-1 md:pb-[6px]">
           {product.colors?.[0]?.color || "Default"}
         </p>
-        <h3 className="text-base md:text-[24px] font-[Baskerville] line-clamp-1 uppercase leading-[120%] md:leading-[19.5px] text-[#000000]">
+        <h3 className="text-base md:text-[24px] font-[baskerVille] line-clamp-1 tracking-tight uppercase leading-[120%] md:leading-[19.5px] text-[#000000]">
           {product.productName}
         </h3>
       </div>

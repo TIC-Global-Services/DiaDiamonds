@@ -108,14 +108,14 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
       />
 
       {/* Item Display */}
-      <section data-theme='light' className="w-full md:px-[6.67%] flex justify-between flex-col md:flex-row pt-[8%]">
+      <section data-theme='light' className="w-full md:px-[6.67%] flex justify-between flex-col md:flex-row pt-[2%]">
 
         {/* Left Info & Options */}
-        <div className="w-full md:w-[35%] px-[4.37%] md:px-0 md:pb-[18.96%]">
+        <div className="w-full md:w-[35%] px-[4.37%] md:px-0 md:pb-[1.96%]">
           <h3 className="md:pt-[5.47%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-[clash-Display, Inter] font-normal">
             {product.productName}
           </h3>
-          <p className="md:pt-[2%] text-[#000000] text-base md:text-lg md:leading-[20px] md:tracking-[-0.26px] font-normal font-[clash-Display, sans] align-middle">
+          <p className="md:pt-[2%] text-[#000000] text-[12px] md:text-lg md:leading-[20px] md:tracking-[-0.26px] font-normal font-[clash-Display, sans] align-middle">
             {product.colors[currentVariantIndex]?.color} with diamonds
           </p>
           <p className="md:pt-[2%] md:pb-[10%] font-baskerville text-base md:text-xl leading-[1.2] tracking-tight text-[#000000]">
@@ -214,7 +214,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
         <section data-theme='light' className="w-full px-[3.64%] md:px-0 md:pr-[4.5%] md:pl-[6.67%]">
 
           {/* Description + Bullet Points */}
-          <div className="md:w-[60%] md:ml-auto md:pb-[10%] gap-2 justify-start text-start">
+          <div className="md:w-[60%] md:ml-auto md:pb-[8%] gap-2 justify-start text-start pt-0">
             <p className="mt-[6%] md:pb-[6.44%] font-light text-[10px] md:text-[16px] leading-[1.8] text-start tracking-[-0.32px] text-[#000000]">
               {layoutDescription}
             </p>
@@ -283,7 +283,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
           {/* Bottom Image */}
           {bottomImage && (
-            <div className="w-[50%] ml-auto aspect-[800/600] overflow-hidden mb-[9.72%] flex items-center justify-center">
+            <div className="w-[50%] ml-auto aspect-[800/600] overflow-hidden mb-[6.72%] flex items-center justify-center">
               <Image
                 src={bottomImage}
                 alt="Product bottom"
@@ -299,12 +299,12 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
       )}
 
       {/* You May Also Like */}
-      <section data-theme="light" className="w-full md:pb-[4.51%] mt-[10%]">
-        <h2 className="text-center font-[baskerville, sans] font-normal md:font-medium tracking-tight text-2xl md:text-3xl mb-8 border-t border-gray-100 pt-12">
+      <section data-theme="light" className="w-full md:pb-[0.51%] mt-2 p-4 md:mt-[10%]">
+        <h2 className="text-center font-[baskerville SC] font-normal md:font-medium tracking-tight text-2xl md:text-3xl border-t md:mb-4 border-gray-100 pt-6 md:pt-12">
           You May Also Like
         </h2>
-        <div className="w-full md:w-[94.44%] mx-auto overflow-hidden">
-          <div className={`flex md:gap-[5.81%] ${scrollPercentage[scrollLevel]}`}>
+        <div className="w-[95%] md:w-[94.44%] mx-auto overflow-hidden">
+          <div className={`flex md:gap-[2.81%] ${scrollPercentage[scrollLevel]}`}>
 
             {recommendedProducts.map((item) => (
               <RecommendedProductCard
@@ -327,10 +327,10 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
 
         {/* Scroll Controls */}
-        <div className="w-[90%] md:w-[90%] pb-[8%] mx-auto pt-[20px] md:pt-4 relative flex flex-col md:flex-row md:items-center md:justify-end gap-3">
+        <div className="w-[90%] md:w-[100%] pb-[8%] mx-auto pt-[20px] md:pt-4 relative flex flex-col md:flex-row md:items-center md:justify-end gap-3">
 
           {/* Scrollbar (RIGHT SIDE) */}
-          <div className="w-full md:w-[220px] border-b-[3px] border-[#000000]/20 relative shrink-0">
+          <div className="w-full md:w-[1100px] border-b-[3px] border-[#000000]/20 relative shrink-0">
             <div className={`absolute -translate-y-1/4 top-0 left-0 w-full flex ${scrollBarPosition[scrollLevel]}`}>
               <div className="border-t-[5px] border-[#7C3C3C] w-[50%] md:w-[34%]" />
             </div>
