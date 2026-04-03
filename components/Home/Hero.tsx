@@ -10,25 +10,25 @@ const Hero = () => {
   const router = useRouter();
 
   return (
-    <section className="w-full min-h-screen relative overflow-hidden">
+    <section data-theme='dark' className="w-full min-h-screen relative overflow-hidden">
       
-      {/* ✅ Optimized Background */}
+      {/* Optimized Background */}
       <div className="absolute inset-0">
         <Image
           src={heroImage}
           alt="Hero Background"
           fill
           priority
-          quality={75} // 🔥 reduced
+          quality={75} // reduced
           sizes="100vw"
           className="object-cover object-[40%_100%]"
         />
       </div>
 
-      {/* ✅ Lightweight Overlay */}
+      {/* Lightweight Overlay */}
       <div className="absolute inset-0 bg-black/40" />
 
-      {/* ✅ Content */}
+      {/* Content */}
       <Container className="relative z-10 flex min-h-screen items-end md:items-center lg:items-end">
         <div className="flex flex-col gap-4 pb-28 md:pb-0 lg:pb-[6vh] text-center md:text-left items-center md:items-start max-w-[700px]">
 

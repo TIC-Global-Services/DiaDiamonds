@@ -84,7 +84,7 @@ export default function Testimonials() {
       >
         <div className="w-full py-10 md:py-[8%] min-h-[280px] md:min-h-0 flex flex-col justify-center">
 
-          {/* ⭐ Smooth Animated Content */}
+          {/* Smooth Animated Content */}
           <AnimatePresence mode="wait">
             <motion.div
               key={currentTestimony}
@@ -141,7 +141,7 @@ export default function Testimonials() {
               </h3>
             </div>
 
-             {/* 🔥 Glass Buttons */}
+             {/* Glass Buttons */}
             <div className="flex gap-3 pt-6 md:pt-0">
 
               <button

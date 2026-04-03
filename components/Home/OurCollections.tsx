@@ -12,7 +12,7 @@ export default function OurCollection() {
   const [index, setIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState(4);
 
-  // ✅ Responsive detection
+  // Responsive detection
   useEffect(() => {
     const update = () => {
       if (window.innerWidth < 768) setVisibleItems(2);
@@ -25,7 +25,7 @@ export default function OurCollection() {
     return () => window.removeEventListener("resize", update);
   }, []);
 
-  // ✅ Group products
+  //  Group products
   const groupedProducts = (productsData as Product[]).reduce(
     (acc, product) => {
       if (!acc[product.category]) acc[product.category] = [];
@@ -41,10 +41,10 @@ export default function OurCollection() {
 
   const totalItems = collections.length;
 
-  // ✅ MAX INDEX (CRITICAL)
+  // MAX INDEX (CRITICAL)
   const maxIndex = Math.max(totalItems - visibleItems, 0);
 
-  // ✅ Swipe
+  // Swipe
   const handlers = useSwipeable({
     onSwipedLeft: () => {
       setIndex((i) => Math.min(i + visibleItems, maxIndex));
@@ -55,12 +55,12 @@ export default function OurCollection() {
     trackMouse: false,
   });
 
-  // ✅ Progress (fixed)
+  // Progress (fixed)
   const progress =
     maxIndex === 0 ? 1 : (index + visibleItems) / totalItems;
 
   return (
-    <Section className="bg-white" data-theme="light">
+    <Section theme="light" className="bg-white">
       <ContainerLayout>
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-4 md:gap-6 lg:gap-8 mb-10 md:mb-14 lg:mb-16">
