@@ -39,7 +39,7 @@ export default function BrandValue() {
         {/* Content */}
         <div
           className="
-            w-full
+            w-full md:py-20
             max-w-[250px]
             md:max-w-lg
             flex flex-col
@@ -59,8 +59,7 @@ export default function BrandValue() {
 
           {/* Paragraph */}
           <p
-            className="
-              md:text-sm lg:text-base xl:text-lg
+            className="md:text-sm lg:text-base xl:text-lg
               leading-snug text-black/70
             "
           >

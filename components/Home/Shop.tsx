@@ -100,7 +100,7 @@ export default function Shop() {
                 opacity: isDropDownClicked ? 1 : 0,
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%] flex flex-col bg-white py-[15px] border-b border-t-0 rounded-[10px] shadow-lg z-[100]"
+              className="absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%] flex flex-col bg-white py-[15px] border-b border-t-0 rounded-[10px] shadow-lg"
             >
               {[
                 { label: "Bracelets", idx: 1 },
@@ -146,7 +146,7 @@ export default function Shop() {
       </div>
 
       {/* Product display */}
-      <div className="w-full md:w-[70%] mt-52 sm:mt-52 md:mt-0 md:ml-150 flex flex-col justify-center py-4 items-center relative">
+      <div className="w-full md:w-[80%] mt-52 sm:mt-52 md:mt-0 md:ml-150 flex flex-col px-4 justify-center py-4 items-center relative">
 
         {/* Color label */}
         <AnimatePresence mode="wait">
@@ -202,7 +202,7 @@ export default function Shop() {
             const selectedCategory = categories[currentCategory].toLowerCase();
             router.push(`/collections/${selectedCategory}`);
           }}
-          mode="light"
+          mode="light" className="text-[#582B36] tracking-wider"
         >
           VIEW MORE
         </PrimaryBtn>
