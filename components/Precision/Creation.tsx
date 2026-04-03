@@ -121,23 +121,13 @@ const Creation: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
               className="w-full md:w-[41.67%] border-l-[3px] border-l-[#5A5A5A] px-[8.77%] mt-[2%] md:px-0 md:pl-[2.22%] leading-none tracking-normal md:block"
             >
-              {contentJSON[currentCard].contentText.map((data, id) => {
-                if (data.bold) {
-                  return (
-                    <p key={id} className="font-semibold text-[#383838] text-[13px] md:text-[24px]">
-                      {data.text}
-                    </p>
-                  );
-                } else {
-                  return (
-                    <>
-                      <span key={id} className=" md:block text-[#383838] text-xs md:text-[24px]">
-                        {data.text}
-                      </span>
-                    </>
-                  );
-                }
-              })}
+              <p className="text-[#383838] text-xs md:text-[24px] leading-relaxed">
+                {contentJSON[currentCard].contentText.map((data, id) => (
+                  <span key={id} className={data.bold ? "font-semibold" : ""}>
+                    {data.text}
+                  </span>
+                ))}
+              </p>
             </motion.div>
           </AnimatePresence>
         </div>

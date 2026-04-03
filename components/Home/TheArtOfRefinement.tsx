@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useEffect } from "react";
 import PrimaryBtn from "../Reusable/PrimaryBtn";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -56,20 +56,11 @@ export default function TheArtOfRefinement() {
 
   }, [controls])
 
-  const pantherSparkleRef = useRef<HTMLImageElement>(null);
-
-  const CaptureMousePosition = (e: React.MouseEvent<HTMLImageElement>) => {
-    if (!pantherSparkleRef.current) return;
-
-    const rect = pantherSparkleRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    pantherSparkleRef.current.style.setProperty('--position', `${x}px ${y}px`)
-  }
-
   return (
-    <section data-theme="dark" className="w-full min-h-screen gap-2 sm:px-[4%] sm:gap-3 sm:py-[12%] md:gap-3 py-[21.43%] md:py-0 md:px-[2.5%] md:pt-[3.4%] md:pb-[3.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
+    <section
+      data-theme="dark"
+      className="w-full min-h-screen flex items-center justify-between flex-wrap md:flex-nowrap gap-2 sm:gap-3 md:gap-3 py-16 sm:py-20 md:py-0 px-5 sm:px-[4%] md:px-[2.5%] md:pt-[3.4%] md:pb-[3.51%] bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]"
+    >
 
       {/* First Div */}
       <motion.div
@@ -80,7 +71,7 @@ export default function TheArtOfRefinement() {
         <Image
           src={PantherImg}
           alt="Panther"
-          className="w-full md:w-full object-cover sm:mt-[-6%] md:mt-[-10%] mt-[-10%]"
+          className="w-full object-cover -mt-[10%]"
         />
 
         <motion.svg variants={item} className="absolute top-[9.79%] left-[18.95%] w-[8.44%] aspect-[11.45/12.6]" viewBox="0 0 229 230" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3877)"><path d="M108.415 115.624C112.339 114.924 113.726 112.802 112.943 108.416C113.726 112.802 115.748 114.316 119.685 113.614C115.748 114.316 114.383 116.489 115.156 120.823C114.383 116.489 112.339 114.924 108.415 115.624Z" fill="white" /></g><defs><filter id="filter0_dddddd_505_3877" x="-0.000480652" y="7.62939e-06" width="228.101" height="229.239" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="1.29066" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_505_3877" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="2.58132" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect1_dropShadow_505_3877" result="effect2_dropShadow_505_3877" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="9.03463" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect2_dropShadow_505_3877" result="effect3_dropShadow_505_3877" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="18.0693" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect3_dropShadow_505_3877" result="effect4_dropShadow_505_3877" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="30.9759" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect4_dropShadow_505_3877" result="effect5_dropShadow_505_3877" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="54.2078" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect5_dropShadow_505_3877" result="effect6_dropShadow_505_3877" /><feBlend mode="normal" in="SourceGraphic" in2="effect6_dropShadow_505_3877" result="shape" /></filter></defs></motion.svg>
@@ -103,15 +94,15 @@ export default function TheArtOfRefinement() {
       <div className="w-full flex items-start flex-wrap md:flex-nowrap gap-[7.29%] pt-[11.17%] md:pt-0">
 
 
-        <div className="w-full md:w-[59.7%] lg:w-[60.7%] my-auto md:ml-[0.875%] pb-[13.11%] md:pb-[9.4%] text-center items-center md:text-left">
-          <h2 className="w-[100%] md:w-[120%] mx-auto text-[#FFFFFF] h2 pb-6 md:pb-[10.27%] text-center md:text-start">The Art of Radiant Refinement</h2>
-          <p className="w-full px-4 md:px-0 mx-auto font-light text-[12px] md:text-[20px] leading-none
-              tracking-[0.05em] text-center md:text-left text-[#FFFFFF]/70 pb-4 md:pb-[12.33%]">
+        <div className="w-full md:w-[59.7%] lg:w-[60.7%] my-auto md:ml-[0.875%] pb-10 md:pb-0 text-center md:text-left">
+          <h2 className="w-full text-white h2 pb-6 md:pb-10 text-center md:text-start">The Art of Radiant Refinement</h2>
+          <p className="w-full px-4 md:px-0 font-light text-sm sm:text-base md:text-lg leading-relaxed tracking-wide text-white/70 pb-6 md:pb-12 text-center md:text-left">
             Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.
           </p>
-          <div onClick={() => router.push("/about")} className="w-full md:w-auto flex justify-center md:justify-start md:mx-0">
-            <PrimaryBtn text="VIEW MORE" hoverColor="rgba(255, 255, 255, 1)" hoverTextColor="black" textColor="text-white"
-            className="text-[8px] md:text-[16px] font-normal tracking-widest bg-white/40"/>
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
+            <PrimaryBtn onClick={() => router.push("/collections")}>
+              View More
+            </PrimaryBtn>
           </div>
         </div>
 

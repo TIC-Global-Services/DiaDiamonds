@@ -123,8 +123,6 @@ export default function DiamondSpotlight() {
           <div onClick={() => router.push("/collections/rings")}>
             <PrimaryBtn
               text="DISCOVER MORE"
-              textColor="text-white"
-              className="px-6 py-3 md:px-8 md:py-4"
             />
           </div>
 

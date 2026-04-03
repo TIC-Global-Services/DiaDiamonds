@@ -68,11 +68,8 @@ export default function Craftsmanship() {
         >
           <PrimaryBtn
             text="VIEW BRACELET COLLECTION"
-            hoverColor="rgba(32, 12, 12, 1)"
-            hoverTextColor="text-white"
-            textColor="text-black"
             /* FIX: Raised from 8px → 11px */
-            className="text-[11px] md:text-[16px] font-normal tracking-widest bg-transparent"
+            mode="light"
           />
         </div>
       </motion.div>

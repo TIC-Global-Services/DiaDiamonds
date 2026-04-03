@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ClashDisplay, BaskerVilleSC, ClashGrotesk } from "@/fonts";
+import { ClashDisplay, baskerville, ClashGrotesk } from "@/fonts";
 import { Providers } from "./providers";
 import Navbar from "@/components/Reusable/Navbar";
 import Footer from "@/components/Reusable/Footer";
@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
       </head>
-      <body className={`${ClashDisplay.variable} ${BaskerVilleSC.variable} ${ClashGrotesk.variable} antialiased`}>
+      <body className={`${ClashDisplay.variable} ${baskerville.variable} ${ClashGrotesk.variable} antialiased`}>
         <Navbar />
         <Providers>{children}</Providers>
         <Footer />

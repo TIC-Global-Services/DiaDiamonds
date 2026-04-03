@@ -5,15 +5,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-clash-display: "Helvetica", sans-serif;
-  --font-baskerVille: "Baskerville",;
-  --font-grotesk: "Grotesk", sans-serif;
+  /* ✅ FIXED names */
+  --font-clash-display: "Clash Display", sans-serif;
+  --font-baskerville: "Baskervville SC", serif;
+  --font-grotesk: "Clash Grotesk", sans-serif;
 
   --space-xs: 8px;
   --space-sm: 16px;
   --space-md: 24px;
   --space-lg: 40px;
   --space-xl: 64px;
+}
+
+@theme inline {
+  --font-baskerville: var(--font-baskerville);
 }
 
 
@@ -32,11 +37,6 @@ body {
 
 
 
-/* font utilites */
-
-.font-baskerville {
-  font-family: var(--font-baskerVille), serif;
-}
 
 .font-grotesk {
   font-family: var(--font-grotesk), sans-serif;

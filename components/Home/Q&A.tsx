@@ -1,11 +1,26 @@
 "use client";
 
+import { useState } from "react";
 import QA from "../Reusable/QA";
 import { Parallax } from "react-scroll-parallax";
 import QAImageLeft from '@/public/assets/img/Q&A/QAImage.png'
 import Image from "next/image";
 
+const questions = [
+  { question: "Are all your diamonds certified?", answer: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+  { question: "Do you offer natural and lab-grown diamonds?", answer: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+  { question: "Can I personalise or customise my jewellery?", answer: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+  { question: "Is lifetime care or servicing included?", answer: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+  { question: "What are Solitaire Rings?", answer: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+  { question: "What is your return or exchange policy?", answer: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." },
+];
+
 export default function QandA() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const handleToggle = (idx: number) => {
+    setOpenIndex((prev) => (prev === idx ? null : idx));
+  };
 
   return (
     <section data-theme="light" className="w-full relative">
@@ -32,12 +47,15 @@ export default function QandA() {
 
           <div className="w-full text-xs font-[clash-Display, sans] font-medium border-t border-[#000000]/50" />
 
-          <QA question="Are all your diamonds certified?" answer="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-          <QA question="Do you offer natural and lab-grown diamonds?" answer="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-          <QA question="Can I personalise or customise my jewellery?" answer="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-          <QA question="Is lifetime care or servicing included?" answer="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-          <QA question="What are Solitaire Rings?" answer="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-          <QA question="What is your return or exchange policy?" answer="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+          {questions.map((q, idx) => (
+            <QA
+              key={idx}
+              question={q.question}
+              answer={q.answer}
+              isOpen={openIndex === idx}
+              onToggle={() => handleToggle(idx)}
+            />
+          ))}
         </div>
       </div>
 
