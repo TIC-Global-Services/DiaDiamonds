@@ -5,8 +5,8 @@ import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import PrimaryBtn from "../Reusable/PrimaryBtn";
 import { useRouter } from "next/navigation";
-import imageSrc from '@/public/assets/img/Craftsmanship/CraftManShipImage1.png'
-import bottomImageSrc from '@/public/assets/img/Craftsmanship/CraftManShipImage2.png'
+import imageSrc from "@/public/assets/img/Craftsmanship/CraftManShipImage1.png";
+import bottomImageSrc from "@/public/assets/img/Craftsmanship/CraftManShipImage2.png";
 import Image from "next/image";
 
 const cards = [
@@ -21,9 +21,9 @@ const cards = [
       "Every diamond is cut with absolute precision to unlock its maximum brilliance and fire. Our expert craftsmen carefully calculate each angle and facet to ensure perfect symmetry, allowing light to reflect beautifully through the stone.",
   },
   {
-    title: "Consectetur Crafted to Perfection",
+    title: "Crafted to Perfection",
     content:
-      "From selection to final polish, each diamond undergoes a meticulous crafting process guided by skilled artisans. Only the finest stones are chosen and refined to meet exceptional quality standards",
+      "From selection to final polish, each diamond undergoes a meticulous crafting process guided by skilled artisans. Only the finest stones are chosen and refined to meet exceptional quality standards.",
   },
 ];
 
@@ -39,14 +39,18 @@ export default function Craftsmanship() {
   }, []);
 
   return (
-    <section data-theme="light" className="relative h-auto w-full flex flex-wrap md:flex-nowrap overflow-hidden ">
+    <section
+      data-theme="light"
+      className="relative h-auto w-full flex flex-wrap md:flex-nowrap overflow-hidden"
+    >
       {/* Left Side Image */}
       <motion.div
         initial={{ opacity: 0, x: -10 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
         viewport={{ once: false }}
-        className="w-full md:w-1/2 md:h-full relative overflow-hidden">
+        className="w-full md:w-1/2 md:h-full relative overflow-hidden"
+      >
         <Parallax speed={-10}>
           <div className="relative w-full h-[100vh] md:h-[120dvh]">
             <Image
@@ -58,30 +62,38 @@ export default function Craftsmanship() {
             />
           </div>
         </Parallax>
-        <div onClick={() => router.push("/collections/bracelets")} className="absolute inset-0 z-20 flex justify-center items-end pb-15 md:pb-10 md:mb-8">
-          {/* <button className="glass-btn BtnAnimation text-[10px] md:text-[12px] tracking-[0.166rem] border-[5.3px] rounded-full px-[16px] py-[3px] md:px-[18px] md:py-[7.6px]  uppercase ">
-            VIEW BRACELET COLLECTION
-          </button> */}
-          <PrimaryBtn text="VIEW BRACELET COLLECTION" hoverColor="rgba(32, 12, 12, 1)" hoverTextColor="text-white" textColor="text-black" 
-          className="text-[8px] md:text-[16px] font-normal tracking-widest bg-transparent"/>
+        <div
+          onClick={() => router.push("/collections/bracelets")}
+          className="absolute inset-0 z-20 flex justify-center items-end pb-15 md:pb-10 md:mb-8"
+        >
+          <PrimaryBtn
+            text="VIEW BRACELET COLLECTION"
+            hoverColor="rgba(32, 12, 12, 1)"
+            hoverTextColor="text-white"
+            textColor="text-black"
+            /* FIX: Raised from 8px → 11px */
+            className="text-[11px] md:text-[16px] font-normal tracking-widest bg-transparent"
+          />
         </div>
       </motion.div>
 
       {/* Right Side */}
       <div className="w-full md:w-1/2 flex flex-col h-auto md:h-[120vh] 2xl:h-[150vh]">
-        {/* Top Half Cards + Pagination */}
-        <div className="w-full md:h-1/2 2xl:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-20 lg:mt-30 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
+
+        {/* Top Half — Cards + Pagination */}
+        {/* FIX: Added z-10 so card text sits above the absolute overlay title (z-30).
+            Without this, the title at z-30 rendered in front of card content. */}
+        <div className="relative z-10 w-full md:h-1/2 2xl:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-20 lg:mt-30 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
           <div className="flex flex-col gap-10 justify-center w-full">
-            {/* Cards */}
             {cards.map((card, index) => (
               <div
                 key={index}
                 className={`${index === activeIndex ? "block" : "hidden"}`}
               >
-                <h3 className="font-medium md:text-[24px]  leading-[120%] md:leading-[100%] tracking-[0.03em] text-[#000000] pb-4 md:pb-[20px]">
+                <h3 className="font-medium md:text-[24px] leading-[120%] md:leading-[100%] tracking-[0.03em] text-[#000000] pb-4 md:pb-[20px]">
                   {card.title}
                 </h3>
-                <p className="text-[10px] md:text-[20px] lg:text-[20px] leading-[140%] tracking-tight text-[#000000]/60 w-full md:w-[97%]">
+                <p className="text-[13px] md:text-[20px] lg:text-[20px] leading-[140%] tracking-tight text-[#000000]/60 w-full md:w-[97%]">
                   {card.content}
                 </p>
               </div>
@@ -92,9 +104,12 @@ export default function Craftsmanship() {
               {cards.map((_, idx) => (
                 <div
                   key={idx}
-                  className={`rounded-full transition-all w-3 h-2 ${idx === activeIndex ? "w-5 bg-[#431A1A]" : "bg-[#000000]/10"
-                    }`}
-                ></div>
+                  className={`rounded-full transition-all h-2 ${
+                    idx === activeIndex
+                      ? "w-5 bg-[#431A1A]"
+                      : "w-3 bg-[#000000]/10"
+                  }`}
+                />
               ))}
             </div>
           </div>
@@ -121,7 +136,7 @@ export default function Craftsmanship() {
       </div>
 
       {/* Absolute Overlay Title */}
-      <div className="absolute w-full h-full flex justify-center pt-8 md:pt-[10] lg:pt-[24] xl:pt-[32]">
+      <div className="absolute z-30 pointer-events-none w-full h-full flex justify-center pt-4 md:pt-6 lg:pt-8 xl:pt-10">
         <h2 className="font-medium text-2xl md:text-[40px] leading-[110%] md:leading-[100%] tracking-[0.02em] uppercase text-[#000000]">
           Craftsmanship
         </h2>

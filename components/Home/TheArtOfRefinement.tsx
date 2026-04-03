@@ -69,7 +69,7 @@ export default function TheArtOfRefinement() {
   }
 
   return (
-    <section data-theme="dark" className="w-full h-auto gap-2 md:gap-3 py-[21.43%] md:py-0 md:px-[2.5%] md:pt-[3.4%] md:pb-[3.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
+    <section data-theme="dark" className="w-full h-auto gap-2 sm:px-[4%] sm:gap-3 sm:py-[12%] md:gap-3 py-[21.43%] md:py-0 md:px-[2.5%] md:pt-[3.4%] md:pb-[3.51%] flex items-end justify-between flex-wrap md:flex-nowrap  bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]">
 
       {/* First Div */}
       <motion.div
@@ -80,7 +80,7 @@ export default function TheArtOfRefinement() {
         <Image
           src={PantherImg}
           alt="Panther"
-          className="w-full md:w-full h-auto object-cover mt-[-10%]"
+          className="w-full md:w-full h-auto object-cover sm:mt-[-6%] md:mt-[-10%] mt-[-10%]"
         />
 
         <motion.svg variants={item} className="absolute top-[9.79%] left-[18.95%] w-[2.44%] aspect-[11.45/12.6]" viewBox="0 0 229 230" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dddddd_505_3877)"><path d="M108.415 115.624C112.339 114.924 113.726 112.802 112.943 108.416C113.726 112.802 115.748 114.316 119.685 113.614C115.748 114.316 114.383 116.489 115.156 120.823C114.383 116.489 112.339 114.924 108.415 115.624Z" fill="white" /></g><defs><filter id="filter0_dddddd_505_3877" x="-0.000480652" y="7.62939e-06" width="228.101" height="229.239" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB"><feFlood floodOpacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="1.29066" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_505_3877" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="2.58132" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect1_dropShadow_505_3877" result="effect2_dropShadow_505_3877" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="9.03463" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect2_dropShadow_505_3877" result="effect3_dropShadow_505_3877" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="18.0693" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect3_dropShadow_505_3877" result="effect4_dropShadow_505_3877" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="30.9759" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect4_dropShadow_505_3877" result="effect5_dropShadow_505_3877" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset /><feGaussianBlur stdDeviation="54.2078" /><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect5_dropShadow_505_3877" result="effect6_dropShadow_505_3877" /><feBlend mode="normal" in="SourceGraphic" in2="effect6_dropShadow_505_3877" result="shape" /></filter></defs></motion.svg>
@@ -111,11 +111,11 @@ export default function TheArtOfRefinement() {
           </p>
           <div onClick={() => router.push("/about")} className="w-full md:w-auto flex justify-center md:justify-start md:mx-0">
             <PrimaryBtn text="VIEW MORE" hoverColor="rgba(255, 255, 255, 1)" hoverTextColor="black" textColor="text-white"
-            className="text-[8px] md:text-[16px] font-normal tracking-widest bg-black/40"/>
+            className="text-[8px] md:text-[16px] font-normal tracking-widest bg-white/40"/>
           </div>
         </div>
 
-        <div className="relative w-[51.94%] mx-auto md:w-[34.82%] aspect-317/451 border-[1px] border-[#FFFFFF]/10 rounded-[10px] overflow-hidden shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
+        <div className="relative w-[51.94%] sm:w-[40%] mx-auto md:w-[34.82%] aspect-317/451 border-[1px] border-[#FFFFFF]/10 rounded-[10px] overflow-hidden shadow-[0_4px_4px_0_rgba(0,0,0,0.25)]">
 
           <Image src={DiamondCaseImg} alt="diamond case" className="w-full h-auto object-center mt-[10.41%]" />
 
@@ -146,3 +146,5 @@ export default function TheArtOfRefinement() {
     </section>
   );
 }
+
+

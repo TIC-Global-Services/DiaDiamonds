@@ -18,8 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
+      </head>
       <body className={`${ClashDisplay.variable} ${BaskerVilleSC.variable} ${ClashGrotesk.variable} antialiased`}>
-        <Navbar />  
+        <Navbar />
         <Providers>{children}</Providers>
         <Footer />
       </body>

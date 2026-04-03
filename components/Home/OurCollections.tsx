@@ -1,139 +1,144 @@
 "use client";
 
-import productsData from '@/products_new.json'
+import productsData from "@/products_new.json";
 import { useState } from "react";
 import CollectionItem from "../Products/Cards/HomeProductCard";
 import { useSwipeable } from "react-swipeable";
-import { Product } from '@/types/product';
-
+import { Product } from "@/types/product";
+import Section from "@/components/layouts/Section";
+import ContainerLayout from "@/components/layouts/Container";
 
 export default function OurCollection() {
+  const [desktopPage, setDesktopPage] = useState(0);
+  const [mobileIndex, setMobileIndex] = useState(0);
 
-  const [scrollState, setScrollState] = useState<number>(1);
-  const [mobileScrollState, setMobileScrollState] = useState<number>(0);
-
-  const groupedProducts = (productsData as Product[]).reduce((acc, product) => {
-    if (!acc[product.category]) {
-      acc[product.category] = [];
-    }
-    acc[product.category].push(product);
-    return acc;
-  }, {} as Record<string, Product[]>);
+  const groupedProducts = (productsData as Product[]).reduce(
+    (acc, product) => {
+      if (!acc[product.category]) acc[product.category] = [];
+      acc[product.category].push(product);
+      return acc;
+    },
+    {} as Record<string, Product[]>
+  );
 
   const collections = Object.values(groupedProducts)
-    .flatMap(categoryProducts => categoryProducts.slice(0, 2))
+    .flatMap((cat) => cat.slice(0, 2))
     .slice(0, 12);
 
+  const totalItems = collections.length;
+  const ITEMS_PER_DESKTOP_PAGE = 4;
+  const totalDesktopPages = Math.ceil(totalItems / ITEMS_PER_DESKTOP_PAGE);
 
   const handlers = useSwipeable({
     onSwipedLeft: () => {
-      if (mobileScrollState != 1100) {
-        setMobileScrollState(mobileScrollState + 100);
-      }
+      setMobileIndex((i) => Math.min(i + 1, totalItems - 1));
     },
     onSwipedRight: () => {
-      if (mobileScrollState != 0) {
-        setMobileScrollState(mobileScrollState - 100);
-      }
+      setMobileIndex((i) => Math.max(i - 1, 0));
     },
+    trackMouse: false,
   });
 
-  const mobileScrollMap = {
-    0: 'translate-x-0',
-    100: 'translate-x-[-110%]',
-    200: 'translate-x-[-220%]',
-    300: 'translate-x-[-330%]',
-    400: 'translate-x-[-440%]',
-    500: 'translate-x-[-550%]',
-    600: 'translate-x-[-660%]',
-    700: 'translate-x-[-770%]',
-    800: 'translate-x-[-880%]',
-    900: 'translate-x-[-990%]',
-    1000: 'translate-x-[-1100%]',
-    1100: 'translate-x-[-1210%]',
-  } as const;
-
-  const mobileWidthMap = {
-    0: 'w-0',
-    100: 'w-[10%]',
-    200: 'w-[20%]',
-    300: 'w-[30%]',
-    400: 'w-[40%]',
-    500: 'w-[50%]',
-    600: 'w-[60%]',
-    700: 'w-[70%]',
-    800: 'w-[80%]',
-    900: 'w-[90%]',
-    1000: 'w-[95%]',
-    1100: 'w-[100%]',
-  }
-
-  const mobileTranslateClass = mobileScrollMap[mobileScrollState as keyof typeof mobileScrollMap] || 'translate-x-0';
-  const mobileWidthClass = mobileWidthMap[mobileScrollState as keyof typeof mobileWidthMap] || 'w-0';
-
+  const desktopProgress = (desktopPage + 1) / totalDesktopPages;
+  const mobileProgress = totalItems > 1 ? mobileIndex / (totalItems - 1) : 0;
 
   return (
+    <Section className="bg-white">
+      <ContainerLayout>
 
-    <section className="w-full min-h-screen py-6 mt-4 px-5 overflow-hidden z-30 relative" data-theme='light'>
+        {/* Header */}
+        <div className="flex flex-col items-center text-center gap-4 md:gap-6 lg:gap-8 mb-10 md:mb-14 lg:mb-16">
+          <h2 className="h2 text-black">
+            Our Collections
+          </h2>
 
-      {/* Inner flex container */}
-      <div className="w-full flex flex-col justify-center items-center gap-4 pb-9">
-        {/* Section heading */}
-        <h2 className="h2 leading-[110%] md:leading-[91%] tracking-[-1%] md:tracking-[-3%] uppercase text-[#000000]">
-          Our Collections
-        </h2>
+          <p className="p text-black max-w-[600px]">
+            Timeless rings for every moment, crafted to shine, made to last
+          </p>
+        </div>
 
-        {/* Section paragraph */}
-        <p className="leading-[142%] md:leading-[142%] text-[#000000] text-center">
-          Timeless rings for every moment, crafted to shine, made to last
-        </p>
-      </div>
-
-      {/* Collection items grid */}
-      <div {...handlers} className={`w-full flex flex-nowrap gap-[10%] md:gap-4 delay-100 duration-300 ease-in-out ${scrollState == 1 ? 'md:translate-x-0' : ''} ${scrollState == 2 ? 'md:-translate-x-[100%]' : ''} ${scrollState == 3 ? 'md:-translate-x-[200%]' : ''} ${mobileTranslateClass}`}>
-        {collections.map((product, id) => (
-          <CollectionItem
-            key={product.id || id}
-            product={product}
-          />
-        ))}
-      </div>
-
-      {/* Large sibling div */}
-      <div className="w-[98%] mx-auto  justify-around md:justify-center items-center pt-[40px] md:pt-4 relative gap-4 flex-wrap md:flex-nowrap flex">
-        {/* First inner div with top border */}
-        <div className="w-full border-b-3 border-[#000000]/20 relative shrink">
-          {/* Absolute border div inside first inner div */}
-          <div className={`absolute -translate-y-1/4  w-full top-0 left-0 flex ${scrollState == 1 ? 'justify-start' : ''} ${scrollState == 2 ? 'justify-center' : ''} ${scrollState == 3 ? 'justify-end' : ''}`}>
-            <div className={` border-t-5 border-[#7C3C3C] ${mobileWidthClass}  md:w-[34%]`}></div>
+        {/* Slider */}
+        <div className="overflow-hidden">
+          <div
+            {...handlers}
+            className="flex gap-4 md:gap-6 transition-transform duration-300 ease-in-out"
+            style={{
+              transform:
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? `translateX(calc(-${mobileIndex} * (85vw)))`
+                  : `translateX(calc(-${desktopPage} * (100% + 24px)))`,
+            }}
+          >
+            {collections.map((product, id) => (
+              <CollectionItem key={product.id || id} product={product} />
+            ))}
           </div>
         </div>
 
-        {/* Second inner div with buttons */}
-        <div className="flex md:flex items-center gap-2 ">
-          {/* First button */}
-          <button onClick={() => {
-            if (scrollState != 1) {
-              setScrollState(scrollState - 1);
-            }
-          }} className="w-10 h-10 rounded-[10px] bg-[#F9F9F9] hover:cursor-pointer stroke-black active:stroke-white active:bg-[#7C3C3C] flex justify-center items-center">
-            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.0502 7.07071L9.0857 12.106L14.121 17.0705" strokeLinecap="round" strokeLinejoin="round" /></svg>
+        {/* Bottom Controls */}
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 mt-10 md:mt-12">
 
-          </button>
+          {/* Progress Bar */}
+          <div className="w-full h-[2px] bg-black/20 relative">
+            <div
+              className="absolute top-0 left-0 h-[3px] bg-[#7C3C3C] transition-all duration-300"
+              style={{
+                width: `${
+                  (typeof window !== "undefined" && window.innerWidth < 768
+                    ? mobileProgress
+                    : desktopProgress) * 100
+                }%`,
+              }}
+            />
+          </div>
 
-          {/* Second button */}
-          <button onClick={() => {
-            if (scrollState != 3) {
-              setScrollState(scrollState + 1);
-            }
-          }} className="w-10 h-10 bg-[#F9F9F9] hover:cursor-pointer active:bg-[#7C3C3C] stroke-black active:stroke-white rounded-[10px] flex justify-center items-center">
-            <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.581227 10.4997L5.54053 5.45931L0.500164 0.500004" strokeLinecap="round" strokeLinejoin="round" /></svg>
+          {/* Buttons */}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={() => {
+                if (typeof window !== "undefined" && window.innerWidth < 768) {
+                  setMobileIndex((i) => Math.max(i - 1, 0));
+                } else {
+                  setDesktopPage((p) => Math.max(p - 1, 0));
+                }
+              }}
+              className="w-10 h-10 rounded-lg bg-[#F5F5F5] flex items-center justify-center hover:bg-[#EAEAEA] active:bg-[#7C3C3C] active:stroke-white transition"
+            >
+              <svg width="20" height="20" viewBox="0 0 25 25 " fill="none">
+                <path
+                  d="M14.0502 7.07071L9.0857 12.106L14.121 17.0705"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
 
-          </button>
+            <button
+              onClick={() => {
+                if (typeof window !== "undefined" && window.innerWidth < 768) {
+                  setMobileIndex((i) => Math.min(i + 1, totalItems - 1));
+                } else {
+                  setDesktopPage((p) =>
+                    Math.min(p + 1, totalDesktopPages - 1)
+                  );
+                }
+              }}
+              className="w-10 h-10 rounded-lg bg-[#F5F5F5] flex items-center justify-center hover:bg-[#EAEAEA] active:bg-[#7C3C3C] active:stroke-white transition"
+            >
+              <svg width="20" height="20" viewBox="0 0 7 11" fill="none">
+                <path
+                  d="M0.581227 10.4997L5.54053 5.45931L0.500164 0.500004"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
-      </div>
 
-    </section>
-
+      </ContainerLayout>
+    </Section>
   );
 }

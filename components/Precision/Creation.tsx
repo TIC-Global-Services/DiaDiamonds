@@ -23,14 +23,10 @@ const Creation: React.FC = () => {
       imageLeft: "/assets/img/Precision/Creation/bgImage1.jpg",
       overlayText: "The Diamond Seed",
       contentText: [
-        { text: "Every lab grown diamond used at " },
+        { text: "Every lab grown diamond used at" },
         { text: " Dia Diamonds ", bold: true },
         {
-          text: " begins with a microscopic slice of real diamond called a seed.This seed acts as the foundation where pure carbon atoms attach and grow",
-        },
-        {
-          text: "It is carefully placed inside a controlled growth chamber designed to replicate natural diamond-forming conditions.",
-          newline: true,
+          text: " begins with a microscopic slice of real diamond called a seed.This seed acts as the foundation where pure carbon atoms attach and grow.It is carefully placed inside a controlled growth chamber designed to replicate natural diamond-forming conditions.",
         },
       ],
     },
@@ -39,24 +35,16 @@ const Creation: React.FC = () => {
       overlayText: "Growth Process",
       contentText: [
         { text: "Lab Grown Diamonds ", bold: true },
-        { text: "are grown using advanced scientific methods that recreate nature with precision" },
-        {
-          text: "Through either High Pressure High Temperature (HPHT) or Chemical Vapor Deposition (CVD).carbon atoms crystallize around the seed under extreme heat and controlled energy.",
-          newline: true,
-        },
+        { text: "are grown using advanced scientific methods that recreate nature with precision.Through either High Pressure High Temperature (HPHT) or Chemical Vapor Deposition (CVD).carbon atoms crystallize around the seed under extreme heat and controlled energy." },
       ],
     },
     {
       imageLeft: "/assets/img/Precision/Creation/bgImage3.jpg",
       overlayText: "Crystal Creation",
       contentText: [
-        { text: "rough crystal", bold: true },
+        { text: "Rough crystal", bold: true },
         {
-          text: "Over several weeks, the diamond grows steadily into a rough crystal. Every stage is monitored to ensure clarity, color balance, and structural perfection.",
-        },
-        {
-          text: "At this stage, the diamond is complete in composition and real gemstone in its raw form, ready for refinement.",
-          newline: true,
+          text: "Over several weeks, the diamond grows steadily into a rough crystal. Every stage is monitored to ensure clarity, color balance, and structural perfection.At this stage, the diamond is complete in composition and real gemstone in its raw form, ready for refinement.",
         },
       ],
     },
@@ -66,11 +54,7 @@ const Creation: React.FC = () => {
       contentText: [
         { text: "Final brilliance", bold: true },
         {
-          text: "Expert cutters shape and polish the rough crystal to unlock its brilliance. Advanced mapping technology ensures maximum light reflection, sparkle, and symmetry",
-        },
-        {
-          text: "The finished diamond is graded, certified, and laser-inscribed which is transforming a scientific creation into a timeless piece of fine jewelry.",
-          newline: true,
+          text: "Expert cutters shape and polish the rough crystal to unlock its brilliance. Advanced mapping technology ensures maximum light reflection, sparkle, and symmetry.The finished diamond is graded, certified, and laser-inscribed which is transforming a scientific creation into a timeless piece of fine jewelry.",
         },
       ],
     },
@@ -97,7 +81,7 @@ const Creation: React.FC = () => {
       <div className="relative z-20 w-full h-full flex flex-col py-[25%] md:py-[5.83%]">
 
         {/* Title */}
-        <h2 className="text-center fond-medium tracking-tight text-[24px] md:text-[44px] shrink-0 w-full md:w-[40%] pb-[5.49%]">
+        <h2 className="text-center font-medium tracking-tight text-[24px] md:text-[44px] w-full max-w-[600px] mx-auto pb-[5.49%]">
           designed for you. cherished forever.
         </h2>
 
@@ -144,20 +128,12 @@ const Creation: React.FC = () => {
                       {data.text}
                     </p>
                   );
-                } else if (data.newline) {
-                  return (
-                    <p key={id} className="text-[#383838] font-normal text-[13px] md:text-[24px] md:pt-[4%]">
-                      {data.text}
-                    </p>
-                  );
                 } else {
                   return (
                     <>
-                      <span key={id} className="hidden md:block text-[#383838] text-xs md:text-[24px]">
+                      <span key={id} className=" md:block text-[#383838] text-xs md:text-[24px]">
                         {data.text}
                       </span>
-                      {/* Line break only on desktop */}
-                      <br key={id + "-br"} className="hidden md:block" />
                     </>
                   );
                 }

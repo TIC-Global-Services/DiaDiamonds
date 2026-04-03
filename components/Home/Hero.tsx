@@ -5,19 +5,18 @@ import PrimaryBtn from "../Reusable/PrimaryBtn";
 import Image from "next/image";
 import heroImage from "@/public/assets/img/Hero/HeroImage.jpg";
 import { useRouter } from "next/navigation";
-import ContainerLayout from "@/layout/ContainerLayout";
+import Container from "@/components/layouts/Container";
+import Section from "@/components/layouts/Section";
 
 const Hero = () => {
   const router = useRouter();
 
   return (
-    <section className="hero-section relative w-full min-h-screen overflow-hidden" data-theme="dark">
-      {/* Background Image with Parallax */}
-      <div className="hero-bg absolute inset-0 flex items-start md:items-center justify-center w-full h-full">
-        <Parallax
-          speed={-20}
-          className="w-full h-[155%] -top-[20%] relative"
-        >
+    <Section variant="hero" className="relative overflow-hidden" data-theme="dark">
+
+      {/* Background */}
+      <div className="absolute inset-0">
+        <Parallax speed={-20} className="w-full h-[120%] md:h-[140%] relative">
           <Image
             src={heroImage}
             alt="heroImage"
@@ -25,32 +24,41 @@ const Hero = () => {
             priority
             quality={100}
             sizes="100vw"
-            className="object-cover object-[25%_45%] md:object-[20%_65%]"
+            className="
+            object-cover 
+            object-[15%_85%]   
+            md:object-[55%_95%]"
+            
           />
         </Parallax>
       </div>
 
-      {/* Blur overlay */}
-      <div className="hero-blur-overlay absolute inset-0 pointer-events-none" />
+      {/* Overlay */}
+      <div className="absolute inset-0 hero-blur-overlay pointer-events-none" />
 
-      {/* Content Layer */}
-      <div className="absolute inset-0 flex flex-col gap-3 justify-center md:justify-end items-center md:items-start
-          text-center md:text-left px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-[16vh] sm:pb-[12vh] md:pb-[8vh] lg:pb-[10vh]">
+      {/* Content */}
+      <Container className="relative z-10 flex min-h-screen py-3 items-end justify-center md:justify-start md:items-end lg:justify-start lg:items-end">
+        <div className="flex flex-col gap-3 pb-40 md:pb-[8vh] lg:pb-[6vh] text-center md:text-left items-center md:items-start">
 
-        <h2 className="h2 text-center md:text-start text-white w-full md:w-[100%] lg:w-[60%]">
-          Crafted to last forever
-        </h2>
+          <h2 className="h2 text-white max-w-[700px]">
+            Crafted to last forever
+          </h2>
 
-        <p className="p text-center md:text-start text-white/90 w-full sm:w-[70%] md:w-[60%] lg:w-[50%] max-w-xl">
-          Iconic Brand Feel Designed to Shine Today And Endure Forever
-        </p>
+          <p className="p md:text-lg text-white/90 max-w-[500px]">
+            Iconic Brand Feel Designed to Shine Today And Endure Forever
+          </p>
 
-        <div onClick={() => router.push("/collections/rings")} >
-          <PrimaryBtn text="DISCOVER MORE" textColor="text-white" className="text-[8px] font-normal md:text-[16px] tracking-widest"/>
+          <div onClick={() => router.push("/collections/rings")}>
+            <PrimaryBtn
+              text="DISCOVER MORE"
+              textColor="text-white"
+              className="btn-text tracking-widest"
+            />
+          </div>
+
         </div>
-      </div>
-    </section>
-
+      </Container>
+    </Section>
   );
 };
 

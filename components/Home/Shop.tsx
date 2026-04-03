@@ -1,19 +1,18 @@
 "use client";
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import PrimaryBtn from "../Reusable/PrimaryBtn";
 
-
 export default function Shop() {
-  const router = useRouter()
+  const router = useRouter();
 
   const [activeDiv, setActiveDiv] = useState(0);
   const [isDropDownClicked, setIsDropDownClicked] = useState<boolean>(false);
   const [currentCategory, setCurrentCategory] = useState<number>(0);
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [productChanged, setProductChanged] = useState<boolean>(false);
-  
 
   const categories = ["Rings", "Bracelets", "Necklaces", "Pendants", "Earrings"];
 
@@ -46,9 +45,11 @@ export default function Shop() {
   ];
 
   return (
-    <section data-theme="light" className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[110px] flex justify-center relative bg-[#FFFFFF]">
-      
-      {/* First decorative absolute background div */}
+    <section
+      data-theme="light"
+      className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[100px] flex justify-center relative bg-[#FFFFFF]"
+    >
+
       <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-4 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-30 flex flex-col md:flex-row justify-end items-center px-10">
         <div className="mb-10">
           <h3 className="h3 leading-[100%] md:leading-[40%] uppercase text-[#ffffff] pb-3 md:pb-3 text-center md:text-left">
@@ -62,13 +63,25 @@ export default function Shop() {
           <div className="relative w-[70%] md:w-[70%] mx-auto md:mx-0">
             <button
               onClick={() => setIsDropDownClicked(!isDropDownClicked)}
-              className={`absoulte top-0  bg-[#431A1A] rounded-full border border-white/30 shadow-[inset_0px_4px_4px_0_rgba(0,0,0,0.25)] py-[10px] px-[25px] flex justify-between items-center gap-[10px] w-full cursor-pointer ${isDropDownClicked ? 'z-30 relative' : 'z-20 relative'}`}
+              className={`bg-[#431A1A] rounded-full border border-white/30 shadow-[inset_0px_4px_4px_0_rgba(0,0,0,0.25)] py-[10px] px-[25px] flex justify-between items-center gap-[10px] w-full cursor-pointer relative ${
+                isDropDownClicked ? "z-30" : "z-20"
+              }`}
             >
-              <h3 className="text-[12px] md:text-[16px] text-start leading-[142%] text-[#FFFFFF]/50 bg-transparent w-full">
+              <h3 className="text-[12px] md:text-[16px] text-start text-[#FFFFFF]/50 bg-transparent w-full normal-case tracking-normal leading-normal">
                 {categories[currentCategory]}
               </h3>
-              <svg className={`${isDropDownClicked ? 'rotate-180 delay-100 duration-300' : ''}`} width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.327681 1.71L3.19027 4.3C3.62132 4.69 4.31763 4.69 4.74867 4.3L7.61127 1.71C8.30757 1.08 7.81021 0 6.82654 0H1.10135C0.117684 0 -0.368625 1.08 0.327681 1.71Z" fill="white" fillOpacity="0.5"/>
+              <svg
+                className={`flex-shrink-0 transition-transform duration-300 ${isDropDownClicked ? "rotate-180" : ""}`}
+                width="8"
+                height="5"
+                viewBox="0 0 8 5"
+                fill="none"
+              >
+                <path
+                  d="M0.327681 1.71L3.19027 4.3C3.62132 4.69 4.31763 4.69 4.74867 4.3L7.61127 1.71C8.30757 1.08 7.81021 0 6.82654 0H1.10135C0.117684 0 -0.368625 1.08 0.327681 1.71Z"
+                  fill="white"
+                  fillOpacity="0.5"
+                />
               </svg>
             </button>
 
@@ -78,45 +91,60 @@ export default function Shop() {
               transition={{ duration: 0.7, delay: 0.1, ease: "easeInOut" }}
               className="absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%] flex flex-col bg-white py-[15px] border-b border-t-0 rounded-[10px]"
             >
-              {/* proper arrow fn bodies */}
-              <button onClick={() => { setCurrentCategory(1); setActiveDiv(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 1 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Bracelets</button>
-              <button onClick={() => { setCurrentCategory(2); setActiveDiv(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 2 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Necklaces</button>
-              <button onClick={() => { setCurrentCategory(3); setActiveDiv(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 3 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Pendants</button>
-              <button onClick={() => { setCurrentCategory(0); setActiveDiv(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 0 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Rings</button>
-              <button onClick={() => { setCurrentCategory(4); setActiveDiv(0); setIsDropDownClicked(false); }} className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${currentCategory === 4 ? 'text-[#000000]/80 bg-[#dddcdb]' : 'text-[#000000]/40 bg-[#FFFFFF]'}`}>Earrings</button>
+              {[
+                { label: "Bracelets", idx: 1 },
+                { label: "Necklaces", idx: 2 },
+                { label: "Pendants", idx: 3 },
+                { label: "Rings", idx: 0 },
+                { label: "Earrings", idx: 4 },
+              ].map(({ label, idx }) => (
+                <button
+                  key={label}
+                  onClick={() => {
+                    setCurrentCategory(idx);
+                    setActiveDiv(0);
+                    setIsDropDownClicked(false);
+                  }}
+                  className={`text-sm px-[27px] py-[9px] text-left hover:cursor-pointer border-0 ${
+                    currentCategory === idx
+                      ? "text-[#000000]/80 bg-[#dddcdb]"
+                      : "text-[#000000]/40 bg-[#FFFFFF]"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
             </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Second decorative background — color strips */}
+
       <div className="w-[120%] md:w-full h-full md:h-[120%] overflow-hidden bg-[#f7f6f4] absolute top-0 left-0 -translate-y-[50%] -translate-x-[10%] md:-translate-x-[50%] md:-translate-y-[10%] rounded-full z-20 flex md:flex-col">
-        {/* 0-indexed activeDiv */}
-        <button
-          onMouseEnter={() => { setActiveDiv(0); setIsHovered(true); setProductChanged(true); }}
-          onMouseLeave={() => setIsHovered(false)}
-          className={`w-full grow hover:cursor-pointer overflow-hidden bg-[#FAC8AD]/30 ${activeDiv === 0 ? 'opacity-100' : 'opacity-20'}`}
-        />
-        <button
-          onMouseEnter={() => { setActiveDiv(1); setIsHovered(true); setProductChanged(true); }}
-          onMouseLeave={() => setIsHovered(false)}
-          className={`w-full grow hover:cursor-pointer overflow-hidden bg-[#F8CC96] ${activeDiv === 1 ? 'opacity-100' : 'opacity-20'}`}
-        />
-        <button
-          onMouseEnter={() => { setActiveDiv(2); setIsHovered(true); setProductChanged(true); }}
-          onMouseLeave={() => setIsHovered(false)}
-          className={`w-full grow hover:cursor-pointer overflow-hidden bg-[#D9D9D9] ${activeDiv === 2 ? 'opacity-100' : 'opacity-20'}`}
-        />
+        {[
+          { color: "bg-[#FAC8AD]/30", idx: 0 },
+          { color: "bg-[#F8CC96]", idx: 1 },
+          { color: "bg-[#D9D9D9]", idx: 2 },
+        ].map(({ color, idx }) => (
+          <button
+            key={idx}
+            onMouseEnter={() => { setActiveDiv(idx); setIsHovered(true); setProductChanged(true); }}
+            onMouseLeave={() => setIsHovered(false)}
+            className={`w-full grow hover:cursor-pointer overflow-hidden ${color} ${
+              activeDiv === idx ? "opacity-100" : "opacity-20"
+            }`}
+          />
+        ))}
       </div>
 
-      {/* Product display */}
-      <div className="w-full md:w-[70%] mt-60 md:mt-0 md:ml-150 flex flex-col justify-center items-center relative">
+
+      <div className="w-full md:w-[70%] mt-60 md:mt-0 md:ml-150 flex flex-col justify-center items-center relative z-40">
         <h2
           className="h2 uppercase pb-4 mt-10 md:mt-0 md:pb-[3.28%]"
           style={{
             background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
             WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent"
+            WebkitTextFillColor: "transparent",
           }}
         >
           {shopItems[currentCategory][activeDiv].color}
@@ -138,12 +166,15 @@ export default function Shop() {
           {shopItems[currentCategory][activeDiv].name}
         </p>
 
-        <PrimaryBtn onClick={() => {const selectedCategory = categories[currentCategory].toLowerCase();
-                router.push(`/collections/${selectedCategory}`);
-                }}
+        <PrimaryBtn
+          onClick={() => {
+            const selectedCategory = categories[currentCategory].toLowerCase();
+            router.push(`/collections/${selectedCategory}`);
+          }}
           textColor="text-[#5e2e3d]"
           hoverColor="#5e2e3d"
-          className="text-[8px] md:text-[16px] font-normal mb-4 tracking-widest bg-transparent">
+          className="text-[11px] md:text-[16px] font-normal mb-4 tracking-widest bg-transparent"
+        >
           VIEW MORE
         </PrimaryBtn>
       </div>

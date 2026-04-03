@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            className="text-white font-medium text-xl md:text-5xl"
+            className="text-white font-medium text-xl md:text-3xl"
           >
             Lab Grown Diamonds
           </motion.h2>

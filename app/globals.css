@@ -1,19 +1,28 @@
 @import "tailwindcss";
 
+
+/* Variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-clash-display: "Helvetica", sans-serif; /* Fallback included */
+  --font-clash-display: "Helvetica", sans-serif;
   --font-baskerVille: "Baskerville", serif;
   --font-grotesk: "Grotesk", sans-serif;
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
 }
 
+
+
+/* Base layout */
 html,
 body {
   overflow-x: hidden;
 }
-
-
 
 body {
   background: var(--background);
@@ -21,125 +30,102 @@ body {
   font-family: var(--font-clash-display);
 }
 
+
+
+/* font utilites */
+
 .font-baskerville {
-  font-family: var(--font-baskerVille), "sans-serif";
+  font-family: var(--font-baskerVille), serif;
 }
 
 .font-grotesk {
-  font-family: var(--font-grotesk), "sans-serif";
+  font-family: var(--font-grotesk), sans-serif;
 }
+
+/* Heading */
 
 .h2 {
-  @apply text-2xl md:text-3xl lg:text-[44px] xl:text-[44px] 2xl:text-[48px]
-         font-medium leading-[110%] tracking-[0em];
-}
-
-.p {
-  @apply text-[12px] md:text-[14px] lg:text-[14px] xl:text-2xl 2xl:text-xl font-normal leading-[100%] tracking-[0]
+  @apply text-xl 
+         md:text-[30px] 
+         lg:text-[34px]
+         xl:text-[44px]
+         font-medium leading-[110%] tracking-tight;
 }
 
 .h3 {
-  @apply font-medium uppercase tracking-normal leading-[0.92]
-    text-[24px] md:text-[30px] lg:text-[40px] xl:text-[40px] 2xl:text-[44px]; 
+  @apply text-[18px] 
+         md:text-[30px] 
+         lg:text-[40px]
+         font-medium uppercase leading-tight tracking-tight;
 }
 
-/* Base styles */
+/* Para Text*/
+
+.p {
+  @apply text-[10px]
+          md:text-[14px] 
+         lg:text-[20px]
+         font-normal leading-[110%] tracking-tight;
+}
+
+
+/* Button text*/
+
+.btn-text {
+  font-family: var(--font-clash-display), sans-serif;
+  font-weight: 500;
+  font-size: 8px; 
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .btn-text {
+    font-size: 12px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .btn-text {
+    font-size: 14px;
+  }
+}
+
+/* Base Style */
+
 @layer base {
   h2 {
     font-family: var(--font-clash-display);
     text-transform: uppercase;
+    line-height: 1.3;
   }
 
   p {
     font-family: var(--font-clash-display);
     font-weight: 400;
-    font-size: 14px; /* Small screens default */
     line-height: 1.5;
-    letter-spacing: 0em;
-    margin: 0 0 1rem 0;
+    margin-bottom: 1rem;
   }
 
-  /* Medium screens (tablets) */
-  @media (min-width: 640px) and (max-width: 1023px) {
+  /* Tablet */
+  @media (min-width: 768px) {
     h2 {
-      line-height: 1.5;
-      letter-spacing: -1px;
-    }
-    p {
-      line-height: 1.5;
+      letter-spacing: -0.5px;
     }
   }
 
-  /* Large screens (desktops) */
+  /* Desktop */
   @media (min-width: 1024px) {
     h2 {
-      line-height: 1.5;
       letter-spacing: 0.02em;
     }
+
     p {
-      line-height: 1.4;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.02em;
     }
   }
-}
-
-.btn-text {
-  font-family: var(--font-clash-display), "sans";
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 16px;
-  line-height: 17.6px;
-  letter-spacing: 1.6px;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: uppercase;
-}
-
-.step-carousel {
-  display: flex;
-  animation: step-slide 9s steps(3) infinite; /* 3 = number of cards */
-}
-
-@keyframes step-slide {
-  0% {
-    transform: translateX(0);
-  }
-  33% {
-    transform: translateX(-100%);
-  }
-  66% {
-    transform: translateX(-200%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-
-/* Hide scrollbar utility */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-/* Smooth transitions */
-.hero-bg,
-.hero-blur-overlay {
-  transition: all 0.5s ease;
-}
-
-/* Default state */
-.hero-blur-overlay {
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-}
-
-/* WHEN MENU OPENS */
-.menu-open .hero-blur-overlay {
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  overflow: hidden;
 }

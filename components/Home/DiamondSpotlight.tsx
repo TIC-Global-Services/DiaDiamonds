@@ -1,10 +1,11 @@
-'use client';
+"use client";
+
 import { useRef, useEffect, useState } from "react";
 import PrimaryBtn from "../Reusable/PrimaryBtn";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import DiamondSpotLightImage from '@/public/assets/img/DiamondSpotlight/DiamondSpotlight.png'
-import DiamondSpotLightColoredImage from '@/public/assets/img/DiamondSpotlight/DiamondSpotlightColored.png'
+import DiamondSpotLightImage from "@/public/assets/img/DiamondSpotlight/DiamondSpotlight.png";
+import DiamondSpotLightColoredImage from "@/public/assets/img/DiamondSpotlight/DiamondSpotlightColored.png";
 
 export default function DiamondSpotlight() {
   const router = useRouter();
@@ -46,21 +47,21 @@ export default function DiamondSpotlight() {
     if (!elementRef.current || !coloredImageRef.current || !borderRef.current) return;
 
     const element = elementRef.current.getBoundingClientRect();
-    const x = (e.clientX - element.left) - offsetX;
-    const y = (e.clientY - element.top) - offsetY;
+    const x = e.clientX - element.left - offsetX;
+    const y = e.clientY - element.top - offsetY;
 
-    coloredImageRef.current.style.setProperty('--position', `${x}px ${y}px`);
-    borderRef.current.style.setProperty('--translate', '0% 0%');
-    borderRef.current.style.setProperty('--top', `${y}px`);
-    borderRef.current.style.setProperty('--left', `${x}px`);
+    coloredImageRef.current.style.setProperty("--position", `${x}px ${y}px`);
+    borderRef.current.style.setProperty("--translate", "0% 0%");
+    borderRef.current.style.setProperty("--top", `${y}px`);
+    borderRef.current.style.setProperty("--left", `${x}px`);
   };
 
   return (
     <section
-      className="w-full relative h-[100dvh] md:h-[100dvh] overflow-hidden"
       ref={elementRef}
       onMouseMove={captureMousePosition}
       data-theme="dark"
+      className="relative w-full h-[100dvh] overflow-hidden"
     >
       {/* Base Image */}
       <Image
@@ -68,54 +69,65 @@ export default function DiamondSpotlight() {
         alt="diamond spotlight"
         fill
         priority
-        className="w-full h-full object-cover"
+        className="object-cover"
       />
 
-      {/* Colored Reveal Image */}
+      {/* Colored Reveal */}
       <div
         ref={coloredImageRef}
         className="absolute inset-0"
         style={{
-          WebkitMaskImage: 'linear-gradient(to right, black, black)',
-          maskImage: 'linear-gradient(to right, black, black)',
-          maskRepeat: 'no-repeat',
+          WebkitMaskImage: "linear-gradient(to right, black, black)",
+          maskImage: "linear-gradient(to right, black, black)",
+          maskRepeat: "no-repeat",
           maskSize: maskSize,
-          maskPosition: 'var(--position, center)',
+          maskPosition: "var(--position, center)",
         }}
       >
         <Image
           src={DiamondSpotLightColoredImage}
           alt="diamond spotlight colored"
           fill
-          className="object-cover w-full h-full" 
+          className="object-cover"
         />
       </div>
 
-      {/* Spotlight Border Box */}
+      {/* Spotlight Border */}
       <div
         ref={borderRef}
         style={{
-          top: 'var(--top, 50%)',
-          left: 'var(--left, 50%)',
-          translate: 'var(--translate, -50% -50%)',
-          width: isMobile ? '114px' : maskSize.split(' ')[0],
-          height: isMobile ? '104px' : maskSize.split(' ')[1],
+          top: "var(--top, 50%)",
+          left: "var(--left, 50%)",
+          translate: "var(--translate, -50% -50%)",
+          width: isMobile ? "114px" : maskSize.split(" ")[0],
+          height: isMobile ? "104px" : maskSize.split(" ")[1],
         }}
-        className="absolute border border-white rounded-sm z-10"
+        className="absolute border border-white/80 rounded-sm z-10 pointer-events-none"
       />
 
       {/* Content */}
-      <div className="absolute inset-0 z-20 w-full h-full flex justify-center items-end pb-[8%] md:pb-[5%]">
-        <div className="flex flex-col justify-between items-center w-[90%] sm:w-[65%] md:w-[45%] gap-4">
-          <h2 className="h2 leading-[100%] tracking-tight md:leading-[100%] uppercase text-[#EFFFFF] text-center">
+      <div className="absolute inset-0 z-20 flex items-end justify-center pb-12 md:pb-16 lg:pb-20">
+
+        <div className="flex flex-col items-center text-center gap-4 md:gap-6 lg:gap-8 max-w-[600px] px-4">
+
+          <h2 className="h2 text-white">
             Designed for you.<br />
-            <span className="hidden md:inline">Crafted for a lifetime.</span>
-            <span className="md:hidden">Crafted for a<br />lifetime.</span>
+            <span className="hidden md:inline">
+              Crafted for a lifetime.
+            </span>
+            <span className="md:hidden">
+              Crafted for a<br />lifetime.
+            </span>
           </h2>
+
           <div onClick={() => router.push("/collections/rings")}>
-            <PrimaryBtn text="DISCOVER MORE" textColor="text-white" className="text-[8px] md:text-[16px] font-normal tracking-widest">
-            </PrimaryBtn>
+            <PrimaryBtn
+              text="DISCOVER MORE"
+              textColor="text-white"
+              className="px-6 py-3 md:px-8 md:py-4"
+            />
           </div>
+
         </div>
       </div>
     </section>

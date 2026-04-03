@@ -17,7 +17,7 @@ return (
       <img
         src={BgImage}
         alt="Emotions"
-        className="w-full object-cover  md:translate-x-0 md:object-fill h-[100svh] md:h-auto"
+        className="w-full object-cover object-[25%_50%]  md:translate-x-0 md:object-fill h-[100dvh] md:h-auto"
       />
 
       {/* First absolute overlay */}

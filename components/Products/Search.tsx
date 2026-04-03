@@ -209,7 +209,7 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
           </div>
         )
       ) : (
-        <div className='translate-x-20'>
+        <div className='translate-x-2'>
           <h2 className="text-xl md:text-[24px] tracking-[0%] text-[#000000] mb-4 md:mb-6">
             Spotlight
           </h2>

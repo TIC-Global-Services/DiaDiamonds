@@ -11,7 +11,7 @@ const Brilliance: React.FC = () => {
   return (
     <section
       data-theme="light"
-      className="w-full relative bg-[linear-gradient(180deg,#F8CC96_0%,#F8D8B1_0.01%,#F7E7D3_0.02%,#F7EAD9_0.03%,#F7F6F4_100%)] py-12 md:py-[5%] px-4 sm:px-6 lg:px-[10.56%]"
+      className="w-full relative bg-[linear-gradient(180deg,#F8CC96_0%,#F8D8B1_0.01%,#F7E7D3_0.02%,#F7EAD9_0.03%,#F7F6F4_100%)] py-14 md:py-[5%] px-6 sm:px-6 lg:px-[10.56%]"
     >
       {/* TITLE */}
       <motion.h2
@@ -19,7 +19,7 @@ const Brilliance: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-center text-[20px] md:text-[32px] lg:text-[40px] leading-[28px] md:leading-[40px] lg:leading-[48px] tracking-[0%] pb-6 md:pb-[2.47%]"
+        className="text-center h2 tracking-[0%] pb-8 md:pb-[2.47%]"
       >
         THE ART OF CHOOSING BRILLIANCE
       </motion.h2>
@@ -94,7 +94,7 @@ const Brilliance: React.FC = () => {
       </div>
 
       {/* TABLET / DESKTOP LAYOUT */}
-      <div className="hidden md:block relative w-full max-w-[1200px] mx-auto">
+      <div className="hidden md:block relative w-full max-w-[1200px] xl:max-w-[1400px] 2xl:max-w-[1600px] mx-auto">
 
         {/* BG IMAGE */}
         <motion.div
@@ -130,7 +130,7 @@ const Brilliance: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-            className="absolute top-[15%] left-0 lg:top-[15.1%] lg:left-[0%] w-[45%] lg:w-[35%]"
+            className="absolute top-[15%] left-0 md:top-[2%] md:left-[0%] lg:top-[3.1%] lg:left-[0%] w-[45%] lg:w-[35%]"
           >
             <GlassCard className="w-full p-5 lg:p-6 border-0 rounded-[16px] lg:rounded-[20px] bg-transparent
               backdrop-blur-md
@@ -154,7 +154,7 @@ const Brilliance: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-            className="absolute top-[40%] right-0 lg:top-[45.92%] lg:right-[0%] w-[45%] lg:w-[35%]"
+            className="absolute top-[40%] right-0 md:top-[63.92%] lg:top-[45.92%] lg:right-[0%] w-[45%] lg:w-[35%]"
           >
             <GlassCard className="w-full p-5 lg:p-6 border-0 rounded-[16px] lg:rounded-[20px] bg-transparent
               backdrop-blur-md

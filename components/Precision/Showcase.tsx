@@ -32,7 +32,7 @@ const Showcase: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeIn" }}
-            className="text-[#FFFFFF] text-xl md:text-[40px] leading-[120%] md:leading-[48px] tracking-[2%] text-center md:text-left"
+            className="text-[#FFFFFF] h3 tracking-[2%] text-center md:text-left"
           >
             The Intelligent Luxury
           </motion.h3>
@@ -46,7 +46,7 @@ const Showcase: React.FC = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeIn" }}
-            className="text-[#FFFFFF] text-xl md:text-[40px] leading-[120%] md:leading-[48px] tracking-[2%] text-center md:text-left mt-4 md:mt-0"
+            className="text-[#FFFFFF] h2 tracking-[2%] text-center md:text-left mt-4 md:mt-0"
           >
             DIA diamonds
           </motion.h2>
