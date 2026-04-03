@@ -26,11 +26,11 @@ export default function Footer() {
 
 
   return (
-    <footer className="w-full min-h-[50dvh] bg-[#0b0b0b] px-2 md:px-6 pt-4 data-theme='dark' ">
+    <footer data-theme='dark' className="w-full min-h-[50dvh] bg-[#0b0b0b] px-2 md:px-6 pt-4">
 
       {/* ================= NAV ================= */}
       <div className="flex">
-        <ul className="flex flex-wrap md:w-1/2 items-center justify-center md:justify-start md:items-start gap-4 md:gap-6 w-full">
+        <ul className="flex flex-wrap md:w-1/2 items-center justify-start md:justify-start md:items-start gap-4 md:gap-6 w-full">
           {NAV_ITEMS.map((item) => {
             if (item.label === "Collections") {
               return (
@@ -201,7 +201,7 @@ export default function Footer() {
 
       {/* ================= BOTTOM BAR ================= */}
 
-      <div className="w-full flex flex-col items-center p-2 justify-start gap-1 md:gap-0 md:flex-row md:items-center md:justify-between">
+      <div className="w-full flex flex-col items-center p-2 justify-start md:gap-0 md:flex-row md:items-center md:justify-between">
         <p className="font-medium text-[12px] md:text-sm lg:text-[18px] leading-tight text-[#FFFFFF] text-center md:text-left">
           © 2026 Dia Diamonds . All Rights Reserved.
         </p>

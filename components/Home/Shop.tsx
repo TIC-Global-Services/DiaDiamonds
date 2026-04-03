@@ -55,7 +55,7 @@ export default function Shop() {
   return (
     <section
       data-theme="light"
-      className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[100px] flex justify-center relative bg-[#FFFFFF]"
+      className="w-full h-[100dvh] md:h-[100dvh] overflow-hidden md:px-[100px] flex justify-center relative bg-[#FFFFFF]"
     >
       {/* Dark circle — left/top — category selector */}
       <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-4 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-30 flex flex-col md:flex-row justify-end items-center px-10">
@@ -139,14 +139,14 @@ export default function Shop() {
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => setActiveDiv(idx)}
             className={`w-full grow cursor-pointer overflow-hidden transition-opacity duration-300 ease-in-out ${color} ${
-              activeDiv === idx ? "opacity-100" : "opacity-25 hover:opacity-50"
+              activeDiv === idx ? "opacity-100" : "opacity-20 hover:opacity-50"
             }`}
           />
         ))}
       </div>
 
       {/* Product display */}
-      <div className="w-full md:w-[70%] mt-44 sm:mt-52 md:mt-0 md:ml-150 flex flex-col justify-center gap-6 items-center relative z-20">
+      <div className="w-full md:w-[70%] mt-48 sm:mt-52 md:mt-0 md:ml-150 flex flex-col justify-center items-center relative z-10">
 
         {/* Color label */}
         <AnimatePresence mode="wait">
@@ -156,7 +156,7 @@ export default function Shop() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="h2 uppercase pb-4 mt-10 md:mt-0 md:pb-[3.28%]"
+            className="text-xl md:text-[35px] font-normal md:font-medium leading-[100%] tracking-wide uppercase pb-4 mt-10 md:mt-0 md:pb-[3.28%]"
             style={{
               background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
               WebkitBackgroundClip: "text",
@@ -168,7 +168,7 @@ export default function Shop() {
         </AnimatePresence>
 
         {/* Product image */}
-        <div className="w-[55%] sm:w-[48%] md:w-[65%] aspect-[450/157]">
+        <div className="w-[35%] sm:w-[48%] md:w-[65%] aspect-[450/157]">
           <AnimatePresence mode="wait">
             <motion.img
               key={imageKey}
@@ -191,7 +191,7 @@ export default function Shop() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: "easeOut", delay: 0.05 }}
-            className="pt-5 md:pt-7 text-base md:text-2xl leading-snug text-black pb-5 md:pb-9 font-baskerville"
+            className="pt-5 md:pt-7 text-base md:text-2xl leading-snug text-black pb-2 md:pb-9 font-baskerville"
           >
             {currentItem.name}
           </motion.p>

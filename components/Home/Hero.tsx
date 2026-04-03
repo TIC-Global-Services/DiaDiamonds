@@ -21,7 +21,7 @@ const Hero = () => {
           priority
           quality={75} // reduced
           sizes="100vw"
-          className="object-cover object-[40%_100%]"
+          className="object-cover object-[10%_45%] md:object-[40%_100%]"
         />
       </div>
 
@@ -29,7 +29,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/40" />
 
       {/* Content */}
-      <Container className="relative z-10 flex min-h-screen items-end md:items-center lg:items-end">
+      <Container className="relative z-10 flex min-h-screen pt-8 items-center md:items-center lg:items-end">
         <div className="flex flex-col gap-4 pb-28 md:pb-0 lg:pb-[6vh] text-center md:text-left items-center md:items-start max-w-[700px]">
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-[110%] tracking-tight text-white uppercase">
@@ -42,7 +42,7 @@ const Hero = () => {
 
           <PrimaryBtn
             onClick={() => router.push("/collections/rings")}
-            className="px-8 py-2 text-[11px] md:text-sm tracking-widest uppercase"
+            className="px-3 py-3 md:px-8 md:py-2 text-[11px] md:text-sm tracking-widest uppercase"
           >
             Discover More
           </PrimaryBtn>

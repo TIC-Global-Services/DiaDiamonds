@@ -76,7 +76,7 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
 
       {/* CATEGORY MENU */}
       <section className="w-full mx-auto pt-8">
-        <div className="flex items-center justify-start md:justify-center gap-2 sm:gap-4 md:gap-4 px-2 md:px-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-2">
+        <div className="flex items-center justify-start md:justify-center gap-2 sm:gap-4 md:gap-4 px-2 md:px-8 md:overflow-hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-2">
           {categoryMenu.map((cat, idx) => {
             const isActive = category === cat.slug;
 
