@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import productsData from '@/products_new.json';
 import { useRouter } from 'next/navigation';
@@ -123,44 +123,72 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           </p>
 
           {/* Mobile Image - moved below size and variants */}
-          <div className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mb-[20px]">
-            <Image
-              width={400}
-              height={400}
-              src={product.colors[currentVariantIndex]?.image}
-              alt={product.productName}
-              loading="lazy"
-              unoptimized
-              className="w-full h-full object-contain"
-            />
-          </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentVariantIndex}
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mb-[18px]"
+              >
+                <Image
+                  width={400}
+                  height={400}
+                  src={product.colors[currentVariantIndex]?.image}
+                  alt={product.productName}
+                  className="w-full h-full object-contain"
+                />
+              </motion.div>
+            </AnimatePresence>
+          
 
           {/* Color Variants */}
-          <div className="flex justify-around md:gap-[6%] md:pb-[6%] mt-4 md:mt-0 flex-wrap overflow-x-auto px-4 md:px-0 border-b border-[#000000]/10">
+          <div className="flex justify-around md:gap-[6%] md:pb-[4%] mt-4 md:mt-0 flex-wrap overflow-x-auto px-4 md:px-0 border-b border-[#000000]/10">
             {product.colors?.map((colorObj: { color: string; image: string }, idx: number) => (
-              <div
+              <motion.div
                 key={idx}
                 onClick={() => setCurrentVariantIndex(idx)}
-                className="w-[60px] md:w-[22%] shrink-0 cursor-pointer flex flex-col justify-end items-center pb-2"
+                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.05 }}
+                className="w-[60px] md:w-[20%] shrink-0 cursor-pointer flex flex-col justify-end items-center"
               >
-                <div className="w-full aspect-[4/3] flex items-center justify-center p-1 mb-2">
+                {/* IMAGE */}
+                <motion.div
+                  animate={{
+                    scale: currentVariantIndex === idx ? 1.1 : 1,
+                    borderColor: currentVariantIndex === idx ? "#000" : "transparent",
+                  }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                  className="w-full aspect-[4/3] flex items-center justify-center p-1 mb-2 border rounded-md mt-2 pb-2"
+                >
                   <Image
                     width={100}
                     height={100}
                     src={colorObj.image}
                     alt={colorObj.color}
-                    unoptimized
-                    loading="lazy"
                     className="w-full h-full object-contain"
                   />
-                </div>
-                <div className="w-full border-t border-transparent relative">
-                  <div className={`absolute top-[-1px] left-0 w-full h-[1px] ${currentVariantIndex === idx ? 'bg-black' : 'bg-transparent'}`} />
-                  <h3 className="text-[10px] md:text-sm tracking-wide text-center text-[#000000] pt-2 capitalize">
-                    {colorObj.color}
-                  </h3>
-                </div>
-              </div>
+                </motion.div>
+
+                {/* TEXT */}
+                <h3
+                  className={`text-[10px] md:text-sm tracking-wide text-center pt-2 capitalize ${currentVariantIndex === idx
+                    ? "text-black font-semibold"
+                    : "text-[#000000]/50"
+                    }`}
+                >
+                  {colorObj.color}
+                </h3>
+
+                {/* UNDERLINE */}
+                {currentVariantIndex === idx && (
+                  <motion.div
+                    layoutId="activeVariantLine"
+                    className="w-full h-[2px] bg-black mt-2 mb-2"
+                  />
+                )}
+              </motion.div>
             ))}
           </div>
 
@@ -199,13 +227,18 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
         {/* Desktop Image */}
         <div className="hidden md:flex flex-col md:w-[50%] md:mr-[2%] items-center justify-start">
-          <motion.img
-            src={product.colors[currentVariantIndex]?.image}
-            alt={product.productName}
-            className="w-[85%] h-auto object-contain cursor-pointer"
-            whileTap={{ scale: 0.9 }}
-            whileHover={{ scale: 1.05 }}
-          />
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentVariantIndex}
+              src={product.colors[currentVariantIndex]?.image}
+              alt={product.productName}
+              className="w-[85%] h-auto object-contain cursor-pointer"
+              initial={{ opacity: 0, scale: 0.95, filter: "blur(8px)" }}
+              animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+            />
+          </AnimatePresence>
         </div>
       </section>
 

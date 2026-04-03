@@ -150,7 +150,7 @@ export default function Footer() {
       <div className="order-2 md:order-3 grid grid-cols-3 md:flex md:flex-row w-full md:px-0 gap-2 md:gap-0">
 
         {/* ================= HEAD OFFICE ================= */}
-        <div className="mt-1 flex flex-col items-start text-left md:gap-3 md:w-1/2 md:pt-0">
+        <div className="mt-1 flex flex-col items-start text-left gap-2 md:gap-3 md:w-1/2 md:pt-0">
           <h2 className="text-[8px] uppercase font-medium lg:text-xl md:text-base leading-[100%] text-[#FFFFFF]">
             Head Office
           </h2>
@@ -201,11 +201,11 @@ export default function Footer() {
 
       {/* ================= BOTTOM BAR ================= */}
 
-      <div className="w-full flex flex-col items-center p-6 justify-start gap-0 md:flex-row md:items-center md:justify-between">
-        <p className="font-medium text-[12px] md:text-sm lg:text-[18px] text-[#FFFFFF] text-center md:text-left">
+      <div className="w-full flex flex-col items-center p-2 justify-start gap-1 md:gap-0 md:flex-row md:items-center md:justify-between">
+        <p className="font-medium text-[12px] md:text-sm lg:text-[18px] leading-tight text-[#FFFFFF] text-center md:text-left">
           © 2026 Dia Diamonds . All Rights Reserved.
         </p>
-        <p className="font-medium text-[8px] md:text-sm lg:text-[18px] text-[#FFFFFF] text-center md:text-right"
+        <p className="font-medium text-[8px] md:text-sm lg:text-[18px] leading-tight text-[#FFFFFF] text-center md:text-right"
         >
           Designed & Developed By <a href="https://www.theinternetcompany.one/" target="_blank" className="cursor-pointer hover:underline">TIC Global Services</a>
         </p>

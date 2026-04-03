@@ -120,7 +120,7 @@ const ProductList: React.FC<ProductListProps> = ({
 
 
       {/* MOBILE FILTER */}
-      <div className="md:hidden w-full px-[3%] mt-5">
+      <div className="md:hidden w-full px-[3%] mt-10">
 
         {/* Pill */}
         <div className="flex items-center border border-[#E5E5E5] rounded-full overflow-hidden bg-[#F8F6F3]">
@@ -149,14 +149,16 @@ const ProductList: React.FC<ProductListProps> = ({
               setIsLeftOpen(false);
               setIsRightOpen(false);
             }}
-            className="fixed inset-0 bg-black/30 z-40"
+            className="fixed inset-0 bg-black/30 z-[9998]"
           />
         )}
 
         {/* DRAWER */}
-        <div ref={drawerRef}
-          className={`fixed top-0 right-0 h-full w-[100%] bg-white z-50 transform transition-transform duration-300 ease-in-out
-    ${isLeftOpen || isRightOpen ? "translate-x-0" : "translate-x-full"}`}
+        <div
+          ref={drawerRef}
+          className={`fixed inset-0 w-full h-full bg-white z-[9999]
+          transform transition-transform duration-300 ease-in-out
+          ${isLeftOpen || isRightOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           {/* Header */}
           <div className="flex items-center justify-between px-5 py-4 border-b border-[#E5E5E5]">
@@ -165,7 +167,7 @@ const ProductList: React.FC<ProductListProps> = ({
             </h2>
             <button
               onClick={(e) => {
-                e.stopPropagation(); 
+                e.stopPropagation();
                 setIsLeftOpen(false);
                 setIsRightOpen(false);
               }}

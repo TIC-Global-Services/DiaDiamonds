@@ -96,7 +96,7 @@ export default function OurCollection() {
         {/* Bottom Controls */}
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 mt-10 md:mt-12">
           
-          {/* ✅ Progress Line */}
+          {/* Progress Line */}
           <div className="w-full h-[2px] bg-black/20 relative overflow-hidden">
             <div
               className="absolute top-0 left-0 h-[3px] bg-[#7C3C3C] transition-all duration-300"
@@ -106,7 +106,7 @@ export default function OurCollection() {
             />
           </div>
 
-          {/* ✅ Arrow Buttons */}
+          {/* Arrow Buttons */}
           <div className="flex items-center gap-3">
             
             {/* Prev */}

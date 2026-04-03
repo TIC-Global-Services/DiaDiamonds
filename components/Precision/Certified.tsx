@@ -77,7 +77,7 @@ const Certified: React.FC = () => {
                 IGI Certified Diamonds
               </h3>
 
-              <p className="text-[12px] md:text-[14px] text-gray-600 leading-relaxed tracking-tight text-left">
+              <p className="text-[10px] md:text-[14px] text-gray-600 leading-relaxed tracking-tight text-left">
                 Every Dia Diamond is certified by the International Gemological
                 Institute (IGI), one of the world’s most trusted diamond grading
                 authorities. This certification ensures your diamond’s
@@ -144,7 +144,7 @@ const Certified: React.FC = () => {
                 SGL Certified Diamonds
               </h3>
 
-              <p className="text-[12px] md:text-[14px] text-gray-600 leading-relaxed tracking-tight text-left">
+              <p className="text-[10px] md:text-[14px] text-gray-600 leading-relaxed tracking-tight text-left">
                 Every Dia Diamond is certified by Solitaire Gemological
                 Laboratories (SGL), one of India’s most trusted diamond
                 certification authorities. This certification verifies the
@@ -152,7 +152,7 @@ const Certified: React.FC = () => {
                 clarity, and carat weight.
               </p>
 
-              <p className="hidden md:block text-[12px] md:text-[14px] text-gray-600 leading-relaxed traccking-tight text-left">
+              <p className="hidden md:block text-[12px] md:text-[14px] text-gray-600 leading-relaxed tracking-normal text-left">
                 Certified by SGL, Crafted for Trust. Our diamonds are certified
                 by SGL, assuring exceptional quality, authenticity, and timeless
                 brilliance.

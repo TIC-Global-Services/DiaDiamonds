@@ -68,7 +68,7 @@ export default function Shop() {
           </p>
 
           {/* Dropdown */}
-          <div className="relative w-[70%] md:w-[70%] mx-auto md:mx-0">
+          <div className="relative w-[100%] md:w-[70%] mx-auto md:mx-0">
             <button
               onClick={() => setIsDropDownClicked(!isDropDownClicked)}
               className={`bg-[#431A1A] rounded-full border border-white/30 shadow-[inset_0px_4px_4px_0_rgba(0,0,0,0.25)] py-[10px] px-[25px] flex justify-between items-center gap-[10px] w-full cursor-pointer relative transition-colors duration-200 hover:border-white/50 ${
@@ -100,7 +100,7 @@ export default function Shop() {
                 opacity: isDropDownClicked ? 1 : 0,
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%] flex flex-col bg-white py-[15px] border-b border-t-0 rounded-[10px] shadow-lg"
+              className="absolute top-0 left-0 right-0 translate-y-[15%] mx-auto w-[90%] flex flex-col bg-white py-[15px] border-b border-t-0 rounded-[10px] shadow-lg z-[100]"
             >
               {[
                 { label: "Bracelets", idx: 1 },
@@ -146,7 +146,7 @@ export default function Shop() {
       </div>
 
       {/* Product display */}
-      <div className="w-full md:w-[70%] mt-44 sm:mt-52 md:mt-0 md:ml-150 flex flex-col justify-center gap-6 items-center relative z-40">
+      <div className="w-full md:w-[70%] mt-44 sm:mt-52 md:mt-0 md:ml-150 flex flex-col justify-center gap-6 items-center relative z-20">
 
         {/* Color label */}
         <AnimatePresence mode="wait">
