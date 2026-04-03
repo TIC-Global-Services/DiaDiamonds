@@ -26,7 +26,7 @@ export default function Footer() {
 
 
   return (
-    <footer data-theme='dark' className="w-full min-h-[50dvh] bg-[#0b0b0b] px-2 md:px-6 pt-4">
+    <footer data-theme='dark' className="w-full min-h-auto bg-[#0b0b0b] px-2 md:px-6 pt-4">
 
       {/* ================= NAV ================= */}
       <div className="flex">
@@ -118,7 +118,7 @@ export default function Footer() {
 
 
       {/* ================= LOGO ================= */}
-      <div className="order-1 md:order-2 relative flex flex-col mx-auto pt-13 md:pt-0 pb-6 items-center justify-center gap-1 pointer-events-none">
+      <div className="order-1 md:order-2 relative flex flex-col mx-auto pt-6 md:pt-0 pb-6 items-center justify-center gap-1 pointer-events-none">
 
         <Image
           className="w-[60px] aspect-square"

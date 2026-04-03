@@ -55,7 +55,7 @@ export default function Shop() {
   return (
     <section
       data-theme="light"
-      className="w-full h-[100dvh] md:h-[100dvh] overflow-hidden md:px-[100px] flex justify-center relative bg-[#FFFFFF]"
+      className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[100px] flex justify-center relative bg-[#FFFFFF]"
     >
       {/* Dark circle — left/top — category selector */}
       <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-4 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-30 flex flex-col md:flex-row justify-end items-center px-10">
@@ -146,7 +146,7 @@ export default function Shop() {
       </div>
 
       {/* Product display */}
-      <div className="w-full md:w-[70%] mt-48 sm:mt-52 md:mt-0 md:ml-150 flex flex-col justify-center items-center relative z-10">
+      <div className="w-full md:w-[70%] mt-52 sm:mt-52 md:mt-0 md:ml-150 flex flex-col justify-center py-4 items-center relative">
 
         {/* Color label */}
         <AnimatePresence mode="wait">
