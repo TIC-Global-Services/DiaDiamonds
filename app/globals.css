@@ -6,7 +6,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --font-clash-display: "Helvetica", sans-serif;
-  --font-baskerVille: "Baskerville", serif;
+  --font-baskerVille: "Baskerville",;
   --font-grotesk: "Grotesk", sans-serif;
 
   --space-xs: 8px;
@@ -74,7 +74,7 @@ body {
 .btn-text {
   font-family: var(--font-clash-display), sans-serif;
   font-weight: 500;
-  font-size: 8px; 
+  font-size: 10px; 
   letter-spacing: 1.6px;
   text-transform: uppercase;
   text-align: center;

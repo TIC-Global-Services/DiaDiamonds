@@ -41,7 +41,7 @@ export default function Craftsmanship() {
   return (
     <section
       data-theme="light"
-      className="relative h-auto w-full flex flex-wrap md:flex-nowrap overflow-hidden"
+      className="relative min-h-screen w-full flex flex-wrap md:flex-nowrap overflow-hidden"
     >
       {/* Left Side Image */}
       <motion.div
@@ -81,8 +81,6 @@ export default function Craftsmanship() {
       <div className="w-full md:w-1/2 flex flex-col h-auto md:h-[120vh] 2xl:h-[150vh]">
 
         {/* Top Half — Cards + Pagination */}
-        {/* FIX: Added z-10 so card text sits above the absolute overlay title (z-30).
-            Without this, the title at z-30 rendered in front of card content. */}
         <div className="relative z-10 w-full md:h-1/2 2xl:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-20 lg:mt-30 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
           <div className="flex flex-col gap-10 justify-center w-full">
             {cards.map((card, index) => (

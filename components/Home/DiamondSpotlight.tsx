@@ -61,7 +61,7 @@ export default function DiamondSpotlight() {
       ref={elementRef}
       onMouseMove={captureMousePosition}
       data-theme="dark"
-      className="relative w-full h-[100dvh] overflow-hidden"
+      className="relative w-full min-h-screen overflow-hidden"
     >
       {/* Base Image */}
       <Image

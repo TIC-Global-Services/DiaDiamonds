@@ -43,7 +43,7 @@ export default function OurCollection() {
   const mobileProgress = totalItems > 1 ? mobileIndex / (totalItems - 1) : 0;
 
   return (
-    <Section className="bg-white">
+    <Section className="bg-white" data-theme='light'>
       <ContainerLayout>
 
         {/* Header */}

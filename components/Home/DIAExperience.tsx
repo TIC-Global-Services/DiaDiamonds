@@ -1,6 +1,6 @@
 export default function DIAExperience() {
   return (
-    <section data-theme="dark" className="w-full bg-[#000000] flex flex-col px-6 sm:px-[35px] md:px-10 lg:px-[56px] xl:px-[84px] 2xl:px-20 py-8 md:py-[96px] pb-[25%]">
+    <section data-theme="dark" className="w-full min-h-screen bg-[#000000] flex flex-col px-6 sm:px-[35px] md:px-10 lg:px-[56px] xl:px-[84px] 2xl:px-20 py-8 md:py-[96px] pb-[25%]">
 
       {/* Header Section */}
       <div className="flex flex-col justify-center items-center mx-auto w-[100%] md:w-full text-center pb-10 md:pb-[70px]">

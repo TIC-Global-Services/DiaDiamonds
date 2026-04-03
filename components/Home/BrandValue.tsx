@@ -10,7 +10,7 @@ export default function BrandValue() {
 
   return (
     <section
-      className="relative w-full min-h-[100dvh] overflow-hidden"
+      className="relative w-full min-h-screen overflow-hidden"
       data-theme="dark"
     >
       {/* Background */}
@@ -19,7 +19,7 @@ export default function BrandValue() {
         alt="Rings Image"
         fill
         priority
-        className="object-cover object-[55%_50%] md:object-[60%_70%] lg:object-[50%_80%] xl:object-[65%_80%]"
+        className="w-full object-cover object-[55%_50%] md:object-[60%_70%] lg:object-[50%_80%] xl:object-[65%_80%]"
       />
 
       {/* Overlay */}
