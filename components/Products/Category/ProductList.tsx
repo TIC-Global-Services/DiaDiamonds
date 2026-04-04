@@ -127,19 +127,22 @@ const ProductList: React.FC<ProductListProps> = ({
 
           <button
             onClick={() => setIsLeftOpen(true)}
-            className="w-1/2 py-3 text-[12px] tracking-wide"
+            className={`py-3 text-[12px] tracking-wide ${category === "rings" ? "w-1/2" : "w-full"}`}
           >
             SORT BY
           </button>
 
-          <div className="w-[1px] h-6 bg-[#E5E5E5]" />
-
-          <button
-            onClick={() => setIsRightOpen(true)}
-            className="w-1/2 py-3 text-[12px] tracking-wide"
-          >
-            SOLITAIRE VARIETY
-          </button>
+          {category === "rings" && (
+            <>
+              <div className="w-[1px] h-6 bg-[#E5E5E5]" />
+              <button
+                onClick={() => setIsRightOpen(true)}
+                className="w-1/2 py-3 text-[12px] tracking-wide"
+              >
+                SOLITAIRE VARIETY
+              </button>
+            </>
+          )}
         </div>
 
         {/* DRAWER OVERLAY */}
@@ -195,7 +198,7 @@ const ProductList: React.FC<ProductListProps> = ({
                   {/* Custom radio */}
                   <div
                     className={`w-4 h-4 rounded-full border flex items-center justify-center
-        ${sortBy === opt.value ? "border-[#431A1A]" : "border-gray-400"}`}
+                    ${sortBy === opt.value ? "border-[#431A1A]" : "border-gray-400"}`}
                   >
                     {sortBy === opt.value && (
                       <div className="w-2 h-2 bg-[#431A1A] rounded-full" />
@@ -215,7 +218,7 @@ const ProductList: React.FC<ProductListProps> = ({
                 <div
                   key={opt.value}
                   onClick={() => {
-                    setSolitaireVariety(opt.value as VarietyType); // ✅ updates hook
+                    setSolitaireVariety(opt.value as VarietyType); // updates hook
                     setIsRightOpen(false);
                   }}
                   className="flex items-center gap-3 cursor-pointer"
@@ -223,7 +226,7 @@ const ProductList: React.FC<ProductListProps> = ({
                   {/* Radio UI */}
                   <div
                     className={`w-4 h-4 rounded-full border flex items-center justify-center
-        ${solitaireVariety === opt.value ? "border-[#431A1A]" : "border-gray-400"}`}
+                    ${solitaireVariety === opt.value ? "border-[#431A1A]" : "border-gray-400"}`}
                   >
                     {solitaireVariety === opt.value && (
                       <div className="w-2 h-2 bg-[#431A1A] rounded-full" />

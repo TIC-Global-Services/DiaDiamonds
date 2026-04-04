@@ -96,7 +96,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
   );
 
   return (
-    <div data-theme='light' className="w-full bg-[#FFFFFF] overflow-hidden pt-[60px] md:pt-[90px]">
+    <section data-theme='light' className="w-full bg-[#FFFFFF] overflow-visible pt-[60px] md:pt-[90px]">
 
       {/* Breadcrumbs */}
       <Breadcrumbs
@@ -108,10 +108,11 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
       />
 
       {/* Item Display */}
-      <section data-theme='light' className="w-full md:px-[6.67%] flex justify-between flex-col md:flex-row pt-[2%]">
+      <div className="w-full md:px-[6.67%] flex items-start justify-between flex-col md:flex-row pt-[2%]">
 
         {/* Left Info & Options */}
-        <div className="w-full md:w-[35%] px-[4.37%] md:px-0 md:pb-[1.96%]">
+        <div className="w-full md:w-[35%] px-[4.37%] md:px-0 md:pb-[1.96%] 
+                relative md:sticky md:top-[120px] md:self-start h-fit ">
           <h3 className="md:pt-[5.47%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-[clash-Display, Inter] font-normal">
             {product.productName}
           </h3>
@@ -240,7 +241,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
             />
           </AnimatePresence>
         </div>
-      </section>
+      </div>
 
       {/* Layout Images Section */}
       {hasLayoutImages && (
@@ -392,6 +393,6 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
         </div>
       </section>
-    </div>
+    </section>
   );
 }

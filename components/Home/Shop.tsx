@@ -58,8 +58,8 @@ export default function Shop() {
       className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[100px] flex justify-center relative bg-[#FFFFFF]"
     >
       {/* Dark circle — left/top — category selector */}
-      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-4 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-30 flex flex-col md:flex-row justify-end items-center px-10">
-        <div className="mb-10">
+      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-2 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-30 flex flex-col md:flex-row justify-end items-center px-10 md:px-12">
+        <div className="mb-14">
           <h3 className="h3 leading-none uppercase text-white pb-2 md:pb-3 text-center md:text-left">
             Shop By Colors
           </h3>
@@ -146,7 +146,7 @@ export default function Shop() {
       </div>
 
       {/* Product display */}
-      <div className="w-full md:w-[80%] mt-52 sm:mt-52 md:mt-0 md:ml-150 flex flex-col px-4 justify-center py-4 items-center relative">
+      <div className="w-full md:w-[80%] mt-52 sm:mt-54 md:mt-0 md:ml-70 lg:ml-180 flex flex-col px-4 md:px-10 justify-center py-12 items-center relative">
 
         {/* Color label */}
         <AnimatePresence mode="wait">

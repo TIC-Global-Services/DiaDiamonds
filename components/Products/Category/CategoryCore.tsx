@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useRef, useEffect } from "react";
 import TheArtOfCrafting from './TheArtOfCrafting';
 import Image from "next/image";
 import Breadcrumbs from "@/components/Reusable/Breadcrumbs";
@@ -51,6 +52,18 @@ const categoryMenu = [
 
 export default function CategoryCore({ category, productLists }: CategoryCoreProps) {
   const router = useRouter();
+  const activeRef = useRef<HTMLDivElement>(null);
+
+  // Scroll active category into view on mount
+  useEffect(() => {
+    if (activeRef.current) {
+      activeRef.current.scrollIntoView({
+        behavior: "instant",
+        block: "nearest",
+        inline: "center", // centers it horizontally in the scroll container
+      });
+    }
+  }, [category]);
 
   const handleProductClick = (id: number) => {
     const product = productLists.find((p) => p.id === id);
@@ -83,6 +96,7 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
             return (
               <div
                 key={idx}
+                ref={isActive ? activeRef : null}
                 onClick={() => router.push(`/collections/${cat.slug}`)}
                 className="relative group cursor-pointer flex-shrink-0 snap-start w-[32vw] sm:w-[22vw] md:w-[18vw]"
               >

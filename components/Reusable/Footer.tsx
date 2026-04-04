@@ -26,7 +26,7 @@ export default function Footer() {
 
 
   return (
-    <footer data-theme='dark' className="w-full min-h-auto bg-[#0b0b0b] px-2 md:px-6 pt-4">
+    <footer data-theme='dark' className="w-full min-h-auto bg-[#0b0b0b] px-2 md:px-6 pt-6">
 
       {/* ================= NAV ================= */}
       <div className="flex">

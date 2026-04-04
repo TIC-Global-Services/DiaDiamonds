@@ -21,7 +21,7 @@ const Hero = () => {
           priority
           quality={75} // reduced
           sizes="100vw"
-          className="object-cover object-[10%_45%] md:object-[40%_100%]"
+          className="object-cover object-[12%_45%] md:object-[40%_100%]"
         />
       </div>
 
