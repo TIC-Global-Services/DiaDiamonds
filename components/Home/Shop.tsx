@@ -58,7 +58,7 @@ export default function Shop() {
       className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[100px] flex justify-center relative bg-[#FFFFFF]"
     >
       {/* Dark circle — left/top — category selector */}
-      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-2 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-30 flex flex-col md:flex-row justify-end items-center px-10 md:px-12">
+      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-6 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-30 flex flex-col md:flex-row justify-end items-center px-10 md:px-12">
         <div className="mb-14">
           <h3 className="h3 leading-none uppercase text-white pb-2 md:pb-3 text-center md:text-left">
             Shop By Colors
@@ -146,7 +146,7 @@ export default function Shop() {
       </div>
 
       {/* Product display */}
-      <div className="w-full md:w-[80%] mt-52 sm:mt-54 md:mt-0 md:ml-70 lg:ml-160 lg:pl-20 flex flex-col px-4 md:px-10 justify-center py-12 items-center relative">
+      <div className="w-full md:w-[80%] mt-52 sm:mt-54 md:mt-0 md:ml-70 lg:ml-140 lg:pl-14 flex flex-col px-4 md:px-8 justify-center py-12 items-center relative">
 
         {/* Color label */}
         <AnimatePresence mode="wait">
@@ -156,7 +156,7 @@ export default function Shop() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="text-xl md:text-[35px] font-normal md:font-medium leading-[100%] tracking-wide uppercase pb-4 mt-10 md:mt-0 md:pb-[3.28%]"
+            className="text-xl md:text-[30px] font-normal md:font-medium leading-[100%] tracking-wide uppercase pb-4 mt-10 md:mt-0 md:pb-[3.28%]"
             style={{
               background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
               WebkitBackgroundClip: "text",
