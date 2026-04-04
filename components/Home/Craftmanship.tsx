@@ -78,14 +78,14 @@ export default function Craftsmanship() {
       <div className="w-full md:w-1/2 flex flex-col h-auto md:h-[120vh] 2xl:h-[150vh]">
 
         {/* Top Half — Cards + Pagination */}
-        <div className="relative z-10 w-full md:h-1/2 2xl:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-20 lg:mt-30 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
+        <div className="relative z-10 w-full md:h-1/2 2xl:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-20 lg:mt-26 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
           <div className="flex flex-col gap-10 justify-center w-full">
             {cards.map((card, index) => (
               <div
                 key={index}
                 className={`${index === activeIndex ? "block" : "hidden"}`}
               >
-                <h3 className="font-medium md:text-[24px] leading-[120%] md:leading-[100%] tracking-[0.03em] text-[#000000] pb-4 md:pb-[20px]">
+                <h3 className="font-medium md:text-[24px] leading-[120%] md:leading-[100%] tracking-[0.03em] text-[#000000] pb-2 md:pb-[20px]">
                   {card.title}
                 </h3>
                 <p className="text-[13px] md:text-[20px] lg:text-[20px] leading-[140%] tracking-tight text-[#000000]/60 w-full md:w-[97%]">

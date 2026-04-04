@@ -10,7 +10,7 @@ const Hero = () => {
   const router = useRouter();
 
   return (
-    <section data-theme='dark' className="w-full min-h-screen relative overflow-hidden">
+    <section data-theme="dark" className="w-full min-h-screen relative overflow-hidden">
       
       {/* Optimized Background */}
       <div className="absolute inset-0">

@@ -23,28 +23,28 @@ export default function BrandValue() {
           object-cover 
            object-[45%_100%]
            md:object-[65%_75%]
-          lg:object-[35%_90%]  
+          lg:object-[35%_78%]  
         "
       />
 
       {/* Overlay */}
       <div
         className="
-          absolute right-0 bottom-[25%] md:bottom-20
+          absolute right-0 bottom-[25%] md:bottom-10 
           flex flex-col justify-end 
-          md:flex-row md:items-center md:justify-end
-          px-2 sm:px-6 md:px-0 lg:px-18
+          md:flex-row md:items-center md:justify-end 
+          px-2 sm:px-6 md:px-0 lg:px-18 lg:right-10
           pb-4 sm:pb-12 md:pb-0
         "
       >
         {/* Content */}
         <div
           className="
-            w-full md:py-20
+            w-full md:py-10
             max-w-[250px]
             md:max-w-lg
             flex flex-col
-            gap-2 md:gap-4
+            gap-2 md:gap-4 
             text-left
           "
         >

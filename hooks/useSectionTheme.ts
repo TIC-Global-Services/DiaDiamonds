@@ -18,9 +18,10 @@ export const useSectionTheme = (position: "top" | "bottom") => {
 
     if (!sections.length) return;
 
-    let visibleSections: HTMLElement[] = [];
+    let visibleSections = new Set<HTMLElement>();
     let frameId: number;
 
+    // Get visible sections
     const getVisibleSections = () => {
       return sections.filter((section) => {
         const rect = section.getBoundingClientRect();
@@ -28,18 +29,16 @@ export const useSectionTheme = (position: "top" | "bottom") => {
       });
     };
 
+    // Resolve theme
     const resolveTheme = (list: HTMLElement[]) => {
       if (!list.length) return;
 
       const sorted = list.sort(
-        (a, b) =>
-          a.getBoundingClientRect().top - b.getBoundingClientRect().top
+        (a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top
       );
 
       const selected =
-        position === "top"
-          ? sorted[0]
-          : sorted[sorted.length - 1];
+        position === "top" ? sorted[0] : sorted[sorted.length - 1];
 
       const t = selected.dataset.theme as Theme;
 
@@ -48,7 +47,7 @@ export const useSectionTheme = (position: "top" | "bottom") => {
       }
     };
 
-    //INITIAL DETECTION
+    // INITIAL DETECTION 
     let attempts = 0;
 
     const detectInitial = () => {
@@ -56,49 +55,72 @@ export const useSectionTheme = (position: "top" | "bottom") => {
 
       if (visible.length > 0) {
         resolveTheme(visible);
-        isInitialized.current = true; // 🔒 LOCK
+        isInitialized.current = true;
         return;
       }
 
       if (attempts < 10) {
         attempts++;
         frameId = requestAnimationFrame(detectInitial);
+      } else {
+        // fallback
+        const first = sections[0];
+        if (first) {
+          const t = first.dataset.theme as Theme;
+          if (t) setTheme(t);
+          isInitialized.current = true;
+        }
       }
     };
 
-    detectInitial();
+    detectInitial(); 
 
-    {/* Observer - InterSection */}
+    // INTERSECTION OBSERVER
     const observer = new IntersectionObserver(
       (entries) => {
-        if (!isInitialized.current) return; //prevent flicker
+        // Safari recovery
+        if (!isInitialized.current && entries.some((e) => e.isIntersecting)) {
+          isInitialized.current = true;
+        }
 
         entries.forEach((entry) => {
           const el = entry.target as HTMLElement;
 
           if (entry.isIntersecting) {
-            if (!visibleSections.includes(el)) {
-              visibleSections.push(el);
-            }
+            visibleSections.add(el);
           } else {
-            visibleSections = visibleSections.filter((s) => s !== el);
+            visibleSections.delete(el);
           }
         });
 
-        if (visibleSections.length > 0) {
-          resolveTheme(visibleSections);
+        if (visibleSections.size > 0) {
+          resolveTheme(Array.from(visibleSections));
         }
       },
       {
         threshold: 0.1,
+        rootMargin: "0px 0px -20% 0px", //improves detection
       }
     );
 
     sections.forEach((section) => observer.observe(section));
 
+    // LOAD EVENT
+    const handleLoad = () => {
+      const visible = getVisibleSections();
+      if (visible.length > 0) {
+        resolveTheme(visible);
+        isInitialized.current = true;
+      }
+    };
+
+    window.addEventListener("load", handleLoad);
+
+    // CLEANUP
     return () => {
       cancelAnimationFrame(frameId);
       observer.disconnect();
+      window.removeEventListener("load", handleLoad);
       isInitialized.current = false;
     };
   }, [pathname, position]);

@@ -58,9 +58,9 @@ export default function Shop() {
       className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[100px] flex justify-center relative bg-[#FFFFFF]"
     >
       {/* Dark circle — left/top — category selector */}
-      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-6 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full z-30 flex flex-col md:flex-row justify-end items-center px-10 md:px-12">
-        <div className="mb-14">
-          <h3 className="h3 leading-none uppercase text-white pb-2 md:pb-3 text-center md:text-left">
+      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-2 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full py-[10px] z-30 flex flex-col md:flex-row justify-end items-center px-10">
+        <div className="mb-10">
+          <h3 className="h3 leading-none uppercase text-white pb-2 md:pb-3 text-center md:text-left ">
             Shop By Colors
           </h3>
           <p className="p text-center md:text-start text-white/60 pb-3 md:pb-5">
@@ -139,14 +139,14 @@ export default function Shop() {
             onMouseLeave={() => setIsHovered(false)}
             onClick={() => setActiveDiv(idx)}
             className={`w-full grow cursor-pointer overflow-hidden transition-opacity duration-300 ease-in-out ${color} ${
-              activeDiv === idx ? "opacity-100" : "opacity-20 hover:opacity-50"
+              activeDiv === idx ? "opacity-100" : "opacity-25 hover:opacity-50"
             }`}
           />
         ))}
       </div>
 
       {/* Product display */}
-      <div className="w-full md:w-[80%] mt-52 sm:mt-54 md:mt-0 md:ml-70 lg:ml-140 lg:pl-14 flex flex-col px-4 md:px-8 justify-center py-12 items-center relative">
+      <div className="w-full md:w-[50%] mt-45 md:mt-0 py-4 sm:mt-20 relative md:absolute md:right-0 md:bottom-0 md:top-0 flex flex-col justify-center gap-0 items-center z-10">
 
         {/* Color label */}
         <AnimatePresence mode="wait">
@@ -156,7 +156,7 @@ export default function Shop() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="text-xl md:text-[30px] font-normal md:font-medium leading-[100%] tracking-wide uppercase pb-4 mt-10 md:mt-0 md:pb-[3.28%]"
+            className="h2 uppercase pb-2 mt-16 md:mt-0 md:pb-[3.28%]"
             style={{
               background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
               WebkitBackgroundClip: "text",
@@ -168,7 +168,7 @@ export default function Shop() {
         </AnimatePresence>
 
         {/* Product image */}
-        <div className="w-[35%] sm:w-[48%] md:w-[65%] aspect-[450/157]">
+        <div className="w-[50%] sm:w-[48%] md:w-[55%] aspect-[450/157]">
           <AnimatePresence mode="wait">
             <motion.img
               key={imageKey}
@@ -178,7 +178,7 @@ export default function Shop() {
               transition={{ duration: 0.35, ease: "easeOut" }}
               src={currentItem.image}
               alt={currentItem.name}
-              className="w-full h-full object-contain md:object-center"
+              className="w-full h-full  object-contain md:object-center"
             />
           </AnimatePresence>
         </div>
@@ -191,7 +191,7 @@ export default function Shop() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: "easeOut", delay: 0.05 }}
-            className="pt-5 md:pt-7 text-base md:text-2xl leading-snug text-black pb-2 md:pb-9 font-baskerville"
+            className="pt-2 md:pt-4 text-base md:text-2xl leading-snug text-black pb-5 md:pb-2 font-baskerville"
           >
             {currentItem.name}
           </motion.p>
@@ -202,7 +202,7 @@ export default function Shop() {
             const selectedCategory = categories[currentCategory].toLowerCase();
             router.push(`/collections/${selectedCategory}`);
           }}
-          mode="light" className="text-[#582B36] tracking-wider"
+          mode="light"
         >
           VIEW MORE
         </PrimaryBtn>
