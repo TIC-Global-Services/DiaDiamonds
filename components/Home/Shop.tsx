@@ -146,7 +146,7 @@ export default function Shop() {
       </div>
 
       {/* Product display */}
-      <div className="w-full md:w-[80%] mt-52 sm:mt-54 md:mt-0 md:ml-70 lg:ml-180 flex flex-col px-4 md:px-10 justify-center py-12 items-center relative">
+      <div className="w-full md:w-[80%] mt-52 sm:mt-54 md:mt-0 md:ml-70 lg:ml-160 lg:pl-20 flex flex-col px-4 md:px-10 justify-center py-12 items-center relative">
 
         {/* Color label */}
         <AnimatePresence mode="wait">
