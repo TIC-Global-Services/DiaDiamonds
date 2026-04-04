@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import productsData from '@/products_new.json';
 import { useRouter } from 'next/navigation';
 import Breadcrumbs from '@/components/Reusable/Breadcrumbs';
@@ -9,8 +9,6 @@ import Image from 'next/image';
 import RecommendedProductCard from '../Cards/RecommendedProductCard';
 import { Product, ProductLayoutImage } from '@/types/product';
 import { FALLBACK_LAYOUT } from '@/constants/LayoutImages';
-
-
 
 
 
@@ -27,6 +25,17 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
   const [currentVariantIndex, setCurrentVariantIndex] = useState(0);
   const [currentSize, setCurrentSize] = useState<string>('');
   const [scrollLevel, setScrollLevel] = useState<number>(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mobileScrollLevel, setMobileScrollLevel] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
 
   useEffect(() => {
@@ -95,6 +104,17 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
     product.category.toLowerCase()
   );
 
+  const handleMobileScroll = (dir: 'left' | 'right') => {
+    if (!scrollRef.current) return;
+    const gap = 12; // gap-3 = 12px
+    const cardWidth = window.innerWidth * 0.60 + gap; // 60vw + gap
+    const newLevel = dir === 'right'
+      ? Math.min(mobileScrollLevel + 1, recommendedProducts.length - 1)
+      : Math.max(mobileScrollLevel - 1, 0);
+    scrollRef.current.scrollTo({ left: newLevel * cardWidth, behavior: 'smooth' });
+    setMobileScrollLevel(newLevel);
+  };
+
   return (
     <section data-theme='light' className="w-full bg-[#FFFFFF] overflow-visible pt-[60px] md:pt-[90px]">
 
@@ -112,7 +132,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
         {/* Left Info & Options */}
         <div className="w-full md:w-[35%] px-[4.37%] md:px-0 md:pb-[1.96%] 
-                relative md:sticky md:top-[120px] md:self-start h-fit ">
+                relative md:sticky md:top-[120px] md:self-start">
           <h3 className="md:pt-[5.47%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-[clash-Display, Inter] font-normal">
             {product.productName}
           </h3>
@@ -124,25 +144,25 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           </p>
 
           {/* Mobile Image - moved below size and variants */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentVariantIndex}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-                className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mb-[18px]"
-              >
-                <Image
-                  width={400}
-                  height={400}
-                  src={product.colors[currentVariantIndex]?.image}
-                  alt={product.productName}
-                  className="w-full h-full object-contain"
-                />
-              </motion.div>
-            </AnimatePresence>
-          
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentVariantIndex}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mb-[18px]"
+            >
+              <Image
+                width={400}
+                height={400}
+                src={product.colors[currentVariantIndex]?.image}
+                alt={product.productName}
+                className="w-full h-full object-contain"
+              />
+            </motion.div>
+          </AnimatePresence>
+
 
           {/* Color Variants */}
           <div className="flex justify-around md:gap-[6%] md:pb-[4%] mt-4 md:mt-0 flex-wrap overflow-x-auto px-4 md:px-0 border-b border-[#000000]/10">
@@ -337,9 +357,29 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
         <h2 className="text-center font-[baskerville SC] font-normal md:font-medium tracking-tight text-2xl md:text-3xl border-t md:mb-4 border-gray-100 pt-6 md:pt-12">
           You May Also Like
         </h2>
-        <div className="w-[95%] md:w-[94.44%] mx-auto overflow-hidden">
-          <div className={`flex md:gap-[2.81%] ${scrollPercentage[scrollLevel]}`}>
 
+        {/* MOBILE */}
+        <div ref={scrollRef} className="md:hidden w-full overflow-x-auto scrollbar-hide">
+          <div className="flex gap-3 px-2 w-max">
+            {recommendedProducts.map((item) => (
+              <div key={item.id} className="w-[60vw] shrink-0">
+                <RecommendedProductCard
+                  product={item}
+                  onClick={(id) => {
+                    const p = recommendedProducts.find(x => x.id === id);
+                    if (!p) return;
+                    router.push(`/collections/${p.category.toLowerCase()}/${p.slug}`);
+                    window.scroll(0, 0);
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* DESKTOP */}
+        <div className="hidden md:block w-[94.44%] mx-auto overflow-hidden">
+          <div className={`flex md:gap-[2.81%] ${scrollPercentage[scrollLevel]}`}>
             {recommendedProducts.map((item) => (
               <RecommendedProductCard
                 key={item.id}
@@ -347,42 +387,53 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                 onClick={(id) => {
                   const p = recommendedProducts.find(x => x.id === id);
                   if (!p) return;
-
-                  router.push(
-                    `/collections/${p.category.toLowerCase()}/${p.slug}`
-                  );
+                  router.push(`/collections/${p.category.toLowerCase()}/${p.slug}`);
                   window.scroll(0, 0);
                 }}
               />
             ))}
-
           </div>
         </div>
 
-
-        {/* Scroll Controls */}
+        {/* Scroll Controls — shared, centered mobile / right desktop */}
         <div className="w-[90%] md:w-[100%] pb-[8%] mx-auto pt-[20px] md:pt-4 relative flex flex-col md:flex-row md:items-center md:justify-end gap-3">
 
-          {/* Scrollbar (RIGHT SIDE) */}
+          {/* Scrollbar */}
           <div className="w-full md:w-[1100px] border-b-[3px] border-[#000000]/20 relative shrink-0">
-            <div className={`absolute -translate-y-1/4 top-0 left-0 w-full flex ${scrollBarPosition[scrollLevel]}`}>
-              <div className="border-t-[5px] border-[#7C3C3C] w-[50%] md:w-[34%]" />
-            </div>
+            {isMobile ? (
+              <div
+                className="absolute -translate-y-1/4 top-0 h-0 border-t-[5px] border-[#7C3C3C] transition-all duration-200"
+                style={{
+                  width: `${100 / recommendedProducts.length}%`,
+                  left: `${(mobileScrollLevel / (recommendedProducts.length - 1)) * (100 - 100 / recommendedProducts.length)}%`,
+                }}
+              />
+            ) : (
+              // Desktop
+              <div className={`absolute -translate-y-1/4 top-0 left-0 w-full flex ${scrollBarPosition[scrollLevel]}`}>
+                <div className="border-t-[5px] border-[#7C3C3C] w-[34%]" />
+              </div>
+            )}
           </div>
 
           {/* Buttons */}
-          <div className="flex items-center justify-center mt-2 md:justify-end gap-2">
+          <div className="flex items-center justify-center md:justify-end gap-2">
             <button
-              onClick={() => { if (scrollLevel != 0) setScrollLevel(scrollLevel - 1); }}
+              onClick={() => isMobile
+                ? handleMobileScroll('left')
+                : setScrollLevel(l => Math.max(l - 1, 0))
+              }
               className="w-10 h-10 rounded-[10px] bg-gray-300 hover:bg-[#7C3C3C] stroke-black active:stroke-white active:bg-[#7C3C3C] flex justify-center items-center"
             >
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none">
                 <path d="M14.0502 7.07071L9.0857 12.106L14.121 17.0705" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
-
             <button
-              onClick={() => { if (scrollLevel != 3) setScrollLevel(scrollLevel + 1); }}
+              onClick={() => isMobile
+                ? handleMobileScroll('right')
+                : setScrollLevel(l => Math.min(l + 1, 3))
+              }
               className="w-10 h-10 bg-gray-300 hover:bg-[#7C3C3C] active:bg-[#7C3C3C] stroke-black active:stroke-white rounded-[10px] flex justify-center items-center"
             >
               <svg width="7" height="11" viewBox="0 0 7 11" fill="none">
@@ -390,8 +441,8 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               </svg>
             </button>
           </div>
-
         </div>
+
       </section>
     </section>
   );
