@@ -70,7 +70,7 @@ export default function Testimonials() {
           <Image
             src={testimonialLeftImage}
             alt="testimonial visual"
-            quality={80}
+            quality={100}
             className="w-full h-full object-cover object-center"
           />
         </Parallax>

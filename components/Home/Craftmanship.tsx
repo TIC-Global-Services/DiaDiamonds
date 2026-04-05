@@ -68,7 +68,6 @@ export default function Craftsmanship() {
         >
           <PrimaryBtn
             text="VIEW BRACELET COLLECTION"
-            /* FIX: Raised from 8px → 11px */
             mode="light"
           />
         </div>

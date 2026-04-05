@@ -3,6 +3,7 @@
 import ContainerLayout from "@/layout/ContainerLayout";
 import { motion } from "framer-motion";
 import { Parallax } from "react-scroll-parallax";
+import PrimaryBtn from "../Reusable/PrimaryBtn";
 
 export default function OurDiamonds() {
 
@@ -27,9 +28,9 @@ export default function OurDiamonds() {
       </div>
 
       {/* Content container */}
-      <div className="w-full h-[100vh] md:h-auto md:w-[60%] flex justify-center items-center bg-[#EAE3D9]">
+      <div className="w-full md:w-[60%] flex justify-center items-center bg-[#EAE3D9]">
         <ContainerLayout>
-          <div className="w-full flex flex-col justify-start items-start gap-4 md:gap-9 mb-50">
+          <div className="w-full flex flex-col justify-start items-start gap-4 md:gap-9 pb-12 md:pb-20">
             <motion.h2
             
             initial={{ opacity: 0, y: 50 }}
@@ -50,15 +51,10 @@ export default function OurDiamonds() {
                 Each Dia Diamonds creation is shaped by responsible sourcing, global certification, and masterful craftsmanship — resulting in jewellery that reflects integrity as much as brilliance. Each Dia Diamonds creation is shaped by responsible sourcing, global certification, and masterful craftsmanship — resulting in jewellery that reflects integrity as much as brilliance.
             </motion.p>
 
-            <motion.button
-
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
-            viewport={{once:false}}
-            className="px-5 md:px-12 py-2.5 md:py-4 border-4 md:border-5 rounded-full border-[#FFFFFF]/1 shadow-[0_4px_4px_0_rgba(0,0,0,0.1)] bg-[#FFFFFF]/4 text-xs md:text-[16px] font-medium leading-[100%] text-[#000000]">
-              Discover Our Craft
-            </motion.button>
+            <PrimaryBtn
+            text="Discover Our Craft"
+            mode="light" >
+            </PrimaryBtn>
           </div>
         </ContainerLayout>
       </div>

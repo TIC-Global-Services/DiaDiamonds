@@ -114,13 +114,13 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           ]}
         />
 
-        <div className="w-full md:px-[6.67%] gap-5 grid md:grid-cols-[35%_65%] items-stretch pt-[2%]">
+        <div className="w-full md:px-[6.67%] gap-5 grid md:grid-cols-[35%_65%] md:items-stretch pt-[2%]">
 
           {/* LEFT COL */}
           <div className="relative px-[4.37%] md:px-0 h-full">
 
-            {/* STICKY BLOCK — sticks while scrolling through right col content */}
-            <div className="md:sticky md:top-[100px] z-40 bg-white">
+            {/* STICKY BLOCK - stops at end of parent container */}
+            <div className="md:sticky md:top-[120px] md:self-start">
               <h3 className="md:pt-[5.47%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
                 {product.productName}
               </h3>
@@ -130,7 +130,6 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               <p className="md:pt-[2%] md:pb-[10%] font-baskerville text-base md:text-xl leading-[1.2] tracking-tight text-[#000000]">
                 {product.diamondType || ""}
               </p>
-            </div>
 
             {/* MOBILE IMAGE */}
             <AnimatePresence mode="wait">
@@ -225,6 +224,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
             >
               CONTACT STORE
             </button>
+            </div>{/* End sticky block */}
 
           </div>
 
