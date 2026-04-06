@@ -164,7 +164,7 @@ const Creation: React.FC = () => {
                 {contentJSON[currentCard].contentText.map((paragraph, pIdx) => (
                   <p
                     key={pIdx}
-                    className="text-[#383838] text-[12px] md:text-[20px] font-light md:font-normal leading-[120%] tracking-normal"
+                    className="text-[#383838] text-[14px] md:text-[20px] font-light md:font-normal leading-[120%] tracking-normal"
                   >
                     {paragraph.parts.map((part, i) => (
                       part.bold

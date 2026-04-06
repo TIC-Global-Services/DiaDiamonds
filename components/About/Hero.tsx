@@ -33,7 +33,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay:0.4, ease:"easeInOut" }}
             viewport={{once:false}}
-            className="text-[12px] md:text-[20px] leading-[140%] md:leading-[140%] text-[#000000] text-left md:text-left px-2 md:px-0"
+            className="text-[14px] md:text-[20px] leading-[140%] md:leading-[140%] text-[#000000] text-left md:text-left px-2 md:px-0"
           >
             Dia Diamonds is the modern expression of a legacy built on trust, integrity, and exceptional craftsmanship. We create timeless diamond jewellery that blends heritage values with contemporary design, ensuring every piece reflects elegance, authenticity, and superior quality. With a strong commitment to ethical sourcing and meticulous attention to detail.
           </motion.p>

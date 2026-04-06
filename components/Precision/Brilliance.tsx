@@ -42,7 +42,7 @@ const Brilliance: React.FC = () => {
             <h3 className="text-[16px] text-[#000000] pb-2">
               Luxury That Makes Sense
             </h3>
-            <p className="text-[12px] text-[#5E5E5E] leading-[1.5]">
+            <p className="text-[14px] text-[#5E5E5E] leading-[1.5]">
               True sophistication is choosing wisely.
               Lab grown diamonds combine advanced science with timeless beauty,
               offering exceptional value today and pride of ownership tomorrow.
@@ -83,7 +83,7 @@ const Brilliance: React.FC = () => {
             <h3 className="text-[16px] text-[#000000] pb-2">
               Greater Diamond, Greater Value
             </h3>
-            <p className="text-[12px] text-[#5E5E5E] leading-[1.5]">
+            <p className="text-[14px] text-[#5E5E5E] leading-[1.5]">
               With lab grown diamonds, your investment goes directly into size,
               brilliance, and quality not inflated mining costs. You enjoy a
               larger, finest diamond for the same budget. Smart buying becomes
@@ -139,7 +139,7 @@ const Brilliance: React.FC = () => {
               <h3 className="text-[18px] lg:text-[20px] text-[#000000] pb-2 lg:pb-[3.43%]">
                 Luxury That Makes Sense
               </h3>
-              <p className="text-[13px] lg:text-[14px] tracking-[0%] text-[#5E5E5E] leading-[1.5]">
+              <p className="text-[14px] lg:text-[14px] tracking-[0%] text-[#5E5E5E] leading-[1.5]">
                 True sophistication is choosing wisely.
                 Lab grown diamonds combine advanced science with timeless beauty,
                 offering exceptional value today and pride of ownership tomorrow.
@@ -163,7 +163,7 @@ const Brilliance: React.FC = () => {
               <h3 className="text-[18px] lg:text-[20px] text-[#000000] pb-2 lg:pb-[3.43%]">
                 Greater Diamond,<br /> Greater Value
               </h3>
-              <p className="text-[13px] lg:text-[14px] tracking-[0%] text-[#5E5E5E] leading-[1.5]">
+              <p className="text-[14px] lg:text-[14px] tracking-[0%] text-[#5E5E5E] leading-[1.5]">
                 With lab grown diamonds, your investment goes directly into size,
                 brilliance, and quality not inflated mining costs. You enjoy a
                 larger, finest diamond for the same budget. Smart buying becomes

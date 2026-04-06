@@ -21,7 +21,7 @@ export default function BrandValue() {
         priority
         className="
           object-cover 
-           object-[45%_100%]
+           object-[50%_0%]
            md:object-[65%_75%]
           lg:object-[35%_78%]  
         "
@@ -30,10 +30,10 @@ export default function BrandValue() {
       {/* Overlay */}
       <div
         className="
-          absolute right-0 bottom-[25%] md:bottom-[20%] 
+          absolute right-0 bottom-[30%] md:bottom-[20%] 
           flex flex-col justify-end 
           md:flex-row md:items-center md:justify-end 
-          px-0 sm:px-6 md:px-0 lg:px-8 lg:right-10 xl:right-[8%]
+          px-2 sm:px-6 md:px-0 lg:px-8 lg:right-10 xl:right-[8%]
           pb-4 sm:pb-12 md:pb-0
         "
       >
@@ -60,7 +60,7 @@ export default function BrandValue() {
 
           {/* Paragraph */}
           <p
-            className="text-[10px] md:text-sm lg:text-base xl:text-lg
+            className="text-[14px] font-light md:text-sm lg:text-base xl:text-lg
               leading-snug text-black/70
             "
           >

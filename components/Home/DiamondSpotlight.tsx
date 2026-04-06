@@ -17,9 +17,6 @@ export default function DiamondSpotlight() {
   useEffect(() => {
     const updateMaskSize = () => {
       if (window.innerWidth < 640) {
-        setMaskSize("114px 104px");
-        setOffsetX(57);
-        setOffsetY(52);
         setIsMobile(true);
       } else if (window.innerWidth < 1024) {
         setMaskSize("220px 220px");
@@ -63,70 +60,80 @@ export default function DiamondSpotlight() {
       data-theme="dark"
       className="relative w-full min-h-screen overflow-hidden"
     >
-      {/* Base Image */}
-      <Image
-        src={DiamondSpotLightImage}
-        alt="diamond spotlight"
-        fill
-        priority
-        className="object-cover"
-      />
-
-      {/* Colored Reveal */}
-      <div
-        ref={coloredImageRef}
-        className="hidden md:block absolute inset-0"
-        style={{
-          WebkitMaskImage: "linear-gradient(to right, black, black)",
-          maskImage: "linear-gradient(to right, black, black)",
-          maskRepeat: "no-repeat",
-          maskSize: maskSize,
-          maskPosition: "var(--position, center)",
-        }}
-      >
+      {/* Mobile: Always show colored image as full background */}
+      {isMobile && (
         <Image
           src={DiamondSpotLightColoredImage}
           alt="diamond spotlight colored"
           fill
+          priority
           className="object-cover"
         />
-      </div>
+      )}
 
-      {/* Spotlight Border */}
-      <div
-        ref={borderRef}
-        style={{
-          top: "var(--top, 50%)",
-          left: "var(--left, 50%)",
-          translate: "var(--translate, -50% -50%)",
-          width: isMobile ? "114px" : maskSize.split(" ")[0],
-          height: isMobile ? "104px" : maskSize.split(" ")[1],
-        }}
-        className="hidden md:block absolute border border-white/80 rounded-sm z-10 pointer-events-none"
-      />
+      {/* Desktop: Base dark image */}
+      {!isMobile && (
+        <Image
+          src={DiamondSpotLightImage}
+          alt="diamond spotlight"
+          fill
+          priority
+          className="object-cover"
+        />
+      )}
+
+      {/* Desktop only: Colored Reveal with spotlight mask */}
+      {!isMobile && (
+        <div
+          ref={coloredImageRef}
+          className="absolute inset-0"
+          style={{
+            WebkitMaskImage: "linear-gradient(to right, black, black)",
+            maskImage: "linear-gradient(to right, black, black)",
+            maskRepeat: "no-repeat",
+            maskSize: maskSize,
+            maskPosition: "var(--position, center)",
+          }}
+        >
+          <Image
+            src={DiamondSpotLightColoredImage}
+            alt="diamond spotlight colored"
+            fill
+            priority
+            className="object-cover"
+          />
+        </div>
+      )}
+
+      {/* Desktop only: Spotlight Border */}
+      {!isMobile && (
+        <div
+          ref={borderRef}
+          style={{
+            top: "var(--top, 50%)",
+            left: "var(--left, 50%)",
+            translate: "var(--translate, -50% -50%)",
+            width: maskSize.split(" ")[0],
+            height: maskSize.split(" ")[1],
+          }}
+          className="absolute border border-white/80 rounded-sm z-10 pointer-events-none"
+        />
+      )}
 
       {/* Content */}
-      <div className="absolute inset-0 z-20 flex pt-20 justify-center  md:items-end md:justify-center md:pb-16 lg:pb-20">
-
+      <div className="absolute inset-0 z-20 flex pt-20 justify-center md:items-end md:justify-center md:pb-16 lg:pb-20">
         <div className="flex flex-col items-center text-center gap-4 md:gap-6 lg:gap-8 max-w-[600px] px-4">
-
-          <h2 className="h2 text-white">
+          <h2 className="h2  text-white">
             Designed for you.<br />
-            <span className="hidden md:inline">
-              Crafted for a lifetime.
-            </span>
-            <span className="md:hidden">
-              Crafted for a<br />lifetime.
-            </span>
+            <span className="hidden md:inline">Crafted for a lifetime.</span>
+            <span className="md:hidden">Crafted for a<br />lifetime.</span>
           </h2>
-
           <div onClick={() => router.push("/collections/rings")}>
             <PrimaryBtn
               text="DISCOVER MORE"
               className="font-light md:font-normal tracking-widest"
             />
           </div>
-
         </div>
       </div>
     </section>

@@ -44,7 +44,7 @@ export default function WhyUs() {
           whileInView={{opacity:1, x:0}}
           transition={{duration:0.5, delay:0.2, ease:'easeInOut'}}
           viewport={{once:false}}
-          className="text-xs md:text-[20px] leading-[140%] md:leading-[140%] text-[#000000]/50 w-[90%] md:w-[40%]">
+          className="text-[14px] md:text-[20px] leading-[140%] md:leading-[140%] text-[#000000]/50 w-[90%] md:w-[40%]">
           Because true brilliance is more than sparkle. At Dia Diamonds, every creation is guided by ethics, certified authenticity, and timeless craftsmanship — ensuring jewellery that feels as meaningful as it looks.
           </motion.p>
         </ContainerLayout>

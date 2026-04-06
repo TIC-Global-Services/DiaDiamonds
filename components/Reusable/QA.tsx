@@ -35,7 +35,7 @@ export default function QA({ question, answer, isOpen, onToggle }: QAProps) {
         className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]
           ${isOpen ? "max-h-[200px] opacity-100 pt-4" : "max-h-0 opacity-0"}`}
       >
-        <p className="text-[12px] md:text-[16px] leading-[150%] text-[#000000] pl-4">
+        <p className="text-[14px] md:text-[16px] leading-[150%] text-[#000000] pl-4">
           {answer}
         </p>
       </div>

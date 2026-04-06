@@ -47,23 +47,23 @@ body {
          md:text-[30px] 
          lg:text-[34px]
          xl:text-[44px]
-         font-medium leading-[110%] tracking-widest md:tracking-tight;
+         font-medium leading-[110%] tracking-tight;
 }
 
 .h3 {
   @apply text-[18px] 
          md:text-[30px] 
-         lg:text-[30px]
-         font-medium leading-tight tracking-wide;
+         lg:text-[34px]
+         font-medium leading-tight tracking-tight;
 }
 
 /* Para Text*/
 
 .p {
-  @apply text-[12px]
+  @apply text-[14px]
           md:text-[14px] 
          lg:text-[20px]
-         font-normal leading-[110%] tracking-wider md:tracking-tight;
+         font-light md:font-normal leading-[110%] tracking-tight;
 }
 
 

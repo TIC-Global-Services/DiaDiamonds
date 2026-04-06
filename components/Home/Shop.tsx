@@ -58,7 +58,7 @@ export default function Shop() {
       className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[100px] py-[5%] flex justify-center relative bg-[#FFFFFF]"
     >
       {/* Dark circle — left/top — category selector */}
-      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-2 -translate-y-[70%] md:-translate-x-[68%] md:-translate-y-0 rounded-full py-[10px] z-30 flex flex-col md:flex-row justify-end items-center px-10">
+      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md: -translate-y-[70%] md:-translate-x-[72%] md:-translate-y-0 rounded-full py-[10px] z-30 flex flex-col md:flex-row justify-end items-center px-10">
         <div className="mb-10">
           <h3 className="h3 leading-none tracking-wide uppercase text-white pb-2 md:pb-3 text-center md:text-left ">
             Shop By Colors
@@ -131,7 +131,7 @@ export default function Shop() {
       </div>
 
       {/* Light circle — right/bottom — color swatches */}
-      <div className="w-[120%] md:w-full h-full md:h-[120%] overflow-hidden bg-[#f7f6f4] absolute top-0 left-0 -translate-y-[58%] -translate-x-[10%] md:-translate-x-[50%] md:-translate-y-[10%] rounded-full z-20 flex md:flex-col">
+      <div className="w-[120%] md:w-full h-full md:h-[120%] overflow-hidden bg-[#f7f6f4] absolute top-0 left-0 -translate-y-[58%] -translate-x-[10%] md:-translate-x-[55%] md:-translate-y-[10%] rounded-full z-20 flex md:flex-col">
         {colorSwatches.map(({ color, idx }) => (
           <button
             key={idx}
@@ -168,7 +168,7 @@ export default function Shop() {
         </AnimatePresence>
 
         {/* Product image */}
-        <div className="w-[50%] sm:w-[48%] md:w-[55%] aspect-[450/157]">
+        <div className="w-[68%] sm:w-[48%] md:w-[55%] aspect-[450/157]">
           <AnimatePresence mode="wait">
             <motion.img
               key={imageKey}

@@ -78,18 +78,31 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
     <div data-theme='light' className="min-h-screen bg-white pt-[8%]">
 
       {/* BREADCRUMBS */}
-        <Breadcrumbs
-          className="mt-14 md:mt-0"
-          items={[
-            { label: "HOME", href: "/" },
-            { label: "COLLECTION", href: "/collections" },
-            { label: category.toUpperCase() },
-          ]}
-        />
+      <Breadcrumbs
+        className="mt-14 md:mt-0"
+        items={[
+          { label: "HOME", href: "/" },
+          { label: "COLLECTION", href: "/collections" },
+          { label: category.toUpperCase() },
+        ]}
+      />
 
       {/* CATEGORY MENU */}
       <section className="w-full mx-auto pt-8">
-        <div className="flex items-center justify-start md:justify-center gap-2 sm:gap-4 md:gap-4 px-2 md:px-8 md:overflow-hidden overflow-x-auto scrollbar-hide snap-x snap-mandatory scroll-smooth pb-2">
+        <div className="
+              flex items-center justify-start md:justify-center
+              gap-2 sm:gap-4 md:gap-4
+              px-2 md:px-8
+              overflow-x-auto md:overflow-hidden
+              snap-x snap-mandatory scroll-smooth
+              pb-4
+              [&::-webkit-scrollbar]:block
+              [&::-webkit-scrollbar]:h-[2px]
+              [&::-webkit-scrollbar-track]:bg-[#f0ede9]
+              [&::-webkit-scrollbar-track]:rounded-full
+              [&::-webkit-scrollbar-thumb]:bg-[#431A1A]
+              [&::-webkit-scrollbar-thumb]:rounded-full
+            ">
           {categoryMenu.map((cat, idx) => {
             const isActive = category === cat.slug;
 
@@ -98,11 +111,11 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
                 key={idx}
                 ref={isActive ? activeRef : null}
                 onClick={() => router.push(`/collections/${cat.slug}`)}
-                className="relative group cursor-pointer flex-shrink-0 snap-start w-[32vw] sm:w-[22vw] md:w-[18vw]"
+                className="relative group cursor-pointer flex-shrink-0 snap-start w-[34vw] sm:w-[22vw] md:w-[18vw]"
               >
                 <div className={`relative overflow-hidden my-2
-                  ${isActive ? 'ring-1 ring-[#431A1A4D] shadow-lg' : ''}
-                `}>
+            ${isActive ? 'ring-1 ring-[#431A1A4D] shadow-lg' : ''}
+          `}>
                   <div className="relative aspect-square overflow-hidden">
                     <Image
                       src={cat.image}
@@ -113,9 +126,9 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
                   </div>
                 </div>
 
-                <p className={`text-center mt-2 text-caption font-semibold uppercase
-                  ${isActive ? 'text-[#431A1A] underline' : ''}
-                `}>
+                <p className={`text-center mt-4 text-caption font-semibold uppercase
+            ${isActive ? 'text-[#431A1A] underline py-2' : ''}
+          `}>
                   {cat.title}
                 </p>
               </div>

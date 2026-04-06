@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-            className="text-white font-normal text-[13px] md:text-[22px]"
+            className="text-white font-normal text-[14px] md:text-[22px]"
           >
             A New Way To Shine
           </motion.p>

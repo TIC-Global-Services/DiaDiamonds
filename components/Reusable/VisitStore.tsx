@@ -30,7 +30,7 @@ export default function VisitStore() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-[13px] md:text-[20px] text-black"
+            className="text-[14px] md:text-[20px] text-black"
           >
             Step into our boutique to experience Dia Diamonds as it’s meant to be.
           </motion.p>

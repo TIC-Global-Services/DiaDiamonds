@@ -77,7 +77,7 @@ const Certified: React.FC = () => {
                 IGI Certified Diamonds
               </h3>
 
-              <p className="text-[10px] md:text-[14px] text-gray-500 leading-[120%] tracking-normal text-left">
+              <p className="text-[14px] md:text-[14px] text-gray-500 leading-[120%] tracking-normal text-left">
                 Every Dia Diamond is certified by the International Gemological
                 Institute (IGI), one of the world’s most trusted diamond grading
                 authorities. This certification ensures your diamond’s
@@ -144,7 +144,7 @@ const Certified: React.FC = () => {
                 SGL Certified Diamonds
               </h3>
 
-              <p className="text-[10px] md:text-[14px] text-gray-500 leading-[120%] tracking-normal text-left">
+              <p className="text-[14px] md:text-[14px] text-gray-500 leading-[120%] tracking-normal text-left">
                 Every Dia Diamond is certified by Solitaire Gemological
                 Laboratories (SGL), one of India’s most trusted diamond
                 certification authorities. This certification verifies the

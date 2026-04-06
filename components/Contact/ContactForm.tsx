@@ -169,7 +169,7 @@ export default function ContactForm() {
                       <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#7C3C3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                       <path d="M14 2V8H20" stroke="#7C3C3C" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                    <span className="text-[12px] truncate max-w-[180px] md:max-w-[300px]">
+                    <span className="text-[14px] truncate max-w-[180px] md:max-w-[300px]">
                       {file.name}
                     </span>
                     <span className="text-[11px] text-[#B1B1B1] shrink-0">
@@ -202,7 +202,7 @@ export default function ContactForm() {
             Send
           </button>
 
-          <p className="text-[12px] font-light text-[#585858F7] mb-[22.64%] md:mb-[8.14%] text-center md:text-left">
+          <p className="text-[14px] font-light text-[#585858F7] mt-2 mb-[22.64%] md:mb-[8.14%] text-center md:text-left">
             This site is protected by reCAPTCHA Enterprise & Google{" "}
             <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-70">
               Privacy Policy

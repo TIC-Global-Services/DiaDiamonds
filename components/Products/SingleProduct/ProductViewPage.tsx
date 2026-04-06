@@ -120,7 +120,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           ]}
         />
 
-        <div ref={stickyContainerRef} className="w-full md:px-[9.67%] gap-5 grid md:grid-cols-[35%_65%] pt-[2%]">
+        <div ref={stickyContainerRef} className="w-full md:px-[9.67%] gap-10 grid md:grid-cols-[35%_60%] pt-[2%]">
 
           {/* LEFT COL */}
           <div className="relative px-[4.37%] md:px-0">
@@ -130,7 +130,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               ref={stickyRef}
               className={`transition-all duration-300 ease-out ${
                 isSticky
-                  ? 'md:fixed md:top-[100px] md:w-[calc(35%-2.67%)] md:left-[6.67%]'
+                  ? 'md:fixed md:top-[100px] md:w-[calc(35%-2.67%)] md:left-[5.67%]'
                   : 'md:static'
               }`}
             >
@@ -240,7 +240,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               CONTACT STORE
             </button>
             
-            </div>
+            </div> {/* End of Sticky Container */}
 
             {/* Spacer to maintain layout when sticky is fixed */}
             {isSticky && <div className="hidden md:block" style={{ height: stickyRef.current?.offsetHeight }} />}
@@ -255,7 +255,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                   key={currentVariantIndex}
                   src={product.colors[currentVariantIndex]?.image}
                   alt={product.productName}
-                  className="w-[85%] h-auto object-contain cursor-pointer"
+                  className="w-[65%] h-auto bg-gray-50 rounded-2xl shadow-2xl inset-0 object-contain cursor-pointer"
                   initial={{ opacity: 0, scale: 0.95, filter: "blur(8px)" }}
                   animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                   exit={{ opacity: 0 }}

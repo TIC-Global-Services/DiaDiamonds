@@ -318,7 +318,7 @@ export default function Navbar() {
 
           {/* Search Button */}
           <motion.button
-            className="w-4 md:w-[37px] aspect-square hover:cursor-pointer transition-all duration-300"
+            className="w-10 md:w-[37px] aspect-square hover:cursor-pointer transition-all duration-300"
             onClick={() => setIsSearh(true)}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
@@ -387,7 +387,7 @@ export default function Navbar() {
               <motion.img
                 src={getCurrentLogo()}
                 alt="logo"
-                className="w-10 md:w-[59px] h-auto transition-opacity duration-500"
+                className="w-12 md:w-[59px] h-auto transition-opacity duration-500"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               />
@@ -397,11 +397,11 @@ export default function Navbar() {
           {/* Menu Toggle */}
           <motion.div
             onClick={() => setNavMenuClick(true)}
-            className={`w-[15px] md:w-5 h-2 md:h-[13px] border-t border-b md:border-t-2 md:border-b-2 hover:cursor-pointer transition-colors duration-500 ${navBarTheme === "light" && !navMenuClick ? 'border-[#000000]' : 'border-[#FFFFFF]'}`}
+            className={`w-5 md:w-5 h-[13px] md:h-[13px] border-t-2 border-b-2 md:border-t-2 md:border-b-2 hover:cursor-pointer transition-colors duration-500 ${navBarTheme === "light" && !navMenuClick ? 'border-[#000000]' : 'border-[#FFFFFF]'}`}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className={`flex mx-auto w-3 md:w-4 h-[3px] md:h-[6px] border-b md:border-b-2 transition-colors duration-500 ${navBarTheme === "light" && !navMenuClick ? 'border-[#000000]' : 'border-[#FFFFFF]'}`} />
+            <div className={`flex mx-auto w-4 md:w-4 h-[6px] md:h-[6px] border-b-2 md:border-b-2 transition-colors duration-500 ${navBarTheme === "light" && !navMenuClick ? 'border-[#000000]' : 'border-[#FFFFFF]'}`} />
           </motion.div>
 
         </nav>

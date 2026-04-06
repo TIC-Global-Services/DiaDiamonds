@@ -3,8 +3,8 @@
 
 export default function ContactInfo(){
 
-    const titleStyle = "font-medium text-lg md:text-[24px] leading-[120%] md:leading-[100%] tracking-[0%] text-[#000000] text-center mt-10 md:mt-[25.63%] mb-2 md:mb-[4.80%]";
-    const subStyle = "text-xs md:text-[16px] leading-[120%] md:leading-[100%] tracking-[0%] text-[#000000] text-center"
+    const titleStyle = "font-medium text-[24px] md:text-[30px] leading-[120%] md:leading-[100%] tracking-[0%] text-[#000000] text-center mt-10 md:mt-[25.63%] mb-2 md:mb-[4.80%]";
+    const subStyle = "text-[14px] md:text-[24px] leading-[120%] md:leading-[100%] tracking-[0%] text-[#000000] text-center"
 
     return(
         <section data-theme="light" className="w-full bg-white px-[5.81%] md:px-[8.23%] py-[25.93%] md:py-[6.53%]">

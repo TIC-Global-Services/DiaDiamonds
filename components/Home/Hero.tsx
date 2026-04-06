@@ -36,7 +36,7 @@ const Hero = () => {
             Crafted to last forever
           </h1>
 
-          <p className="text-[12px] sm:text-base md:text-lg text-white/80 max-w-[500px]">
+          <p className="text-[14px] sm:text-base md:text-lg text-white/80 max-w-[500px]">
             Iconic Brand Feel Designed to Shine Today And Endure Forever
           </p>
 

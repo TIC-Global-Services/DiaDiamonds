@@ -25,8 +25,8 @@ export default function OurRoots() {
       {/* Right content */}
       <div className="w-full md:w-1/2 relative z-10 my-auto md:my-0">
         <ContainerLayout>
-          <div className="w-full flex flex-col justify-center items-center md:items-center gap-4 md:gap-8
-                            px-2 py-[8%] md:py-20 
+          <div className="w-full flex flex-col justify-center items-center md:items-center gap-6 md:gap-8
+                            px-4 py-[12%] md:py-20 
                             bg-white/50 backdrop-blur-xs md:bg-transparent md:backdrop-blur-0 rounded-[20px]">
             {/* Profile Image */}
             <img
@@ -41,8 +41,8 @@ export default function OurRoots() {
             </h2>
 
             {/* Paragraph */}
-            <p className="font-normal text-[10px] md:text-[20px] leading-[140%] md:leading-[140%] text-center text-[#000000]/50 md:text-left">
-              Our story begins with <span className="font-medium text-[10px] md:text-[20px] leading-[100%] text-[#000000]">V Nataraja Mudaliar and Sons Jewellers</span>, a name that has earned generations of confidence through fine jewellery, ethical practices, and timeless design. For decades, the brand has stood as a symbol of reliability and refined craftsmanship, shaping jewellery that families return to, time and again.
+            <p className="font-normal text-[14px] md:text-[20px] leading-[140%] md:leading-[140%] text-center text-[#000000]/50 md:text-left">
+              Our story begins with <span className="font-medium text-[14px] md:text-[20px] leading-[100%] text-[#000000]">V Nataraja Mudaliar and Sons Jewellers</span>, a name that has earned generations of confidence through fine jewellery, ethical practices, and timeless design. For decades, the brand has stood as a symbol of reliability and refined craftsmanship, shaping jewellery that families return to, time and again.
             </p>
           </div>
         </ContainerLayout>

@@ -45,7 +45,7 @@ export default function OurDiamonds() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeInOut" }}
             viewport={{once:false}}
-            className="font-light text-[12px] md:text-[20px] leading-[120%] md:leading-[140%] text-[#000000]">
+            className="font-light text-[14px] md:text-[20px] leading-[120%] md:leading-[140%] text-[#000000]">
                 Each Dia Diamonds creation is shaped by responsible sourcing, global certification, and masterful craftsmanship — resulting in jewellery that reflects integrity as much as brilliance. Each Dia Diamonds creation is shaped by responsible sourcing, global certification, and masterful craftsmanship — resulting in jewellery that reflects integrity as much as brilliance.
             </motion.p>
 
