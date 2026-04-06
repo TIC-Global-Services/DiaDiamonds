@@ -115,8 +115,8 @@ const Creation: React.FC = () => {
     <section data-theme="light" className="relative w-full h-auto bg-white overflow-hidden">
 
       {/* Background Shapes */}
-      <div className="absolute top-[54%] left-[65.17%] md:left-[61%] md:top-0 w-[80.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#f2f2f2] rounded-full z-0" />
-      <div className="absolute top-[56%] left-[78.93%] md:left-[77.14%] md:top-0 w-[70.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#7c3c3c]/13 rounded-full z-10" />
+      <div className="absolute top-[59%] left-[67.17%] md:left-[61%] md:top-0 w-[52.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#f2f2f2] rounded-full z-0" />
+      <div className="absolute top-[60%] left-[80.93%] md:left-[77.14%] md:top-0 w-[46.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#7c3c3c]/13 rounded-full z-10" />
 
       <div className="relative z-20 w-full h-full flex flex-col py-[25%] md:py-[5.83%]">
 
