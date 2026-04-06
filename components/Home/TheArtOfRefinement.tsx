@@ -95,8 +95,9 @@ export default function TheArtOfRefinement() {
 
 
         <div className="w-full md:w-[59.7%] lg:w-[60.7%] my-auto md:ml-[0.875%] pb-10 md:pb-0 text-center md:text-left">
-          <h2 className="w-full text-white h2 pb-6 md:pb-10 text-center md:text-start">The Art of Radiant Refinement</h2>
-          <p className="w-full px-4 md:px-0 font-light text-sm sm:text-base md:text-lg leading-relaxed tracking-wide text-white/70 pb-6 md:pb-12 text-center md:text-left">
+          <h2 className="w-full text-white text-xl
+         md:text-[44px] font-medium tracking-tight pb-6 md:pb-10 text-center md:text-start">The Art of Radiant Refinement</h2>
+          <p className="w-full px-2 md:px-0 font-light text-[10px] sm:text-base md:text-lg leading-relaxed tracking-wide text-white/70 pb-6 md:pb-12 text-center md:text-left">
             Trust begins with transparency. Every diamond at Dia Diamonds is independently certified by internationally recognized gemological laboratories, ensuring verified quality, authenticity, and ethical standards.
           </p>
           <div className="w-full md:w-auto flex justify-center md:justify-start">

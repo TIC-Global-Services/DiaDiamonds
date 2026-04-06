@@ -17,7 +17,7 @@ export default function Testimonials() {
       noStars: [1],
       comments: [
         "Rose Gold Diamond Ring Looks Elegant and Classy!",
-        "If You are Looking for Quality with a Touch of Elegance, Look no Further than Dia.",
+        "If youre looking for quality with a touch of elegance, look no further than Dia. Their pieces are not only stylish but also durable ",
       ],
       profileImage: "/assets/img/Testimonials/profile1.jpg",
       name: "Asha",
@@ -62,10 +62,10 @@ export default function Testimonials() {
   return (
     <section
       data-theme="light"
-      className="w-full md:min-h-screen flex flex-col md:flex-row bg-black"
+      className="w-full md:min-h-screen flex flex-col md:flex-row bg-black md:bg-transparent"
     >
       {/* LEFT SIDE */}
-      <div className="w-full aspect-[3/4] md:aspect-[4/3]  md:w-1/2 overflow-hidden">
+      <div className="relative w-full aspect-[4/4] md:aspect-[4/3]  md:w-1/2 overflow-hidden">
         <Parallax speed={-10}>
           <Image
             src={testimonialLeftImage}
@@ -82,7 +82,7 @@ export default function Testimonials() {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <div className="w-full py-10 md:py-[8%] min-h-[280px] md:min-h-0 flex flex-col justify-center">
+        <div className="w-full py-10 md:py-[0%] min-h-[280px] md:min-h-0 flex flex-col justify-center">
 
           {/* Smooth Animated Content */}
           <AnimatePresence mode="wait">
@@ -94,7 +94,7 @@ export default function Testimonials() {
               transition={{ duration: 0.35 }}
             >
               {/* Stars */}
-              <div className="flex gap-1 justify-center md:justify-start">
+              <div className="flex gap-2 justify-center md:justify-start">
                 {testimonials[currentTestimony].stars.map((_, id) => (
                   <svg key={id} width="28" height="28" viewBox="0 0 32 32">
                     <path
@@ -134,9 +134,9 @@ export default function Testimonials() {
             <div className="flex items-center gap-3">
               <img
                 src={testimonials[currentTestimony].profileImage}
-                className="w-11 h-11 md:w-14 md:h-14 rounded-full object-cover shrink-0"
+                className="w-12 h-12 md:w-20 md:h-20 rounded-full object-cover shrink-0"
               />
-              <h3 className="text-sm md:text-base font-semibold leading-tight">
+              <h3 className="text-[10px] md:text-base font-semibold leading-tight">
                 {testimonials[currentTestimony].name}
               </h3>
             </div>

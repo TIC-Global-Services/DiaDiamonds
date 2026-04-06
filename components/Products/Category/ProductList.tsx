@@ -119,132 +119,128 @@ const ProductList: React.FC<ProductListProps> = ({
       </div>
 
 
+
+
       {/* MOBILE FILTER */}
-      <div className="md:hidden w-full px-[3%] mt-10">
+<div className="md:hidden w-full px-[3%] mt-10">
 
-        {/* Pill */}
-        <div className="flex items-center border border-[#E5E5E5] rounded-full overflow-hidden bg-[#F8F6F3]">
+  {/* Heading FIRST */}
+  <CategoryHeading category={category} />
 
-          <button
-            onClick={() => setIsLeftOpen(true)}
-            className={`py-3 text-[12px] tracking-wide ${category === "rings" ? "w-1/2" : "w-full"}`}
-          >
-            SORT BY
-          </button>
+  {/* Pill BELOW */}
+  <div className="flex items-center border border-[#E5E5E5] rounded-full overflow-hidden bg-[#F8F6F3] mt-4">
+    <button
+      onClick={() => setIsLeftOpen(true)}
+      className={`py-3 text-[12px] tracking-wide ${category === "rings" ? "w-1/2" : "w-full"}`}
+    >
+      SORT BY
+    </button>
 
-          {category === "rings" && (
-            <>
-              <div className="w-[1px] h-6 bg-[#E5E5E5]" />
-              <button
-                onClick={() => setIsRightOpen(true)}
-                className="w-1/2 py-3 text-[12px] tracking-wide"
-              >
-                SOLITAIRE VARIETY
-              </button>
-            </>
-          )}
-        </div>
+    {category === "rings" && (
+      <>
+        <div className="w-[1px] h-6 bg-[#E5E5E5]" />
+        <button
+          onClick={() => setIsRightOpen(true)}
+          className="w-1/2 py-3 text-[12px] tracking-wide"
+        >
+          SOLITAIRE VARIETY
+        </button>
+      </>
+    )}
+  </div>
 
-        {/* DRAWER OVERLAY */}
-        {(isLeftOpen || isRightOpen) && (
+  {/* DRAWER OVERLAY */}
+  {(isLeftOpen || isRightOpen) && (
+    <div
+      onClick={() => {
+        setIsLeftOpen(false);
+        setIsRightOpen(false);
+      }}
+      className="fixed inset-0 bg-black/30 z-[9998]"
+    />
+  )}
+
+  {/* DRAWER */}
+  <div
+    ref={drawerRef}
+    className={`fixed inset-0 w-full h-full bg-white z-[9999]
+    transform transition-transform duration-300 ease-in-out
+    ${isLeftOpen || isRightOpen ? "translate-x-0" : "translate-x-full"}`}
+  >
+    {/* Header */}
+    <div className="flex items-center justify-between px-5 py-4 border-b border-[#E5E5E5]">
+      <h2 className="text-[13px] tracking-wide">
+        {isLeftOpen ? "SORT BY" : "SOLITAIRE VARIETY"}
+      </h2>
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          setIsLeftOpen(false);
+          setIsRightOpen(false);
+        }}
+        className="text-lg"
+      >
+        X
+      </button>
+    </div>
+
+    {/* OPTIONS */}
+    <div className="p-5 space-y-5">
+
+      {/* SORT */}
+      {isLeftOpen &&
+        SORT_OPTIONS.map((opt) => (
           <div
+            key={opt.value}
             onClick={() => {
+              setSortBy(opt.value as SortType);
               setIsLeftOpen(false);
+            }}
+            className="flex items-center gap-3 cursor-pointer"
+          >
+            <div
+              className={`w-4 h-4 rounded-full border flex items-center justify-center
+              ${sortBy === opt.value ? "border-[#431A1A]" : "border-gray-400"}`}
+            >
+              {sortBy === opt.value && (
+                <div className="w-2 h-2 bg-[#431A1A] rounded-full" />
+              )}
+            </div>
+            <span className="text-[12px] tracking-wide uppercase">
+              {opt.label}
+            </span>
+          </div>
+        ))}
+
+      {/* VARIETY */}
+      {isRightOpen &&
+        category === "rings" &&
+        VARIETIES.map((opt) => (
+          <div
+            key={opt.value}
+            onClick={() => {
+              setSolitaireVariety(opt.value as VarietyType);
               setIsRightOpen(false);
             }}
-            className="fixed inset-0 bg-black/30 z-[9998]"
-          />
-        )}
-
-        {/* DRAWER */}
-        <div
-          ref={drawerRef}
-          className={`fixed inset-0 w-full h-full bg-white z-[9999]
-          transform transition-transform duration-300 ease-in-out
-          ${isLeftOpen || isRightOpen ? "translate-x-0" : "translate-x-full"}`}
-        >
-          {/* Header */}
-          <div className="flex items-center justify-between px-5 py-4 border-b border-[#E5E5E5]">
-            <h2 className="text-[13px] tracking-wide">
-              {isLeftOpen ? "SORT BY" : "SOLITAIRE VARIETY"}
-            </h2>
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsLeftOpen(false);
-                setIsRightOpen(false);
-              }}
-              className="text-lg"
+            className="flex items-center gap-3 cursor-pointer"
+          >
+            <div
+              className={`w-4 h-4 rounded-full border flex items-center justify-center
+              ${solitaireVariety === opt.value ? "border-[#431A1A]" : "border-gray-400"}`}
             >
-              X
-            </button>
+              {solitaireVariety === opt.value && (
+                <div className="w-2 h-2 bg-[#431A1A] rounded-full" />
+              )}
+            </div>
+            <span className="text-[12px] tracking-wide uppercase">
+              {opt.label}
+            </span>
           </div>
+        ))}
+    </div>
+  </div>
 
-          {/* OPTIONS */}
-          <div className="p-5 space-y-5">
-
-            {/* SORT */}
-            {isLeftOpen &&
-              SORT_OPTIONS.map((opt) => (
-                <div
-                  key={opt.value}
-                  onClick={() => {
-                    console.log("SET SORT:", opt.value); // debug
-                    setSortBy(opt.value as SortType);
-                    setIsLeftOpen(false);
-                  }}
-                  className="flex items-center gap-3 cursor-pointer"
-                >
-                  {/* Custom radio */}
-                  <div
-                    className={`w-4 h-4 rounded-full border flex items-center justify-center
-                    ${sortBy === opt.value ? "border-[#431A1A]" : "border-gray-400"}`}
-                  >
-                    {sortBy === opt.value && (
-                      <div className="w-2 h-2 bg-[#431A1A] rounded-full" />
-                    )}
-                  </div>
-
-                  <span className="text-[12px] tracking-wide uppercase">
-                    {opt.label}
-                  </span>
-                </div>
-              ))}
-
-            {/* VARIETY */}
-            {isRightOpen &&
-              category === "rings" &&
-              VARIETIES.map((opt) => (
-                <div
-                  key={opt.value}
-                  onClick={() => {
-                    setSolitaireVariety(opt.value as VarietyType); // updates hook
-                    setIsRightOpen(false);
-                  }}
-                  className="flex items-center gap-3 cursor-pointer"
-                >
-                  {/* Radio UI */}
-                  <div
-                    className={`w-4 h-4 rounded-full border flex items-center justify-center
-                    ${solitaireVariety === opt.value ? "border-[#431A1A]" : "border-gray-400"}`}
-                  >
-                    {solitaireVariety === opt.value && (
-                      <div className="w-2 h-2 bg-[#431A1A] rounded-full" />
-                    )}
-                  </div>
-
-                  <span className="text-[12px] tracking-wide uppercase">
-                    {opt.label}
-                  </span>
-                </div>
-              ))}
-          </div>
-        </div>
-
-        {/* Heading */}
-        <CategoryHeading category={category} />
-      </div>
-
+</div>
 
       {/* PRODUCT GRID */}
       <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-4 gap-y-2 md:gap-y-12 mt-7 pb-10 px-3">
@@ -276,7 +272,7 @@ const ProductList: React.FC<ProductListProps> = ({
 };
 
 const CategoryHeading: React.FC<{ category: string }> = ({ category }) => (
-  <div className="flex flex-col items-center mt-5 md:mt-0 absolute left-1/2 -translate-x-1/2">
+  <div className="flex flex-col items-center mt-5 md:mt-0 md:absolute md:left-1/2 md:-translate-x-1/2">
     <h3 className="text-[12px] md:text-[38px] uppercase">{category}</h3>
     <p className="hidden md:block text-xs md:text-[13px]">Scroll to discover</p>
     <ArrowDown className='w-3 md:w-5' />

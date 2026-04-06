@@ -8,7 +8,7 @@ export default function DIAExperience() {
           The DIA Diamonds Experience
         </h2>
 
-        <p className="text-[8px] font-normal md:text-[14px] leading-[150%] w-full md:w-[65%] text-[#b6b6b6]">
+        <p className="text-[10px] font-normal md:text-[14px] leading-[140%] w-full md:w-[65%] text-[#b6b6b6]">
           From selection to setting, every service is thoughtfully designed around you.
           We combine expert craftsmanship, personalized care, and lasting trust to make every moment extraordinary.
         </p>
@@ -27,7 +27,7 @@ export default function DIAExperience() {
             <h3 className="text-base md:text-[18px] leading-[130%] md:leading-[123%] text-[#FFFFFF] w-full text-center">
               Personal Diamond Consultation
             </h3>
-            <p className="text-[8px] font-normal md:text-[12px] leading-[160%] md:leading-[162%] text-[#b6b6b6]">
+            <p className="text-[10px] font-normal md:text-[12px] leading-[160%] md:leading-[162%] text-[#b6b6b6]">
               Understanding your vision, style, and story
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function DIAExperience() {
             <h3 className="text-base md:text-[18px] leading-[130%] md:leading-[123%] text-[#FFFFFF] w-full text-center">
               Elegant Signature Packaging
             </h3>
-            <p className="text-[8px] font-normal md:text-[12px] leading-[160%] md:leading-[162%] text-[#b6b6b6] text-center w-full">
+            <p className="text-[10px] font-normal md:text-[12px] leading-[160%] md:leading-[162%] text-[#b6b6b6] text-center w-full">
               Presented in our refined signature box.
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function DIAExperience() {
             <h3 className="text-base md:text-[18px] leading-[130%] md:leading-[123%] text-[#FFFFFF]">
               Design & Visualization
             </h3>
-            <p className="text-[8px] font-normal md:text-[12px] leading-[160%] md:leading-[162%] text-[#b6b6b6]">
+            <p className="text-[10px] font-normal md:text-[12px] leading-[160%] md:leading-[162%] text-[#b6b6b6]">
               Ethically sourced, certified stones chosen with care
             </p>
           </div>
@@ -62,7 +62,7 @@ export default function DIAExperience() {
             <h3 className="text-base md:text-[18px] leading-[130%] md:leading-[123%] text-[#FFFFFF]">
               Handcrafting & Finishing
             </h3>
-            <p className="text-[8px] font-normal md:text-[12px] leading-[160%] md:leading-[162%] text-[#b6b6b6]">
+            <p className="text-[10px] font-normal md:text-[12px] leading-[160%] md:leading-[162%] text-[#b6b6b6]">
               Meticulous craftsmanship to perfect every detail
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function DIAExperience() {
             <h3 className="text-base md:text-[18px] leading-[130%] md:leading-[123%] text-[#FFFFFF]">
               Certified Diamonds Only
             </h3>
-            <p className="text-[8px] font-normal md:text-[12px] leading-[160%] md:leading-[162%] text-[#b6b6b6]">
+            <p className="text-[10px] font-normal md:text-[12px] leading-[160%] md:leading-[162%] text-[#b6b6b6]">
               Certified diamonds ensuring authenticity and transparency.
             </p>
           </div>

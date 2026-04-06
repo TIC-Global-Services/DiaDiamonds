@@ -21,7 +21,7 @@ export default function TheArtOfCrafting({img, text}:ArtOfCraftingProps){
 
             <div className="w-full md:w-[34.72%] gap-2 px-[28.61%] py-[21.84%] md:px-[4%] md:py-0 text-center flex flex-col md:gap-[1.67%] justify-center items-center bg-[#E7DFD7]">
 
-                <h2 className="text-[13px] md:text-[32px] leading-[92%] md:leading-[40px] tracking-[0%] md:tracking-[-1.28px] ">The Art Of Crafting</h2>
+                <h2 className="text-[13px] md:text-[32px] leading-[92%] font-medium md:leading-[40px] tracking-[0%] md:tracking-[-1.28px] ">The Art Of Crafting</h2>
                 <p className="text-[10px] md:text-[15.6px] leading-[100%] md:leading-[24px] tracking-[5%] md:tracking-[-0.5px] m-0">{text}</p>
             </div>
 

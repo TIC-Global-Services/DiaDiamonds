@@ -36,7 +36,7 @@ export default function Footer() {
               return (
                 <li
                   key={item.label}
-                  className="relative flex gap-1 md:gap-2 cursor-pointer"
+                  className="relative flex gap-2 md:gap-2 cursor-pointer"
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   {/* TEXT */}
@@ -147,7 +147,7 @@ export default function Footer() {
 
 
       {/* ================= INFO SECTION ================= */}
-      <div className="order-2 md:order-3 grid grid-cols-3 md:flex md:flex-row w-full md:px-0 gap-2 md:gap-0">
+      <div className="order-2 md:order-3 grid grid-cols-3 md:flex md:flex-row w-full md:px-0 gap-4 md:gap-0">
 
         {/* ================= HEAD OFFICE ================= */}
         <div className="mt-1 flex flex-col items-start text-left gap-2 md:gap-3 md:w-1/2 md:pt-0">
@@ -162,7 +162,7 @@ export default function Footer() {
 
 
         {/* ================= MOBILE CUSTOMER SERVICE ================= */}
-        <div className="flex flex-col items-center text-center md:hidden">
+        <div className="flex flex-col items-start text-left md:hidden">
           <h2 className="text-[8px] font-normal pb-1 text-white">
             CUSTOMER SERVICE
           </h2>
@@ -180,12 +180,12 @@ export default function Footer() {
 
 
         {/* ================= CONTACTS ================= */}
-        <div className="flex flex-col items-end text-right md:w-1/2 md:pl-10 md:pt-0">
-          <h2 className="text-[8px] uppercase lg:text-xl md:text-base text-[#FFFFFF] pb-2">
+        <div className="flex flex-col items-start text-left md:items-end md:text-right md:w-1/2 md:pl-10 md:pt-0">
+          <h2 className="text-[8px] uppercase lg:text-xl md:text-base leading-[120%] text-[#FFFFFF] pb-1">
             Contacts
           </h2>
 
-          <p className="flex flex-col text-[8px] md:text-sm lg:text-[18px] text-[#737373] cursor-pointer hover:underline">
+          <p className="flex flex-col text-[8px] md:text-sm lg:text-[18px] text-[#737373] cursor-pointer leading-[120%] hover:underline">
             <a href="tel:987654321">
               +91 98765 43021
             </a>

@@ -19,7 +19,7 @@ const Brilliance: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-center h2 tracking-[0%] pb-8 md:pb-[2.47%]"
+        className="text-center text-[24px] md:text-[40px] font-medium tracking-tight pb-8 md:pb-[2.47%]"
       >
         THE ART OF CHOOSING BRILLIANCE
       </motion.h2>

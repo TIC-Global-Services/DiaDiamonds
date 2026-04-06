@@ -55,15 +55,15 @@ export default function Shop() {
   return (
     <section
       data-theme="light"
-      className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[100px] flex justify-center relative bg-[#FFFFFF]"
+      className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[100px] py-[5%] flex justify-center relative bg-[#FFFFFF]"
     >
       {/* Dark circle — left/top — category selector */}
-      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-2 -translate-y-[60%] md:-translate-x-[70%] md:-translate-y-0 rounded-full py-[10px] z-30 flex flex-col md:flex-row justify-end items-center px-10">
+      <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md:left-2 -translate-y-[70%] md:-translate-x-[68%] md:-translate-y-0 rounded-full py-[10px] z-30 flex flex-col md:flex-row justify-end items-center px-10">
         <div className="mb-10">
-          <h3 className="h3 leading-none uppercase text-white pb-2 md:pb-3 text-center md:text-left ">
+          <h3 className="h3 leading-none tracking-wide uppercase text-white pb-2 md:pb-3 text-center md:text-left ">
             Shop By Colors
           </h3>
-          <p className="p text-center md:text-start text-white/60 pb-3 md:pb-5">
+          <p className="p tracking-widest text-center md:text-start text-white/60 pb-3 md:pb-5">
             Choose Category
           </p>
 
@@ -131,7 +131,7 @@ export default function Shop() {
       </div>
 
       {/* Light circle — right/bottom — color swatches */}
-      <div className="w-[120%] md:w-full h-full md:h-[120%] overflow-hidden bg-[#f7f6f4] absolute top-0 left-0 -translate-y-[50%] -translate-x-[10%] md:-translate-x-[50%] md:-translate-y-[10%] rounded-full z-20 flex md:flex-col">
+      <div className="w-[120%] md:w-full h-full md:h-[120%] overflow-hidden bg-[#f7f6f4] absolute top-0 left-0 -translate-y-[58%] -translate-x-[10%] md:-translate-x-[50%] md:-translate-y-[10%] rounded-full z-20 flex md:flex-col">
         {colorSwatches.map(({ color, idx }) => (
           <button
             key={idx}
@@ -146,7 +146,7 @@ export default function Shop() {
       </div>
 
       {/* Product display */}
-      <div className="w-full md:w-[50%] mt-45 md:mt-0 py-4 sm:mt-20 relative md:absolute md:right-0 md:bottom-0 md:top-0 flex flex-col justify-center gap-0 items-center z-10">
+      <div className="w-full md:w-[50%] mt-44 md:mt-0 px-10 py-[25%] md:py-10 sm:mt-20 relative md:absolute md:right-0 md:bottom-0 md:top-0 flex flex-col justify-center gap-0 items-center z-10">
 
         {/* Color label */}
         <AnimatePresence mode="wait">
@@ -156,7 +156,7 @@ export default function Shop() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="h2 uppercase pb-2 mt-16 md:mt-0 md:pb-[3.28%]"
+            className="text-base md:text-[30px] font-normal md:font-medium tracking-widest uppercase pb-2 mt-16 md:mt-0 md:pb-[3.28%]"
             style={{
               background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
               WebkitBackgroundClip: "text",
@@ -203,6 +203,7 @@ export default function Shop() {
             router.push(`/collections/${selectedCategory}`);
           }}
           mode="light"
+          className="text-[#5B2C35]"
         >
           VIEW MORE
         </PrimaryBtn>

@@ -75,7 +75,7 @@ export default function DiamondSpotlight() {
       {/* Colored Reveal */}
       <div
         ref={coloredImageRef}
-        className="absolute inset-0"
+        className="hidden md:block absolute inset-0"
         style={{
           WebkitMaskImage: "linear-gradient(to right, black, black)",
           maskImage: "linear-gradient(to right, black, black)",
@@ -102,11 +102,11 @@ export default function DiamondSpotlight() {
           width: isMobile ? "114px" : maskSize.split(" ")[0],
           height: isMobile ? "104px" : maskSize.split(" ")[1],
         }}
-        className="absolute border border-white/80 rounded-sm z-10 pointer-events-none"
+        className="hidden md:block absolute border border-white/80 rounded-sm z-10 pointer-events-none"
       />
 
       {/* Content */}
-      <div className="absolute inset-0 z-20 flex items-end justify-center pb-12 md:pb-16 lg:pb-20">
+      <div className="absolute inset-0 z-20 flex pt-20 justify-center  md:items-end md:justify-center md:pb-16 lg:pb-20">
 
         <div className="flex flex-col items-center text-center gap-4 md:gap-6 lg:gap-8 max-w-[600px] px-4">
 
@@ -123,6 +123,7 @@ export default function DiamondSpotlight() {
           <div onClick={() => router.push("/collections/rings")}>
             <PrimaryBtn
               text="DISCOVER MORE"
+              className="font-light md:font-normal tracking-widest"
             />
           </div>
 

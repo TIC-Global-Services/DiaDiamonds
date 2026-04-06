@@ -20,7 +20,7 @@ const Certified: React.FC = () => {
     >
       {/* TITLE */}
       <div className="w-full flex justify-center items-center">
-        <h2 className="font-medium text-[24px] md:text-[40px] text-center">
+        <h2 className="font-medium text-[24px] md:text-[40px] text-center tracking-tight">
           “IGI & SGL Certified Diamonds”
         </h2>
       </div>
@@ -60,7 +60,7 @@ const Certified: React.FC = () => {
               w-full
               flex flex-col
               gap-3 md:gap-4
-              px-2 md:px-[2.5%]
+              px-4 md:px-[2.5%]
               py-2 md:py-[2%]
               max-w-[420px] md:max-w-none
               mx-auto 
@@ -70,14 +70,14 @@ const Certified: React.FC = () => {
                 alt="IGI Logo"
                 width={116}
                 height={48}
-                className="w-[53px] h-[24px] mx-auto object-contain md:w-[116px] md:h-[46px]"
+                className="w-[53px] h-[24px] mx-auto mt-2 mb-2 object-contain md:w-[116px] md:h-[46px]"
               />
 
               <h3 className="text-[16px] md:text-[20px] text-gray-800 text-left">
                 IGI Certified Diamonds
               </h3>
 
-              <p className="text-[10px] md:text-[14px] text-gray-600 leading-relaxed tracking-tight text-left">
+              <p className="text-[10px] md:text-[14px] text-gray-500 leading-[120%] tracking-normal text-left">
                 Every Dia Diamond is certified by the International Gemological
                 Institute (IGI), one of the world’s most trusted diamond grading
                 authorities. This certification ensures your diamond’s
@@ -85,7 +85,7 @@ const Certified: React.FC = () => {
                 clarity, and carat weight.
               </p>
 
-              <p className="hidden md:block text-[12px] md:text-[14px] text-gray-800 leading-relaxed text-left">
+              <p className="text-[12px] md:text-[14px] text-gray-700 leading-[120%] text-left">
                 100% IGI Certified Authenticity
               </p>
             </GlassCard>
@@ -126,8 +126,8 @@ const Certified: React.FC = () => {
               w-full
               flex flex-col
               gap-3 md:gap-4
-              px-2 md:px-[3.5%]
-              py-2 md:py-[2%]
+              px-4 md:px-[3.5%]
+              py-4 md:py-[2%]
               max-w-[420px] md:max-w-none
               mx-auto
             ">
@@ -137,14 +137,14 @@ const Certified: React.FC = () => {
                 alt="SGL Logo"
                 width={116}
                 height={48}
-                className="w-[53px] h-[22px] mx-auto object-contain md:w-[116px] md:h-[48px]"
+                className="w-[53px] h-[22px] mx-auto mt-2 mb-2 object-contain md:w-[116px] md:h-[48px]"
               />
 
               <h3 className="text-[16px] md:text-[20px] text-gray-800 text-left">
                 SGL Certified Diamonds
               </h3>
 
-              <p className="text-[10px] md:text-[14px] text-gray-600 leading-relaxed tracking-tight text-left">
+              <p className="text-[10px] md:text-[14px] text-gray-500 leading-[120%] tracking-normal text-left">
                 Every Dia Diamond is certified by Solitaire Gemological
                 Laboratories (SGL), one of India’s most trusted diamond
                 certification authorities. This certification verifies the
@@ -152,7 +152,7 @@ const Certified: React.FC = () => {
                 clarity, and carat weight.
               </p>
 
-              <p className="hidden md:block text-[12px] md:text-[14px] text-gray-600 leading-relaxed tracking-normal text-left">
+              <p className="hidden md:block text-[12px] md:text-[14px] text-gray-600 leading-[120%] tracking-normal text-left">
                 Certified by SGL, Crafted for Trust. Our diamonds are certified
                 by SGL, assuring exceptional quality, authenticity, and timeless
                 brilliance.
