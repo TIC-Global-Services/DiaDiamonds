@@ -144,7 +144,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                 {product.diamondType || ""}
               </p>
 
-              </div>
+              
 
             {/* MOBILE IMAGE */}
             <AnimatePresence mode="wait">
@@ -240,6 +240,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               CONTACT STORE
             </button>
             
+            </div>
 
             {/* Spacer to maintain layout when sticky is fixed */}
             {isSticky && <div className="hidden md:block" style={{ height: stickyRef.current?.offsetHeight }} />}

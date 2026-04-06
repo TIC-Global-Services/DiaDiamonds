@@ -31,7 +31,7 @@ export default function HomeProductCard({ product }: HomeProductCardProp): JSX.E
       className="w-full shrink-0 cursor-pointer"
     >
       {/* Image */}
-      <div className="w-full aspect-square bg-[#f9f9f9] rounded-[16px] overflow-hidden">
+      <div className="w-full aspect-square bg-gray-100 rounded-[16px] overflow-hidden">
         <img
           src={product.colors?.[0]?.image || "/fallback.png"}
           alt={product.productName}

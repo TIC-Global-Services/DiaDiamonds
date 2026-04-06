@@ -30,45 +30,47 @@ export default function BrandValue() {
       {/* Overlay */}
       <div
         className="
-          absolute right-0 bottom-[25%] md:bottom-10 
-          flex flex-col justify-end 
-          md:flex-row md:items-center md:justify-end 
-          px-2 sm:px-6 md:px-0 lg:px-18 lg:right-10
-          pb-4 sm:pb-12 md:pb-0
-        "
+        absolute right-0 bottom-[22%]
+        
+        flex flex-col md:flex-row md:items-center md:justify-end
+        px-4 sm:px-6 md:px-10 lg:px-20
+        pb-6 sm:pb-10 md:pb-0
+        xl:right-[8%]
+      "
       >
         {/* Content */}
         <div
           className="
-            w-full md:py-10
-            max-w-[250px]
-            md:max-w-lg
-            flex flex-col
-            gap-2 md:gap-4 
-            text-left
-          "
+          w-full py-2 md:py-0
+          max-w-[300px] md:max-w-lg
+          flex flex-col
+          gap-2 md:gap-4
+          text-left
+        "
         >
           {/* Heading */}
           <h2
             className="
-              text-xl lg:text-2xl xl:text-3xl
-              leading-tight font-medium tracking-tight text-black
-            "
+          text-lg sm:text-xl lg:text-2xl xl:text-3xl
+          leading-tight font-medium tracking-tight text-black
+        "
           >
             Thoughtfully curated for you
           </h2>
 
           {/* Paragraph */}
           <p
-            className="text-[10px] md:text-sm lg:text-base xl:text-lg
-              leading-snug text-black/70
-            "
+          className="
+          text-[10px] md:text-sm lg:text-base xl:text-lg
+          leading-snug text-black/70
+      "
           >
-            Your diamond journey starts here. Where brilliance meets craftsmanship, and every sparkle tells your story.
+            Your diamond journey starts here. Where brilliance meets craftsmanship,
+            and every sparkle tells your story.
           </p>
 
           {/* Button */}
-          <div >
+          <div>
             <PrimaryBtn
               onClick={() => router.push("/collections/rings")}
               text="LEARN MORE"
