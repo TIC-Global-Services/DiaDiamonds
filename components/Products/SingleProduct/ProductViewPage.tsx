@@ -9,6 +9,7 @@ import Image from 'next/image';
 import RecommendedProductCard from '../Cards/RecommendedProductCard';
 import { Product, ProductLayoutImage } from '@/types/product';
 import { FALLBACK_LAYOUT } from '@/constants/LayoutImages';
+import { useStickyProductSidebar } from '@/hooks/useStickyProductSidebar';
 
 interface ProductViewProps {
   product: Product;
@@ -27,6 +28,11 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const recommendedRef = useRef<HTMLElement>(null);
+  const stickyContainerRef = useRef<HTMLDivElement>(null);
+  const [stickyRef, isSticky] = useStickyProductSidebar<HTMLDivElement>(stickyContainerRef, {
+    topOffset: 100,
+    bottomOffset: 50
+  });
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -114,13 +120,20 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           ]}
         />
 
-        <div className="w-full md:px-[6.67%] gap-5 grid md:grid-cols-[35%_65%] md:items-stretch pt-[2%]">
+        <div ref={stickyContainerRef} className="w-full md:px-[9.67%] gap-5 grid md:grid-cols-[35%_65%] pt-[2%]">
 
           {/* LEFT COL */}
-          <div className="relative px-[4.37%] md:px-0 h-full">
+          <div className="relative px-[4.37%] md:px-0">
 
-            {/* STICKY BLOCK - stops at end of parent container */}
-            <div className="md:sticky md:top-[120px] md:self-start">
+            {/* STICKY BLOCK - Intersection Observer */}
+            <div
+              ref={stickyRef}
+              className={`transition-all duration-300 ease-out ${
+                isSticky
+                  ? 'md:fixed md:top-[100px] md:w-[calc(35%-2.67%)] md:left-[6.67%]'
+                  : 'md:static'
+              }`}
+            >
               <h3 className="md:pt-[5.47%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
                 {product.productName}
               </h3>
@@ -130,6 +143,8 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               <p className="md:pt-[2%] md:pb-[10%] font-baskerville text-base md:text-xl leading-[1.2] tracking-tight text-[#000000]">
                 {product.diamondType || ""}
               </p>
+
+              </div>
 
             {/* MOBILE IMAGE */}
             <AnimatePresence mode="wait">
@@ -152,7 +167,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
             </AnimatePresence>
 
             {/* VARIANTS */}
-            <div className="flex gap-12 mt-4 flex-wrap">
+            <div className="flex gap-12 md:gap-14 mt-4 flex-wrap">
               {product.colors?.map((colorObj: { color: string; image: string }, idx: number) => (
                 <motion.div
                   key={idx}
@@ -224,7 +239,10 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
             >
               CONTACT STORE
             </button>
-            </div>{/* End sticky block */}
+            
+
+            {/* Spacer to maintain layout when sticky is fixed */}
+            {isSticky && <div className="hidden md:block" style={{ height: stickyRef.current?.offsetHeight }} />}
 
           </div>
 
@@ -323,7 +341,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
       <section
         ref={recommendedRef}
         data-theme="light"
-        className="w-full md:pb-[0.51%] mt-2 p-4 md:mt-[10%]"
+        className="w-full md:pb-[0.51%] mt-2 p-4 md:mt-[2%]"
       >
         <h2 className="text-center font-[baskerville SC] font-normal md:font-medium tracking-tight text-2xl md:text-3xl border-t md:mb-4 border-gray-100 pt-6 md:pt-12">
           You May Also Like
