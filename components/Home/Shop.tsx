@@ -59,7 +59,7 @@ export default function Shop() {
     >
       {/* Dark circle — left/top — category selector */}
       <div className="w-full h-[100%] bg-[#431a1a] absolute top-0 left-0 md: -translate-y-[70%] md:-translate-x-[72%] md:-translate-y-0 rounded-full py-[10px] z-30 flex flex-col md:flex-row justify-end items-center px-10">
-        <div className="mb-10">
+        <div className="mb-20 md:mb-10 md:px-2">
           <h3 className="h3 leading-none tracking-wide uppercase text-white pb-2 md:pb-3 text-center md:text-left ">
             Shop By Colors
           </h3>
@@ -146,7 +146,7 @@ export default function Shop() {
       </div>
 
       {/* Product display */}
-      <div className="w-full md:w-[50%] mt-44 md:mt-0 px-10 py-[25%] md:py-10 sm:mt-20 relative md:absolute md:right-0 md:bottom-0 md:top-0 flex flex-col justify-center gap-0 items-center z-10">
+      <div className="w-full md:w-[50%] mt-44 md:mt-0 px-10 py-[20%] md:py-10 sm:mt-20 relative md:absolute md:right-0 md:bottom-0 md:top-0 flex flex-col justify-center gap-0 items-center z-10">
 
         {/* Color label */}
         <AnimatePresence mode="wait">
@@ -156,7 +156,7 @@ export default function Shop() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="text-base md:text-[30px] font-normal md:font-medium tracking-widest uppercase pb-2 mt-16 md:mt-0 md:pb-[3.28%]"
+            className="text-[14px] md:text-[30px] font-normal md:font-medium tracking-widest uppercase pt-4 pb-2 mt-30 md:pt-0 md:mt-0 md:pb-[3.28%]"
             style={{
               background: "linear-gradient(to top, #000000 0%, #B58561 49%, #000000 88%)",
               WebkitBackgroundClip: "text",
@@ -168,7 +168,7 @@ export default function Shop() {
         </AnimatePresence>
 
         {/* Product image */}
-        <div className="w-[68%] sm:w-[48%] md:w-[55%] aspect-[450/157]">
+        <div className="w-[100%] sm:w-[48%] md:w-[55%] aspect-[450/157]">
           <AnimatePresence mode="wait">
             <motion.img
               key={imageKey}
@@ -191,7 +191,7 @@ export default function Shop() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25, ease: "easeOut", delay: 0.05 }}
-            className="pt-2 md:pt-4 text-base md:text-2xl leading-snug text-black pb-5 md:pb-2 font-baskerville"
+            className="pt-5 md:pt-4 text-base md:text-2xl leading-snug text-black pb-5 md:pb-2 font-baskerville"
           >
             {currentItem.name}
           </motion.p>

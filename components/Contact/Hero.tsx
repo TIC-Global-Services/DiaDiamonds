@@ -15,7 +15,7 @@ export default function Hero() {
         className="object-cover md:object-fill object-[30%_50%]"
       />
 
-      <div className="absolute top-[64.6%] md:top-[38.75%] md:left-[23.82%] w-full md:w-[52.36%] flex flex-col justify-center items-center sm:px-8 md:px-0 overflow-hidden">
+      <div className="absolute top-[64.6%] gap-4 md:gap-2 md:top-[38.75%] md:left-[23.82%] w-full md:w-[52.36%] flex flex-col justify-center items-center sm:px-8 md:px-0 overflow-hidden">
         <h2 className="text-white text-center h2 leading-[100%] md:leading-[46px] tracking-tight uppercase m-0 pb-2 sm:pb-3 md:pb-[1.86%]">
           Discover timeless elegance
         </h2>

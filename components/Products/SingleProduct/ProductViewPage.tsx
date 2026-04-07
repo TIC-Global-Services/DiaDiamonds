@@ -120,27 +120,27 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           ]}
         />
 
-        <div ref={stickyContainerRef} className="w-full md:px-[9.67%] gap-10 grid md:grid-cols-[35%_60%] pt-[2%]">
+        <div ref={stickyContainerRef} className="w-full md:px-[6.67%] gap-10 grid md:grid-cols-[35%_65%] pt-[2%]">
 
           {/* LEFT COL */}
-          <div className="relative px-[4.37%] md:px-0">
+          <div className="relative px-[3.37%] md:px-0">
 
             {/* STICKY BLOCK - Intersection Observer */}
             <div
               ref={stickyRef}
               className={`transition-all duration-300 ease-out ${
                 isSticky
-                  ? 'md:fixed md:top-[100px] md:w-[calc(35%-2.67%)] md:left-[5.67%]'
+                  ? 'md:fixed md:top-[50px] md:w-[calc(35%-2.67%)] md:left-[4.67%]'
                   : 'md:static'
               }`}
             >
-              <h3 className="md:pt-[5.47%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
+              <h3 className="md:pt-[2%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
                 {product.productName}
               </h3>
               <p className="md:pt-[2%] text-[#000000] text-[14px] md:text-lg md:leading-[20px] md:tracking-[-0.26px] font-normal align-middle">
                 {product.colors[currentVariantIndex]?.color} with diamonds
               </p>
-              <p className="md:pt-[2%] md:pb-[10%] font-baskerville text-base md:text-xl leading-[1.2] tracking-tight text-[#000000]">
+              <p className="md:pt-[2%] md:pb-[6%] font-baskerville text-base md:text-xl leading-[1.2] tracking-tight text-[#000000]">
                 {product.diamondType || ""}
               </p>
 
@@ -167,14 +167,14 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
             </AnimatePresence>
 
             {/* VARIANTS */}
-            <div className="flex gap-12 md:gap-14 mt-4 flex-wrap">
+            <div className="flex gap-12 md:gap-4 flex-wrap">
               {product.colors?.map((colorObj: { color: string; image: string }, idx: number) => (
                 <motion.div
                   key={idx}
                   onClick={() => setCurrentVariantIndex(idx)}
                   whileTap={{ scale: 0.9 }}
                   whileHover={{ scale: 1.05 }}
-                  className="w-[60px] md:w-[20%] shrink-0 cursor-pointer flex flex-col justify-end items-center"
+                  className="w-[25%] md:w-[30%] shrink-0 cursor-pointer flex flex-col justify-end"
                 >
                   <motion.div
                     animate={{
@@ -182,7 +182,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                       borderColor: currentVariantIndex === idx ? "#000" : "transparent",
                     }}
                     transition={{ type: "spring", stiffness: 200 }}
-                    className="w-full aspect-[4/3] flex items-center justify-center p-1 mb-2 border rounded-md mt-2 pb-2"
+                    className="w-full aspect-[4/3] flex items-center justify-center"
                   >
                     <Image
                       width={100}
@@ -192,22 +192,22 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                       className="w-full h-full object-contain"
                     />
                   </motion.div>
-                  <h3 className={`text-[10px] md:text-sm tracking-wide text-center pt-2 capitalize ${
+                  <h3 className={`text-[10px] md:text-sm tracking-wide text-center capitalize ${
                     currentVariantIndex === idx ? "text-black font-semibold" : "text-[#000000]/50"
                   }`}>
                     {colorObj.color}
                   </h3>
                   {currentVariantIndex === idx && (
-                    <motion.div layoutId="activeVariantLine" className="w-full h-[2px] bg-black mt-2 mb-2" />
+                    <motion.div layoutId="activeVariantLine" className="w-full h-[2px] bg-black" />
                   )}
                 </motion.div>
               ))}
             </div>
 
-            <hr className='w-full border-t border-gray-300' />
+            <hr className='w-full border-t mt-4 md:mt-10 border-gray-300' />
 
             {hasSizes && (
-              <div className="flex w-full py-[6.37%] md:py-[6%] gap-[4%] items-center px-4 md:px-0 mt-2 md:mt-0">
+              <div className="flex w-full py-[6.37%] md:py-[4%] gap-[4%] items-center px-4 md:px-0 mt-2 md:mt-2">
                 <h3 className="text-sm leading-[20px] text-[#000000]/50 mr-2 md:mr-4">Size:</h3>
                 {product.sizes?.length ? (
                   product.sizes.map((size: string) => (
@@ -235,7 +235,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
             <button
               onClick={() => router.push("/contact")}
-              className="block w-[100%] md:w-[95%] mx-auto md:mx-0 mt-4 md:mt-6 py-4 bg-white border-0 border-[#F0F0F0] rounded-[25px] text-[#000000] tracking-widest cursor-pointer font-semibold text-[12px] hover:bg-black hover:text-white transition-colors shadow-[inset_-1px_-1px_4px_0px_rgba(0,0,0,0.25)]"
+              className="block w-[100%] md:w-[95%] mx-auto md:mx-0 mt-6 md:mt-4 py-4 bg-white border-0 border-[#F0F0F0] rounded-[25px] text-[#000000] tracking-widest cursor-pointer font-semibold text-[12px] hover:bg-black hover:text-white transition-colors shadow-[inset_-1px_-1px_4px_0px_rgba(0,0,0,0.25)]"
             >
               CONTACT STORE
             </button>
@@ -249,13 +249,13 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
           {/* RIGHT COL */}
           <div className="pb-10">
-            <div className="hidden md:flex md:mr-[2%] items-center justify-center">
+            <div className="hidden md:flex md:mr-[4%] items-center justify-center">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={currentVariantIndex}
                   src={product.colors[currentVariantIndex]?.image}
                   alt={product.productName}
-                  className="w-[65%] h-auto bg-gray-50 rounded-2xl shadow-2xl inset-0 object-contain cursor-pointer"
+                  className="w-[70%] h-auto inset-0 object-contain cursor-pointer"
                   initial={{ opacity: 0, scale: 0.95, filter: "blur(8px)" }}
                   animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                   exit={{ opacity: 0 }}
@@ -271,7 +271,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
               className="md:w-full md:ml-auto md:pb-[8%] gap-2 p-2 justify-start text-start pt-0"
             >
-              <p className="mt-[6%] md:pb-[6.44%] font-light text-[14px] md:text-[16px] leading-[120%] text-start tracking-[-0.32px] text-[#000000]">
+              <p className="mt-[2%] md:pb-[6.44%] font-light text-[14px] md:text-[16px] leading-[120%] text-start tracking-[-0.32px] text-[#000000]">
                 {layoutDescription}
               </p>
               <div className="flex flex-col items-start justify-between mb-[11.05%] md:mb-0 gap-4 md:gap-2 md:flex-row md:items-center">

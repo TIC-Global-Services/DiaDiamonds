@@ -26,11 +26,11 @@ export default function Footer() {
 
 
   return (
-    <footer data-theme='dark' className="w-full min-h-auto bg-[#0b0b0b] px-2 md:px-6 pt-6">
+    <footer data-theme='dark' className="w-full min-h-auto bg-[#0b0b0b] px-2 md:px-6 pt-6 pb-2">
 
       {/* ================= NAV ================= */}
-      <div className="flex">
-        <ul className="flex flex-wrap md:w-1/2 items-start justify-start md:justify-start md:items-start gap-3 md:gap-6 w-full">
+      <div className="flex pb-4 md:pb-6">
+        <ul className="flex flex-wrap md:w-1/2 items-start justify-start md:justify-start md:items-start gap-x-4 gap-y-2 md:gap-6 w-full">
           {NAV_ITEMS.map((item) => {
             if (item.label === "Collections") {
               return (
@@ -147,23 +147,23 @@ export default function Footer() {
 
 
       {/* ================= INFO SECTION ================= */}
-      <div className="order-2 md:order-3 grid grid-cols-3 md:flex md:flex-row w-full md:px-0 gap-0 md:gap-0">
+      <div className="order-2 md:order-3 flex flex-row md:flex-row w-full md:px-0 gap-0 py-0 md:py-0">
 
-        {/* ================= HEAD OFFICE ================= */}
-        <div className="mt-1 flex flex-col items-start text-left gap-2 md:gap-3 md:w-1/2 md:pt-0">
-          <h2 className="text-[10px] uppercase font-normal lg:text-xl md:text-base leading-[100%] text-[#FFFFFF]">
+       {/* ================= HEAD OFFICE ================= */}
+        <div className="flex flex-col items-start text-left gap-1.5 md:gap-3 w-1/3 md:w-1/2 md:pt-0">
+          <h2 className="text-[12px] uppercase font-normal lg:text-xl md:text-base leading-[100%] text-[#FFFFFF]">
             Head Office
           </h2>
 
-          <p className="text-[10px] md:w-[55%] md:text-sm lg:text-[18px] leading-[100%] text-[#737373]">
-            2nd Floor, Crystal Plaza Heritage Road, Coimbatore, India - 600 548
+          <p className="text-[12px] md:w-[55%] md:text-sm lg:text-[18px] leading-[100%] tracking-tight text-[#737373]">
+            2nd Floor, Crystal Plaza  Heritage Road, Coimbatore, India - 600 548
           </p>
         </div>
 
-
+        
         {/* ================= MOBILE CUSTOMER SERVICE ================= */}
-        <div className="flex flex-col items-start text-left md:hidden">
-          <h2 className="text-[10px] font-normal pb-1 text-white">
+        <div className="flex flex-col items-center text-center md:hidden gap-1 w-1/3">
+          <h2 className="text-[12px] font-normal pb-1 text-white">
             CUSTOMER SERVICE
           </h2>
 
@@ -171,21 +171,20 @@ export default function Footer() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[10px] underline decoration-solid leading-[120%] text-[#737373] hover:text-white"
+              className="text-[12px] underline decoration-solid leading-none tracking-tight text-[#737373] hover:text-white"
             >
               {link.name}
             </Link>
           ))}
         </div>
 
-
-        {/* ================= CONTACTS ================= */}
-        <div className="flex flex-col items-end text-right md:items-end md:text-right md:w-1/2 md:pl-10 md:pt-0">
-          <h2 className="text-[10px] uppercase lg:text-xl md:text-base leading-[120%] text-[#FFFFFF] pb-1">
+       {/* ================= CONTACTS ================= */}
+        <div className="flex flex-col items-end text-right gap-1 w-1/3 md:w-1/2 md:pl-10 md:pt-0">
+          <h2 className="text-[12px] uppercase lg:text-xl md:text-base leading-[120%] text-[#FFFFFF]">
             Contacts
           </h2>
 
-          <p className="flex flex-col text-[10px] md:text-sm lg:text-[18px] text-[#737373] cursor-pointer leading-[120%] hover:underline">
+          <p className="flex flex-col text-[12px] md:text-sm lg:text-[18px] text-[#737373] cursor-pointer tracking-tight leading-[140%] hover:underline">
             <a href="tel:987654321">
               +91 98765 43021
             </a>
@@ -197,17 +196,22 @@ export default function Footer() {
       </div>
 
       {/* ================= DIVIDER ================= */}
-      <hr className=" w-full border-t-[0.5px] border-[white]" />
+      <hr className="w-full border-t-[0.5px] border-[white] my-2 md:my-6" />
 
       {/* ================= BOTTOM BAR ================= */}
-
-      <div className="w-full flex flex-col items-center p-2 justify-start md:gap-0 md:flex-row md:items-center md:justify-between">
+      <div className="w-full flex flex-col items-center py-2 px-2 justify-start gap-1 md:gap-0 md:flex-row md:items-center md:justify-between">
         <p className="font-medium text-[14px] md:text-sm lg:text-[18px] leading-tight text-[#FFFFFF] text-center md:text-left">
           © 2026 Dia Diamonds . All Rights Reserved.
         </p>
-        <p className="font-medium text-[12px] md:text-sm lg:text-[18px] leading-tight text-[#FFFFFF] text-center md:text-right"
-        >
-          Designed & Developed By <a href="https://www.theinternetcompany.one/" target="_blank" className="cursor-pointer hover:underline">TIC Global Services</a>
+        <p className="font-medium text-[12px] md:text-sm lg:text-[18px] leading-tight text-[#FFFFFF] text-center md:text-right">
+          Designed & Developed By{" "}
+          <a
+            href="https://www.theinternetcompany.one/"
+            target="_blank"
+            className="cursor-pointer hover:underline"
+          >
+            TIC Global Services
+          </a>
         </p>
       </div>
     </footer>
