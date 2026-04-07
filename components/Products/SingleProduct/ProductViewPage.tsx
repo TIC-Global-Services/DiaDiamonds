@@ -137,7 +137,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               <h3 className="md:pt-[5.47%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
                 {product.productName}
               </h3>
-              <p className="md:pt-[2%] text-[#000000] text-[12px] md:text-lg md:leading-[20px] md:tracking-[-0.26px] font-normal align-middle">
+              <p className="md:pt-[2%] text-[#000000] text-[14px] md:text-lg md:leading-[20px] md:tracking-[-0.26px] font-normal align-middle">
                 {product.colors[currentVariantIndex]?.color} with diamonds
               </p>
               <p className="md:pt-[2%] md:pb-[10%] font-baskerville text-base md:text-xl leading-[1.2] tracking-tight text-[#000000]">
@@ -271,20 +271,20 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
               className="md:w-full md:ml-auto md:pb-[8%] gap-2 p-2 justify-start text-start pt-0"
             >
-              <p className="mt-[6%] md:pb-[6.44%] font-light text-[10px] md:text-[16px] leading-[1.8] text-start tracking-[-0.32px] text-[#000000]">
+              <p className="mt-[6%] md:pb-[6.44%] font-light text-[14px] md:text-[16px] leading-[120%] text-start tracking-[-0.32px] text-[#000000]">
                 {layoutDescription}
               </p>
               <div className="flex flex-col items-start justify-between mb-[11.05%] md:mb-0 gap-4 md:gap-2 md:flex-row md:items-center">
-                <div className="flex items-center font-light text-[10px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
+                <div className="flex items-center font-light text-[14px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
                   <span className="mr-2">•</span>
                   {product.colors[currentVariantIndex]?.color} with diamonds
                 </div>
-                <div className="flex items-center font-light text-[10px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
+                <div className="flex items-center font-light text-[14px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
                   <span className="mr-2">•</span>
                   Finger size: {currentSize || 'Small'}
                 </div>
                 {product.diamondType && (
-                  <div className="flex items-center font-light text-[10px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
+                  <div className="flex items-center font-light text-[14px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
                     <span className="mr-2">•</span>
                     {product.diamondType}
                   </div>

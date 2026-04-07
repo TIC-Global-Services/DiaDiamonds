@@ -31,7 +31,7 @@ export default function Arrivals() {
         className="w-full md:w-1/2 min-h-[50svh] md:min-h-[100svh] overflow-hidden"
       >
         <div
-          onClick={() => router.push("/collections/rings")}
+          onClick={() => router.push("/collections/rings?sort=newArrival")}
           className="relative w-full h-full cursor-pointer group"
         >
           <Parallax speed={-10}>

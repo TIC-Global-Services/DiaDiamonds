@@ -12,11 +12,13 @@ interface ProductListProps {
   products: Product[];
   category: string;
   onProductClick: (id: number) => void;
+  defaultSort?: string;
 }
 
 const ProductList: React.FC<ProductListProps> = ({
   products,
   category,
+  defaultSort,
   onProductClick
 }) => {
   const [isLeftOpen, setIsLeftOpen] = useState(false);
@@ -29,7 +31,7 @@ const ProductList: React.FC<ProductListProps> = ({
     displayedProducts,
     hasMore,
     loadMore,
-  } = useProductFilter(products, category);
+  } = useProductFilter(products, category, defaultSort);
 
 
   const leftDropdownRef = useRef<HTMLDivElement>(null);

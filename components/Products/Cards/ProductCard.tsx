@@ -77,7 +77,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onClick }) => {
         <p className="text-base text-[10px] font-light text-[#6E6E6E] m-0">
           {displayColor}
         </p>
-        <h4 className="w-full text-[13px] md:text-[24px] tracking-tight font-baskerville text-center line-clamp-2">
+        <h4 className="w-full text-[14px] md:text-[24px] tracking-tight font-baskerville text-center line-clamp-2">
           {product.productName}
         </h4>
         {product.diamondType && (

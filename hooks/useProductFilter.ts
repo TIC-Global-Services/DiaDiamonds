@@ -3,8 +3,14 @@ import { Product, SortType, VarietyType } from "@/types/product";
 
 const PAGE_SIZE = 6;
 
-export function useProductFilter(products: Product[], category: string) {
-  const [sortBy, setSortBy] = useState<SortType>("all");
+export function useProductFilter(
+  products: Product[],
+  category: string,
+  defaultSort?: string,
+) {
+  const [sortBy, setSortBy] = useState<SortType>(
+    (defaultSort as SortType) ?? "all",
+  );
   const [solitaireVariety, setSolitaireVariety] = useState<VarietyType>("all");
 
   //use visibleCount instead of page
@@ -14,6 +20,12 @@ export function useProductFilter(products: Product[], category: string) {
     // reset when filters/category change
     setVisibleCount(PAGE_SIZE);
   }, [category, sortBy, solitaireVariety]);
+
+  useEffect(() => {
+    if (defaultSort) {
+      setSortBy(defaultSort as SortType);
+    }
+  }, [defaultSort]);
 
   const filteredProducts = useMemo(() => {
     let result = [...products];

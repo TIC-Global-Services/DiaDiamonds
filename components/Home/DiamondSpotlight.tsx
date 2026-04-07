@@ -121,7 +121,7 @@ export default function DiamondSpotlight() {
       )}
 
       {/* Content */}
-      <div className="absolute inset-0 z-20 flex pt-20 justify-center md:items-end md:justify-center md:pb-16 lg:pb-20">
+      <div className="absolute inset-0 z-20 flex pt-20 bottom-[25%] md:bottom-0 items-end justify-center md:items-end md:justify-center md:pb-16 lg:pb-20">
         <div className="flex flex-col items-center text-center gap-4 md:gap-6 lg:gap-8 max-w-[600px] px-4">
           <h2 className="h2  text-white">
             Designed for you.<br />

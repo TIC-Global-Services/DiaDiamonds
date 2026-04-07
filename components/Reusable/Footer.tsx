@@ -30,7 +30,7 @@ export default function Footer() {
 
       {/* ================= NAV ================= */}
       <div className="flex">
-        <ul className="flex flex-wrap md:w-1/2 items-center justify-start md:justify-start md:items-start gap-4 md:gap-6 w-full">
+        <ul className="flex flex-wrap md:w-1/2 items-start justify-start md:justify-start md:items-start gap-3 md:gap-6 w-full">
           {NAV_ITEMS.map((item) => {
             if (item.label === "Collections") {
               return (
@@ -40,13 +40,13 @@ export default function Footer() {
                   onClick={() => setIsOpen(!isOpen)}
                 >
                   {/* TEXT */}
-                  <span className="text-[#717580] hover:text-white transition text-[10px] md:text-base">
+                  <span className="text-[#717580] hover:text-white transition text-[14px] md:text-base">
                     Collections
                   </span>
 
                   {/* CHEVRON */}
                   <svg
-                    className={`transition-transform mt-1 md:mt-2 duration-300 ${isOpen ? "rotate-180" : ""
+                    className={`transition-transform mt-2 md:mt-2 duration-300 ${isOpen ? "rotate-180" : ""
                       }`}
                     width="10"
                     height="6"
@@ -72,7 +72,7 @@ export default function Footer() {
                             setIsOpen(false);
                             router.push(`/collections/${cat.value}`);
                           }}
-                          className="px-2 py-1 text-[8px] text-white/60 hover:text-white hover:bg-[#111] cursor-pointer capitalize"
+                          className="px-2 py-2 text-[12px] text-white/60 hover:text-white hover:bg-[#111] cursor-pointer capitalize"
                         >
                           {cat.label}
                         </div>
@@ -88,7 +88,7 @@ export default function Footer() {
                 <Link
                   href={item.href}
                   className={`${currentPath === item.href ? "text-white" : "text-[#717580]"
-                    } hover:text-white transition text-[10px] md:text-base`}
+                    } hover:text-white transition text-[14px] md:text-base`}
                 >
                   {item.label}
                 </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
 
 
       {/* ================= LOGO ================= */}
-      <div className="order-1 md:order-2 relative flex flex-col mx-auto pt-6 md:pt-0 pb-6 items-center justify-center gap-1 pointer-events-none">
+      <div className="order-1 md:order-2 relative flex flex-col mx-auto pt-10 md:pt-0 pb-6 items-center justify-center gap-1 pointer-events-none">
 
         <Image
           className="w-[60px] aspect-square"
@@ -147,15 +147,15 @@ export default function Footer() {
 
 
       {/* ================= INFO SECTION ================= */}
-      <div className="order-2 md:order-3 grid grid-cols-3 md:flex md:flex-row w-full md:px-0 gap-4 md:gap-0">
+      <div className="order-2 md:order-3 grid grid-cols-3 md:flex md:flex-row w-full md:px-0 gap-0 md:gap-0">
 
         {/* ================= HEAD OFFICE ================= */}
         <div className="mt-1 flex flex-col items-start text-left gap-2 md:gap-3 md:w-1/2 md:pt-0">
-          <h2 className="text-[8px] uppercase font-medium lg:text-xl md:text-base leading-[100%] text-[#FFFFFF]">
+          <h2 className="text-[10px] uppercase font-normal lg:text-xl md:text-base leading-[100%] text-[#FFFFFF]">
             Head Office
           </h2>
 
-          <p className="text-[8px] md:w-[55%] md:text-sm lg:text-[18px] leading-[100%] text-[#737373]">
+          <p className="text-[10px] md:w-[55%] md:text-sm lg:text-[18px] leading-[100%] text-[#737373]">
             2nd Floor, Crystal Plaza Heritage Road, Coimbatore, India - 600 548
           </p>
         </div>
@@ -163,7 +163,7 @@ export default function Footer() {
 
         {/* ================= MOBILE CUSTOMER SERVICE ================= */}
         <div className="flex flex-col items-start text-left md:hidden">
-          <h2 className="text-[8px] font-normal pb-1 text-white">
+          <h2 className="text-[10px] font-normal pb-1 text-white">
             CUSTOMER SERVICE
           </h2>
 
@@ -171,7 +171,7 @@ export default function Footer() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[8px] underline decoration-solid leading-2.5 text-[#737373] hover:text-white"
+              className="text-[10px] underline decoration-solid leading-[120%] text-[#737373] hover:text-white"
             >
               {link.name}
             </Link>
@@ -180,12 +180,12 @@ export default function Footer() {
 
 
         {/* ================= CONTACTS ================= */}
-        <div className="flex flex-col items-start text-left md:items-end md:text-right md:w-1/2 md:pl-10 md:pt-0">
-          <h2 className="text-[8px] uppercase lg:text-xl md:text-base leading-[120%] text-[#FFFFFF] pb-1">
+        <div className="flex flex-col items-end text-right md:items-end md:text-right md:w-1/2 md:pl-10 md:pt-0">
+          <h2 className="text-[10px] uppercase lg:text-xl md:text-base leading-[120%] text-[#FFFFFF] pb-1">
             Contacts
           </h2>
 
-          <p className="flex flex-col text-[8px] md:text-sm lg:text-[18px] text-[#737373] cursor-pointer leading-[120%] hover:underline">
+          <p className="flex flex-col text-[10px] md:text-sm lg:text-[18px] text-[#737373] cursor-pointer leading-[120%] hover:underline">
             <a href="tel:987654321">
               +91 98765 43021
             </a>
@@ -202,10 +202,10 @@ export default function Footer() {
       {/* ================= BOTTOM BAR ================= */}
 
       <div className="w-full flex flex-col items-center p-2 justify-start md:gap-0 md:flex-row md:items-center md:justify-between">
-        <p className="font-medium text-[12px] md:text-sm lg:text-[18px] leading-tight text-[#FFFFFF] text-center md:text-left">
+        <p className="font-medium text-[14px] md:text-sm lg:text-[18px] leading-tight text-[#FFFFFF] text-center md:text-left">
           © 2026 Dia Diamonds . All Rights Reserved.
         </p>
-        <p className="font-medium text-[8px] md:text-sm lg:text-[18px] leading-tight text-[#FFFFFF] text-center md:text-right"
+        <p className="font-medium text-[12px] md:text-sm lg:text-[18px] leading-tight text-[#FFFFFF] text-center md:text-right"
         >
           Designed & Developed By <a href="https://www.theinternetcompany.one/" target="_blank" className="cursor-pointer hover:underline">TIC Global Services</a>
         </p>

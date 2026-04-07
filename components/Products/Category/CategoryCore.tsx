@@ -17,6 +17,7 @@ import { Product } from "@/types/product";
 interface CategoryCoreProps {
   category: string;
   productLists: Product[];
+   defaultSort?: string;
 }
 
 const TheArtOfCraftingContent: Record<string, { bgImage: string; text: string; }> = {
@@ -50,7 +51,7 @@ const categoryMenu = [
   { title: "Pendants", slug: "pendants", image: pendants },
 ];
 
-export default function CategoryCore({ category, productLists }: CategoryCoreProps) {
+export default function CategoryCore({ category, productLists, defaultSort }: CategoryCoreProps) {
   const router = useRouter();
   const activeRef = useRef<HTMLDivElement>(null);
 
@@ -143,6 +144,7 @@ export default function CategoryCore({ category, productLists }: CategoryCorePro
           products={productLists}
           category={category}
           onProductClick={handleProductClick}
+          defaultSort={defaultSort}
         />
       </main>
 
