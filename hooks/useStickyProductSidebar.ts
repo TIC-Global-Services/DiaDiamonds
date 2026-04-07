@@ -22,23 +22,17 @@ export function useStickyProductSidebar<T extends HTMLElement>(
 
     const handleScroll = () => {
       const containerRect = containerEl.getBoundingClientRect();
-      const stickyHeight = stickyEl.offsetHeight;
-      const viewportHeight = window.innerHeight;
-
-      // Calculate boundaries
       const containerTop = containerRect.top;
       const containerBottom = containerRect.bottom;
-      const stickySpace = stickyHeight + topOffset + bottomOffset;
+      const stickyHeight = stickyEl.offsetHeight;
 
       const shouldBeSticky =
         containerTop <= topOffset &&
-        containerBottom >= stickySpace &&
-        stickyHeight < viewportHeight - topOffset - bottomOffset;
+        containerBottom >= stickyHeight + topOffset + bottomOffset;
 
       setIsSticky(shouldBeSticky);
     };
 
-    // Use IntersectionObserver for container visibility
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
