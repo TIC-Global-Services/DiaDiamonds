@@ -4,6 +4,7 @@ import { ClashDisplay, baskerville, ClashGrotesk } from "@/fonts";
 import { Providers } from "./providers";
 import Navbar from "@/components/Reusable/Navbar";
 import Footer from "@/components/Reusable/Footer";
+import WelcomePopup from "@/components/Reusable/WelcomePopup";
 
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" />
       </head>
       <body className={`${ClashDisplay.variable} ${baskerville.variable} ${ClashGrotesk.variable} antialiased`}>
+        <WelcomePopup />
         <Navbar />
         <Providers>{children}</Providers>
         <Footer />

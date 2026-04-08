@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 import CollectionItem from "../Products/Cards/HomeProductCard";
 import { useSwipeable } from "react-swipeable";
 import { Product } from "@/types/product";
-import Section from "@/components/layouts/Section";
 import ContainerLayout from "@/components/layouts/Container";
 
 export default function OurCollection() {
@@ -60,8 +59,8 @@ export default function OurCollection() {
     maxIndex === 0 ? 1 : (index + visibleItems) / totalItems;
 
   return (
-    <Section theme="light" className="bg-white">
-      <ContainerLayout>
+    <section data-theme="light" className="bg-white min-h-screen relative rounded-t-[24px] md:rounded-t-[40px]">
+      <ContainerLayout className="py-10">
         {/* Header */}
         <div className="flex flex-col items-center text-center gap-4 md:gap-6 lg:gap-8 mb-10 md:mb-14 lg:mb-16">
           <h2 className="h2 text-black">Our Collections</h2>
@@ -149,6 +148,6 @@ export default function OurCollection() {
           </div>
         </div>
       </ContainerLayout>
-    </Section>
+    </section>
   );
 }

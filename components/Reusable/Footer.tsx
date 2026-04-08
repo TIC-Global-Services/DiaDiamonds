@@ -4,9 +4,7 @@
 import { usePathname, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { COLLECTION_CATEGORIES } from "@/types/product";
 import { useState } from "react";
-import { NAV_ITEMS } from "@/constants/Collections";
 import Image from "next/image";
 import logo from '@/public/assets/img/DiaDiamondLogo.png'
 import diamond from '@/public/assets/img/Diamond.png'
@@ -24,6 +22,14 @@ export default function Footer() {
     { name: "Shipping Policy", href: "/shipping-policy" },
   ];
 
+   const NAV_ITEMS = [
+    { label: "Home", href: "/" },
+    {label: "Collections", href: "/collections/category",},
+    { label: "Precision", href: "/precision" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
+  ];
+
 
   return (
     <footer data-theme='dark' className="w-full min-h-auto bg-[#0b0b0b] px-2 md:px-6 pt-6 pb-2">
@@ -32,57 +38,6 @@ export default function Footer() {
       <div className="flex pb-4 md:pb-6">
         <ul className="flex flex-wrap md:w-1/2 items-start justify-start md:justify-start md:items-start gap-x-4 gap-y-2 md:gap-6 w-full">
           {NAV_ITEMS.map((item) => {
-            if (item.label === "Collections") {
-              return (
-                <li
-                  key={item.label}
-                  className="relative flex gap-2 md:gap-2 cursor-pointer"
-                  onClick={() => setIsOpen(!isOpen)}
-                >
-                  {/* TEXT */}
-                  <span className="text-[#717580] hover:text-white transition text-[14px] md:text-base">
-                    Collections
-                  </span>
-
-                  {/* CHEVRON */}
-                  <svg
-                    className={`transition-transform mt-2 md:mt-2 duration-300 ${isOpen ? "rotate-180" : ""
-                      }`}
-                    width="10"
-                    height="6"
-                    viewBox="0 0 10 6"
-                  >
-                    <path
-                      d="M1 1L5 5L9 1"
-                      stroke="white"
-                      strokeOpacity="0.5"
-                      strokeWidth="1.5"
-                      fill="none"
-                    />
-                  </svg>
-
-                  {/* DROPDOWN */}
-                  {isOpen && (
-                    <div className="absolute top-[120%] left-0 md:left-auto md:right-0 min-w-[60px] bg-black border border-[#222] rounded-md shadow-lg z-[999]">
-                      {COLLECTION_CATEGORIES.map((cat) => (
-                        <div
-                          key={cat.value}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setIsOpen(false);
-                            router.push(`/collections/${cat.value}`);
-                          }}
-                          className="px-2 py-2 text-[12px] text-white/60 hover:text-white hover:bg-[#111] cursor-pointer capitalize"
-                        >
-                          {cat.label}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </li>
-              );
-            }
-
             return (
               <li key={item.label} className="whitespace-nowrap">
                 <Link
@@ -96,6 +51,7 @@ export default function Footer() {
             );
           })}
         </ul>
+
 
         {/* ================= CUSTOMER SERVICE ================= */}
         <div className="hidden md:w-1/2 md:flex order-3 md:order-1 flex-col items-end text-right">
@@ -149,7 +105,7 @@ export default function Footer() {
       {/* ================= INFO SECTION ================= */}
       <div className="order-2 md:order-3 flex flex-row md:flex-row w-full md:px-0 gap-0 py-0 md:py-0">
 
-       {/* ================= HEAD OFFICE ================= */}
+        {/* ================= HEAD OFFICE ================= */}
         <div className="flex flex-col items-start text-left gap-1.5 md:gap-3 w-1/3 md:w-1/2 md:pt-0">
           <h2 className="text-[12px] uppercase font-normal lg:text-xl md:text-base leading-[100%] text-[#FFFFFF]">
             Head Office
@@ -160,7 +116,7 @@ export default function Footer() {
           </p>
         </div>
 
-        
+
         {/* ================= MOBILE CUSTOMER SERVICE ================= */}
         <div className="flex flex-col items-center text-center md:hidden gap-1 w-1/3">
           <h2 className="text-[12px] font-normal pb-1 text-white">
@@ -178,7 +134,7 @@ export default function Footer() {
           ))}
         </div>
 
-       {/* ================= CONTACTS ================= */}
+        {/* ================= CONTACTS ================= */}
         <div className="flex flex-col items-end text-right gap-1 w-1/3 md:w-1/2 md:pl-10 md:pt-0">
           <h2 className="text-[12px] uppercase lg:text-xl md:text-base leading-[120%] text-[#FFFFFF]">
             Contacts

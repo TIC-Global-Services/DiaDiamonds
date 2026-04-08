@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import ContainerLayout from "@/layout/ContainerLayout";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -23,76 +22,37 @@ type ContentItem = {
 
 const contentJSON: ContentItem[] = [
   {
-    imageLeft: "/assets/img/Precision/Creation/bgImage1.jpg",
-    overlayText: "The Diamond Seed",
+    imageLeft: "/assets/img/Precision/Creation/bgImage4.jpg",
+    overlayText: "Diamond Seed",
     contentText: [
       {
         para: 1,
         parts: [
-          { text: "Every lab grown diamond used at " },
-          { text: "Dia Diamonds", bold: true },
-          { text: " begins with a microscopic slice of real diamond called a seed.This seed acts as the foundation where pure carbon atoms attach and grow." },
+          { text: "Every natural diamond is formed deep within the Earth under extreme heat and pressure, where pure carbon crystallises over millions of years." },
         ],
       },
       {
         para: 2,
         parts: [
-          { text: " It is carefully placed inside a controlled growth chamber designed to replicate natural diamond-forming conditions." },
+          { text: "Shaped by nature and carried to the surface through powerful geological processes, each diamond is a unique result of time, rarity, and natural transformation." },
         ],
       },
     ],
   },
   {
-    imageLeft: "/assets/img/Precision/Creation/bgImage2.jpg",
-    overlayText: "Growth Process",
+    imageLeft: "/assets/img/Precision/Creation/bgImage5.jpg",
+    overlayText: "Real Diamond",
     contentText: [
       {
         para: 1,
         parts: [
-          { text: "Lab Grown Diamonds", bold: true },
-          { text: " are grown using advanced scientific methods that recreate nature with precision." },
+          { text: "Natural diamonds are born deep within the Earth, where extreme heat and pressure shape pure carbon into brilliant crystalline forms over millions of years." },
         ],
       },
       {
         para: 2,
         parts: [
-          { text: "Through either High Pressure High Temperature (HPHT) or Chemical Vapor Deposition (CVD), carbon atoms crystallize around the seed under extreme heat and controlled energy." },
-        ],
-      },
-    ],
-  },
-  {
-    imageLeft: "/assets/img/Precision/Creation/bgImage3.jpg",
-    overlayText: "Crystal Creation",
-    contentText: [
-      {
-        para: 1,
-        parts: [
-          { text: "Over several weeks, the diamond grows steadily into a rough crystal. Every stage is monitored to ensure clarity, color balance, and structural perfection." },
-        ],
-      },
-      {
-        para: 2,
-        parts: [
-          { text: "At this stage, the diamond is complete in composition and real gemstone in its raw form, ready for refinement." },
-        ],
-      },
-    ],
-  },
-  {
-    imageLeft: "/assets/img/Precision/Creation/bgImage.jpg",
-    overlayText: "Final Creation",
-    contentText: [
-      {
-        para: 1,
-        parts: [
-          { text: "Expert cutters shape and polish the rough crystal to unlock its brilliance. Advanced mapping technology ensures maximum light reflection, sparkle, and symmetry." },
-        ],
-      },
-      {
-        para: 2,
-        parts: [
-          { text: "The finished diamond is graded, certified, and laser-inscribed which is transforming a scientific creation into a timeless piece of fine jewelry." },
+          { text: "Guided by nature and revealed through ancient volcanic forces, each diamond carries a story of rarity, time, and enduring beauty—crafted not by machines, but by the Earth itself." },
         ],
       },
     ],
@@ -144,7 +104,7 @@ const Creation: React.FC = () => {
                 fill
                 className="object-cover"
               />
-              <p className="absolute bottom-0 left-0 mb-[7.83%] ml-[9.5%] text-white text-sm md:text-[16px]">
+              <p className="absolute bottom-0 left-0 mb-[7.83%] ml-[9.5%] text-black text-sm md:text-[16px]">
                 {contentJSON[currentCard].overlayText}
               </p>
             </motion.div>
@@ -160,7 +120,7 @@ const Creation: React.FC = () => {
               transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
               className="w-full md:w-[41.67%] border-l-[3px] border-l-[#5A5A5A] px-[8.77%] mt-[2%] md:px-0 md:pl-[2.22%] tracking-normal"
             >
-              <div className="flex flex-col gap-0 md:gap-5">
+              <div className="flex flex-col gap-0 md:gap-0">
                 {contentJSON[currentCard].contentText.map((paragraph, pIdx) => (
                   <p
                     key={pIdx}
@@ -180,16 +140,15 @@ const Creation: React.FC = () => {
         </div>
 
         {/* DOTS */}
-        <div className="w-[14.08%] md:w-[6.03%] mx-auto flex justify-around items-center gap-[3%] md:gap-[5%] pt-[12.86%] md:pt-[2.36%]">
+        <div className="w-[14.08%] md:w-[6%] mx-auto flex justify-around items-center gap-[3%] md:gap-[2%] pt-[12.86%] md:pt-[2.36%]">
           {contentJSON.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentCard(index)}
-              className={`${
-                currentCard === index
+              className={`${currentCard === index
                   ? "w-[37.93%] aspect-[22/6] bg-[#431A1A]"
                   : "w-[20.69%] aspect-[12/6] bg-[#000000]/10"
-              } rounded-[10px] cursor-pointer`}
+                } rounded-[10px] cursor-pointer`}
             />
           ))}
         </div>

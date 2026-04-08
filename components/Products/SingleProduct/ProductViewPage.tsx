@@ -9,7 +9,6 @@ import Image from 'next/image';
 import RecommendedProductCard from '../Cards/RecommendedProductCard';
 import { Product, ProductLayoutImage } from '@/types/product';
 import { FALLBACK_LAYOUT } from '@/constants/LayoutImages';
-import { useStickyProductSidebar } from '@/hooks/useStickyProductSidebar';
 
 interface ProductViewProps {
   product: Product;
@@ -22,42 +21,54 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
 
   const [currentVariantIndex, setCurrentVariantIndex] = useState(0);
   const [currentSize, setCurrentSize] = useState<string>('');
-  const [scrollLevel, setScrollLevel] = useState<number>(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [mobileScrollLevel, setMobileScrollLevel] = useState(0);
 
-  const scrollRef = useRef<HTMLDivElement>(null);
+
   const recommendedRef = useRef<HTMLElement>(null);
-  const stickyContainerRef = useRef<HTMLDivElement>(null);
-  const [stickyRef, isSticky] = useStickyProductSidebar<HTMLDivElement>(stickyContainerRef, {
-    topOffset: 100,
-    bottomOffset: 50
-  });
+  const [visibleCount, setVisibleCount] = useState(4);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [productLimit, setProductLimit] = useState(12);
+
 
   useEffect(() => {
-    const check = () => setIsMobile(window.innerWidth < 768);
-    check();
-    window.addEventListener('resize', check);
-    return () => window.removeEventListener('resize', check);
+    const updateLimit = () => {
+      if (window.innerWidth < 640) {
+        setProductLimit(4); // mobile
+      } else {
+        setProductLimit(12); // desktop
+      }
+    };
+
+    updateLimit();
+    window.addEventListener("resize", updateLimit);
+
+    return () => window.removeEventListener("resize", updateLimit);
   }, []);
+
+
+  useEffect(() => {
+    const updateVisible = () => {
+      if (window.innerWidth < 640) {
+        setVisibleCount(2); // mobile
+      } else {
+        setVisibleCount(4); // desktop
+      }
+    };
+
+    updateVisible();
+    window.addEventListener("resize", updateVisible);
+
+    return () => window.removeEventListener("resize", updateVisible);
+  }, []);
+
+
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [productLimit]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const scrollPercentage: Record<number, string> = {
-    0: "-translate-x-[0%] duration-200 delay-[70ms] ease",
-    1: "-translate-x-[33%] duration-200 delay-[70ms] ease",
-    2: "-translate-x-[66%] duration-200 delay-[70ms] ease",
-    3: "-translate-x-[100%] duration-200 delay-[70ms] ease",
-  };
-
-  const scrollBarPosition: Record<number, string> = {
-    0: "",
-    1: "justify-start",
-    2: "justify-center",
-    3: "justify-end",
-  };
 
   let recommendedProducts = productsData.filter(
     (p: any) => p.recommended && p.category === product.category && p.id !== product.id
@@ -68,7 +79,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
     );
     recommendedProducts = [...recommendedProducts, ...extra];
   }
-  recommendedProducts = recommendedProducts.slice(0, 6);
+  recommendedProducts = recommendedProducts.slice(0, productLimit);
 
   const category = product.category.toLowerCase();
   const fallback = FALLBACK_LAYOUT[category] ?? {
@@ -97,16 +108,29 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
   const layoutDescription = product.description ?? "";
   const hasSizes = ["rings", "bracelets", "pendants"].includes(category);
 
-  const handleMobileScroll = (dir: 'left' | 'right') => {
-    if (!scrollRef.current) return;
-    const gap = 12;
-    const cardWidth = window.innerWidth * 0.60 + gap;
-    const newLevel = dir === 'right'
-      ? Math.min(mobileScrollLevel + 1, recommendedProducts.length - 1)
-      : Math.max(mobileScrollLevel - 1, 0);
-    scrollRef.current.scrollTo({ left: newLevel * cardWidth, behavior: 'smooth' });
-    setMobileScrollLevel(newLevel);
+
+  const maxIndex = Math.max(0, recommendedProducts.length - visibleCount);
+
+
+  const handlePrev = () => {
+    setCurrentIndex((prev) => Math.max(prev - visibleCount, 0));
   };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) =>
+      Math.min(prev + visibleCount, maxIndex)
+    );
+  };
+
+  const totalSteps = Math.ceil(
+    recommendedProducts.length / visibleCount
+  );
+  const currentStep = Math.floor(currentIndex / visibleCount);
+  const progressWidth =
+    totalSteps <= 1
+      ? 100
+      : (currentStep / (totalSteps - 1)) * 100;
+
 
   return (
     <>
@@ -120,130 +144,122 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           ]}
         />
 
-        <div ref={stickyContainerRef} className="w-full md:px-[6.67%] gap-10 grid md:grid-cols-[35%_65%] pt-[2%]">
+        <div className="w-full md:px-[7.67%] gap-10 grid md:grid-cols-[35%_65%] pt-[2%]">
 
           {/* LEFT COL */}
           <div className="relative px-[3.37%] md:px-0">
 
-            {/* STICKY BLOCK - Intersection Observer */}
-            <div
-              ref={stickyRef}
-              className={`transition-all duration-300 ease-out ${
-                isSticky
-                  ? 'md:fixed md:top-[50px] md:w-[calc(35%-2.67%)] md:left-[4.67%]'
-                  : 'md:static'
-              }`}
-            >
-              <h3 className="md:pt-[2%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
+            {/* PRODUCT INFO BLOCK */}
+            <div>
+              <h3 className="md:pt-[4%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
                 {product.productName}
               </h3>
               <p className="md:pt-[2%] text-[#000000] text-[14px] md:text-lg md:leading-[20px] md:tracking-[-0.26px] font-normal align-middle">
                 {product.colors[currentVariantIndex]?.color} with diamonds
               </p>
-              <p className="md:pt-[2%] md:pb-[6%] font-baskerville text-base md:text-xl leading-[1.2] tracking-tight text-[#000000]">
+              <p className="md:pb-[14%] font-baskerville text-base md:text-xl leading-[1.2] tracking-tight text-[#000000]">
                 {product.diamondType || ""}
               </p>
 
-              
-
-            {/* MOBILE IMAGE */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentVariantIndex}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-                className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mb-[18px]"
-              >
-                <Image
-                  width={400}
-                  height={400}
-                  src={product.colors[currentVariantIndex]?.image}
-                  alt={product.productName}
-                  className="w-full h-full object-contain"
-                />
-              </motion.div>
-            </AnimatePresence>
-
-            {/* VARIANTS */}
-            <div className="flex gap-12 md:gap-4 flex-wrap">
-              {product.colors?.map((colorObj: { color: string; image: string }, idx: number) => (
+              {/* MOBILE IMAGE */}
+              <AnimatePresence mode="wait">
                 <motion.div
-                  key={idx}
-                  onClick={() => setCurrentVariantIndex(idx)}
-                  whileTap={{ scale: 0.9 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="w-[25%] md:w-[30%] shrink-0 cursor-pointer flex flex-col justify-end"
+                  key={currentVariantIndex}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.4 }}
+                  className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mb-[18px]"
                 >
-                  <motion.div
-                    animate={{
-                      scale: currentVariantIndex === idx ? 1.1 : 1,
-                      borderColor: currentVariantIndex === idx ? "#000" : "transparent",
-                    }}
-                    transition={{ type: "spring", stiffness: 200 }}
-                    className="w-full aspect-[4/3] flex items-center justify-center"
-                  >
-                    <Image
-                      width={100}
-                      height={100}
-                      src={colorObj.image}
-                      alt={colorObj.color}
-                      className="w-full h-full object-contain"
-                    />
-                  </motion.div>
-                  <h3 className={`text-[10px] md:text-sm tracking-wide text-center capitalize ${
-                    currentVariantIndex === idx ? "text-black font-semibold" : "text-[#000000]/50"
-                  }`}>
-                    {colorObj.color}
-                  </h3>
-                  {currentVariantIndex === idx && (
-                    <motion.div layoutId="activeVariantLine" className="w-full h-[2px] bg-black" />
-                  )}
+                  <Image
+                    width={400}
+                    height={400}
+                    src={product.colors[currentVariantIndex]?.image}
+                    alt={product.productName}
+                    className="w-full h-full object-contain"
+                  />
                 </motion.div>
-              ))}
-            </div>
+              </AnimatePresence>
 
-            <hr className='w-full border-t mt-4 md:mt-10 border-gray-300' />
+              {/* VARIANTS */}
+              <div className="flex gap-12 md:gap-4 flex-wrap">
+                {product.colors?.map((colorObj: { color: string; image: string }, idx: number) => (
+                  <motion.div
+                    key={idx}
+                    onClick={() => setCurrentVariantIndex(idx)}
+                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                    className={`w-[25%] md:w-[30%] shrink-0 cursor-pointer flex flex-col justify-end  p-2 transition-all duration-300`}
+                  >
+                    <motion.div
+                      animate={{
+                        scale: currentVariantIndex === idx ? 1.05 : 1,
+                      }}
+                      transition={{ type: "spring", stiffness: 200, damping: 15 }}
+                      className={`w-full aspect-[4/3] flex items-center justify-center rounded-2xl ${
+                      currentVariantIndex === idx
+                        ? "border"
+                        : ""
+                    }`}
+                    >
+                      <Image
+                        width={100}
+                        height={100}
+                        src={colorObj.image}
+                        alt={colorObj.color}
+                        className="w-full h-full object-contain"
+                      />
+                    </motion.div>
+                    <h3 className={`text-[10px] md:text-sm tracking-wide text-center capitalize mt-2 transition-all duration-300 ${
+                      currentVariantIndex === idx ? "text-black font-semibold" : "text-[#000000]/50"
+                    }`}>
+                      {colorObj.color}
+                    </h3>
+                    <div className="h-[3px] mt-2 rounded-full overflow-hidden">
+                      <motion.div
+                        initial={false}
+                        animate={{
+                          width: currentVariantIndex === idx ? "100%" : "0%",
+                          opacity: currentVariantIndex === idx ? 1 : 0,
+                        }}
+                        transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                        className="h-full bg-black rounded-full"
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
 
-            {hasSizes && (
-              <div className="flex w-full py-[6.37%] md:py-[4%] gap-[4%] items-center px-4 md:px-0 mt-2 md:mt-2">
-                <h3 className="text-sm leading-[20px] text-[#000000]/50 mr-2 md:mr-4">Size:</h3>
-                {product.sizes?.length ? (
-                  product.sizes.map((size: string) => (
+              <hr className='w-full border-t mt-4 md:mt-6 border-gray-300' />
+
+              {hasSizes && (
+                <div className="flex items-center gap-3 py-4 px-4 md:px-0 mt-2 flex-wrap">
+                  <span className="text-[13px] text-black/40 mr-1">Size</span>
+                  {(product.sizes?.length ? product.sizes : ["XS", "S", "M"]).map((size: string) => (
                     <button
                       key={size}
                       onClick={() => setCurrentSize(size)}
-                      className={`text-xs md:text-sm ${
-                        currentSize === size
-                          ? 'text-black font-bold border border-black rounded-full px-2 py-[4px]'
-                          : 'text-[#000000]/70'
-                      } hover:text-black transition-colors`}
+                      className={`w-9 h-9 rounded-full text-[12px] transition-all duration-150 flex items-center justify-center border
+                      ${currentSize === size
+                          ? "bg-black text-white border-black"
+                          : "bg-transparent text-black/50 border-black/15 hover:border-black/40 hover:text-black"
+                        }`}
                     >
                       {size}
                     </button>
-                  ))
-                ) : (
-                  <div className="flex gap-4 items-center cursor-pointer">
-                    <span className="text-xs md:text-sm font-bold text-black border border-black rounded-full px-2 py-[2px]">XS</span>
-                    <span className="text-xs md:text-sm text-[#000000]/70">S</span>
-                    <span className="text-xs md:text-sm text-[#000000]/70">M</span>
-                  </div>
-                )}
-              </div>
-            )}
+                  ))}
+                </div>
+              )}
 
-            <button
-              onClick={() => router.push("/contact")}
-              className="block w-[100%] md:w-[95%] mx-auto md:mx-0 mt-6 md:mt-4 py-4 bg-white border-0 border-[#F0F0F0] rounded-[25px] text-[#000000] tracking-widest cursor-pointer font-semibold text-[12px] hover:bg-black hover:text-white transition-colors shadow-[inset_-1px_-1px_4px_0px_rgba(0,0,0,0.25)]"
-            >
-              CONTACT STORE
-            </button>
-            
-            </div> {/* End of Sticky Container */}
+              <button
+                onClick={() => router.push("/contact")}
+                className="block w-[100%] md:w-[95%] mx-auto md:mx-0 mt-6 md:mt-6 py-4 bg-white border-0 border-[#F0F0F0] rounded-[25px] text-[#000000] tracking-widest cursor-pointer font-semibold text-[12px] hover:bg-black hover:text-white transition-colors shadow-[inset_-1px_-1px_4px_0px_rgba(0,0,0,0.25)]"
+              >
+                CONTACT STORE
+              </button>
 
-            {/* Spacer to maintain layout when sticky is fixed */}
-            {isSticky && <div className="hidden md:block" style={{ height: stickyRef.current?.offsetHeight }} />}
+            </div> {/* End of Product Info Block */}
 
           </div>
 
@@ -344,30 +360,18 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
         data-theme="light"
         className="w-full md:pb-[0.51%] mt-2 p-4 md:mt-[2%]"
       >
-        <h2 className="text-center font-[baskerville SC] font-normal md:font-medium tracking-tight text-2xl md:text-3xl border-t md:mb-4 border-gray-100 pt-6 md:pt-12">
+        <h2 className="text-center font-[baskerville SC] font-normal md:font-medium tracking-tight text-2xl md:text-3xl border-t md:mb-4 border-gray-100 pt-6">
           You May Also Like
         </h2>
 
-        <div ref={scrollRef} className="md:hidden w-full overflow-x-auto scrollbar-hide">
-          <div className="flex gap-3 px-2 w-max">
-            {recommendedProducts.map((item) => (
-              <div key={item.id} className="w-[60vw] shrink-0">
-                <RecommendedProductCard
-                  product={item}
-                  onClick={(id) => {
-                    const p = recommendedProducts.find(x => x.id === id);
-                    if (!p) return;
-                    router.push(`/collections/${p.category.toLowerCase()}/${p.slug}`);
-                    window.scroll(0, 0);
-                  }}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="hidden md:block w-[94.44%] mx-auto">
-          <div className={`flex md:gap-[2.81%] ${scrollPercentage[scrollLevel]}`}>
+        {/* Recommended Products */}
+        <div className="overflow-hidden w-full">
+          <div
+            className="flex transition-transform duration-500 ease-in-out md:gap-[2.81%]"
+            style={{
+              transform: `translateX(-${currentIndex * (100 / visibleCount)}%)`,
+            }}
+          >
             {recommendedProducts.map((item) => (
               <RecommendedProductCard
                 key={item.id}
@@ -383,38 +387,52 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           </div>
         </div>
 
-        <div className="w-[90%] md:w-[100%] pb-[8%] mx-auto pt-[20px] md:pt-4 relative flex flex-col md:flex-row md:items-center md:justify-end gap-3">
-          <div className="w-full md:w-[1100px] border-b-[3px] border-[#000000]/20 relative shrink-0">
-            {isMobile ? (
-              <div
-                className="absolute -translate-y-1/4 top-0 h-0 border-t-[5px] border-[#7C3C3C] transition-all duration-200"
-                style={{
-                  width: `${100 / recommendedProducts.length}%`,
-                  left: `${(mobileScrollLevel / (recommendedProducts.length - 1)) * (100 - 100 / recommendedProducts.length)}%`,
-                }}
-              />
-            ) : (
-              <div className={`absolute -translate-y-1/4 top-0 left-0 w-full flex ${scrollBarPosition[scrollLevel]}`}>
-                <div className="border-t-[5px] border-[#7C3C3C] w-[34%]" />
-              </div>
-            )}
+        {/* Bottom Controls */}
+        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 mt-10 md:mt-12 pb-10 md:pb-12">
+
+          {/* Progress Line */}
+          <div className="w-full h-[2px] bg-black/20 relative overflow-hidden">
+            <div
+              className="absolute top-0 left-0 h-[3px] bg-[#7C3C3C] transition-all duration-300"
+              style={{
+                width: `${progressWidth}%`,
+              }}
+            />
           </div>
-          <div className="flex items-center justify-center md:justify-end gap-2">
+
+          {/* Arrow Buttons */}
+          <div className="flex items-center gap-3">
+
+            {/* Prev */}
             <button
-              onClick={() => isMobile ? handleMobileScroll('left') : setScrollLevel(l => Math.max(l - 1, 0))}
-              className="w-10 h-10 rounded-[10px] bg-gray-300 hover:bg-[#7C3C3C] stroke-black active:stroke-white active:bg-[#7C3C3C] flex justify-center items-center"
+              onClick={handlePrev} disabled={currentIndex === 0}
+              className="
+                w-10 h-10 rounded-lg 
+                bg-[#F5F5F5] 
+                flex items-center justify-center 
+                hover:bg-[#EAEAEA] 
+                active:bg-[#7C3C3C] active:text-white 
+                disabled:opacity-40 disabled:cursor-not-allowed
+                transition
+              "
             >
-              <svg width="25" height="25" viewBox="0 0 25 25" fill="none">
-                <path d="M14.0502 7.07071L9.0857 12.106L14.121 17.0705" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              ←
             </button>
+
+            {/* Next */}
             <button
-              onClick={() => isMobile ? handleMobileScroll('right') : setScrollLevel(l => Math.min(l + 1, 3))}
-              className="w-10 h-10 bg-gray-300 hover:bg-[#7C3C3C] active:bg-[#7C3C3C] stroke-black active:stroke-white rounded-[10px] flex justify-center items-center"
+              onClick={handleNext} disabled={currentIndex === maxIndex}
+              className="
+                w-10 h-10 rounded-lg 
+                bg-[#F5F5F5] 
+                flex items-center justify-center 
+                hover:bg-[#EAEAEA] 
+                active:bg-[#7C3C3C] active:text-white 
+                disabled:opacity-40 disabled:cursor-not-allowed
+                transition
+              "
             >
-              <svg width="7" height="11" viewBox="0 0 7 11" fill="none">
-                <path d="M0.581227 10.4997L5.54053 5.45931L0.500164 0.500004" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              →
             </button>
           </div>
         </div>
