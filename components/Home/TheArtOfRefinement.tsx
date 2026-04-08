@@ -11,7 +11,7 @@ export default function TheArtOfRefinement() {
   return (
     <section
       data-theme="dark"
-      className="w-full min-h-screen bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]"
+      className="w-full min-h-screen pt-4 bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]"
     >
 
       {/* MOBILE */}
