@@ -22,6 +22,17 @@
 }
 
 
+html[data-theme="dark"] {
+  background: black;
+  color: white;
+}
+
+html[data-theme="light"] {
+  background: white;
+  color: black;
+}
+
+
 
 /* Base layout */
 html,

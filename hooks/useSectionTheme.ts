@@ -1,74 +1,79 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 type Theme = "light" | "dark";
 
 export const useSectionTheme = (position: "top" | "bottom") => {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
   const pathname = usePathname();
 
-  const sectionsRef = useRef<HTMLElement[]>([]);
-  const visibleRef = useRef<Set<HTMLElement>>(new Set());
 
-  useEffect(() => {
-    const sections = Array.from(
+  const sectionsRef = useRef<HTMLElement[]>([]);
+  const ticking = useRef(false);
+
+  useLayoutEffect(() => {
+    sectionsRef.current = Array.from(
       document.querySelectorAll<HTMLElement>("section[data-theme]")
     );
 
-    if (!sections.length) return;
+    if (!sectionsRef.current.length) return;
 
-    sectionsRef.current = sections;
+    const getTriggerY = () => {
+      return position === "top"
+        ? 80
+        : window.innerHeight - 80;
+    };
 
-    const resolveTheme = () => {
-      const visible = Array.from(visibleRef.current);
+    const detectTheme = () => {
+      const sections = sectionsRef.current;
+      if (!sections.length) return;
 
-      if (!visible.length) return;
+      const triggerY = getTriggerY();
 
-      const sorted = visible.sort(
-        (a, b) =>
-          a.getBoundingClientRect().top - b.getBoundingClientRect().top
-      );
+      // (no flicker, no override)
+      if (window.scrollY <= 5) {
+        const first = sections[0];
+        const t = first?.dataset.theme as Theme;
+        if (t) {
+          setTheme(t);
+        }
+        return;
+      }
 
-      const selected =
-        position === "top"
-          ? sorted[0]
-          : sorted[sorted.length - 1];
+      for (const section of sections) {
+        const rect = section.getBoundingClientRect();
 
-      const t = selected.dataset.theme as Theme;
-
-      if (t) {
-        setTheme((prev) => (prev !== t ? t : prev));
+        if (rect.top <= triggerY && rect.bottom >= triggerY) {
+          const t = section.dataset.theme as Theme;
+          if (t) {
+            setTheme((prev) => (prev !== t ? t : prev));
+          }
+          return;
+        }
       }
     };
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          const el = entry.target as HTMLElement;
+    // initially
+    detectTheme();
 
-          if (entry.isIntersecting) {
-            visibleRef.current.add(el);
-          } else {
-            visibleRef.current.delete(el);
-          }
+    const handleScroll = () => {
+      if (!ticking.current) {
+        requestAnimationFrame(() => {
+          detectTheme();
+          ticking.current = false;
         });
-
-        resolveTheme();
-      },
-      {
-        root: null,
-        threshold: 0.01, 
-        rootMargin: "0px 0px -70% 0px", 
+        ticking.current = true;
       }
-    );
+    };
 
-    sections.forEach((section) => observer.observe(section));
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", detectTheme);
 
     return () => {
-      observer.disconnect();
-      visibleRef.current.clear();
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", detectTheme);
     };
   }, [pathname, position]);
 
