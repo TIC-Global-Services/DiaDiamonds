@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <div className="w-full">
             <ChatBtn />
-            <section data-theme='dark'>
+            <section data-theme='dark' data-priority="hero" className="min-h-screen">
                 <Hero />
             </section>
 

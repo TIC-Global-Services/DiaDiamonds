@@ -19,23 +19,20 @@ export default function Home() {
       <ChatBtn />
 
       {/* HERO */}
-      <section data-theme='dark'>
-        <div
-          className="fixed top-0 left-0 w-full z-[1]"
-          style={{
-            height: '100vh', // @ts-ignore
-            height: '100dvh'
-          }}
-        >
+      <section
+        data-theme='dark'
+        data-priority="hero"
+        className="w-full h-screen min-h-[100dvh] relative"
+      >
+        <div className="fixed top-0 left-0 w-full h-screen min-h-[100dvh] -z-10">
           <Hero />
         </div>
+        {/* Add an invisible sentinel for detection */}
+        <div className="absolute top-0 left-0 w-full h-px pointer-events-none" />
       </section>
 
-      {/* SENTINEL */}
-      <div style={{ height: "100vh" }} />
-
       {/* ALL SECTIONS */}
-      <div className="relative z-[20]">
+      <div className="relative bg-white">
 
         <section data-theme="light">
           <OurCollection />

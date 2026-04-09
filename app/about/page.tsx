@@ -13,7 +13,7 @@ export default function About() {
         <div>
             <ChatBtn />
 
-            <section data-theme='light'>
+            <section data-theme='light' data-priority="hero" className="min-h-screen">
                 <Hero />
             </section>
 

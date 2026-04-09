@@ -15,7 +15,7 @@ export default function Precision() {
         <div className="w-full overflow-hidden">
             <ChatBtn />
 
-            <section data-theme='dark'>
+            <section data-theme='dark' data-priority="hero" className="h-screen min-h-[100dvh]">
                 <Hero />
             </section>
 
