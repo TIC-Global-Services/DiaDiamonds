@@ -9,8 +9,7 @@ const Hero: React.FC = () => {
   const bgImage: string = "/assets/img/Precision/Hero/bgImage.jpg";
 
   return (
-    <section
-      className="w-full h-screen relative overflow-hidden"
+    <section className="w-full h-screen relative overflow-hidden"
     >
       {/* Background Image */}
       <motion.div
@@ -19,7 +18,7 @@ const Hero: React.FC = () => {
         transition={{ duration: 1.2, ease: "easeOut" }}
         className="absolute inset-0"
       >
-        <Parallax speed={-20} className="h-[130%] w-full" style={{ top: "-15%" }}>
+        <Parallax speed={-20} className="h-[130%] w-full" style={{ top: "-14%" }}>
           <div className="relative w-full h-full">
             <Image
               src={bgImage}
