@@ -11,7 +11,7 @@ export default function Emotions() {
     const singleSparkle = '/assets/img/singleSparkle.png';
 
 return (
-    <section data-theme="light" className="w-full h-[100svh] md:h-auto  relative">
+    <section  className="w-full h-[100svh] md:h-auto  relative">
   
       {/* Background image */}
       <img

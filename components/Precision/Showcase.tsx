@@ -10,7 +10,6 @@ const Showcase: React.FC = () => {
 
   return (
     <section
-      data-theme="dark"
       className="w-full h-[100dvh] relative overflow-hidden"
     >
       {/* Background Image */}

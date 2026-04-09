@@ -61,8 +61,7 @@ export default function Testimonials() {
 
   return (
     <section
-      data-theme="light"
-      className="w-full md:min-h-screen flex flex-col md:flex-row bg-black md:bg-transparent"
+      className="w-full md:min-h-screen flex flex-col md:flex-row md:bg-[#f8f3ef]"
     >
       {/* LEFT SIDE */}
       <div className="relative w-full aspect-[4/4] md:aspect-[4/3]  md:w-1/2 overflow-hidden">

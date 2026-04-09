@@ -170,7 +170,7 @@ export default function Navbar() {
                 initial="closed"
                 animate="open"
                 exit="closed"
-                className="w-full lg:w-[595px] h-[100vh] bg-white fixed right-0 top-0 z-50 overflow-y-auto"
+                className="w-full lg:w-[596px] h-[100vh] bg-white fixed right-0 top-0 z-[999] overflow-y-auto"
                 style={{ scrollbarWidth: "none" }}
               >
                 {/* Close Button */}

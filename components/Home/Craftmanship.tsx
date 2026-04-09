@@ -40,8 +40,7 @@ export default function Craftsmanship() {
 
   return (
     <section
-      data-theme="light"
-      className="relative min-h-screen w-full flex flex-wrap md:flex-nowrap overflow-hidden"
+      className="relative min-h-screen w-full flex flex-wrap md:flex-nowrap bg-white overflow-hidden"
     >
       {/* Left Side Image */}
       <motion.div

@@ -10,7 +10,6 @@ const Hero: React.FC = () => {
 
   return (
     <section
-      data-theme="dark"
       className="w-full h-screen relative overflow-hidden"
     >
       {/* Background Image */}

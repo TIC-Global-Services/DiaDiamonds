@@ -1,46 +1,31 @@
 "use client";
 
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 
 type Theme = "light" | "dark";
 
 export const useSectionTheme = (position: "top" | "bottom") => {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme | null>(null); 
   const pathname = usePathname();
-
-
-  const sectionsRef = useRef<HTMLElement[]>([]);
   const ticking = useRef(false);
 
-  useLayoutEffect(() => {
-    sectionsRef.current = Array.from(
-      document.querySelectorAll<HTMLElement>("section[data-theme]")
-    );
+  useEffect(() => {
+    let sections: HTMLElement[] = [];
 
-    if (!sectionsRef.current.length) return;
-
-    const getTriggerY = () => {
-      return position === "top"
-        ? 80
-        : window.innerHeight - 80;
+    const updateSections = () => {
+      sections = Array.from(
+        document.querySelectorAll<HTMLElement>("section[data-theme]")
+      );
     };
 
+    const getTriggerY = () =>
+      position === "top" ? 80 : window.innerHeight - 80;
+
     const detectTheme = () => {
-      const sections = sectionsRef.current;
       if (!sections.length) return;
 
       const triggerY = getTriggerY();
-
-      // (no flicker, no override)
-      if (window.scrollY <= 5) {
-        const first = sections[0];
-        const t = first?.dataset.theme as Theme;
-        if (t) {
-          setTheme(t);
-        }
-        return;
-      }
 
       for (const section of sections) {
         const rect = section.getBoundingClientRect();
@@ -55,10 +40,7 @@ export const useSectionTheme = (position: "top" | "bottom") => {
       }
     };
 
-    // initially
-    detectTheme();
-
-    const handleScroll = () => {
+    const rafDetect = () => {
       if (!ticking.current) {
         requestAnimationFrame(() => {
           detectTheme();
@@ -68,14 +50,30 @@ export const useSectionTheme = (position: "top" | "bottom") => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", detectTheme);
+    const init = () => {
+      updateSections();
+
+      //SAFE initial theme (client only)
+      if (sections.length > 0) {
+        const firstTheme = sections[0].dataset.theme as Theme;
+        if (firstTheme) {
+          setTheme(firstTheme);
+        }
+      }
+
+      requestAnimationFrame(detectTheme);
+    };
+
+    init();
+
+    window.addEventListener("scroll", rafDetect, { passive: true });
+    window.addEventListener("resize", init);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", detectTheme);
+      window.removeEventListener("scroll", rafDetect);
+      window.removeEventListener("resize", init);
     };
   }, [pathname, position]);
 
-  return theme;
+  return theme ?? "dark";
 };

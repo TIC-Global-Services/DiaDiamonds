@@ -54,7 +54,6 @@ export default function Shop() {
 
   return (
     <section
-      data-theme="light"
       className="w-full h-auto md:h-[100dvh] overflow-hidden md:px-[100px] py-[5%] flex justify-center relative bg-[#FFFFFF]"
     >
       {/* Dark circle — left/top — category selector */}

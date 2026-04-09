@@ -15,7 +15,6 @@ const Certified: React.FC = () => {
 
   return (
     <section
-      data-theme="light"
       className="w-full relative py-[5.56%] bg-[linear-gradient(180deg,#F7F6F4_0%,#F7EDE0_99.97%)]"
     >
       {/* TITLE */}

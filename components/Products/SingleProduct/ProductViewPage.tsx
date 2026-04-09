@@ -9,6 +9,7 @@ import Image from 'next/image';
 import RecommendedProductCard from '../Cards/RecommendedProductCard';
 import { Product, ProductLayoutImage } from '@/types/product';
 import { FALLBACK_LAYOUT } from '@/constants/LayoutImages';
+import YouMayAlsoLike from '@/components/Sections/YouMayAlsoLike';
 
 interface ProductViewProps {
   product: Product;
@@ -144,12 +145,11 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           ]}
         />
 
-        <div className="w-full md:px-[7.67%] gap-10 grid md:grid-cols-[35%_65%] pt-[2%]">
+        <div className="flex flex-col md:flex-row gap-12 w-full md:px-[7.67%]">
 
-          {/* LEFT COL */}
-          <div className="relative px-[3.37%] md:px-0">
-
-            {/* PRODUCT INFO BLOCK */}
+          {/* LEFT - PRODUCT INFO */}
+          <div className="w-full md:w-[35%] px-[3.37%] md:px-0">
+            {/* your product info (unchanged) */}
             <div>
               <h3 className="md:pt-[4%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
                 {product.productName}
@@ -162,13 +162,12 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               </p>
 
               {/* MOBILE IMAGE */}
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode='wait'>
                 <motion.div
                   key={currentVariantIndex}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
                   className="md:hidden w-[80%] aspect-square overflow-hidden mx-auto mb-[18px]"
                 >
                   <Image
@@ -197,11 +196,10 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                         scale: currentVariantIndex === idx ? 1.05 : 1,
                       }}
                       transition={{ type: "spring", stiffness: 200, damping: 15 }}
-                      className={`w-full aspect-[4/3] flex items-center justify-center rounded-2xl ${
-                      currentVariantIndex === idx
+                      className={`w-full aspect-[4/3] flex items-center justify-center rounded-2xl ${currentVariantIndex === idx
                         ? "border"
                         : ""
-                    }`}
+                        }`}
                     >
                       <Image
                         width={100}
@@ -211,9 +209,8 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                         className="w-full h-full object-contain"
                       />
                     </motion.div>
-                    <h3 className={`text-[10px] md:text-sm tracking-wide text-center capitalize mt-2 transition-all duration-300 ${
-                      currentVariantIndex === idx ? "text-black font-semibold" : "text-[#000000]/50"
-                    }`}>
+                    <h3 className={`text-[10px] md:text-sm tracking-wide text-center capitalize mt-2 transition-all duration-300 ${currentVariantIndex === idx ? "text-black font-semibold" : "text-[#000000]/50"
+                      }`}>
                       {colorObj.color}
                     </h3>
                     <div className="h-[3px] mt-2 rounded-full overflow-hidden">
@@ -258,185 +255,105 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
               >
                 CONTACT STORE
               </button>
-
-            </div> {/* End of Product Info Block */}
-
+            </div>
           </div>
 
-          {/* RIGHT COL */}
-          <div className="pb-10">
-            <div className="hidden md:flex md:mr-[4%] items-center justify-center">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={currentVariantIndex}
-                  src={product.colors[currentVariantIndex]?.image}
-                  alt={product.productName}
-                  className="w-[70%] h-auto inset-0 object-contain cursor-pointer"
-                  initial={{ opacity: 0, scale: 0.95, filter: "blur(8px)" }}
-                  animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                />
-              </AnimatePresence>
-            </div>
+          {/* RIGHT - MAIN IMAGE */}
+          <div className="hidden w-full md:w-[65%] md:flex items-center justify-center relative">
+            <AnimatePresence mode='wait'>
+              <motion.img
+                key={currentVariantIndex}
+                src={product.colors[currentVariantIndex]?.image}
+                alt={product.productName}
+                className="w-[70%] h-auto object-contain"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.15 }}
+              />
+            </AnimatePresence>
+          </div>
+        </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-              className="md:w-full md:ml-auto md:pb-[8%] gap-2 p-2 justify-start text-start pt-0"
-            >
-              <p className="mt-[2%] md:pb-[6.44%] font-light text-[14px] md:text-[16px] leading-[120%] text-start tracking-[-0.32px] text-[#000000]">
-                {layoutDescription}
-              </p>
-              <div className="flex flex-col items-start justify-between mb-[11.05%] md:mb-0 gap-4 md:gap-2 md:flex-row md:items-center">
+        <div className="md:w-[65%] md:ml-auto flex flex-col md:px-[7.67%]">
+
+          {/* DESCRIPTION */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="gap-2 p-2 text-start"
+          >
+            <p className="mt-[2%] md:pb-[2.44%] font-light text-[14px] md:text-[16px] leading-[120%] text-start tracking-[-0.32px] text-[#000000]">
+              {layoutDescription}
+            </p>
+            <div className="flex flex-col items-start justify-between mb-[11.05%] md:mb-0 gap-4 md:gap-2 md:flex-row md:items-center">
+              <div className="flex items-center font-light text-[14px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
+                <span className="mr-2">•</span>
+                {product.colors[currentVariantIndex]?.color} with diamonds
+              </div>
+              <div className="flex items-center font-light text-[14px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
+                <span className="mr-2">•</span>
+                Finger size: {currentSize || 'Small'}
+              </div>
+              {product.diamondType && (
                 <div className="flex items-center font-light text-[14px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
                   <span className="mr-2">•</span>
-                  {product.colors[currentVariantIndex]?.color} with diamonds
+                  {product.diamondType}
                 </div>
-                <div className="flex items-center font-light text-[14px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
-                  <span className="mr-2">•</span>
-                  Finger size: {currentSize || 'Small'}
+              )}
+            </div>
+          </motion.div>
+
+          {/* LAYOUT IMAGES */}
+          <div className="mt-10 space-y-4">
+            {topImage && (
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                className="w-[100%] ml-auto aspect-[800/600] overflow-hidden flex items-center justify-center"
+              >
+                <Image src={topImage} alt="Product top" width={800} height={600} unoptimized loading="lazy" className="w-full h-full object-contain" />
+              </motion.div>
+            )}
+            {leftImage && (
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                className="w-[100%] ml-auto flex gap-[3%] mb-[1%] justify-between"
+              >
+                <div className="w-[56%] aspect-[400/500] overflow-hidden flex items-center justify-center">
+                  <Image src={leftImage} alt="Product left" width={400} height={500} unoptimized loading="lazy" className="w-full h-full object-cover" />
                 </div>
-                {product.diamondType && (
-                  <div className="flex items-center font-light text-[14px] md:text-base leading-[20px] tracking-[-0.32px] text-[#000000]">
-                    <span className="mr-2">•</span>
-                    {product.diamondType}
+                {rightImage && (
+                  <div className="w-[41%] aspect-[288/500] overflow-hidden flex items-center justify-center">
+                    <Image src={rightImage} alt="Product right" width={288} height={500} className="w-[80%] h-auto object-contain" />
                   </div>
                 )}
-              </div>
-            </motion.div>
-
-            <div className="mt-10 space-y-4">
-              {topImage && (
-                <motion.div
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="w-[100%] ml-auto aspect-[800/600] overflow-hidden mb-[1%] flex items-center justify-center"
-                >
-                  <Image src={topImage} alt="Product top" width={800} height={600} unoptimized loading="lazy" className="w-full h-full object-cover" />
-                </motion.div>
-              )}
-              {leftImage && (
-                <motion.div
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="w-[100%] ml-auto flex gap-[3%] mb-[1%] justify-between"
-                >
-                  <div className="w-[56%] aspect-[400/500] overflow-hidden flex items-center justify-center">
-                    <Image src={leftImage} alt="Product left" width={400} height={500} unoptimized loading="lazy" className="w-full h-full object-cover" />
-                  </div>
-                  {rightImage && (
-                    <div className="w-[41%] aspect-[288/500] overflow-hidden flex items-center justify-center">
-                      <Image src={rightImage} alt="Product right" width={288} height={500} className="w-[80%] h-auto object-contain" />
-                    </div>
-                  )}
-                </motion.div>
-              )}
-              {bottomImage && (
-                <motion.div
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="w-[100%] ml-auto aspect-[800/600] overflow-hidden mb-[6.72%] flex items-center justify-center"
-                >
-                  <Image src={bottomImage} alt="Product bottom" width={800} height={600} unoptimized loading="lazy" className="w-full h-full object-cover" />
-                </motion.div>
-              )}
-            </div>
+              </motion.div>
+            )}
+            {bottomImage && (
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+                className="w-[100%] ml-auto aspect-[800/600] mt-[5%] overflow-hidden mb-[6.72%] flex items-center justify-center"
+              >
+                <Image src={bottomImage} alt="Product bottom" width={800} height={600} unoptimized loading="lazy" className="w-full h-full object-cover" />
+              </motion.div>
+            )}
           </div>
         </div>
       </section>
 
       {/* YOU MAY ALSO LIKE */}
-      <section
-        ref={recommendedRef}
-        data-theme="light"
-        className="w-full md:pb-[0.51%] mt-2 p-4 md:mt-[2%]"
-      >
-        <h2 className="text-center font-[baskerville SC] font-normal md:font-medium tracking-tight text-2xl md:text-3xl border-t md:mb-4 border-gray-100 pt-6">
-          You May Also Like
-        </h2>
-
-        {/* Recommended Products */}
-        <div className="overflow-hidden w-full">
-          <div
-            className="flex transition-transform duration-500 ease-in-out md:gap-[2.81%]"
-            style={{
-              transform: `translateX(-${currentIndex * (100 / visibleCount)}%)`,
-            }}
-          >
-            {recommendedProducts.map((item) => (
-              <RecommendedProductCard
-                key={item.id}
-                product={item}
-                onClick={(id) => {
-                  const p = recommendedProducts.find(x => x.id === id);
-                  if (!p) return;
-                  router.push(`/collections/${p.category.toLowerCase()}/${p.slug}`);
-                  window.scroll(0, 0);
-                }}
-              />
-            ))}
-          </div>
-        </div>
-
-        {/* Bottom Controls */}
-        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 mt-10 md:mt-12 pb-10 md:pb-12">
-
-          {/* Progress Line */}
-          <div className="w-full h-[2px] bg-black/20 relative overflow-hidden">
-            <div
-              className="absolute top-0 left-0 h-[3px] bg-[#7C3C3C] transition-all duration-300"
-              style={{
-                width: `${progressWidth}%`,
-              }}
-            />
-          </div>
-
-          {/* Arrow Buttons */}
-          <div className="flex items-center gap-3">
-
-            {/* Prev */}
-            <button
-              onClick={handlePrev} disabled={currentIndex === 0}
-              className="
-                w-10 h-10 rounded-lg 
-                bg-[#F5F5F5] 
-                flex items-center justify-center 
-                hover:bg-[#EAEAEA] 
-                active:bg-[#7C3C3C] active:text-white 
-                disabled:opacity-40 disabled:cursor-not-allowed
-                transition
-              "
-            >
-              ←
-            </button>
-
-            {/* Next */}
-            <button
-              onClick={handleNext} disabled={currentIndex === maxIndex}
-              className="
-                w-10 h-10 rounded-lg 
-                bg-[#F5F5F5] 
-                flex items-center justify-center 
-                hover:bg-[#EAEAEA] 
-                active:bg-[#7C3C3C] active:text-white 
-                disabled:opacity-40 disabled:cursor-not-allowed
-                transition
-              "
-            >
-              →
-            </button>
-          </div>
-        </div>
-      </section>
+      <YouMayAlsoLike product={product} />
     </>
   );
 }

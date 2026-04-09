@@ -14,11 +14,27 @@ export default function Precision() {
     return (
         <div className="w-full overflow-hidden">
             <ChatBtn />
-            <Hero />
-            <Creation />
-            <Showcase />
-            <Brilliance />
-            <Certified />
+
+            <section data-theme='dark'>
+                <Hero />
+            </section>
+
+            <section data-theme='light'>
+                <Creation />
+            </section>
+
+            <section data-theme='dark'>
+                <Showcase />
+            </section>
+
+            <section data-theme='light'>
+                <Brilliance />
+            </section>
+
+            <section data-theme='light'>
+                <Certified />
+            </section>
+
             <VisitStore />
         </div>
     )

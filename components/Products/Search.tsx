@@ -220,7 +220,7 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
               className="flex-1 flex flex-col items-center cursor-pointer group"
               onClick={() => {
                 setIsSearch(false);
-                router.push('/collections?category=rings');
+                router.push('/collections/bracelets');
               }}
             >
               <div className="w-full aspect-[288/153] overflow-hidden">
@@ -240,7 +240,7 @@ export default function Search({ isSearch, setIsSearch }: SearchPanelProps) {
               className="flex-1 flex flex-col items-center cursor-pointer group"
               onClick={() => {
                 setIsSearch(false);
-                router.push('/collections');
+                router.push('/collections/rings');
               }}
             >
               <div className="w-full aspect-[288/153] overflow-hidden">

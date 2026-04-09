@@ -10,8 +10,7 @@ export default function BrandValue() {
 
   return (
     <section
-      className="relative w-full min-h-screen overflow-hidden"
-      data-theme="dark"
+      className="relative w-full min-h-screen bg-white overflow-hidden"
     >
       {/* Background Image */}
       <Image

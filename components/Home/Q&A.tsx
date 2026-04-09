@@ -23,7 +23,7 @@ export default function QandA() {
   };
 
   return (
-    <section data-theme="light" className="w-full relative">
+    <section className="w-full bg-white relative">
 
       {/* Non-absolute content container */}
       <div className="relative z-20 w-full py-[10%] px-2 flex justify-end items-center gap-[60px] flex-wrap md:flex-nowrap">

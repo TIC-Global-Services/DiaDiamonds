@@ -1,5 +1,3 @@
-import Navbar from "@/components/Reusable/Navbar";
-import Footer from "@/components/Reusable/Footer";
 import Hero from "@/components/About/Hero";
 import Value from "@/components/About/Value";
 import WhyUs from "@/components/About/WhyUs";
@@ -9,20 +7,41 @@ import OurDiamonds from "@/components/About/OurDiamonds";
 import VisitStore from "@/components/Reusable/VisitStore";
 import ChatBtn from "@/components/Reusable/ChatBtn";
 
-export default function About(){
+export default function About() {
 
-    return(
+    return (
         <div>
-        <ChatBtn />
-        {/* <Navbar /> */}
-        <Hero />
-        <Value />
-        <WhyUs />
-        <OurRoots />
-        <Emotions />
-        <OurDiamonds />
-        <VisitStore />
-        {/* <Footer/> */}
+            <ChatBtn />
+
+            <section data-theme='light'>
+                <Hero />
+            </section>
+
+            <section data-theme='dark'>
+                <Value />
+            </section>
+
+            <section data-theme='light'>
+                <WhyUs />
+            </section>
+
+            <section data-theme='light'>
+                <OurRoots />
+            </section>
+
+            <section data-theme='dark'>
+                <Emotions />
+            </section>
+
+
+            <section data-theme='dark'>
+                <OurDiamonds />
+            </section>
+
+
+            <section data-theme='light'>
+                <VisitStore />
+            </section>
         </div>
     )
 }

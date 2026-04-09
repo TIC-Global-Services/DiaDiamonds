@@ -72,7 +72,7 @@ const Creation: React.FC = () => {
   if (!contentJSON[currentCard]) return null;
 
   return (
-    <section data-theme="light" className="relative w-full h-auto bg-white overflow-hidden">
+    <section className="relative w-full h-auto bg-white overflow-hidden">
 
       {/* Background Shapes */}
       <div className="absolute top-[59%] left-[67.17%] md:left-[61%] md:top-0 w-[52.62%] aspect-square md:aspect-none md:w-[70%] md:h-full bg-[#f2f2f2] rounded-full z-0" />

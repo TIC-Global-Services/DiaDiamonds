@@ -57,8 +57,7 @@ export default function DiamondSpotlight() {
     <section
       ref={elementRef}
       onMouseMove={captureMousePosition}
-      data-theme="dark"
-      className="relative w-full min-h-screen overflow-hidden"
+      className="relative w-full min-h-screen overflow-hidden bg-white"
     >
       {/* Mobile: Always show colored image as full background */}
       {isMobile && (

@@ -24,10 +24,14 @@ export default function RootLayout({
       </head>
       <body className={`${ClashDisplay.variable} ${baskerville.variable} ${ClashGrotesk.variable} antialiased`}>
         <WelcomePopup />
+        {/* NAVBAR */}
         <Navbar />
         <Providers>{children}</Providers>
-        <Footer />
+        {/* FOOTER */}
+        <div className="relative z-[20]">
+          <Footer />
+        </div>
       </body>
     </html>
-  );
+  )
 }

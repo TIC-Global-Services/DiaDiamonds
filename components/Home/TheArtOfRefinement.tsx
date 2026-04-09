@@ -11,7 +11,6 @@ export default function TheArtOfRefinement() {
 
   return (
     <section
-      data-theme="dark"
       className="w-full min-h-screen pt-4 bg-[linear-gradient(180deg,#000000_0%,#140808_90.37%,#200C0C_99.95%,#140808_99.96%)]"
     >
 
@@ -23,7 +22,7 @@ export default function TheArtOfRefinement() {
           <h2 className="text-[24px] font-medium tracking-tight text-white leading-[120%] uppercase">
             The Art of Radiant Refinement
           </h2>
-          <p className="text-[14px] font-normal tracking-tight leading-[120%] text-white/50">
+          <p className="text-[14px] font-normal tracking-normal leading-[120%] text-white/50">
             Trust begins with transparency. Every diamond at Dia Diamonds is
             independently certified by internationally recognised gemological
             laboratories, ensuring verified quality, authenticity, and ethical
@@ -33,7 +32,7 @@ export default function TheArtOfRefinement() {
           <PrimaryBtn
             mode="dark"
             text="View More"
-            onClick={() => router.push("/collections/category")}
+            onClick={() => router.push("/collections/necklaces")}
             className="uppercase"
           />
         </div>

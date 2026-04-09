@@ -64,7 +64,6 @@ export default function ContactForm() {
   return (
     <section
       className="relative max-w-[1400px] mx-auto px-[3.64%] py-[8.25%] md:px-0 md:py-23 md:mt-20 w-full md:aspect-[1440/940] bg-[#F5ECE0]"
-      data-theme="light"
     >
       <div className="w-full md:absolute md:top-[-45.82%] md:left-[25.35%] md:w-[50.31%] rounded-[25px] md:rounded-[0px] md:mx-auto bg-[#FCF9F4] p-[1.88%]">
         <h2 className="text-center py-8 md:py-0 md:pt-[7.32%] md:pb-[1.49%] h2 tracking-tight">

@@ -10,7 +10,6 @@ const Brilliance: React.FC = () => {
 
   return (
     <section
-      data-theme="light"
       className="w-full relative bg-[linear-gradient(180deg,#F8CC96_0%,#F8D8B1_0.01%,#F7E7D3_0.02%,#F7EAD9_0.03%,#F7F6F4_100%)] py-14 md:py-[5%] px-6 sm:px-6 lg:px-[10.56%]"
     >
       {/* TITLE */}
