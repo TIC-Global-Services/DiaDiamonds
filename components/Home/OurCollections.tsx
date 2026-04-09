@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import CollectionItem from "../Products/Cards/HomeProductCard";
 import { useSwipeable } from "react-swipeable";
 import { Product } from "@/types/product";
-import ContainerLayout from "@/components/layouts/Container";
+import ContainerLayout from "@/layout/ContainerLayout";
 
 export default function OurCollection() {
   const [index, setIndex] = useState(0);
