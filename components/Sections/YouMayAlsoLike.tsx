@@ -16,7 +16,7 @@ export default function YouMayAlsoLike({ product }: YouMayAlsoLikeProps) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  //Filter products
+  // Filter products
   let recommendedProducts = productsData.filter(
     (p: any) =>
       p.recommended &&
@@ -50,7 +50,7 @@ export default function YouMayAlsoLike({ product }: YouMayAlsoLikeProps) {
     return window.innerWidth >= 768 ? 2 : 1;
   };
 
-  //Scroll logic 
+  // Scroll logic
   const scroll = (dir: "left" | "right") => {
     const container = scrollRef.current;
     if (!container) return;
@@ -58,7 +58,7 @@ export default function YouMayAlsoLike({ product }: YouMayAlsoLikeProps) {
     const item = container.children[0] as HTMLElement;
     if (!item) return;
 
-    const gap = 10;
+    const gap = 16;
     const itemWidth = item.offsetWidth + gap;
 
     const itemsPerView = getItemsPerView();
@@ -73,7 +73,7 @@ export default function YouMayAlsoLike({ product }: YouMayAlsoLikeProps) {
 
     const maxIndex = recommendedProducts.length - itemsPerView;
 
-    //Handle LAST SCROLL properly
+    // last scroll
     if (newIndex >= maxIndex) {
       container.scrollTo({
         left: container.scrollWidth - container.clientWidth,
@@ -92,13 +92,16 @@ export default function YouMayAlsoLike({ product }: YouMayAlsoLikeProps) {
     setCurrentIndex(newIndex);
   };
 
-  //Indicator
+  // Indicator
   const itemsPerView = getItemsPerView();
 
   const progress =
     recommendedProducts.length <= itemsPerView
       ? 0
-      : currentIndex / (recommendedProducts.length - itemsPerView);
+      : Math.min(
+          currentIndex / (recommendedProducts.length - itemsPerView),
+          1
+        );
 
   return (
     <section className="w-full mt-4 px-4 md:mt-10">
@@ -110,22 +113,20 @@ export default function YouMayAlsoLike({ product }: YouMayAlsoLikeProps) {
       {/* Scroll Container */}
       <div
         ref={scrollRef}
-        className="flex gap-4 px-1 pr-4 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar"
+        onWheel={(e) => e.preventDefault()}
+        style={{ touchAction: "none" }}
+        className="flex gap-4 px-1 pr-4 overflow-x-hidden scroll-smooth"
       >
-        {recommendedProducts.map((item, index) => (
+        {recommendedProducts.map((item) => (
           <div
             key={item.id}
-            className={`
+            className="
               flex-shrink-0
               w-[80%] 
               sm:w-[50%] 
               md:w-[33.33%] 
               lg:w-[25%]
-              ${index === recommendedProducts.length - 1
-                ? "snap-end"
-                : "snap-start"
-              }
-            `}
+            "
           >
             <RecommendedProductCard
               product={item}
