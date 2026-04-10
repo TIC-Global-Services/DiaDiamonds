@@ -16,7 +16,7 @@ const RecommendedProductCard: React.FC<RecommendedProductCardProps> = ({
   return (
     <div
       onClick={() => onClick(product.id)}
-      className="w-full md:w-[24.19%] shrink-0 group border border-gray-200 hover:border cursor-pointer"
+      className="w-full md:w-[100%] shrink-0 group border border-gray-200 hover:border cursor-pointer"
     >
       {/* Image */}
       <div className="md:w-full aspect-square overflow-hidden md:mb-[12.77%]  flex items-center justify-center p-2">

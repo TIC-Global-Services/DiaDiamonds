@@ -151,7 +151,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
           <div className="w-full md:w-[35%] px-[3.37%] md:px-0">
             {/* your product info (unchanged) */}
             <div>
-              <h3 className="md:pt-[4%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
+              <h3 className="pt-4 md:pt-[4%] text-base whitespace-nowrap md:text-2xl leading-[32px] tracking-tight uppercase text-[#000000] font-normal">
                 {product.productName}
               </h3>
               <p className="md:pt-[2%] text-[#000000] text-[14px] md:text-lg md:leading-[20px] md:tracking-[-0.26px] font-normal align-middle">
@@ -228,7 +228,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                 ))}
               </div>
 
-              <hr className='w-full border-t mt-4 md:mt-6 border-gray-300' />
+              <hr className='w-full border-t pt-2 mt-4 md:mt-6 border-gray-300' />
 
               {hasSizes && (
                 <div className="flex items-center gap-3 py-4 px-4 md:px-0 mt-2 flex-wrap">
@@ -285,7 +285,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
             transition={{ duration: 0.6 }}
             className="gap-2 p-2 text-start"
           >
-            <p className="mt-[2%] md:pb-[2.44%] font-light text-[14px] md:text-[16px] leading-[120%] text-start tracking-[-0.32px] text-[#000000]">
+            <p className="pt-[5%] md:mt-[2%] md:pb-[2.44%] font-light text-[14px] md:text-[16px] leading-[140%] text-start tracking-[-0.32px] text-[#000000]">
               {layoutDescription}
             </p>
             <div className="flex flex-col items-start justify-between mb-[11.05%] md:mb-0 gap-4 md:gap-2 md:flex-row md:items-center">
