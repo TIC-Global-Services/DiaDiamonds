@@ -4,7 +4,7 @@ import PrimaryBtn from "../Reusable/PrimaryBtn";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import PantherImage from "@/public/assets/img/TheArtOfRefinement/panther_img.png";
-import ContainerLayout from "@/layout/ContainerLayout";
+
 
 export default function TheArtOfRefinement() {
   const router = useRouter();
@@ -54,12 +54,12 @@ export default function TheArtOfRefinement() {
       <div className="relative hidden md:flex h-[100dvh] overflow-hidden">
 
         {/* Panther */}
-        <div className="absolute inset-y-0 md:w-[30%] lg:w-[32%] right-0 h-full">
+        <div className="absolute inset-y-0 md:w-[40%] lg:w-[45%] right-0 h-full">
           <Image
             src={PantherImage}
             alt="panther_image"
             fill
-            className="object-cover object-right"
+            className="object-contain object-right"
             sizes="50vw"
             priority
           />
@@ -67,25 +67,25 @@ export default function TheArtOfRefinement() {
 
 
         {/* Left content */}
-        <div className="absolute top-[15%] lg:left-[10%] w-[592px] flex flex-col gap-5 items-start justify-center md:px-10">
-            <h2 className="text-[40px] font-medium tracking-tight text-white leading-[120%] uppercase">
-              The Art of Radiant Refinement
-            </h2>
-            <p className="text-[20px] font-normal tracking-tight leading-[120%] text-white/50">
-              Trust begins with transparency. Every diamond at Dia Diamonds is
-              independently certified by internationally recognised gemological
-              laboratories, ensuring verified quality, authenticity, and ethical
-              standards. We prioritise conflict-free sourcing and sustainable
-              practices, so you can wear your diamond with pride.
-            </p>
-            <PrimaryBtn
-              mode="dark"
-              text="View More"
-              onClick={() => router.push("/collections/necklaces")}
-              className="uppercase mt-2"
-            />
+        <div className="absolute top-[15%] lg:left-[8%] w-[592px] flex flex-col gap-5 items-start justify-center md:px-10">
+          <h2 className="text-[40px] font-medium tracking-tight text-white leading-[120%] uppercase">
+            The Art of Radiant Refinement
+          </h2>
+          <p className="text-[20px] font-normal tracking-tight leading-[120%] text-white/50">
+            Trust begins with transparency. Every diamond at Dia Diamonds is
+            independently certified by internationally recognised gemological
+            laboratories, ensuring verified quality, authenticity, and ethical
+            standards. We prioritise conflict-free sourcing and sustainable
+            practices, so you can wear your diamond with pride.
+          </p>
+          <PrimaryBtn
+            mode="dark"
+            text="View More"
+            onClick={() => router.push("/collections/necklaces")}
+            className="uppercase mt-2"
+          />
         </div>
-    </div>
+      </div>
     </section >
   );
 }
