@@ -145,3 +145,33 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
+
+.panther-image {
+  width: 50%;
+}
+
+@media (min-width: 1024px) {
+  .panther-image {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .panther-image {
+    width: 32%;
+  }
+}
+
+/* Mac fix */
+@media (min-width: 1400px) and (max-width: 1535px) {
+  .panther-image {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .panther-image {
+    width: 50%;
+  }
+}

@@ -92,7 +92,7 @@ export default function TheArtOfRefinement() {
 
       {/* DESKTOP  */}
       <div className="relative hidden md:flex h-[100dvh] overflow-hidden">
-        <div className="absolute bottom-0 right-0 overflow-hidden aspect-[690/863] w-[50%] lg:w-[30%] xl:w-[30%] 2xl:w-[40%]">
+       <div className="panther-image absolute bottom-0 right-0 overflow-hidden aspect-[690/863]">
           {/* Wrapper*/}
           <div
             className="relative w-full h-full flex items-center justify-center"
@@ -103,10 +103,9 @@ export default function TheArtOfRefinement() {
                 src={PantherImage}
                 alt="panther_image"
                 fill
-                className="object-contain"
-                sizes="(min-width: 1536px) 60vw, (min-width: 1280px) 45vw, (min-width: 1024px) 45vw, 50vw"
+                className="object-cover"
+                sizes="100vw"
                 priority
-               
               />
 
               {/* Sparkles Overlay */}
