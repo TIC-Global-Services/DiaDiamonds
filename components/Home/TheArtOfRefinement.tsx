@@ -92,7 +92,7 @@ export default function TheArtOfRefinement() {
 
       {/* DESKTOP  */}
       <div className="relative hidden md:flex h-[100dvh] overflow-hidden">
-        <div className="absolute bottom-0 right-0 overflow-hidden aspect-[690/863] w-[50%] lg:w-[30%] xl:w-[35%] 2xl:w-[40%]">
+        <div className="absolute bottom-0 right-0 overflow-hidden aspect-[690/863] w-[50%] lg:w-[30%] xl:w-[30%] 2xl:w-[40%]">
           {/* Wrapper*/}
           <div
             className="relative w-full h-full flex items-center justify-center"
