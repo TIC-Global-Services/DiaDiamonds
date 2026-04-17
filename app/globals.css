@@ -159,19 +159,19 @@ body {
 
 @media (min-width: 1280px) {
   .panther-image {
-    width: 32%;
+    width: 30%;
   }
 }
 
 /* Mac fix */
 @media (min-width: 1400px) and (max-width: 1535px) {
   .panther-image {
-    width: 50%;
+    width: 45%;
   }
 }
 
 @media (min-width: 1536px) {
   .panther-image {
-    width: 50%;
+    width: 45%;
   }
 }
