@@ -1,20 +1,52 @@
 "use client";
 import { useSectionTheme } from "@/hooks/useSectionTheme";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ChatBtn() {
+  const [heroTheme, setHeroTheme] = useState<"light" | "dark" | null>(null);
   const theme = useSectionTheme("bottom");
-  const iconColor = theme === 'light' ? 'black' : 'white';
+  const finalTheme = heroTheme ?? theme;
+  const iconColor = finalTheme === "light" ? "black" : "white";
   const [isOpen, setIsOpen] = useState(true); // visible by default
 
+  useEffect(() => {
+  const handleHeroDetection = () => {
+    const hero = document.querySelector<HTMLElement>(
+      'section[data-priority="hero"]'
+    );
+
+    if (!hero) return;
+
+    const rect = hero.getBoundingClientRect();
+
+    // If hero is visible on screen
+    if (rect.top <= 0 && rect.bottom > 0) {
+      const theme = hero.dataset.theme as "light" | "dark";
+      setHeroTheme(theme);
+    } else {
+      setHeroTheme(null);
+    }
+  };
+
+  handleHeroDetection();
+
+  window.addEventListener("scroll", handleHeroDetection, { passive: true });
+  window.addEventListener("resize", handleHeroDetection);
+
+  return () => {
+    window.removeEventListener("scroll", handleHeroDetection);
+    window.removeEventListener("resize", handleHeroDetection);
+  };
+}, []);
+
   return (
-    <div className="fixed z-50 py-2 flex flex-col items-end gap-1 md:gap-3 bottom-4 right-4 max-w-[calc(100vw-18px)]">
+    <div className="fixed z-50 py-2 flex flex-col items-end gap-2 md:gap-2 bottom-4 right-4 max-w-[calc(100vw-18px)]">
 
       {/* Action Buttons - toggled */}
       <div
         className={`
-          flex flex-col items-center gap-2 md:gap-3
-          p-2 md:p-4
+          flex flex-col items-center gap-3 md:gap-3
+          p-4 md:p-4
           rounded-full
           bg-transparent
           backdrop-blur-md
@@ -66,7 +98,7 @@ export default function ChatBtn() {
       <button
         onClick={() => setIsOpen(prev => !prev)}
         className={`
-          w-9 h-9 md:w-13 md:h-13 rounded-full flex justify-center items-center cursor-pointer
+          w-12 h-12 md:w-13 md:h-13 rounded-full flex justify-center items-center cursor-pointer
           bg-transparent
           backdrop-blur-md
           border-t border-b border-white/90
