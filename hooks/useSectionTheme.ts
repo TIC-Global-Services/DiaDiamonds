@@ -66,7 +66,7 @@ export const useSectionTheme = (position: "top" | "bottom") => {
       }
 
 
-      if (position === "top" && window.scrollY < 30) {
+      if (position === "top" && window.scrollY < 40) {
         const heroSection = sections.find(s => s.dataset.priority === "hero");
         if (heroSection?.dataset.theme) {
           foundTheme = heroSection.dataset.theme as Theme;
