@@ -6,8 +6,10 @@ import modelImage from '@/public/assets/img/Popup/PopupModel.png';
 import logo from '@/public/assets/img/DiaDiamondLogoBlack.png';
 import diamondLogo from '@/public/assets/img/Diamond.png';
 import PrimaryBtn from "./PrimaryBtn";
+import { useRouter } from "next/navigation";
 
 export default function WelcomePopup() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -51,7 +53,7 @@ export default function WelcomePopup() {
           </p>
 
           <PrimaryBtn
-            onClick={closePopup}
+            onClick={() => router.push("/collections/rings")}
             className="
               w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px]
               bg-[#431A1A] text-white uppercase
