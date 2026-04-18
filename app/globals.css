@@ -148,7 +148,7 @@ body {
 
 
 .panther-image {
-  width: 50%;
+  width: 40%;
 }
 
 @media (min-width: 1024px) {
@@ -164,9 +164,9 @@ body {
 }
 
 /* Mac fix */
-@media (min-width: 1400px) and (max-width: 1535px) {
+@media (min-width: 1400px) and (max-width: 1535px) and (min-height: 850px) {
   .panther-image {
-    width: 45%;
+    width: 50%;
   }
 }
 

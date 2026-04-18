@@ -76,7 +76,7 @@ export default function Craftsmanship() {
       <div className="w-full md:w-1/2 flex flex-col h-auto md:h-[120vh] 2xl:h-[150vh]">
 
         {/* Top Half — Cards + Pagination */}
-        <div className="relative z-10 w-full md:h-1/2 2xl:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-20 lg:mt-26 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
+        <div className="relative z-10 w-full md:h-1/2 2xl:h-1/2 flex items-center justify-center pl-[13.5px] md:mt-18 lg:mt-16 py-10 md:py-0 order-2 md:order-1 overflow-hidden">
           <div className="flex flex-col gap-10 justify-center w-full">
             {cards.map((card, index) => (
               <div
@@ -121,8 +121,9 @@ export default function Craftsmanship() {
               src={bottomImageSrc}
               alt="Craftsmanship"
               fill
-              className="w-full h-[100%] object-cover -translate-y-1/6 2xl:translate-y-0 scale-110"
+              className="w-full h-[100%] object-cover -translate-y-1/6 2xl:translate-y-0 scale-150"
               quality={100}
+              style={{ objectPosition: "center" }}
             />
           </Parallax>
         </motion.div>

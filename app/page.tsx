@@ -32,7 +32,7 @@ export default function Home() {
       </section>
 
       {/* ALL SECTIONS */}
-      <div className="relative bg-white">
+      <div className="relative">
 
         <section data-theme="light">
           <OurCollection />

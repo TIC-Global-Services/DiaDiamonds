@@ -16,7 +16,7 @@ export default function Arrivals() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-[100svh] flex flex-col md:flex-row bg-white overflow-hidden"
+      className="relative w-full min-h-[100svh] flex flex-col md:flex-row bg-[#E7DFD7] overflow-hidden"
     >
       {/* LEFT / TOP */}
       <motion.div

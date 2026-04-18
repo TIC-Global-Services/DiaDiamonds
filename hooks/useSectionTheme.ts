@@ -14,10 +14,8 @@ export const useSectionTheme = (position: "top" | "bottom") => {
   useEffect(() => {
     let sections: HTMLElement[] = [];
 
-    const getViewportHeight = () => {
-      // Cross-browser viewport height calculation
-      return window.visualViewport?.height || window.innerHeight;
-    };
+    const getViewportHeight = () =>
+      window.visualViewport?.height || window.innerHeight;
 
     const updateSections = () => {
       sections = Array.from(
@@ -26,24 +24,8 @@ export const useSectionTheme = (position: "top" | "bottom") => {
     };
 
     const getTriggerY = () => {
-      const viewportHeight = getViewportHeight();
-      return position === "top" 
-        ? viewportHeight * 0.1  
-        : viewportHeight * 0.9; 
-    };
-
-    const isElementInViewport = (element: HTMLElement, triggerY: number) => {
-      const rect = element.getBoundingClientRect();
-      
-      // Special handling for elements with fixed children
-      const hasFixedChild = element.querySelector('.fixed, [class*="fixed"]');
-      
-      if (hasFixedChild && position === "top") {
-        // For fixed content, check if any part of the section is visible
-        return rect.top <= triggerY && rect.bottom > 0;
-      }
-      
-      return rect.top <= triggerY && rect.bottom >= triggerY;
+      const vh = getViewportHeight();
+      return position === "top" ? vh * 0.1 : vh * 0.9;
     };
 
     const detectTheme = () => {
@@ -53,23 +35,15 @@ export const useSectionTheme = (position: "top" | "bottom") => {
       }
 
       const triggerY = getTriggerY();
+
       let foundTheme: Theme | null = null;
 
       for (const section of sections) {
-        if (isElementInViewport(section, triggerY)) {
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= triggerY && rect.bottom > triggerY) {
           const t = section.dataset.theme as Theme;
-          if (t && t !== foundTheme) {
-            foundTheme = t;
-            break;
-          }
-        }
-      }
-
-
-      if (position === "top" && window.scrollY < 30) {
-        const heroSection = sections.find(s => s.dataset.priority === "hero");
-        if (heroSection?.dataset.theme) {
-          foundTheme = heroSection.dataset.theme as Theme;
+          if (t) foundTheme = t;
         }
       }
 
@@ -77,13 +51,11 @@ export const useSectionTheme = (position: "top" | "bottom") => {
         previousTheme.current = foundTheme;
         setTheme(foundTheme);
       } else if (!foundTheme && previousTheme.current !== "dark") {
-        // Fallback to dark if no section found
         previousTheme.current = "dark";
         setTheme("dark");
       }
     };
 
-    // Throttled scroll handler with passive option
     const rafDetect = () => {
       if (!ticking.current) {
         requestAnimationFrame(() => {
@@ -94,7 +66,6 @@ export const useSectionTheme = (position: "top" | "bottom") => {
       }
     };
 
-    // Debounced resize handler for better performance
     let resizeTimeout: NodeJS.Timeout;
     const handleResize = () => {
       clearTimeout(resizeTimeout);
@@ -104,7 +75,6 @@ export const useSectionTheme = (position: "top" | "bottom") => {
       }, 150);
     };
 
-    // Initial setup with mutation observer for dynamic content
     const setupObserver = () => {
       updateSections();
       detectTheme();
@@ -118,7 +88,7 @@ export const useSectionTheme = (position: "top" | "bottom") => {
         childList: true,
         subtree: true,
         attributes: true,
-        attributeFilter: ["data-theme"]
+        attributeFilter: ["data-theme"],
       });
 
       return observer;
@@ -126,15 +96,13 @@ export const useSectionTheme = (position: "top" | "bottom") => {
 
     const observer = setupObserver();
 
-    // mobile
     window.addEventListener("scroll", rafDetect, { passive: true });
     window.addEventListener("touchmove", rafDetect, { passive: true });
     window.addEventListener("resize", handleResize);
-    
-    //iOS Safari
-    if ('visualViewport' in window) {
-      window.visualViewport?.addEventListener('resize', handleResize);
-      window.visualViewport?.addEventListener('scroll', rafDetect);
+
+    if ("visualViewport" in window) {
+      window.visualViewport?.addEventListener("resize", handleResize);
+      window.visualViewport?.addEventListener("scroll", rafDetect);
     }
 
     return () => {
@@ -142,12 +110,12 @@ export const useSectionTheme = (position: "top" | "bottom") => {
       window.removeEventListener("scroll", rafDetect);
       window.removeEventListener("touchmove", rafDetect);
       window.removeEventListener("resize", handleResize);
-      
-      if ('visualViewport' in window) {
-        window.visualViewport?.removeEventListener('resize', handleResize);
-        window.visualViewport?.removeEventListener('scroll', rafDetect);
+
+      if ("visualViewport" in window) {
+        window.visualViewport?.removeEventListener("resize", handleResize);
+        window.visualViewport?.removeEventListener("scroll", rafDetect);
       }
-      
+
       observer.disconnect();
     };
   }, [pathname, position]);
