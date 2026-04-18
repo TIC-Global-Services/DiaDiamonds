@@ -164,9 +164,16 @@ body {
 }
 
 /* Mac fix */
-@media (min-width: 1400px) and (max-width: 1535px) and (min-height: 850px) {
+@media (min-width: 1400px) and (max-width: 1535px) and (min-aspect-ratio: 16/10) {
   .panther-image {
     width: 50%;
+  }
+}
+
+/* Windows */
+@media (min-width: 1400px) and (max-width: 1535px) and (max-aspect-ratio: 16/10) {
+  .panther-image {
+    width: 45%;
   }
 }
 
