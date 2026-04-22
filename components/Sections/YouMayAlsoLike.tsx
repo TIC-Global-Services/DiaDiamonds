@@ -104,7 +104,7 @@ export default function YouMayAlsoLike({ product }: YouMayAlsoLikeProps) {
         );
 
   return (
-    <section className="w-full mt-4 px-4 md:mt-10">
+    <section data-theme='light' className="w-full mt-4 px-4 md:mt-10">
       {/* Title */}
       <h2 className="text-center font-[baskerville SC] text-2xl md:text-3xl border-t border-gray-200 pt-6 mb-6">
         You May Also Like

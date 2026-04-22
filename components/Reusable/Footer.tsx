@@ -26,8 +26,8 @@ export default function Footer() {
     { label: "Home", href: "/" },
     {label: "Collections", href: "/collections/rings",},
     { label: "Precision", href: "/precision" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: "About Us", href: "/about" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
 
@@ -35,15 +35,15 @@ export default function Footer() {
     <footer data-theme='dark' className="w-full min-h-auto bg-[#0b0b0b] px-2 md:px-6 pt-6 pb-2">
 
       {/* ================= NAV ================= */}
-      <div className="flex pb-4 md:pb-6">
-        <ul className="flex flex-wrap md:w-1/2 items-start justify-start md:justify-start md:items-start gap-x-4 gap-y-2 md:gap-6 w-full">
+      <div className="flex pb-4 md:pb-6 md:pt-8">
+        <ul className="flex flex-wrap md:w-1/2 items-start justify-start md:justify-start md:items-start gap-x-4 gap-y-2 md:gap-10 w-full">
           {NAV_ITEMS.map((item) => {
             return (
               <li key={item.label} className="whitespace-nowrap">
                 <Link
                   href={item.href}
                   className={`${currentPath === item.href ? "text-white" : "text-[#717580]"
-                    } hover:text-white transition text-[14px] md:text-base`}
+                    } hover:text-white transition pl-1 md:pl-0 text-[12px] md:text-base`}
                 >
                   {item.label}
                 </Link>
