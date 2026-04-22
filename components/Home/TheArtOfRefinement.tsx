@@ -8,12 +8,12 @@ export default function TheArtOfRefinement() {
   const router = useRouter();
 
   return (
-    <section className="relative w-full h-screen md:min-h-screen flex flex-col md:flex-row bg-black overflow-hidden">
+    <section className="relative w-full min-h-screen flex flex-col md:flex-row bg-black overflow-hidden">
       {/* 1. STABLE BACKGROUND GRADIENT */}
       <div className="absolute inset-0 z-0 pointer-events-none" />
 
       {/* 2. TEXT CONTENT CONTAINER */}
-      <div className="relative z-20 flex-1 flex flex-col justify-center px-6 md:px-[8%] pt-10 md:pt-0 md:py-0">
+      <div className="relative z-20 flex-1 flex flex-col justify-center px-6 md:px-[8%] pt-20 md:pt-0 md:py-0">
         <div className=" space-y-6">
           <h2 className="text-[32px] text-center md:text-start md:text-[48px] font-medium text-white uppercase leading-[1.1] tracking-tight">
             The Art of Radiant <br className="hidden md:block" /> Refinement
@@ -33,7 +33,7 @@ export default function TheArtOfRefinement() {
       </div>
 
       {/* 3. PANTHER COTAINER */}
-      <div className="w-full md:w-[40%] h-screen flex items-end justify-end overflow-hidden">
+      <div className="w-full md:w-[40%] flex items-end justify-end overflow-hidden">
         <video
           src="/assets/video/pantherVideo.mp4"
           autoPlay
@@ -43,7 +43,7 @@ export default function TheArtOfRefinement() {
           className="
           w-full
           md:max-w-[70vh]
-          object-cover md:object-contain md:object-center
+          object-contain md:object-contain md:object-center
         "
         />
       </div>
