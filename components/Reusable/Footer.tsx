@@ -25,8 +25,8 @@ export default function Footer() {
    const NAV_ITEMS = [
     { label: "Home", href: "/" },
     {label: "Collections", href: "/collections/rings",},
-    { label: "Precision", href: "/precision" },
     { label: "About Us", href: "/about" },
+    { label: "Precision", href: "/precision" },
     { label: "Contact Us", href: "/contact" },
   ];
 
