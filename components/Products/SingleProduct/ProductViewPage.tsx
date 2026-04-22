@@ -316,7 +316,7 @@ export default function ProductView({ product, onBack }: ProductViewProps) {
                 transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
                 className="w-[100%] ml-auto aspect-[800/600] overflow-hidden flex items-center justify-center"
               >
-                <Image src={topImage} alt="Product top" width={800} height={600} unoptimized loading="lazy" className="w-full h-full object-contain" />
+                <Image src={topImage} alt="Product top" width={800} height={600} unoptimized loading="lazy" className="w-full h-full object-cover" />
               </motion.div>
             )}
             {leftImage && (
