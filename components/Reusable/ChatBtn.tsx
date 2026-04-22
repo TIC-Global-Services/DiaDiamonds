@@ -3,41 +3,10 @@ import { useSectionTheme } from "@/hooks/useSectionTheme";
 import { useState, useEffect } from "react";
 
 export default function ChatBtn() {
-  const [heroTheme, setHeroTheme] = useState<"light" | "dark" | null>(null);
+  
   const theme = useSectionTheme("bottom");
-  const finalTheme = heroTheme ?? theme;
-  const iconColor = finalTheme === "light" ? "black" : "white";
-  const [isOpen, setIsOpen] = useState(true); // visible by default
-
-  useEffect(() => {
-  const handleHeroDetection = () => {
-    const hero = document.querySelector<HTMLElement>(
-      'section[data-priority="hero"]'
-    );
-
-    if (!hero) return;
-
-    const rect = hero.getBoundingClientRect();
-
-    // If hero is visible on screen
-    if (rect.top <= 0 && rect.bottom > 0) {
-      const theme = hero.dataset.theme as "light" | "dark";
-      setHeroTheme(theme);
-    } else {
-      setHeroTheme(null);
-    }
-  };
-
-  handleHeroDetection();
-
-  window.addEventListener("scroll", handleHeroDetection, { passive: true });
-  window.addEventListener("resize", handleHeroDetection);
-
-  return () => {
-    window.removeEventListener("scroll", handleHeroDetection);
-    window.removeEventListener("resize", handleHeroDetection);
-  };
-}, []);
+  const iconColor = theme === "light" ? "black" : "white";
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="fixed z-50 py-2 flex flex-col items-end gap-2 md:gap-2 bottom-4 right-4 max-w-[calc(100vw-18px)]">
