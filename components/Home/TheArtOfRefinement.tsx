@@ -8,7 +8,7 @@ export default function TheArtOfRefinement() {
   const router = useRouter();
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col md:flex-row bg-black overflow-hidden">
+    <section className="relative w-full h-screen flex flex-col md:flex-row bg-black overflow-hidden">
       {/* 1. STABLE BACKGROUND GRADIENT */}
       <div className="absolute inset-0 z-0 pointer-events-none" />
 
